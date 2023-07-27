@@ -1,0 +1,1462 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SCDateTime.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1670594223') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SCDateTime.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Working with the SCDateTime Variables and Values -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexac34.html?page=doc/SCDateTime.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="indexac34.html?page=doc/SCDateTime.html">Working with the SCDateTime Variables and Values</a></h4> </div>     <h1 class="PageName">Working with the SCDateTime Variables and Values</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#SCDateTimeVariables">SCDateTime Variables</a></li>
+    <li><a href="#SCDateTimeMillisecondVariables">SCDateTimeMS Variables</a></li>
+    <li><a href="#DateValue">Date Values</a></li>
+    <li><a href="#TimeValue">Time Values</a></li>
+    <li><a href="#ValidRanges">Valid Ranges</a></li>
+    <li><a href="#SCDateTimeMemberFunctions">SCDateTime Member Functions</a>
+        <ul>
+            <li><a href="#SCDateTimeMember_GetAsDouble">GetAsDouble()</a></li>
+            <li><a href="#SCDateTimeMember_GetDate">GetDate()</a></li>
+            <li><a href="#SCDateTimeMember_GetDateTimeYMDHMS">GetDateTimeYMDHMS()</a></li>
+            <li><a href="#SCDateTimeMember_GetDateTimeYMDHMS_MS">GetDateTimeYMDHMS_MS()</a></li>
+            <li><a href="#SCDateTimeMember_GetDateYMD">GetDateYMD()</a></li>
+            <li><a href="#SCDateTimeMember_GetDay">GetDay()</a></li>
+            <li><a href="#SCDateTimeMember_GetDayOfWeek">GetDayOfWeek()</a></li>
+            <li><a href="#SCDateTimeMember_GetTimeHMS">GetTimeHMS()</a></li>
+            <li><a href="#SCDateTimeMember_GetHour">GetHour()</a></li>
+            <li><a href="#SCDateTimeMember_GetMicroSecond">GetMicroSecond()</a></li>
+            <li><a href="#SCDateTimeMember_GetMillisecond">GetMillisecond()</a></li>
+            <li><a href="#SCDateTimeMember_GetMinute">GetMinute()</a></li>
+            <li><a href="#SCDateTimeMember_GetMonth">GetMonth()</a></li>
+            <li><a href="#SCDateTimeMember_GetSecond">GetSecond()</a></li>
+            <li><a href="#SCDateTimeMember_GetTimeInMilliseconds">GetTimeInMilliseconds()</a></li>
+            <li><a href="#SCDateTimeMember_GetTimeInSeconds">GetTimeInSeconds()</a></li>
+            <li><a href="#SCDateTimeMember_GetTimeAsSCDateTime">GetTimeAsSCDateTime()</a></li>
+            <li><a href="#SCDateTimeMember_GetTimeInSecondsWithoutMilliseconds">GetTimeInSecondsWithoutMilliseconds()</a></li>
+            <li><a href="#SCDateTimeMember_GetYear">GetYear()</a></li>
+            <li><a href="#SCDateTimeMember_IsSaturday">IsSaturday()</a></li>
+            <li><a href="#SCDateTimeMember_IsSunday">IsSunday()</a></li>
+            <li><a href="#SCDateTimeMember_IsWeekend">IsWeekend()</a></li>
+            <li><a href="#SCDateTimeMember_RoundDateTimeDownToMilliSecond">RoundDateTimeDownToMilliSecond()</a></li>
+            <li><a href="#SCDateTimeMember_RoundDateTimeDownToMinute">RoundDateTimeDownToMinute()</a></li>
+            <li><a href="#SCDateTimeMember_RoundDateTimeDownToSecond">RoundDateTimeDownToSecond()</a></li>
+            <li><a href="#SCDateTimeMember_RoundToNearestMilliSecond">RoundToNearestMilliSecond()</a></li>
+            <li><a href="#SCDateTimeMember_RoundToNearestSecond">RoundToNearestSecond()</a></li>
+            <li><a href="#SCDateTimeMember_SCDateTime">SCDateTime() Constructors</a></li>
+            <li><a href="#SCDateTimeMember_SetDate">SetDate()</a></li>
+            <li><a href="#SCDateTimeMember_SetDateTime">SetDateTime()</a></li>
+            <li><a href="#SCDateTimeMember_SetDateTimeYMDHMS">SetDateTimeYMDHMS()</a></li>
+            <li><a href="#SCDateTimeMember_SetDateTimeYMDHMS_MS">SetDateTimeYMDHMS_MS()</a></li>
+            <li><a href="#SCDateTimeMember_SetDateYMD">SetDateYMD()</a></li>
+            <li><a href="#SCDateTimeMember_SetTime">SetTime()</a></li>
+            <li><a href="#SCDateTimeMember_SetTimeHMS">SetTimeHMS()</a></li>
+            <li><a href="#SCDateTimeMember_SetTimeHMS_MS">SetTimeHMS_MS()</a></li>
+            <li><a href="#SCDateTimeMember_DAYS">DAYS()</a></li>
+            <li><a href="#SCDateTimeMember_YEARS">YEARS()</a></li>
+            <li><a href="#SCDateTimeMember_HOURS">HOURS()</a></li>
+            <li><a href="#SCDateTimeMember_MINUTES">MINUTES()</a></li>
+            <li><a href="#SCDateTimeMember_SECONDS">SECONDS()</a></li>
+            <li><a href="#SCDateTimeMember_MILLISECONDS">MILLISECONDS()</a></li>
+            <li><a href="#SCDateTimeMember_Operator+=">operator+=()</a></li>
+            <li><a href="#SCDateTimeMember_Operator-=">operator-=()</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#DateAndTimeFunctions">Date and Time Functions</a>
+        <ul>
+            <li><a href="#DaysInDateSpanNotIncludingWeekends">DaysInDateSpanNotIncludingWeekends()</a></li>
+        </ul>
+    </li>
+    <li><a href="#SCDateTimeArrays">Working With SCDateTime Arrays</a></li>
+    <li><a href="#DateAt">DateAt()</a></li>
+    <li><a href="#TimeAt">TimeAt()</a></li>
+    <li><a href="#SetDateAt">SetDateAt()</a></li>
+    <li><a href="#SetTimeAt">SetTimeAt()</a></li>
+    <li><a href="#References">Using References</a></li>
+    <li><a href="#DateTimeMath">Date and Time Math</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>SCDateTime</b> data type is used for Date-Time values in the ACSIL (<a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study Interface and Language</a>).  
+
+    <p>The internal representation of Date-Time values in this data type is exactly the same as the Date-Time values used in Microsoft Excel and Libre Office Calc.  </p> 
+
+    <p>There are various independent global functions and member functions of the <b>SCDateTime</b> type which makes it easy to work with these values.  This page documents these functions.</p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="SCDateTimeVariables">SCDateTime Variables</h2>
+    <div class="member-link">[<a href="#SCDateTimeVariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A <b>SCDateTime</b> variable contains a Date and Time value  as a 64-bit integer.  The external interface of <b>SCDateTime</b>.</p>
+
+    <p> The <a href = "index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">ACSIL</a> arrays  <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDateTimeIn">sc.BaseDateTimeIn</a>[] and <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scDateTimeOut">sc.DateTimeOut</a>[]  are of the SCDateTime type.</p>
+
+   <p>  A SCDateTime  variable can be locally defined within an ACSIL study function. </p>
+
+    <p>Refer to the examples given below.</p>
+
+    <p>Throughout the documentation and examples you will see the variable, <b>SCDateTimeVariable</b> being used. These variables are of the <b>SCDateTime</b>  type.  </p>
+
+    <p>The following operators are supported with  SCDateTime variables: <b>= , += , -= , == , != ,&lt; , &lt;= , &gt; , &gt;=</b>.</p>
+
+    <p>A <a href="#SCDateTimeVariables">SCDateTime</a> variable contains a number which represents a Date and Time. The Date is represented by  the integer portion of this number and the Time is represented by the fractional portion of the number. </p>
+
+    <section class="h3">
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime MySCDateTime; //Locally defined SCDateTime variable.
+
+//MySCDateTime will contain, with this function call, the specified date time.
+MySCDateTime.SetDateTimeYMDHMS(2007, 1, 30, 16, 10, 0);
+
+int Hour, Minute, Second;
+sc.BaseDateTimeIn[].GetTimeHMS(Hour, Minute, Second);
+
+sc.DateTimeOut[DestinationIndex] = sc.BaseDateTimeIn[SourceIndex];
+            </pre>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SCDateTimeMillisecondVariables">SCDateTimeMS Variables</h2>
+    <div class="member-link">[<a href="#SCDateTimeMillisecondVariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A <b>SCDateTimeMS</b> variable contains a Date and Time value  as a 64-bit integer. It is identical to and supports the same member functions as <a href="#SCDateTimeVariables">SCDateTime Variables</a>. 
+    
+    <p>The difference  between <b>SCDateTimeMS</b> and <b>SCDateTime</b> is that all comparisons  involving  <b>SCDateTimeMS</b> variables are done to the microsecond rather than to the second. </p>
+
+    <p>The following operators are supported with  SCDateTimeMS variables and are done with microsecond precision: <b>== , != ,&lt; , &lt;= , &gt; , &gt;=</b>.</p>
+
+    <p>  Internally the  <b>SCDateTimeMS</b>  variable stores the Date-Time value as a C++  <b>integer</b> data type.   </p>
+
+    <p>SCDateTimeMS  variables can be assigned to persistent variables by using the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentSCDateTime">sc.GetPersistentSCDateTime</a> and <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scSetPersistentSCDateTime">sc.SetPersistentSCDateTime</a> functions.</p>
+
+    <p> As of version 2196, the  <b>SCDateTime</b> and  <b>SCDateTimeMS</b>  Date-Time classes used within ACSIL and Sierra Chart are now exactly the same. SCDateTime now functions exactly like SCDateTimeMS  where when comparisons are done,  they are done to the microsecond rather than to the second.  And there is no longer any internal rounding to the nearest second in <b>SCDateTime</b> for functions which would previously do this like <b>SCDateTime::GetTime</b>.  </p>
+    
+     <p>Instead the <b>GetTime</b> function  will simply remove any microseconds component and just return number of seconds since midnight.  Whereas previously <b>SCDateTime</b> would round to the nearest second.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DateValue">Date Values</h2>
+    <div class="member-link">[<a href="#DateValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Date values are integer (<b>int</b>) values representing the number of days since December 30, 1899. </p>
+
+    <p>You can get a Date Value from a SCDateTime variable by using the <a href="#SCDateTimeMember_GetDate">GetDate()</a> member function.</p>
+
+    <p>You can set the date part of a SCDateTime variable by using the <a href="#SCDateTimeMember_SetDate">SetDate()</a> member function. Or by constructing a SCDateTime and specifying the date value for the first parameter and 0 for the second parameter (time value). Example: <b>SCDateTime DateVariable(DateValue, 0);</b>. </p>
+
+    <p>You can construct a Date Value from Year, Month, Day components by using the <a href="#SCDateTimeMember_SetDateYMD">SetDateYMD()</a> function on a SCDateTime variable, and deconstruct a Date Value using the  <a href="#SCDateTimeMember_GetDateYMD">GetDateYMD()</a> function on a SCDateTime variable.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="TimeValue">Time Values</h2>
+    <div class="member-link">[<a href="#TimeValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Time Values are integer (<b>int</b>) values representing the number of seconds since midnight (00:00).</p>
+
+    <p>You can get a Time Value from a SCDateTime variable by using the <a href="#SCDateTimeMember_GetTimeInSeconds">GetTimeInSeconds()</a> member function. </p>
+
+    <p>You can set the time part of a SCDateTime variable from an integer time value by using the <a href="#SCDateTimeMember_SetTime">SetTime()</a> member function. Or by constructing a SCDateTime and specifying 0 for the first parameter (date value) and the time value for the second parameter. Example: <b>SCDateTime DateVariable(0, 720);</b>. 720 means 720 seconds from midnight.</p> 
+
+    <p>You can construct a Time Value from Hour, Minute, Second, Millisecond components by using the <a href="#SCDateTimeMember_SetTimeHMS_MS">SCDateTime::SetTimeHMS_MS()</a> function, and get the individual Time Value components by using the <a href="#SCDateTimeMember_GetTimeHMS">SCDateTime::GetTimeHMS()</a> function.</p>
+
+    <p>  To compare the time components of two different SCDateTime variables with precision to the second, get the time values from them by using the <a href="#SCDateTimeMember_GetTimeInSeconds">GetTimeInSeconds()</a> function and compare those time values.</p>
+    
+    <p>The <em>internal time value</em> of an SCDateTime can represent milliseconds/microseconds. There are corresponding member functions for these.  </p>
+</section>
+
+<section class="h2">
+    <h2 id="ValidRanges">Valid Ranges</h2>
+    <div class="member-link">[<a href="#ValidRanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The valid ranges for the Date and Time components in a SCDateTime variable are:</p>
+
+    <ul>
+        <li><b>Year</b>: Four digit year.  Example: 2012.</li>
+        <li><b>Month</b>: 1 through 12.</li>
+        <li><b>Day</b>: 1 through [days in month].</li>
+        <li><b>Hour</b>: 0 through 23.</li>
+        <li><b>Minute</b>: 0 through 59.</li>
+        <li><b>Second</b>: 0 through 59.</li>
+        <li><b>Millisecond</b>: 0 through 999. (Currently used only as a counter for trades within the same second. Does not represent actual milliseconds.)</li>
+        <li><b>Microsecond</b>: 0 through 999. (Not currently supported)</li>
+    </ul>
+
+</section>
+
+<section class="h2">
+    <h2 id="SCDateTimeMemberFunctions">SCDateTime Member Functions</h2>
+    <div class="member-link">[<a href="#SCDateTimeMemberFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetAsDouble">GetAsDouble()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetAsDouble">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function.</p>
+
+        <p class="ACSILFunctionHighlighting">double <b>GetAsDouble</b>();</p>
+
+        <p><b>GetAsDouble()</b> returns the internal Date-Time value as a double precision floating point value. This can be used to store the value externally. </p>
+        
+        <p>  This double precision floating point value can be passed to the SCDateTime constructor to create a new SCDateTime  from it. </p>
+        
+        <p>  For a complete explanation of the  Date component of this value, refer to <a href = "indexac34.html?page=doc/SCDateTime.html#DateValue">Date Value</a>.  The date value is the integer portion of the double.  The fractional portion is the Time value which is represented  as a fraction of one day where 1/86400000  is 1 millisecond. 86400000  is the number of milliseconds in a day.  </p>
+        
+
+        <section class="h4">    
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+const double DateTimeDouble = SCDateTimeVariable.GetAsDouble();
+            </pre>
+        </section>
+    </section>    
+    
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetDate">GetDate()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetDate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function.</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetDate</b>();</p>
+
+        <p><b>GetDate()</b> returns the date part of the SCDateTime variable.  The value returned is a <a href="#DateValue">Date Value</a>.</p>
+        
+
+        <section class="h4">    
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Date = SCDateTimeVariable.GetDate();
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetDateTimeYMDHMS">GetDateTimeYMDHMS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetDateTimeYMDHMS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>GetDateTimeYMDHMS</b>(int&amp; <b>Year</b>, int&amp; <b>Month</b>, int&amp; <b>Day</b>, int&amp; <b>Hour</b>, int&amp; <b>Minute</b>, int&amp; <b>Second</b>);</p>
+
+        <p><b>GetDateTimeYMDHMS()</b> gets the <b>Year</b>, <b>Month</b>, <b>Day</b>, <b>Hour</b>, <b>Minute</b>, and <b>Second</b> components of the SCDateTime variable.  The function will set the <b>Year</b>, <b>Month</b>, <b>Day</b>, <b>Hour</b>, <b>Minute</b>, and <b>Second</b> variables provided as parameters.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Year, Month, Day, Hour, Minute, Second;
+
+SCDateTimeVariable.GetDateTimeYMDHMS(Year, Month, Day, Hour, Minute, Second);
+            </pre>
+        </section>
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetDateTimeYMDHMS_MS">GetDateTimeYMDHMS_MS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetDateTimeYMDHMS_MS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>GetDateTimeYMDHMS_MS</b>(int&amp; <b>Year</b>, int&amp; <b>Month</b>, int&amp; <b>Day</b>, int&amp; <b>Hour</b>, int&amp; <b>Minute</b>, int&amp; <b>Second</b>, int&amp; <b>MilliSecond</b>);</p>
+
+        <p><b>GetDateTimeYMDHMS_MS()</b> gets the year, month, day, hour, minute, second, and millisecond components of the SCDateTime variable.  The function will set the <b>Year</b>, <b>Month</b>, <b>Day</b>, <b>Hour</b>, <b>Minute</b>, <b>Second</b>, and <b>MilliSecond</b> variables provided as parameters.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Year, Month, Day, Hour, Minute, Second, MilliSecond;
+
+SCDateTimeVariable.GetDateTimeYMDHMS_MS(Year, Month, Day, Hour, Minute, Second, MilliSecond);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetDateYMD">GetDateYMD()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetDateYMD">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> void <b>GetDateYMD</b>(int&amp; <b>Year</b>, int&amp; <b>Month</b>, int&amp; <b>Day</b>);</p>
+
+        <p><b>GetDateYMD()</b> gets the year, month, and day components of the SCDateTime variable.  </p> 
+        
+        <p>The function will set the <b>Year</b>, <b>Month</b>, and <b>Day</b> variables provided as parameters.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Year = 0;
+int Month = 0;
+int Day = 0;            
+SCDateTimeVariable.GetDateYMD(Year, Month, Day);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetDay">GetDay()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetDay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetDay</b>();</p>
+
+        <p><b>GetDay()</b> returns an integer value representing the day of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Day = sc.BaseDateTimeIn[sc.Index].GetDay();     
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetDayOfWeek">GetDayOfWeek()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetDayOfWeek">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> int <b>GetDayOfWeek</b>();</p>
+
+        <p>The <b>GetDayOfWeek()</b> function returns the day of the week for the SCDateTime variable. </p>
+
+        <p>The return value will be one of the following: </p>
+        <ul>        
+            <li>SUNDAY</li>
+            <li>MONDAY</li>
+            <li>TUESDAY</li>
+            <li>WEDNESDAY</li>
+            <li>THURSDAY</li>
+            <li>FRIDAY</li>
+            <li>SATURDAY</li>
+        </ul>
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+if (SCDateTimeVariable.GetDayOfWeek() == MONDAY)
+{
+    // SCDateTimeVariable is a Monday
+}
+            </pre>
+        </section>
+        
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetTimeHMS">GetTimeHMS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetTimeHMS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetTimeHMS</b>(int& <b>Hour</b>, int& <b>Minute</b>, int& <b>Second</b>);</p>
+
+        <p><b>sc.GetTimeHMS()</b> gets the <b>Hour</b>, <b>Minute</b>, and <b>Second</b> components of the internal <a href="#TimeValue">Time Value</a> of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Hour = 0;
+int Minute = 0;
+int Second = 0;
+
+sc.GetTimeHMS(Hour, Minute, Second);
+            </pre>
+        </section>
+    </section>
+    
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetHour">GetHour()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetHour">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetHour</b>();</p>
+
+        <p><b>GetHour()</b> returns an integer value representing the hour of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Hour = sc.BaseDateTimeIn[sc.Index].GetHour();
+            </pre>
+        </section>
+    </section>
+
+    <div class="h3">
+        <h3 id="SCDateTimeMember_GetMicroSecond">GetMicroSecond()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetMicroSecond">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetMicroSecond</b>();</p>
+
+        <p><b>GetMicroSecond()</b> returns an integer value representing the microsecond of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int MicroSecond = sc.BaseDateTimeIn[sc.Index].GetMicroSecond();
+            </pre>
+        </section>
+    </div>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetMillisecond">GetMillisecond()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetMillisecond">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> int <b>GetMillisecond</b>();</p>
+
+        <p><b>GetMillisecond()</b> returns the milliseconds  portion of the Date-Time variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int MilliSecond = sc.BaseDateTimeIn[sc.Index].GetMillisecond();
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetMinute">GetMinute()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetMinute">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetMinute</b>();</p>
+
+        <p><b>GetMinute()</b> returns an integer value representing the minute of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Minute = sc.BaseDateTimeIn[sc.Index].GetMinute();
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetMonth">GetMonth()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetMonth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetMonth</b>();</p>
+
+        <p><b>GetMonth()</b> returns an integer value representing the month of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Month = sc.BaseDateTimeIn[sc.Index].GetMonth();       
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetSecond">GetSecond()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetSecond">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetSecond</b>();</p>
+
+        <p><b>GetSecond()</b> returns an integer value representing the second of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Second = sc.BaseDateTimeIn[sc.Index].GetSecond();
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetTimeInMilliseconds">GetTimeInMilliseconds()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetTimeInMilliseconds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetTimeInMilliseconds</b>();</p>
+
+        <p><b>GetTimeInMilliseconds()</b> returns the time part of the SCDateTime variable in milliseconds since midnight.</p>
+        
+        <p>  The internal time value is rounded to the nearest millisecond if it contains microseconds.</p>
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int TimeInMilliseconds = SCDateTimeVariable.GetTimeInMilliseconds();
+            </pre>
+        </section>
+    </section>
+    
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetTimeInSeconds">GetTimeInSeconds()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetTimeInSeconds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetTimeInSeconds</b>();</p>
+
+        <p><b>GetTimeInSeconds()</b> returns the time part of the SCDateTime variable in seconds.  The value returned is a <a href="#TimeValue">Time Value</a>.</p>
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int TimeInSeconds = SCDateTimeVariable.GetTimeInSeconds();
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetTimeAsSCDateTime">GetTimeAsSCDateTime()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetTimeAsSCDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime <b>GetTimeAsSCDateTime</b>();</p>
+
+        <p><b>GetTimeAsSCDateTime()</b> returns the time part of the SCDateTime variable.  The value returned is a <a href="#SCDateTimeVariables">SCDateTime variable</a>.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime TimeOnly = SCDateTimeVariable.GetTimeAsSCDateTime();
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetTimeInSecondsWithoutMilliseconds">GetTimeInSecondsWithoutMilliseconds()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetTimeInSecondsWithoutMilliseconds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetTimeInSecondsWithoutMilliseconds</b>();</p>
+
+        <p><b>GetTimeInSecondsWithoutMilliseconds()</b> returns the time part of the SCDateTime variable without the milliseconds part.  The value returned is a <a href="#TimeValue">Time Value</a>.</p>
+
+        <p>The millisecond/microsecond component is discarded so that the value is truncated to the containing second.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Time = SCDateTimeVariable.GetTimeInSecondsWithoutMilliseconds();
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_GetYear">GetYear()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_GetYear">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetYear</b>();</p>
+
+        <p><b>GetYear()</b> returns an integer value representing the year of the SCDateTime variable.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for the range of values returned.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+int Year = sc.BaseDateTimeIn[sc.Index].GetYear();            
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_IsSaturday">IsSaturday()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_IsSaturday">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>IsSaturday</b>();</p>
+
+        <p><b>IsSaturday()</b> returns an boolean value (true or false) depending on whether the day of the week for the SCDateTime variable is <b>SATURDAY</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_IsSunday">IsSunday()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_IsSunday">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>IsSunday</b>();</p>
+
+        <p><b>IsSunday()</b> returns an boolean value (true or false) depending on whether the day of the week for the SCDateTime variable is <b>SUNDAY</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_IsWeekend">IsWeekend()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_IsWeekend">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>IsWeekend</b>();</p>
+
+        <p><b>IsWeekend()</b> returns an boolean value (true or false) depending on whether the day of the week for the SCDateTime variable is a weekend day (<b>SATURDAY</b> or <b>SUNDAY</b>).</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_RoundDateTimeDownToMilliSecond">RoundDateTimeDownToMilliSecond()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_RoundDateTimeDownToMilliSecond">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> void <b>RoundDateTimeDownToMilliSecond</b>();</p>
+
+        <p>The <b>RoundDateTimeDownToMilliSecond()</b>  function  rounds down the Date-Time value contained within the SCDateTime variable to the millisecond and removes the microseconds. Therefore, the microseconds will be zero.</p>  
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime BarDateTime = sc.BaseDateTimeIn[sc.Index];
+BarDateTime.RoundDateTimeDownToMilliSecond();
+            </pre>
+        </section>        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_RoundDateTimeDownToMinute">RoundDateTimeDownToMinute()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_RoundDateTimeDownToMinute">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> void <b>RoundDateTimeDownToMinute</b>();</p>
+
+        <p>The <b>RoundDateTimeDownToMinute()</b>  function  rounds down the Date-Time value contained within the SCDateTime variable to the minute and removes the seconds. Therefore, the seconds will be zero.</p>  
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime BarDateTime = sc.BaseDateTimeIn[sc.Index];
+BarDateTime.RoundDateTimeDownToMinute();
+            </pre>
+        </section>        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_RoundDateTimeDownToSecond">RoundDateTimeDownToSecond()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_RoundDateTimeDownToSecond">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> void <b>RoundDateTimeDownToSecond</b>();</p>
+
+        <p>The <b>RoundDateTimeDownToSecond()</b>  function  rounds down the Date-Time value contained within the SCDateTime variable to the second and removes the milliseconds. Therefore, the milliseconds will be zero.</p>  
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime BarDateTime = sc.BaseDateTimeIn[sc.Index];
+BarDateTime.RoundDateTimeDownToSecond();
+            </pre>
+        </section>        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_RoundToNearestMilliSecond">RoundToNearestMilliSecond()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_RoundToNearestMilliSecond">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> void <b>RoundToNearestMilliSecond</b>();</p>
+
+        <p>The <b>RoundToNearestMilliSecond()</b>  function  rounds the Date-Time value contained within the SCDateTime variable to the nearest millisecond and removes the microseconds. Therefore, the microseconds will be zero.</p>  
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime BarDateTime = sc.BaseDateTimeIn[sc.Index];
+BarDateTime.RoundToNearestMilliSecond();
+            </pre>
+        </section>        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_RoundToNearestSecond">RoundToNearestSecond()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_RoundToNearestSecond">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> void <b>RoundToNearestSecond</b>();</p>
+
+        <p>The <b>RoundToNearestSecond()</b>  function  rounds the Date-Time value contained within the SCDateTime variable to the nearest second and removes the milliseconds. Therefore, the milliseconds will be zero.</p>  
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime BarDateTime = sc.BaseDateTimeIn[sc.Index];
+BarDateTime.RoundToNearestSecond();
+            </pre>
+        </section>        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SCDateTime">SCDateTime() Constructors</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SCDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime constructor.</p>
+
+        <p class="ACSILFunctionHighlighting"><b>SCDateTime</b>();</p>
+        
+        <p class="ACSILFunctionHighlighting"><b>SCDateTime</b>(double <b>DateTime</b> );</p>
+
+        <p class="ACSILFunctionHighlighting"><b>SCDateTime</b>(const <a href="#SCDateTimeVariables">SCDateTime</a> & <b>DateTime</b>);</p>
+        
+        <p class="ACSILFunctionHighlighting"><b>SCDateTime</b>(int <a href="#DateValue">DateValue</a>, int <a href="#TimeValue">TimeValue</a>);</p>
+        
+        <p class="ACSILFunctionHighlighting"><b>SCDateTime</b>(int <b>Hour</b>, int <b>Minute</b>, int <b>Second</b>, int <b>Millisecond</b>);</p>
+       
+        
+        <p class="ACSILFunctionHighlighting"><b>SCDateTime</b>(int <b>Year</b>, int <b>Month</b>, int <b>Day</b>, int <b>Hour</b>, int <b>Minute</b>, int <b>Second</b>);</p>
+
+        <p><b>SCDateTime()</b> is the constructor function that constructs and initializes a SCDateTime variable.  Using the different constructors, it is supported to assign the Year, Month, Day, Hour, Minute, Second, Millisecond values to the SCDateTime variable. Or a <a href="#DateValue">Date Value</a> or <a href="#TimeValue">Time Value</a>.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for valid values that can be used for the parameters.</p>       
+        
+        
+        <section class="h4"> 
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTime(2017, 1, 30, 0, 0, 0);
+SCDateTime DateTime(2012, 1, 1, 12, 0, 0);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetDate">SetDate()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetDate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime&amp; <b>SetDate</b>(int <b>Date</b>); </p>
+
+        <p><b>SetDate()</b> sets the date part of the SCDateTime variable with the given <b>Date</b>.  <b>Date</b> must be given as a <a href="#DateValue">Date Value</a>.</p>
+        
+        <p>  The existing time portion of the SCDateTime  variable is preserved when using the <b>SetDate()</b>function. </p>
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+
+SCDateTime SCDateTimeVariable;
+SCDateTimeVariable.SetDate(sc.BaseDateTimeIn[sc.Index].GetDate());
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetDateTime">SetDateTime()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> int <b>SetDateTime</b>(int <b>Date</b>, int <b>Time</b>);</p>
+
+        <p><b>SetDateTime()</b> sets the SCDateTime variable with the given <b>Date</b> and <b>Time</b> components.  <b>Date</b> must be given as a <a href="#DateValue">Date Value</a>, and <b>Time</b> must be given as a <a href="#TimeValue">Time Value</a>.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+r_StopDateTime.SetDateTime(sc.BaseDateTimeIn[sc.Index].GetDate(), Input_StopTime.GetTime());
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetDateTimeYMDHMS">SetDateTimeYMDHMS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetDateTimeYMDHMS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime&amp; <b>SetDateTimeYMDHMS</b>(int <b>Year</b>, int <b>Month</b>, int <b>Day</b>, int <b>Hour</b>, int <b>Minute</b>, int <b>Second</b>);</p>
+
+        <p><b>SetDateTimeYMDHMS()</b> sets the SCDateTime variable with the given <b>Year</b>, <b>Month</b>, <b>Day</b>, <b>Hour</b>, <b>Minute</b>, and <b>Second</b> components.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for valid values that can be used.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.SetDateTimeYMDHMS(2007, 1, 30, 16, 10, 0);
+            </pre>
+        </section>
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetDateTimeYMDHMS_MS">SetDateTimeYMDHMS_MS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetDateTimeYMDHMS_MS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime&amp; <b>SetDateTimeYMDHMS_MS</b>(int <b>Year</b>, int <b>Month</b>, int <b>Day</b>, int <b>Hour</b>, int <b>Minute</b>, int <b>Second</b>, int <b>MilliSecond</b>);</p>
+
+        <p><b>SetDateTimeYMDHMS_MS()</b> sets the SCDateTime variable with the given <b>Year</b>, <b>Month</b>, <b>Day</b>, <b>Hour</b>, <b>Minute</b>, <b>Second</b>, and <b>MilliSecond</b> components.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for valid values that can be used.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.SetDateTimeYMDHMS_MS(2007, 1, 30, 16, 10, 0, 0);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetDateYMD">SetDateYMD()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetDateYMD">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime&amp; <b>SetDateYMD</b>(int <b>Year</b>, int <b>Month</b>, int <b>Day</b>);</p>
+
+        <p><b>SetDateYMD()</b> sets the date part of the SCDateTime variable with the given <b>Year</b>, <b>Month</b>, and <b>Day</b> components.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for valid values that can be used.</p>
+        
+        
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.SetDateYMD(2007, 1, 30);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetTime">SetTime()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime&amp; <b>SetTime</b>(int <b>Time</b>);</p>
+
+        <p>The <b>SetTime()</b> function sets the time part, in seconds, of the SCDateTime variable with the given <b>Time</b>.  <b>Time</b> must be given as a <a href="#TimeValue">Time Value</a>.</p>
+        
+         <p>  The existing date portion of the SCDateTime  variable is preserved when using the <b>SetTime()</b>function. </p>
+         
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime TimeValue(16, 14, 59, 0);//Construct a time value
+
+SCDateTimeVariable.SetTime(TimeValue);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetTimeHMS">SetTimeHMS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetTimeHMS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime&amp; <b>SetTimeHMS</b>(int <b>Hour</b>, int <b>Minute</b>, int <b>Second</b>);</p>
+
+        <p><b>SetTimeHMS()</b> sets the time part of the SCDateTime variable with the given <b>Hour</b>, <b>Minute</b>, and <b>Second</b> components. The existing date in the variable is not changed and left as is.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for valid values that can be used.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.SetTimeHMS(16, 10, 0);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SetTimeHMS_MS">SetTimeHMS_MS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SetTimeHMS_MS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime member function</p>
+
+        <p class="ACSILFunctionHighlighting"> SCDateTime&amp; <b>SetTimeHMS_MS</b>(int <b>Hour</b>, int <b>Minute</b>, int <b>Second</b>, int <b>MilliSecond</b>);</p>
+
+        <p><b>SetTimeHMS_MS()</b> sets the time part of the SCDateTime variable with the given <b>Hour</b>, <b>Minute</b>, <b>Second</b>, and <b>MilliSecond</b> components. The existing date in the variable is not changed and left as is.</p>
+
+        <p>Refer to the <a href="#ValidRanges">Valid Ranges</a> section for valid values that can be used.</p>
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.SetTimeHMS_MS(16, 10, 0, 0);
+            </pre>
+        </section>
+    </section>    
+    
+    <section class="h3">
+        <h3 id="SCDateTimeMember_DAYS">DAYS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_DAYS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime static member function</p>
+
+        <p class="ACSILFunctionHighlighting">static SCDateTime&amp; <b>DAYS</b>(int <b>Days</b>);</p>
+
+        <p>The <b>DAYS()</b> static member function constructs and returns an SCDateTime variable containing the number of days according to the specified number of days.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTimeVariable;
+DateTimeVariable += SCDateTime::DAYS(5);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_YEARS">YEARS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_YEARS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime static member function</p>
+
+        <p class="ACSILFunctionHighlighting">static SCDateTime&amp; <b>YEARS</b>(int <b>Years</b>);</p>
+
+        <p>The <b>YEARS()</b> static member function constructs and returns an SCDateTime variable containing the number of years according to the specified number of years.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTimeVariable;
+DateTimeVariable += SCDateTime::YEARS(5);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_HOURS">HOURS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_HOURS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime static member function</p>
+
+        <p class="ACSILFunctionHighlighting">static SCDateTime&amp; <b>HOURS</b>(int <b>Hours</b>);</p>
+
+        <p>The <b>HOURS()</b> static member function constructs and returns an SCDateTime variable containing the number of hours according to the specified number of hours.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTimeVariable;
+DateTimeVariable += SCDateTime::HOURS(5);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_MINUTES">MINUTES()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_MINUTES">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime static member function</p>
+
+        <p class="ACSILFunctionHighlighting">static SCDateTime&amp; <b>MINUTES</b>(int <b>Minutes</b>);</p>
+
+        <p>The <b>MINUTES()</b> static member function constructs and returns an SCDateTime variable containing the number of minutes according to the specified number of minutes.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTimeVariable;
+DateTimeVariable += SCDateTime::MINUTES(5);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_SECONDS">SECONDS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_SECONDS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime static member function</p>
+
+        <p class="ACSILFunctionHighlighting">static SCDateTime&amp; <b>SECONDS</b>(int <b>Seconds</b>);</p>
+
+        <p>The <b>SECONDS()</b> static member function constructs and returns an SCDateTime variable containing the number of seconds according to the specified number of seconds.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTimeVariable;
+DateTimeVariable += SCDateTime::SECONDS(5);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_MILLISECONDS">MILLISECONDS()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_MILLISECONDS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime static member function</p>
+
+        <p class="ACSILFunctionHighlighting">static SCDateTime&amp; <b>MILLISECONDS</b>(int <b>Milliseconds</b>);</p>
+
+        <p>The <b>MILLISECONDS()</b> static member function constructs and returns an SCDateTime variable containing the number of milliseconds according to the specified number of milliseconds.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTimeVariable;
+DateTimeVariable += SCDateTime::MILLISECONDS(5);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_Operator+=">operator+=()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_Operator+=">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime  member operator</p>
+
+        <p class="ACSILFunctionHighlighting">const SCDateTime&amp; <b>+=</b>(const SCDateTime& <b>DateTime</b>);</p>
+
+        <p>The <b>+=</b> member operator adds the given <b>DateTime</b> parameter  to the existing  Date-Time value in the SCDateTime object it is called in relation to. </p>
+        
+        <p> The given <b>DateTime</b>  parameter  usually will represent a certain amount of time, like for example 1 hour, and not represent a particular absolute Date-Time. </p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime DateTimeVariable;
+DateTimeVariable += SCDateTime::YEARS(5);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SCDateTimeMember_Operator-=">operator-=()</h3>
+        <div class="member-link">[<a href="#SCDateTimeMember_Operator-=">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: SCDateTime  member operator</p>
+
+        <p class="ACSILFunctionHighlighting">const SCDateTime&amp; <b>-=</b>(const SCDateTime& <b>DateTime</b>);</p>
+
+        <p>The <b>+=</b> member operator subtracts the given <b>DateTime</b> parameter  to the existing  Date-Time value in the SCDateTime object it is called in relation to. </p>
+        
+        <p> The given <b>DateTime</b>  parameter  usually will represent a certain amount of time, like for example 1 hour, and not represent a particular absolute Date-Time. </p>
+
+
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTime Time(1, 10, 0, 0); //1 Hour and 10 Minutes.
+SCDateTime DateTimeVariable;
+DateTimeVariable -= Time;
+            </pre>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DateAndTimeFunctions">Date and Time Functions</h2>
+    <div class="member-link">[<a href="#DateAndTimeFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="DaysInDateSpanNotIncludingWeekends">DaysInDateSpanNotIncludingWeekends()</h3>
+        <div class="member-link">[<a href="#DaysInDateSpanNotIncludingWeekends">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: Function</p>
+
+        <p class="ACSILFunctionHighlighting"> int <b>DaysInDateSpanNotIncludingWeekends</b>(int <b>FirstDate</b>, int <b>LastDate</b>)</p>
+
+        <p>The <b>DaysInDateSpanNotIncludingWeekends()</b> function calculates the number of days within the date span specified by the <b> FirstDate </b> and the <b>LastDate</b> parameters, not including Saturday and Sunday. </p>
+        
+        <p>The calculation includes both of these dates as well. Both of these parameters are <a href="#DateValue">Date Values</a>.</p>
+
+        <section class="h4">
+            <h4>Example Code</h4>
+
+            <pre class="Code FullLineHeight">
+int NumberOfDays = DaysInDateSpanNotIncludingWeekends(sc.BaseDateTimeIn[sc.Index - 100].GetDate(), sc.BaseDateTimeIn[sc.Index].GetDate());
+            </pre>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SCDateTimeArrays">Working With SCDateTime Arrays</h2>
+    <div class="member-link">[<a href="#SCDateTimeArrays">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When working with the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDateTimeIn">sc.BaseDateTimeIn[]</a> array, you can use  different methods for getting the date and/or time parts from elements in the array.  These methods are given below.</p>
+
+
+    <section class="h4">
+        <h4>Using the <b>GetDate()</b> and <b>GetTimeInSeconds()</b> member functions of a  <b>SCDateTime</b> variable</h4>
+        <pre class="Code FullLineHeight">
+// Get the date of the bar at the current index
+int CurrentBarDate = sc.BaseDateTimeIn[sc.Index].GetDate();
+
+// Get the time of the bar at the current index
+int CurrentBarTime = sc.BaseDateTimeIn[sc.Index].GetTimeInSeconds();
+        </pre>
+    </section>
+
+    <section class="h4">
+        <h4>Using the <b>DateAt()</b> and <b>TimeAt()</b> member functions of a  <b>SCDateTime</b> array</h4>
+        <pre class="Code FullLineHeight">
+// Get the date of the bar at the current index
+int CurrentBarDate = sc.BaseDateTimeIn.DateAt(sc.Index);
+
+// Get the time of the bar at the current index
+int CurrentBarTime = sc.BaseDateTimeIn.TimeAt(sc.Index);			
+        </pre>
+    </section>
+
+    <section class="h4">
+        <h4>Using the <b>[]</b> array operator on the <b>sc.BaseDateTimeIn</b> SCDateTime array to get the Date and Time</h4>
+        <pre class="Code FullLineHeight">
+if (sc.BaseDateTimeIn[sc.Index] - sc.BaseDateTimeIn[sc.Index - 1] &gt; SCDateTime::MINUTES(1))
+{
+	// The current bar being processed has a Date-Time which is more than one minute later than the prior bar Date-Time.
+}			
+        </pre>
+    </section>
+</section>
+
+<section class="h3">
+    <h3 id="DateAt">DateAt()</h3>
+    <div class="member-link">[<a href="#DateAt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Type: SCDateTimeArray member function</p>
+
+    <p class="ACSILFunctionHighlighting"> int <b>DateAt</b>(int <b>Index</b>);</p>
+
+    <p><b>DateAt()</b> returns the date part of the SCDateTime variable at the given <b>Index</b> in the SCDateTime array.  The value returned is a <a href="#DateValue">Date Value</a>.</p>
+
+    <section class="h4">
+        <h4>Example Code</h4>
+        <pre class="Code FullLineHeight">
+// Get the date at the current index
+int Date = sc.BaseDateTimeIn.DateAt(sc.Index);
+        </pre>
+    </section>
+</section>
+
+<section class="h3">
+    <h3 id="TimeAt">TimeAt()</h3>
+    <div class="member-link">[<a href="#TimeAt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Type: SCDateTimeArray member function</p>
+
+    <p class="ACSILFunctionHighlighting"> int <b>TimeAt</b>(int <b>Index</b>);</p>
+
+    <p><b>TimeAt()</b> returns the time part of the SCDateTime variable at the given <b>Index</b> in the SCDateTime array.  The value returned is a <a href="#TimeValue">Time Value</a>.</p>
+    <section class="h4">
+        <h4>Example Code</h4>
+        <pre class="Code FullLineHeight">
+// Get the time at the current index
+int Time = sc.BaseDateTimeIn.TimeAt(sc.Index);
+        </pre>
+    </section>
+</section>
+
+<section class="h3">
+    <h3 id="SetDateAt">SetDateAt()</h3>
+    <div class="member-link">[<a href="#SetDateAt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Type: SCDateTimeArray member function</p>
+
+    <p class="ACSILFunctionHighlighting"> int <b>SetDateAt</b>(int <b>Index</b>, int <b>Date</b>); </p>
+
+    <p><b>SetDateAt()</b> sets the date part of the DateTime variable at the given <b>Index</b> in the SCDateTime array.  <b>Date</b> must be given as a <a href="#DateValue">Date Value</a>.  The value returned is the same value that is passed in for <b>Date</b>. This function <em>must not</em> be used on the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDateTimeIn">sc.BaseDateTimeIn[]</a> array.  The only array you'll probably ever use this on is the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scDateTimeOut">sc.DateTimeOut[]</a> array.</p>
+    <section class="h4">
+        <h4>Example Code</h4>
+        <pre class="Code FullLineHeight">
+// Set the date for a custom chart bar
+int Date = sc.DateTimeOut.SetDateAt(CustomIndex,sc.BaseDateTimeIn[sc.Index].GetDate());
+        </pre>
+    </section>
+</section>
+
+<section class="h3">
+    <h3 id="SetTimeAt">SetTimeAt()</h3>
+    <div class="member-link">[<a href="#SetTimeAt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Type: SCDateTimeArray member function</p>
+
+    <p class="ACSILFunctionHighlighting"> int <b>SetTimeAt</b>(int <b>Index</b>, int <b>Time</b>);</p>
+
+    <p><b>SetTimeAt()</b> sets the time part of the DateTime variable at the given <b>Index</b> in the SCDateTime array.  <b>Time</b> must be given as a <a href="#TimeValue">Time Value</a>.  The value returned is the same value that is passed in for <b>Time</b>. This function <em>must not</em> be used on the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDateTimeIn">sc.BaseDateTimeIn[]</a> array.  The only array you will need to use this on is the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scDateTimeOut">sc.DateTimeOut[]</a> array.</p>
+
+    <section class="h4">
+        <h4>Example Code</h4>
+        <pre class="Code FullLineHeight">
+// Set the time for a custom chart bar
+int Time = sc.DateTimeOut.SetTimeAt(CustomIndex,sc.BaseDateTimeIn[sc.Index].GetTimeInSeconds());
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="References">Using References</h2>
+    <div class="member-link">[<a href="#References">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The SCDateTime reference type, <b>SCDateTimeArrayRef</b>, can be used to set a reference to a <b>SCDateTimeArray</b> array to simplify writing code. See the example below.</p>
+    <section class="h3">
+        <section class="h4">
+            <h4>Example Code</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeArrayRef DateTimes = sc.BaseDateTimeIn;
+int Time;
+Time = DateTimes[sc.Index].GetTimeInSeconds();
+            </pre>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DateTimeMath">Date and Time Math</h2>
+    <div class="member-link">[<a href="#DateTimeMath">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p><a href="#SCDateTimeVariables">SCDateTime Variable Documentation</a></p>
+
+    <section class="h3">
+        <section class="h4">
+            <h4>Adding 30 seconds to a SCDateTime variable</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.AddSeconds(30);
+            </pre>
+        </section>
+
+        <section class="h4">
+            <h4>Subtracting 5 minutes from a SCDateTime variable</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.SubtractMinutes(5);
+            </pre>
+        </section>
+
+        <section class="h4">
+            <h4>Adding 1 hour to a SCDateTime variable</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.AddHours(1);
+            </pre>
+        </section>
+
+        <section class="h4">
+            <h4>Adding 1 day to a SCDateTime variable</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.AddDays(1);
+            </pre>
+        </section>
+
+        <section class="h4">
+            <h4>Adding 1 week to a SCDateTime variable</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.AddDays(DAYS_PER_WEEK);
+            </pre>
+        </section>
+
+        <section class="h4">
+            <h4>Adding 1 year to a SCDateTime variable</h4>
+            <pre class="Code FullLineHeight">
+SCDateTimeVariable.AddYears(1);
+            </pre>
+        </section>
+    </section>
+</section>
+
+<hr><p>*Last modified Friday, 09th December, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SCDateTime.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+</html>  

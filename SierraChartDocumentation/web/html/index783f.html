@@ -1,0 +1,2286 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/OrderTypes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:49:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1682158839') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/OrderTypes.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Order Types -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index783f.html?page=doc/OrderTypes.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index783f.html?page=doc/OrderTypes.html">Order Types</a></h4> </div>     <h1 class="PageName">Order Types</h1>
+
+<ul>
+    <li><a href="#OrderTypes">Order Types</a>
+        <ul>
+            <li><a href="#Market">Market</a></li>
+            <li><a href="#Limit">Limit</a>
+				<ul>
+				    <li><a href="#LimitOrderInputs">Limit Order Inputs</a></li>
+				    <li><a href="#AttachedLimitOrderInputs">Attached Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#Stop">Stop</a>
+				<ul>
+					<li><a href="#RejectionOfStopOrdersBeyondLastTradePrice">Rejection of Stop Orders Beyond Last Trade Price</a></li>
+					<li><a href="#StopOrderInputs">Stop Order Inputs</a></li>
+					<li><a href="#AttachedStopOrderInputs">Attached Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#StopLimit">Stop-Limit</a>
+				<ul>
+					<li><a href="#StopLimitOrderInputs">Stop Limit Order Inputs</a></li>
+					<li><a href="#AttachedStopLimitOrderInputs">Attached Stop Limit Order Inputs</a></li>
+				</ul>
+			</li>
+             <li><a href="#MarketLimit">Market Limit</a></li>
+            <li><a href="#MarketIfTouched">Market If Touched</a>
+				<ul>
+					<li><a href="#MarketIfTouchedOrderInputs">Market If Touched Order Inputs</a></li>
+					<li><a href="#AttachedMarketIfTouchedOrderInputs">Attached Market If Touched Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#LimitChase">Limit Chase</a>
+				<ul>
+					<li><a href="#LimitChaseOrderInputs">Limit Chase Order Inputs</a></li>
+					<li><a href="#LimitChaseOrderSettings">Limit Chase Order Settings</a></li>
+					<li><a href="#AttachedLimitChaseOrderInputs">Attached Limit Chase Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#LimitTouchChase">Limit Touch Chase</a>
+				<ul>
+					<li><a href="#LimitTouchChaseOrderInputs">Limit Touch Chase Order Inputs</a></li>
+					<li><a href="#LimitTouchChaseOrderSettings">Limit Touch Chase Order Settings</a></li>
+					<li><a href="#AttachedLimitTouchChaseOrderInputs">Attached Limit Touch Chase Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TrailingStop">Trailing Stop</a>
+				<ul>
+					<li><a href="#TrailingStopOrderInputs">Trailing Stop Order Inputs</a></li>
+					<li><a href="#AttachedTrailingStopOrderInputs">Attached Trailing Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TrailingStopLimit">Trailing Stop-Limit</a>
+				<ul>
+					<li><a href="#TrailingStopLimitOrderInputs">Trailing Stop Limit Order Inputs</a></li>
+					<li><a href="#AttachedTrailingStopLimitOrderInputs">Attached Trailing Stop Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TriggeredTrailingStop">Triggered Trailing Stop</a>
+				<ul>
+					<li><a href="#TriggeredTrailingStopOrderInputs">Triggered Trailing Stop Order Inputs</a></li>
+					<li><a href="#AttachedTriggeredTrailingStopOrderInputs">Attached Triggered Trailing Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TriggeredTrailingStopLimit">Triggered Trailing Stop Limit</a>
+				<ul>
+					<li><a href="#TriggeredTrailingStopLimitOrderInputs">Triggered Trailing Stop Limit Order Inputs</a></li>
+					<li><a href="#AttachedTriggeredTrailingStopLimitOrderInputs">Attached Triggered Trailing Stop Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#StepTrailingStop">Step Trailing Stop</a>
+				<ul>
+					<li><a href="#StepTrailingStopOrderInputs">Step Trailing Stop Order Inputs</a></li>
+					<li><a href="#AttachedStepTrailingStopOrderInputs">Attached Step Trailing Step Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#StepTrailingStopLimit">Step Trailing Stop Limit</a>
+				<ul>
+					<li><a href="#StepTrailingStopLimitOrderInputs">Step Trailing Stop Limit Order Inputs</a></li>
+					<li><a href="#AttachedStepTrailingStopLimitOrderInputs">Attached Step Trailing Step Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TriggeredStepTrailingStop">Triggered Step Trailing Stop</a>
+				<ul>
+					<li><a href="#TriggeredStepTrailingStopOrderInputs">Triggered Step Trailing Stop Order Inputs</a></li>
+					<li><a href="#AttachedTriggeredStepTrailingStopOrderInputs">Attached Triggered Step Trailing Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TriggeredStepTrailingStopLimit">Triggered Step Trailing Stop Limit</a>
+				<ul>
+					<li><a href="#TriggeredStepTrailingStopLimitOrderInputs">Triggered Step Trailing Stop Limit Order Inputs</a></li>
+					<li><a href="#AttachedTriggeredStepTrailingStopLimitOrderInputs">Attached Triggered Step Trailing Stop Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#OCOLimitandStop">OCO Limit and Stop</a>
+				<ul>
+					<li><a href="#OCOLimitandStopOrderInputs">OCO Limit and Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#OCOLimitandStopLimit">OCO Limit and Stop-Limit</a>
+				<ul>
+					<li><a href="#OCOLimitandStopLimitOrderInputs">OCO Limit and Stop Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#OCOBuyStopSellStop">OCO Buy Stop Sell Stop</a>
+				<ul>
+					<li><a href="#OCOBuyStopSellStopOrderInputs">OCO Buy Stop Sell Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#OCOBuyStopLimitSellStopLimit">OCO Buy Stop-Limit Sell Stop-Limit</a>
+				<ul>
+					<li><a href="#OCOBuyStopLimitSellStopLimitOrderInputs">OCO Buy Stop Limit Sell Stop Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#OCOBuyLimitSellLimit">OCO Buy Limit Sell Limit</a>
+				<ul>
+					<li><a href="#OCOBuyLimitSellLimitOrderInputs">OCO Buy Limit Sell Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#SendAttachedOrders">Send Attached Orders - Position/Price</a>
+				<ul>
+					<li><a href="#SendAttachedOrdersChart">Sending Attached Orders from a Chart or Trade DOM</a></li>
+					<li><a href="#SendAttachedOrdersTradeWindow">Sending Attached Orders from the Trade Window</a></li>
+					<li><a href="#SendingAttachedOrdersByKeyboardShortcuts">Sending Attached Orders by Keyboard Shortcuts</a></li>
+				</ul>
+			</li>
+            <li><a href="#LimitIfTouched">Limit if Touched</a>
+				<ul>
+					<li><a href="#LimitIfTouchedOrderInputs">Limit if Touched Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#BidAskQuantityTriggeredStop">Bid Ask Quantity Triggered Stop</a>
+				<ul>
+					<li><a href="#BidAskQuantityTriggeredStopOrderInputs">Bid Ask Quantity Triggered Stop Order Inputs</a></li>
+					<li><a href="#AttachedBidAskQuantityTriggeredStopOrderInputs">Attached Bid Ask Quantity Triggered Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TriggeredLimit">Triggered Limit</a>
+				<ul>
+					<li><a href="#TriggeredLimitOrderInputs">Triggered Limit Order Inputs</a></li>
+					<li><a href="#AttachedTriggeredLimitOrderInputs">Attached Triggered Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TradeVolumeTriggeredStop">Trade Volume Triggered Stop</a>
+				<ul>
+					<li><a href="#TradeVolumeTriggeredStopOrderInputs">Trade Volume Triggered Stop Order Inputs</a></li>
+					<li><a href="#AttachedTradeVolumeTriggeredStopOrderInputs">Attached Trade Volume Triggered Stop Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#StopWithBidAskTriggering">Stop with Bid/Ask Triggering</a>
+				<ul>
+					<li><a href="#StopWithBidAskTriggeringOrderInputs">Stop with Bid/Ask Triggering Order Inputs</a></li>
+					<li><a href="#AttachedStopWithBidAskTriggeringOrderInputs">Attached Stop with Bid/Ask Triggering Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#StopWithLastTriggering">Stop with Last Triggering</a>
+				<ul>
+					<li><a href="#StopWithLastTriggeringOrderInputs">Stop with Last Triggering Order Inputs</a></li>
+					<li><a href="#AttachedStopWithLastTriggeringOrderInputs">Attached Stop with Last Triggering Order Inputs</a></li>				
+				</ul>
+			</li>
+            <li><a href="#LimitIfTouched-Client">Limit if Touched - Client</a>
+				<ul>
+					<li><a href="#LimitIfTouched-ClientOrderInputs">Limit if Touched - Client Order Inputs</a></li>
+					<li><a href="#AttachedLimitIfTouched-ClientOrderInputs">Attached Limit if Touched - Client Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#MarketIfTouched-Client">Market if Touched - Client</a>
+				<ul>
+					<li><a href="#MarketIfTouched-ClientOrderInputs">Market if Touched - Client Order Inputs</a></li>
+					<li><a href="#AttachedMarketIfTouched-ClientOrderInputs">Attached Market if Touched - Client Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TradeVolumeTriggeredStopLimit">Trade Volume Triggered Stop-Limit</a>
+				<ul>
+					<li><a href="#TradeVolumeTriggeredStopLimitOrderInputs">Trade Volume Triggered Stop Limit Order Inputs</a></li>
+					<li><a href="#AttachedTradeVolumeTriggeredStopLimitOrderInputs">Attached Trade Volume Triggered Stop Limit Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#StopLimit-Client">Stop Limit - Client</a>
+				<ul>
+					<li><a href="#StopLimit-ClientOrderInputs">Stop Limit - Client Order Inputs</a></li>
+					<li><a href="#AttachedStopLimit-ClientOrderInputs">Attached Stop Limit - Client Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TriggeredStop">Triggered Stop</a>
+				<ul>
+					<li><a href="#TriggeredStopOrderInputs">Triggered Stop Order Inputs</a></li>
+					<li><a href="#TriggeredStopAttachedOrderInputs">Triggered Stop Attached Order Inputs</a></li>
+				</ul>
+			</li>
+            <li><a href="#TriggeredLimitWithChase">Triggered Limit With Chase</a>
+				<ul>
+					<li><a href="#TriggeredLimitWithChaseOrderInputs">Triggered Limit With Chase Order Inputs</a></li>
+					<li><a href="#TriggeredLimitWithChaseAttachedOrderInputs">Triggered Limit With Chase Attached Order Inputs</a></li>
+				</ul>
+			</li>
+        </ul>   
+    </li>
+    <li><a href="#ChartTradeShortcutMenu">Chart Trade Shortcut Menu</a></li>
+    <li><a href="#MoveTargetsToPrice">Move Attached Targets to Price</a></li>
+    <li><a href="#MoveAttachedStopsToPrice">Move Attached Stops to Price</a></li>
+    <li><a href="#RemoveLinkBetweenStopAttachedOrders">Remove Link Between Stop Attached Orders</a></li>
+    <li><a href="#ManagementOfTrailingStopOrders">Sierra Chart Management of Trailing Stop and Chase Orders</a>
+		<ul>
+			<li><a href="#EffectOfDelayedDataOnTrailingStops">Effect of Delayed Data on Trailing Stops</a></li>
+		</ul>
+	</li>
+    <li><a href="#TriggeredLimitOrderEntryStudy">Triggered Limit Order Entry Study</a>
+		<ul>
+			<li><a href="#TriggeredLimitOrderEntryStudy_OrderLines">Order Lines</a></li>
+			<li><a href="#TriggeredLimitOrderEntryStudy_StepByStepInstructions">Step-By-Step Instructions</a></li>
+			<li><a href="#TriggeredLimitOrderEntryStudy_StudyInputs">Study Inputs</a></li>
+		</ul>
+	</li>
+    <li><a href="#BidAskQuantityTriggeredStopStudy">Bid/Ask Quantity Triggered Stop Study</a>
+		<ul>
+			<li><a href="#BidAskQuantityTriggeredStopStudy_StepByStepInstructions">Step-By-Step Instructions</a></li>
+			<li><a href="#BidAskQuantityTriggeredStopStudy_StudyInputs">Study Inputs</a></li>
+		</ul>
+	</li>
+    <li><a href="#SpreadOrderEntryStudy">Spread Order Entry Study</a></li>
+    <li><a href="#TriggeredMarketOrderForTradeSymbol">Triggered Market Order For Trade Symbol</a>
+		<ul>
+			<li><a href="#TriggeredMarketOrderForTradeSymbol_StepByStepInstructions">Step-By-Step Instructions</a></li>
+			<li><a href="#TriggeredMarketOrderForTradeSymbol_StudyInputs">Study Inputs</a></li>
+		</ul>
+	</li>
+    <li><a href="#TriggeredStopOrderStudy">Triggered Stop Order Study</a>
+		<ul>
+			<li><a href="#TriggeredStopOrderStudy_StepByStepInstructions">Step-By-Step Instructions</a></li>
+			<li><a href="#TriggeredStopOrderStudy_StudyInputs">Study Inputs</a></li>
+		</ul>
+	</li>
+    <li><a href="#StopOrdersCME">Stop Orders on the CME</a></li>
+    <li><a href="#FullyClientSideManagedOrders">Fully Client Side Managed Orders</a></li>
+    <li><a href="#UnderstandingWhyOrdersDoNotFillAtExpectedPrices">Understanding Why Orders Do Not Fill At Expected Prices</a></li>
+    <li><a href="#OrderRejectedFromOutsideOfBands">Order Rejected from Outside of Bands</a></li>
+    <li><a href="#ReducingSlippageFromStopOrders">Reducing Slippage from Stop Orders</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="OrderTypes">Order Types</h2>
+    <div class="member-link">[<a href="#OrderTypes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section lists the various supported order types. It provides a description for them and describes each of the inputs that are specific to them. If an order type can also be used as an <b>Attached Order</b>, then the <b>Attached Order</b> inputs are also described.</p>
+
+    <p> The following are the methods by which an order of any of these Order Types can be submitted:</p>
+    <ul>
+        <li>Through the <a href="index9473.html?page=doc/TradeWindow.html#TradeWindow">Trade Window</a>.</li>
+		
+        <li>Through the <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart">Chart or Trade DOM</a>. Make sure you add the Order types to the <a href="#ChartTradeShortcutMenu">Chart Trade Shortcut Menu</a>.</li>
+		
+        <li>If the Order Type is supported as an Attached Order, it can be used as an <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Order</a>.</li>
+		
+		<li>These orders types are also supported through <a href="index2bf5.html?page=doc/ACSILTrading.html">ACSIL</a>.</li>
+		<li>Some, but not all, order types can be submitted through the <a href="index3c50.html?page=doc/ChartTrading.html#UsingTheChartDOMOrderEntryLadder">Chart/Trade DOM / Order Entry Ladder</a>.</li>
+    </ul>
+	
+	<p>When this documentation makes reference to a <em>parent order or parent price</em>, it is referring to the main order that <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a> are attached to. This is known as the <em>parent</em> order.</p>
+
+    <section class="h3">
+        <h3 id="Market">Market</h3>
+        <div class="member-link">[<a href="#Market">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A market order will fill at the current market price. No other price inputs are required.</p>
+        
+       <p> In the case of a Buy order it will fill at the  lowest available  Sell limit order in the market.  In the case of a Sell order it will fill at the highest available Buy limit order in the market.  Execution should be immediate, so long as there is a matching order.</p>
+       
+        <p> A market order will provide the fastest execution.  </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Limit">Limit</h3>
+        <div class="member-link">[<a href="#Limit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is a standard Limit order type. A Limit order is an order to buy or sell at a specific price.</p>
+
+        <p>A buy limit order can only be executed at the limit price or lower, and a sell limit order can only be executed at the limit price or higher.</p>	
+
+        <p>A Buy Limit order which is at or above the current Ask price will fill immediately.  </p>
+        
+        <p>A Sell Limit order which is at or below the current  Bid price will fill immediately.  </p>
+
+        <section class="h4">
+            <h4 id="LimitOrderInputs">Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#LimitOrderInputs">Link</a>] - [<a href="#top">top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p>This is the price box for the Limit price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedLimitOrderInputs">Attached Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h4>Limit Offset</h4>
+
+                <p>This is the offset value from the parent order price.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="Stop">Stop</h3>
+        <div class="member-link">[<a href="#Stop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is a standard Stop order type. A Stop order is an order to buy or sell once the price of the symbol reaches a specified price, known as the Stop price. When the specified price is reached, your Stop order becomes a market order.</p>
+        
+        <section class="h4">
+            <h4 id="RejectionOfStopOrdersBeyondLastTradePrice">Rejection of Stop Orders Beyond Last Trade Price</h4>
+            <div class="member-link">[<a href="#RejectionOfStopOrdersBeyondLastTradePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>With some of the supported Trading services, a Stop order price cannot be above the current market price for a Sell stop or below the current market price for a Buy stop. If the Stop order price does not meet these rules, the Trading service will reject the order. You will see this rejection for the Stop order displayed in the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradeServiceLog">Trade Service Log</a> and also the <a href="index509f.html?page=doc/TradeActivityLog.php" >Trade Activity Log</a>. The specific reason for the rejection will be given by the trading service.</p>
+            
+             <p>These rejections are from the exchange. In the case of when using  <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a>, Sierra Chart will not reject these  Stop orders.</p>
+            
+            <p>When  <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt;  <a href = "index4451.html?page=doc/GlobalTradeSettings.html#RejectStopOrdersThatImmediatelyFill">Reject Stop Orders That Will Immediately Fill</a></b> is enabled, then Sierra Chart will still accept a Buy stop order if it is below the current price by a few ticks and still accept a Sell Stop order if it is above the current price by a few ticks, and send it to the connected Trading service. However, the Trading service still may reject the Stop order. When this option is disabled, Sierra Chart performs no check on a Stop order price in relation to the current market price.</p>
+            
+             <p> To work around the rejection of a Stop order in this case, you may want to use a <a href = "#TriggeredLimit">Triggered Limit</a> order instead. </p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="StopOrderInputs">Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#StopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedStopOrderInputs">Attached Stop Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the offset value from the parent order price when this order type is used as an Attached Order.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="StopLimit">Stop-Limit</h3>
+        <div class="member-link">[<a href="#StopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is a standard Stop-Limit order type. A Stop-Limit order is an order to buy or sell that combines the features of a Stop order and a Limit order. Once the stop price is reached, the Stop-Limit order becomes a Limit order to buy or to sell at the specified price.</p>
+        
+       <p> When modifying a Stop-Limit order,  the Limit price will be adjusted to maintain the same offset it currently has to the  Stop price. </p>
+       
+       <p> Refer to the <a href="#Stop">Stop</a> section for the reasons why  a Stop-Limit order can be rejected upon order submission. </p>
+
+        <section class="h4">
+            <h4 id="StopLimitOrderInputs">Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#StopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+
+                <p>The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price. To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. </p>
+                
+                <p>Set the <b>Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>           
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedStopLimitOrderInputs">Attached Stop Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+                
+                <p>This is the Stop offset value from the parent order price. The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price. To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. Set the <b> Stop-Limit Order Limit Offset &gt;&gt; Attached Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="MarketLimit">Market  Limit</h3>
+        <div class="member-link">[<a href="#MarketLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is a CME order type which only works with the Teton Order Routing Service. For more information, refer to <a href = "https://www.cmegroup.com/confluence/display/EPICSANDBOX/Order+Types+for+Futures+and+Options#OrderTypesforFuturesandOptions-Market-LimitOrder" Target="_blank" rel="noopener noreferrer">Market Limit</a>.</p>    
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="MarketIfTouched">Market If Touched</h3>
+        <div class="member-link">[<a href="#MarketIfTouched">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is a standard Market If Touched (MIT) order type.</p>
+
+		<p>In the case of a Buy MIT order, it will become a Market order when the last trade price is equal to or less than the Trigger Price. In the case of a Sell MIT order, it will become a Market order when the last trade price is equal to or greater than the Trigger Price.</p>
+        
+        <p> Based on the above, when using Sierra Chart Trade Simulation Mode,  the order does not need to be touched for it to  become a market order.  In the case of a  Buy Market if Touched order, if the last trade price is simply below that order,  the order will become a market order immediately.  The opposite is true for a Sell  Market if Touched order.</p>
+
+        <p class="GeneralBackgroundHighlightLight">This order type is not supported with all of the supported Trading services that Sierra Chart works with. If it is not supported, then when submitting an order of this type, it will be rejected by the trading service or internally by Sierra Chart if Sierra Chart knows ahead of time that the trading service does not support this order type.</p>
+
+        <section class="h4">
+            <h4 id="MarketIfTouchedOrderInputs">Market If Touched Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#MarketIfTouchedOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Trigger Price</h5>
+
+                <p>This price box is for the Trigger price of the order. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedMarketIfTouchedOrderInputs">Attached Market If Touched Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedMarketIfTouchedOrderInputs">Link</a>] - [<a href="#top">top</a>]</div>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p>When used as an Attached Order, this is the Trigger offset value from the parent order price. For example, if this is set to 1 as a Price, then the trigger price for the order will be exactly 1.0 from the parent order price.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="LimitChase">Limit Chase</h3>
+        <div class="member-link">[<a href="#LimitChase">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Limit Chase</b> order type is a Limit order type that is automatically adjusted to follow (chase) the current market price.</p>
+        
+        <p>To use this order type you can either choose this order type from the list of Order Types on the <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Trade Window</a> and enter the Limit price. Or you can enable the <b class = "menu_item">Menu/M  &gt;&gt; Orders &gt;&gt; Use Limit Chase Orders</b> option on the Trade Window menu. In this last case, when submitting a normal Limit order, it will be converted to a <b>Limit Chase</b> order.</p> 
+        
+        <p>The <b>Limit Chase</b> order type is also supported as an Attached Order. In this particular case, the <b class="menu_item"> Menu/M  &gt;&gt; Orders &gt;&gt; Use Limit Chase Orders</b> option on the Trade Window menu does <em>not apply</em> to Attached Orders. </p>
+        
+        <p>When the <b class="menu_item"> Menu/M  &gt;&gt; Orders &gt;&gt; Use Limit Chase Orders</b> option on the Trade Window menu is enabled, then a Limit order entered from the Trade Window, the Chart DOM, the Trade DOM, the chart, or an automated trading system, will be converted to a Limit Chase order.</p>
+        
+        <p>The maximum chase amount in Ticks is set through <b>Set &gt;&gt; Max Chase for Chase Limit Orders</b> on the <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Trade Window</a>. Refer to the image below for the location of this setting.</p>
+
+        <p>When using the Limit Chase order type, the order will automatically be modified up in the case of Buy Limit orders and down in the case of Sell Limit orders.</p>
+        
+        <p>After the order is submitted, and the last trade price rises in the case of a Buy order, then the order is adjusted up by the amount the last trade price increased by, no more than the specified <b>Set &gt;&gt; Max Chase for Chase Limit Orders</b> amount.</p>
+        
+        <p> If there is no last trade price available, then the average of the Bid and Ask prices will be used if those are available. </p>
+        
+        <p>If the last trade price declines in the case of a Sell order, then the order is adjusted down by the amount the last trade price decreased by, no more than the specified <b>Set &gt;&gt; Max Chase for Chase Limit Orders</b> amount.</p>
+        
+        <p>It is recommended to run a <a href="index9600.html?page=doc/ReplayChart.html">Chart Replay</a> and experiment with the <b>Limit Chase</b> order type to get an understanding of how it works.</p>
+        
+        <p>In the case of when using an Attached Order, the chase action does not begin until the parent order fills.</p>
+        
+        <div style="text-align: center;"><a href="../images/maxchaseforchaselimitorders.png" rel="lightbox"><img src="../images/maxchaseforchaselimitorders.png" alt="" width="220"  class="screenshot" loading="lazy"></a></div>
+
+        <section class="h4">
+            <h4 id="LimitChaseOrderInputs">Limit Chase Order Inputs (Trade Window &gt;&gt; Main)</h4>
+			<div class="member-link">[<a href="#LimitChaseOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p>This price box is for the Limit order price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="LimitChaseOrderSettings">Limit Chase Order Settings (Trade window &gt;&gt; Set)</h4>
+            <div class="member-link">[<a href="#LimitChaseOrderSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Maximum Chase for Chase Limit Orders</h5>
+
+                <p>On the <b>Set</b> tab of the Trade Window for a chart, the <b>Maximum Chase for Chase Limit Orders</b> sets the maximum value in Ticks that a chase limit order will be adjusted by.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedLimitChaseOrderInputs">Attached Limit Chase Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedLimitChaseOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit Offset</h5>
+
+                <p>This is the offset value from the parent order price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Maximum Chase</h5>
+
+                <p>This applies only to <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a> and is one of the settings for the Limit Chase Attached Order.</p>
+                
+                <p>This sets the maximum amount the order will chase the current price. This value can either be in Price, Ticks or a Percent.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="LimitTouchChase">Limit Touch Chase</h3>
+        <div class="member-link">[<a href="#LimitTouchChase">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>The <b>Limit Touch Chase</b> order type functions similar to the <a href="#LimitChase">Limit Chase</a> order type. The only difference between these order types is that the Limit Touch Chase order type does not begin the chase action until its Limit price is touched by the last trade price of the market.</p>
+        
+        <p> The specific definition of being touched by the last trade price is in the case of a Buy   Limit order, the last trade price is less or equal to the limit price.  In the case of a Sell  Limit order,  the last trade price is greater than or equal to the limit price. </p>
+        
+        
+        <p>Once the Limit price is touched, then the Limit Touch Chase order type functions the same way as a <b>Limit Chase</b> order type.</p>
+        
+        <p>The <b>Limit Touch Chase</b> order type can be submitted as both a main/primary order or used as an Attached Order.</p>
+              
+        <section class="h4">
+            <h4 id="LimitTouchChaseOrderInputs">Limit Touch Chase Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#LimitTouchChaseOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p>This price box is for the Limit order price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="LimitTouchChaseOrderSettings">Limit Touch Chase Order Settings (Trade Window &gt;&gt; Set)</h4>
+            <div class="member-link">[<a href="#LimitTouchChaseOrderSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Maximum Chase for Chase Limit Orders</h5>
+
+                <p>On the <b>Set</b> tab of the Trade Window for a chart, the <b>Maximum Chase for Chase Limit Orders</b> sets the maximum value in Ticks that a chase limit order will be adjusted by.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedLimitTouchChaseOrderInputs">Attached Limit Touch Chase Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedLimitTouchChaseOrderInputs">Link</a>] - <a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit Offset</h5>
+
+                <p>This is the offset value from the parent order price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Maximum Chase</h5>
+                
+                <p>This sets the maximum amount the Attached Order will chase the current price. This value can either be in Price, Ticks or a Percent.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TrailingStop">Trailing Stop</h3>
+        <div class="member-link">[<a href="#TrailingStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is a Trailing stop order type. This Stop order will trail the current market price by maintaining a difference that does not exceed the <b>Trail Offset</b>.</p>
+                
+        <p>The <b>Trail Offset</b> is automatically set by the difference between the original Stop price and the current price at the time the order was submitted. Or, in the case of an Attached Order, the Trail Offset is set by the <b>Attached Order Stop Offset</b> setting.</p>
+
+        <p>If you manually <em>modify</em> the Trailing Stop order, then the <b>Trail Offset</b> will be recalculated by taking the difference between the new Stop price and the current market price. Or in the case of an Attached Order, when its parent has not filled, it will be the difference between the new Stop price and the parent order price. This recalculation only occurs when <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Adjust Trail Offset When Modifying Trail Order</b> is enabled. Otherwise, this does not occur and the offset remains as it originally was.</p>
+        
+        <p>The Trail Offset is also recalculated when the Trailing Stop order is modified using the ACSIL <a href="index2bf5.html?page=doc/ACSILTrading.html#OrderModification">sc.ModifyOrder</a> function.</p>
+        
+        <p>This order type can be entered from the Trade Window, used as an Attached Order or entered from the <a href="#ChartTradeShortcutMenu">Chart Trade Shortcut Menu</a>.</p>
+
+        <section class="h4">
+            <h4 id="TrailingStopOrderInputs">Trailing Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this creates a <b> Trail Offset</b> of 5. If the current market price drops to 99, then the stop will be adjusted to 104. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTrailingStopOrderInputs">Attached Trailing Stop Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the Stop offset value from the parent order price. This only applies to Attached Orders. This also sets the <b>Trail Offset</b>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TrailingStopLimit">Trailing Stop-Limit</h3>
+        <div class="member-link">[<a href="#TrailingStopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This stop type works identically to <a href="#TrailingStop">Trailing Stop</a>, except that it is a Stop-Limit type. The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price.</p>
+
+		<p>To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. Set the <b>Stop-Limit Order Limit Offset &gt;&gt; Primary/Attached Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>
+
+        <section class="h4">
+            <h4 id="TrailingStopLimitOrderInputs">Trailing Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this creates a <b> Trail Offset</b> of 5. If the current market price drops to 99, then the stop will be adjusted to 104. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTrailingStopLimitOrderInputs">Attached Trailing Stop Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the Stop offset value from the parent order price. This only applies to Attached Orders. This also sets the <b>Trail Offset</b>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TriggeredTrailingStop">Triggered Trailing Stop</h3>
+        <div class="member-link">[<a href="#TriggeredTrailingStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is a Triggered Trailing Stop order type. This Trailing Stop order will trail the current market price by maintaining a difference that does not exceed the specified <b>Trail Offset</b>, when the <b>Trigger Price</b> (calculated from the Trigger Offset in the case of an Attached Order) has been reached by the current market price. </p>
+
+        <p> With this particular order type, the trail action will not begin until the <b>Trigger Price</b> has been reached.</p>
+		
+		<p>In the case of an Attached Order of this type, the order must have an <b>Open</b> status before the <b>Trigger Price</b> can be triggered.</p>
+
+        <p>In the case of an Attached Order, the Trigger Price is calculated based upon the <b>Trigger Offset</b> setting.</p>
+
+        <p>If you manually <em>modify</em> the Trailing Stop order, then the trailing stop offset will be recalculated by taking the difference between the new Stop price and the current market price. Or in the case of an Attached Order, when its parent has not filled, it will be the difference between the new Stop price and the parent order price. This only occurs when <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Adjust Trail Offset When Modifying Trail Order</b> is enabled. Otherwise, this does not occur and the offset remains as it originally was.</p>
+        
+        <p>The Trigger Price is automatically adjusted in the case of an Attached Order of this order type when the parent order is modified, to maintain the same offset to the Stop Attached Order price as it was previously.</p>
+        
+        <p>This Order Type can also be used in combination with the   <a href = "index0ef8.html?page=doc/AttachedOrders.html#MoveBreakevenForStop">Move to  Breakeven for Stop</a> settings for an Attached Order.</p>
+
+        <section class="h4">
+            <h4 id="TriggeredTrailingStopOrderInputs">Triggered Trailing Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TriggeredTrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. This also sets the <b>Trail Offset</b> when the order is not used as an Attached Order. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this creates a Trail Offset of 5. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Price</h5>
+
+                <p>This price box is for the Trigger Price. For example, if the current market price is 100, this is a Buy Stop, and you enter a Trigger Price of 95, then when the price drops to 95, the trailing action will begin. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4" >
+            <h4 id="AttachedTriggeredTrailingStopOrderInputs">Attached Triggered Trailing Stop Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTriggeredTrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This price is the initial Stop offset value from the parent order price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p>This is the trigger offset value from the parent order price. For example, if the parent order price is 100, this is a Sell Stop and you enter a Trigger Offset of 5 as a <b>Price</b>, then the <b>Trigger Price</b> will be 105. When 105 is touched by the current market price, then the Stop will begin to trail the current price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trail Offset</h5>
+
+                <p>Once the trailing action begins when the Trigger Price (calculated from <b>Trigger Offset</b>) has been met, then this is the trailing offset value from the current price.</p>
+                
+                <p>For example, if this is set to 5 Ticks, then the trailing stop order will trail the current price by 5 Ticks.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TriggeredTrailingStopLimit">Triggered Trailing Stop Limit</h3>
+        <div class="member-link">[<a href="#TriggeredTrailingStopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This stop type works identically to <a href="#TriggeredTrailingStop">Triggered Trailing Stop</a>, except that it is a Stop-Limit type. The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price.</p>
+        
+        <p>To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. Set the <b>Stop-Limit Order Limit Offset &gt;&gt; Primary/Attached Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>
+        
+        <p>  This Order Type can also be used in combination with the   <a href = "index0ef8.html?page=doc/AttachedOrders.html#MoveBreakevenForStop">Move to  Breakeven for Stop</a> settings for an Attached Order.  </p>
+
+        <section class="h4">
+            <h4 id="TriggeredTrailingStopLimitOrderInputs">Triggered Trailing Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TriggeredTrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. This also sets the <b>Trail Offset</b> when the order is not used as an Attached Order. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this creates a Trail Offset of 5. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Price</h5>
+
+                <p>This price box is for the Trigger Price. For example, if the current market price is 100, this is a Buy Stop, and you enter a Trigger Price of 95, then when the price drops to 95, the trailing action will begin. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTriggeredTrailingStopLimitOrderInputs">Attached Triggered Trailing Stop Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTriggeredTrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This price is the initial Stop offset value from the parent order price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p>This is the trigger offset value from the parent order price. For example, if the parent order price is 100, this is a Sell Stop and you enter a Trigger Offset of 5 as a <b>Price</b>, then the <b>Trigger Price</b> will be 105. When 105 is touched by the current market price, then the Stop will begin to trail the current price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trail Offset</h5>
+
+                <p>Once the trailing action begins when the Trigger Price (calculated from <b>Trigger Offset</b>) has been met, then this is the trailing offset value from the current price.</p>
+                
+                <p>For example, if this is set to 5 Ticks, then the trailing stop order will trail the current price by 5 Ticks.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="StepTrailingStop">Step Trailing Stop</h3>
+        <div class="member-link">[<a href="#StepTrailingStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Step Trailing Stop</b> order type is a trailing stop order type that trails the market price by the specified <b>Trail Offset</b> and moves in steps by the specified <b>Step Amount</b>. For example, if you are using a Sell <b>Step Trailing Stop</b> order type, the parent order price or the current market price is 100, the Stop Offset is 5 or you have set the Stop price to 95, both of which will establish a Trail Offset of 5, the <b>Step Amount</b> is 2, then when the market price moves from 100 to 102, then the stop price will move to 97 which is trailing the market price by 5. When the market moves to 104, then the Stop will move to 99. The movement is not tick by tick, rather in steps of the <b>Step Amount</b>.</p>
+
+        <p>If you manually <em>modify</em> the Step Trailing Stop order, then the <b>Trail Offset</b> does not change as in the case of other trailing stop types when <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Adjust Trail Offset When Modifying Trail Order</b> is enabled.</p> 
+
+         <p>It is not possible to change the  <b>Step Amount</b> after this order is submitted. </p>
+
+        <section class="h4">
+            <h4 id="StepTrailingStopOrderInputs">Step Trailing Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#StepTrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the initial Stop price. This also sets the <b>Trail Offset</b> and the <b>Step Amount</b>. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this will then set a <b>Trail Offset</b> of 5 and a <b>Step Amount</b> of 5 as well. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedStepTrailingStopOrderInputs">Attached Step Trailing Step Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedStepTrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h4>Stop Offset</h4>
+
+                <p>This is the Stop offset value from the parent order price. The setting is only for Attached Orders. This will always be a positive value. This offset also sets the <b>Trail Offset</b>.</p>
+            </section>
+
+            <section class="h5">
+                <h4>Step Amount</h4>
+                
+                <p>This is the amount in either Ticks, an actual Price, or a Percentage that the Trailing Stop moves in amounts/increments of. Only <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a> can set a <b>Step Amount</b> which differs from the Trail Offset.</p>
+                
+                 <p> If this is unset or 0, then the <b>Step Amount</b> will be equal to the Attached Order <b>Stop Offset</b>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="StepTrailingStopLimit">Step Trailing Stop Limit</h3>
+        <div class="member-link">[<a href="#StepTrailingStopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This stop type works identically to <a href="#StepTrailingStop">Step Trailing Stop</a>, except that it is a Stop-Limit type. The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price.</p>
+        
+        <p>To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. Set the <b>Stop-Limit Order Limit Offset &gt;&gt; Primary/Attached Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>
+
+        <section class="h4">
+            <h4 id="StepTrailingStopLimitOrderInputs">Step Trailing Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#StepTrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the initial Stop price. This also sets the <b>Trail Offset</b> and the <b>Step Amount</b>. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this will then set a <b>Trail Offset</b> of 5 and a <b>Step Amount</b> of 5 as well. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedStepTrailingStopLimitOrderInputs">Attached Step Trailing Step Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedStepTrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h4>Stop Offset</h4>
+
+                <p>This is the Stop offset value from the parent order price. The setting is only for Attached Orders. This will always be a positive value. This offset also sets the <b>Trail Offset</b>.</p>
+            </section>
+
+            <section class="h5">
+                <h4>Step Amount</h4>
+                
+                <p>This is the amount in either Ticks, an actual Price, or a Percentage that the Trailing Stop moves in amounts/increments of. Only <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a> can set a <b>Step Amount</b> which differs from the Trail Offset.</p>
+                
+                 <p> If this is unset or 0, then the <b>Step Amount</b> will be equal to the Attached Order <b>Stop Offset</b>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TriggeredStepTrailingStop">Triggered Step Trailing Stop</h3>
+        <div class="member-link">[<a href="#TriggeredStepTrailingStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Triggered Step Trailing Stop order type is a trailing stop order type that trails the market price in steps of the <b>Trail Offset</b>.  </p>
+        
+        
+         <p>The trailing action <em>only begins</em> when the <b> Trigger Price</b> has been reached. </p>
+        
+        
+         <p>For example, if you are using a Sell Triggered Step Trailing Stop type, the initial stop price is 95, the market price is 100, the <b>Trail Offset</b> is 5, and the <b>Trigger Price</b> is 110, then when the market price moves to 110, the trailing action will begin and at that time the stop will be moved to 105. When the market moves to 115, then the stop will move to 110. The movement is not tick by tick, rather it steps as the <b>Trail Offset</b>.</p>
+
+        <p>If you manually <em>modify</em> the Triggered Step Trailing Stop order, then the <b>Trail Offset</b> does not change as in the case of other trailing stop types when <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Adjust Trail Offset When Modifying Trail Order</b> is enabled.</p>
+        
+        
+        <p>This Order Type can also be used in combination with the   <a href = "index0ef8.html?page=doc/AttachedOrders.html#MoveBreakevenForStop">Move to  Breakeven for Stop</a> settings for an Attached Order.  </p>
+
+        <section class="h4">
+            <h4 id="TriggeredStepTrailingStopOrderInputs">Triggered Step Trailing Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TriggeredStepTrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. This also sets the <b>Trail Offset</b> when the order is not used as an Attached Order. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this creates a Trail Offset of 5. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Price</h5>
+
+                <p>This price box is for the Trigger Price. For example, if the current market price is 100, this is a Buy Stop, and you enter a Trigger Price of 95, then when the price drops to 95, the trailing action will begin. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTriggeredStepTrailingStopOrderInputs">Attached Triggered Step Trailing Stop Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTriggeredStepTrailingStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the Stop offset value from the parent order price. This will always be a positive value. For example, if this is set to 4 Ticks, then this means that the Stop will initially be placed 4 Ticks away from the parent order price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p>This is the trigger offset value from the parent order fill price. For example, if the parent order fill price is 100, this is a Sell Stop and you enter a <b>Trigger Offset</b> of 5 as a <b>Price</b>, then the <b>Trigger Price</b> will be 105. When 105 is touched by the current market price, then the Stop will begin to trail the current price in steps.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trail Offset</h5>
+
+                <p>Once the trailing action begins when the <b>Trigger Price</b> (calculated from  <b>(Attached Order) Trigger Offset</b>) has been met, then this is the <b>Trail Offset</b> value from the current price. For example, if this is set to 5 Ticks, then this trailing stop order will trail the current price by 5 Ticks in steps of 5 Ticks in response to the current market price movement.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TriggeredStepTrailingStopLimit">Triggered Step Trailing Stop Limit</h3>
+        <div class="member-link">[<a href="#TriggeredStepTrailingStopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This stop type works identically to <a href="#TriggeredStepTrailingStop">Triggered Step Trailing Stop</a>, except that it is a Stop-Limit type. The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price.</p>
+        
+        <p>To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. Set the <b>Stop-Limit Order Limit Offset &gt;&gt; Primary/Attached Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>
+
+        <section class="h4">
+            <h4 id="TriggeredStepTrailingStopLimitOrderInputs">Triggered Step Trailing Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TriggeredStepTrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. This also sets the <b>Trail Offset</b> when the order is not used as an Attached Order. For example, if the current market price is 100, this is a Buy Stop, and you enter a Stop price of 105, this creates a Trail Offset of 5. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Price</h5>
+
+                <p>This price box is for the Trigger Price. For example, if the current market price is 100, this is a Buy Stop, and you enter a Trigger Price of 95, then when the price drops to 95, the trailing action will begin. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTriggeredStepTrailingStopLimitOrderInputs">Attached Triggered Step Trailing Stop Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTriggeredStepTrailingStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the Stop offset value from the parent order price. This will always be a positive value. For example, if this is set to 4 Ticks, then this means that the Stop will initially be placed 4 Ticks away from the parent order price.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p>This is the trigger offset value from the parent order fill price. For example, if the parent order fill price is 100, this is a Sell Stop and you enter a <b>Trigger Offset</b> of 5 as a <b>Price</b>, then the <b>Trigger Price</b> will be 105. When 105 is touched by the current market price, then the Stop will begin to trail the current price in steps.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trail Offset</h5>
+
+                <p>Once the trailing action begins when the <b>Trigger Price</b> (calculated from  <b>(Attached Order) Trigger Offset</b>) has been met, then this is the <b>Trail Offset</b> value from the current price. For example, if this is set to 5 Ticks, then this trailing stop order will trail the current price by 5 Ticks in steps of 5 Ticks in response to the current market price movement.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="OCOLimitandStop">OCO Limit and Stop</h3>
+        <div class="member-link">[<a href="#OCOLimitandStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This order type is for entering a Limit order and a Stop order at the same time which are in an OCO (order cancels order) group. This means when one of the orders fills or is canceled, the other will be canceled.</p>
+        
+        <p>This type of order can be entered from the Trade Window for the chart. And it can be entered by right clicking on the chart or Trade DOM with the Pointer when in  <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart">Chart Trade Mode</a> and selecting <b>Buy OCO Limit and Stop</b> or <b>Sell OCO Limit and Stop</b> from the displayed menu.</p>
+        
+        <p>If this order type command is not listed, then it will need to be added. To do this, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use.</p> 
+        
+        <p>This Order Type does support using <a href="index0ef8.html?page=doc/AttachedOrders.html" target="_blank" rel="noopener noreferrer">Attached Orders</a> with it. If the option <b>Use Attached Orders</b> on the Trade Window is enabled, then a set of Attached Orders will be attached to both the Limit and Stop orders.</p>
+
+        <section class="h4">
+            <h4 id="OCOLimitandStopOrderInputs">OCO Limit and Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#OCOLimitandStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p>This price box is for the Limit price for the Limit order. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price for the Stop order. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="OCOLimitandStopLimit">OCO Limit and Stop-Limit</h3>
+        <div class="member-link">[<a href="#OCOLimitandStopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This order type is for entering a Limit order and a Stop-Limit order at the same time which are in an OCO (order cancels order) group. This means when one of the orders fills or is canceled, the other will be canceled.</p>
+        
+        <p>This type of order can be entered from the Trade Window for the chart. And it can be entered by right clicking on the chart or Trade DOM with the Pointer when in  <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart">Chart Trade Mode</a> and selecting <b>Buy OCO Limit and Stop-Limit</b> or <b>Sell OCO Limit and Stop-Limit</b> from the displayed menu.</p>
+        
+        <p>If this order type command is not listed, then it will need to be added. To do this, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use.</p>
+
+        <section class="h4">
+            <h4 id="OCOLimitandStopLimitOrderInputs">OCO Limit and Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#OCOLimitandStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p>This price box is for the Limit price for the Limit order. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price for the Stop-Limit order. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+
+                <p>The Limit price of the Stop-Limit order is automatically set and will be the number of Ticks away from the Stop price as specified on the <b>More</b> tab of the Trade Window for the chart in the <b>Limit Offset for Stop-Limit Order</b> box.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="OCOBuyStopSellStop">OCO Buy Stop Sell Stop</h3>
+        <div class="member-link">[<a href="#OCOBuyStopSellStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The OCO (order cancels order) <b>Buy Stop Sell Stop</b> order type, consists of a Buy Stop order and a Sell Stop order in an OCO group. So when one order is filled or canceled, the other order will be immediately and fully canceled.</p>
+        
+        <p><b>Entering from Trade Window</b>: Go to the trade window for the chart or Trade DOM. In the list of Order Types, select this order type. Enter the <b>Buy Stop</b> and <b>Sell Stop</b> prices. Submit the order by pressing either <b>Buy</b> or <b>Sell</b> on the Trade Window.</p>
+        
+        <p><b>Entering directly from chart / Trade  DOM</b>:  Right-click with your pointing device on the chart at the Buy Stop price and select <b>OCO Buy Stop Sell Stop</b> on the Chart Trade menu. Move your Pointer to the Sell Stop price and left click. If this order type command is not listed on the menu, then it will need to be added. To do this, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use. For more information, refer to <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart" target="_blank" rel="noopener noreferrer">Chart Trading</a>.</p>
+
+        <p>In the case of the Trade DOM, refer to <a href="index3c50.html?page=doc/ChartTrading.html#TradeDOMEnteringOrders" target="_blank" rel="noopener noreferrer">Entering Orders on the Trade DOM</a> for instructions on where to right-click to get the Chart Trade menu.</p>
+
+        <p>This order type supports <a href="index0ef8.html?page=doc/AttachedOrders.html" target="_blank" rel="noopener noreferrer">Attached Orders</a>. If the option <b>Use Attached Orders</b> on the Trade Window is enabled, then a set of Attached Orders will be attached to each Stop order.</p>
+
+        <p>The Sierra Chart <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart" Target="_blank" rel="noopener noreferrer">Chart Trading</a> feature also provides an <b>OCO Buy Stop Sell Stop Auto Set</b> command. To use this, it is first necessary to determine the offset for the orders, in Ticks, from the center price that you select on the chart. Go to the <b>Set</b> tab on the Trade Window of the chart and set the <b>Auto-Set Prices Offset for OCO Buy Sell Orders</b> to the number of Ticks that you want to offset the orders from the center price by. Once this is set, it does not need to be set again. It is saved with your Chartbook.</p>
+        
+        <p>Right-click on the chart at the center price and select <b>OCO Buy Stop Sell Stop (Auto Set)</b> on the menu. Both a Buy Stop and Sell Stop order will be entered above and below the center price based upon your specified offset. If this order type command is not listed, then it will need to be added. To do this, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b> Add</b> all of the order types that you want to use.</p>
+
+        <section class="h4">
+            <h4 id="OCOBuyStopSellStopOrderInputs">OCO Buy Stop Sell Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#OCOBuyStopSellStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Buy Stop</h5>
+
+                <p>This price box is for the Buy Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Sell Stop</h5>
+
+                <p>This price box is for the Sell Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="OCOBuyStopLimitSellStopLimit">OCO Buy Stop-Limit Sell Stop-Limit</h3>
+        <div class="member-link">[<a href="#OCOBuyStopLimitSellStopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The OCO (order cancels order) Buy Stop-Limit Sell Stop-Limit order type, consists of a Buy Stop-Limit order and a Sell Stop-Limit order in an OCO group. So when one order is filled or canceled, the other order will be immediately and fully canceled. You can enter this order through the Trade Window of the chart by selecting this Order Type and specifying the <b>Buy Stop</b> and <b>Sell Stop</b> prices. Submit the order by pressing either <b>Buy</b> or <b>Sell</b> on the Trade Window.</p>
+        
+        <p>Or you can use the <a href="index3c50.html?page=doc/ChartTrading.html">Chart Trading</a> feature. For chart trading, right-click on the chart at the Buy stop price and select <b>OCO Buy Stop-Limit Sell Stop-Limit</b> on the menu. Move your  Pointer to the Sell Stop price and left click. If this order type command is not listed, then it will need to be added. To do this, select <b class="menu_item"> Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use.</p>
+
+        <p>This order type supports <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a>. If the option <b>Use Attached Orders</b> on the Trade Window is enabled, then a set of Attached Orders will be attached to each Stop-Limit order.</p>
+
+        <p>The Sierra Chart <a href="index3c50.html?page=doc/ChartTrading.html">Chart Trading</a> feature also provides an <b>OCO Buy Stop-Limit Sell Stop-Limit Auto Set</b> command. To use this, it is first necessary to determine the offset for the orders, in Ticks, from the center price that you select on the chart.</p>
+        
+        <p>Go to the <b>Set</b> tab on the Trade Window and set the <b>Auto-Set Prices Offset for OCO Buy Sell Orders</b> to the number of Ticks that you want the orders to offset from the center price by. You will also need to set the <b>Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</b> setting. This sets how far in Ticks the Limit price is from the Stop price. Once these are set, they do not need to be set again. They are saved with the Chartbook.</p>
+
+        <p>Right-click on the chart at the center price and select <b>OCO Buy Stop-Limit Sell Stop-Limit (Auto Set)</b>. Both a Buy Stop-Limit and Sell Stop-Limit order will be entered above and below the center price based upon the specified offset. If this order type command is not listed, then it will need to be added. To do this, select <b class="menu_item"> Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use.</p>
+
+        <section class="h4">
+            <h4 id="OCOBuyStopLimitSellStopLimitOrderInputs">OCO Buy Stop Limit Sell Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#OCOBuyStopLimitSellStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Buy Stop</h5>
+
+                <p>This price box is for the Buy Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+
+                <p>The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price.</p>
+                
+                <p>To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. Set the <b> Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Sell Stop</h5>
+
+                <p>This price box is for the Sell Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+
+                <p>The Limit price is automatically set and will be the specified number of Ticks (by default) away from the Stop price.</p>
+                
+                <p>To set this Limit offset, <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Open the Trade Window</a>. Select the <b>Set</b> tab. Set the <b> Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</b> setting as a number of <b>Ticks</b> or <b>Percentage</b>. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#StopLimitOrderLimitOffset"  target="_blank" rel="noopener noreferrer">Stop-Limit Order Limit Offset</a>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="OCOBuyLimitSellLimit">OCO Buy Limit Sell Limit</h3>
+        <div class="member-link">[<a href="#OCOBuyLimitSellLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The OCO (order cancels order) Buy Limit Sell Limit order type, consists of a Buy Limit order and a Sell Limit order in an OCO group. So when one order is filled or canceled, the other order will be immediately and fully canceled. You can enter this order through the Trade Window of the chart by selecting this order type and specifying the <b>Buy Limit</b> and <b>Sell Limit</b> prices. Submit the order by pressing either <b>Buy</b> or <b>Sell</b> on the Trade Window.</p>
+        
+        <p>Or you can use the <a href="index3c50.html?page=doc/ChartTrading.html">Chart Trading</a> feature. For chart trading, right-click on the chart at the Buy Limit price and select <b>OCO Buy Limit Sell Limit</b>. Move your   Pointer to the Sell Limit price and left click. If this order type command is not listed, then it will need to be added. To do this, select <b class="menu_item"> Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use.</p>
+
+        <p>This order type supports <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a>. If the option <b>Use Attached Orders</b> on the Trade Window is enabled, then a set of Attached Orders will be attached to each Limit order.</p>
+
+        <p>The Sierra Chart <a href="index3c50.html?page=doc/ChartTrading.html">Chart Trading</a> feature also provides an <b>OCO Buy Limit Sell Limit Auto Set</b> command. To use this, it is first necessary to determine the offset for the orders, in Ticks, from the center price that you select on the chart. Go to the <b>Set</b> tab on the Trade Window of the chart and set the <b>Auto-Set Prices Offset for OCO Buy Sell Orders</b> to the number of Ticks that you want the orders offset from the center price by. Once this is set it does  not need to be set again. It is saved with your Chartbook.</p>
+        
+        <p>Right-click on the chart at the center price and select <b>OCO Buy Limit Sell Limit (Auto Set)</b> on the menu. Both a Buy Limit and Sell Limit order will be entered above and below the center price based upon your specified offset in Ticks. If this order type command is not listed, then it will need to be added. To do this, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use.</p>
+
+        <section class="h4">
+            <h4 id="OCOBuyLimitSellLimitOrderInputs">OCO Buy Limit Sell Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#OCOBuyLimitSellLimitOrderInputs">Link</a>] - <a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Buy Limit Price</h5>
+
+                <p>This price box is for the Buy Limit price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Sell Limit Price</h5>
+
+                <p>This price box is for the Sell Limit price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+    </section>
+    
+    <section class="h3">
+        <h3 id="SendAttachedOrders">Send Attached Orders - Position/Price</h3>
+        <div class="member-link">[<a href="#SendAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+		<a href="../images/sendattachedorders-charttrademenu.png" rel="lightbox"><img src="../images/sendattachedorders-charttrademenu.png" class="WideFloatRight"  alt=""></a>
+		
+        <p><b>Send Attached Orders</b> is a special order type which lets you send the currently defined <a href="index0ef8.html?page=doc/AttachedOrders.html#Instructions" target="_blank" rel="noopener noreferrer">Attached Orders</a> on the <b>Targets</b> tab of the Trade Window for the chart.</p>
+        
+        <p>This order type can be used directly from the Trade Window or from the right-click Chart Shortcut Menu on the chart when in <b>Chart Trade Mode</b>. To enable Chart Trade Mode, make sure there is a checkmark by <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>.</p>  
+        
+        <p>An example menu when you right-click on a chart is displayed to the right with the <b>Send Attached Orders</b> commands highlighted. <span class="GeneralBackgroundHighlight">If these commands are not listed</span>, then they will need to be added. To do this, select <b class="menu_item"> Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use.</p>
+
+        <p>The order quantity for the  Attached Orders is set through the <b>Quantity</b> box on the Trade Window and is also displayed and can be set at the top left of the chart when in <b>Chart Trade Mode</b>. This sets the overall quantity for all of the Attached Orders in all OCO Groups.</p>
+
+        <p>There are two possible reference prices for the Attached Orders. The <em>selected price</em> and the <em>Average Position Price</em>. The reference price is the price that the Attached Order <b>Limit/Stop Offsets</b> are relative to.</p>
+        
+        <p><b>Send Attached Orders by Position</b> will use the Average Position Price, if you have a position, as the reference price for the Attached Orders. <b>Send Attached Orders by Price</b> will use the price you specified or right-clicked at on the chart, as the reference price for the Attached Orders.</p>
+        
+        <p>It is necessary to have a current Trade Position when sending Attached Orders except in the case of when using <b>Send Attached Orders by Price</b> and it is submitted directly from the <a href="#SendAttachedOrdersTradeWindow">Trade Window</a> and not the chart.</p>
+        
+        <section class="h4">
+            <h4 id="SendAttachedOrdersChart">Sending Attached Orders from a Chart or Trade DOM</h4>
+            <div class="member-link">[<a href="#SendAttachedOrdersChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ol>
+                <li>Select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. Add the <b>Send Attached Orders by Position</b> and <b>Send Attached Orders by Price</b> menu items to the <b>Selected Menu Items</b>, if they are not already added. Press OK.</li>
+				
+                <li>To send the Attached Orders from a chart or a Trade DOM relative to a price that you select, then move the  Pointer to the price level you want to send the Attached Orders relative to, right-click and select <b>Send Attached Orders by Price</b> from displayed menu. You will need to right-click on the chart or Trade DOM away from the price scale. In the case of the Trade DOM, refer to <a href="index3c50.html?page=doc/ChartTrading.html#TradeDOMEnteringOrders" target="_blank" rel="noopener noreferrer">Entering Orders on the Trade DOM</a> for instructions on where to right-click to get the chart trade menu.</li>
+                
+				<li>To send the Attached Orders from a chart or a Trade DOM relative to the current position price, then right-click and select <b>Send Attached Orders by Position</b> from displayed menu. You will need to right-click on the chart or Trade DOM away from the price scale. In the case of the Trade DOM, refer to  <a href="index3c50.html?page=doc/ChartTrading.html#TradeDOMEnteringOrders"  target="_blank" rel="noopener noreferrer">Entering Orders on the Trade DOM</a> for instructions on where to right-click to get the chart trade menu.</li>
+
+                <li>You do not have to decide whether or not the Attached Orders will be Buy or Sell. This is determined by your position.</li>
+				
+                <li>If confirmations are enabled, you will receive a confirmation window stating the Attached Orders to be sent. Press <b>Yes</b> to confirm.</li>
+				
+                <li>When you use <b>Send Attached Orders by Position/Price</b> from the right-click shortcut menu in <b>Chart Trade Mode</b>, and you do not have a trade position for the symbol, then nothing will happen and you will receive an error.</li>
+            </ol>
+        </section>
+
+        <section class="h4">
+            <h4 id = "SendAttachedOrdersTradeWindow">Sending Attached Orders from the Trade Window</h4>
+            <div class="member-link">[<a href="#SendAttachedOrdersTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> Follow the instructions below to send Attached Orders from the Trade Window. This is a necessary procedure when a Trade Position does not exist.</p>
+            
+            <ol>
+                <li>Set the Order Type on the Trade Window for the chart to <b>Send Attached Orders - Position</b> or <b>Send Attached Orders - Price</b>.</li>
+                
+                <li> It is necessary to use <b>Send Attached Orders - Price</b> if there is not currently a Trade Position so that a reference price can be manually specified.</li>
+
+                <li>In the case of <b>Send Attached Orders - Price</b>, specify a reference price in the <b>Reference Price</b> box.</li>
+
+                <li>Press the <b>Buy</b> button, to send Buy Attached Orders in the case when you have a Short position.</li>
+                
+                <li> Press the <b>Sell</b> button, to send Sell Attached Orders in the case when you have a Long position.</li>
+               
+                <li>If confirmations are enabled, you will receive a confirmation indicating the Attached Orders to be sent. Press <b>Yes</b> to confirm.</li>
+            </ol>
+        </section>       
+
+
+        <section class="h4">
+            <h4 id = "SendingAttachedOrdersByKeyboardShortcuts">Sending Attached Orders by Keyboard Shortcuts</h4>
+            <div class="member-link">[<a href="#SendingAttachedOrdersByKeyboardShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> Follow the instructions below to send Attached Orders by using a Keyboard Shortcut.</p>
+            
+            <ol>
+                <li> Refer to the <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Customize Keyboard Shortcuts</a> documentation.</li>
+                
+                <li> Set up keyboard shortcut  for the  Send Attached Orders  commands.  These Are Listed in the   <b> Trading Keyboard Shortcuts</b>  list in the Customize Keyboard Shortcuts Window.   The  commands are:   <b>Buy Send Attached Orders - Position</b>  | <b>Sell Send Attached Orders - Position</b> | <b>Send Attached Orders - Position</b>.</li>
+
+                <li> Go to the chart and enable   <b>Trade &gt;&gt;  Trading Keyboard Shortcuts Enabled</b>  on the menu.</li>
+
+                <li> When the chart is active, then  use one of the configured keyboard shortcuts  to send the Attached Orders.</li>
+            </ol>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="LimitIfTouched">Limit if Touched</h3>
+        <div class="member-link">[<a href="#LimitIfTouched">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Limit if Touched</b> order is similar to a standard <b>Limit</b> order, except that the Limit order does not actually become active until the <b>Limit Price</b> has been touched first.  </p>
+        
+         <p>Once the <b>Limit Price</b> has been touched,  then the order becomes active and its order price is the Limit Price.</p>
+
+        <p class="GeneralBackgroundHighlightLight">This order type is not supported with all of the supported Trading services that Sierra Chart works with. If it is not supported, then when submitting an order of this type, it will be rejected by the trading service or internally by Sierra Chart if Sierra Chart knows ahead of time that the trading service does not support this order type.</p>
+
+        <section class="h4">
+            <h4 id="LimitIfTouchedOrderInputs">Limit if Touched Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#LimitIfTouchedOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+                
+                <p>This price box is for the Limit Price for the order. Enter a price or select one from the drop-down list.</p>
+                
+                <p>Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="BidAskQuantityTriggeredStop">Bid Ask Quantity Triggered Stop</h3>
+        <div class="member-link">[<a href="#BidAskQuantityTriggeredStop">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>The <b>Bid Ask Quantity Triggered Stop</b> order is triggered based on Bid  Quantity or the Ask Quantity, depending upon the order Side, and the current market price. Bid/Ask Quantity represents the number of contracts or shares  of the  Limit orders at the Bid or  Ask. </p>
+
+        <p>In the case of a <b>Buy</b> Bid Ask Quantity Triggered Stop, it is triggered and submitted as a market order when the best Ask price equals the entered Stop price, and the current Ask quantity/size is less than or equal to the <b>Bid Ask Quantity</b> entered. Or the current last trade price for the symbol is 1 tick to 8 ticks above the entered Stop price.</p>
+
+        <p>In the case of a <b>Sell</b> Bid Ask Quantity Triggered Stop, it is triggered and submitted as a market order when the best Bid price equals the entered Stop price, and the current Bid quantity/size is less than or equal to the <b>Bid Ask Quantity</b> entered. Or the current last trade price for the symbol is 1 tick to 8 ticks below the Sell Stop price.</p>
+        
+        <p> This order type is unsupported during a  <a href = "index9600.html?page=doc/ReplayChart.html">Chart Replay</a>. </p>
+
+        <section class="h4">
+            <h4 id="BidAskQuantityTriggeredStopOrderInputs">Bid Ask Quantity Triggered Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#BidAskQuantityTriggeredStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>BidAsk Qty</h5>
+
+                <p>This price box is for the Bid or Ask Quantity. Enter a value which the  current  Bid or Ask Quantity needs to go below  for the order to be triggered.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedBidAskQuantityTriggeredStopOrderInputs">Attached Bid Ask Quantity Triggered Stop Order Inputs</h4>
+            <div class="member-link">[<a href="#AttachedBidAskQuantityTriggeredStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the offset value from the parent order price when the <b>Bid Ask Quantity Triggered Stop</b> is used as an Attached Order.</p>
+            </section>
+
+            <section class="h5">
+                <h5>BidAsk Qty</h5>
+
+                <p>This is the Bid or Ask Quantity when the <b>Bid Ask Quantity Triggered Stop</b> is used as an Attached Order.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TriggeredLimit">Triggered Limit</h3>
+        <div class="member-link">[<a href="#TriggeredLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Triggered Limit</b> is similar to a <b>Stop Limit</b> order, except that the <b>Triggered Limit</b> is a <a href = "#ManagementOfTrailingStopOrders">client-side managed order</a> type which means until such time that the Trigger price is met, the Limit order is <em>not</em> sent to the external   Trading service. When the Trigger price has been met, then the order is sent as a Limit order.</p>
+        
+        <p>When the  Limit order becomes active after the trigger price has been met, then it will only fill according to the standard rules for a Limit order.  When using the <b>Triggered Limit</b> as a Stop  <em>Attached Order</em>, once the  Trigger  has been met, depending upon the price of the Limit order, the Limit order is not necessarily going to fill right away. The market can continue to have traded  through the  Trigger but yet the Limit order will only fill according to the standard  Limit order rules. Refer to  <a href = "#Limit">Limit Order</a>.   You need to set the  <b>Attached Order Limit Offset</b>  to a larger amount than the <b>Attached Order Trigger Offset</b> to ensure that  the Limit will fill right away if that is what you require.</p>
+        
+        
+        <p>This order type  allows for the Limit Order Price to have a negative or positive offset from the Trigger price. Whereas with the standard Stop-Limit order, the  Limit price can only be considered a positive offset, meaning that the buy or sell will always be at a less favorable price than the Stop Trigger price.</p>
+
+        <p>A Triggered Limit can be entered using any of the standard order entry methods. </p> 
+        
+        <p>This order type can also be entered from the chart using any of the following  Chart Trading shortcut menu commands.   If these commands are not listed on the shortcut menu, then they need to be added. To do this, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. <b>Add</b> all of the order types that you want to use. For more information, refer to <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart" target="_blank" rel="noopener noreferrer">Chart Trading</a>. </p>
+        
+        
+        <ul>
+            <li><b>Buy Triggered Limit</b></li>
+            <li><b>Sell Triggered Limit</b></li>
+            <li><b>Buy Triggered Limit (Auto-Set)</b></li>
+            <li><b>Sell Triggered Limit (Auto-Set)</b></li>
+        </ul>
+        
+        <p>When not using the <b>Auto-Set </b> commands you can interactively set both the Trigger and  Limit prices allowing you to identify and modify the price levels based on chart patterns that develop. First the Limit  price is set upon selecting the menu command and then the Trigger price is set with the next left click.</p>
+        
+        <p> In the case where you want to submit a Buy Triggered Limit order, the Trigger Line needs to be   <em>above</em> the current market price  and the Limit price will be below the Trigger price. In the case where you want to submit a Sell   Triggered Limit order, the Trigger Line needs to be <em>below</em> the current market price and the  Limit price will be above the Trigger price. </p>
+
+        
+        <p>When using the <b>Auto-Set </b>  commands, then the Trigger price is first set and the Limit price is automatically set. The offset the Limit price has from the Trigger price is set through the <b>Set &gt;&gt;  Trig (Triggered) Limit Offset </b>   setting on the  <b>Set </b> tab of the  <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer" >Trade Window</a> for the chart. </p>
+        
+        <p>When modifying a Triggered Limit order on the chart, before the trigger has been met,  only the  Trigger price can be modified.   Upon modification of the Trigger price, the Limit price will be automatically adjusted to maintain the same offset it has to the  Trigger price. When the  Trigger has been met, then the Limit price can be modified and will be the only line displayed for the order. </p>
+        
+        <section class="h4">
+            <h4 id="TriggeredLimitOrderInputs">Triggered Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TriggeredLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p>This price box is for the Limit order price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger</h5>
+
+                <p>This price box is for the Trigger price of the order. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTriggeredLimitOrderInputs">Attached Triggered Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTriggeredLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit Offset</h5>
+
+                <p>This is the Limit offset value from the parent order price when the <b>Triggered Limit</b> order type is used as an Attached Order.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+                
+                <p>This is the Trigger offset value from the parent order price when the <b>Triggered Limit</b> order type is used as an Attached Order.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeVolumeTriggeredStop">Trade Volume Triggered Stop</h3>
+        <div class="member-link">[<a href="#TradeVolumeTriggeredStop">Link</a>] - [<a href="#top">Top</a>]</div>
+       
+        <p>The Trade Volume Triggered Stop order is triggered based on both trade volume and price. This order type requires both a Price and Volume. Volume represents the number of contracts or shares traded.</p>
+
+        <p>In the case of a <b>Buy</b> Trade Volume Triggered Stop, when the last trade price is at the order price or higher, the trading volume of the symbol is accumulated and when it meets or exceeds the set Volume for the order, then the order is submitted as a market order immediately.</p>
+
+        <p>In the case of a <b>Sell</b> Trade Volume Triggered Stop, when the last trade price is at the order price or lower, the trading volume of the symbol is accumulated and when it meets or exceeds the set Volume for the order, then the order is submitted as a market order immediately.</p>
+        
+        <p> The calculation of the trading volume is a simple sum of the volume of the trades as they  occur for the symbol  while the order is active.</p>
+        
+        <p>This is a client-side managed stop order.   For complete details about this, refer to <a href="#ManagementOfTrailingStopOrders">Sierra Chart Management of Trailing Stop and Chase Orders</a>. </p>
+         
+
+        <section class="h4">
+            <h4 id="TradeVolumeTriggeredStopOrderInputs">Trade Volume Triggered Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TradeVolumeTriggeredStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Volume</h5>
+
+                <p>This price box is for the Volume Quantity. Enter a value to check against the accumulated volume.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTradeVolumeTriggeredStopOrderInputs">Attached Trade Volume Triggered Stop Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTradeVolumeTriggeredStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the offset value from the parent order price when the <b>Trade Volume Triggered Stop</b> order type is used as an Attached Order.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Volume</h5>
+
+                <p>This is the Volume Quantity to be checked against the accumulated volume, when the <b>Trade Volume Triggered Stop</b> order type is used as an Attached Order</p>
+            </section>
+        </section>
+    </section> 
+
+    <section class="h3">
+        <h3 id="StopWithBidAskTriggering">Stop with Bid/Ask Triggering</h3>
+        <div class="member-link">[<a href="#StopWithBidAskTriggering">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>This order type is very similar to a standard <b>Stop</b> order type, except that this is a client-side managed order, which means until such time that the trigger price is met, the order is not sent to the external trading service.</p>
+
+        <p>As with other order types, this <b>Stop with Bid/Ask Triggering</b> order  supports interactive order entry through a chart for the Stop price allowing you to set and modify the price level as you require.</p>
+
+
+        <p>In the case of a <b>Buy Stop Order</b>, the Stop Order is converted to a Market Order when the <b>Bid Price</b> is greater than or equal to the entered <b>Stop Price</b>.</p>
+
+        <p>In the case of a <b>Sell Stop Order</b>, the Stop Order is converted to a Market Order when the <b>Ask Price</b> is less than or equal to the entered <b>Stop Price</b>.</p>
+
+        <section class="h4">
+            <h4 id="StopWithBidAskTriggeringOrderInputs">Stop with Bid/Ask Triggering Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <section class="h5">
+                <h5>Stop</h5>
+                
+                <p>This price box is for the Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedStopWithBidAskTriggeringOrderInputs">Attached Stop with Bid/Ask Triggering Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedStopWithBidAskTriggeringOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the offset value from the parent order price when this Order type is used as an Attached Order.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="StopWithLastTriggering">Stop with Last Triggering</h3>
+        <div class="member-link">[<a href="#StopWithLastTriggering">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This order type is very similar to a standard <b>Stop</b> order type, except that this is a  <a href = "#ManagementOfTrailingStopOrders">client-side managed order</a>, which means until such time that the trigger price is met, the order is not sent to the external trading service.</p>
+
+        <p>As with other order types, this <b>Stop with Last Triggering</b> order  supports interactive order entry through a chart for the Stop price allowing you to set and modify the price level as you require.</p>
+
+        <p>In the case of a <b>Buy Stop Order</b>, the Stop Order is converted to a Market Order and is sent to the Trading Service when the <b>Last Price</b> is greater than or equal to the entered <b>Stop Price</b>.</p>
+
+        <p>In the case of a <b>Sell Stop Order</b>, the Stop Order is converted to a Market Order and is sent to the Trading Service when the <b>Last Price</b> is less than or equal to the entered <b>Stop Price</b>.</p>
+        
+        <p>Normally you should be using a   <a href = "#Stop">Stop</a> order. Stop with Last Triggering is managed on the client side  and may only be useful with cash Forex markets where the Forex trading service may trigger a stop order based on bid/ask prices.  It does not make sense to use a Stop with Last Triggering in the futures markets.  Since in the futures  markets,  stop order triggering is always going to be based upon the last trade price anyway. </p>
+
+        <section class="h4">
+            <h4 id="StopWithLastTriggeringOrderInputs">Stop with Last Triggering Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#StopWithLastTriggeringOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+                
+                <p>This price box is for the Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedStopWithLastTriggeringOrderInputs">Attached Stop with Last Triggering Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedStopWithLastTriggeringOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the offset value from the parent order price when this Order type is used as an Attached Order.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="LimitIfTouched-Client">Limit if Touched - Client</h3>
+        <div class="member-link">[<a href="#LimitIfTouched-Client">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the same as the <a href="#LimitIfTouched" target="_blank" rel="noopener noreferrer">Limit if Touched</a> Order, except that this order is  managed on the Sierra Chart client-side until the set Limit price is touched, at which point the Order is sent to the Trading Service as a standard <a href="#Limit" target="_blank" rel="noopener noreferrer">Limit</a> Order.</p>
+
+        <section class="h4">
+            <h4 id="LimitIfTouched-ClientOrderInputs">Limit if Touched - Client Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#LimitIfTouched-ClientOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p>This price box is for the Limit order price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedLimitIfTouched-ClientOrderInputs">Attached Limit if Touched - Client Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedLimitIfTouched-ClientOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit Offset</h5>
+
+                <p>This is the offset value from the parent order price for an attached order.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="MarketIfTouched-Client">Market if Touched - Client</h3>
+        <div class="member-link">[<a href="#MarketIfTouched-Client">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the same as the <a href="#MarketIfTouched" >Market if Touched</a> Order, except that this order is  managed on the Sierra Chart client-side until the set Trigger price is touched, at which point the Order is sent to the Trading Service as a standard <a href="#Market" >Market</a> Order.</p>
+
+        <section class="h4">
+            <h4 id="MarketIfTouched-ClientOrderInputs">Market if Touched - Client Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#MarketIfTouched-ClientOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Trigger Price</h5>
+
+                <p>This price box is for the Trigger price of the order. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedMarketIfTouched-ClientOrderInputs">Attached Market if Touched - Client Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedMarketIfTouched-ClientOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p>This is the Trigger offset value from the parent order price for an attached order. For example, if this is set to 1 as a Price, then the trigger price for the order will be exactly 1.0 from the parent order price.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeVolumeTriggeredStopLimit">Trade Volume Triggered Stop-Limit</h3>
+        <div class="member-link">[<a href="#TradeVolumeTriggeredStopLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Trade Volume Triggered Stop Limit</b> Order is triggered based on both trade volume and price. This order type requires both a Price and Volume. Volume represents the number of contracts or shares traded.</p>
+
+        <p>In the case of a <b>Buy</b> Trade Volume Triggered Stop Limit, when the last trade price is at the order price or higher, the trading volume of the symbol is accumulated and when it meets or exceeds the set Volume for the order, then the order is submitted as a Limit order immediately.</p>
+
+        <p>In the case of a <b>Sell</b> Trade Volume Triggered Stop Limit, when the last trade price is at the order price or lower, the trading volume of the symbol is accumulated and when it meets or exceeds the set Volume for the order, then the order is submitted as a Limit order immediately.</p>
+
+        <section class="h4">
+            <h4 id="TradeVolumeTriggeredStopLimitOrderInputs">Trade Volume Triggered Stop Limit Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TradeVolumeTriggeredStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>This price box is for the Stop price. Enter a price or select one from the drop-down list. Refer to <a href="index9473.html?page=doc/TradeWindow.html#PriceFormatting" target="_blank" rel="noopener noreferrer">Price Formatting</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Volume</h5>
+
+                <p>This price box is for the Volume Quantity. Enter a value to check against the accumulated volume.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedTradeVolumeTriggeredStopLimitOrderInputs">Attached Trade Volume Triggered Stop Limit Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedTradeVolumeTriggeredStopLimitOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p>This is the offset value from the parent order price when the <b>Trade Volume Triggered Stop Limit</b> order type is used as an Attached Order.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Volume</h5>
+
+                <p>This is the Volume Quantity to be checked against the accumulated volume, when the <b>Trade Volume Triggered Stop Limit</b> order type is used as an Attached Order</p>
+            </section>
+        </section>
+    </section> 
+
+    <section class="h3">
+        <h3 id="StopLimit-Client">Stop Limit - Client</h3>
+        <div class="member-link">[<a href="#StopLimit-Client">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p></p>
+
+        <section class="h4">
+            <h4 id="StopLimit-ClientOrderInputs">Stop Limit - Client Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#StopLimit-ClientOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p></p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachedStopLimit-ClientOrderInputs">Attached Stop Limit - Client Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#AttachedStopLimit-ClientOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p></p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TriggeredStop">Triggered Stop</h3>
+        <div class="member-link">[<a href="#TriggeredStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> A Triggered Stop order is an order type where when the Trigger price has been met, then the stop order becomes active. </p>
+        
+         <p> In the case of a Buy Triggered Stop Order, when the last trade price of the Symbol is less than or equal to the Trigger price, then the Buy Stop order  is sent at that time.  The Stop order, is in a Held state until this condition has been met.  The Buy Stop order price must be above the trigger price.</p>
+			
+         <p> In the case of a Sell Triggered Stop Order, when the last trade price of the Symbol is greater than or equal to the Trigger price, then the Sell Stop order  is sent at that time.  The Stop order, is in a Held state until this condition has been met. The Sell Stop order price must be below the trigger price.</p>
+
+        <section class="h4">
+            <h4 id="TriggeredStopOrderInputs">Triggered Stop Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="#member-link">[<a href="#TriggeredStopOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Stop</h5>
+
+                <p>The Stop order price.  This is the price of the Stop order after it has been triggered and sent.  A Buy Stop order price must be above the trigger price.  A Sell Stop order price must be below the trigger price.</p>
+            </section>
+        
+            <section class="h5">
+                <h5>Trigger</h5>
+
+                <p>The price at which when it is touched, triggers the  activation and sending of the Stop order.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="TriggeredStopAttachedOrderInputs">Triggered Stop Attached Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#TriggeredStopAttachedOrderInputs">Link</a>] - [<a href="#top">Link</a>]</div>
+
+            <section class="h5">
+                <h5>Stop Offset</h5>
+
+                <p> This is the offset from the parent order price  which determines the price of the Stop order.</p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p>  This is the offset from the parent order price which determines the trigger price.   
+                
+                 <p>Only a positive offset is supported. Based upon the triggering rules as explained above, no matter what you use for the Trigger Offset, you will always get an immediate trigger when this order type is used as an Attached Order.</p>
+            </section>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TriggeredLimitWithChase">Triggered Limit with Chase</h3>
+        <div class="member-link">[<a href="#TriggeredLimitWithChase">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Triggered Limit with Chase order type is identical to <a href="#TriggeredLimit">Triggered Limit</a> except that it also has the functionality to move towards the current market price  after the Limit order has been triggered.</p>
+
+        <section class="h4">
+            <h4 id="TriggeredLimitWithChaseOrderInputs">Triggered Limit With Chase Order Inputs (Trade Window &gt;&gt; Main)</h4>
+            <div class="member-link">[<a href="#TriggeredLimitWithChaseOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>  
+
+            <p>   For non-attached orders, to set the Maximum Chase amount  use the  <a href = "index9473.html?page=doc/TradeWindow.html#MaximumChaseForChaseLimitOrders">Max Chase for Limit Orders</a> setting on the Trade Window. </p>
+
+            <section class="h5">
+                <h5>Limit</h5>
+
+                <p></p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger</h5>
+
+                <p></p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="TriggeredLimitWithChaseAttachedOrderInputs">Triggered Limit With Chase Attached Order Inputs (Trade Window &gt;&gt; Targets)</h4>
+            <div class="member-link">[<a href="#TriggeredLimitWithChaseAttachedOrderInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+                <h5>Limit Offset</h5>
+
+                <p></p>
+            </section>
+
+            <section class="h5">
+                <h5>Maximum Chase</h5>
+
+                <p></p>
+            </section>
+
+            <section class="h5">
+                <h5>Trigger Offset</h5>
+
+                <p></p>
+            </section>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ChartTradeShortcutMenu">Chart Trade Shortcut Menu</h2>
+    <div class="member-link">[<a href="#ChartTradeShortcutMenu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+   <p> Most of the <a href="#OrderTypes" >Order Types</a> can be entered by right clicking on the chart or Trade DOM with the Pointer when in  <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart">Chart Trade Mode</a> and selecting the order type from the displayed menu.   </p>
+        
+  <p>To add the order types to the menu, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>.  <b> Add</b> all of the order types that you want to use. </p>
+  
+  <p>In the case of a Trade DOM, refer to the image below for instructions to display the Chart Trade Menu.</p>
+  
+  <div style="text-align: center;"><a href="../images/tradedom_charttrademenu.png" rel="lightbox"><img src="../images/tradedom_charttrademenu.png" alt="" width=""  class="screenshot" loading="lazy"></a></div>
+  
+</section>
+
+<section class="h2">
+    <h2 id="MoveTargetsToPrice">Move Attached Targets to Price</h2>
+    <div class="member-link">[<a href="#MoveTargetsToPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>To move working Target orders on the Chart or Trade DOM to a selected price, follow the instructions below.</p>
+    
+    <ol>
+        <li>Follow the instructions in the <a href="#ChartTradeShortcutMenu">Chart Trade Shortcut Menu</a> section to add the <b>Move Targets to Price</b> command to the Chart Trade Shortcut Menu.</li>
+    
+        <li>When there are working Target orders on the Chart or Trade DOM, right-click at the price level where you want to move the Targets to and select <b>Move Targets to Price</b>.</li>
+    
+        <li>If <a href="index9473.html?page=doc/TradeWindow.html#OrderConfirmations">Order Confirmations</a> are enabled, confirm the order modification by pressing the <b>Yes</b> button.</li>
+    </ol>   
+
+     <p>It is also supported to move  Target  Attached Orders to a price level  by using a keyboard shortcut. To do this, follow the instructions below. </p>
+    <ol>
+        <li>Configure a keyboard shortcut for   <b>Trading Keyboard Shortcuts &gt;&gt; Move Attached Targets to Price</b>. For instructions, refer to  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Configure Keyboard Shortcuts</a>. </li>
+    
+        <li> Move with your Pointer to the price level on the chart where you want the Target Attached Orders moved to.</li>
+    
+        <li> Using your keyboard, press the key combination for the keyboard shortcut  for   <b>Move Attached Targets to Price</b>. </li>
+        
+         <li>If <a href="index9473.html?page=doc/TradeWindow.html#OrderConfirmations">Order Confirmations</a> are enabled, confirm the order modification by pressing the <b>Yes</b> button.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="MoveAttachedStopsToPrice">Move Attached Stops to Price</h2>
+    <div class="member-link">[<a href="#MoveAttachedStopsToPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>To move working Attached Stops orders on the Chart or Trade DOM to a selected price, follow the instructions below.  </p>
+    
+    <ol>
+        <li>Follow the instructions in the <a href="#ChartTradeShortcutMenu">Chart Trade Shortcut Menu</a> section to add the <b>Move Attached Stops to Price</b> command to the Chart Trade Shortcut Menu.</li>
+    
+        <li>When there are working Attached Stops orders on the Chart or Trade DOM, right-click at the price level where you want to move the Stops to and select <b>Move Attached Stops to Price</b>.</li>
+    
+        <li>If <a href="index9473.html?page=doc/TradeWindow.html#OrderConfirmations">Order Confirmations</a> are enabled, confirm the order modification by pressing the <b>Yes</b> button.</li>
+    </ol>
+    
+     <p>It is also supported to move  Stop  Attached Orders to a price level  by using a keyboard shortcut. To do this, follow the instructions below. </p>
+     
+    <ol>
+        <li>Configure a keyboard shortcut for   <b>Trading Keyboard Shortcuts &gt;&gt; Move Attached Stops to Price</b>. For instructions, refer to  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Configure Keyboard Shortcuts</a>. </li>
+    
+        <li> Move with your Pointer to the price level on the chart where you want the Stop Attached Orders moved to.</li>
+    
+        <li> Using your keyboard, press the key combination for the keyboard shortcut  for   <b>Move Attached Stops to Price</b>. </li>
+        
+         <li>If <a href="index9473.html?page=doc/TradeWindow.html#OrderConfirmations">Order Confirmations</a> are enabled, confirm the order modification by pressing the <b>Yes</b> button.</li>
+    </ol>    
+</section>
+
+<section class="h2">
+    <h2 id="RemoveLinkBetweenStopAttachedOrders">Remove Link Between Stop Attached Orders</h2>
+    <div class="member-link">[<a href="#RemoveLinkBetweenStopAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> It is supported to remove the link  between Stop Attached Orders which were created as the result of using multiple  Targets  and the  <a href = "index0ef8.html?page=doc/AttachedOrders.html#OCOGroup">OCO Group</a>  <b>All  OCO Groups</b>.  To do this, follow the instructions below.</p>
+    
+    <ol>
+        <li>Follow the instructions in the <a href="#ChartTradeShortcutMenu">Chart Trade Shortcut Menu</a> section to add the <b>Remove Link Between Stop Attached Orders</b> command to the Chart Trade Shortcut Menu.</li>
+    
+        <li> Right click anywhere on the chart and select this command from the   Chart Shortcut Menu.  It is not necessary to right-click  directly on the Stop Order.  All Stop Attached Orders for the Symbol and Trade Account which are linked together will have the link removed from them.</li>
+    
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="ManagementOfTrailingStopOrders">Sierra Chart Management of Trailing Stop and Chase Orders</h2>
+    <div class="member-link">[<a href="#ManagementOfTrailingStopOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  The price modifications for  <b>Trailing Stop</b>, the price modifications for  <b>Limit Chase </b>   and the management of all client-side managed orders, like  <b>Triggered Limit</b> orders, are managed by Sierra Chart.  </p>
+    
+    <p> This information also applies to the  <a href = "index0ef8.html?page=doc/AttachedOrders.html#MoveBreakevenForStop">Move to Breakeven for Stops</a> functionality for Attached Orders.</p> 
+
+    <p>   This information also applies to the   <b>Send Order at Time</b> <a href = "index9473.html?page=doc/TradeWindow.html#TimeInForce">Time in Force</a> type.</p> 
+    
+    <p>Therefore, in order for these price modifications and triggering actions to occur based upon the current market price, the following must be true. Otherwise,  no actions will take place on the order and it will remain the same.</p>
+    
+    <ul>
+       <li>Sierra Chart must be running and be connected to the Data or Trading service ( <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>), or be running a replay. In the case of live trading Sierra Chart must be connected to the Trading service.
+       <br> <br>
+       Keep in mind if Sierra Chart loses connectivity to the Data or Trading Service server, the Trailing Stop order prices will not be updated in this case as well, unless you are running a replay and using Sierra Chart Trade Simulation Mode. In the case of client-side managed orders, triggering actions can also not be performed.</li>
+      
+      <li> Real-time data needs to be received for the symbol or the chart needs to be replaying and updating. When you expect the trailing stop to move, there has to be price movement within the chart as well. </li>
+
+       <li>The chart or Trade DOM the orders were entered from needs to remain open and continue to be set to both the same Symbol  and  <a href = "index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Trade Account</a> that the order is for.</li>
+       
+       <li>In the case of a chart,  <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> needs to be enabled.</li>
+       
+       <li>The <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Number of Stored Time and Sales Records</b>  should be set to at least 5000 to ensure no trade record data is missed when processing through all of the trade prices. This applies to a chart updating with real-time or delayed data, or during a chart replay.</li>
+
+    </ul>
+    
+    
+    <p>When a Trailing Stop or a Limit Chase order is modified based upon the specifications given on this page for the <a href="#OrderTypes" >Order Type</a>, then this will be in response  to movement of the last trade price. </p>
+    
+   <p> These order modifications are logged in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Activity</b> tab.  For more information about viewing these order modifications, refer to <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a>.</p>
+
+    <p>You are able to see the last trade price which actually triggered the order modification of a  Trailing Stop or Limit Chase order.  When looking at an order modification line in the Trade Activity Log, look at the <b>OrderActionSource</b>  field. It will say <em><b>Auto trail order modification. Trigger price: [price]</b></em>. The <b>Trigger price</b> is the price which triggered the modification of the order.</p>
+    
+    <p> Sierra Chart does not support the use of server modified trailing stop orders because the functionality available from the Trading service cannot support  all of the needed  trailing stop and move to breakeven functionality that Sierra Chart has.     Therefore, to have  one particular trailing stop type modified by the server and all the others not, creates an inconsistency and confusion. </p>
+    
+     <p>The other reason Sierra Chart does not support the use of server modified trailing stop orders is because Sierra Chart works with multiple Trading services and it is impossible to reliably integrate to the limited trailing stop functionality they all have.  And none of the Trading services will support all of the trailing stop functionality needed anyway.</p>
+
+    <div class="h3">
+    <h3 id="EffectOfDelayedDataOnTrailingStops">Effect of  Delayed Data on Trailing Stops</h3>
+    <div class="member-link">[<a href="#EffectOfDelayedDataOnTrailingStops">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p>Sometimes market data can be delayed even if this delay is only 100 milliseconds. In the case of when using Interactive Brokers True Real-time Data, this data is delayed 5000 milliseconds.  </p>
+    
+    <p>This delayed data which is received  will be used to modify  Trailing Stops, Limit Chase  orders and is used for Move to Breakeven for Stops actions.  If this delayed data occurred  before a Limit or Stop order became active as in the case of an Attached Order, then this could cause some unexpected behavior where the order will have been modified according to prices which occurred before the fill of the parent order. </p>
+    
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="TriggeredLimitOrderEntryStudy">Triggered Limit Order Entry Study</h2>
+    <div class="member-link">[<a href="#TriggeredLimitOrderEntryStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p class = "GeneralBackgroundHighlight"> This order entry study has now been replaced  by the <a href="#TriggeredLimit">Triggered Limit</a> built-in order type. </p>
+
+    <p>Sierra Chart provides a study named <b>Trading: Triggered Limit Order Entry</b> which is a managed order entry study.</p>
+
+    <p>This managed order entry study adds commands to the Chart Shortcut menu displayed when right clicking on a Chart or Trade DOM to provide user interaction.</p>
+
+    <p>The strategy implemented is a common entry method in which when price reaches a Trigger level, at that time a <a href="#Limit">Limit order</a> is submitted which price needs to pull back to in order for it to fill. This entry style is often employed at either resistance / support levels on a breakout or on a pullback within an existing trend.</p>
+    
+    <p>This order entry study also serves as an example on how advanced order entry based on price action can be achieved with the Sierra Chart <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study Interface and Language</a>. The source code for this study can be found in the <b>/ACS_Source/OrderEntryStudies.cpp</b> file in the folder where Sierra Chart is installed to.</p>
+    
+    <p>For instructions to work with the source code, modify it and create your own custom version of it, refer to <a href="indexaeeb.html?page=doc/HowToBuildAnAdvancedCustomStudyFromSourceCode.html" target="_blank" rel="noopener noreferrer">How to Build an Advanced Custom Study from Source Code</a>.</p>
+
+    <div class="h3">
+		<h3 id="TriggeredLimitOrderEntryStudy_OrderLines">Order Lines</h3>
+		<div class="member-link">[<a href="#TriggeredLimitOrderEntryStudy_OrderLines">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p>The study consists of the following lines after the Trigger and Order prices have been set. </p>
+        <ol>
+            <li><b>Trigger Line</b>: The price to which price must reach in order for the Limit order to be placed.</li>
+            <li><b>Order Line</b>: The price at which the Limit order is placed once the Trigger Line is reached.</li>
+        </ol>
+    </div>
+    
+    <section class="h3">
+		<h3 id="TriggeredLimitOrderEntryStudy_StepByStepInstructions">Step-By-Step Instructions</h3>
+		<div class="member-link">[<a href="#TriggeredLimitOrderEntryStudy_StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ol>
+            <li>Add the <b>Trading: Triggered Limit Order Entry</b> study to the chart. For instructions to add this study to the chart, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank">Adding/Modifying Studies</a>. In the case of when you are using a Trading DOM, refer to the <a href="index3c50.html?page=doc/ChartTrading.html#AddingStudiesTradeDOM" target="_blank" rel="noopener noreferrer">Adding Studies on a Trade DOM</a> instructions instead.</li>
+            
+             <li>If you want the Limit order price to be automatically set, set the <b>Auto Set Limit Price</b> study Input to Yes. In this case, set the <b>Limit Price Offset in Ticks</b> to the number of price ticks the limit order should be automatically set from the Trigger level.</li>
+            
+            <li>Go to the chart and <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Open the Trade Window</a>.</li>
+            
+            <li>In the Trade Window, set the Order <a href="index9473.html?page=doc/TradeWindow.html#Quantity" target="_blank" rel="noopener noreferrer">Quantity</a>. The Limit order submitted by the <b>Trading: Triggered Limit Order Entry</b> study will use this quantity.</li>
+            
+            <li>If you want <a href="index0ef8.html?page=doc/AttachedOrders.html" target="_blank" rel="noopener noreferrer">Attached Orders</a> to be sent along with the submitted Limit order, then enable <b>Use Attached Orders</b> on the Trade Window and go to the <b>Targets</b> tab on the Trade Window and configure the Attached Orders.</li>
+            
+            <li>Make sure there is a checkmark by <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>. This enables the study's custom menus.</li>
+            
+            <li>Enable <b class="menu_item">Trade &gt;&gt; Auto Trade Enabled</b> if it is not already enabled on the menu.</li>
+            
+            <li>Set the <b>Trigger Line</b> by right clicking on the chart at the trigger price level and selecting <b>Set Trigger Price</b> on the displayed menu. In the case where you want to submit a Buy Limit order, the <b>Trigger Line</b> needs to be <em>above</em> the current market price.  In the case where you want to submit a Sell Limit order, the Trigger Line needs to be <em>below</em> the current market price.</li>
+            
+            <li>After setting the <b>Trigger  Line</b> you will see the Trigger Price displayed in text format displayed right on the chart and a study Subgraph line appear on the chart representing the Trigger Line.</li>
+            
+            <li>If <b>Auto Set Limit Price</b> input is set to <b>Yes</b>, then the Limit Order will be automatically placed at a price that is defined by the <b>Limit Price Offset in Ticks</b> input. For example, if the <b>Auto Set Limit Price</b> is set to <b>Yes</b>, the <b>Limit Price Offset in Ticks</b> is set to 10, the <b>Tick Size</b> for the chart is <b>0.25</b> and the trigger is set above the current last price in the chart at a price of <b>2845.00</b>, then the system will automatically place a Buy Limit at 2842.50 (2845.00 - 0.25 * 10).
+            <br>
+            If the <b>Auto Set Limit Price</b> is set to <b>No</b>, then the <b>Limit Order Price</b> must be manually set by right clicking on the chart at the level you want the Limit price at and selecting either <b>Set Buy Order Price</b> or <b>Set Sell Order Price</b> on the menu. These options to set the Limit Order do not display in the right click menu until after the Trigger Price is set.
+            
+            <ul>
+                <li>For a Buy order: The Buy Limit order price <em>must be below</em> the Trigger line. </li>
+
+                <li>For a Sell order: The Sell Limit order price <em>must be above</em> the Trigger line.</li>    
+            </ul></li>
+
+            <li> To modify the order price, left click and drag the Trigger Line displayed on the chart to the new location. You just need to left click and drag at the price level and not necessarily directly on the line itself. The Order Line is automatically adjusted to maintain the same offset.</li>
+            
+            <li>To cancel the order, right-click on the  chart and select <b>Cancel Triggered Limit Order</b>.</li>
+            
+            <li>Once the Trigger Limit has been reached, the order is submitted as a <a href="#Limit">Limit</a> order.</li>
+        </ol>
+    </section>
+    
+    <section class="h3">
+		<h3 id="TriggeredLimitOrderEntryStudy_StudyInputs">Study Inputs</h3>
+		<div class="member-link">[<a href="#TriggeredLimitOrderEntryStudy_StudyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <ol>
+            <li><b>Text - Horizontal Position From Left</b>: Text horizontal alignment from the left side of the screen. Enter a value between 1 and 150. A value of 150 will put the text box completely to the right of the screen and it may not be visible.</li>
+            <li><b>Text - Vertical Position From Bottom</b>: Text vertical alignment from the bottom of the screen. Enter a value between 0 and 100. A value of 1 will put the text box completely to the bottom of the screen and it may not be visible.</li>
+            <li><b>Number of Bars  Back to Display</b>: Define how many bars back to display the Trigger and Order lines. This defines the length of these lines from the last bar in the chart. Note that as the chart is scrolled these lines stay with the last bar in the chart, therefore they may not be visible as the chart is scrolled further back in time.</li>
+            <li><b>Auto Set Limit Price </b>: Set this to Yes to automatically set the Limit order price using the <b>Limit Price Offset in Ticks</b>.</li>
+            <li><b>Limit Price Offset in Ticks</b>: When <b>Auto Set Limit Price</b> is set to <b>Yes</b> this input specifies the number of price ticks the Limit order should be automatically set from the Trigger level.</li>
+        </ol>
+    </section>
+</section>
+
+
+<section class="h2">
+    <h2 id="BidAskQuantityTriggeredStopStudy">Bid/Ask Quantity Triggered Stop Study</h2>
+    <div class="member-link">[<a href="#BidAskQuantityTriggeredStopStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b> Bid/Ask Quantity Triggered Stop</b> study is a study that is used to submit a market order which is triggered under certain conditions. </p>
+    
+   <p> In the case of a Buy Stop, it is triggered and submitted as a market order when the best  Ask price is nonzero, the best Ask price equals the previously set order price, and the Ask quantity/size is less than or equal to the <b>Bid Ask Quantity Threshold </b>  study Input. Or the current market price for the symbol is 1 tick to 8 ticks above the Buy Stop price. </p>
+        
+   <p> In the case of a Sell Stop, it is triggered and submitted as a market order when the best  Bid price is nonzero, the best Bid price equals the previously set order price, and the Bid quantity/size is less than or equal to the <b>Bid Ask Quantity Threshold </b>  study Input. Or the current market price for the symbol is 1 tick to 8 ticks below the Sell Stop price. </p>
+
+    
+    <div class="h3">
+		<h3 id="BidAskQuantityTriggeredStopStudy_StepByStepInstructions">Step-By-Step Instructions</h3>
+		<div class="member-link">[<a href="#BidAskQuantityTriggeredStopStudy_StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <ol>
+            <li>Add the  <b>Trading:  Bid/Ask Quantity Triggered Stop</b> study to the chart or Trade DOM you are trading from.  For instructions to add this study to the chart, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"  Target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>. 
+            <br> <br>
+            In the case of when you are using a Trade DOM, refer to the <a href="index3c50.html?page=doc/ChartTrading.html#AddingStudiesTradeDOM" target="_blank" rel="noopener noreferrer">Adding Studies on a Trade DOM</a> instructions instead.</li>
+            
+            <li> Go to the chart and <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Open the Trade Window</a>.  </li>
+            
+            <li>In the  Trade Window, set the Order <a href="index9473.html?page=doc/TradeWindow.html#Quantity" target="_blank" rel="noopener noreferrer">Quantity</a>. The Market order submitted by the <b>Trading: Bid/Ask Quantity Triggered Stop</b> study uses this Quantity setting.</li>
+            
+            <li> If you want <a href="index0ef8.html?page=doc/AttachedOrders.html" target="_blank" rel="noopener noreferrer">Attached Orders</a> to be sent along with the submitted Market order, then enable <b>Use Attached Orders </b> on the Trade Window and go to the <b>Targets </b> tab  on the Trade Window and configure the Attached Orders.</li>
+            
+            <li>Enable  <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>.</li>
+            
+            <li>Enable <b class="menu_item">Trade &gt;&gt; Auto Trade Enabled</b> on the menu if it is not already enabled.</li>
+            
+            <li>Set the Stop order price by right clicking on the chart with your Pointer at the price level and select <b>Set Buy Stop Price</b> or <b>Set Sell Stop Price</b> on the displayed menu depending upon whether you want a Buy or Sell stop order. </li>
+            
+            <li>After setting the price, you will see the order price displayed as a line on the chart. A value label is also displayed for this line on the left side.  To adjust the color of the line, other visual properties, and  the alignment of the label, modify the study Subgraph settings. Refer to  <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"  Target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>.</li>
+            
+            <li> To modify the order price, left click and drag the  order price line displayed on the chart to the new location. You just need to left click and drag at the price level and not necessarily directly on the line itself. </li>
+            
+            <li>To cancel the order, right-click on the chart and select <b>Cancel Stop Order</b>.</li>
+            
+        </ol>
+    </div>
+    
+    <div class="h3">
+		<h3 id="BidAskQuantityTriggeredStopStudy_StudyInputs">Study Inputs</h3>
+		<div class="member-link">[<a href="#BidAskQuantityTriggeredStopStudy_StudyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <ol>
+            <li><b>Number of Bars  Back to Display</b>: Define how many bars back to display the Stop order line.</li>
+          <li> <b> Bid Ask Quantity Threshold</b>:  In the case of a Buy Stop order this is the best Ask Quantity threshold. In the case of a Sell Stop order this is the best Bid Quantity threshold. </li>
+        </ol>
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="SpreadOrderEntryStudy">Spread Order Entry Study</h2>
+
+    <p>For full documentation refer to the <a href="indexdd2a.html?page=doc/Trade-SpreadOrderEntryStudy.html">Spread Order Entry Study</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TriggeredMarketOrderForTradeSymbol">Triggered Market Order For Trade Symbol</h2>
+    <div class="member-link">[<a href="#TriggeredMarketOrderForTradeSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Triggered Market Order For Trade Symbol</b> study submits a Buy Market order when the price is less than or equal to the entered Trigger price; or submits a Sell Market order when the price is greater than or equal to the entered Trigger price. This study can be used in combination with an entered <a href="index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Quote Symbol</a> to Buy or Sell on a different symbol than the trigger is based upon.</p>
+
+    <section class="h3">
+		<h3 id="TriggeredMarketOrderForTradeSymbol_StepByStepInstructions">Step-By-Step Instructions</h3>
+		<div class="member-link">[<a href="#TriggeredMarketOrderForTradeSymbol_StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li>Add the <b>Trading: Triggered Market Order For Trade Symbol</b> study to the chart. For instructions on how to add a study, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"  Target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>. In the case of when you are using a Trading DOM, refer to the <a href="index3c50.html?page=doc/ChartTrading.html#AddingStudiesTradeDOM" target="_blank" rel="noopener noreferrer">Adding Studies on a Trade DOM</a> instructions instead.</li>
+
+            <li> Go to the chart and <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Open the Trade Window</a>.</li>
+            
+            <li>In the Trade Window, set the Order <a href="index9473.html?page=doc/TradeWindow.html#Quantity" target="_blank" rel="noopener noreferrer">Quantity</a>. The Market order submitted by the <b>Trading: Triggered Market Order For Trade Symbol</b> study uses this Quantity setting.</li>
+            
+            <li>If you want <a href="index0ef8.html?page=doc/AttachedOrders.html" target="_blank" rel="noopener noreferrer">Attached Orders</a> to be sent along with the submitted Market order, then enable <b>Use Attached Orders</b> on the Trade Window and go to the <b>Targets</b> tab on the Trade Window and configure the Attached Orders.</li>
+            
+            <li>Enable  <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> on themenu if it is not already enabled.</li>
+            
+            <li>Enable <b class="menu_item">Trade &gt;&gt; Auto Trade Enabled</b> on the menu if it is not already enabled.</li>
+
+            <li>Set the Trigger price by right clicking on the chart at the price level and selecting either <b>Set Sell Order Trigger</b> or <b>Set Buy Order Trigger</b> on the displayed menu.</li>
+            
+            <li>After setting the Trigger price, you will see the Trigger price displayed as a line on the chart. A Name label is displayed for this line on the left side and a Value label is displayed for this line in the Price column.  To adjust the color of the line, other visual properties, and the alignment of the labels, modify the study Subgraph settings for this line. Refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>.</li>
+            
+            <li>To cancel the Trigger, right-click on the chart and select <b>Cancel Trigger</b>.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+		<h3 id="TriggeredMarketOrderForTradeSymbol_StudyInputs">Study Inputs</h3>
+		<div class="member-link">[<a href="#TriggeredMarketOrderForTradeSymbol_StudyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <ol>
+            <li><b>Text - Horizontal Position From Left</b>: This is currently unused.</li>
+
+            <li><b>Text - Vertical Position From Bottom</b>: This is currently unused.</li>
+
+            <li><b>Number of Bars Back to Display</b>: This sets the number of bars over which the Trigger line will be displayed. The length is measured in bars starting from the most recent bar and going backwards in time.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TriggeredStopOrderStudy">Triggered Stop Order Study</h2>
+    <div class="member-link">[<a href="#TriggeredStopOrderStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The  <b>Triggered Stop Order</b> study submits a Buy Stop order the specified number of price ticks above the set Trigger price, or submits a Sell Stop order the specified number of price ticks below the set Trigger price.</p>
+    
+    
+    <section class="h3">
+		<h3 id="TriggeredStopOrderStudy_StepByStepInstructions">Step-By-Step Instructions</h3>
+		<div class="member-link">[<a href="#TriggeredStopOrderStudy_StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <ol>
+            <li>Add the  <b>"Trading: Triggered Stop Order</b> study to the chart.  For instructions to add this study to the chart, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"  Target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>. In the case of when you are using a Trading DOM, refer to the <a href="index3c50.html?page=doc/ChartTrading.html#AddingStudiesTradeDOM" target="_blank" rel="noopener noreferrer">Adding Studies on a Trade DOM</a> instructions instead.</li>
+            
+            <li>Set the <b>Stop Price Offset from Trigger Price in Ticks </b> Input with this study to the number of ticks away from the Trigger price that the Stop order should be submitted at.</li>
+            
+            <li> Go to the chart and <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Open the Trade Window</a>.  </li>
+            
+            <li>In the  Trade Window, set the Order <a href="index9473.html?page=doc/TradeWindow.html#Quantity" target="_blank" rel="noopener noreferrer">Quantity</a>. The Market order submitted by the <b>Trading: Bid/Ask Quantity Triggered Stop</b> study uses this Quantity setting.</li>
+            
+            <li> If you want <a href="index0ef8.html?page=doc/AttachedOrders.html" target="_blank" rel="noopener noreferrer">Attached Orders</a> to be sent along with the submitted Stop order, then enable <b>Use Attached Orders </b> on the Trade Window and go to the <b>Targets </b> tab  on the Trade Window and configure the Attached Orders.</li>
+            
+            <li>Enable  <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>.</li>
+            
+            <li>Enable <b class="menu_item">Trade &gt;&gt; Auto Trade Enabled</b> on the menu if it is not already enabled.</li>
+            
+            <li>Set the Stop Trigger price by right clicking on the chart at the price level and selecting <b>Set Stop  Trigger Price</b> on the displayed menu. </li>
+            
+            <li>After setting the Trigger price, you will see the Stop Order price displayed as a line on the chart. A Name and Value label is also displayed for this line on the left side.  To adjust the color of the line, other visual properties, and  the alignment of the label, modify the study Subgraph settings for this line. Refer to  <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"  Target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>.</li>
+            
+            <li>To cancel the order, right-click on the chart and select <b>Cancel Stop Order</b>.</li>
+            
+        </ol>
+    </section>
+    
+    <section class="h3">
+		<h3 id="TriggeredStopOrderStudy_StudyInputs">Study Inputs</h3>
+		<div class="member-link">[<a href="#TriggeredStopOrderStudy_StudyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ol>
+            <li><b>Number of Bars  Back to Display</b>: This sets how many bars back to display the Trigger price and Stop Order lines.</li>
+          <li> <b>Stop Price Offset from Trigger Price in Ticks</b>: This sets the number of price ticks from the Trigger price that the Stop order needs to be placed.  </li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="StopOrdersCME">Stop Orders on the CME</h2>
+    <div class="member-link">[<a href="#StopOrdersCME">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A <em>Stop</em> order with a single price submitted from  Sierra Chart and placed through to one of the CME (Chicago Mercantile Exchange) exchanges (CME, CBOT, COMEX, NYMEX), will be converted by the CME to a <em>Stop-Limit</em> order. </p>
+
+    <p> The Limit price will be set to a price, calculated by the CME, which prevents it from filling if the market moves too far away from the Stop price. The limit price will be significantly far away from the Stop price.</p>
+    
+    <p>When using some Trading services, like Teton, you will see the order type change from Stop to Stop-Limit after it has been submitted and accepted by the exchange. You also will see the <b>Price2</b> order price for the order, set to the actual limit price set by the exchange.</p>
+
+    <p>Understand that this behavior is all normal and expected and is a safety feature implemented by the CME to maintain an orderly market.</p>
+</section>
+
+<section class="h2">
+    <h2 id="FullyClientSideManagedOrders">Fully Client Side Managed Orders</h2>
+    <div class="member-link">[<a href="#FullyClientSideManagedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Order Types which contain the word "Client"  in their name mean these are fully client-side managed orders and are not sent to the external trading gateway until such time that the  documented condition has been met.  </p>
+    
+     <p>Until that is the case, they have a   "Held" order Status. You can look at the   <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Trade Activity Log</a> to determine when these orders are transmitted to the external trading  gateway. </p>
+</section>
+
+<section class="h2">
+    <h2 id="UnderstandingWhyOrdersDoNotFillAtExpectedPrices">Understanding Why Orders Do Not Fill At Expected Prices</h2>
+    <div class="member-link">[<a href="#UnderstandingWhyOrdersDoNotFillAtExpectedPrices">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p> If you experience an issue, where an order  than you would expect, the first step is to understand you would expect, the first step is to understand what was the Order Type of that order. </p>
+     
+     <p> To determine the order type, use the   <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.  Refer to the <b>OrderType</b> field  along the  record a line for the order.  For complete documentation, refer to    <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Viewing Historical Trade Activity</a>.  </p>
+
+     <p>Once you determine the order type,  and if you are entering the order through the Chart DOM you need to be aware of the   <a href = "index4451.html?page=doc/GlobalTradeSettings.html#ChartDOMSettings">Chart DOM Settings</a>. The order type   will be determined  by the following: Whether you left or right right clicked in the columns. Where you  clicked  relative to the last trade price. Whether you clicked in the Buy or Sell column. And finally the Chart  DOM  Settings.</p>
+    
+    <p>In the case of the Limit order you need to understand how these orders are filled in relation to the current prices. Refer to <a href = "indexad24.html?page=doc/TradeSimulation.php#LimitOrders">How Limit Orders Are Filled</a>. </p>
+    
+    <p>For example, if the current price is 100, the bid price is 100 and the ask price is 101 and you put a Buy Limit order in at 105, it will immediately fill at 101 which is the ask price.</p>
+
+
+    <p>In the case of a Stop order, you need to understand how these orders are filled in relation to the current prices. Refer to <a href = "indexad24.html?page=doc/TradeSimulation.php#StopOrders">How Stop Orders Are Filled</a>.</p>
+
+   
+</section>
+
+
+
+<section class="h2">
+    <h2 id="OrderRejectedFromOutsideOfBands">Order Rejected from Outside of Bands</h2>
+    <div class="member-link">[<a href="#OrderRejectedFromOutsideOfBands">Link</a>] - [<a href="#top">Top</a>]</div>
+ 
+     <p> An exchange usually will maintain a maximum upper price and a minimum lower price around  the current price of a symbol, which  order prices have to be within.  This is called the price bands.  Almost always orders that you submit will be within this range of prices.   </p>
+     
+     <p> If a  Limit or Stop  order you submit is outside the upper or lower band, then the exchange will reject the order. </p>
+      
+     <p> One solution is to change the    <a href = "index9473.html?page=doc/TradeWindow.html#TimeInForce">Time in Force</a> type from <b>Day</b>  to <b>Good  till Canceled</b>. And resubmit the order. This should allow you to put an order outside of the price bands.  </p>
+     
+     <p> Refer to  <a href = "https://www.youtube.com/watch?v=LfdANLloz-I" target="_blank" rel="noopener noreferrer">this video</a>   which provides a full explanation of all of this.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ReducingSlippageFromStopOrders">Reducing Slippage from Stop Orders</h2>
+    <div class="member-link">[<a href="#ReducingSlippageFromStopOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+
+    <p>This section explains how to reduce or eliminate slippage from Stop orders.  However, it is important to be aware, that when you follow these instructions there is the risk  that the stop order will not be filled  and therefore not act as a protective stop. </p>
+    
+     <p>  To minimize slippage for a Stop order, it is essential to use a  <a href = "#StopLimit">Stop-Limit</a> Order Type either as the main entry order or as an  <a href = "index0ef8.html?page=doc/AttachedOrders.html">Attached Order</a>  depending upon  where you are using the Stop order. </p>
+     
+     
+     <p> Once you are using a Stop-Limit order, then go to the <b>Set</b> tab of the <a href = "index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Trade Window</a> for the Chart or Trading DOM. </p>
+
+    <p> Set the  <b>Stop-Limit Order Limit Offset &gt;&gt; Offset Type</b> to  <b>Ticks</b>. </p>
+    
+    <p> Set the  <b>Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</b> to the maximum number of ticks that you want for slippage. For example, this could be anywhere from 1 to 4. Or a higher value. It all depends upon what you want. </p>
+    <p>  Make the same change for  <b>Stop-Limit Order Limit Offset &gt;&gt; Attached Orders</b>. </p>
+    
+     <p> Refer to the image below. </p>
+
+
+    <div style="text-align: center;"><a href="../images/tradewindow_stoplimitorder_limitoffset.png" rel="lightbox"><img src="../images/tradewindow_stoplimitorder_limitoffset.png" alt="" width=""  class="screenshot" loading="lazy"></a></div>
+</section>
+
+<hr><p>*Last modified Saturday, 22nd April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/OrderTypes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:49:21 GMT -->
+</html>  

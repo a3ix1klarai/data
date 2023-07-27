@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/EditMenu.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105666') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/EditMenu.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Edit Menu -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexa20c.html?page=doc/EditMenu.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#MenuControls">(Table of Contents) Menu Commands</a> &gt;&gt; <a  href="indexa20c.html?page=doc/EditMenu.html">Edit Menu</a></h4> </div>     
+<h1 class="PageName">Edit Menu</h1>
+
+<ul>
+    <li><a href="#Copy">Edit &gt;&gt; Copy Chart Image </a></li>
+    <li><a href="#CopyToChartBMP">Edit &gt;&gt; Copy to Chart.bmp </a></li>
+    <li><a href="#CopyChartValues">Edit &gt;&gt; Copy Chart Values </a></li>
+    <li><a href="#ScreenImages">Edit &gt;&gt; Screen Images </a></li>
+    <li><a href="#EditData_HistoricalChart">Edit &gt;&gt; Edit Data - Historical Chart</a></li>
+    <li><a href="#DownloadData_HistoricalChart">Edit &gt;&gt; Download Data - Historical Chart</a></li>
+    <li><a href="#EditDataIntraday">Edit &gt;&gt; Edit/Download Data - Intraday Chart</a></li>
+    <li><a href="#DeleteAllDataDownload">Edit &gt;&gt; Delete All Data And Download</a></li>
+    <li><a href="#AdjustData">Edit &gt;&gt; Adjust Data</a></li>
+    <li><a href="#ExportIntradayDataToFile">Edit &gt;&gt; Export Intraday Data to Text file</a></li>
+    <li><a href="#ExportandEditIntradayData">Edit &gt;&gt; Export and Edit Intraday Data</a></li>
+    <li><a href="#ImportAndLoad">Edit &gt;&gt; Import and Load Intraday Data</a></li>
+    <li><a href="#ExportBarDataToTextFile">Edit &gt;&gt; Export Bar Data to Text File</a></li>
+    <li><a href="#FileDataFields">File Data Fields</a></li>
+    <li><a href="#ExportBarDataToSpreadsheet">Procedure to Export Bar Data for Use in Spreadsheet Programs</a></li>
+    <li><a href="#ExportBarStudyDataToTextFile">Edit &gt;&gt; Export Bar and Study Data to Text File</a></li>
+    <li><a href="#DownloadDataForAllHistoricalCharts">Edit &gt;&gt; Download Data For All Historical Charts</a></li>
+    <li><a href="#DownloadDailyDataForAssociatedWatchListSymbols">Edit &gt;&gt; Download Data for Associated Watch List Symbols</a></li>
+    <li><a href="#DownloadDataFromEndOfChart">Edit &gt;&gt; Download Data from End of Chart</a></li>    
+    <li><a href="#DownloadDailyDataForAllSymbols">Edit &gt;&gt; Download Daily Data for All Symbols</a></li>
+    <li><a href="#CancelDailyDataDownloads">Edit &gt;&gt; Cancel Daily Data Downloads</a></li>
+    <li><a href="#CancelIntradayDataDownloads">Edit &gt;&gt; Cancel Intraday Data Downloads</a></li>
+    <li><a href="#CancelAllDownloads">Edit &gt;&gt; Cancel All Downloads</a></li>
+    
+    <li><a href="#BulkIntradayDataDownload">Edit &gt;&gt; Bulk Intraday Data Download</a></li>
+    <li><a href="#CancelHistoricalChart">Edit &gt;&gt; Cancel Historical Chart Downloads</a></li>
+    <li><a href="#RedoChartDrawing">Edit &gt;&gt; Redo Chart Drawing</a></li>
+    <li><a href="#UndoChartDrawing">Edit &gt;&gt; Undo Chart Drawing</a></li>
+    
+    <li><a href="#DisableAllAlerts-Chart">Edit &gt;&gt; Disable All Alerts - Chart</a></li>
+    <li><a href="#DisableAllAlerts-Chartbook">Edit &gt;&gt; Disable All Alerts - Chartbook</a></li>
+    
+    <li><a href="#ReloadHistoricalCharts">Edit &gt;&gt; Reload Historical Charts</a></li>
+    <li><a href="#ReloadIntradayCharts">Edit &gt;&gt; Reload Intraday Charts</a></li>
+    <li><a href="#ReloadAllCharts">Edit &gt;&gt; Reload All Charts</a></li>
+    <li><a href="#RecalculateAllCharts">Edit &gt;&gt; Recalculate All Charts</a></li>
+    <li><a href="#JoinIntradayData">Edit &gt;&gt; Join Intraday Data</a></li>
+    <li><a href="#TranslateSymbolsToCurrentService">Edit &gt;&gt; Translate Symbols To Current Service</a></li>
+</ul>
+
+<section class="h3">
+    <h3 id="Copy">Edit &gt;&gt; Copy Chart Image</h3>
+    <div class="member-link">[<a href="#Copy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Copies an image of the active chart to the system clipboard. Once this is done, the image can be pasted into other programs on your computer system which will accept the bitmap image.</p>
+</section>
+
+<section class="h3">
+    <h3 id="CopyToChartBMP">Edit &gt;&gt; Copy to Chart.bmp</h3>
+    <div class="member-link">[<a href="#Copytochartbmp">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Copies the active chart window to a file named <b>chart.bmp</b> in the Sierra Chart data folder. After the copy is completed the file is opened up. It can be viewed, edited and stored in any file format using the Windows Paint program. If you wish to save the chart image using a different format instead of BMP or want to save it under a different filename, then select <b class="menu_item">File &gt;&gt; Save As</b> on the Paint menu. Click on the Files of Type list box and choose the format you wish to save the image as.</p>
+
+    <p>When sending charts by email, the best format is PNG since there is no loss of data and the data is compressed. Windows XP Paint supports PNG.  To send the file by email, locate the the file chart.png (or whatever name you saved it as) in the Sierra Chart data folder, and attach it to your email.</p>
+</section>
+
+<section class="h3">
+    <h3 id="CopyChartValues">Edit &gt;&gt; Copy Chart Values</h3>
+    <div class="member-link">[<a href="#CopyChartValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Copies all of the text in the <b>Current Quote</b>, <b>Chart Values for Last Displayed Column</b>, and <b>Chart Values for Tools</b> windows to the system clipboard.  Each of these windows can be opened from the <b class = "menu_item">Window</b> menu.</p>
+</section>
+
+<section class="h3">
+    <h3 id="ScreenImages">Edit &gt;&gt; Screen Images</h3>
+    <div class="member-link">[<a href="#ScreenImages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Refer to the <a href="indexf34e.html?page=doc/Image_to_Server.html">Sierra Chart Image Upload Service</a> page for documentation for all of the Image commands.</p>
+</section>
+
+<section class="h3">
+    <h3 id="EditData_HistoricalChart">Edit &gt;&gt; Edit Data - Historical Chart</h3>
+    <div class="member-link">[<a href="#EditData_HistoricalChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command opens the editor for Historical Daily chart data. The actual editor which will be used is specified through <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Daily Data Editor</b>. With this command you can make changes to the Historical Daily chart data. When you are done with your changes, be sure to save the file and close the editor. When you close the editor the chart will be reloaded and you will see your changes.</p>
+
+    <p>When editing a Historical Daily data file, use a fixed width font  so all the lines will be evenly spaced. The data will be much easier to read. Make sure to save the data in a text format.</p>
+</section>
+
+<section class="h3">
+    <h3 id="DownloadData_HistoricalChart">Edit &gt;&gt; Download Data - Historical Chart</h3>
+    <div class="member-link">[<a href="#DownloadData_HistoricalChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command will display the window to download Historical Daily data for the symbol of the active chart.  This window lets you select a starting Date for the historical Daily data to download.</p>
+</section>
+
+<section class="h3">
+    <h3 id="EditDataIntraday">Edit &gt;&gt; Edit/Download Data - Intraday Chart</h3>
+    <div class="member-link">[<a href="#EditDataIntraday">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command opens the Intraday data editor where you can edit the data, and delete and re-download the data. For more information, refer to the <a href="index7b4b.html?page=doc/IntradayDataEditor.html">Intraday Data Editor</a> page.</p>
+</section>
+
+<section class="h3">
+    <h3 id="DeleteAllDataDownload">Edit &gt;&gt; Delete All Data And Download</h3>
+    <div class="member-link">[<a href="#DeleteAllDataDownload">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command applies to both Historical charts and to Intraday charts.</p>
+
+    <p>In the case of Historical charts, this command will re-download all available data for the symbol of the chart and reload the chart when that is done. </p>
+
+    <p>In the case of Intraday charts, this command will delete all data in the Intraday chart data file   and re-download the data from the remote server going back in time by the <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b>&gt;&gt; Maximum Historical Intraday Days to Download</b> settings,  if the data is available.</p>
+
+    <p>In the case of Continuous Futures Contract charts, you will be given a prompt to select the particular contracts for which you want to delete and download data. Select the specific contract months to delete and download data, or use the buttons for <b>Select All</b> or <b>Deselect All</b>. Select <b>OK</b> to delete and download the selected contract data. Select <b>Cancel</b> to not delete and download any new data. Selecting the option <b>Download for Daily Data Files Only</b> will replace only the daily files and not in the intraday files for the selected contracts.</p>
+
+    <p>When historical Intraday data for expired futures contracts for a Continuous  Futures Contract chart is downloaded, the <b>Maximum Historical Intraday Days to Download</b> setting is overridden and the necessary amount of data will be downloaded instead.</p>
+</section>
+
+<section class="h3">
+    <h3 id="AdjustData">Edit &gt;&gt; Adjust Data</h3>
+    <div class="member-link">[<a href="#AdjustData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Refer to the <a href="indexaed4.html?page=doc/AdjustingData.html">Adjusting Data</a> documentation page for complete instructions.</p>
+</section>
+
+<section class="h3">
+    <h3 id="ExportIntradayDataToFile">Edit &gt;&gt; Export Intraday Data to Text file</h3>
+    <div class="member-link">[<a href="#ExportIntradayDataToFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Refer to the <a href="index0cb7.html?page=doc/ImportExport.html#ExportData">Export and Edit Intraday Data</a> documentation for complete instructions. </p>
+</section>
+
+<section class="h3">
+    <h3 id="ExportandEditIntradayData">Edit &gt;&gt; Export and Edit Intraday Data</h3>
+    <div class="member-link">[<a href="#ExportandEditIntradayData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Refer to the <a href="index0cb7.html?page=doc/ImportExport.html#ExportData">Export and Edit Intraday Data</a> documentation for complete instructions. </p>
+</section>
+
+<section class="h3" >
+    <h3 id="ImportAndLoad">Edit &gt;&gt; Import and Load Intraday Data</h3>
+    <div class="member-link">[<a href="#ImportAndLoad">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Refer to the <a href="index0cb7.html?page=doc/ImportExport.html#ImportLoadIntradayData">Import and Load Intraday Data</a> documentation for complete instructions.</p>
+</section>
+
+<section class="h3">
+    <h3 id="ExportBarDataToTextFile">Edit &gt;&gt; Export Bar Data to Text File</h3>
+    <div class="member-link">[<a href="#ExportBarDataToTextFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Export Bar Data to Text File </b> command will export the data of the loaded  chart bars to a text file. Each  record/line in the text file will represent one bar of data. The fields are Date, Time, Open, High, Low, Volume, Number of Trades,  Bid Volume, Ask Volume. </p>
+
+    <p> The file will only contain records for the chart bars loaded into the chart. Through the <a href="index4cf4.html?page=doc/ChartSettings.html#DaysToLoad" >Chart &gt;&gt; Chart Settings &gt;&gt; Use Number of Days to Load  / Use Date Range</a> settings, you are able to control what bars are loaded in the chart and what will be exported. </p>
+    
+    <p> In the case of an Intraday chart, set the chart  <a href = "index4ec1.html?page=doc/SessionTimes.php">Session Times</a> as you require  so you are only exporting the time ranges that you want. </p>
+
+    <p>When selecting this command, you will be prompted for the File Name to save the file to. The folder can also be changed if necessary. After entering the File Name, press the <b>Save</b> button. </p>
+
+    <p>When the export is complete, the exported data file will be opened in the text editor specified with  <b Class = "menu_item">Global Settings &gt;&gt; General Settings</b> <b>&gt;&gt; Daily Data Editor</b>. </p>
+    
+    <section class="h3">
+        <h3 id="FileDataFields">File Data Fields</h3>
+        <div class="member-link">[<a href="#FileDataFields">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>  The following are the fields for  Daily data charts:</p>
+        <ul>
+            <li><b>Date</b>: The Date of the bar.</li>
+            <li><b>Time</b>: Always 00:00:00.</li>
+            <li><b>Open</b>: The Open of the bar.</li>
+            <li><b>High</b>: The High of the bar.</li>
+            <li><b>Low</b>: The Low of the bar.</li>
+            <li><b>Last</b>: The Last trade price of the bar.</li>
+            <li><b>Volume</b>: The Volume of the bar.</li>
+            <li><b>OpenInterest</b>:  This field is only available for futures contracts. Otherwise this will be 0.</li>
+        </ul>
+        <p>  The following are the fields for  Intraday charts:</p>
+        <ul>
+            <li><b>Date</b>: In the Time Zone of the Chart.</li>
+            <li><b>Time</b>: In the Time Zone of the Chart.</li>
+            <li><b>Open</b>:</li>
+            <li><b>High</b>:</li>
+            <li><b>Low</b>:</li>
+            <li><b>Last</b>:</li>
+            <li><b>Volume</b>:</li>
+            <li><b>NumberOfTrades</b>:</li>
+            <li><b>BidVolume</b>:</li>
+            <li><b>AskVolume</b>:</li>
+        </ul>
+        
+    </section>    
+
+    <section class="h3">
+        <h3 id="ExportBarDataToSpreadsheet">Procedure to Export Bar Data for Use in Spreadsheet Programs</h3>
+        <div class="member-link">[<a href="#ExportBarDataToSpreadsheet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to export the chart bar data in a chart for use in spreadsheet programs.</p>
+
+        <ol>
+            <li> Open a Historical Daily or Intraday chart through  <b Class = "menu_item">File &gt;&gt; Find Symbol &gt;&gt; Open Historical Chart / Open Intraday Chart</b>.</li>
+
+            <li>Select <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b>.</li>
+
+
+            <li>Adjust the <b>Use Number of Days to Load &gt;&gt; Days to Load </b> setting to the number of days of data that you want to export to a file.</li>
+
+
+            <li> In the <b>Intraday Chart Bar Period</b>, <b> Historical Chart Bar Period </b>, and <b>  Session Times</b> frames, set the settings which affect the chart bars to what you require for the exported data.</li>
+
+            <li> If you want to have a larger amount of historical data exported for futures contract charts, then you need to enable the <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" target="_blank" rel="noopener noreferrer">Continuous Futures Contract</a> feature for the chart. </li>
+
+            <li> Press <b>OK</b>. </li>
+
+            <li>The timestamps in the exported data file are according  to the global Time Zone setting or the chart specific time zone setting. If you want to change this, refer to the  <a Href="index219e.html?page=doc/TimeZone.html"  target="_blank" rel="noopener noreferrer">Time Zone</a> documentation.</li>
+
+            <li>Select <b Class = "menu_item">Edit &gt;&gt; Export Bar Data to Text File</b>. </li>
+
+            <li>In the  <b>FileName</b> box on the <b>Export Bar Data</b> window, confirm that the file name that you want to save the data as is correct. Make any necessary changes. The file extension is always <em>TXT</em>. You can later change it through your operating system file manager program as necessary.</li> 
+
+            <li>Press the <b>Save</b> button to start the export operation. Press the  <b>Cancel</b> button to not continue.</li>
+
+            <li>The exported data will open up in the text editor specified through <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Daily Data Editor</b>.</li>
+
+            <li> The exported file will be located in the Data Files Folder specified through <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Data Files Folder</b>. </li>
+        </ol>
+
+        <div style="text-align: center;"><a href="../images/exportbardatatotextwindow.png" rel="lightbox"><img src="../images/exportbardatatotextwindow.png" alt="" class="screenshot" loading="lazy" width="420"></a></div>
+    </section>
+
+</section>
+
+<section class="h3">
+    <h3 id="ExportBarStudyDataToTextFile">Edit &gt;&gt; Export Bar and Study Data to Text File</h3>
+    <div class="member-link">[<a href="#ExportBarStudyDataToTextFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Export Bar and Study Data to Text File </b> command will export the main price graph and study data for all of the loaded bars in the chart, to a text file. Each  record/line in the text file will represent one  column of data in the chart. The header line in the file describes each column. </p>
+
+    <p> The file will only contain records for the chart bars loaded into the chart. Through the <a href="index4cf4.html?page=doc/ChartSettings.html#DaysToLoad" >Chart &gt;&gt; Chart Settings &gt;&gt; Use Number of Days to Load  / Use Date Range</a> settings, you are able to control what bars are loaded in the chart and what will be exported. </p>
+
+    <p>When selecting this command, you will be prompted for the File Name to save the file to. The folder can also be changed if necessary. After entering the File Name, press the <b>Save</b> button. The export will be performed on a separate thread.</p>
+
+    <p>When the export is complete, the exported data file will be opened in the text editor specified with  <b Class = "menu_item">Global Settings &gt;&gt; General Settings</b> <b>&gt;&gt; Daily Data Editor</b>. </p>
+
+    <p> The time zone of the Date and Times exported will be in the charts <a href="index219e.html?page=doc/TimeZone.html">Time Zone</a>. It will not be in UTC/GMT. </p>
+
+    <p>  The header line   at the top of  the text file contains the name of each Study Subgraph  exported to the file.    To change those names, modify the  <a href="index9099.html?page=doc/ChartStudies.html#ShortName">Short Name</a> for the Study Subgraph in the Study Settings window for the study. </p>
+
+    <p>  All named study  Study Subgraphs within the study are exported.  However, effective with version 1616, if the  <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle">Draw Style</a> is set to   <b>Ignore</b> or <b>Hidden</b>  that Subgraph will not be exported.  If the entire study is hidden, it will not be exported.</p>
+
+    <p>The value format (number of decimal places) of the  Study Subgraph values exported in the file depend upon the <a href="index9099.html?page=doc/ChartStudies.html#ValueFormat">Value Format</a> setting of the study that they belong to. If you want more precision, then adjust the  <a href="index9099.html?page=doc/ChartStudies.html#ValueFormat">Value Format</a> of the study you want more precision for and perform the export again.</p> 
+
+    <p>  The value format (number of decimal places) of the main price graph values depends upon the  <a href="index4cf4.html?page=doc/ChartSettings.html#PriceDisplayFormat">Price Display Format</a> setting for the chart. </p>
+    
+    <p> There is also a study which will write chart bar and study data to a file continuously as the chart updates. Refer to <a href = "indexb64a.html?page=doc/StudiesReference.php&amp;ID=379&amp;Name=Write_Bar_and_Study_Data_To_File">Write Bar and Study Data to File</a>. </p>
+</section>
+
+<section class="h3">
+    <h3  id="DownloadDataForAllHistoricalCharts">Edit &gt;&gt; Download Data For All Historical Charts</h3>
+    <div class="member-link">[<a href="#DownloadDataForAllHistoricalCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command will download Historical Daily chart data from the connected Data or Trading service, for all open Historical charts.</p>
+</section>
+
+<section class="h3">
+    <h3  id="DownloadDailyDataForAssociatedWatchListSymbols">Edit &gt;&gt; Download Data for Associated Watch List Symbols</h3>
+    <div class="member-link">[<a href="#DownloadDailyDataForAssociatedWatchListSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command will download Historical Daily or Intraday  chart data, depending upon the  <a href = "index4cf4.html?page=doc/ChartSettings.html#ChartDataType">Chart  Data Type</a> of the chart, for all of the symbols in the <a href = "indexa1a5.html?page=doc/SwitchingSymbols.html#AssociatedSymbolList">Associated Watch List</a> of the active chart.</p>
+    
+    <p>This command only updates the Daily or Intraday data files  from the last  Date-Time in the file to the present. Or downloads all available data if the data file is empty or not present.</p>
+
+    <p> Intraday data will only be downloaded for a particular symbol, if real-time data is not currently being received for the symbol.</p>
+    
+    <p>  The progress of the historical data downloading is displayed in the  <b class="menu_item">Window &gt;&gt;  <a href = "index84bb.html?page=doc/MessageLog.html">Message Log</a></b>.   Therefore, you can tell when it is complete and all of the symbols are up-to-date. For example, before you start a  <a href = "index9fef.html?page=doc/StudyChartAlertsAndScanning.php#ScanningForAlertConditionAcrossMultipleSymbols">scan for an alert condition</a>. </p>
+</section>
+
+<section class="h3">
+    <h3 id="DownloadDataFromEndOfChart">Edit &gt;&gt; Download Data from End of Chart</h3>
+    <div class="member-link">[<a href="#DownloadDataFromEndOfChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command will download Historical data starting at the Date-Time of the last bar in the chart. </p>
+
+    <p>This is normally used with Intraday charts  for symbols that do not provide real-time data. This command will update the chart to the most recent available data. This data is usually going to be delayed  in this case.</p>
+    
+     <p> If the chart is a  <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html">Continuous Futures Contract chart</a>, then   effective with version 2334 and higher, this command   will also update the historical Daily data  for the current contract month and the prior contract month in the chart  if the chart requires this data  for continuous futures contract chart construction.</p>
+</section>
+
+
+<section class="h3">
+    <h3 id="DownloadDailyDataForAllSymbols">Edit &gt;&gt; Download Daily Data for All Symbols</h3>
+    <div class="member-link">[<a href="#DownloadDailyDataForAllSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p></p>
+</section>
+
+<section class="h3">
+    <h3 id="CancelDailyDataDownloads">Edit &gt;&gt; Cancel Daily Data Downloads</h3>
+    <div class="member-link">[<a href="#CancelDailyDataDownloads">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command cancels  the current and all outstanding historical   <em>Daily</em>  price data downloads.</p>
+</section>
+
+<section class="h3">
+    <h3 id="CancelIntradayDataDownloads">Edit &gt;&gt; Cancel Intraday Data Downloads</h3>
+    <div class="member-link">[<a href="#CancelIntradayDataDownloads">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command cancels  the current and all outstanding historical  <em>Intraday</em>  price data downloads.</p>
+</section>
+
+<section class="h3">
+    <h3 id="CancelAllDownloads">Edit &gt;&gt; Cancel All Downloads</h3>
+    <div class="member-link">[<a href="#CancelAllDownloads">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command cancels  the current and all outstanding historical <em>Daily  and Intraday</em>  price data downloads.</p>
+</section>
+
+<section class="h3">
+    <h3 id="BulkIntradayDataDownload">Edit &gt;&gt; Bulk Intraday Data Download</h3>
+    <div class="member-link">[<a href="#BulkIntradayDataDownload">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> This command is only for internal use.</p>
+
+    <p> It is intended to download historical Intraday data for a large number of  Intraday data files at once.</p>
+</section>
+
+<section class="h3">
+    <h3 id="CancelHistoricalChart">Edit &gt;&gt; Cancel Historical Chart Downloads</h3>
+    <div class="member-link">[<a href="#CancelHistoricalChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This command will cancel any current and pending Historical Daily data download requests.</p>
+</section>
+
+<section class="h3">
+    <h3 id="RedoChartDrawing">Edit &gt;&gt; Redo Chart Drawing</h3>
+    <div class="member-link">[<a href="#RedoChartDrawing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> For documentation for the  <b>Redo Chart Drawing</b> command, refer to  <a href="indexb844.html?page=doc/Tools.html#UndoingRedoing">Undoing and Redoing Chart Drawing Operations</a>.</p>
+</section>
+
+<section class="h3">
+    <h3 id="UndoChartDrawing">Edit &gt;&gt; Undo Chart Drawing</h3>
+    <div class="member-link">[<a href="#UndoChartDrawing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For documentation for the <b>Undo Chart Drawing</b> command, refer to  <a href="indexb844.html?page=doc/Tools.html#UndoingRedoing">Undoing and Redoing Chart Drawing Operations</a>.</p>
+</section>
+
+<section class="h3">
+    <h3 id="DisableAllAlerts-Chart">Edit &gt;&gt; Disable All Alerts - Chart</h3>
+    <div class="member-link">[<a href="#DisableAllAlerts-Chart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Enable   <b>Disable All Alerts - Chart</b>  to disable   <a href = "index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Chart and Study Alerts</a>  for the chart.  This command enables and disables alerts for the active selected chart.</p>
+</section>
+
+<section class="h3">
+    <h3 id="DisableAllAlerts-Chartbook">Edit &gt;&gt; Disable All Alerts - Chartbook</h3>
+    <div class="member-link">[<a href="#DisableAllAlerts-Chartbook">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Enable   <b>Disable All Alerts - Chartbook</b>  to disable   <a href = "index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Chart and Study Alerts</a>  for the   <a href = "index7674.html?page=doc/Chartbooks.html">Chartbook</a>.  This command enables and disables alerts for the active selected  Chartbook.</p>
+</section>
+
+<section class="h3">
+    <h3 id="ReloadHistoricalCharts">Edit &gt;&gt; Reload Historical Charts</h3>
+    <div class="member-link">[<a href="#ReloadHistoricalCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Reloads the chart data from the local drive for each  Historical (Daily,  Weekly, Monthly, Quarterly, Yearly) chart opened. This does not cause any request of data from the remote data server.</p>
+
+</section>
+
+<section class="h3">
+    <h3 id="ReloadIntradayCharts">Edit &gt;&gt; Reload Intraday Charts</h3>
+    <div class="member-link">[<a href="#ReloadIntradayCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Reloads the chart data from the local drive for each  Intraday chart opened. This does not cause any request of data from the remote data server.</p>
+
+</section>
+<section class="h3">
+    <h3 id="ReloadAllCharts">Edit &gt;&gt; Reload All Charts</h3>
+    <div class="member-link">[<a href="#ReloadAllCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Reloads the chart data from the local drive for each chart opened  among  all Chartbooks. This does not cause any request of data from the remote data server.</p>
+
+</section>
+
+<section class="h3">
+    <h3 id="RecalculateAllCharts">Edit &gt;&gt; Recalculate All Charts</h3>
+    <div class="member-link">[<a href="#RecalculateAllCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  <b>Recalculate All Charts</b> performs a recalculation of the studies in all open charts in all open Chartbooks.</p>
+</section>
+
+<section class="h3">
+    <h3 id="JoinIntradayData">Edit &gt;&gt; Join Intraday Data</h3>
+    <div class="member-link">[<a href="#JoinIntradayData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> This command is for joining intraday data files together. These files have a scid file extension. For complete instructions, refer to the <a href="indexc084.html?page=doc/JoinIntradayData.php">Join Intraday Data</a> page.</p>
+</section>
+
+<section class="h3">
+    <h3 id="TranslateSymbolsToCurrentService">Edit &gt;&gt; Translate Symbols To Current Service</h3>
+    <div class="member-link">[<a href="#TranslateSymbolsToCurrentService">Link</a>] - [<a href="#top">Top</a>]</div>
+   
+    <p>  This command automatically  translates the futures symbols in the open charts, the Associated Watch List in each chart if it has any symbols, Quote Boards, Symbol Alerts,  and the Intraday File Update list, which are formatted for a different  Data/Trading service to the format required  for the currently selected Data/Trading service Sierra Chart is set to.  </p>
+    
+    <p>This only works for futures contract symbols and the most common futures contract symbols.  It may not work with all supported Data or Trading services.</p>
+    
+     <p> When using this command, there is a disconnection from the data feed and an automatic reconnection after the symbols are translated. </p>
+     
+     <p>All of the Chartbooks you want to translate the symbols  in <em>must be open</em> at the time before using this command. This is essential.</p>
+    
+    <p> After selecting this command, select  <b class="menu_item">File &gt;&gt; Save</b> to save the Chartbook. </p>
+    
+    <p> Once the symbols are translated and there is a connection to the data  feed which happens automatically (<b class="menu_item">File &gt;&gt; Connect to Data Feed</b>) and historical data is being downloaded,  to minimize CPU usage caused by studies on the charts, it is best to close your open Chartbooks with  <b class="menu_item">File &gt;&gt; Close  All  Chartbooks</b>   until the historical data downloading is complete  if there is a substantial amount of historical data to download.</p>
+    
+    <p> When you no longer see messages  being displayed after about 10 minutes  in the  <b class="menu_item">Window &gt;&gt; Message Log</b>, then the historical data should be complete and then you can open your Chartbooks. </p>
+   
+   <p> Not all symbols will have translation patterns set up for them which is necessary for the translation. In this case you need to manually change a symbol through <b class="menu_item">Chart  &gt;&gt; Chart Settings  &gt;&gt; Symbol &gt;&gt; Symbol</b>. </p>
+
+    <p> The <b>Translate Symbols to Current Service</b> feature is for convenience only.  It cannot work under all circumstances.  You should not be switching services frequently in Sierra Chart. However, instead install multiple installations of Sierra Chart,  one for each service you want to use. Refer to   <a href = "index6ebd.html?page=doc/MultipleServices.html">Using Multiple Data and Trading</a> services. </p>
+ 
+ 
+</section>
+
+
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/EditMenu.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:46 GMT -->
+</html>  

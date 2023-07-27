@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_VariablesDataTypes.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1546897603') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/cpp_VariablesDataTypes.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title> Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index7b37.html?page=doc/cpp_VariablesDataTypes.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a></h4> </div>     <h1 class="PageName">C++ Variables and Data Types</h1>
+
+<div class="h2">
+
+    <h2>Related Documentation Pages</h2>
+    <ul>
+        <li>C++ Variables and Data Types</li>
+        <li><a href="indexfcfe.html?page=doc/cpp_Constants.php">C++ Constants</a></li>
+        <li><a href="index2b23.html?page=doc/cpp_Operators.php">C++ Operators</a></li>
+        <li><a href="indexfe09.html?page=doc/cpp_ControlStructures.php">C++ Control Structures</a></li>
+        <li><a href="index72d7.html?page=doc/cpp_Functions.php">C++ Functions</a></li>
+    </ul>
+
+</div>
+<hr>
+
+
+<div class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Identifiers">Identifiers</a></li>
+        <li><a href="#FundamentalDataTypes">Fundamental Data Types</a></li>
+        <li><a href="#DeclarationofVariables">Declaration of Variables</a></li>
+        <li><a href="#ScopeOfVariables">Scope of Variables</a></li>
+        <li><a href="#InitializationOfvariables">Initialization Of Variables</a></li>
+        <li><a href="#IntroductionToStrings">Introduction to Strings</a></li>
+    </ul>
+</div>
+<hr>
+
+<br>
+<div style="text-align:right;">Published by <b>Juan Soulie</b></div>
+<br>
+
+
+<div class="h2">
+
+    <p>The usefulness of the <em>"Hello World"</em> programs shown in the previous section is quite questionable. We had to write several lines of code, compile them, and then execute the resulting program just to obtain a simple sentence written on the screen as result. It certainly would have been much faster to type the output sentence by ourselves. However, programming is not limited only to printing simple texts on the screen. In order to go a little further on and to become able to write programs that perform useful tasks that really save us work we need to introduce the concept of <em>variable</em>.</p>
+
+    <p>Let us think that I ask you to retain the number 5 in your mental memory, and then I ask you to memorize also the number 2 at the same time. You have just stored two different values in your memory. Now, if I ask you to add 1 to the first number I said, you should be retaining the numbers 6 (that is 5+1) and 2 in your memory. Values that we could now for example subtract and obtain 4 as result.</p>
+
+    <p>The whole process that you have just done with your mental memory is a simile of what a computer can do with two variables. The same process can be expressed in C++ with the following instruction set:</p>
+
+    <pre class="Code FullLineHeight">
+a = 5;
+b = 2;
+a = a + 1;
+result = a - b;
+    </pre>
+
+    <p>Obviously, this is a very simple example since we have only used two small integer values, but consider that your computer can store millions of numbers like these at the same time and conduct sophisticated mathematical operations with them.</p>
+
+    <p>Therefore, we can define a <b>variable</b> as a portion of memory to store a determined value.</p>
+
+    <p>Each variable needs an identifier that distinguishes it from the others. For example, in the previous code the <em>variable identifiers</em> were <b>a</b>, <b>b</b> and <b>result</b>, but we could have called the variables any names we wanted to invent, as long as they were valid identifiers.</p>
+
+    <div class="h3">
+        <h3 id="Identifiers">Identifiers</h3>
+        <div class="member-link">[<a href="#Identifiers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A <b>valid identifier</b> is a sequence of one or more letters, digits or underscore characters (<b>_</b>). Neither spaces nor punctuation marks or symbols can be part of an identifier. Only letters, digits and single underscore characters are valid. In addition, variable identifiers always have to begin with a letter. They can also begin with an underline character (<b>_</b> ), but in some cases these may be reserved for compiler specific keywords or external identifiers, as well as identifiers containing two successive underscore characters anywhere. In no case they can begin with a digit.</p>
+
+        <p>Another rule that you have to consider when inventing your own identifiers is that they cannot match any keyword of the C++ language nor your compiler's specific ones, which are <em>reserved keywords</em>. The standard reserved keywords are:</p>
+
+        <p><b>asm, auto, bool, break, case, catch, char, class, const, const_cast, continue, default, delete, do, double, dynamic_cast, else, enum, explicit, export, extern, false, float, for, friend, goto, if, inline, int, long, mutable, namespace, new, operator, private, protected, public, register, reinterpret_cast, return, short, signed, sizeof, static, static_cast, struct, switch, template, this, throw, true, try, typedef, typeid, typename, union, unsigned, using, virtual, void, volatile, wchar_t, while</b></p>
+
+        <p>Additionally, alternative representations for some operators cannot be used as identifiers since they are reserved words under some circumstances:</p>
+
+        <p><b>and, and_eq, bitand, bitor, compl, not, not_eq, or, or_eq, xor, xor_eq</b></p>
+
+        <p>Your compiler may also include some additional specific reserved keywords.</p>
+
+        <p><b>Very important:</b> The C++ language is a <em>"case sensitive"</em> language. That means that an identifier written in capital letters is not equivalent to another one with the same name but written in small letters. Thus, for example, the <b>RESULT</b> variable is not the same as the <b>result</b> variable or the <b>Result</b> variable. These are three different variable identifiers.</p>
+
+
+    </div>
+
+    <div class="h3">
+        <h3 id="FundamentalDataTypes">Fundamental Data Types</h3>
+        <div class="member-link">[<a href="#FundamentalDataTypes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When programming, we store the variables in our computer's memory, but the computer has to know what kind of data we want to store in them, since it is not going to occupy the same amount of memory to store a simple number than to store a single letter or a large number, and they are not going to be interpreted the same way.</p>
+
+        <p>The memory in our computers is organized in bytes. A byte is the minimum amount of memory that we can manage in C++. A byte can store a relatively small amount of data: one single character or a small integer (generally an integer between 0 and 255). In addition, the computer can manipulate more complex data types that come from grouping several bytes, such as long numbers or non-integer numbers.</p>
+
+        <p>Next you have a summary of the basic fundamental data types in C++, as well as the range of values that can be represented with each one:</p>
+
+
+        <table class="doc">
+            <tr><th>Name</th><th>Description</th><th>Size*</th><th>Range*</th></tr>
+
+            <tr><td><b>char</b></td>
+                <td>Character or small integer.</td>
+                <td>1byte</td>
+                <td>signed: -128 to 127<br>
+                    unsigned: 0 to 255</td></tr>
+            <tr><td><b>short int</b><br>
+                    (<b>short</b>)</td>
+
+                <td>Short Integer.</td>
+                <td>2bytes</td>
+                <td>signed: -32768 to 32767<br>
+                    unsigned: 0 to 65535</td></tr>
+            <tr><td><b>int</b></td>
+                <td>Integer.</td>
+
+                <td>4bytes</td>
+                <td>signed: -2147483648 to 2147483647<br>
+                    unsigned: 0 to 4294967295</td></tr>
+            <tr><td><b>long int</b><br>
+                    (<b>long</b>)</td>
+                <td>Long integer.</td>
+
+                <td>4bytes</td>
+                <td>signed: -2147483648 to 2147483647<br>
+                    unsigned: 0 to 4294967295</td></tr>
+            <tr><td><b>bool</b></td>
+                <td>Boolean value. It can take one of two values: true or false.</td>
+                <td>1byte</td>
+
+                <td><b>true</b> or <b>false</b></td></tr>
+            <tr><td><b>float</b></td>
+                <td>Floating point number.</td>
+                <td>4bytes</td>
+                <td>+/- 3.4e +/- 38 (~7 digits)</td></tr>
+
+            <tr><td><b>double</b></td>
+                <td>Double precision floating point number.</td>
+                <td>8bytes</td>
+                <td>+/- 1.7e +/- 308 (~15 digits)</td></tr>
+            <tr><td><b>long double</b></td>
+                <td>Long double precision floating point number.</td>
+                <td>8bytes</td>
+
+                <td>+/- 1.7e +/- 308 (~15 digits)</td></tr>
+            <tr><td><b>wchar_t</b></td>
+                <td>Wide character.</td>
+                <td>2 <i>or</i> 4 bytes</td>
+                <td>1 wide character</td></tr>
+
+        </table>
+
+        <p>* The values of the columns <em>Size</em> and <em>Range</em> depend on the system the program is compiled for. The values shown above are those found on most 32-bit systems. But for other systems, the general specification is that <b>int</b> has the natural size suggested by the system architecture (one <em>"word"</em>) and the four integer types <b>char</b>, <b>short</b>, <b>int</b> and <b>long</b> must each one be at least as large as the one preceding it, with <b>char</b> being always one byte in size. The same applies to the floating point types <b>float</b>, <b>double</b> and <b>long double</b>, where each one must provide at least as much precision as the preceding one.</p>
+
+
+    </div>
+
+    <div class="h3">
+        <h3 id="DeclarationofVariables">Declaration of Variables</h3>
+        <div class="member-link">[<a href="#DeclarationofVariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In order to use a variable in C++, we must first declare it specifying which data type we want it to be. The syntax to declare a new variable is to write the specifier of the desired data type (like int, bool, float...) followed by a valid variable identifier. For example:</p>
+
+        <pre class="Code FullLineHeight">
+int a;
+float mynumber;
+        </pre>
+
+        <p>These are two valid declarations of variables. The first one declares a variable of type <b>int</b> with the identifier <b>a</b>. The second one declares a variable of type <b>float</b> with the identifier <b>mynumber</b>. Once declared, the variables <b>a</b> and <b>mynumber</b> can be used within the rest of their scope in the program.</p>
+
+        <p>If you are going to declare more than one variable of the same type, you can declare all of them in a single statement by separating their identifiers with commas. For example:</p>
+
+        <pre class="Code FullLineHeight">
+int a, b, c;
+        </pre>
+
+        <p>This declares three variables (<b>a</b>, <b>b</b> and <b>c</b>), all of them of type <b>int</b>, and has exactly the same meaning as:</p>
+
+        <pre class="Code FullLineHeight">
+int a;
+int b;
+int c;
+        </pre>
+
+        <p>The integer data types <b>char</b>, <b>short</b>, <b>long</b> and <b>int</b> can be either signed or unsigned depending on the range of numbers needed to be represented. Signed types can represent both positive and negative values, whereas unsigned types can only represent positive values (and zero). This can be specified by using either the specifier <b>signed</b> or the specifier <b>unsigned</b> before the type name. For example:</p>
+
+        <pre class="Code FullLineHeight">
+unsigned short int NumberOfSisters;
+signed int MyAccountBalance;
+        </pre>
+
+        <p>By default, if we do not specify either <b>signed</b> or <b>unsigned</b> most compiler settings will assume the type to be signed, therefore instead of the second declaration above we could have written:</p>
+
+        <pre class="Code FullLineHeight">
+int MyAccountBalance;
+        </pre>
+
+        <p>with exactly the same meaning (with or without the keyword <b>signed</b>)</p>
+
+        <p>An exception to this general rule is the <b>char</b> type, which exists by itself and is considered a different fundamental data type from <b>signed char</b> and <b>unsigned char</b>, thought to store characters. You should use either <b>signed</b> or <b>unsigned</b> if you intend to store numerical values in a <b>char</b>-sized variable.</p>
+
+        <p><b>short</b> and <b>long</b> can be used alone as type specifiers. In this case, they refer to their respective integer fundamental types: <b>short</b> is equivalent to <b>short int</b> and <b>long</b> is equivalent to <b>long int</b>. The following two variable declarations are equivalent:</p>
+
+        <pre class="Code FullLineHeight">
+short Year;
+short int Year;
+        </pre>
+
+        <p>Finally, <b>signed</b> and <b>unsigned</b> may also be used as standalone type specifiers, meaning the same as <b>signed int</b> and <b>unsigned int</b> respectively. The following two declarations are equivalent:</p>
+
+        <pre class="Code FullLineHeight">
+unsigned NextYear;
+unsigned int NextYear;
+        </pre>
+
+        <p>To see what variable declarations look like in action within a program, we are going to see the C++ code of the example about your mental memory proposed at the beginning of this section:</p>
+
+        <pre class="Code FullLineHeight">
+// operating with variables
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+  // declaring variables:
+  int a, b;
+  int result;
+
+  // process:
+
+  a = 5;
+  b = 2;
+  a = a + 1;
+  result = a - b;
+
+  // print out the result:
+  cout &lt;&lt; result;
+
+  // terminate the program:
+  return 0;
+}
+
+/* Output
+4
+*/
+        </pre>
+
+        <p>Do not worry if something else than the variable declarations themselves looks a bit strange to you. You will see the rest in detail in coming sections.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="ScopeOfVariables">Scope of Variables</h3>
+        <div class="member-link">[<a href="#ScopeOfVariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>All the variables that we intend to use in a program must have been declared with its type specifier in an earlier point in the code, like we did in the previous code at the beginning of the body of the function main when we declared that <b>a</b>, <b>b</b>, and <b>result</b> were of type <b>int</b>.</p>
+
+        <p>A variable can be either of global or local scope. A global variable is a variable declared in the main body of the source code, outside all functions, while a local variable is one declared within the body of a function or a block.</p>
+
+        <p><img src="https://www.sierrachart.com/images/scope_of_variables.gif" alt=""></p>
+
+        <p>Global variables can be referred from anywhere in the code, even inside functions, whenever it is after its declaration.</p>
+
+        <p>The scope of local variables is limited to the block enclosed in braces (<b>{}</b>) where they are declared. For example, if they are declared at the beginning of the body of a function (like in function <b>main</b>) their scope is between its declaration point and the end of that function. In the example above, this means that if another function existed in addition to <b>main</b>, the local variables declared in <b>main</b> could not be accessed from the other function and vice versa.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="InitializationOfvariables">Initialization Of Variables</h3>
+        <div class="member-link">[<a href="#InitializationOfvariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When declaring a regular local variable, its value is by default undetermined. But you may want a variable to store a concrete value at the same moment that it is declared. In order to do that, you can initialize the variable. There are two ways to do this in C++:</p>
+
+        <p>The first one, known as <b>c-like initialization</b>, is done by appending an equal sign followed by the value to which the variable will be initialized:</p>
+
+        <pre class="Code FullLineHeight">
+type identifier = initial_value;
+        </pre>
+
+        <p>For example, if we want to declare an <b>int</b> variable called <b>a</b> initialized with a value of 0 at the moment in which it is declared, we could write:</p>
+
+        <pre class="Code FullLineHeight">
+int a = 0;
+        </pre>
+
+        <p>The other way to initialize variables, known as <b>constructor initialization</b>, is done by enclosing the initial value between parentheses (<b>()</b>):</p>
+
+        <p><b>type identifier (initial_value) ;</b></p>
+
+        <p>For example:</p>
+
+        <pre class="Code FullLineHeight">
+int a (0);
+        </pre>
+
+        <p>Both ways of initializing variables are valid and equivalent in C++.</p>
+        <pre class="Code FullLineHeight">
+// initialization of variables
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+  int a=5;               // initial value = 5
+
+  int b(2);              // initial value = 2
+  int result;            // initial value undetermined
+
+  a = a + 3;
+  result = a - b;
+  cout &lt;&lt; result;
+
+  return 0;
+}
+
+/* Output
+6
+*/
+        </pre>
+    </div>
+
+    <div class="h3">
+        <h3 id="IntroductionToStrings">Introduction to Strings</h3>
+        <div class="member-link">[<a href="#IntroductionToStrings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Variables that can store non-numerical values that are longer than one single character are known as strings.</p>
+
+        <p>The C++ language library provides support for strings through the standard <b>string</b> class. This is not a fundamental type, but it behaves in a similar way as fundamental types do in its most basic usage.</p>
+
+        <p>A first difference with fundamental data types is that in order to declare and use objects (variables) of this type we need to include an additional header file in our source code: <b>&lt;string&gt;</b> and have access to the <b>std</b> namespace (which we already had in all our previous programs thanks to the <b>using namespace</b> statement).</p>
+
+        <pre class="Code FullLineHeight">
+// my first string
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main ()
+{
+  string mystring = "This is a string";
+  cout &lt;&lt; mystring;
+  return 0;
+}
+
+/* Output
+This is a string
+*/
+        </pre>
+
+        <p>As you may see in the previous example, strings can be initialized with any valid string literal just like numerical type variables can be initialized to any valid numerical literal. Both initialization formats are valid with strings:</p>
+
+        <pre class="Code FullLineHeight">
+string mystring = "This is a string";
+string mystring ("This is a string");
+        </pre>
+
+        <p>Strings can also perform all the other basic operations that fundamental data types can, like being declared without an initial value and being assigned values during execution:</p>
+
+        <pre class="Code FullLineHeight">
+
+
+// my first string
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main ()
+{
+  string mystring;
+  mystring = "This is the initial string content";
+  cout &lt;&lt; mystring &lt;&lt; endl;
+  mystring = "This is a different string content";
+  cout &lt;&lt; mystring &lt;&lt; endl;
+  return 0;
+}
+
+/* Output 
+This is the initial string content
+This is a different string content
+*/
+        </pre>
+    </div>
+
+</div>
+
+<hr><p>*Last modified Monday, 07th January, 2019.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_VariablesDataTypes.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+</html>  

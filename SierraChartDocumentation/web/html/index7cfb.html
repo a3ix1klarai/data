@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeStatusWindows.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686341554') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/TradeStatusWindows.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Trading Information Windows -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index7cfb.html?page=doc/TradeStatusWindows.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index7cfb.html?page=doc/TradeStatusWindows.html">Trading Information Windows</a></h4> </div>     <h1 class="PageName">Trading Information Windows</h1>
+
+<ul>
+    <li><a href="#General">General Information</a></li>
+    <li><a href="#SortingReorderingColumns">Sorting Lines, Reordering Columns, Adjusting Column Widths</a></li>
+    <li><a href="#SettingColors">Setting Colors</a></li>
+    <li><a href="#TradeOrdersAndPositionsWindow">Trade Orders and Trade Positions Windows</a>
+        <ul>
+            <li><a href="#TradeOrders">Trade Orders Window</a>
+                <ul>
+                    <li><a href="#CancelingOrders" >Canceling Orders</a></li>
+                    <li><a href="#CancelingAllOrders" >Canceling All Orders</a></li>
+                    <li><a href="#ClearingOrders" >Clearing Orders</a>
+						<ul>
+							<li><a href="#SimulatedOrders" >Simulated Orders</a></li>
+							<li><a href="#NonSimulatedOrders" >Non-Simulated Orders</a></li>
+							<li><a href="#ViewingOpenOrdersOnly" >Viewing Open Orders Only</a></li>
+						</ul>
+					</li>
+                    <li><a href="#FilteringOrdersByTradeAccount" >Filtering Orders by Trade Account</a></li>
+                    <li><a href="#AutoClearingOrders" >Automatic Clearing of Orders</a></li>
+                    <li><a href="#RefreshingData" >Refreshing Order Data</a></li>
+                    <li><a href="#OrderFieldDescriptions" >Order Field Descriptions</a></li>
+                    <li><a href="#TradeOrders_FontAndColors" >Trade Orders  Window Font and Colors</a></li>
+                    <li><a href="#DeletingTradeOrdersFile" >Deleting Trade Orders File</a></li>
+                    <li><a href="#AutomaticCancellationOfNonExistentOrders" >Automatic Cancellation of Non-Existent Orders</a></li>
+                </ul>
+            </li>
+            <li><a href="#PositionsWindow">Trade Positions Window</a>
+                <ul>
+                    <li><a href="#TradePositionsOverview">Overview</a></li>
+                    <li><a href="#RefreshPositionsData">Refresh Positions Data</a></li>
+                    <li><a href="#FlattenTradePositions">Flatten Trade Positions</a></li>
+                    <li><a href="#PositionWindowFields">Positions Window Fields</a></li>
+                    <li><a href="#PositionQuantityAndAutomatedTrading">Position Quantity and Automated Trading</a></li>
+                    <li><a href="#SingleConsolidatedPositionMaintainedPerSymbolAndTradeAccount">Only Single Consolidated Position Maintained and Displayed per Symbol and Trade Account</a></li>
+                    <li><a href="#ClearingSimulatedPositionInSubInstance">Clearing Simulated Position in Sub Instance</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#SimulatedTradePositions">Simulated Trade Positions Quantities and Average Price</a></li>
+            <li><a href="#UsingOrderFillCalculatedPosition">Using Order Fill Calculated Positions In Special Cases</a></li>
+            <li><a href="#OrderFillCalculatedPosition">Using Order Fill Calculated Trade Positions</a>
+                <ul>
+                    <li><a href="#OrderFillCalculatedTradePositionNotAccurate">Order Fill Calculated Trade Position Not Accurate</a></li>
+                    <li><a href="#OrderFillCalcTradePosAveragePrice">Order Fill Calculated Trade Position Average Price</a></li>
+                </ul>
+            </li>
+            <li><a href="#AccountBalanceTab">Trade Account Monitor (Account Balances) Window</a>
+                <ul>
+                    <li><a href="#BalanceTabFieldDescriptions">Trade Account Monitor Field Descriptions</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#TradeServiceLog">Trade Service Log</a>
+		<ul>
+		    <li><a href="#InterpretingTradingServiceOrderRelatedMessages">Interpreting Trading Service Order Related Messages</a></li>
+		    <li><a href="#AutomaticOpeningOfTradeServiceLog">Automatic Opening of Trade Service Log</a></li>
+		</ul>
+	</li>
+    <li><a href="index509f.html?page=doc/TradeActivityLog.php" target="_blank" rel="noopener noreferrer">Trade Activity Log</a> (Opens a new page)</li>
+    
+    <li><a href="#TradeDataStudies">Trade Data Studies</a>
+        <ul>
+            <li><a href="#TradingPLText">Trading: Profit/Loss Text Study</a>
+				<ul>
+				    <li><a href="#ShowOpenProfitLoss">Show Open Profit/Loss</a></li>
+				    <li><a href="#ShowClosedProfitLoss">Show Closed Profit/Loss</a></li>
+				    <li><a href="#ShowDailyProfitLoss">Show Daily Profit/Loss</a></li>
+				    <li><a href="#NetPLCalculation">Include Open Profit/Loss in Daily Profit/Loss</a></li>
+				    <li><a href="#ShowTotalTrades">Show Total Trades</a></li>
+				    <li><a href="#ShowTotalQuantityFilled">Show Total Quantity Filled</a></li>
+				    <li><a href="#ShowDailyTotalTrades">Show Daily Total Trades</a></li>
+				    <li><a href="#ShowDailyTotalQuantityFilled">Show Daily Total Quantity Filled</a></li>
+				    <li><a href="#ShowMaximumOpenPositionProfit">Show Maximum Open Position Profit</a></li>
+				    <li><a href="#ShowMaximumOpenPositionLoss">Show Maximum Open Position Loss</a></li>
+				    <li><a href="#ShowFlatToFlatClosedProfitLoss">Show Flat to Flat Closed Profit Loss</a></li>
+				    <li><a href="#ShowCurrentTradeTimeDuration">Show Current Trade Time Duration</a></li>
+				</ul>
+			</li>
+            <li><a href="#TradeDataStudyDoesNotDisplayDataOrMisaligned">Trade Data Study Does Not Display Data or is Misaligned</a></li>
+        </ul>
+    </li>
+    <li><a href="#HowAveragePriceForPositionsIsCalculatedAndUsed">How Average Price for Positions Is Calculated and Used</a>
+        <ul>
+            <li><a href="#UseLastInFirstOutFillMatchingForOpenPositionAveragePrice">Use Last In First Out Fill Matching for Open Position Average Price</a></li>
+            <li><a href="#UseFirstInFirstOutFillMatchingForOpenPosition">Use First In First Out Fill Matching for Open Position Average Price</a></li>
+            <li><a href="#UseFlatToFlatOpenPositionAveragePrice">Use Flat to Flat Open Position Average Price</a></li>
+            <li><a href="#UseTheoreticalOpenPositionAveragePrice">Use Theoretical Open Position Average Price</a></li>
+            <li><a href="#OrderFillsStartDateTimeNeedsToBeSetCorrectly">Order Fills Start Date-Time Needs to Be Set Correctly</a></li>
+            <li><a href="#DeterminingFillsUsedInOpenPositionAveragePriceCalculation">Determining Fills Used in Open Position Average Price Calculation</a></li>
+            <li><a href="#OrderFillCalculatedAveragePriceFromPosition">Order Fill Calculated Average Price from Order Fill Calculated Position</a></li>
+            <li><a href="#TradeServiceProvidedAveragePrice">Trade Service Provided Average Price</a></li>
+            <li><a href="#PositionLineNotVisibleOrIncorrectAveragePrice">Position Line Not Visible or Incorrect Average Price</a></li>
+            <li><a href="#OpenPLCalculation">Open Profit/Loss Calculation</a></li>
+            <li><a href="#DeterminingWhetherFillCalculatedOrTradeServiceAveragePriceUsed">Determining Whether Order Fill Calculated or Trade Service Average Price is Being Used</a></li>
+        </ul>
+    </li>
+    <li><a href="#IncorrectlyReportedTradePositionQuantity">Incorrectly Reported Trade Position Quantity</a></li>
+    <li><a href="#ResettingIncorrectOrderFillCalculatedPosition">Resetting Incorrect Order Fill Calculated Position</a></li>
+    <li><a href="#ResettingPositionQuantityAndProfitLossAtStartOfTradingDay">Resetting Position Quantity and Profit/Loss at Start of Trading Day</a></li>
+</ul>
+
+<section class="h2">
+    <h2 id="General">General Information</h2>
+    <div class="member-link">[<a href="#General">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page documents the various Trading Information windows available in Sierra Chart,  the available Trading related studies, and various other related information.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SortingReorderingColumns">Sorting Lines, Reordering Columns, Adjusting Column Widths</h2>
+    <div class="member-link">[<a href="#SortingReorderingColumns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For the <b Class = "menu_item">Trade &gt;&gt; Trade Orders Window</b> and the <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b>, there is the ability to sort the lines of data, reorder the columns and adjust the column widths.   Refer to the image below.</p>
+
+    <p>On the tabs of the <b Class = "menu_item">Trade &gt;&gt; Trade Activity Log</b> window, there is the ability to reorder the columns and adjust the column widths only. </p>
+
+    <div style="text-align: center;">
+        <a href="../images/tradeinfowindowcolumns.png" rel="lightbox"><img width="550" src="../images/tradeinfowindowcolumns.png" alt="" class="screenshot" loading="lazy"></a>
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="SettingColors">Setting Colors</h2>
+    <div class="member-link">[<a href="#SettingColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The foreground and background colors of the content sections of the  <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b>, <b class="menu_item">Trade &gt;&gt; Account Balances Window</b>, and the  <b Class = "menu_item">Trade &gt;&gt; Trade Activity Log</b> can be customized with the following color settings in <b Class = "menu_item">Global Settings &gt;&gt; Graphics Settings</b>.</p>
+
+    <ul>
+        <li><b>General Text Window Background Color</b></li>
+        <li><b>General Text Window Foreground Color</b></li>
+    </ul>
+
+    <p>For instructions to set these, refer to <a href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a>.</p>
+
+    <p>In case of the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>  window, the colors of Open and Completed  order lines have separate color settings. Refer to <a href="#TradeOrders_FontAndColors" >Trade Orders  Window Font and Colors</a>.</p> 
+</section>
+
+<section class="h2">
+    <h2 id="TradeOrdersAndPositionsWindow">Trade Orders and Positions Windows</h2>
+    <div class="member-link">[<a href="#TradeOrdersAndPositionsWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section gives an overview of the <b>Trade Orders</b> and  <b>Trade Positions</b> windows.  </p>
+    
+     <p>These windows are floating windows that have their own scope, so they can be open at the same time as another attached window.   </p>
+    
+    <p>For example, one of these windows can be open and it is possible to select <b class="menu_item">Analysis &gt;&gt;  Studies</b> and have the Studies window open and interact with both windows.</p>
+
+    <section class="h3">
+        <h3 id="TradeOrders">Trade Orders Window</h3>
+        <div class="member-link">[<a href="#TradeOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/ordersandpositionswindow.png" rel="lightbox"><img src="../images/ordersandpositionswindow.png" alt="" class="WideFloatRight"></a>
+
+        <p>To view the Trade Orders window, select <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> on the menu.</p>
+        
+        
+        <p>The Trade Orders window can also be opened through the corresponding <a href = "index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Control Bar</a> button.  </p>
+
+
+        <p>This window lists all Open orders, both simulated orders and orders for the connected Trading service. Simulated orders are prefixed with <b>[SIM]</b> in front of the <b>Symbol</b>.</p>
+
+        <p>When the <b>Status</b> of an order changes from <b>Open</b> or <b>Order Sent</b> to Canceled, Filled or Error, it will still be listed on this tab, but it is not persistent and will be cleared when Sierra Chart is restarted. There is no guarantee that orders other than Open orders, will be listed on this tab. Do not put reliance on orders other than Open orders from being listed on this tab.</p>
+
+        <p>Left clicking with your Pointer on a column header will sort rows according to that column. When left clicking again on the column header, the sort order will change from ascending to descending or the other way around.</p>
+
+        <section class="h4">
+            <h4 id="CancelingOrders">Canceling Orders</h4>
+            <div class="member-link">[<a href="#CancelingOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ol>
+                <li>Select <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> on the menu.</li>
+
+                <li>Highlight the order you wish to cancel in the list of orders by left clicking on it with your mouse pointer.</li>
+
+                <li>To cancel multiple orders at the same time, hold the <b>Control</b> key on your keyboard and left click on each order to select them all.</li>
+
+                <li>If the orders you are canceling are non-simulated orders, then make certain there is no checkmark by <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> on the menu of the main Sierra Chart window.</li>
+
+                <li>Select the <b class="menu_item">Cancel</b> menu command on the Trade Orders window to cancel these orders.</li>
+
+                <li>You will receive a confirmation window. Press <b>Yes</b> to confirm. This confirmation window can be disabled with <b class="menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Display Confirmation for Order Cancellations from the 'Orders' Tab</b>.</li>
+
+                <li>To cancel all working orders in the list, select the <b>Cancel All</b> menu command.</li>
+            </ol>
+            
+    <div style="text-align: center;"><a href="../images/canceltradeorder.png" rel="lightbox"><img src="../images/canceltradeorder.png" alt="" class="screenshot" loading="lazy"></a></div>            
+        </section>
+        
+        <section class="h4">
+            <h4 id="CancelingAllOrders">Canceling All Orders</h4>
+            <div class="member-link">[<a href="#CancelingAllOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ol>
+                <li> If you want to cancel <em>non-simulated orders</em>, make sure there is no checkmark by <b class="menu_item">Trade &gt;&gt;  Trade Simulation Mode On</b> so that it is disabled.</li>
+                
+                <li>If you want to cancel <em>simulated</em> orders, make sure there is a checkmark by <b class="menu_item">Trade &gt;&gt;  Trade Simulation Mode On</b>  so that it is enabled.</li>
+
+                <li>Select <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> on the menu.</li>
+
+                <li>Press the <b>Cancel All</b> button on the Trade Orders window to cancel the open/working orders.</li>
+
+                <li>You will receive a confirmation window. Press <b>Yes</b> to confirm. This confirmation window can be disabled with <b class="menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Display Confirmation for Order Cancellations through the Trade Orders Window</b>.</li>
+            </ol>
+        </section>
+
+        <section class="h4">
+            <h4 id="ClearingOrders">Clearing Orders</h4>
+            <div class="member-link">[<a href="#ClearingOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <section class="h5">
+				<h5 id="SimulatedOrders">Simulated Orders</h5>
+				<div class="member-link">[<a href="#SimulatedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>To clear simulated open and completed orders from the <b>Orders</b> list, select <b class="menu_item">Trade &gt;&gt; Clear Trade Simulation Orders and Data</b> on the menu to clear them. This will cancel all <b>Open</b> Simulated orders and clear all of the Simulated orders listed. It will also clear simulated trading activity data in the <b>Trade Activity Log</b> as well.</p>
+            </section>
+
+            <section class="h5">
+				<h5 id="NonSimulatedOrders">Non-Simulated Orders</h5>
+				<div class="member-link">[<a href="#NonSimulatedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When you connect to the data and trade server, working and filled orders that the server still has for your account will be listed on the  <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>. They cannot be removed.</p>
+
+                <p>However, you can click on a column header, like the <b>Status</b> column, to sort the column and move the Open orders to the top of the list. Also, it is possible to view open orders only. See below for instructions.</p>
+            </section>
+
+            <section class="h5">
+				<h5 id="ViewingOpenOrdersOnly">Viewing Open Orders Only</h5>
+				<div class="member-link">[<a href="#ViewingOpenOrdersOnly">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>To view only orders with a Status of <b>Open</b>  and other working statuses, in the  <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>, select the <b class="menu_item">Orders &gt;&gt; Show Only Working Orders</b> menu item on this window.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="FilteringOrdersByTradeAccount">Filtering Orders by Trade Account</h4>
+            <div class="member-link">[<a href="#FilteringOrdersByTradeAccount">Link</a>] - [<a href="#top">Top</a>]</div>  
+
+         <p> The   <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> by default lists all orders for all Trading accounts available on the connection to the Trading server. For simulated orders,   all orders for all simulated trading accounts will be listed. </p>
+         
+          <p>  This list can be filtered to show orders for a single Trade Account. </p>
+          
+          <ol>
+          <li>On the Trade Orders Window, select <b class="menu_item">Edit &gt;&gt; Select Trade Account Filter</b>.   The Trade Account Filter Settings window will display. </li>
+         
+         <li>Left click on the <b>Available Trade Accounts</b> list   and select an account. Press the  <b>A</b> button to accept the selected account and set the Trade Account Filter.</li>
+          
+          <li>Set  <b>Simulated Filter</b> to Yes for simulated trade accounts. For non-simulated accounts this must be No.</li> 
+          
+          <li>Press  <b>OK</b>.</li> 
+          
+          <li>To clear the Trade Account filter, select <b class="menu_item">Edit &gt;&gt; Clear Trade Account Filter</b>. </li> 
+          
+          </ol>
+
+        </section>
+
+        <section class="h4">
+            <h4 id="AutoClearingOrders">Automatic Clearing of Orders</h4>
+            <div class="member-link">[<a href="#AutoClearingOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            
+            <p>Non-working orders from the Trade Orders list are automatically cleared after a period of time. This is done for performance reasons and is a feature in newer versions of Sierra Chart.</p>
+            
+            <p>To see these orders, the historical activity of the orders, and the order fills, refer to the <a href = "index509f.html?page=doc/TradeActivityLog.php">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Activity</a> tab. It is recommended for the most consolidated view, to set the Trade Activity Log to display  <b>Fills</b> only.</p>
+            
+            <p>In the case of non-simulated working/open orders, they are cleared 20 minutes after the order becomes non-working from a working/open status. </p>
+
+            <p>When preforming an automated trading system backtest with <b class="menu_item">Trade &gt;&gt; AutoTrade System Bar Based Backtest | AutoTrade System Backtest</b>, or you are replaying a chart and have the replay mode set to <b>Accurate Trading System Backtest Mode</b> or <b>Calculate at Every Tick/Trade</b>, then trade orders which are no longer working in the <b>Orders</b> list will be removed from the Orders list.</p>   
+
+            <p>The check to remove the non-working orders occurs at every chart update.</p>
+        </section>
+
+        <section class="h4"> 
+            <h4 id="RefreshingData">Refreshing Order Data</h4>
+            <div class="member-link">[<a href="#RefreshingData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Orders which are considered Open (Working) orders will have an <b>Order Status</b> of: <b>Order Sent</b>, <b>Pending Open</b>, <b>Pending Child</b>, <b>Open</b>, <b>Pending Cancel</b>, or <b>Pending Modify</b>.</p>
+
+            <p>If there are open orders displayed on a chart or listed in the <b class="menu_item">Trade &gt;&gt; Trade Orders</b> window, and you know they are no longer open, then press the <b>Refresh Trade Data</b> button on the Orders window. If Sierra Chart does not receive any data for an open order from the connected Trading service, it will be internally canceled either immediately. Internally canceling means the order is not actually canceled with the external Trading service, it is canceled within Sierra Chart  which indicates it is no longer open.</p>
+
+            <p>There can be certain scenarios why Sierra Chart may not have received a status update for an order and the order still displays with an <b>Open</b> state. For example, if you disconnect from the Data and Trade server (<b class="menu_item">File &gt;&gt; Disconnect</b>), and then you cancel the order through another program, Sierra Chart will not know about this. </p>
+            
+            <p>However, when you connect again to the Data and Trade server, if Sierra Chart does not receive any data for listed orders that are in an <b>Open</b> state, they will be internally canceled. This occurs in about 5 seconds after the connection to the Trading sserver.</p>
+
+            <p>Another step you can take if you question or have any issue with the Orders or Position data you see displayed on the Trade Orders window is to reconnect to the servers by selecting <b class="menu_item">File &gt;&gt; Reconnect</b>. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="OrderFieldDescriptions">Order Window Field Descriptions</h4>
+            <div class="member-link">[<a href="#OrderFieldDescriptions">Link</a>] - [<a href="#top">Top</a>]</div>
+            <ul>
+                <li><b>Entry Time</b>: This is the Date and Time that an order has been added to the Trade Orders Window. It is not necessarily the time that the order was actually submitted. 
+                    <br> <br>
+                    For example, when you connect to a trading service, the working orders will be requested and listed. If a working order is  received from the Trading service and is not already listed, then this will show the Date Time that the order was added to this list.  
+                    <br> <br>
+                    This Date Time is based upon your local computer clock when the order did not originate from a chart replay or back test. It does not originate from the server. This time is adjusted to the Time Zone setting in Sierra Chart. During a chart replay or back test, this Date Time is based upon the last Date Time in the replaying chart at the time the order was submitted.
+                    <br> <br>
+                    If an order has an incorrect timestamp or a slightly incorrect timestamp, then it may not match with the correct chart bar. It is important the computer's clock is set accurately when orders do not originate from a chart replay or back test. Refer to <a href="index3e87.html?page=doc/helpdetails38.html">Help topic 38</a>.</li>
+
+                <li><b>Last Activity Time</b>: This is the Date Time that the listed order has been last updated. This is based upon your local computer clock and not the server.  This time is adjusted to the Time Zone setting in Sierra Chart. During a chart replay, this Date Time is based upon the last Date Time in the replaying chart and not the current actual time.</li>
+
+                <li><b>Symbol</b>: This is the symbol of the order. If the order is not simulated and sent to the connected Trading service, then the symbol will have <em>no prefix</em> in front of it. If the order is being handled by the Sierra Chart Trade Simulation Mode, then the symbol will have the <b class="GeneralBackgroundHighlight">[Sim]</b> prefix.</li>
+
+                <li><b>Order Quantity</b>: This is the quantity of the order. This can either be contracts, shares, or currency units.</li>
+
+                <li><b>Price</b>: This is the price of the order. If the order has only one price, then this is the only price used.</li>
+
+                <li><b>Price2</b>: In the case of <b>Stop-Limit</b> orders, this is the Limit price. Price2 is only used for Stop-Limit orders.</li>
+
+                <li id="OrderStatus"><b>Status</b>: This is the order status. It can be one of the following: 
+                    <ul>
+                        <li><b>Order Sent</b>: The trade order has been sent to the Sierra Chart Trade Simulation system or the connected Trading service. It will be changed to another order status once the Trade Simulation system or the connected trading service gives an indication that the order has been received.
+                            <br>
+                            <br>
+                            In the case of the Sierra Chart Trade Simulation system it will immediately change the status to <b>Open</b>. It will not remain in the <b>Order Sent</b> status.
+                            <br>
+                            <br>
+                            In the case of when an order is sent to an external connected Trading service, if the order is not acknowledged it will remain in the <b>Order Sent</b> status. In this case select <b class="menu_item">Edit &gt;&gt; Refresh Trade Data</b>. Either the order status will immediately change or the order will be canceled by Sierra Chart within one minute if there is no response from the Trading service for it.
+                            <br>
+                            <br> 
+                            For some of the supported Trading services, if an order is in the <b>Order Sent</b> status for an extended time, Sierra Chart will try to request the status of it automatically. The progress of this is displayed in the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b>.
+                            <br>
+                            <br>
+                            Depending upon the Trading service you are using and the actual state of the order it may or may not be able to be canceled with a status of <b>Order Sent</b>.
+                        </li>
+
+                        <li><b>Pending Open</b>: This order status is only valid when an order is sent to the connected external Trading service. It is not used in Sierra Chart Trade Simulation Mode. It generally means that the connected trading service has indicated that the order has not yet reached an Open state and therefore it cannot be filled in this state. It should be possible to cancel an order in this state.</li>
+
+                        <li><b>Open</b>: The order is in a working state and can be filled. It may also be partially filled and still working. In the case of a non-simulated order, the connected Trading service has indicated that the order has been accepted and it is working. It is possible to cancel an order in this state. In Trade Simulation Mode, there are no partial fills, an order is either completely filled or not filled.</li>
+
+                        <li><b>Filled</b>: The order has completely filled or has been canceled before it has completely filled. In Trade Simulation Mode, there are no partial fills, an order is either completely filled or not filled. Generally there is no reason to cancel an order in this state, but it is possible to select the order in the <b>Trade Orders Window</b> and Cancel it.</li>
+
+                        <li><b>Pending Cancel</b>: A request to cancel the order has been made and confirmation of the cancellation is being awaited. It is possible to attempt further cancellations in this state.</li>
+
+                        <li><b>Canceled</b>: The order has been canceled. It is no longer working or in an <b>Open</b> state. It cannot be filled any longer. The order may have been partially filled. Whether a partially filled order that has been canceled will have a status of <b>Filled</b> or <b>Canceled</b> depends upon the Trading service you are connected to and what status they give. In the case of Trade Simulation Mode, a canceled order will always have a status of <b>Canceled</b>.
+                          <br> <br>
+                        A completely filled order can also have a status of Canceled if at the time the order status is checked, the order is no longer  available on the trading server, and the order in the Sierra Chart order list was indicated to still be Open at the time of the check.  This can happen if an order fills when Sierra Chart is not connected to the external trading server and later Sierra Chart is connected.
+                        </li>
+
+                        <li><b>Pending Modify</b>: A request to modify the order has been made and confirmation of the modification is being awaited. It is possible to cancel an order in this state.</li>
+
+                        <li><b>Pending Child</b>: This order status only applies to <b>Attached Orders </b>. It means the order is being held by Sierra Chart until the parent order fills partially or completely. The orders can be definitely and immediately canceled in this state. When the parent order partially or completely fills, then the Attached Orders will have their Status changed to <b>Open</b>.</li>
+
+                        <li><b>Error</b>: There was some error with the order. This could happen initially or at some other point during the life of the order. The reason for the error usually will be displayed in <b class="menu_item">Trade &gt;&gt; Trade Service Log</b>. The line in the Trade Service Log will contain the order's <b>Internal Order ID</b> and <b>Service Order ID</b> for reference.</li>
+                    </ul>
+                </li>
+
+                <li><b>Internal Order ID</b>: This is a numeric identifier that Sierra Chart internally uses to identify the order. This is always an integer value.
+                    <br> <br>
+                    In the case where you have more than one instance of Sierra Chart running and connected to the same external trading account, non-simulated orders will be listed in each instance and for the same order with the same <b>Service Order ID</b>, the <b>Internal Order ID</b> will be unique for each instance.</li>
+
+                <li><b>Order Type</b>: This is the order type. It can be any of the supported order types.</li>
+
+                <li><b>Filled Quantity</b>: This is the quantity of shares or contracts that has been filled.</li>
+
+                <li><b>Average Fill Price</b>: This is the average price of all of the order fills in the order. An order can fill in one or more parts. If the Quantity of the order is 1, there would only be one fill. If there is any question about the fill price of a simulated order, then refer to <a href="indexad24.html?page=doc/TradeSimulation.php#HowOrdersAreFilled">How Orders Are Filled</a>.</li>
+
+                <li><b>Buy/Sell</b>: This indicates the Side of the order. This can be either <b>Buy</b> or <b>Sell</b>.</li>
+
+                <li><b>Service Order ID</b>: This is the order identifier provided by the external Trading service to identify the order. In the case of a Simulated order, using Sierra Chart Trade Simulation Mode, this will always be the same as the internal order ID.</li>
+
+                <li><b>Open/Close</b>: This will be either Open or Close and indicates whether the order will open or close a position.</li>
+
+                <li><b>Parent Internal Order ID</b>: This is the Internal Order ID of the parent order in case this is a Child/Attached Order. Otherwise this is 0.</li>
+
+                <li><b>Time in Force (expiration type)</b>: The Time in Force for the order. Possible values include <b>Day</b>, <b>Good till Canceled</b>, <b>Good till Date Time</b>, <b>Immediate or Cancel</b>, <b>All or None</b>, or <b>Fill or Kill</b>.</li>
+
+                <li><b>Good Till DateTime</b>: If the <b>Time in Force</b> is <b>Good till Date Time</b>, then this field indicates the order expiration date and time.</li>
+
+                <li><b>Trade Account</b>: The account identifier with your Trading service for which this order is contained in. In Sierra Chart Trade Simulation mode, simulated orders will indicate <b>Sim#</b>. The # is equivalent to any number from 1 to 400 indicating what particular Trade Simulation Mode account is being used.</li>
+
+                <li><b>Link ID</b>: An Attached Order that is in the <b>All Groups</b> OCO Group or a parent order, will be split into smaller orders if there is more than one OCO group used in the list of Attached Orders submitted with an order. When an order is split into smaller orders, they are linked together and this indicates the  Internal Order ID used for linking. It is the Internal Order ID of the first order in that group. When one of the orders in a group of orders linked together is modified or canceled, the other ones will be as well. This happens automatically.</li>
+
+                <li><b>OCO ID</b>: If two orders are in an OCO (order cancels order) group, then this field will display the OCO Internal ID for that OCO group and it will match with the other order that is part of the same OCO group. The OCO Internal ID is the Internal Order ID of one of the orders in the OCO group.</li>
+
+                <li><b>Last Order Action Source</b>: This field displays the source of the last action for the order and other detailed text information about the latest order action. In the case of a newly entered order, it will display the name of the chart the order originated from.</li>
+                
+                <li><b>Exchange Order ID</b>: This is the order identifier from the exchange that the order is submitted to. It may not always be available and could be blank. In the case of where Sierra Chart is routing orders through an intermediary Sierra Chart order routing server to a Trading service which then routes them to the exchange, this order ID will be the ID provided by that Trading service.</li>
+
+                <li><b>Text Tag</b>: This field displays the information that has been entered for the order as a <a href="index9473.html?page=doc/TradeWindow.html#TextTag">Text Tag</a>.</li>
+
+                <li><b>Trail Order Offset</b>: This displays the trail offset entered for the order when the order is one of the Trailing types.</li>
+
+                <li><b>Trail Order Step Amount</b>: This displays the trail step amount entered for the order when the order is one of the Step Trailing types.</li>
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="TradeOrders_FontAndColors">Orders Window Font and Colors</h4>
+            <div class="member-link">[<a href="#TradeOrders_FontAndColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The Font for the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> is set through the <b class="menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Fonts</b>  tab.  </p>
+            
+            <p>Refer to the  <a href="index5795.html?page=doc/GraphicsSettings.html#Fonts">Fonts</a> documentation for this.</p>
+
+            <p>The name of the font is <b>Text Windows Font</b>.</p>
+
+            <p>The colors of Open and Completed order lines are colored separately. These colors are set through the <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> window. The color settings are as follows:</p>
+
+            <ul>
+                <li><b>Trade Orders Window Open Order</b>: This color setting sets the color of order lines in the Trade Orders list that have an order status of Order Sent, Pending Open, Pending Child, Open, Pending Modify, or Pending Cancel.</li>
+
+                <li><b>Trade Orders Window Completed Order</b>: This color setting sets the color of order lines in the Trade Orders list that have an order status of Filled, Canceled, or Error.</li>
+                
+                <li><b>Trade Orders Window Text</b>: This color setting sets the text color of order lines in the Trade Orders list.</li>
+            </ul>
+
+            <p>For more information, refer to <a href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a>.</p>
+        </section>       
+
+        <section class="h4">
+            <h4 id="DeletingTradeOrdersFile">Deleting Trade Orders File</h4>
+            <div class="member-link">[<a href="#DeletingTradeOrdersFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>  The file that contains the orders which are listed in the  <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> can be deleted to clear those orders.  This is an unusual procedure which should  <em>not normally</em> be done and is  <em>not recommended</em>  unless those orders are just not needed any longer and they are not clearing for some other unusual reason.</p>
+            
+            <p> Follow the instructions below.</p>
+
+            <ul>
+                <li> Exit from Sierra Chart.</li>
+
+                <li> Go to the Sierra Chart installation folder.  To determine the location where Sierra Chart is installed on your system,  open the Message Log with <b Class = "menu_item">Window &gt;&gt; Message Log</b>.  Near the top, you will see a line like this: <b>Program path: C:\SierraChart\</b>.</li>
+                
+                <li>Go to that folder and delete   the  <b> TradeOrdersList.data</b> file.</li>
+                <li>  Run Sierra Chart.</li>
+            </ul>
+
+        </section>
+                    
+
+        <section class="h4">
+            <h4 id="AutomaticCancellationOfNonExistentOrders">Automatic Cancellation of Non-Existent Orders</h4>
+            <div class="member-link">[<a href="#AutomaticCancellationOfNonExistentOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+             <p>Anytime the Trade Orders List  is fully updated in Sierra Chart from the external Trading server, any orders which are no longer Open or working,  and have   not received an update from the external Trading server, will be set to Canceled.   </p> 
+             
+              <p> This will be the  <b>Order Action Source</b> text for these canceled orders in the <a href = "index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a>:  </p>
+            
+              <p> <em> <b>Internally marking as canceled. No order update from server. For Trade Account: </em></b> </p>
+              
+             <p> One reason this can happen is that an order has filled or has expired  when  Sierra Chart was not connected to the trading server. </p>
+        
+        </section>   
+    </section>
+
+    <section class="h3">
+        <h3 id="PositionsWindow">Trade Positions Window</h3>
+        <div class="member-link">[<a href="#PositionsWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To view the Trade Positions window, select <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b> on the menu.</p>
+        
+        <p>The Trade Positions window can also be opened through the corresponding <a href = "index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Control Bar</a> button.  </p>
+
+        <p>This window displays the current Trade Positions for <em>non-simulated trading</em>.</p>
+
+        <section class="h4">
+            <h4 id="TradePositionsOverview">Overview</h4>
+            <div class="member-link">[<a href="#TradePositionsOverview">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <a href="../images/tradepositionswindow.png" rel="lightbox"><img src="../images/tradepositionswindow.png" alt="" class="WideFloatRight"></a>
+
+            <p>The <b>Trade Positions</b> window displays the current Trade Positions for <em>non-simulated trading</em>.</p>
+
+            <p>This Trade Positions data is calculated from the order fills as they occur in real time and will be automatically synchronized to the Trading Service Positions data if it is out of sync with it. So the displayed Trade Positions on the <b>Positions</b> tab will always represent the accurate and current Trade Positions.</p>
+
+            <p>For a list of simulated Trade Positions, refer to the <a href="index509f.html?page=doc/TradeActivityLog.php#ChartTradeStatsTab">Trade Statistics for Charts tab</a> on the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b> window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="RefreshPositionsData">Refresh Trade Data</h4>
+            <div class="member-link">[<a href="#RefreshPositionsData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting <b class="menu_item">Edit &gt;&gt; Refresh Trade Data</b> will refresh the non-simulated <b>Orders</b> and <b>Positions</b> data from the connected trade server. It has no effect upon simulated trading data. This never has to be done manually in almost all conditions since the Orders and Positions are automatically updated.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="FlattenTradePositions">Flatten Trade Positions</h4>
+            <div class="member-link">[<a href="#FlattenTradePositions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Follow the instructions below to flatten  current  <em>non-simulated</em> Trade Positions.</p>
+
+            <p>Flatten means to send a market order to make the current Position quantity 0.</p>
+
+            <ol>
+                <li>Select <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b> on the main menu to open the Trade Positions window.</li>
+                
+                <li>  It is recommended to enable  <b class="menu_item">Global Settings &gt;&gt;  General Trade Settings &gt;&gt;     <a href = "index4451.html?page=doc/GlobalTradeSettings.html#HoldMarketOrderUntilPendingCancelOrdersConfirmed">Hold Market Order Until Pending Cancel Orders Are Confirmed</a></b>. Although this will delay the sending of the market order.</li>
+
+                <li>Enable <b>Position &gt;&gt; Cancel Orders for Symbol When Flatten</b> from the Trade Positions window menu, if you want all non-simulated open/working orders for the symbols having their Positions flattened, to also be canceled at the same time.</li>
+
+                <li>In the list of Positions, select the Position or Positions lines you want to flatten. To select multiple Positions hold the Control key and select them one by one.</li>
+
+                <li>  Select the <b>Flatten</b> menu command at the top.</li>
+                
+                <li>Or you can  select the <b>Flatten All</b> menu command at the top, to flatten all Positions regardless of which Position lines are selected. In this case there is no requirement to select particular Position lines.
+                 <br> <br>
+                
+                When using this command there is always a prompt to confirm the  <b>Flatten All</b> operation. <em>All</em> Positions will be flattened/closed regardless of what is listed in case there is a Trade Account filter set preventing some Positions from being displayed.</li>
+
+                <li>Press <b>Yes</b> to confirm.</li>
+            </ol>
+            
+            <p> A  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Keyboard Shortcut</a>  and/or a   <a href = "index6736.html?page=doc/ControlBar.php">Control Bar</a> button  can be added  to perform the same action as  <b>Flatten All</b>  on the Trade Positions Window. This only applies to non-simulated Positions. Not Positions when in Trade Simulation Mode. The keyboard shortcut and the Control Bar button is named "Trade Flatten All Positions - All Accounts". </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="PositionWindowFields">Positions Window Fields</h4>
+            <div class="member-link">[<a href="#PositionWindowFields">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The following is a list of the fields for each symbol displayed on the <b>Trade Positions</b> window.</p>
+
+            <ul>
+                <li><b>Symbol</b>: This is the symbol for which the Position data is for.</li>
+
+                <li><b>Quantity</b>: This is the quantity of the Position. This will either be contracts, shares, or currency units depending upon the type of market the <b>Symbol</b> is for.</li>                
+
+                <li><b>Trade Account</b>: This is the Account identifier for the Trade Position.</li>
+
+                <li><b>Average Price</b>: This is the Average Price of the current Position provided by the connected external Trading service.
+                
+                <br> <br>
+                The external Trading service may not provide a Position Average Price or it may not be supported by Sierra Chart for that service.
+                <br><br>
+                
+                Sierra Chart also calculates and maintains its own Average Price for the Trade Positions which is dynamically calculated from the order fills in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>. This calculated Average Price can be viewed on a chart, Trade DOM, and the <b>Trade Statistics</b> and <b>Trades</b> tabs of the <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a>. For more information, refer to <a href="#HowAveragePriceForPositionsIsCalculatedAndUsed">How Average Price for Positions Is Calculated and Used</a>.</li>
+
+                <li><b>Open Profit/Loss</b>: This is the Open Position Profit or Loss.  This will not  be calculated and remain at 0 if there is no Position Average Price.</li>
+
+                <li><b>Daily Profit/Loss</b>: This field is is used internally by a Sierra Chart server but it does not update  on the Trade Positions window for users.</li>
+
+                <li><b>Daily P/L Reset DateTime</b>: This is the Date and Time that the Daily Profit/Loss will reset.</li>
+
+                <li><b>High During Position</b>: This is the highest price reached while this Position is open.  It resets to zero when the Position quantity changes.</li>
+
+                <li><b>Low During Position</b>: This is the lowest price reached while this Position  is open.  It resets to zero when the Position quantity changes.</li>
+
+                <li><b>Last During Position</b>:  This is the most recent last trade price while this Position  is open.  It resets to zero when the Position quantity changes. In the case of Sierra Chart based order routing services, this will remain at 0.</li>
+
+                <li><b>Margin Requirement</b>: This is the current margin requirement for the Position.</li>
+				
+                <li><b>Service Position Quantity</b>: This is the Position quantity for the symbol provided by the connected Trading service. The <b>Quantity</b> field is calculated by Sierra Chart by the order fills received. If the <b>Quantity</b> field becomes different than <b>Trade Service Position Quantity</b>, then <b>Quantity</b> is synchronized to the <b>Trade Service Position Quantity</b>.
+                    <br> <br>
+                    The reason there are two separate quantity fields is so that Sierra Chart can accurately determine whether a fill received is an opening or closing (entry or exit) fill. Sierra Chart cannot do this without maintaining its own independent Trade Position Quantity variable set from the order fill events received from the server.
+                </li>
+
+                <li><b>Currency</b>: This is the  currency code for the Position</li>
+
+                <li><b>Entry Date-Time</b>: This is the Date and Time that this Position was entered.</li>
+				
+                <li><b>MaxPotentialPosQty</b>:  This is maximum potential Position quantity based upon the current Position quantity and working orders.  This field is only supported with Sierra Chart order routing and simulated trading services.</li>
+
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="PositionQuantityAndAutomatedTrading">Position Quantity and Automated Trading</h4>
+            <div class="member-link">[<a href="#PositionQuantityAndAutomatedTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>In the case of one performing automated trading using ACSIL or the <b>Spreadsheet System for Trading</b> study, it is helpful to understand the following regarding the Trade Position Quantity fields.</p>
+
+            <p>The  <a href="#PositionWindowFields">Trade Position Quantity</a> which is the Quantity displayed in Sierra Chart and given to automated trading systems is updated by fills/executions. It is not directly updated by Trade Position data updates from the external trading service.</p>
+
+            <p>However, if the calculated  Trade Position Quantity from the order fills is out of sync with the reported <b>Trade Service Position Quantity</b> from the external trading service, then after about 8 seconds the order fill calculated Position Quantity will be synchronized to the Trade Service Position Quantity after there has been an unsolicited update of the Trade Service Position Quantity.</p>
+
+            <p>If there is a solicited Trade Position data update, the synchronization happens immediately.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SingleConsolidatedPositionMaintainedPerSymbolAndTradeAccount">Only Single Consolidated Position Maintained and Displayed per Symbol and Trade Account</h4>
+            <div class="member-link">[<a href="#SingleConsolidatedPositionMaintainedPerSymbolAndTradeAccount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>For each Symbol and Trade Account, Sierra Chart only maintains a single consolidated/combined Position Quantity and Position Average Price.</p>
+
+            <p>Sierra Chart does not maintain individual active Positions for each separate trade for the same Symbol and Trade account. If this is what you require, it is necessary to use separate Trade Accounts which are supported. Refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Selecting Trade Account</a>.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="ClearingSimulatedPositionInSubInstance">Clearing Simulated Position in Sub Instance</h4>
+            <div class="member-link">[<a href="#ClearingSimulatedPositionInSubInstance">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>In a  <a href = "index9bbd.html?page=doc/NewInstance.php" target="_blank" rel="noopener noreferrer">sub instance</a> of Sierra Chart that has Trade Simulation Mode disabled, when using a simulated  Trade Account in the sub instance, and the main instance of Sierra Chart has Trade Simulation Mode enabled, the Position reporting in the sub instance is based upon the order fill data in the main instance of Sierra Chart. </p>
+            
+            <p> If you want  to clear that  Position  in the sub instance without using Flatten, then you will need  to clear the order  fill data   for that Symbol and Trade Account of the Position  in the main   instance of Sierra Chart. </p>
+  
+           <p>To do this, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#ClearingTradeActivityData">Clearing Trade Activity Data</a>. </p>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SimulatedTradePositions">Simulated Trade Positions Quantities and Average Price</h3>
+        <div class="member-link">[<a href="#SimulatedTradePositions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Simulated Trade Positions data for Trade Positions created while in <a href="indexf915.html?page=doc/Trading.html#DifferenceBetweenSimAndNonSim">Trade Simulated Mode</a> are not displayed on the <a href="#PositionsWindow">Trade &gt;&gt; Trade Positions Window</a>.</p>
+
+        <p> For information about where to view Simulated Trade Positions data, refer to <a href = "indexad24.html?page=doc/TradeSimulation.php#ViewingPositions">Viewing Positions and Current Profit/Loss</a> on the  <b>Trade Simulation Mode</b> page.</p>
+
+        <p>The current Trade Position Quantity you see displayed on a <b>Trade Window</b> and on the <b>Chart Stats</b> tab for a particular Symbol is for the <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Selected Trade Account</a>.  So it is for a Symbol and Trade Account pair.</p>
+
+        <p>The current Simulated Trade Position Quantity for a particular Symbol and simulated Trade Account is calculated from all of the order fills in the <b class="menu_item">Trade Activity Log &gt;&gt; <a href="index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Trade Activity Tab</a></b> for that Symbol and Trade Account. </p>
+
+        <p>For a detailed explanation of the Position Quantity calculation method, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatsOpenQuantityFieldCalculation">Open Quantity Field Calculation</a>.</p>
+
+        <p>The following will cause the Trade Position data for a Symbol and Trade Account to be cleared:</p>
+
+        <ul>
+            <li>Selecting <b class="menu_item">Trade &gt;&gt; Clear Trade Simulation Orders and Data</b>.</li>
+
+            <li><a href="index509f.html?page=doc/TradeActivityLog.php#ClearingTradeActivityData">Clearing the Simulated Trade Activity Log</a> data for a particular Symbol and Trade Account.</li>
+
+            <li>Starting a <a href="index9600.html?page=doc/ReplayChart.html">Chart Replay</a> and choosing the option to clear the trade data (<b>Clear All Trade Data for Symbol and Account</b>).</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="UsingOrderFillCalculatedPosition">Using Order Fill Calculated Positions In Special Cases</h3>
+        <div class="member-link">[<a href="#UsingOrderFillCalculatedPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There are some special cases where you cannot rely upon the Trade Position data from the Trading service you are using. An example of this would be futures spread/strategy symbols often do not have reported Trade Position data for them but instead are reported for the outright contracts themselves. Another case would be where Trade Positions are not provided at all, as is the case with the LMAX Forex trading service.</p>
+
+        <p>In these cases it is necessary to use the <a href="#OrderFillCalculatedPosition">Using Order Fill Calculated Trade Positions</a>. In the case of TT FIX spreads/strategies and when using LMAX, the Order Fill Calculated Positions will automatically be used.</p>
+
+        <p>To confirm you cannot use the Trading service provided Trade Positions data, select <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b> from the menu. If you do not see the non-simulated Positions that you have in your trading account, or the symbols for those Positions do not match the Chart or Trade DOM, then it is necessary to use the Order Fill Calculated Positions.</p>
+
+        <p>For instructions to use the Order Fill Calculated Position for an individual chart or Trade DOM, refer to <a href="#OrderFillCalculatedPosition">Using Order Fill Calculated Trade Positions</a>.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="OrderFillCalculatedPosition">Using Order Fill Calculated Trade Positions</h3>
+        <div class="member-link">[<a href="#OrderFillCalculatedPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/orderfillcalculatedpositionmenu.png" rel="lightbox"><img src="../images/orderfillcalculatedpositionmenu.png" class="WideFloatRight" alt="" ></a>
+
+        <p>For various reasons, when trading some symbols through some Trading services or with certain Trading services, you cannot rely upon the Trade Position data provided by the Trading Service you are using.</p>
+
+        <p>Trade Position data may not be available or it may not accurately track the true Trade Position Quantity for a Symbol and Trade Account. For example, when trading exchange traded futures spreads or strategies through some Trading services, no current Trade Position data is provided for that particular spread/strategy.</p>
+
+        <p>Additionally, you may want to have a Trade Position Quantity reported in a Chart or Trade DOM which begins from a specific Date-Time independent of the actual Trade Position Quantity for the Symbol and Trade Account.</p>
+
+        <p>Sierra Chart has a feature where you can see the current Trade Position Quantity and Average Price for a Symbol and Trade Account on a Chart or Trade DOM, calculated directly from all of the order fills Sierra Chart has for non-simulated trading for that Symbol and Trade Account.</p>
+
+        <p>This is a method by which you can track the current Trade Positions completely independent from the Trading service reported Trade Position data.</p>
+
+        <p>This feature can be enabled by <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Opening the Trade Window</a> and enabling <b class="menu_item">Menu/M &gt;&gt; Settings &gt;&gt;  Use Order Fill Calculated Position</b>.</p>
+
+        <p>Use this option to report the Trade Position Quantity and Average Price based strictly upon the order fills that Sierra Chart has for the Symbol and Trade Account the Chart or Trade DOM is set to. This command is <em>specific to each individual</em> chart or Trade DOM it is enabled for.</p>
+
+        <p>You can switch in and out of this at will. If a fill is missed, Sierra Chart will attempt to download missing fills upon a connection to the server, so it can always accurately report the Trade Position for a particular Symbol and Trade Account.</p>
+
+        <p>It is important to be aware that Sierra Chart needs to have all of the order fills stored in the <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a> for the current order fill calculated Trade Position and the very first fill needs to be at a point in time where the Position was previously flat for the Symbol and Trade Account, for an accurate Trade Position Quantity and Average Price indication.</p>
+        
+        <p>Otherwise, the resulting Trade Position Quantity and Average Price will be inaccurate. In this case, refer to <a href="#OrderFillCalculatedTradePositionNotAccurate">Order Fill Calculated Trade Position Not Accurate</a>.</p>
+
+
+        <section class="h4">
+            <h4 id="OrderFillCalculatedTradePositionNotAccurate">Order Fill Calculated Trade Position Not Accurate</h4>
+            <div class="member-link">[<a href="#OrderFillCalculatedTradePositionNotAccurate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Since the Order Fill Calculated Trade Position relies upon order fill data for a particular Symbol and Trade Account in the <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a>, and not upon Trade Position data from the external Trading service, it is essential that Sierra Chart has all of the order fills that currently make up the current Trade Position for a Symbol and Trade Account and that those fills are accurate.</p>
+
+            <p>Therefore, if there is any inaccuracy with the reported Order Fill Calculated Trade Position Quantity or Average Price, then refer to the <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab_SolvingInaccurateTradeStatisticsForChartsFieldValues" target="_blank" rel="noopener noreferrer">Solving Inaccurate Trade Statistics for Charts Field Values</a> section. The documentation in that section also applies to this case as well.</p>
+            
+        </section>
+
+        <section class="h4">
+            <h4 id="OrderFillCalcTradePosAveragePrice">Order Fill Calculated Trade Position Average Price</h4>
+            <div class="member-link">[<a href="#OrderFillCalcTradePosAveragePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The Average Price for the Order Fill Calculated Trade Position is determined from the weighted average of the fill prices for the order fills which the Trade Position consists of.</p>
+            
+            <p>For complete documentation, refer to <a href="#HowAveragePriceForPositionsIsCalculatedAndUsed">How Average Price for Positions Is Calculated and Used</a>.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="AccountBalanceTab">Trade Account Monitor (Account Balances) Window</h3>
+        <div class="member-link">[<a href="#AccountBalanceTab">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To display the <b>Balances</b> window, select <b class="menu_item">Trade &gt;&gt; Trade Balances Window</b> from the menu.</p>
+
+        <p>The <b>Balance</b> window displays various fields of Account Balance related data. This data is only for <em>non-simulated</em> trading and comes from the Trading service Sierra Chart is connected to.</p>
+
+        <p>There is a separate line of Account Balance data for each Trade Account associated with the logged in Trading account username.</p>
+
+        <p>There is <em>no</em> Account Balance data maintained for simulated trading when <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is enabled. If you want to do simulated trading,  which uses an account Balance, then use the <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php"> Simulated Trading Service</a>.   However, this does not apply to  <a href = "index9600.html?page=doc/ReplayChart.html">Chart Replays</a>. A chart replay uses  <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a> and there is no account balance.</p>
+
+        <p class="GeneralBackgroundHighlightLight">Not all supported Trading services provide Account Balance related data and not all of them will continuously update this data. If the Trading service provides Account Balance data, it may be infrequently updated. If the Account Balance fields are empty, then this means that the particular Trading service you are using does not provide this data. In this last case, you will need to ask your Trading service about how to view their Account Balance data.</p>
+
+        <p>The frequency of the  Account Balance data updating depends upon how often the Account Balance data is transmitted by the connected Trading service. This is not something that Sierra Chart can control.</p>
+
+        <section class="h4">
+            <h4 id="BalanceTabFieldDescriptions">Trade Account Monitor Field Descriptions</h4>
+            <div class="member-link">[<a href="#BalanceTabFieldDescriptions">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <ol>
+                <li><b>Trade Account</b>: This is the trade account number. The account balance fields are for.</li>
+
+                <li><b>Cash Balance</b>: This is the cash balance in the account. Not provided with all Trading services.</li>
+
+                <li><b>Available Funds</b>: This is the amount available to take new positions. Not provided with all Trading services.</li>
+
+                <li><b>Margin Requirement</b>: This is the amount required to maintain existing positions. Not provided with all Trading services.</li>
+
+                <li><b>Account Value</b>: This is the total account value of cash and securities in the Trade Account. Not provided with all Trading services.</li>
+
+                <li><b>Currency</b>: This is the currency for all of the other balance fields on the same line.</li>
+
+                <li><b>Open Positions Profit/Loss</b>: This is the current profit/loss for all of the open Positions. This is only supported with the <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Futures Trading Service</a>.</li>
+
+                <li><b>Daily Profit/Loss</b>: The <b>Daily Profit/Loss</b> is provided by the server, if available, and indicates the profit or loss for the trading day for the Trade Account.  It may or may not include commissions. This value will not correspond with the   other  <a href = "index1a23.html?page=doc/DailyProfitLossValue.html">Daily Profit/Loss</a> values which are calculated within Sierra Chart.  This is only supported with the <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Futures Trading Service</a> and the  <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Futures Order Routing Service</a>.  This resets daily.</li>
+            
+                <li><b>Daily Net Loss Limit</b>:  In the case of when using <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing</a> or the   <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Trading Services</a>, this field displays the  <b>Daily Net  Loss Limit</b> set for the  Trade Account.  This can be based either  upon a fixed currency value or be based upon a percentage the trading account value at the time it was last calculated.    This field is not related to  <a href = "index8118.html?page=doc/GlobalProfitLossManagement.php">Global Profit/Loss Management</a>. It is completely separate from that.</li>
+
+                <li><b>Trail Account Value To Limit Positions</b>: (Not currently used)</li>
+				
+                <li><b>Close Positions EOD</b>:</li>
+
+                <li><b>Is Under Margin</b>:</li>
+
+                <li><b>Trading Is Disabled</b>:</li>
+
+                <li><b>Description</b>:</li>
+
+                <li><b>Daily Loss Reached</b>:</li>
+
+                <li><b>Is Under Minimum NLV</b>:</li>
+				
+                <li><b>Transaction Date Time</b>:</li>
+
+                <li><b>NLV/Margin</b>:</li>
+
+                <li><b>Full Margin</b>:</li>
+
+                <li><b>Full Margin Positions</b>:</li>
+
+                <li><b>NLV/PosMargin</b>:</li>
+
+                <li><b>Peak Margin</b>:</li>
+				
+                <li><b>Daily Net Profit/Loss</b>:</li>
+				
+                <li><b>Open Pos Sett Profit/Loss</b>:</li>
+				
+                <li><b>EOD Account Value</b>:</li>
+            </ol>
+
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="TradeServiceLog">Trade Service Log</h2>
+    <div class="member-link">[<a href="#TradeServiceLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To display the Trade Service Log, select <b class="menu_item">Trade &gt;&gt; Trade Service Log</b> from the menu.</p>
+
+    <p>If the Trade Service Log does not display when selecting a menu command, then first select <b class="menu_item">Window &gt;&gt; Reset Windows</b> and select this same command again. The Trade Service Log will then be displayed.</p>
+
+    <p>The Trade Service Log displays the following messages:</p>
+
+    <ul>
+        <li>Trading related messages from the connected Trading service Sierra Chart is connected to. This also includes error messages related to submitting new orders, modifying orders and canceling orders.</li>
+
+        <li>Trading related error and information messages from Sierra Chart. </li>
+
+        <li>Automated Trading related messages.</li>
+    </ul>
+    
+    <section class="h3">
+        <h3 id="InterpretingTradingServiceOrderRelatedMessages">Interpreting Trading Service Order Related Messages</h3>
+        <div class="member-link">[<a href="#InterpretingTradingServiceOrderRelatedMessages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When Sierra Chart is connected to a Trading service,  and <a href="indexad24.html?page=doc/TradeSimulation.php" >Trade Simulation Mode</a> is disabled,  when there is some error related to the submission of a new order, modification of an order or canceling an order, the trading service will  provide an error message, indicating the reason for this. This is going to be logged in the Trade connectivity Log with the order and that is also displayed in the Trade Service Log</p>
+        
+       <p> Below is an example of this:</p>
+       
+        <div class="MessageLog">[trading service name] order update (Rejected). <b>Text:</b> Insufficient margin. Internal Order ID: #. Service Order ID: #. Symbol: [symbol] |  Data-Time</div>
+        
+       <p>The text after <b>Text:</b> originates from the trading service or trading platform service Sierra Chart is connected to. You will need to contact your broker for help with these types of messages. Sierra Chart support cannot provide any help with them.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutomaticOpeningOfTradeServiceLog">Automatic Opening of Trade Service Log</h3>
+        <div class="member-link">[<a href="#AutomaticOpeningOfTradeServiceLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In the case where the Trade Service Log is automatically opened when a message is added which requires a user's attention  you can close the Trade Service Log by pressing the <b>X</b> button at the top right of that window or press the <b>Close Log</b> button.</p>
+
+        <p>Alternatively, you can just keep the Trade Service Log open and move it to the edge of your screen if you do not want to see it. When it is left open, it will not automatically open when a message is added which normally would open the Trade Service Log.</p>
+
+        <p>Some messages like automated trading messages can either open the Trade Service Log if it is not already open when they are added, or not automatically open the Trade Service Log. The setting that controls this is <b class="menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Open the Trade Service Log When a New Message is Added</b>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TradeActivityLog">Trade Activity Log</h2>
+    <div class="member-link">[<a href="#TradeActivityLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To display the Trade Activity Log, select <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b> from the menu. For more information refer to the <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a> page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TradeDataStudies">Trade Data Studies</h2>
+    <div class="member-link">[<a href="#TradeDataStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart provides many studies that display trading information from the <em>order fill</em> data for the Symbol and Trade Account of the chart, in a graphical form for each bar in the chart.</p>
+
+    <p>To add one of the studies listed below to a chart, select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu and <b> Add </b> them to the chart just like any other study. For complete instructions, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying Chart Studies</a>.</p>
+
+     <p> It is essential that the  first order fill loaded into the chart is correct. For further information, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingAndSettingTheStartDateTimeForATradesList" target="_blank" rel="noopener noreferrer">Understanding and Setting the Start Date-Time for a Trades List</a>.</p>
+
+    <p>When <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode</b> is checked, then simulated order fills will be used in the study.</p>
+
+    <p>When <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode</b> is off/unchecked, then non-simulated order fills will be used in the study.</p>
+
+    <p>With all of these studies, when there is no  order fill data for a particular bar in the chart, the study will carry forward and draw the prior value, if any.</p>
+
+    <p>In the case of all of these studies, a <em>Closed trade</em> consists of a fill that increases a Trade Position and the subsequent order fill that fully offsets that increase in the Trade Position. The <b>Fill to Fill</b> <a href="index509f.html?page=doc/TradeActivityLog.php#OrderFillMatchingMethods">Order Fill Matching Method</a> is used when determining a closed trade.</p>
+
+    <p>For the trading studies that display Profit/Loss values, the format of the Profit/Loss value is dependent upon the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt;  Profit/Loss Format</b> display setting. </p>
+
+    <p>Profit/Loss formats which use <b>- Ignore Quantity</b> will be considered the format without the Ignore Quantity. Therefore, if you select <b>Ticks - Ignore Quantity</b>, it will be interpreted as <b> Ticks</b>.</p>
+
+    <ul>
+        <li><b>Trading: Closed Profit/Loss</b>: This study will display the cumulative profit/loss from <em>closed</em> Trades that there are order fills for in the Trade Activity Log for the Symbol and Trade Account. All available order fills are included. A closed Trade is one in which there is an opening fill and a closing fill. A currently open Trade which has no corresponding closing fill is not included in the study. For further details, refer to the <a href="index509f.html?page=doc/TradeActivityLog.php#TradesTab" Target="_blank" rel="noopener noreferrer">Trades tab</a> of the Trade Activity Log.</li>
+
+        <li><b>Trading: Daily Profit/Loss</b>: This study will display the cumulative Profit/Loss from closed trades for each day in the chart. Each day is 24 hours. This is considered a Daily Trade Statistic  which resets daily. For complete details, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime">Understanding Daily Trade Statistics Reset Time</a>.</li>
+
+        <li><b>Trading: Maximum Drawdown</b>: This study will display what the  Maximum Drawdown is based upon the closed trades at each bar in the chart.</li>
+
+        <li><b>Trading: Maximum Runup</b>: This study will display what the Maximum Runup is based upon the closed trades at each bar in the chart.</li>
+
+        <li><b>Trading: Profit/Loss Text</b>: For more information about this study, refer to <a href="#TradingPLText">Trading: Profit/Loss Text Study</a>.</li>
+
+        <li><b>Trading: Total Quantity Filled</b>: This study will display the total quantity filled for closed trades, at each bar in the chart.
+            <ul>
+                <li>Input: <b>Yes = Daily Values, No = Cumulative Values</b>: When this Input is set to Yes, the trading data displayed by the study is reset daily.
+ 
+                This is considered a Daily Trade Statistic  which resets daily. For complete details, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime">Understanding Daily Trade Statistics Reset Time</a>.
+
+                When this Input is set to No, the trading data displayed by the study does not reset daily, it is cumulative.</li>
+            </ul>
+        </li>
+
+        <li><b>Trading: Total Trades</b>: This study will display the total number of closed trades at each bar in the chart.</li>
+
+        <li><b>Trading: Winning Trades</b>: This study will display the total number of winning closed trades at each bar in the chart.</li>
+
+        <li><b>Trading: Losing Trades</b>: This study will display the total number of losing closed trades at each bar in the chart.</li>
+        
+        <li><b>Trading: Position Quantity</b>: This study will display the most recent Position Quantity at a chart bar which exists at the ending Date-Time of that chart bar.</li>
+        
+        <li><b>Trading: Position Average Price</b>: This study will display the most recent Position Average Price  at a chart bar which exists at the ending Date-Time of that chart bar.</li>
+    </ul>
+
+    <section class="h3">
+        <h3 id="TradingPLText">Trading: Profit/Loss Text Study</h3>
+        <div class="member-link">[<a href="#TradingPLText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Trading: Profit/Loss Text</b> study, is a study which displays various Profit/Loss values and trade statistics directly on the chart in text form. This text can be positioned anywhere on the chart by using the study inputs to control its position.</p>
+
+        <p>To add this study to the chart, refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Adding Chart Studies</a> documentation.</p>
+
+        <p>For the non-daily Cumulative Profit/Loss values and the Trade Statistics like <b>Closed Profit/Loss</b>, this study uses <em>all</em> order fill data from the <b class="menu_item"> Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Activity</b> tab.</p>
+
+        <p>To see the order fill data that the study uses, refer to the <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Viewing Historical Trade Activity</a> documentation. Make sure you set the Symbol and Trade Account properly  on the Trade Activity Log.</p>
+
+        <p>When <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Order Fills Start Date-Time</b> has the Date box filled in, then order fills are only loaded into the chart since the specified starting Date-Time and not all of the order fills are used.</p>
+
+        <p>The study has <b>Yes/No</b> inputs to display each of the items below. Below are explanations of how each of the items can be displayed and are calculated.</p>
+
+        <p>The Text Size for this study can be controlled through the <b>Text Size</b> Input with this study. Refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Modifying Chart Studies</a>. To control the particular Font Face, this can be changed through <b class="menu_item">Global Settings &gt;&gt; Tool Settings &gt;&gt; Global Chart Drawing Font</b>. After changing the Font Face, it is necessary to select <b class="menu_item">Chart &gt;&gt; Recalculate</b> for any chart containing the study for the new font to go into effect.</p>        
+        
+        <p>  The study depends upon the Trades  list in a chart, and the generated Trade Statistics  from that list.  Make sure you have the correct  <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingAndSettingTheStartDateTimeForATradesList" Target="_blank" rel="noopener noreferrer">Trades List Starting Date-Time</a> and the correct  <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime"  target="_blank" rel="noopener noreferrer">Reset Time</a> set. </p>
+           
+        <p>  There must be no  <a href = "index509f.html?page=doc/TradeActivityLog.php#MissingOrderFills" target="_blank" rel="noopener noreferrer">missing order fills</a> for the time the Trade Statistics are generated for. </p>
+
+        <p>The location of this study can be controlled through the Inputs for <b>Horizontal Position from Left</b> and <b>Vertical Position from Bottom</b>.</p>
+
+        <section class="h4">
+            <h4 id="ShowOpenProfitLoss">Show Open Profit/Loss</h4>
+            <div class="member-link">[<a href="#ShowOpenProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the Open position Profit or Loss. This calculation is based upon the last trade price for the symbol and the Position Average Price. For information about how the Position Average Price is calculated or obtained, refer to <a href="#HowAveragePriceForPositionsIsCalculatedAndUsed">How Average Price for Positions Is Calculated and Used</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowClosedProfitLoss">Show Closed Profit/Loss</h4>
+            <div class="member-link">[<a href="#ShowClosedProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><b>Closed Profit/Loss</b> is the cumulative profit/loss of completed trades, using a <b>Fill to Fill</b> matching method for the purpose of grouping fills into trades. This is based upon all of the fills for the symbol in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowDailyProfitLoss">Show Daily Profit/Loss</h4>
+            <div class="member-link">[<a href="#ShowDailyProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the cumulative profit/loss of completed trades that were opened in the current trading day, using a <b>Fill to Fill</b> matching method for grouping fills into Trades. This is based upon the order fills for the current trading day for the Symbol and Trade Account in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+
+            <p>This is considered a Daily Trade Statistic  which resets daily. For complete details, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime">Understanding Daily Trade Statistics Reset Time</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="NetPLCalculation">Include Open Profit/Loss in Daily Profit/Loss</h4>
+            <div class="member-link">[<a href="#NetPLCalculation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Net Profit/Loss</b> is the <b>Daily Profit/Loss</b> plus the current position <b>Open Profit/Loss</b>.</p>
+
+            <p>When the Open Profit/Loss is combined with the Daily Profit/Loss (<b>Daily Net PL</b>), the Open Profit/Loss is calculated directly from the trade order fills  contained in the Trades list of the chart which originate from the <b class = "menu_item">Trade &gt;&gt; Trade Activity Log</b>. </p>
+            
+            <p>This Open Profit/Loss potentially can be different than the Open Profit/Loss that is separately displayed since it will use a FIFO method for the average price calculation and also has a dependency on an accurate Position Quantity Calculation. For more information, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab_SolvingInaccurateTradeStatisticsForChartsFieldValues">Solving Inaccurate Trade Statistics for Charts Field Values</a>. </p>
+            
+             <p>The Open Profit/Loss in this case does not not use the current  <a href = "#HowAveragePriceForPositionsIsCalculatedAndUsed">Position Average Price</a> and the current Position Quantity. It uses an internal calculation for these which has a dependency on the order fills which make up  the open Trade Position.  If you are carrying a long-term Trade Position  and Sierra Chart does not have the trade fills which make up that Trade Position, in the <b class = "menu_item">Trade &gt;&gt; Trade Activity Log</b>,  then the <b>Net Profit/Loss</b> will <em>not</em> be accurate. </p>
+
+
+            <!-- p>It generally is recommended to avoid using the Net Profit/Loss  value because it combines two different values which are calculated from the trade fills and if there is any issue with the trade fill data, then it will be inaccurate and hard to understand where the problem is.  It is outside the scope of Sierra Chart support to help with this.</p -->
+
+
+            <p>Missing or inaccurate order fills can cause the order fill calculated <b>Net Profit/Loss</b> to be incorrect. If the Net Profit/Loss is incorrect, then refer to <a href="index1a23.html?page=doc/DailyProfitLossValue.html">Help With Daily Profit/Loss Value</a>.</p>
+
+            <p>The <b>Open Profit/Loss</b> and <b>Net Profit/Loss</b> values can also be viewed on the <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab">Trade Statistics for Charts</a> tab.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowTotalTrades">Show Total Trades</h4>
+            <div class="member-link">[<a href="#ShowTotalTrades">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the total number of completed trades, using a <b>Fill to Fill</b> matching method for the purpose of grouping trades. This is based upon all of the fills for the symbol in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowTotalQuantityFilled">Show Total Quantity Filled</h4>
+            <div class="member-link">[<a href="#ShowTotalQuantityFilled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the total quantity filled for completed trades, using a <b>Fill to Fill</b> matching method for the purpose of grouping trades. This is based upon all of the fills for the Symbol and Trade Account in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowDailyTotalTrades">Show Daily Total Trades</h4>
+            <div class="member-link">[<a href="#ShowDailyTotalTrades">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the total number of completed trades for the current trading day, using a <b>Fill to Fill</b> order fill grouping method to create trades. This is based upon the order fills for the current trading day for the Symbol and Trade Account in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+
+            <p>This is considered a Daily Trade Statistic  which resets daily. For complete details, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime">Understanding Daily Trade Statistics Reset Time</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowDailyTotalQuantityFilled">Show Daily Total Quantity Filled</h4>
+            <div class="member-link">[<a href="#ShowDailyTotalQuantityFilled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the total quantity filled for completed trades for the current trading day. This is based upon the fills for the current trading day for the Symbol and Trade Account in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+            
+            <p>This is considered a Daily Trade Statistic  which resets daily. For complete details, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime">Understanding Daily Trade Statistics Reset Time</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowMaximumOpenPositionProfit">Show Maximum Open Position Profit</h4>
+            <div class="member-link">[<a href="#ShowMaximumOpenPositionProfit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the maximum profit that the Trade experienced at any moment during the life of the Trade. Also known as Maximum Favorable Excursion (MFE).</p>
+
+            <p>The calculation is based on the High/Low Price While Open Trades list fields for the Trade.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowMaximumOpenPositionLoss">Show Maximum Open Position Loss</h4>
+            <div class="member-link">[<a href="#ShowMaximumOpenPositionLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the maximum loss that the Trade experienced at any moment during the life of the Trade. Also known as Maximum Adverse Excursion (MAE).</p>
+
+            <p>The calculation is based on the High/Low Price While Open Trades list fields for the Trade.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowFlatToFlatClosedProfitLoss">Show Flat to Flat Closed Profit Loss</h4>
+            <div class="member-link">[<a href="#ShowFlatToFlatClosedProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the cumulative profit/loss of completed trades that were opened in the current trading day, using a <b>Fill to Fill</b> matching method for grouping fills into Trades.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowCurrentTradeTimeDuration">Show Current Trade Time Duration</h4>
+            <div class="member-link">[<a href="#ShowCurrentTradeTimeDuration">Link</a>] - [<a href="#Top">Top</a>]</div>
+
+            <p>This is the amount of time the current trade has been open.   </p>
+            
+            <p> This particular time duration is very dependent on complete and accurate order fill information loaded in the chart. And the first order fill loaded in the chart must align  to the start of the current or a prior Trade Position.  For complete details, refer to <a href = "#TradeDataStudyDoesNotDisplayDataOrMisaligned">Trade Data Study Does Not Display Data or is Misaligned</a>.</p>
+            
+            <p> If there are missing order fills, or the first order fill loaded in the chart does not precisely align to the start of the current  Trade Position  or one of the prior Trade Positions,  then no time duration will be displayed. </p>
+            
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDataStudyDoesNotDisplayDataOrMisaligned">Trade Data Study Does Not Display Data or is Misaligned</h3>
+        <div class="member-link">[<a href="#TradeDataStudyDoesNotDisplayDataOrMisaligned">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When using one of the Trade Data studies that begins with <b>Trading:</b> like <b>Trading: Total Trades</b> or <b>Trading: Closed Profit/Loss</b> and there is not the trading data displayed for the corresponding chart bars when there are trades at those bars, prior trade data is not included, the data is misaligned, or the trading data is delayed before it is displayed, then this can be due to the following reasons given below.</p>
+        
+         <p> This information is also applicable to the <b>Trading: Profit/Loss Text</b> study. However, the particular issues you would see with the <b>Trading: Profit/Loss Text</b> study  will be based upon the same underlying reasons but show differently. </p>
+
+        <ul>
+            <li> The order fills do not exist in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Activity</b> tab for the particular Symbol and Trade Account the chart is set to. For instructions to use the Trade Activity Log to see the data, refer to  <a href="index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Viewing Historical Trade Activity</a>.</li>
+
+            <li>The studies are built from order fills and it is essential to understand how order fills are grouped and matched together.   For complete details, refer to <a href="index509f.html?page=doc/TradeActivityLog.php#OrderFillMatchingMethods" Target="_blank" rel="noopener noreferrer">Order Fill Matching and Flat to Flat Definition</a>  and <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatsOpenQuantityFieldCalculation" Target="_blank" rel="noopener noreferrer">Open Quantity Field Calculation Method</a>.</li>
+
+            <li>To actually see the individual Trades which consist of an opening fill and a closing fill which are used in the Trade Data  studies, follow the instructions for the <a href="index509f.html?page=doc/TradeActivityLog.php#TradesTab" Target="_blank" rel="noopener noreferrer">Trades tab</a> in the Trade Activity Log. 
+            <br> <br>
+            Make sure you set the <b>Date Range to Display &gt;&gt; From</b> Date and Time  to the very same Date and Time you see in the  <b>Order Fills Start Date-Time</b> field for the chart in the  <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab">Trade Stats for Charts</a> tab, so you get an exact match of the   Trades data used in the chart which are used in these Trade Data studies. This gives you a very good understanding of the data that goes into these studies and to troubleshoot any problems with them.</li>
+
+            <li>The <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Trade Account</a> is not set correctly on the Trade Window for the chart.</li>
+
+            <li>Your computer's Date or Time is not set correctly which will cause Trade Data to be misaligned to the chart bars, be delayed before it is displayed, or filtered out completely. 
+                <br> <br>
+                Refer to <a href="index3e87.html?page=doc/helpdetails38.html" target="_blank" rel="noopener noreferrer">help topic 38</a> for help with setting your computers Date and Time. Once your computer's  Date and Time  is corrected, this will not solve the inaccurate timestamps on existing order fills. <em>Those fills will still be wrong  and require <a href="index509f.html?page=doc/TradeActivityLog.php#TradeActivityDataEditingMenuCommands">editing</a> of the Date-Time of them</em>.</li>
+
+            <li>The  <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a> setting in the chart  does not align to the precise order fill which is the start of a new Trade Position.  Or this Date-Time does not include all of the fills that are needed for the study being used. </li>
+            
+            <li>If you are using a Trade Data study on a Historical Daily, Weekly, Monthly, Quarterly, or Yearly chart, then the alignment of data may not be correct with these chart types. The Trade Data studies are <em>not</em> recommended to be used with these types of charts. Only Intraday charts.</li>
+        </ul>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="HowAveragePriceForPositionsIsCalculatedAndUsed">How Average Price for Positions Is Calculated and Used</h2>
+    <div class="member-link">[<a href="#HowAveragePriceForPositionsIsCalculatedAndUsed">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>In the <a href="index9473.html?page=doc/TradeWindow.html#Introduction">Trade Window</a> for a chart or Trade DOM, the Trade Position Average Price is displayed on the <b>Main</b> and <b>C</b> tabs after the current Trade Position Quantity (refer to image below).</p> 
+
+    <div style="text-align: center;"><a href="../images/tradewindowaverageprice.png" rel="lightbox"><img src="../images/tradewindowaverageprice.png" alt="" class="screenshot" loading="lazy"></a></div>
+                
+    <p>Additionally, the Trade Position Average Price is displayed on the chart or Trade DOM on the <a href="index3c50.html?page=doc/ChartTrading.html#ViewingOrdersOnTheChart">Position Line</a>  which is displayed at the level of the Average Price. </p> 
+
+    <p>By default, the Average Price for the current open Trade Position is calculated from the order fills stored in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b> for the particular Symbol and Trade Account the  Position Average price is for. <em>It is the average price of those fills which make up the current Trade Position</em>.</p>
+        
+    <p>The chart <em>must be set to load all of the order fills</em> which are part of the current Trade Position. Refer to <a href = "#OrderFillsStartDateTimeNeedsToBeSetCorrectly">Order Fills Start Date-Time Needs to Be Set Correctly</a>.</p>
+
+        
+    <p>However, there can still be cases where the Trade Position Average Price is not correct as determined from the order fills because of missing or inaccurate order fills.  In newer versions of Sierra Chart, the possibility of this is greatly reduced  due to the fact that a reverse iteration is used to determine   those order fills that make up the current  Position.</p>
+
+    <p>In the case though where the Trade Position Average Price cannot be determined, either there is an incorrect Trade Position Average Price displayed,  or if Sierra Chart knows it cannot  calculate it, then the <a href="#TradeServiceProvidedAveragePrice">Trade Service Provided Average Price</a> is displayed instead for the Symbol and Trade Account.</p>
+
+    <p>The <b>Trade Service Provided Average Price</b> is <em>only for non-simulated Trade Positions</em>. For more information, refer to <a href="#TradeServiceProvidedAveragePrice">Trade Service Provided Average Price</a>.</p>
+
+    <p>The Average Price for  <em>simulated</em> Trade Positions can always be accurately determined. </p> 
+
+    <p>In order for Sierra Chart to be able to properly calculate the Average Price from the order fills, it needs to have the order fills far back enough in time to include the earliest fill which is part of any current Trade Position that you have.</p>
+
+    <p>There are several Average Price  calculation methods for the current Trade Position for a  Symbol  and Trade Account which can be used in a  Chart or a Trading  DOM, that you can use. </p>
+        
+    <p>One of these can be chosen through  <b class="menu_item">Chart &gt;&gt; Chart Settings </b> <b> &gt;&gt; Open Position Average Price</b>.  They are as follows.</p>
+    
+    <ul>
+        <li><b>Use Last In First Out Fill Matching for Open Position Average Price</b></li>
+
+        <li><b>Use First In First Out Fill Matching for Open Position Average Price</b></li>
+
+        <li><b>Use Flat to Flat Open Position Average Price</b></li>
+
+        <li><b>Use Last In First Out Fill Matching for Open Position Average Price and For Daily Profit/Loss (Less  reliable since it relies upon a correct  <b>Order Fills Start Date-Time</b>  set in the  Chart Settings and properly aligned to the start of a Position and that there are  no missing  order fills since that Date-Time.)</b></li>
+            
+        <li><b>Use External Service Open Position Average Price</b></li>
+
+        <li><b>Use Theoretical Position Average Price</b></li>            
+    </ul>
+        
+    <p>The first four  calculations use the order fills that Sierra Chart has which make up the current Trade Position. Each chart  that is used for trading maintains its own Trades list which is used for various Trade Profit/Loss, Trade Statistics and Trade Position Average Price calculations. The Trade Position Average Price calculations are performed within this Trades list.</p>
+
+    <p>The first three calculation methods use a reliable reverse iteration of the order fills for the calculation.</p>
+        
+    <p>Each of the calculation methods is documented below. </p>
+    
+    <section class="h3">
+        <h3 id="UseLastInFirstOutFillMatchingForOpenPositionAveragePrice">Use Last In First Out Fill Matching for Open Position Average Price</h3>
+        <div class="member-link">[<a href="#UseLastInFirstOutFillMatchingForOpenPositionAveragePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>This Trade Position Average Price calculation method  calculates the average position price for the order fills that make up the current Position by using a  <em>last in first out</em> order fill matching method. The order fills are determined by a reliable reverse iteration.</p>
+        
+        <p>This method cannot work if there are any missing order fills which make up the current Trade Position.</p>      
+    </section>
+    
+    <section class="h3">
+        <h3 id="UseFirstInFirstOutFillMatchingForOpenPosition">Use First In First Out Fill Matching for Open Position Average Price</h3>
+        <div class="member-link">[<a href="#UseFirstInFirstOutFillMatchingForOpenPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This  Trade Position Average Price calculation method  calculates the average position price for the order fills that make up the current Position by using a <em>first in first out</em> order fill matching method.  The order fills are determined by a reliable reverse iteration.</p>
+        
+        <p> What this specifically means is that starting from a flat position, when a position begins whether long or short, and during the life of that position,  as it changes in quantity,  the buy and sell order fills are matched based upon a first in and first out matching method.  The Position Average Price is based upon those remaining order fills which have not been matched. A quantity weighted average price calculation is used. </p>
+        
+        <p> This method cannot work if there are any missing order fills which make up the current Trade Position.</p>
+    </section>          
+    
+    <section class="h3">
+        <h3 id="UseFlatToFlatOpenPositionAveragePrice">Use Flat to Flat Open Position Average Price</h3>
+        <div class="member-link">[<a href="#UseFlatToFlatOpenPositionAveragePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>It is supported to use an Average Price based within a chart using a Flat to Flat calculation method. </p>
+       
+        <p>In the case of a  Long position,  the flat to flat average price is the  order quantity weighted average price of the Buy order fills since the beginning of the  Long position.  In the case of a Short position, the flat to flat average price is the order quantity weighted average price of the Sell order fills since the beginning of the Short position.</p>       
+        
+        <p>The order fills used in the calculation are determined by a reliable reverse iteration.</p> 
+
+        <p>The Flat to Flat Average Price changes as new entry order fills are made. Exit  order fills have no effect until the Trade Position goes to 0. Unlike the other average price calculations, this is  <em>not</em> just an average of the remaining open fills which make up the current Trade Position.</p> 
+    </section>    
+    
+    <section class="h3">
+        <h3 id="UseTheoreticalOpenPositionAveragePrice">Use Theoretical Open Position Average Price</h3>
+        <div class="member-link">[<a href="#UseTheoreticalOpenPositionAveragePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+         <p>This Open Position Average Price method is calculated as follows. </p> 
+        
+         <p>The order fills which make up the current position are iterated  in reverse.</p> 
+         
+         <p>SumFillPricesTimesQuantity  is calculated as follows:</p> 
+          
+         <p>For a Buy order fill, the fill price times the fill quantity is added to SumFillPricesTimesQuantity. </p> 
+         
+         <p>For a Sell  order fill, the fill price times the fill quantity is subtracted from SumFillPricesTimesQuantity.</p> 
+
+         <p>AveragePrice = SumFillPricesTimesQuantity / PositionQuantity.</p> 
+    </section>
+    
+
+    <section class="h3">
+        <h3 id="OrderFillsStartDateTimeNeedsToBeSetCorrectly">Order Fills Start Date-Time Needs to Be Set Correctly</h3>
+        <div class="member-link">[<a href="#OrderFillsStartDateTimeNeedsToBeSetCorrectly">Link</a>] - [<a href="#top">Top</a>]</div>
+
+          <p> The  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;  Trading</b> <b>&gt;&gt; Order Fills Start Date-Time</b>   <em>must</em> be set as far back in time  to include all of the order fills which make up the current Trade Position.       This is absolutely essential for the Average Price calculation to be correct.  </p>
+          
+           <p>Normally leaving these  Date-Time fields blank is all that is necessary  and the starting  Date is based upon the first date in the chart. For complete details, refer to <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime" Target="_blank" rel="noopener noreferrer">Order Fills Start Date-Time</a>. In the case of Trade Simulation Mode, leaving these fields blank is all that is needed.</p>
+          
+         <p> However, if you have had a  Trade Position running for more than a day you may need to make an adjustment to that setting.</p>
+          
+          <p>Also be aware of the  <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadOrderFillsForCurrentDayOnly">Load Order Fills for Current Day Only</a> setting.</p>
+ 
+
+    </section>
+    <section class="h3">
+        <h3 id="DeterminingFillsUsedInOpenPositionAveragePriceCalculation">Determining Fills Used in Open Position Average Price Calculation</h3>
+        <div class="member-link">[<a href="#DeterminingFillsUsedInOpenPositionAveragePriceCalculation">Link</a>] - [<a href="#top">Top</a>]</div>  
+
+        <p>When using either of these Open position Average Price  settings: </p>
+        <ul>
+         <li><b>Use Last In First Out Fill Matching for Open Position Average Price</b></li>
+
+        <li><b>Use First In First Out Fill Matching for Open Position Average Price</b></li>
+        </ul>
+        
+        <p> You can then use the <a href = "index509f.html?page=doc/TradeActivityLog.php#TradesTabBasicInstructions">Trades</a> tab of the Trade Activity Log and set it to either FIFO or LIFO  to match the setting above and see what particular fills remain and are used in the Average Price calculation for the remaining Open Position.  Set the  <b>From &gt;&gt; Date-Time</b> for the   Trades in the Trade Activity Log to match the  <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a> used in the Chart Settings for the chart.</p>
+        
+        <p>You will not want to use the Flat to Flat Display for the Trades list.  And you will want to look at the entry price of the Trades that do not have an <b> ExitDateTime</b>.   Those are the fills which will be used in the average price calculation. </p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="OrderFillCalculatedAveragePriceFromPosition">Order Fill Calculated Average Price from Order Fill Calculated Position</h3>
+        <div class="member-link">[<a href="#OrderFillCalculatedAveragePriceFromPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If a Chart or Trade DOM is using the <a href="#UsingOrderFillCalculatedPosition">Order Fill Calculated Position</a>, then the Trade Position Average Price will always be calculated from the order fills which make up the current Open Position.</p>
+
+        <p>In this particular case, you can use any of the Open Position Average Price calculation methods as described in the <a href = "howavgpricepositionscalcused.html"> How Average Price for Positions is Calculated and Used</a> section, except for   <b>External  Service Open Position Average Price</b>.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeServiceProvidedAveragePrice">Trade Service Provided Average Price</h3>
+        <div class="member-link">[<a href="#TradeServiceProvidedAveragePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>When <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> <b> &gt;&gt; Open Position Average Price</b>  is set to <b>Use External Service Open Position Average Price</b>  then the Trade Position Average Price  within the chart will use the external service provided value. </p>
+        
+        <p>This is only used for non-simulated trading.   In the case of simulated trading, this <b>Open Position Average Price</b>  setting is ignored and instead the  first in first out order  fill calculated weighted average price calculation is used instead.</p>
+
+        <p>The External Service Open Position Average Price can be viewed on the <b class="menu_item">Trade &gt;&gt; Trade  Positions Window</b>. The field is labeled <b>Average Price</b> and is the trading service provided Average Price for a non-simulated Trade Position for a Symbol and Trade Account.</p> 
+
+        <p>The Trade Service Position Average Price could be 0 for the Symbol and Trade Account if the Trading service does not provide Position Average Price data for the current Trade Positions.</p>
+        
+         <p>In this case if the chart is set to use the <b>Use External Service Open Position Average Price</b>, then you will not see a Trade Position line on the Chart or Trade DOM since there is no Position Average Price.</p> 
+
+        <p>The Trade Service Position Average Price will be used on a Trade Window and chart if the  Trade Position Average Price cannot be determined from the order fills when the <b> Open Position Average Price</b> is set to a setting other than <b>Use External Service Open Position Average Price</b>. </p>
+        
+        <p>If the External Service Open Position Average Price is being used, you will see the letter <b>E</b> after the Average Price. Refer to the image below.</p>
+
+        <div style="text-align: center;"><a href="../images/externalpositionaverageprice.png" rel="lightbox"><img src="../images/externalpositionaverageprice.png" alt="" width="400"  class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="PositionLineNotVisibleOrIncorrectAveragePrice">Position Line Not Visible or Incorrect Average Price</h3>
+        <div class="member-link">[<a href="#PositionLineNotVisibleOrIncorrectAveragePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p> If the Position Line on the chart is not visible, first make sure that <b class="menu_item">Trade &gt;&gt; Show Orders and Position</b> is enabled. </p>
+
+        <p> If the position was opened earlier than the prior day, then disable the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;</b> <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadOrderFillsForCurrentDayOnly">Load Order Fills for Current Day Only</a> option.</p> 
+        
+         <p> Depending upon when the Trade Position was established, you may need to adjust the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;</b> <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a>    setting.  Normally leave this blank. Or if you still have a problem  with the   Position Average Price being 0 or not correct, then set   <b>Order Fills Start Date-Time </b> to a time which is   <em>at or before</em>  the entry order for the   Trade Position.   It does not need to be set exactly.</p>   
+         
+         <p>However, make sure that <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;</b> <a href = "index4cf4.html?page=doc/ChartSettings.html#FilterInitialFillsWhichArePartOfExistingPosition">Filter Initial Fills Which Are Part of Existing Position</a>  is enabled.</p>
+
+
+        <p>If for some reason, the Trade   Position Average Price  was still not able to be correctly calculated or obtained, like in the case when Sierra Chart does not have  the order fill data for the Symbol and Trade Account to calculate it, then when you are looking at a chart which is in Chart Trade Mode, or a Trade DOM, the current Position Line may not be visible within the current view of prices.  This will be true if the  Trade Position Average  Price is 0.</p>
+
+
+        <p>You will always still be able to see the current  <a href = "index9473.html?page=doc/TradeWindow.html#CurrentTradePosition">Trade Position Quantity</a> displayed on the <a href = "index9473.html?page=doc/TradeWindow.html">Trade Window</a>.</p>
+    </section>  
+
+    <section class="h3">
+        <h3 id="OpenPLCalculation">Open Profit/Loss Calculation</h3>
+        <div class="member-link">[<a href="#OpenPLCalculation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Open Profit/Loss displayed on the Trade window after <b>P/L</b>: and also displayed on the Position Line on a chart or a Trade DOM, is calculated as follows when it is displayed as <b>Points (P)</b>: <b>OpenProfitLoss = (LastTradePrice -  PositionAveragePrice) * PositionQuantity</b>.</p>
+
+        <p>PositionQuantity will be a positive number in the case of a Long position and will be negative number  in the case of a Short position.</p>
+
+        <p>Refer to the <a href="#HowAveragePriceForPositionsIsCalculatedAndUsed">How Average Price for Positions Is Calculated and Used</a> section for details on how the <b>AveragePositionPrice</b> value is determined.  </p>
+        
+        <p>You need to understand that there is a small amount of calculation error due to floating-point calculations performed on computers that can exist, and also a slight variation with the <b>AveragePositionPrice</b> could exist when this value is provided by a Trading service, which you may not be able to see due to display rounding.  </p>
+        
+        <p>Therefore, the final  Profit/Loss result could be slightly off especially when displayed as a <b>Currency Value</b>.  For example, you could see a  profit/loss value at  <em>50.01</em> when the technically correct value is   <em>50.00</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DeterminingWhetherFillCalculatedOrTradeServiceAveragePriceUsed">Determining Whether Order Fill Calculated or Trade Service Average Price is Being Used</h3>
+        <div class="member-link">[<a href="#DeterminingWhetherFillCalculatedOrTradeServiceAveragePriceUsed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>How do you determine whether the  <a href="#TradeServiceProvidedAveragePrice">Trade Service Provided Position Average Price</a> is being used on the Trade Window for a Chart  or a Trade DOM instead of the  Sierra Chart calculated  Position Average Price based on the order fills?</p>
+
+        <p>If the Position Average Price you see on the Trade Window for a Chart or Trade DOM has the letter <b class="GeneralBackgroundHighlight">E</b> after it, then this is the Trade Service provided Position Average Price. Otherwise, it is the Order Fill calculated Position Average Price. Refer to the image below for an example of this indicator.</p>
+
+        <div style="text-align: center;"><a href="../images/tradeservicepositionaveragepriceindicator.png" rel="lightbox"><img src="../images/tradeservicepositionaveragepriceindicator.png" alt="" class="screenshot" loading="lazy"></a></div>
+        
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="IncorrectlyReportedTradePositionQuantity">Incorrectly Reported Trade Position Quantity</h2>
+    <div class="member-link">[<a href="#IncorrectlyReportedTradePositionQuantity">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you see an incorrectly reported <em>non-simulated Trade Position Quantity</em> in Sierra Chart, then follow these instructions:</p>
+
+    <ol>
+
+        <li>Make sure <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode</b> is <em>disabled/unchecked</em>.</li>
+
+        <li>If you see an incorrectly reported Trade Position Quantity on a chart, Trade DOM, or on the Trade Window for a chart or Trade DOM, then <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow"  target="_blank" rel="noopener noreferrer">open the Trade Window</a> and make sure <b class="menu_item">Menu/M &gt;&gt; Settings &gt;&gt;  Use Order Fill Calculated Position</b> is <em>disabled/unchecked</em>.
+            <br> <br>
+            Related to this, make sure the correct Trade Account is selected on the Trade Window for the chart or Trade DOM, refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.
+            <br> <br>
+            Also related to this, if the Trade Position Quantity is correct but you do not see the Trade Position line displayed on a chart, then <em>Position Average Price</em> may not be correct or within the viewable price range. In this case, refer to <a href="#HowAveragePriceForPositionsIsCalculatedAndUsed" target="_blank" rel="noopener noreferrer">How Average Price for Positions Is Calculated and Used</a>.
+        </li>
+
+        <li>Go to the <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b>
+            <br> <br>
+            Locate the Trade Position for the <em>Trade Account</em> and <em>Symbol</em> in the list. This window reports the non-simulated Trade Positions as provided by your external Trading service. You must find a match by comparing <em>both the Trade Account and Symbol</em>.
+            <br> <br>
+            If there is an incorrectly reported Trade Position <b>Quantity</b> on this tab for a particular Trade Account and Symbol, then you will need to contact your Trading service about the <b>Quantity</b> that you see in this list.
+            <br> <br>
+            If the Trade Position for the Trade Account and Symbol is not listed at all, this means the Trading service is not reporting the Trade Position for the Trade Account and Symbol.
+            <br> <br>
+            To ensure you have the most up-to-date data  in the  <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b>, select <b class="menu_item">File &gt;&gt;  Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. However, reconnecting to the server is almost never necessary to update the data on the  Trade Positions window and is not likely to change the Positions data reported, since it is automatically updated.
+        </li>
+
+        <li>If you see the correct Trade Position Quantity for the <em>Trade Account</em> and <em>Symbol</em> on the <b>Positions</b> window, however the Symbol does not exactly match the chart or Trade DOM, then this can be a reason why you do not see the Trade Position on the chart or Trade DOM. In the case of Interactive Brokers, only a portion of the leftmost components of the complete symbol need to match.</li>
+
+        <li>If you see an incorrectly reported <b>Open Quantity</b> on the <b class="menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Chart Stats</b> tab (Trade Statistics for Charts), then <em>this is not unusual</em>  and is common. You will need  to adjust the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> <b> &gt;&gt; Order Fills Start Date-Time</b> in the chart the  Trade Statistics line is for.
+            <br> <br>
+            For complete details and instructions, refer to the <a href="index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab_SolvingInaccurateTradeStatisticsForChartsFieldValues">Solving Inaccurate Trade Statistics for Charts Field Values</a>  subsection.
+   
+           <div style="text-align: center;">
+                <a href="../images/tradeactivitylog_tradestatisticschartstab.png" rel="lightbox"><img width="" src="../images/tradeactivitylog_tradestatisticschartstab.png" alt="" class="screenshot" loading="lazy"></a>
+           </div>            
+                    
+            
+         </li>
+         
+         <li>In the case of Interactive Brokers, refer to <a href = "index1f4a.html?page=doc/InteractiveBrokers.php#TradePositionLineQuantityDisappearingDisplayingZero">Trade Position Line or Quantity Disappearing or Displaying Zero</a>. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ResettingIncorrectOrderFillCalculatedPosition">Resetting Incorrect Order Fill Calculated Position</h2>
+    <div class="member-link">[<a href="#ResettingIncorrectOrderFillCalculatedPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the Order Fill Calculated Trade Position for an individual chart or Trade DOM, this Trade Position data could be inaccurate.</p>
+    
+    <p>To reset this data back to 0 for a particular Symbol and Trade Account, requires  setting a start Date-Time for this order fill data loaded into a chart or Trade DOM.</p>
+    
+    <p>To set a starting Date-Time for the order fills loaded into a chart, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime"  Target="_blank" rel="noopener noreferrer">Order Fills Start Date-Time</a> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ResettingPositionQuantityAndProfitLossAtStartOfTradingDay">Resetting Position Quantity and Profit/Loss at Start of Trading Day</h2>
+    <div class="member-link">[<a href="#ResettingPositionQuantityAndProfitLossAtStartOfTradingDay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section explains how to  have the Position Quantity  and the Open position  Profit/Loss to reset to 0 at the start of a trading day whether  this is the start of the evening trading session or the start of the  Day trading session  (regular trading hours). It can be either.  </p>
+    
+    
+    
+    <p> To accomplish this, you first need to enable the   <a href = "#OrderFillCalculatedPosition">Order Fill Calculated Position</a> for the charts or Trading DOMs where you want to have the position reset  at the start of the  trading day. </p>
+
+
+    <p> Once this is done, then what you need to do at the beginning of the trading day  whenever you want that to be,   set the  Date part of the <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a> to the current date.   And set the Time  to the time which is the beginning of the trading day. </p>
+
+
+    <p>  The Position Quantity will go to 0 and the profit/loss will also go to zero. </p>
+    
+</section>
+
+<hr><p>*Last modified Friday, 09th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeStatusWindows.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:46 GMT -->
+</html>  

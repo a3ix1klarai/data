@@ -1,0 +1,1622 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GraphicsSettings.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:54:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105665') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/GraphicsSettings.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Graphics Settings -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index5795.html?page=doc/GraphicsSettings.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SettingsWindows">(Table of Contents) Settings Windows</a> &gt;&gt; <a  href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a></h4> </div>     <h1 class="PageName">Graphics Settings</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a>
+        <ul>
+            <li><a href="#Studies">Changing the Colors and Appearance of Chart Studies</a></li>
+        </ul>
+    </li>
+    <li><a href="#UsingDifferentColorAndGraphicsSettingsForSpecificCharts">Using Different Color and Graphics Settings for Specific Charts</a></li>
+    
+    <li><a href="#Controls">Graphics Settings Controls</a>
+        <ul>
+            <li><a href="#UseGlobalGraphicsSettings">Use Global Graphics Settings Instead of These Settings</a></li>
+            <li><a href="#ColorsDrawWidths">Colors and Widths</a>
+                <ul>
+                    <li><a href="#ChartText">Chart Text</a></li>
+                    <li><a href="#ChartBackground">Chart Background</a></li>
+                    <li><a href="#ChartGrid">Chart Grid</a></li>
+                    <li><a href="#ChartGridSecondary">Chart Grid Secondary</a></li>
+                    <li><a href="#ChartScaleBorder">Chart Scale Border</a></li>
+                    <li><a href="#ChartSelectedTabColor">Chart Selected Tab Color</a></li>
+                    <li><a href="#ChartSelectedTabTextColor">Chart Selected Tab Text Color</a></li>
+                    <li><a href="#ChartSelectedTabBorderColor">Chart Selected Tab Border Color</a></li>
+                    <li><a href="#ChartTabColor">Chart Tab Color</a></li>
+                    <li><a href="#ChartTabTextColor">Chart Tab Text Color</a></li>
+                    <li><a href="#ChartbookSelectedTabColor">Chartbook Selected Tab Color</a></li>
+                    <li><a href="#ChartbookSelectedTabTextColor">Chartbook Selected Tab Text Color</a></li>
+                    <li><a href="#ChartbookTabColor">Chartbook Tab Color</a></li>
+                    <li><a href="#ChartbookTabTextColor">Chartbook Tab Text Color</a></li>
+                    <li><a href="#LastTradePriceBox">Last Trade Price Box</a></li>
+                    <li><a href="#LastTradePriceBoxForeground">Last Trade Price Box Foreground</a></li>
+                    <li><a href="#LastTradePriceBoxOutline">Last Trade Price Box Outline</a></li>
+                    <li><a href="#BarHighLowDown">Bar High-Low Down</a></li>
+                    <li><a href="#BarHighLowUp">Bar High-Low Up</a></li>
+                    <li><a href="#BarOpen">Bar Open</a></li>
+                    <li><a href="#BarClose">Bar Close</a></li>
+                    <li><a href="#LineOnCloseLineOnOpenMountain">Line On Close / Line On Open / Mountain</a></li>
+                    <li><a href="#CandlestickUpOutline">Candlestick Up Outline</a></li>
+                    <li><a href="#CandlestickUpFill">Candlestick Up Fill</a></li>
+                    <li><a href="#CandlestickDownOutline">Candlestick Down Outline</a></li>
+                    <li><a href="#CandlestickDownFill">Candlestick Down Fill</a></li>
+                    <li><a href="#NetChangeUp">Net Change Up</a></li>
+                    <li><a href="#NetChangeDown">Net Change Down</a></li>
+                    <li><a href="#BidAskAverageLine">Bid Ask Average Line</a></li>
+                    <li><a href="#ScrollEndColor">Scroll End Color</a></li>
+                    <li><a href="#ScrollNotEndColor">Scroll Not End Color</a></li>
+                    <li><a href="#ControlBarEnabledButtonText">Control Bar Enabled Button Text</a></li>
+                    <li><a href="#ControlBarDisabledButtonText">Control Bar Disabled Button Text</a></li>
+                    <li><a href="#ChartValues_ColorOfThePriceAndTimeBoxes">Chart Values: Color of the Price and Time Boxes</a></li>
+                    <li><a href="#ChartValues_Crosshair">Chart Values: Crosshair</a></li>
+                    <li><a href="#TimeAndSales_BidTradesBackground">Time and Sales: Bid Trades Background</a></li>
+                    <li><a href="#TimeAndSales_BidTradesText">Time and Sales: Bid Trades Text</a></li>
+                    <li><a href="#TimeAndSales_BelowBidTradesBackground">Time and Sales: Below Bid Trades Background</a></li>
+                    <li><a href="#TimeAndSales_BelowBidTradesText">Time and Sales: Below Bid Trades Text</a></li>
+                    <li><a href="#TimeAndSales_AskTradesBackground">Time and Sales: Ask Trades Background</a></li>
+                    <li><a href="#TimeAndSales_AskTradesText">Time and Sales: Ask Trades Text</a></li>
+                    <li><a href="#TimeAndSales_AboveAskTradesBackground">Time and Sales: Above Ask Trades Background</a></li>
+                    <li><a href="#TimeAndSales_AboveAskTradesText">Time and Sales: Above Ask Trades Text</a></li>
+                    <li><a href="#TimeAndSales_BidAndAskRecordsTradesBackground">Time and Sales: Bid and Ask Records Trades Background</a></li>
+                    <li><a href="#TimeAndSales_BidAndAskRecordsTradesText">Time and Sales: Bid and Ask Records Trades Text</a></li>
+                    <li><a href="#TimeAndSales_BidHighlightColor">Time and Sales: Bid Highlight Color</a></li>
+                    <li><a href="#TimeAndSales_AskHighlightColor">Time and Sales: Ask Highlight Color</a></li>
+                    <li><a href="#StudySummary_Background">Study Summary: Background</a></li>
+                    <li><a href="#StudySummary_Gridlines">Study Summary: Gridlines</a></li>
+                    <li><a href="#StudySummary_SelectedRow">Study Summary: Selected Row</a></li>
+                    <li><a href="#StudySummary_AlertTrueBackground">Study Summary: Alert True Background</a></li>
+                    <li><a href="#BidAskBar_LargeVolumeAskBar">Bid Ask Bar: Large Volume Ask Bar</a></li>
+                    <li><a href="#BidAskBar_MediumLargeVolumeAskColor">Bid Ask Bar: Medium-Large Volume Ask Color</a></li>
+                    <li><a href="#BidAskBar_LightMediumVolumeAskColor">Bid Ask Bar: Light-Medium Volume Ask Color</a></li>
+                    <li><a href="#BidAskBar_LightVolumeAskColor">Bid Ask Bar: Light Volume Ask Color</a></li>
+                    <li><a href="#BidAskBar_LargeVolumeBidColor">Bid Ask Bar: Large Volume Bid Color</a></li>
+                    <li><a href="#BidAskBar_MediumLargeVolumeBidColor">Bid Ask Bar: Medium-Large Volume Bid Color</a></li>
+                    <li><a href="#BidAskBar_LightMediumVolumeBidColor">Bid Ask Bar: Light-Medium Volume Bid Color</a></li>
+                    <li><a href="#BidAskBar_LightVolumeBidColor">Bid Ask Bar: Light Volume Bid Color</a></li>
+                    <li><a href="#MarketDepth_BidGradientStartColor">Market Depth: Bid Gradient Start Color</a></li>
+                    <li><a href="#MarketDepth_BidGradientEndColor">Market Depth: Bid Gradient End Color</a></li>
+                    <li><a href="#MarketDepth_AskGradientStartColor">Market Depth: Ask Gradient Start Color</a></li>
+                    <li><a href="#MarketDepth_AskGradientEndColor">Market Depth: Ask Gradient End Color</a></li>
+                    <li><a href="#MarketDepth_TextColor">Market Depth: Text Color</a></li>
+                    <li><a href="#MarketDepth_BackgroundColor">MarketDepth: Background Color</a></li>
+                    <li><a href="#SpreadsheetDefaultTextColor">Spreadsheet Default Text Color</a></li>
+                    <li><a href="#SpreadsheetDefaultBackgroundColor">Spreadsheet Default Background Color</a></li>
+                    <li><a href="#SpreadsheetActiveCellBorder">Spreadsheet Active Cell Border</a></li>
+                    <li><a href="#SpreadsheetSelectionHighlightColor">Spreadsheet Selection Highlight Color</a></li>
+                    <li><a href="#SpreadsheetFunctionMarkerColor">Spreadsheet Function Marker Color</a></li>
+                    <li><a href="#SpreadsheetCommentMarkerColor">Spreadsheet Comment Marker Color</a></li>
+                    <li><a href="#SpreadsheetCommentTextColor">Spreadsheet Comment Text Color</a></li>
+                    <li><a href="#SpreadsheetCommentBackgroundColor">Spreadsheet Comment Background Color</a></li>
+                    <li><a href="#SpreadsheetGrid">Spreadsheet Grid</a></li>
+                </ul>
+			</li>
+            <li><a href="#EnableSetting">"Enable" Setting</a></li>
+            <li><a href="#CandlestickWidthPercentage">Other Settings</a></li>
+            <li><a href="#OHLCWidthPercentage">OHLC Width Percentage</a></li>
+            <li><a href="#PriceVolumeWidthPercentage">Price Volume Width Percentage</a></li>
+            <li><a href="#ArrowDrawStyleMaxWidth">Arrow Draw Style Max Width (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#DefaultChartBarSpacing">Default Chart Bar Spacing (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#DefaultRightSideFillSpace">Default Right Side Fill Space (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#ColorEntireOHLCBarTheHighLowColor">Color Entire OHLC Bar the High/Low Color (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#ColorCandlestickHLUsingOutlineColors">Color Candlestick High-Low Using the Outline Colors (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#DrawBidAndAskLinesAtLastBarWhenEnabled">Draw Bid and Ask Lines at Last Bar When Enabled (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#UpDownColoringForOHLCBarsBasedonPreviousAndCurrentClose">Up/Down Coloring for OHLC Bars Based on Previous and Current Close (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#UnderlineChartHeaderFieldNames">Underline Chart Header Field Names (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#BoldDOMLastPrice">Bold DOM Last Price (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+            <li><a href="#UseOpenGLForChartGraphics">Use OpenGL for Chart Graphics (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</a></li>
+    
+        </ul>
+    </li>
+    <li><a href="#FontsAndText">Fonts and Text Appearance</a>
+        <ul>
+            <li><a href="#ChartTextFont">Chart Text</a></li>
+            <li><a href="#DOMQuantitiesSizesFont">DOM Quantities/Sizes</a></li>
+            <li><a href="#Font_TimeAndSalesWindow">Time and Sales Window</a></li>
+            <li><a href="#Font_MarketDepthWindow">Market Depth Window</a></li>
+            <li><a href="#Font_ChartOrderFills">Chart Order Fills</a></li>
+            <li><a href="#TextWindowsFont">Text Windows</a></li>
+            <li><a href="#SpreadsheetsFont">Spreadsheets</a></li>
+            <li><a href="#ChartbookAndMDITabsTextFont">Chartbook and MDI Tabs Text</a></li>
+            <li><a href="#ControBarTextFont">Control Bar Text</a></li>
+            <li><a href="#CompactToolValuesWindowFont">Compact Tool Values Window</a></li>
+            <li><a href="#StudySummaryWindowFont">Study Summary Window</a></li>            
+            <li><a href="#ChangingTheFontSizeForTextDisplayedWithToolDrawings">Changing the Font Size For Text Displayed with Tool Drawings (Global Chart Drawing Font)</a></li>
+            <li><a href="#FontSizesUnexpectedlyChanging">Font Sizes Unexpectedly Changing</a></li>
+        </ul>
+    </li>  
+    <li><a href="#ChartBarWidths">Chart Bar Widths</a>
+        <ul>
+            <li><a href="#ChangingTheHighLowDrawWidth">Changing the High-Low Draw Width</a></li>
+            <li><a href="#IncreasingOrDecreasingTheChartBarSpacing">Increasing and Decreasing the Chart Bar Spacing</a></li>
+            <li><a href="#ChangingTheCandlestickWidthOrOHLCWidth">Changing the Candlestick Width % or OHLC Width %</a></li>
+        </ul>
+    </li>    
+    <li><a href="#HowChartBarAndCandlestickUpDownIsDetermined">How Chart Bar and Candlestick Up Down is Determined</a></li>
+    
+    <li><a href="#Tasks">Tasks</a>
+        <ul>
+            <li><a href="#IndependentColoringAndWidthsForCandlesticksHighLowBars">Independent Coloring and Widths for Candlesticks High-Low Bars (Wicks)</a></li>
+            <li><a href="#SettingTheBackgroundColorTextColorAndFontForTextOnlyWindows">Setting the Background Color, Text Color, and Font for Text Only Windows</a></li>
+            <li><a href="#HollowRenkoBricks">Hollow Renko Bricks</a></li>
+        </ul>
+    </li>
+    <li><a href="#SavingAndLoadingMultipleGraphicsSettingsConfigurations">Saving and Loading Multiple Graphics Settings Configurations</a></li>    
+    <li><a href="#AdjustingGraphicsSettingsForHighDPIDisplays">Adjusting Graphics Settings and Fonts for High DPI Displays</a></li>
+    <li><a href="#AdjustingSizeOfDialogWindows">Adjusting Size of Dialog Windows</a></li>
+    <li><a href="#SettingDefaultCustomColors">Setting Default Custom Colors</a></li>
+    <li><a href="#AdjustingTextSizeOnMenus">Adjusting Text Size on Menus</a></li>
+    <li><a href="#SettingColorsForChartAndChartbookTabsForTheMainWindow">Setting Colors for Chart and Chartbook Tabs for the Main Window</a></li>
+    <li><a href="#SettingColorForMainWindowBackground">Setting Color for Main Window Background</a></li>
+    <li><a href="#SettingColorsForListViewHeaders">Setting Colors for List View Headers</a></li>
+
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/graphicssettings1.png" rel="lightbox"><img src="../images/graphicssettings1.png" alt="Graphics Settings Colors and Chart Font" class="MediumFloatRight"></a>
+
+    <a href="../images/graphicssettings2.png" rel="lightbox"><img src="../images/graphicssettings2.png" alt="Graphics Settings Other" class="MediumFloatRight"></a>
+    <p>There are <em>two versions</em> of the Graphics Settings window.</p>
+
+    <p>The first version is opened by selecting <b class="menu_item">Chart &gt;&gt; Graphics Settings</b> on the menu. </p>
+
+    <p>This is the chart specific Graphics Settings window and lets you individually set the <em>Colors and Widths</em> for various chart objects for the <em>active chart</em>. And you can set the <b>Chart Text Font</b> for the chart as well. </p>
+
+    <p>When you use this specific Graphics Settings window, you need to uncheck the <b>Use Global Graphics Settings Instead of These Settings</b> option on this window, to let you choose to use the settings specified on this window, rather than the Global Graphics Settings specified in <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>.</p>
+
+    <div style="text-align: center;"><a href="../images/chartgraphicssettings.png" rel="lightbox"><img src="../images/chartgraphicssettings.png" class="screenshot" loading="lazy" alt="Chart Menu"></a></div>
+
+    <p>The second version is opened by selecting <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> on the menu. </p>
+
+    <p>With this Graphics Settings window you are able to set all of the various global graphics and appearance settings. These settings are global and they apply to the entire Sierra Chart program and all charts that are not set to use the chart specific settings under <b class="menu_item">Chart &gt;&gt; Graphics Settings</b>.</p>
+
+    <p>You cannot control the colors and appearance of studies though through this window. Only the main price graph colors and widths, and other global graphics settings.</p>
+
+    <div style="text-align: center;"><a href="../images/globalgraphicssettings.png" rel="lightbox"><img src="../images/globalgraphicssettings.png" class="screenshot" loading="lazy" alt="Global Settings Menu"></a></div>
+
+    <p>With either Graphics Settings window, press <b>OK</b> to accept the settings, <b>Apply</b> to apply the settings without closing the window or <b>Cancel</b> to close the window without saving.</p>
+
+    <section class="h3">
+        <h3 id="Studies">Changing the Colors and Appearance of Chart Studies</h3>
+        <div class="member-link">[<a href="#Studies">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>The colors and appearance of studies is independent from the settings in the Graphics Settings window and is controlled through the <b>Study Settings</b> window for each individual study. For instructions to change the Study Settings for study, refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Chart Studies</a> page.</p>
+    </section>
+</section>
+ 
+ <section class="h2">
+    <h2 id="UsingDifferentColorAndGraphicsSettingsForSpecificCharts">Using Different Color and Graphics Settings for Specific Charts</h2>
+    <div class="member-link">[<a href="#UsingDifferentColorAndGraphicsSettingsForSpecificCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> It is supported to use colors and other graphic settings for individual specific charts that are different than the global color and graphic settings. </p>
+
+    <p> To do this, follow the instructions below. </p>
+    
+    <ol>
+        <li>Go to the chart that you want to change the colors and other graphics settings to be different than the global settings. You can select the chart from the <b class="menu_item">CW</b> menu or left click on its title bar.</li>
+        
+        <li>Select  <b class="menu_item">Chart &gt;&gt; Graphics Settings - Chart</b>.</li>
+        
+        <li>Uncheck   <b>Use Global Graphics Settings Instead of These Settings</b>.</li>
+        
+        <li>  If you want the chart to use the global color and graphics settings, then make sure that <b>Use Global Graphics Settings Instead of These Settings</b>  is enabled. </li>
+        
+        <li>Change the colors and other settings as you require. For more information about the controls, refer to <a href = "#Controls">Graphics Settings Controls</a>.</li>
+        
+        <li>Press <b>OK</b>.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="Controls">Graphics Settings Controls</h2>
+    <div class="member-link">[<a href="#Controls">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id = "UseGlobalGraphicsSettings">Use Global Graphics Settings Instead of These Settings</h3>
+        <div class="member-link">[<a href="#UseGlobalGraphicsSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Select <b class="menu_item">Chart &gt;&gt; Graphics Settings</b> and disable <b>Use Global Graphics Settings Instead of These Settings</b> to use graphics settings that are specific to the active chart which are set through the <b class="menu_item">Chart &gt;&gt; Graphics Settings</b>window.</p>
+
+        <p>Customize the colors, widths and Chart Text Font as you require. Press <b>OK</b> when done. These settings affect the active chart. To save the chart to the active Chartbook, select <b class="menu_item">File &gt;&gt; Save</b> on the menu.</p>
+
+        <p>Each new chart you open, inherits the Global Graphics Settings specified under <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> by default.</p>
+        
+        <p> Enable the <b>Use Global Graphics Settings Instead of These Settings</b> option to use graphics settings that are global and are set through <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ColorsDrawWidths">Colors and Widths</h3>
+        <div class="member-link">[<a href="#ColorsDrawWidths">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Select an object in the <b>Colors and Widths</b> tab list box  of the <a href="#Introduction">Graphics Settings</a> window to change its color, width, and/or   line style.  </p>
+        
+         <p>Some of the  objects also have an <b>Enable</b> option which needs to be checked/enabled for the color to be used. </p>
+
+        <p>Press the colored button below the list box to display the <b>Color</b> selector window. Select the color from the Color selector window and press <b>OK</b> to save  the chosen color. In the <b>Width</b> box set the width for the selected  object.</p>
+
+        <section class="h4">
+            <h4 id="ChartText">Chart Text</h4>
+            <div class="member-link">[<a href="#ChartText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the text that is displayed in the Scales and the Chart Header. It also is used for the color of the box that is displayed when using the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ZoomInOut">Zoom In</a> Chart Drawing Tool.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartBackground">Chart Background</h4>
+            <div class="member-link">[<a href="#ChartBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the background of the chart window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartGrid">Chart Grid</h4>
+            <div class="member-link">[<a href="#ChartGrid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color and line style of the Horizontal and Vertical Grid lines.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartGridSecondary">Chart Grid Secondary</h4>
+            <div class="member-link">[<a href="#ChartGridSecondary">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color and line style of the Secondary Grid lines.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartScaleBorder">Chart Scale Border</h4>
+            <div class="member-link">[<a href="#ChartScaleBorder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the border surrounding the graphics area and the left side of the Price Scale/Chart DOM.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartSelectedTabColor">Chart Selected Tab Color</h4>
+            <div class="member-link">[<a href="#ChartSelectedTabColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color of the tab for the selected (active) chart within a Chartbook.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartSelectedTabTextColor">Chart Selected Tab Text Color</h4>
+            <div class="member-link">[<a href="#ChartSelectedTabTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the text on the tab for the selected (active) chart within a Chartbook.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartSelectedTabBorderColor">Chart Selected Tab Border Color</h4>
+            <div class="member-link">[<a href="#ChartSelectedTabBorderColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the border on the tab for the selected (active) chart within a Chartbook.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartTabColor">Chart Tab Color</h4>
+            <div class="member-link">[<a href="#ChartTabColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color of the tabs for the not selected (not active) charts within a Chartbook.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartTabTextColor">Chart Tab Text Color</h4>
+            <div class="member-link">[<a href="#ChartTabTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the text on the tabs for the not selected (not active) charts within a Chartbook.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartbookSelectedTabColor">Chartbook Selected Tab Color</h4>
+            <div class="member-link">[<a href="#ChartbookSelectedTabColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color of the tab for the selected (active) Chartbook.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartbookSelectedTabTextColor">Chartbook Selected Tab Text Color</h4>
+            <div class="member-link">[<a href="#ChartbookSelectedTabTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the text on the tab for the slected (active) Chartbook.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartbookTabColor">Chartbook Tab Color</h4>
+            <div class="member-link">[<a href="#ChartbookTabColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color of the tabs for the not selected (not active) Chartbooks.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartbookTabTextColor">Chartbook Tab Text Color</h4>
+            <div class="member-link">[<a href="#ChartbookTabTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the text on the tabs for the not selected (not active) Chartbooks.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="LastTradePriceBox">Last Trade Price Box</h4>
+            <div class="member-link">[<a href="#LastTradePriceBox">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the background of the last trade price box on the right side of the chart in the Values Scale.</p>
+            
+            <p>The <b> Enable</b> option to the right of this color setting needs to be enabled for the Last Trade Price Box to be displayed. </p>
+            
+            <p> It is also possible to change the background color based upon whether  the last trade is a Bid trade or Ask trade. Refer to  <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#ChartDOMLastPriceBackgroundBidTrade">Chart DOM Last Price Background Bid Trade</a>, <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#ChartDOMLastPriceBackgroundAskTrade">Chart DOM Last Price Background Ask Trade</a> in the case of a Chart DOM. </p>
+            
+            <p>In the case of a Trade DOM, refer to <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#TradeDOMLastPriceBackgroundBidTrade">Trade DOM Last Price Background Bid Trade</a>, <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#TradeDOMLastPriceBackgroundAskTrade">Trade DOM Last Price Background Ask Trade</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="LastTradePriceBoxForeground">Last Trade Price Box Foreground</h4>
+            <div class="member-link">[<a href="#LastTradePriceBoxForeground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the foreground (text) of the last trade price box on the right side of the chart in the Values Scale.</p>
+            
+            <p> It is also possible to change the text color based upon whether  the last trade is a Bid trade or Ask trade. Refer to  <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#ChartDOMLastPriceTextAtBid">Chart DOM Last Price Text Bid Trade</a>, <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#ChartDOMLastPriceTextAtAsk">Chart DOM Last Price Text Ask Trade</a> in the case of a Chart DOM. </p>
+            
+            <p>In the case of a Trade DOM, refer to <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#TradeDOMLastPriceTextAtBid">Trade DOM Last Price Text Bid Trade</a>, <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php#TradeDOMLastPriceTextAtAsk">Trade DOM Last Price Text Ask Trade</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="LastTradePriceBoxOutline">Last Trade Price Box Outline</h4>
+            <div class="member-link">[<a href="#LastTradePriceBoxOutline">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Last Trade Price Box Outline</b> can be optionally enabled and controls the color and size of the outline of the last trade price box on the right side of the chart in the Values Scale.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BarHighLowDown">Bar High-Low Down</h4>
+            <div class="member-link">[<a href="#BarHighLowDown">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Bar High-Low Down</b> item in the <b>Colors and Widths</b> list box represents the High to Low portion of a chart bar when the bar is considered a Down bar. </p>
+
+            <p>This color setting also applies to Candlestick bars as well. In the case of <b>Candlestick</b> bars, when you have the option <b>Other &gt;&gt; Color Candlestick High-Low Using the Outline Colors</b> enabled, then this color setting will be ignored and the <b>Candlestick Up/Down Outline</b> colors will be used for the High-Low portion (wick) of the bar instead. Therefore, if you want to color the wick portion of a Candlestick bar differently than the body color and its outline, disable <b>Other &gt;&gt; Color Candlestick High-Low Using the Outline Colors</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BarHighLowUp">Bar High-Low Up</h4>
+            <div class="member-link">[<a href="#BarHighLowUp">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Bar High-Low Up</b> item in <b>Colors and Widths</b> list box represents the High to Low portion of a chart bar when the bar is considered an Up bar. </p>
+
+            <p>This color setting also applies to Candlestick bars as well. In the case of <b>Candlestick</b> bars, when you have the option <b>Other &gt;&gt; Color Candlestick High-Low Using the Outline Colors</b> enabled, then this color setting will be ignored and the <b>Candlestick Up/Down Outline</b> colors will be used for the High-Low portion (wick) of the bar instead. Therefore, if you want to color the wick portion of a Candlestick bar differently than the body color and its outline, disable <b>Other &gt;&gt; Color Candlestick High-Low Using the Outline Colors</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BarOpen">Bar Open</h4>
+            <div class="member-link">[<a href="#BarOpen">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Bar Open</b> item in <b>Colors and Widths</b> list box is for the open marker on the left side of a chart bar. </p>
+
+            <p> This color setting is ignored when <a href="#ColorEntireOHLCBarTheHighLowColor">Color Entire OHLC Bar the High/Low Color</a> is enabled.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BarClose">Bar Close</h4>
+            <div class="member-link">[<a href="#BarClose">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Bar Close</b> item in <b>Colors and Widths</b> list box is for the close marker on the right side of a chart bar. </p>
+
+            <p> This color setting is ignored when <a href="#ColorEntireOHLCBarTheHighLowColor">Color Entire OHLC Bar the High/Low Color</a> is enabled.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="LineOnCloseLineOnOpenMountain">Line On Close / Line On Open / Mountain</h4>
+            <div class="member-link">[<a href="#LineOnCloseLineOnOpenMountain">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color, size, and line type when using the <b>Line On Close</b>, <b>Mountain</b>, <b>Line On Open</b>, <b>Line on HL Avg</b>, or <b>Stair Step on Close</b> Chart Draw Types.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CandlestickUpOutline">Candlestick Up Outline</h4>
+            <div class="member-link">[<a href="#CandlestickUpOutline">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the outline of a Candlestick Bar when it is an <b>Up</b> bar.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CandlestickUpFill">Candlestick Up Fill</h4>
+            <div class="member-link">[<a href="#CandlestickUpFill">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the interior fill of a Candlestick Bar when it is an <b>Up</b> bar.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CandlestickDownOutline">Candlestick Down Outline</h4>
+            <div class="member-link">[<a href="#CandlestickDownOutline">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the outline of a Candlestick Bar when it is a <b>Down</b> bar.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CandlestickDownFill">Candlestick Down Fill</h4>
+            <div class="member-link">[<a href="#CandlestickDownFill">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the interior fill of a Candlestick Bar when it is a <b>Down</b> bar.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="NetChangeUp">Net Change Up</h4>
+            <div class="member-link">[<a href="#NetChangeUp">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the <b>Net Change Up</b> header text. If Reverse Color is selected for this header text, then this is the color used to Highlight the text and the text will use the Background Color of the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="NetChangeDown">Net Change Down</h4>
+            <div class="member-link">[<a href="#NetChangeDown">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the <b>Net Change Down</b> header text. If Reverse Color is selected for this header text, then this is the color used to Highlight the text and the text will use the Background Color of the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskAverageLine">Bid Ask Average Line</h4>
+            <div class="member-link">[<a href="#BidAskAverageLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the <a href="indexfd56.html?page=doc/ChartMenu.html#BidAskAverageLine" target="_blank" rel="noopener noreferrer">Bid Ask Average Line</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ScrollEndColor">Scroll End Color</h4>
+            <div class="member-link">[<a href="#ScrollEndColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the highlight color of the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartSettingsIndicatorsAtLowerRight">Chart Settings Indicators at Lower Right</a> when the chart is fully scrolled to the end.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ScrollNotEndColor">Scroll Not End Color</h4>
+            <div class="member-link">[<a href="#ScrollNotEndColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the highlight color of the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartSettingsIndicatorsAtLowerRight">Chart Settings Indicators at Lower Right</a> when the chart is not fully scrolled to the end.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ControlBarEnabledButtonText">Control Bar Enabled Button Text</h4>
+            <div class="member-link">[<a href="#ControlBarEnabledButtonText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the Control Bar Button Text when a control bar button is set to display the Caption and not an image and the Control Bar Button can be selected.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ControlBarDisabledButtonText">Control Bar Disabled Button Text</h4>
+            <div class="member-link">[<a href="#ControlBarDisabledButtonText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the Control Bar Button Text when a control bar button is set to display the Caption and not an image and the Control Bar Button is not available to be selected.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartValues_ColorOfThePriceAndTimeBoxes">Chart Values: Color of the Price and Time Boxes</h4>
+            <div class="member-link">[<a href="#ChartValues_ColorOfThePriceAndTimeBoxes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the Price and Time boxes that are displayed in the scales when the crosshair is being used and the option <b>Show Y Values and Price Boxes</b> is enabled on the <b class="menu_item">General Settings &gt;&gt; Tool Settings &gt;&gt; Chart Values</b> tab.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartValues_Crosshair">Chart Values: Crosshair</h4>
+            <div class="member-link">[<a href="#ChartValues_Crosshair">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color, width and style of the Crosshairs.</p>
+            
+            <p> To control the appearance of the center cross, which is provided by the operating system, refer to <a href = "indexb844.html?page=doc/Tools.html#ControllingTypeOfPointerDisplayed">Controlling the Type of Pointer Displayed When Using Drawing Tools</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_BidTradesBackground">Time and Sales: Bid Trades Background</h4>
+            <div class="member-link">[<a href="#TimeAndSales_BidTradesBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for a line of data in the Time and Sales window when a Trade is considered a <b>Bid Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_BidTradesText">Time and Sales: Bid Trades Text</h4>
+            <div class="member-link">[<a href="#TimeAndSales_BidTradesText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the text color for a line of data in the Time and Sales window when a Trade is considered a <b>Bid Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_BelowBidTradesBackground">Time and Sales: Below Bid Trades Background</h4>
+            <div class="member-link">[<a href="#TimeAndSales_BelowBidTradesBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for a line of data in the Time and Sales window when a Trade is considered a <b>Below Bid Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_BelowBidTradesText">Time and Sales: Below Bid Trades Text</h4>
+            <div class="member-link">[<a href="#TimeAndSales_BelowBidTradesText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the text color for a line of data in the Time and Sales window when a Trade is considered a <b>Below Bid Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_AskTradesBackground">Time and Sales: Ask Trades Background</h4>
+            <div class="member-link">[<a href="#TimeAndSales_AskTradesBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for a line of data in the Time and Sales window when a Trade is considered an <b>Ask Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_AskTradesText">Time and Sales: Ask Trades Text</h4>
+            <div class="member-link">[<a href="#TimeAndSales_AskTradesText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the text color for a line of data in the Time and Sales window when a Trade is considered an <b>Ask Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_AboveAskTradesBackground">Time and Sales: Above Ask Trades Background</h4>
+            <div class="member-link">[<a href="#TimeAndSales_AboveAskTradesBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for a line of data in the Time and Sales window when a Trade is considered an <b>Above Ask Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_AboveAskTradesText">Time and Sales: Above Ask Trades Text</h4>
+            <div class="member-link">[<a href="#TimeAndSales_AboveAskTradesText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the text color for a line of data in the Time and Sales window when a Trade is considered an <b>Above Ask Trade</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_BidAndAskRecordsTradesBackground">Time and Sales: Bid and Ask Records Trades Background</h4>
+            <div class="member-link">[<a href="#TimeAndSales_BidAndAskRecordsTradesBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for a line of data in the Time and Sales window that is a <b>Bid Ask Record</b>.</p>
+
+            <p>The <b>Bid Ask Records</b> are only displayed if the option for <b>Show Bid and Ask Records</b> is enabled on the <b>Time and Sales Window &gt;&gt; Settings</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_BidAndAskRecordsTradesText">Time and Sales: Bid and Ask Records Trades Text</h4>
+            <div class="member-link">[<a href="#TimeAndSales_BidAndAskRecordsTradesText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the text color for a line of data in the Time and Sales window that is a <b>Bid Ask Record</b>.</p>
+
+            <p>The <b>Bid Ask Records</b> are only displayed if the option for <b>Show Bid and Ask Records</b> is enabled on the <b>Time and Sales Window &gt;&gt; Settings</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_BidHighlightColor">Time and Sales: Bid Highlight Color</h4>
+            <div class="member-link">[<a href="#TimeAndSales_BidHighlightColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for a line of data in the Time and Sales window when a Trade is considered a <b>Bid Trade</b> or a <b>Below Bid Trade</b>.</p>
+
+            <p>This coloring only occurs when the <b>Highlight and Alert</b> condition is met and the <b>Color Row</b> option is enabled on the <b>Time and Sales Window &gt;&gt; Settings</b> page. For more information refer to the Highlight sections within the <a href="indexc3ee.html?page=doc/TimeandSalesWindow.html#Settings">Time and Sales Window Settings</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TimeAndSales_AskHighlightColor">Time and Sales: Ask Highlight Color</h4>
+            <div class="member-link">[<a href="#TimeAndSales_AskHighlightColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for a line of data in the Time and Sales window when a Trade is considered an <b>Ask Trade</b> or an <b>Above Ask Trade</b>.</p>
+
+            <p>This coloring only occurs when the <b>Highlight and Alert</b> condition is met and the <b>Color Row</b> option is enabled on the <b>Time and Sales Window &gt;&gt; Settings</b> page. For more information refer to the Highlight sections within the <a href="indexc3ee.html?page=doc/TimeandSalesWindow.html#Settings">Time and Sales Window Settings</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="StudySummary_Background">Study Summary: Background</h4>
+            <div class="member-link">[<a href="#StudySummary_Background">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the default background color for cells in the <b>Study Summary Window</b>. For information on the background coloring of the Study Summary cells, refer to <a href="index9df4.html?page=doc/StudySummaryWindow.php#NumberTextAndColorControlForStudySummarySubgraphCells">Number Text and Color Control For Study Summary Subgraph Cells</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="StudySummary_Gridlines">Study Summary: Gridlines</h4>
+            <div class="member-link">[<a href="#StudySummary_Gridlines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the Gridlines that are displayed in the <b>Study Summary Window</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="StudySummary_SelectedRow">Study Summary: Selected Row</h4>
+            <div class="member-link">[<a href="#StudySummary_SelectedRow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for cells in the <b>Study Summary Window</b> that are highlighted when the row is selected. For more information on how to color the background of just the first cell or all cells in a row when selected, refer to <a href="index9df4.html?page=doc/StudySummaryWindow.php#SelectionHighlightsAllColumns">Selection Highlights All Columns</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="StudySummary_AlertTrueBackground">Study Summary: Alert True Background</h4>
+            <div class="member-link">[<a href="#StudySummary_AlertTrueBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the background color for cells that have a <b>True</b> alert condition associated with them. For more information on the background coloring of the Study Summary cells, refer to <a href="index9df4.html?page=doc/StudySummaryWindow.php#NumberTextAndColorControlForStudySummarySubgraphCells">Number Text and Color Control For Study Summary Subgraph Cells</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_LargeVolumeAskBar">Bid Ask Bar: Large Volume Ask Bar</h4>
+            <div class="member-link">[<a href="#BidAskBar_LargeVolumeAskBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the ask color of a Bid Ask Bar when the total volume of the bar is equal to or greater than 75% of the largest volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_MediumLargeVolumeAskColor">Bid Ask Bar: Medium-Large Volume Ask Color</h4>
+            <div class="member-link">[<a href="#BidAskBar_MediumLargeVolumeAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the ask color of a Bid Ask Bar when the total volume of the bar is equal to or greater than 50% and less than 75% of the largest Volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_LightMediumVolumeAskColor">Bid Ask Bar: Light-Medium Volume Ask Color</h4>
+            <div class="member-link">[<a href="#BidAskBar_LightMediumVolumeAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the Ask color of a Bid Ask Bar when the total volume of the bar is equal to or greater than 25% and less than 50% of the largest Volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_LightVolumeAskColor">Bid Ask Bar: Light Volume Ask Color</h4>
+            <div class="member-link">[<a href="#BidAskBar_LightVolumeAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the Ask color of a Bid Ask Bar when the total volume of the bar is less than 25% of the the largest Volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_LargeVolumeBidColor">Bid Ask Bar: Large Volume Bid Color</h4>
+            <div class="member-link">[<a href="#BidAskBar_LargeVolumeBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the Bid color of a Bid Ask Bar when the total volume of the bar is equal to or greater than 75% of the largest volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_MediumLargeVolumeBidColor">Bid Ask Bar: Medium-Large Volume Bid Color</h4>
+            <div class="member-link">[<a href="#BidAskBar_MediumLargeVolumeBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the Bid color of a Bid Ask Bar when the total volume of the bar is equal to or greater than 50% and less than 75% of the largest Volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_LightMediumVolumeBidColor">Bid Ask Bar: Light-Medium Volume Bid Color</h4>
+            <div class="member-link">[<a href="#BidAskBar_LightMediumVolumeBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the Bid Color of a Bid Ask Bar when the total volume of the bar is equal to or greater than 25% and less than 50% of the largest Volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BidAskBar_LightVolumeBidColor">Bid Ask Bar: Light Volume Bid Color</h4>
+            <div class="member-link">[<a href="#BidAskBar_LightVolumeBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the Bid color of a Bid Ask Bar whe the total volume of the bar is less than 25% of the largest Volume range within the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MarketDepth_BidGradientStartColor">Market Depth: Bid Gradient Start Color</h4>
+            <div class="member-link">[<a href="#MarketDepth_BidGradientStartColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the most recent Bid Price on the Market Depth window. This color is then used in combination with the <b>Market Depth: Bid Gradient End Color</b> to create the gradient of colors used for the Bid data on the Market Depth Window between the current Bid Price and the lowest Bid Price displayed in the window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MarketDepth_BidGradientEndColor">Market Depth: Bid Gradient End Color</h4>
+            <div class="member-link">[<a href="#MarketDepth_BidGradientEndColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of last (lowest) Bid Price on the Market Depth window. This color is used in combination with the <b>Market Depth: Bid Gradient Start Color</b> to create the gradient of colors used for the Bid data on the Market Depth Window between the lowest Bid Price and the current Bid Price displayed in the window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MarketDepth_AskGradientStartColor">Market Depth: Ask Gradient Start Color</h4>
+            <div class="member-link">[<a href="#MarketDepth_AskGradientStartColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the most recent Ask Price on the Market Depth window. This color is then used in combination with the <b>Market Depth: Ask Gradient End Color</b> to create the gradient of colors used for the Ask data on the Market Depth Window between the current Ask Price and the highest Ask Price displayed in the window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MarketDepth_AskGradientEndColor">Market Depth: Ask Gradient End Color</h4>
+            <div class="member-link">[<a href="#MarketDepth_AskGradientEndColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the last (highest) Ask Price on the Market Depth Window. This color is then used in combination with the <b>Market Depth: Ask Gradient Start Color</b> to create the gradient of colors used for the Ask data on the Market Depth Window between the highest Ask Price and the current Ask Price displayed in the window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MarketDepth_TextColor">Market Depth: Text Color</h4>
+            <div class="member-link">[<a href="#MarketDepth_TextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the text in the Market Depth window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MarketDepth_BackgroundColor">MarketDepth: Background Color</h4>
+            <div class="member-link">[<a href="#MarketDepth_BackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the background of the Market Depth window. This is the color of the areas of the Market Depth window where no information is displayed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetDefaultTextColor">Spreadsheet Default Text Color</h4>
+            <div class="member-link">[<a href="#SpreadsheetDefaultTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the default text color for spreadsheets.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetDefaultBackgroundColor">Spreadsheet Default Background Color</h4>
+            <div class="member-link">[<a href="#SpreadsheetDefaultBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the default background color for spreadsheets.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetActiveCellBorder">Spreadsheet Active Cell Border</h4>
+            <div class="member-link">[<a href="#SpreadsheetActiveCellBorder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the default color, thickness, and line style for the cell border of the active cell on a spreadsheet.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetSelectionHighlightColor">Spreadsheet Selection Highlight Color</h4>
+            <div class="member-link">[<a href="#SpreadsheetSelectionHighlightColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the highlight that is used when a group of cells is selected.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetFunctionMarkerColor">Spreadsheet Function Marker Color</h4>
+            <div class="member-link">[<a href="#SpreadsheetFunctionMarkerColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the marker that is placed in the upper right corner of a spreadsheet cell that denotes that the cell contains a function.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetCommentMarkerColor">Spreadsheet Comment Marker Color</h4>
+            <div class="member-link">[<a href="#SpreadsheetCommentMarkerColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets teh color of the marker that is placed in the lower left corner of a spreadsheet cell that denotes that there is a comment for the cell.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetCommentTextColor">Spreadsheet Comment Text Color</h4>
+            <div class="member-link">[<a href="#SpreadsheetCommentTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the text for a comment associated with a spreadsheet cell.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetCommentBackgroundColor">Spreadsheet Comment Background Color</h4>
+            <div class="member-link">[<a href="#SpreadsheetCommentBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color of the background for a comment associated with a spreadsheet cell.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpreadsheetGrid">Spreadsheet Grid</h4>
+            <div class="member-link">[<a href="#SpreadsheetGrid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the color, thickness, and line style for the spreadsheet grid.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="EnableSetting">"Enable" Setting (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Colors and Widths)</h3>
+        <div class="member-link">[<a href="#EnableSetting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>On the  <b>Colors and Widths</b> tab of the Graphics Settings window, in the list of the graphics items, some of them will have an "Enable" setting which is operable. If this setting is not operable it is not applicable to the setting.</p>
+
+        <p>  If the  if the <b> Enable</b> setting is  operable for a particular graphics item, then this means that  this particular graphics item can be enabled or disabled.</p>
+    </section>   
+    
+    <section class="h3">
+        <h3 id="CandlestickWidthPercentage">Candlestick Width % (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#CandlestickWidthPercentage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the width of a candlestick's body as a percentage. Where 100% would mean the ccandlestick body would extend to the adjacent candlestick body on either side.</p>
+
+        <p>The <b class="menu_item">Chart &gt;&gt; Increase Bar Width</b> and <b class="menu_item">Chart &gt;&gt; Decrease Bar Width</b> menu commands also alter the chart bar width relative to this percentage setting. To go back to the default width which corresponds to this percentage setting, repeatedly use <b class="menu_item">Chart &gt;&gt; Decrease Bar Width</b> until you go down to the minimum width which will equal the specified percentage.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OHLCWidthPercentage">OHLC Width % (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#OHLCWidthPercentage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the width of an OHLC bar as a percentage. Where 100% would mean the Open and Close dashes would extend to the adjacent bar Open and Close dashes on either side.</p>
+
+        <p>The <b class="menu_item">Chart &gt;&gt; Increase Bar Width</b> and <b class="menu_item">Chart &gt;&gt; Decrease Bar Width</b> menu commands also alter the chart bar width relative to this percentage setting. To go back to the default width which corresponds to this percentage setting, repeatedly use <b class="menu_item">Chart &gt;&gt; Decrease Bar Width</b> until you go down to the minimum width which will equal the specified percentage.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="PriceVolumeWidthPercentage">Price Volume Width % (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#PriceVolumeWidthPercentage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the overall width of a Price Volume bar body as a percentage. Where 100% would mean the Price Volume Bar body would occupy 100% of the width allocated for a chart bar which is based upon the current chart bar spacing.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ArrowDrawStyleMaxWidth">Arrow Draw Style Max Width (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#ArrowDrawStyleMaxWidth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Sets the maximum width of the Arrow Up, Arrow Down, Arrow Left, and Arrow Right Draw Styles in the Subgraphs tab of Study Settings Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DefaultChartBarSpacing">Default Chart Bar Spacing (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#DefaultChartBarSpacing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This setting sets the default chart bar spacing in pixels. This applies to new charts that are opened and also applies to a chart when <b class = "menu_item">Chart &gt;&gt; Reset Bar Size/Spacing/Scale</b> is selected.</p>
+    </section> 
+
+    <section class="h3">
+        <h3 id="DefaultRightSideFillSpace">Default Right Side Fill Space (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#DefaultRightSideFillSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This setting sets the default right side fill space. Refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart">Right Side Fill Space</a> for more information about this feature.</p>
+
+        <p> When the fill space is not locked and you press the <b>End </b> key on the keyboard, then the fill space will be set to the number of bars according to this setting. </p>
+
+        <p> To lock the fill space which has been set by the <b>Default Right Side Fill Space</b>  setting so it is not reduced to 0 as new bars are added to the chart, refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart" >Scrolling  the Chart</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ColorEntireOHLCBarTheHighLowColor">Color Entire OHLC Bar the High/Low Color (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#ColorEntireOHLCBarTheHighLowColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, the Open and Close dashes of an OHLC (Open High Low Close) bar will be colored the same as the High to Low portion of the bar. </p>
+
+        <p>The colors of the High to Low portion of the bar are set with the <b>Bar High-Low Up/Down</b> color settings.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ColorCandlestickHLUsingOutlineColors">Color Candlestick High-Low Using the Outline Colors (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#ColorCandlestickHLUsingOutlineColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This setting determines the rule for coloring the High to Low portion of a Candlestick bar. </p>
+
+        <p> If it is disabled, the <b>Bar High-Low Up</b> color, set through the <a href="#ColorsDrawWidths">Colors and Widths</a> list, is used when the Close of the candlestick is greater than or equal to the Open of the candlestick.</p>
+
+        <p>If it is disabled, the <b>Bar High-Low Down</b> color, set through the <a href="#ColorsDrawWidths">Colors and Widths</a> list, is used when the Close of the candlestick is less than the Open. </p>
+
+        <p> If it is enabled, then High to Low portion of the bar, the wick, uses the Candlestick Outline color instead.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DrawBidAndAskLinesAtLastBarWhenEnabled">Draw Bid and Ask Lines at Last Bar When Enabled (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#DrawBidAndAskLinesAtLastBarWhenEnabled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled and <b class= "menu_item">Chart &gt;&gt; Show Bid and Ask Lines</b> is enabled, then the bid and ask lines are drawn on the last in the chart, instead of at the edge of the price scale on the right side of the chart. This option only applies when <b class = "menu_item">Chart &gt;&gt; Show Bid and Ask Lines</b> is enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UpDownColoringForOHLCBarsBasedonPreviousAndCurrentClose">Up/Down Coloring for OHLC Bars Based on Previous and Current Close (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#UpDownColoringForOHLCBarsBasedonPreviousAndCurrentClose">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, and the <b>Graph Draw Type </b> in the chart is set to <b>OHLC Bars</b> (OHLC stands for Open, High, Low, Close), then the High to Low portion of a chart bar will be colored the <b>Bar High-Low Up Color</b> if the close of the bar is greater than or equal to the close of the previous bar.</p>
+
+        <p> The High to Low portion of a bar will be colored the <b>Bar High-Low Down Color</b> if the close of the bar is less than the close of the previous bar.</p>
+
+        <p> When this option is disabled, then the High to Low portion of OHLC Bars are colored based upon the comparison of the Open to Close within the same bar.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UnderlineChartHeaderFieldNames">Underline Chart Header Field Names (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#UnderlineChartHeaderFieldNames">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, then the field names on the chart header at the top of the chart are underlined to make them more clear.</p>
+
+        <div style="text-align: center;"><a href="../images/chartheaderfieldnamesunderlined.png" rel="lightbox"><img src="../images/chartheaderfieldnamesunderlined.png" class="screenshot" loading="lazy" alt=""></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="BoldDOMLastPrice">Bold DOM Last Price (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#BoldDOMLastPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, then the last trade price the Trade DOM is bolded.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="UseOpenGLForChartGraphics">Use OpenGL for Chart Graphics (Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other)</h3>
+        <div class="member-link">[<a href="#UseOpenGLForChartGraphics">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, then the OpenGL graphics library  provided by the operating system and the video drivers on your system  is used for graphics output which means that the graphics output is hardware accelerated.</p>
+        
+        <p>Any changes to this option  requires that Sierra Chart is restarted for it to go into effect. </p>
+       
+        <p>It is recommended  not to specify through the operating system or your video driver settings what GPU Sierra Chart should be using.  The operating system or driver needs to make that decision itself.  This is for performance reasons.  It will know best.</p>
+
+        <p>For best performance a particular chart must not be contained in more than one  physical display if those displays use a different GPU. If two or more displays a chart is contained within are driven by different GPUs, you would create a situation where there are inefficiencies because the operating system has to start transferring resulting  graphics output between  different GPUs. A chart can only be rendered within a single GPU.</p>
+
+        <p>It is not efficient to have GPU do the rendering, and then have this output transferred to another display which uses a different GPU. </p>
+
+        <p>When changing which GPU Sierra Chart is assigned to, you do need to restart Sierra Chart so there is a re-initialization of OpenGL on the Sierra Chart side.</p>
+       
+        <p>If you enable the OpenGL option and restart Sierra Chart and then this  OpenGL option is disabled, it means there was a failure to initialize OpenGL on your system.</p>
+        
+        <p>When using OpenGL, Unicode characters are not supported.</p>
+       
+        <p>Known Issue: It has been observed that when using the OpenGL option, sometimes when scrolling the chart the chart does not visibly update. This is usually resolved by directly grabbing the scrollbar box and moving the chart left or right.  There are other conditions, which can cause a chart not to visibly update when using OpenGL.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="FontsAndText">Fonts and Text Appearance</h2>
+    <div class="member-link">[<a href="#FontsAndText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Fonts for all of the various text displayed within Sierra Chart can be customized.</p>
+
+    <p>Open the <b class="menu_item">Chart &gt;&gt; Graphics Settings - Chart</b> window to change the Font settings for the active chart or Trading DOM  if it is set to use its own specific graphic settings.</p> 
+    
+    <p>Or open the <b class="menu_item">Global Settings &gt;&gt; Graphics Settings - Global</b> window to change the Font settings globally  for all Charts and Trading DOMs which are set to use the Global settings.</p>
+     
+    <p>For additional details, refer to the <a href="#Introduction">Introduction</a> section.</p> 
+
+    <p>Select the <b>Fonts</b> tab of the Graphics Settings window. </p>
+
+    <p>In the list of fonts, select the particular font you want to change the properties of and press the <b>Select</b> button. The Font window will display. 
+
+    <p>Set the <b>Font</b>, <b>Font Style</b>, and <b>Size</b> settings as required. Press OK to save the changes.</p>
+
+    <p>If changes to the Font <b>Size </b> are not going into effect, then choose a different <b>Font </b> name and then change the <b>Size </b> again because it is possible the particular <b>Font </b> name currently selected is not properly supported on your operating system. </p>
+
+    <p>If changes to the Chart Text do not go into effect and you are using the <b Class = "menu_item">Global Settings &gt;&gt; Graphics Settings - Global</b> window to change the Chart Text, then the chart is set to use its own independent Graphics Settings. For more information, refer to <a href="#Introduction">Introduction</a> on this page. </p>
+
+    <div style="text-align: center;"><a href="../images/graphicsettingsfonts.png" rel="lightbox"><img src="../images/graphicsettingsfonts.png" alt="" class="screenshot" loading="lazy" width="500" ></a></div>
+    
+    <p> The font size that the operating system actually returns when selecting a font, is   <em>completely different</em> than the Point size. It is returned  in what is called logical units and it is specific to the particular DPI   (dots per inch) setting on your system.  Therefore, when sharing a Chartbook or main configuration file with another user, the font size can appear different if they are using a different DPI  setting on their system.  </p>
+     
+    <p>Additionally as there are DPI settings changes on your system either  performed manually by you or automatically by the operating system, this will cause the  font sizes  to change within Sierra Chart. So you do have to manually change them  in Sierra Chart  as you require to get the appearance that you need.</p>
+    
+    <p> After changing the <b>Chart Text</b> font size, to resize the  Values Scale column on a chart to fit the new font size, select <b class="menu_item">Chart &gt;&gt; Recalculate</b>. </p>
+
+    <p>Below are descriptions of each of the available Font settings in the list of fonts that can be changed.</p>
+
+    <section class="h3">
+        <h3 id="ChartTextFont">Chart Text - (current font name)</h3>
+        <div class="member-link">[<a href="#ChartTextFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Chart Text</b> font setting changes the font properties for all charts if using the <b class="menu_item">Global Settings &gt;&gt; Graphics Settings </b> window.</p>
+
+        <p>The <b>Chart Text</b> font setting changes the font properties for the active chart if using <b class="menu_item">Chart &gt;&gt; Graphics Settings</b> window.</p> 
+
+        <p> This font applies to either  the   <em>selected chart</em> or is  <em>global</em> depending upon whether the chart specific or Global Graphics settings window has been opened.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="DOMQuantitiesSizesFont">DOM Quantities/Sizes - (current font name)</h3>
+        <div class="member-link">[<a href="#DOMQuantitiesSizesFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties  for the  Chart or Trading DOM Quantities and Sizes.</p>
+        <p> This font applies to either  the   <em>selected chart</em> or is  <em>global</em> depending upon whether the chart specific or Global Graphics settings window has been opened.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="Font_TimeAndSalesWindow">Time and Sales Window - (current font name)</h3>
+        <div class="member-link">[<a href="#Font_TimeAndSalesWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties  for the  Time and Sales window.</p>
+        
+        <p> This font applies to either  the   <em>selected chart</em> or is  <em>global</em> depending upon whether the chart specific or Global Graphics settings window has been opened.</p>
+
+    </section>
+    <section class="h3">
+        <h3 id="Font_MarketDepthWindow">Market Depth Window - (current font name)</h3>
+        <div class="member-link">[<a href="#Font_MarketDepthWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties  for the  Market Depth window.</p>
+        
+        <p> This font applies to either  the   <em>selected chart</em> or is  <em>global</em> depending upon whether the chart specific or Global Graphics settings window has been opened.</p>
+
+    </section>
+    <section class="h3">
+        <h3 id="Font_ChartOrderFills">Chart Order Fills - (current font name)</h3>
+        <div class="member-link">[<a href="#Font_ChartOrderFills">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties  for the <a href = "index3c50.html?page=doc/ChartTrading.html#DisplayingOrderFills">chart order fills</a> displayed on a chart.</p>
+        
+        <p> This font applies to either  the   <em>selected chart</em> or is  <em>global</em> depending upon whether the chart specific or Global Graphics settings window has been opened.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="TextWindowsFont">Text Windows - (current font name)</h3>
+        <div class="member-link">[<a href="#TextWindowsFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties for the following windows:</p>
+        <ul >
+            <li><b class="menu_item">Window &gt;&gt; Current Quote Window</b></li>
+            <li><b class="menu_item">Window &gt;&gt; Chart Values Window</b></li>
+            <li><b class="menu_item">Window &gt;&gt; Tool Values Window</b></li>
+            <li><a href = "index2422.html?page=doc/StatusBar.html">Data Feed Status</a> on the Control Bar</li>
+            <li><b class="menu_item">Window &gt;&gt; Alerts Manager</b></li>
+            <li><b class="menu_item">Window &gt;&gt; Trade Service Log</b></li>
+            <li><b class="menu_item">Window &gt;&gt; Message Log</b></li>
+            <li> <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b> (<b>Trade Activity, Trade Statistics, Trades, Trade Stats for Charts</b>)</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="SpreadsheetsFont">Spreadsheets - (current font name)</h3>
+        <div class="member-link">[<a href="#SpreadsheetsFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties for Spreadsheets.</p> 
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartbookAndMDITabsTextFont">Chartbook and MDI Tabs Text - (current font name)</h3>
+        <div class="member-link">[<a href="#ChartbookAndMDITabsTextFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties for Chartbooks and MDI Tabs Text.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ControBarTextFont">Control Bar Text - (current font name)</h3>
+        <div class="member-link">[<a href="#ControBarTextFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties for the button text and the Status Bar on the Control Bar.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="CompactToolValuesWindowFont">Compact Tool Values Window - (current font name)</h3>
+        <div class="member-link">[<a href="#CompactToolValuesWindowFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties for the <a href="indexb844.html?page=doc/Tools.html#CompactToolValuesWindow" target="_blank" rel="noopener noreferrer">Compact Tool Values Window</a>. </p> 
+    </section>
+
+    <section class="h3">
+        <h3 id="StudySummaryWindowFont">Study Summary Window - (current font name)</h3>
+        <div class="member-link">[<a href="#StudySummaryWindowFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This changes the font properties for the Study Summary window which is opened through <b class = "menu_item">File &gt;&gt; Open Study Summary Window</b>. </p> 
+    </section>
+
+
+    <section class="h3">
+        <h3 id="ChangingTheFontSizeForTextDisplayedWithToolDrawings">Changing the Font Size For Text Displayed with Tool Drawings (Global Chart Drawing Font)</h3>
+        <div class="member-link">[<a href="#ChangingTheFontSizeForTextDisplayedWithToolDrawings ">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To adjust the size and other properties of Text that is displayed with Tool drawings, select <b class="menu_item">Global Settings &gt;&gt; Tool Settings</b> on the menu. Modify the <b>Global Chart Drawing Font</b> by pressing the <b>Select</b> button within that frame.</p>
+
+        <p>The <b>Global Chart Drawing Font</b> applies to Chart Drawings that display text whether as part of the drawing type like with the <b>Type Text</b>, <b>Stationary Text</b> drawing types, or optionally display text like with the Price Retracement drawings. </p>
+
+        <p>Some Chart Drawings will have the setting  <b>Use Global Font</b> in their <a href="indexb844.html?page=doc/Tools.html#ChartDrawingProperties">Chart Drawing Properties</a>. When this is enabled, then those Chart Drawings will use the <b>Global Chart Drawing Font</b>. Otherwise, they will use the fonts specified within the Properties for the Chart Drawing.</p>
+    </section>
+    
+
+    <section class="h3">
+        <h3 id="FontSizesUnexpectedlyChanging">Font Sizes Unexpectedly Changing</h3>
+        <div class="member-link">[<a href="#FontSizesUnexpectedlyChanging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you are using Windows 8 or higher, you may experience a problem where the font sizes within Sierra Chart unexpectedly change. This has to do with the DPI (dots per inch) setting on the monitor or system changing  which causes the fonts to appear at a different size.</p>
+
+        <p>When you select a Font within Sierra Chart, the operating system provides what is known as a <em>logical height</em> which has a dependency on the system DPI setting. The value returned is <em>not</em> the selected Point size. It is a different number. This value is stored but if the DPI setting changes on the system, this will cause the font to appear a different size. Sierra Chart is handling this correctly.</p>
+
+        <p>You will need to readjust the  <a href = "#FontsAndText">Font Sizes</a> through Graphics Settings.</p> 
+        
+        <p>Related to this, is changing the width of lines.   You may want to increase the width for higher resolution monitors. To change the width of lines for studies, refer to the <a href = "index9099.html?page=doc/ChartStudies.html#SubgraphsTab">Study Subgraph Settings</a>. </p>
+        
+        <p> To increase the width of lines used within the chart bars, refer to the <a href = "#ColorsDrawWidths">Graphics Settings</a>. </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ChartBarWidths">Chart Bar Widths</h2>
+    <div class="member-link">[<a href="#ChartBarWidths">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are several ways in which the width of chart bars is affected. These are explained below.</p>
+
+    <section class="h3">
+        <h3 id="ChangingTheHighLowDrawWidth">Changing the High-Low Draw Width </h3>
+        <div class="member-link">[<a href="#ChangingTheHighLowDrawWidth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>The width of the High-Low portion of a chart bar can be modified with the <a href="#ColorsDrawWidths"> Colors and Draw Widths</a> settings on the Graphics Settings window. You will want to modify the width of <b>Bar High-Low Down</b> and <b>Bar High-Low Up</b> in the list.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="IncreasingOrDecreasingTheChartBarSpacing">Increasing and Decreasing the Chart Bar Spacing</h3>
+        <div class="member-link">[<a href="#IncreasingOrDecreasingTheChartBarSpacing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>As you increase the chart bar spacing, the width of the bars will automatically become wider. As you decrease the chart bar spacing, the width of the bars will automatically become narrower. Refer to the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChangingBarSpacing">Changing Bar Spacing and Zooming In</a> section for instructions to change bar spacing.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangingTheCandlestickWidthOrOHLCWidth">Changing the Candlestick Width % or OHLC Width %</h3>
+        <div class="member-link">[<a href="#ChangingTheCandlestickWidthOrOHLCWidth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Increasing or decreasing the <b>Candlestick Width %</b> in the <b class="menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other</b> tab will increase or decrease the width of candlesticks respectively. </p>
+
+        <p>Increasing or decreasing the <b>OHLC Width %</b> in the <b class="menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other</b> tab will increase or decrease the width of OHLC bars respectively. </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="HowChartBarAndCandlestickUpDownIsDetermined">How Chart Bar and Candlestick Up/Down is Determined</h2>
+    <div class="member-link">[<a href="#HowChartBarAndCandlestickUpDownIsDetermined">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In the case of the Candlestick bar, it is considered and up bar when the Close value is higher than the Open value within the same bar. It is considered a down bar when the Open value is higher than the Close value within the same bar. The same is true for a standard OHLC bar when <b>Other &gt;&gt; Up/Down Coloring for OHLC Bars Based on Previous and Current Close </b> is disabled. Otherwise, the coloring is based on the comparison of the bar) to the previous close value. </p>
+
+    <p>In the case where the Open and Close are equal, the Candlestick or OHLC bar coloring will use the same coloring as the prior chart bar. If in that prior bar, the Open and Close are equal, then there is an iteration back, up to a certain number of bars, until there is a difference between the Open and Close. The relationship between those is what sets the coloring for the subsequent bars that have the same Open and Close values. </p>
+</section>
+
+<section class="h2">
+    <h2 id="Tasks">Tasks</h2>
+    <div class="member-link">[<a href="#Tasks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section documents the procedures to perform various tasks related to Graphics Settings.</p>
+
+    <section class="h3">
+        <h3 id="IndependentColoringAndWidthsForCandlesticksHighLowBars">Independent Coloring and Widths for Candlesticks High-Low Bars (Wicks)</h3>
+        <div class="member-link">[<a href="#IndependentColoringAndWidthsForCandlesticksHighLowBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol> 
+            <li>Open the Graphics Settings window as explained in the <a href="#Introduction">Introduction</a> section. Select the <b>Other</b> tab.</li> 
+
+            <li>Uncheck <b>Color Candlestick High-Low Using the Outline Colors </b>.</li>
+
+            <li>Select the <b>Colors and Chart Font</b> tab.</li> 
+
+            <li>In the <b> Colors and Widths</b> list, set the color and width for <b>Bar High-Low Down </b> and <b>Bar High-Low Up </b>. These settings will now apply to candlesticks.</li>
+
+            <li>Press <b>OK</b> to close <b>Graphics Settings</b> window.</li> 
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingTheBackgroundColorTextColorAndFontForTextOnlyWindows">Setting the Background Color, Text Color, and Font for Text Only Windows</h3>
+        <div class="member-link">[<a href="#SettingTheBackgroundColorTextColorAndFontForTextOnlyWindows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to set the Background Color, Text Color, Grid Color, and Font setting for the following windows:</p>
+
+        <ul>
+            <li><b Class = "menu_item">Trade &gt;&gt; Trade Orders Window</b></li>
+            <li><b Class = "menu_item">Trade &gt;&gt; Trade Positions Window</b></li>
+            <li><b Class = "menu_item">Trade &gt;&gt; Account Balances Window</b></li>
+            <li><b Class = "menu_item">Trade &gt;&gt; Trade Activity Log</b></li>
+            <li><b Class = "menu_item">Trade &gt;&gt; Trade Service Log</b></li>
+            <li><b Class = "menu_item">Window &gt;&gt; Message Log</b></li>
+            <li><b Class = "menu_item">Window &gt;&gt; Alerts Manager</b></li>
+            <li>All File Open and Save Windows </li>
+            <li> Service Connection Error Window</li>
+        </ul>
+        
+         <p   class = "GeneralBackgroundHighlightLight"> When the Foreground and Background colors  for General Text Windows are set to the same or similar colors, the text will not be visible  or will be hardly visible.   There needs to be sufficient contrast between the Foreground and Background colors in order to see the text properly. </p>
+
+        <p>Instructions:</p>
+
+        <ol>
+            <li>Open the Graphics Settings window as explained in the <a href="#Introduction">Introduction</a> section. Select the <b>Colors and Widths</b> tab.</li> 
+
+            <li>On the <b>Colors and Widths</b> tab, in the list of objects, select <b>General Text Window Background Color</b>.</li>
+
+            <li>Press the <b>Color</b> button.</li>
+
+            <li>Select the color that you want to use for the background and press <b>OK</b>.</li>
+
+            <li>In the list of objects, select <b>General Text Window Foreground Color</b>.</li>
+
+            <li>Press the <b>Color</b> button.</li>
+
+            <li>Select the color that you want to use for the text and press <b>OK</b>.</li>
+            
+            <li>Set the <b>General Text Window Highlight Color</b> and <b>General Text Window Grid Color</b> as required.</li>
+
+            <li>In the case of trading windows which display a Long or Short Position quantity or a Profit/Loss value, change the <b>Position/Trades/ChartTradeStats tabs Long / Profit</b>, <b>Position/Trades/ChartTradeStats tabs Short / Loss</b> color settings as required.</li>
+
+            <li>Select the <b>Fonts </b> tab.</li>
+
+            <li>Select the <b> Text Windows </b> item.</li>
+
+            <li>Press the <b>Select </b> button and adjust the Font properties as you require.</li>
+
+            <li>Press <b> OK</b>.</li>
+
+            <li>Press <b>OK</b>.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="HollowRenkoBricks">Hollow Renko Bricks</h3>
+        <div class="member-link">[<a href="#HollowRenkoBricks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to display hollow Renko Bricks with Wicks by changing the Graphics Settings for the Candlestick Bar Fill Colors.</p>
+
+        <div style="text-align: center;"><a href="../images/hollowrenkobrickswithwicks.png" rel="lightbox"><img src="../images/hollowrenkobrickswithwicks.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+        <ol>
+            <li>Open the Graphics Settings window as explained in the <a href="#Introduction">Introduction</a> section. Keep in mind that if you only want to apply these settings to the current chart, instead of globally, then you need to select <b class="menu_item">Chart &gt;&gt; Graphics Settings - Chart</b> and unselect the option for <b>Use Global Graphics Settings Instead Of These Settings</b>.</li>
+
+            <li>On the <b>Color and Widths</b> tab in the list of objects, select <b>Candlestick Up Fill</b>.</li>
+
+            <li>Select the <b>Color</b> selection box.</li>
+
+            <li>Set the color to match the background color (the default background color is black).</li>
+
+            <li>Select OK to close the Color Selection window.</li>
+
+            <li>In the list of objects select <b>Candlestick Down Fill</b>.</li>
+
+            <li>Select the <b>Color</b> selection box.</li>
+
+            <li>Set the color to match the background color (the default background color is black).</li>
+
+            <li>Select OK to close the Color Selection window.</li>
+
+            <li>Select OK to close the Graphics Settings window and to have the bricks update to display as hollow.</li>
+        </ol>
+    </section>
+</section>
+
+
+<section class="h2">
+    <h2 id="SavingAndLoadingMultipleGraphicsSettingsConfigurations">Saving and Loading Multiple Graphics Settings Configurations</h2>
+    <div class="member-link">[<a href="#SavingAndLoadingMultipleGraphicsSettingsConfigurations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is supported to save the settings on the <b>Colors and Widths</b> tab of the Graphics Settings window as one of up to 20 configurations, and then load that configuration. This lets you switch between multiple Graphics Settings configurations easily.</p>
+
+    <p>The option to Save and Load a configuration is only available for the Global Graphics settings, that is when selecting <b class="menu_item">Global Settings &gt;&gt; Graphics Settings - Global</b>. The option to save and load a configuration will not be available if the Graphics Settings is selected from the Chart menu (<b class="menu_item">Chart &gt;&gt; Graphics Settings - Chart</b>).</p>
+
+    <p>If a chart is set to use the Chart Graphics Settings such that the option for <b>Use Global Graphics Settings Instead of These Settings</b> is not selected for that chart, then loading a confguration will not have any effect on that chart.</p>
+
+    <p>If wanting to use different graphics settings for different charts, then each setting for the chart would have to be individually adjusted using the settings accessed by selecting <b class="menu_item">Chart &gt;&gt; Graphics Settings - Chart</b>.</p>
+
+    <div style="text-align: center;"><a href="../images/saveloadmultiplegraphicsconfigurations.png" rel="lightbox"><img src="../images/saveloadmultiplegraphicsconfigurations.png" class="screenshot" loading="lazy" alt="" width = "540"></a></div>
+
+    <p>To save a configuration follow these instructions:</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>.</li>
+
+        <li>Select the <b>Colors and  Widths</b> tab.</li>
+
+        <li>In the list box that contains the Saved Settings, select the particular Saved Settings configuration number that you want to save the settings to.</li>
+
+        <li>Press the <b>Save Settings</b> button.</li>
+    </ol>
+
+    <p>To load a previously saved configuration follow these instructions:</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>.</li>
+
+        <li>Select the <b>Colors and  Widths</b> tab.</li>
+
+        <li>In the list box that contains the Saved Settings, select the particular Saved Settings configuration number that you want to load the configuration from.</li>
+
+        <li>Press the<b> Load Settings</b> button.</li>
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="AdjustingGraphicsSettingsForHighDPIDisplays">Adjusting Graphics Settings and Fonts for High DPI Displays</h2>
+    <div class="member-link">[<a href="#AdjustingGraphicsSettingsForHighDPIDisplays">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When Sierra Chart is running on a computer system with a monitor that has a high dots per inch (DPI) like 4K monitors, text can appear to be small.</p>
+
+    <p>Another issue you may see is that Control Bar buttons that use graphics are narrow in width because the graphic for the Control Bar button is small relative to the high DPI setting.</p>
+    
+    <p>  Related to this, refer to <a href="#FontSizesUnexpectedlyChanging">Font Sizes Unexpectedly Changing</a>. </p>
+
+    <p>Follow the instructions below to solve all of this.</p>
+
+    <ol> 
+        <li>  Select   <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>  on the main menu. </li>
+        <li>  Select the  <b>Fonts</b> tab. </li>
+
+        <li>Increase the <b>Size</b> setting of each of the Fonts  if the current size is too small.</li>
+
+        <li>When done increasing the font sizes, press <b> OK</b> to close the <b>Graphics Settings</b> window.</li>        
+        
+        <li> Some charts can use font sizes which  are specific to that chart  and are not global.  For more information about this, refer to <a href="#UsingDifferentColorAndGraphicsSettingsForSpecificCharts">Using Different Color and Graphics Settings for Specific Charts</a>. These fonts can be set independently for individual charts: <br> <br>
+            <b>Chart Text <br>
+            DOM Quantities/Sizes  <br>
+            Market Depth Window <br>
+            Time and Sales Window  <br>
+            Chart Order Fills</b>
+            <br> <br>
+            To change these  Fonts for a particular chart, go to that chart and select   <b class="menu_item">Chart &gt;&gt; Graphics Settings</b>.
+        </li>
+        <li>  Select the  <b>Fonts</b> tab. </li>
+
+        <li>Increase the <b>Size</b> setting of each of the Fonts  listed above if the current size is too small.</li>
+
+        <li>When done increasing the font sizes, press <b> OK</b> to close the <b>Graphics Settings</b> window.</li>
+
+        <li>Follow the instructions in the <a href="index6736.html?page=doc/ControlBar.php#ControlBarButtonProperties" Target="_blank" rel="noopener noreferrer">Control Bar Button Properties</a> section to set either a text <b>Button Caption</b> for Control Bar buttons which have a small graphic or set your own custom graphic on the Control Bar button.</li>
+
+        <li>We do recognize that the solution provided in the prior step is a workaround which may not be very ideal. But it still provides a definitive solution. </li>
+        
+        <li> To increase the size  of the Text in Control Bar buttons, refer to <a href = "index6736.html?page=doc/ControlBar.php#ControlBarButtonsTextSize"  target="_blank" rel="noopener noreferrer">Control Bar Buttons Size and Text Size</a>. There is both a global text size setting and the text size can be set individually for buttons as well.</li>
+        
+        <li>To adjust to the thickness of study Subgraph  lines and other styles, refer to the <a href = "index9099.html?page=doc/ChartStudies.html#SubgraphsTab">Subgraphs Tab</a>  of the Study Settings window.  You will want to adjust the  <b>Width</b> setting.</li>
+
+        <li> To adjust to the thickness of  Chart Drawings, refer to  <a href = "indexb844.html?page=doc/Tools.html#ChartDrawingProperties">Chart Drawing Properties</a>.</li> 
+       
+       <li> To adjust  the font size for text displayed with  Chart Drawings, refer to  <a href = "indexb844.html?page=doc/Tools.html#ChangingTheFontSizeForTextDisplayedWithToolDrawings">Changing The Font  Size For Text Displayed With Tool Drawings</a>.</li> 
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="AdjustingSizeOfDialogWindows">Adjusting Size of Dialog Windows</h2>
+    <div class="member-link">[<a href="#AdjustingSizeOfDialogWindows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Understand that the size of what are known as dialog windows, for example <b class = "menu_item">Chart &gt;&gt; Chart Settings </b>, are dependent upon operating system settings and the resolution of your monitor or monitors. These are what solely control the size of these types of windows. The size of them is <em>not</em> controlled by Sierra Chart. On some systems they can appear small, on other systems they can appear large.</p>
+
+
+    <p>Follow the instructions below to adjust the size of Sierra Chart dialog windows to be either larger or smaller. Keep in mind, these instructions are also going to affect the dialog windows for all programs running on the computer system and also affect the text size in all programs.</p>
+
+    <ol> 
+        <li>Through your Windows desktop, select <b>Start &gt;&gt; Control Panel &gt;&gt; Display</b>. You should see the below page.
+
+            <div style="text-align: center;"><a href="../images/windowscontrolpanel_textsizesettings.png" rel="lightbox"><img src="../images/windowscontrolpanel_textsizesettings.png" class="screenshot" loading="lazy" alt="" width = "540"></a></div>
+        </li>
+
+        <li>Select one of the preset Text Size options or click on the <b>Set Custom Text Size</b> link to set a custom text size. Using a smaller percentage, reduces the size of dialog windows. Using a larger percentage increases the size of dialog windows.</li>
+
+        <li>It is also possible to increase or reduce the size of text on dialog windows which may also increase or reduce the size of the dialog windows itself. This can be done through the <b>Personalization &gt;&gt; Window Color and Appearance </b> settings in the Windows Control Panel. Refer to the image below. 
+
+            <div style="text-align: center;"><a href="../images/windowscontrolpanel_colorandappearance.png" rel="lightbox"><img src="../images/windowscontrolpanel_colorandappearance.png" class="screenshot" loading="lazy" alt="" width = "265"></a></div>
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SettingDefaultCustomColors">Setting Default Custom Colors</h2>
+    <div class="member-link">[<a href="#SettingDefaultCustomColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Is supported to customize the 16 colors listed on the operating system <b>Color</b> selector window. Follow the instructions below to do this.  These custom colors are used throughout Sierra Chart when the Color selector window is displayed.</p>
+
+    <ol>
+        <li>Open the Graphics Settings window by following the instructions in the <a href="#Introduction">Introduction</a> section. </li>
+
+        <li>Press the  colored button on the <b>Colors and Widths</b> tab.</li>
+
+        <li>Press the <b>Define Custom Colors</b> button if the color customization portion of the window is not already displayed to the right.  If the rightmost portion of the window is already displayed, then <b>Define Custom Colors</b> will be disabled  which indicates this.</li>
+
+        <li>Select  one of the 16 colors on the bottom left side of the Color selector window in the <b>Custom Colors</b> section <em>by left clicking on the color box</em>. </li>
+
+        <li>Modify the color to what you want using the color controls on the right side of the Color selector window. Press the <b>Add to Custom Colors</b> button when done, to set the color. Do this for any of the other 16  <b>Custom Colors</b>.</li>
+
+        <li>Press <b>OK</b> when done.</li>
+    </ol>
+
+    <div style="text-align: center;"><a href="../images/colorselectorwindow.png" rel="lightbox"><img src="../images/colorselectorwindow.png" alt=" " width="600" class="screenshot" loading="lazy" ></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="AdjustingTextSizeOnMenus">Adjusting Text Size on Menus</h2>
+    <div class="member-link">[<a href="#AdjustingTextSizeOnMenus">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>The text size and  font for the menus in Sierra Chart are controlled at the operating system level since these menus are created using the operating system.</p>
+
+    <p>Consult your operating system documentation for how to change the text size and font for the menus. For Windows 7, refer to this  <a href="https://www.wikihow.com/Change-the-Default-Font-on-Windows-7" target="_blank" rel="noopener noreferrer">article</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SettingColorsForChartAndChartbookTabsForTheMainWindow">Setting Colors for Chart and Chartbook Tabs for the Main Window</h2>
+    <div class="member-link">[<a href="#SettingColorsForChartAndChartbookTabsForTheMainWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The colors of the Chart and Chartbook tabs can be modified in the <a href = "#Introduction">Graphics Settings</a> window. The following items are available for modification:</p>
+
+    <ol>
+        <li><b>Chart Selected Tab</b>: This sets the background color of the tab for the selected (active) chart within a Chartbook.</li>
+        <li><b>Chart Selected Tab Text Color</b>: This sets the color of the text on the tab for the selected (active) chart within a Chartbook.</li>
+        <li><b>Chart Selected Tab Border Color</b>: This sets the color of the border on the tab for the selected (active) chart within a Chartbook.</li>
+        <li><b>Chart Tab Color</b>: This sets the background color of the tabs for the not selected (not active) charts within a Chartbook.</li>
+        <li><b>Chart Tab Text Color</b>: This sets the color of the text on the tabs for the not selected (not active) charts within a Chartbook.</li>
+        <li><b>Chartbook Selected Tab Color</b>: This sets the background color of the tab for the selected (active) Chartbook.</li>
+        <li><b>Chartbook Selected Tab Text Color</b>: This sets the color of the text on the tab for the slected (active) Chartbook.</li>
+        <li><b>Chartbook Tab Color</b>: This sets the background color of the tabs for the not selected (not active) Chartbooks.</li>
+        <li><b>Chartbook Tab Text Color</b>: This sets the color of the text on the tabs for the not selected (not active) Chartbooks.</li>
+    </ol>
+    
+    <div style="text-align: center;"><a href="../images/mainwindowtabcolorsettings.png" rel="lightbox"><img src="../images/mainwindowtabcolorsettings.png" class="screenshot" loading="lazy" alt="Main Window Tab Color Settings" width="600"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="SettingColorForMainWindowBackground">Setting Color for Main Window Background</h2>
+    <div class="member-link">[<a href="#SettingColorForMainWindowBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to control the background color of the  main program window.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>.</li>
+        <li>Select the <b>Colors and Widths</b> tab.</li>
+        <li>In the list of objects, select <b>Main Window Background</b>.</li>
+        <li>Press the colored button.</li>
+        <li>Select the color.</li>
+        <li>Press OK.</li>
+        <li>Press OK.</li>
+    </ol>    
+</section>
+
+<section class="h2">
+    <h2 id="SettingColorsForListViewHeaders">Setting Colors for List View Headers</h2>
+    <div class="member-link">[<a href="#SettingColorsForListViewHeaders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  Sierra Chart contains many list views which would include the  Time and Sales window, Chart Values windows,   Trade Activity Log,  and many other windows in Sierra Chart. </p>
+    
+    <p>Follow the instructions below to control the color of the header line of these list  views.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>.</li>
+        <li>Select the <b>Colors and Widths</b> tab.</li>
+        <li>In the list of objects, select any of the <b> List Box Header*</b> objects.</li>
+        <li>Press the colored button.</li>
+        <li>Select the color.</li>
+        <li>Press OK.</li>
+        <li>Press OK when all done  with setting colors to close the Graphics Settings window.</li>
+    </ol>
+</section>
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GraphicsSettings.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:03 GMT -->
+</html>  

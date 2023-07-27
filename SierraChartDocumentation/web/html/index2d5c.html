@@ -1,0 +1,1888 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChartTradingCustomizingGraphics.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:49:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1679645894') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ChartTradingCustomizingGraphics.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, ChartDOM, and Trade DOM -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index3c50.html?page=doc/ChartTrading.html">Chart Trading and the Chart DOM</a> &gt;&gt; <a  href="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, ChartDOM, and Trade DOM</a></h4> </div>     <h1 class="PageName">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</h1>
+
+<section class="h2">
+    <p>This page documents setting the Fonts, Colors, Line Styles, and Line Widths for chart trading objects, the Chart DOM, and the Trade DOM.</p>
+</section>
+
+<ul>
+    <li><a href="#GlobalGraphicSettings">Global Graphic Settings</a></li>
+    <li><a href="#ChartAndTradeDOMSpecificGraphicSettings">Chart and Trade DOM Specific Graphic Settings</a></li>
+    <li><a href="#FontSettings">Font Settings</a></li>
+    <li><a href="#ChartTradingAndChartDOMColorsLineStylesLineWidths">Chart Trading and Chart DOM Colors, Line Styles, and Line Widths</a>
+		<ul>
+			<li><a href="#ChartDOMColumnSeparatorLines">Chart DOM Column Separator Lines</a></li>
+			<li><a href="#ChartDOMBuyColumnBackground">Chart DOM Buy Column Background</a></li>
+			<li><a href="#ChartDOMBuyColumnLines">Chart DOM Buy Column Lines (also Order Entry Highlight Box)</a></li>
+			<li><a href="#ChartDOMSellColumnBackground">Chart DOM Sell Column Background</a></li>
+			<li><a href="#ChartDOMSellColumnLines">Chart DOM Sell Column Lines (also Order Entry Highlight Box)</a></li>
+			<li><a href="#ChartDOMBidColumnBackground">Chart DOM Bid Column Background</a></li>
+			<li><a href="#ChartDOMAskColumnBackground">Chart DOM Ask Column Background</a></li>
+			<li><a href="#ChartDOMAskBackground">Chart DOM Ask Background</a></li>
+			<li><a href="#ChartDOMBidBackground">Chart DOM Bid Background</a></li>
+			<li><a href="#ChartDOMAskDepthBackground">Chart DOM Ask Depth Background</a></li>
+			<li><a href="#ChartDOMAskDepthQuantities">Chart DOM Ask Depth Quantities</a></li>
+			<li><a href="#ChartDOMBidDepthBackground">Chart DOM Bid Depth Background</a></li>
+			<li><a href="#ChartDOMBidDepthQuantities">Chart DOM Bid Depth Quantities</a></li>
+			<li><a href="#ChartDOMBestBidAskBoxBackground">Chart DOM Best Bid/Ask Box Background</a></li>
+			<li><a href="#ChartDOMDailyHighLine">Chart DOM Daily High Line</a></li>
+			<li><a href="#ChartDOMDailyLowLine">Chart DOM Daily Low Line</a></li>
+			<li><a href="#ChartDOMRecenterLine">Chart DOM Recenter Line</a></li>
+			<li><a href="#ChartDOMProfitLossUp">Chart DOM Profit &amp; Loss Up</a></li>
+			<li><a href="#ChartDOMProfitLossDown">Chart DOM Profit &amp; Loss Down</a></li>
+			<li><a href="#ChartDOMValueText">Chart DOM Values Scale Text</a></li>
+			<li><a href="#ChartDOMLastPriceTextAtBid">Chart DOM Last Price Text Bid Trade</a></li>
+			<li><a href="#ChartDOMLastPriceTextAtAsk">Chart DOM Last Price Text Ask Trade</a></li>
+			<li><a href="#ChartDOMLastPriceBackgroundBidTrade">Chart DOM Last Price Background Bid Trade</a></li>
+			<li><a href="#ChartDOMLastPriceBackgroundAskTrade">Chart DOM Last Price Background Ask Trade</a></li>
+			<li><a href="#ChartDOMCumulativeLastSizeTextBidTrade">Chart DOM Cumulative Last Size Text Bid Trade</a></li>
+			<li><a href="#ChartDOMCumulativeLastSizeTextAskTrade">Chart DOM Cumulative Last Size Text Ask Trade</a></li>
+			<li><a href="#ChartDOMCumulativeLastSizeBackgrounBidTrade">Chart DOM Cumulative Last Size Background Bid Trade</a></li>
+			<li><a href="#ChartDOMCumulativeLastSizeBackgroundAskTrade">Chart DOM Cumulative Last Size Background Ask Trade</a></li>
+			<li><a href="#ChartDOMCumulativeLastSizeBidTradeSamePriceAndSideBackgroundColor">Chart DOM Cumulative Last Size Bid Trade Same Price and Side Background Color</a></li>
+			<li><a href="#ChartDOMCumulativeLastSizeAskTradeSamePriceAndSideBackgroundColor">Chart DOM Cumulative Last Size Ask Trade Same Price and Side Background Color</a></li>		
+			<li><a href="#ChartDOMCumulativeLastSizeBidTradeSamePriceAndSideTextColor">Chart DOM Cumulative Last Size Bid Trade Same Price and Side Text Color</a></li>
+			<li><a href="#ChartDOMCumulativeLastSizeAskTradeSamePriceAndSideTextColor">Chart DOM Cumulative Last Size Ask Trade Same Price and Side Text Color</a></li>
+			<li><a href="#ChartDOMRecentBidVolume">Chart DOM Recent Bid Volume</a></li>
+			<li><a href="#ChartDOMRecentAskVolume">Chart DOM Recent Ask Volume</a></li>				
+			<li><a href="#ChartDOMLastTradedRecentBidVolumeBackground">Chart DOM Last Traded Recent Bid Volume Background</a></li>
+			<li><a href="#ChartDOMLastTradedRecentAskVolumeBackground">Chart DOM Last Traded Recent Ask Volume Background</a></li>				
+			<li><a href="#ChartDOMCurrentTradedTotalVolume">Chart DOM Current Traded Total Volume</a></li>
+			<li><a href="#ChartDOMCurrentTradedBidVolume">Chart DOM Current Traded Bid Volume</a></li>
+			<li><a href="#ChartDOMCurrentTradedAskVolume">Chart DOM Current Traded Ask Volume</a></li>				
+			<li><a href="#ChartDOMBidMarketDepthPullingStacking">Chart DOM Bid Market Depth Pulling/Stacking</a></li>
+			<li><a href="#ChartDOMBidMarketDepthPullingStackingNegative">Chart DOM Bid Market Depth Pulling/Stacking Negative</a></li>
+			<li><a href="#ChartDOMAskMarketDepthPullingStacking">Chart DOM Ask Market Depth Pulling/Stacking</a></li>
+			<li><a href="#ChartDOMAskMarketDepthPullingStackingNegative">Chart DOM Ask Market Depth Pulling/Stacking Negative</a></li>
+			<li><a href="#ChartDOMBidMarketOrdersBackground">Chart DOM Bid Market Orders Background</a></li>
+			<li><a href="#ChartDOMBidMarketOrders">Chart DOM Bid Market Orders</a></li>
+			<li><a href="#ChartDOMAskMarketOrdersBackground">Chart DOM Ask Market Orders Background</a></li>
+			<li><a href="#ChartDOMAskMarketOrders">Chart DOM Ask Market Orders</a></li>
+			<li><a href="#ChartDOMBidVolumeBar">Chart DOM Bid Volume Bar</a></li>
+			<li><a href="#ChartDOMAskVolumeBar">Chart DOM Ask Volume Bar</a></li>
+			<li><a href="#ChartDOMTotalPercentageText">Chart DOM Total/Percentage Text</a></li>
+			<li><a href="#ChartDOMRecentBidVolumeVolumeBar">Chart DOM Recent Bid Volume Volume Bar</a></li>
+			<li><a href="#ChartDOMRecentAskVolumeVolumeBar">Chart DOM Recent Ask Volume Volume Bar</a></li>
+			<li><a href="#ChartDOMCurrentTradedBidVolumeVolumeBar">Chart DOM Current Traded Bid Volume Volume Bar</a></li>
+			<li><a href="#ChartDOMCurrentTradedAskVolumeVolumeBar">Chart Dom Current Traded Ask Volume Volume Bar</a></li>
+			<li><a href="#ChartDOMCurrentTradedTotalVolumeVolumeBar">Chart DOM Current Traded Total Volume Volume Bar</a></li>
+			<li><a href="#ChartDOMBidMarketDepthPullingStackingVolumeBar">Chart DOM Bid Market Depth Pulling/Stacking Volume Bar</a></li>
+			<li><a href="#ChartDOMAskMarketDepthPullingStackingVolumeBar">Chart DOM Ask Market Depth Pulling Stacking Volume Bar</a></li>
+			<li><a href="#ChartDOMRecentBidBestBidBackground">Chart DOM Recent Bid Best Bid Background</a></li>
+			<li><a href="#ChartDOMRecentAskBestAskBackground">Chart DOM Recent Ask Best Ask Background</a></li>
+			<li><a href="#ChartDOMRecentBidSamePriceAndSideBackgroundColor">Chart DOM Recent Bid Same Price and Side Background Color</a></li>
+			<li><a href="#ChartDOMRecentAskSamePriceAndSideBackgroundColor">Chart DOM Recent Ask Same Price and Side Background Color</a></li>
+			<li><a href="#ChartDOMRecentBidSamePriceAndSideTextColor">Chart DOM Recent Bid Same Price and Side Text Color</a></li>
+			<li><a href="#ChartDOMRecentAskSamePriceAndSideTextColor">Chart DOM Recent Ask Same Price and Side Text Color</a></li>
+			<li><a href="#ChartTradeWindowBackgroundNonsimulatedLive">Chart Trade Window Background - Non-simulated/Live</a></li>
+			<li><a href="#ChartTradeWindowBackgroundSimulated">Chart Trade Window Background - Simulation Mode</a></li>
+			<li><a href="#ChartTradeWindowBuyButtonColor">Chart Trade Window Buy Button Color</a></li>
+			<li><a href="#ChartTradeWindowBuyButtonTextColor">Chart Trade Window Buy Button Text Color</a></li>
+			<li><a href="#ChartTradeWindowSellButtonColor">Chart Trade Window Sell Button Color</a></li>
+			<li><a href="#ChartTradeWindowSellButtonTextColor">Chart Trade Window Sell Button Text Color</a></li>
+			<li><a href="#ChartTradeWindowFlattenReverseCancelButtonColor">Chart Trade Window Flatten/Reverse/Cancel Button Color</a></li>
+			<li><a href="#ChartTradeWindowFlattenReverseCancelButtonTextColor">Chart Trade Window Flatten/Reverse/Cancel Button Text Color</a></li>
+			<li><a href="#ChartTradeWindowQuantityButtonColor">Chart Trade Window Quantity Buttons Color</a></li>
+			<li><a href="#ChartTradeWindowSelectedQuantityButtonColor">Chart Trade Window Selected Quantity Button Color</a></li>
+			<li><a href="#ChartTradeWindowQuantityButtonTextColor">Chart Trade Window Quantity Buttons Text Color</a></li>
+			<li><a href="#ChartTradeWindowLongProfitBackgroundColor">Chart Trade Window Position Long/Profit Background Color</a></li>
+			<li><a href="#ChartTradeWindowShortLossBackgroundColor">Chart Trade Window Position Short/Loss Background Color</a></li>
+			<li><a href="#ChartTradeWindowFlatBackgroundColor">Chart Trade Window Position Flat Background Color</a></li>
+			<li><a href="#ChartTradeWindowTextColor">Chart Trade Window Text Color</a></li>
+			<li><a href="#ChartTradeModeBox">Chart Trade Mode Box</a></li>
+			<li><a href="#ChartTradeModeBoxinSIMMode">Chart Trade Mode Box - Simulation</a></li>
+			<li><a href="#ChartTradingOrdersBeingInputted">Chart Trading Orders Being Inputted</a></li>
+			<li><a href="#ChartTradingOrderLineTextColor">Chart Trading Order Line Text Color</a></li>
+			<li><a href="#ChartTradingOrderLineBuyLimit">Chart Trading Order Line Buy Limit</a></li>
+			<li><a href="#ChartTradingOrderLineSellLimit">Chart Trading Order Line Sell Limit</a></li>
+			<li><a href="#ChartTradingOrderLineBuyStop">Chart Trading Order Line Buy Stop</a></li>
+			<li><a href="#ChartTradingOrderLineSellStop">Chart Trading Order Line Sell Stop</a></li>
+			<li><a href="#ChartTradingOrderLineBuyLimitChild">Chart Trading Order Line Buy Limit - Child</a></li>
+			<li><a href="#ChartTradingOrderLineSellLimitChild">Chart Trading Order Line Sell Limit - Child</a></li>
+			<li><a href="#ChartTradingOrderLineBuyStopChild">Chart Trading Order Line Buy Stop - Child</a></li>
+			<li><a href="#ChartTradingOrderLineSellStopChild">Chart Trading Order Line Sell Stop - Child</a></li>
+			<li><a href="#ChartTradingOrderAssociationLines">Chart Trading Order Association Lines</a></li>
+			<li><a href="#ChartTradingPositionLineLongProfit">Chart Trading Position Line Long/Profit</a></li>
+			<li><a href="#ChartTradingPositionLineShortLoss">Chart Trading Position Line Short/Loss</a></li>
+			<li><a href="#TradeOrdersWindowOpenOrder">Trade Orders Window Open Order</a></li>
+			<li><a href="#TradeOrdersWindowCompletedOrder">Trade Orders Window Completed Order</a></li>
+			<li><a href="#PositionTradesChartTradeStatsTabsLongProfit">Position/Trades/ChartTradeStats tabs Long/Profit</a></li>
+			<li><a href="#PositionTradesChartTradeStatsTabsShortLoss">Position/Trades/ChartTradeStats tabs Short/Loss</a></li>
+			<li><a href="#ChartTradingOrderFillBuyEntry">Chart Trading Order Fill Buy Entry</a></li>
+			<li><a href="#ChartTradingOrderFillBuyExit">Chart Trading Order Fill Buy Exit</a></li>
+			<li><a href="#ChartTradingOrderFillSellEntry">Chart Trading Order Fill Sell Entry</a></li>
+			<li><a href="#ChartTradingOrderFillSellExit">Chart Trading Order Fill Sell Exit</a></li>
+			<li><a href="#ChartTradingOrderFillEntryExitConnectingLinesPrimary">Chart Trading Order Fill Entry/Exit Connecting Lines Primary</a></li>
+			<li><a href="#ChartTradingOrderFillEntryExitConnectingLinesSecondary">Chart Trading Order Fill Entry/Exit Connecting Lines Secondary</a></li>
+		</li>
+		<li><a href="#TradeDOMColorsLineStylesLineWidths">Trade DOM Colors, Line Styles, and Line Widths</a>
+			<li><a href="#TradeDOMLastPriceQuantityText">Trade DOM Text Color</a></li>
+			<li><a href="#TradeDOMLastPriceQuantityBackground">Trade DOM Background Color</a></li>
+			<li><a href="#TradeDOMGrid">Trade DOM Grid</a></li>
+			<li><a href="#TradeDOMColumnSeparatorLines">Trade DOM Column Separator Lines</a></li>
+			<li><a href="#TradeDOMBuyColumnBackground">Trade DOM Buy Column Background</a></li>
+			<li><a href="#TradeDOMBuyColumnLines">Trade DOM Buy Column Lines (also Order Entry Highlight Box)</a></li>
+			<li><a href="#TradeDOMSellColumnBackground">Trade DOM Sell Column Background</a></li>
+			<li><a href="#TradeDOMSellColumnLines">Trade DOM Sell Column Lines (also Order Entry Highlight Box)</a></li>
+			<li><a href="#TradeDOMBidColumnBackground">Trade DOM Bid Column Background</a></li>
+			<li><a href="#TradeDOMAskColumnBackground">Trade DOM Ask Column Background</a></li>
+			<li><a href="#TradeDOMAskBackground">Trade DOM Ask Background</a></li>
+			<li><a href="#TradeDOMBidBackground">Trade DOM Bid Background</a></li>
+			<li><a href="#TradeDOMAskDepthBackground">Trade DOM Ask Depth Background</a></li>
+			<li><a href="#TradeDOMAskDepthQuantities">Trade DOM Ask Depth Quantities</a></li>
+			<li><a href="#TradeDOMBidDepthBackground">Trade DOM Bid Depth Background</a></li>
+			<li><a href="#TradeDOMBidDepthQuantities">Trade DOM Bid Depth Quantities</a></li>
+			<li><a href="#TradeDOMBestBidAskBoxBackground">Trade DOM Best Bid/Ask Box Background</a></li>
+			<li><a href="#TradeDOMDailyHighLine">Trade DOM Daily High Line</a></li>
+			<li><a href="#TradeDOMDailyLowLine">Trade DOM Daily Low Line</a></li>
+			<li><a href="#TradeDOMRecenterLine">Trade DOM Recenter Line</a></li>
+			<li><a href="#TradeDOMProfitLossUp">Trade DOM Profit &amp; Loss Up</a></li>
+			<li><a href="#TradeDOMProfitLossDown">Trade DOM Profit &amp; Loss Down</a></li>
+			<li><a href="#TradeDOMValueText">Trade DOM Values Scale Text</a></li>
+			<li><a href="#TradeDOMLastPriceTextAtBid">Trade DOM Last Price Text Bid Trade</a></li>
+			<li><a href="#TradeDOMLastPriceTextAtAsk">Trade DOM Last Price Text Ask Trade</a></li>
+			<li><a href="#TradeDOMLastPriceBackgroundBidTrade">Trade DOM Last Price Background Bid Trade</a></li>
+			<li><a href="#TradeDOMLastPriceBackgroundAskTrade">Trade DOM Last Price Background Ask Trade</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeTextBidTrade">Trade DOM Cumulative Last Size Text Bid Trade</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeTextAskTrade">Trade DOM Cumulative Last Size Text Ask Trade</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeBackgrounBidTrade">Trade DOM Cumulative Last Size Background Bid Trade</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeBackgroundAskTrade">Trade DOM Cumulative Last Size Background Ask Trade</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeBidTradeSamePriceAndSideBackgroundColor">Trade DOM Cumulative Last Size Bid Trade Same Price and Side Background Color</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeAskTradeSamePriceAndSideBackgroundColor">Trade DOM Cumulative Last Size Ask Trade Same Price and Side Background Color</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeBidTradeSamePriceAndSideTextColor">Trade DOM Cumulative Last Size Bid Trade Same Price and Side Text Color</a></li>
+			<li><a href="#TradeDOMCumulativeLastSizeAskTradeSamePriceAndSideTextColor">Trade DOM Cumulative Last Size Ask Trade Same Price and Side Text Color</a></li>
+			<li><a href="#TradeDOMRecentBidVolume">Trade DOM Recent Bid Volume</a></li>
+			<li><a href="#TradeDOMRecentAskVolume">Trade DOM Recent Ask Volume</a></li>
+			<li><a href="#TradeDOMLastTradedRecentBidVolumeBackground">Trade DOM Last Traded Recent Bid Volume Background</a></li>
+			<li><a href="#TradeDOMLastTradedRecentAskVolumeBackground">Trade DOM Last Traded Recent Ask Volume Background</a></li>
+			<li><a href="#TradeDOMCurrentTradedTotalVolume">Trade DOM Current Traded Total Volume</a></li>
+			<li><a href="#TradeDOMCurrentTradedBidVolume">Trade DOM Current Traded Bid Volume</a></li>
+			<li><a href="#TradeDOMCurrentTradedAskVolume">Trade DOM Current Traded Ask Volume</a></li>
+			<li><a href="#TradeDOMBidMarketDepthPullingStacking">Trade DOM Bid Market Depth Pulling/Stacking</a></li>
+			<li><a href="#TradeDOMBidMarketDepthPullingStackingNegative">Trade DOM Bid Market Depth Pulling/Stacking Negative</a></li>
+			<li><a href="#TradeDOMAskMarketDepthPullingStacking">Trade DOM Ask Market Depth Pulling/Stacking</a></li>
+			<li><a href="#TradeDOMAskMarketDepthPullingStackingNegative">Trade DOM Ask Market Depth Pulling/Stacking Negative</a></li>
+			<li><a href="#TradeDOMBidMarketOrdersBackground">Trade DOM Bid Market Orders Background</a></li>
+			<li><a href="#TradeDOMBidMarketOrders">Trade DOM Bid Market Orders</a></li>
+			<li><a href="#TradeDOMAskMarketOrdersBackground">Trade DOM Ask Market Orders Background</a></li>
+			<li><a href="#TradeDOMAskMarketOrders">Trade DOM Ask Market Orders</a></li>
+			<li><a href="#TradeDOMBidVolumeBar">Trade DOM Bid Volume Bar</a></li>
+			<li><a href="#TradeDOMAskVolumeBar">Trade DOM Ask Volume Bar</a></li>
+			<li><a href="#TradeDOMTotalPercentageText">Trade DOM Total/Percentage Text</a></li>
+			<li><a href="#TradeDOMRecentBidVolumeVolumeBar">Trade DOM Recent Bid Volume Volume Bar</a></li>
+			<li><a href="#TradeDOMRecentAskVolumeVolumeBar">Trade DOM Recent Ask Volume Volume Bar</a></li>
+			<li><a href="#TradeDOMCurrentTradedBidVolumeVolumeBar">Trade DOM Current Traded Bid Volume Volume Bar</a></li>
+			<li><a href="#TradeDOMCurrentTradedAskVolumeVolumeBar">Trade Dom Current Traded Ask Volume Volume Bar</a></li>
+			<li><a href="#TradeDOMCurrentTradedTotalVolumeVolumeBar">Trade DOM Current Traded Total Volume Volume Bar</a></li>
+			<li><a href="#TradeDOMBidMarketDepthPullingStackingVolumeBar">Trade DOM Bid Market Depth Pulling/Stacking Volume Bar</a></li>
+			<li><a href="#TradeDOMAskMarketDepthPullingStackingVolumeBar">Trade DOM Ask Market Depth Pulling Stacking Volume Bar</a></li>
+			<li><a href="#TradeDOMRecentBidBestBidBackground">Trade DOM Recent Bid Best Bid Background</a></li>
+			<li><a href="#TradeDOMRecentAskBestAskBackground">Trade DOM Recent Ask Best Ask Background</a></li>
+			<li><a href="#TradeDOMRecentBidSamePriceAndSideBackgroundColor">Trade DOM Recent Bid Same Price and Side Background Color</a></li>
+			<li><a href="#TradeDOMRecentAskSamePriceAndSideBackgroundColor">Trade DOM Recent Ask Same Price and Side Background Color</a></li>
+			<li><a href="#TradeDOMRecentBidSamePriceAndSideTextColor">Trade DOM Recent Bid Same Price and Side Text Color</a></li>
+			<li><a href="#TradeDOMRecentAskSamePriceAndSideTextColor">Trade DOM Recent Ask Same Price and Side Text Color</a></li>
+			<li><a href="#TradeDOMColorForOrdersBeingInputted">Trade DOM Color For Orders Being Inputted</a></li>
+			<li><a href="#TradeDOMOrderLineTextColor">Trade DOM Order Line Text Color</a></li>
+			<li><a href="#TradeDOMOrderLineBuyLimit">Trade DOM Order Line Buy Limit</a></li>
+			<li><a href="#TradeDOMOrderLineSellLimit">Trade DOM Order Line Sell Limit</a></li>
+			<li><a href="#TradeDOMOrderLineBuyStop">Trade DOM Order Line Buy Stop</a></li>
+			<li><a href="#TradeDOMOrderLineSellStop">Trade DOM Order Line Sell Stop</a></li>
+			<li><a href="#TradeDOMOrderLineBuyLimitChild">Trade DOM Order Line Buy Limit - Child</a></li>
+			<li><a href="#TradeDOMOrderLineSellLimitChild">Trade DOM Order Line Sell Limit - Child</a></li>
+			<li><a href="#TradeDOMOrderLineBuyStopChild">Trade DOM Order Line Buy Stop - Child</a></li>
+			<li><a href="#TradeDOMOrderLineSellStopChild">Trade DOM Order Line Sell Stop - Child</a></li>
+			<li><a href="#TradeDOMOrderAssociationLines">Trade DOM Order Association Lines</a></li>
+			<li><a href="#TradeDOMPositionLineLongProfit">Trade DOM Position Line Long/Profit</a></li>
+			<li><a href="#TradeDOMPositionShortLoss">Trade DOM Position Line Short/Loss</a></li>
+		</ul>
+	</li>
+</ul>
+<hr>
+
+
+<section class="h2">
+    <h2 id="GlobalGraphicSettings">Global Graphic Settings</h2>
+    <div class="member-link">[<a href="#GlobalGraphicSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> This section explains opening the  Global Graphics Settings window for the various  Colors, Line Styles, and Line Widths settings described on this page. </p>
+
+    <p>Select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> on the menu to customize the Fonts, Colors, Line Styles, and Line Widths <em>globally</em>. The relevant settings and the descriptions are described below.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ChartAndTradeDOMSpecificGraphicSettings">Chart and Trade DOM Specific Graphic Settings</h2>
+    <div class="member-link">[<a href="#ChartAndTradeDOMSpecificGraphicSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p> This section explains opening the  Chart / Trade DOM Graphics Settings window for the various  Colors, Line Styles, and Line Widths settings described on this page. </p>
+
+    <p>To customize the Fonts, Colors, Line Styles, and Line Widths for a specific chart or Trade DOM, select <b class="menu_item">Chart &gt;&gt; Graphics Settings</b> on the menu.</p>
+
+    <p>Make certain <b>Use Global Graphics Settings Instead of These Settings</b> is <em>unchecked</em> in this case. The relevant settings and the descriptions are described below.</p>
+</section>
+
+<section class="h2">
+    <h2 id="FontSettings">Font Settings</h2>
+    <div class="member-link">[<a href="#FontSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  Depending upon whether the chart or Trading DOM is using either the global  Graphics  Settings or its own  Graphics Settings, you will open either  the Global Graphics Settings  window through <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>, or  the chart specific Graphics Settings window through <b class="menu_item">Chart &gt;&gt; Graphics Settings</b>  to modify the primary font of the chart or Trade DOM. </p>
+    
+     <p> For further details, refer to  <a href = "index5795.html?page=doc/GraphicsSettings.html#Introduction">Graphics Settings</a>.   The chart specific Graphics Settings window is only used if the  <b> Use Global Graphics Settings Instead of These Settings</b> is  disabled on that window.</p>
+
+    <p>Through either of those  settings Windows, select the <b>Fonts</b> tab. In the list fonts select <b>Chart Text</b>. Press the <b>Select</b> button. Adjust the font properties and press <b>OK</b>.</p>
+
+    <p>To modify the font for the depth of market quantity/size numbers on the Chart DOM, in the list of fonts select <b>DOM Quantities/Sizes</b>. Press the <b>Select</b> button. Adjust the font properties and press <b>OK</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChartTradingAndChartDOMColorsLineStylesLineWidths">Chart Trading and Chart DOM Colors, Line Styles, and Line Widths</h2>
+    <div class="member-link">[<a href="#ChartTradingAndChartDOMColorsLineStylesLineWidths">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="ChartDOMColumnSeparatorLines">Chart DOM Column Separator Lines</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMColumnSeparatorLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>When enabled, this specifies the color, width, and line style of the vertical bars that separate the columns in the Chart Trading DOM. It is necessary to check the <b>Enable</b> option for the columns to be drawn.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBuyColumnBackground">Chart DOM Buy Column Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBuyColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of the Buy column.  This option is also used when the Bid/Ask columns are combined, and when the Buy/Bid columns are combined. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBuyColumnLines">Chart DOM Buy Column Lines (also Order Entry Highlight Box)</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBuyColumnLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the vertical Buy order column lines and the box which highlights the price level being pointed to in the Buy column.</p>
+
+        <p>In the case of the box which highlights the price level, this is drawn with a special drawing mode for efficiency reasons, so it may not match exactly this color setting. The <b>Chart DOM Buy Column Background</b> color will affect the highlight box color.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMSellColumnBackground">Chart DOM Sell Column Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMSellColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of the Sell column.  This option is also used when the Sell/Ask columns are combined. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMSellColumnLines">Chart DOM Sell Column Lines (also Order Entry Highlight Box)</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMSellColumnLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the vertical Sell order column lines and the box which highlights the price level being pointed to in the Sell column.</p>
+
+        <p>In the case of the box which highlights the price level, this is drawn with a special drawing mode for efficiency reasons, so it may not match exactly this color setting. The <b>Chart DOM Sell Column Background</b> color will affect the highlight box color.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidColumnBackground">Chart DOM Bid Column Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBidColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of the Bid column. <em>It is necessary to check the <b>Enable</b> option for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskColumnBackground">Chart DOM Ask Column Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMAskColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of the Ask column. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskBackground">Chart DOM Ask Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMAskBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the background above the last trade price and higher on the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidBackground">Chart DOM Bid Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBidBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the background below the last trade price and lower on the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskDepthBackground">Chart DOM Ask Depth Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMAskDepthBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of ask depth entries. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskDepthQuantities">Chart DOM Ask Depth Quantities</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMAskDepthQuantities">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the market depth quantities/sizes on the Ask side.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidDepthBackground">Chart DOM Bid Depth Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBidDepthBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of bid depth entries. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidDepthQuantities">Chart DOM Bid Depth Quantities</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBidDepthQuantities">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the market depth quantities/sizes on the Bid side.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBestBidAskBoxBackground">Chart DOM Best Bid/Ask Box Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBestBidAskBoxBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the background area on the price scale on the Chart DOM from the best Ask price to the best Bid price. To use this, <b>Enable</b> this chart object and set the color as required.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMDailyHighLine">Chart DOM Daily High Line</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMDailyHighLine">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>The color of the Daily High line on the Chart DOM.</p>
+
+        <p>To enable the display of this line, check the <b>Enable</b> option to the right of the Color button. Otherwise, it will not be visible.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMDailyLowLine">Chart DOM Daily Low Line</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMDailyLowLine">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>The color of the Daily Low line on the Chart DOM.</p>
+        
+        <p>To enable the display of this line, check the <b>Enable</b> option to the right of the Color button. Otherwise, it will not be visible. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecenterLine">Chart DOM Recenter Line</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMRecenterLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p> The color of the Recenter Line on the Chart DOM. The Recenter Line is drawn initially at the last trade price and can be reset with  <b class = "menu_item">Trade &gt;&gt;  Re-center Trade   DOM Scales</b>.</p>
+        
+         <p>To enable the display of this line, check the <b>Enable</b> option to the right of the Color button. Otherwise, it will not be visible. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMProfitLossUp">Chart DOM Profit &amp; Loss Up</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMProfitLossUp">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>The color of the Profit numbers in the Profit &amp; Loss column on the Chart DOM/Trade DOM. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMProfitLossDown">Chart DOM Profit &amp; Loss Down</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMProfitLossDown">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>The color of the Loss numbers in the Profit &amp; Loss column on the Chart DOM/Trade DOM. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMValueText">Chart DOM Values Scale Text</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMValueText">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>The color of the values displayed on the Values Scale on the right side of the chart for the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMLastPriceTextAtBid">Chart DOM Last Price Text Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMLastPriceTextAtBid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the last trade price on the  chart when it is considered a    <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.  </p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+
+        <p>This setting applies to the chart whether the Chart DOM is enabled or not. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMLastPriceTextAtAsk">Chart DOM Last Price Text Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMLastPriceTextAtAsk">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the last trade price on the  chart Values Scale when it is considered an    <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.  </p>
+
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+
+        <p>This setting applies to the chart whether the Chart DOM is enabled or not. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMLastPriceBackgroundBidTrade">Chart DOM Last Price Background Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMLastPriceBackgroundBidTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade price box on the chart Values Scale when it is considered a <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Additionally, the   <a href = "index5795.html?page=doc/GraphicsSettings.html#LastTradePriceBox">Last Trade Price Box</a> color setting also needs to be enabled.  Otherwise, this setting has no effect.</p>
+
+        <p>This setting applies to the chart whether the Chart DOM is enabled or not.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMLastPriceBackgroundAskTrade">Chart DOM Last Price Background Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMLastPriceBackgroundAskTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade price on the chart Values Scale when it is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.  </p>
+
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button.   <a href = "index5795.html?page=doc/GraphicsSettings.html#LastTradePriceBox">Last Trade Price Box</a> color setting also needs to be enabled. Otherwise, this setting has no effect.</p>
+
+        <p>This setting applies to the chart whether the Chart DOM is enabled or not. </p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeTextBidTrade">Chart DOM Cumulative Last Size Text Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCumulativeLastSizeTextBidTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a>  value on the market data column area of the chart when the trade is considered a <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeTextAskTrade">Chart DOM Cumulative Last Size Text Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCumulativeLastSizeTextAskTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column area of the chart  when the trade is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeBackgrounBidTrade">Chart DOM Cumulative Last Size Background Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCumulativeLastSizeBackgrounBidTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column area of the chart when the trade is considered a <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeBackgroundAskTrade">Chart DOM Cumulative Last Size Background Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCumulativeLastSizeBackgroundAskTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column area of the chart when the trade is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeBidTradeSamePriceAndSideBackgroundColor">Chart DOM Cumulative Last Size Bid Trade Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#ChartDOMCumulativeLastSizeBidTradeSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered a <b>Bid</b> update and the previous update was also a Bid update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeAskTradeSamePriceAndSideBackgroundColor">Chart DOM Cumulative Last Size Ask Trade Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#ChartDOMCumulativeLastSizeAskTradeSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered an <b>Ask</b> update and the previous update was also an Ask update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeBidTradeSamePriceAndSideTextColor">Chart DOM Cumulative Last Size Bid Trade Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#ChartDOMCumulativeLastSizeBidTradeSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered a <b>Bid</b> update and the previous update was also a Bid update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCumulativeLastSizeAskTradeSamePriceAndSideTextColor">Chart DOM Cumulative Last Size Ask Trade Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#ChartDOMCumulativeLastSizeAskTradeSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered an <b>Ask</b> update and the previous update was also an Ask update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentBidVolume">Chart DOM Recent Bid Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMRecentBidVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Bid Volume values displayed on the Chart DOM when this column has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentAskVolume">Chart DOM Recent Ask Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMRecentAskVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Ask Volume values displayed on the Chart DOM when this column has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMLastTradedRecentBidVolumeBackground">Chart DOM Last Traded Recent Bid Volume Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMLastTradedRecentBidVolumeBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade volume in the <b>Recent Bid Volume</b> column on the Chart DOM when the trade is considered a <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMLastTradedRecentAskVolumeBackground">Chart DOM Last Traded Recent Ask Volume Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMLastTradedRecentAskVolumeBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade volume in the <b>Recent Ask Volume</b> column on the Chart DOM when the trade is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCurrentTradedTotalVolume">Chart DOM Current Traded Total Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCurrentTradedTotalVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Total Volume values displayed in the <b>Current Traded Total Volume</b> column when it has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCurrentTradedBidVolume">Chart DOM Current Traded Bid Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCurrentTradedBidVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Bid Volume values displayed in the <b>Current Traded Bid Volume</b> column when it has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCurrentTradedAskVolume">Chart DOM Current Traded Ask Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCurrentTradedAskVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Ask Volume values displayed in the <b>Current Traded Ask Volume</b> column when it has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidMarketDepthPullingStacking">Chart DOM Bid Market Depth Pulling/Stacking</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBidMarketDepthPullingStacking">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the positive Bid Market Depth values displayed in the <b>Bid Market Depth Pulling/Stacking</b> column when it has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidMarketDepthPullingStackingNegative">Chart DOM Bid Market Depth Pulling/Stacking Negative</h3>
+        <div class="member-link">[<a href="#ChartDOMBidMarketDepthPullingStackingNegative">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the negative Bid Market Depth values displayed in the <b>Bid Market Depth Pulling/Stacking</b> column when it has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskMarketDepthPullingStacking">Chart DOM Ask Market Depth Pulling/Stacking</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMAskMarketDepthPullingStacking">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the positive Ask Market Depth values displayed in the <b>Ask Market Depth Pulling/Stacking</b> column when it has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskMarketDepthPullingStackingNegative">Chart DOM Ask Market Depth Pulling/Stacking Negative</h3>
+        <div class="member-link">[<a href="chartdomaskmarketdepthpullingstackingnegative.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the negative Ask Market Depth values displayed in the <b>Ask Market Depth Pulling/Stacking</b> column when it has been added to the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidMarketOrdersBackground">Chart DOM Bid Market Orders Background</h3>
+        <div class="member-link">[<a href="#ChartDOMBidMarketOrdersBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Bid Market Orders column when the column has been added to the chart and the option is Enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidMarketOrders">Chart DOM Bid Market Orders</h3>
+        <div class="member-link">[<a href="chartdombidmarketorders.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Bid Market Orders text when the column has been added to the chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskMarketOrdersBackground">Chart DOM Ask Market Orders Background</h3>
+        <div class="member-link">[<a href="#ChartDOMAskMarketOrdersBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Ask Market Orders column when the column has been added to the chart and the option is Enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskMarketOrders">Chart DOM Ask Market Orders</h3>
+        <div class="member-link">[<a href="chartdomaskmarketorders.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Ask Market Orders text when the column has been added to the chart.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="ChartDOMBidVolumeBar">Chart DOM Bid Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBidVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Volume Bars</a> in the Buy column of the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskVolumeBar">Chart DOM Ask Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMAskVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Volume Bars</a> in the Sell column of the Chart DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMTotalPercentageText">Chart DOM Total/Percentage Text</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMTotalPercentageText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the text displayed by the  <b Class = "menu_item">Global Settings &gt;&gt; Chart DOM Settings</b>  <b>&gt;&gt; Display DOM Depth Totals</b> and the <b>Display DOM Depth  Percentages</b>  options. These are displayed above and below the market depth quantities on the Chart/Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentBidVolumeVolumeBar">Chart DOM Recent Bid Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMRecentBidVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Recent Bid Volume column when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Recent Bid Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentAskVolumeVolumeBar">Chart DOM Recent Ask Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMRecentAskVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Recent Ask Volume column when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Recent Ask Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCurrentTradedBidVolumeVolumeBar">Chart DOM Current Traded Bid Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCurrentTradedBidVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Current Traded Bid Volume column when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Current Traded Bid Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCurrentTradedAskVolumeVolumeBar">Chart Dom Current Traded Ask Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCurrentTradedAskVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Current Traded Ask Volume column when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Current Traded Ask Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMCurrentTradedTotalVolumeVolumeBar">Chart DOM Current Traded Total Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMCurrentTradedTotalVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Current Traded Total Volume column when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Current Traded Total Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMBidMarketDepthPullingStackingVolumeBar">Chart DOM Bid Market Depth Pulling/Stacking Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMBidMarketDepthPullingStackingVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Bid Market Depth Pulling/Stacking column when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Bid Market Depth Pulling/Stacking column.</p>
+
+        <p>This is also the color used for the Bid Market Depth Pulling/Stacking volume bars in the <b>Total Market Depth Pulling/Stacking</b> column when it is displayed on the DOM with the Show Volume Bars option selected.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMAskMarketDepthPullingStackingVolumeBar">Chart DOM Ask Market Depth Pulling Stacking Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMAskMarketDepthPullingStackingVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Ask Market Depth Pulling/Stacking column when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Ask Market Depth Pulling/Stacking column.</p>
+
+        <p>This is also the color used for the Ask Market Depth Pulling/Stacking volume bars in the <b>Total Market Depth Pulling/Stacking</b> column when it is displayed on the DOM with the Show Volume Bars option selected.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentBidBestBidBackground">Chart DOM Recent Bid Best Bid Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMRecentBidBestBidBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Best Bid within the Recent Bid column on the Chart DOM when this coloring is Enabled.</p>
+
+        <p>When the <a href="#ChartDOMLastTradedRecentBidVolumeBackground">Chart DOM Last Traded Recent Bid Volume Background</a> is also enabled and the last trade is at the Best Bid, then the <b>Chart DOM Last Traded Recent Bid Volume Background</b> takes precedence and will be displayed rather than the <b>Chart DOM Recent Bid Best Bid Background</b>. Therefore it is not recommended that these two background colorings be the same.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentAskBestAskBackground">Chart DOM Recent Ask Best Ask Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartDOMRecentAskBestAskBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Best Ask within the Recent Ask column on the Chart DOM when this coloring is Enabled.</p>
+
+        <p>When the <a href="#ChartDOMLastTradedRecentAskVolumeBackground">Chart DOM Last Traded Recent Ask Volume Background</a> is also enabled and the last trade is at the Best Ask, then the <b>Chart DOM Last Traded Recent Ask Volume Background</b> takes precedence and will be displayed rather than the <b>Chart DOM Recent Ask Best Ask Background</b>. Therefore it is not recommended that these two background colorings be the same.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentBidSamePriceAndSideBackgroundColor">Chart DOM Recent Bid Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#ChartDOMRecentBidSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color at the price of the last Bid update when the previous update was also a Bid at the same price in the Recent Bid Volume column of the Chart DOM when this coloring is Enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentAskSamePriceAndSideBackgroundColor">Chart DOM Recent Ask Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#ChartDOMRecentAskSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color at the price of the last Ask update when the previous update was also an Ask at the same price in the Recent Ask Volume column of the Chart DOM when this coloring is Enabled.</p>
+    </section>
+        
+    <section class="h3">
+        <h3 id="ChartDOMRecentBidSamePriceAndSideTextColor">Chart DOM Recent Bid Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#ChartDOMRecentBidSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color at the price of the last Bid update when the previous update was also a Bid at the same price in the Recent Bid Volume column of the Chart DOM when this coloring is Enabled and the <b>Chart DOM Recent Bid Same Price and Side Background Color</b> is also enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMRecentAskSamePriceAndSideTextColor">Chart DOM Recent Ask Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#ChartDOMRecentAskSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color at the price of the last Ask update when the previous update was also an Ask at the same price in the Recent Ask Volume column of the Chart DOM when this coloring is Enabled and the <b>Chart DOM Recent Ask Same Price and Side Background Color</b> is also enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowBackgroundNonsimulatedLive">Chart Trade Window Background - Non-simulated/Live</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowBackgroundNonsimulatedLive">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Trade Window background when <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode</b> is disabled.</p>
+
+        <p>This color setting is ignored when the <b>Color Same as Chart</b> setting is enabled on the <a href="index9473.html?page=doc/TradeWindow.html#MenuButton">Trade Window  Menu</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowBackgroundSimulated">Chart Trade Window Background - Simulation Mode</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowBackgroundSimulated">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Trade Window background when <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode</b> is enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowBuyButtonColor">Chart Trade Window Buy Button Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowBuyButtonColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <b>Buy</b> buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowBuyButtonTextColor">Chart Trade Window Buy Button Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowBuyButtonTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The  color of the text on the <b>Buy</b> buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowSellButtonColor">Chart Trade Window Sell Button Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowSellButtonColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <b>Sell</b> buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowSellButtonTextColor">Chart Trade Window Sell Button Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowSellButtonTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the text on the <b>Sell</b> buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowFlattenReverseCancelButtonColor">Chart Trade Window Flatten/Reverse/Cancel Button Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowFlattenReverseCancelButtonColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Flatten, Reverse, and Cancel buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowFlattenReverseCancelButtonTextColor">Chart Trade Window Flatten/Reverse/Cancel Button Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowFlattenReverseCancelButtonTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the text on the Flatten, Reverse and Cancel buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowQuantityButtonColor">Chart Trade Window Quantity Buttons Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowQuantityButtonColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Quantity buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowSelectedQuantityButtonColor">Chart Trade Window Selected Quantity Button Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowSelectedQuantityButtonColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the selected Quantity button on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowQuantityButtonTextColor">Chart Trade Window Quantity Buttons Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowQuantityButtonTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the text on the Quantity buttons on the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowLongProfitBackgroundColor">Chart Trade Window Position Long/Profit Background Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowLongProfitBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color for the Position display and the Profit/Loss  displays on the Chart Trade Window when there is a  Long position or a profit.</p>
+
+        <p>To force an immediate update of the displays on the Chart Trade Window which use this color, it is necessary to close and reopen the Chart Trade Window.   Refer to <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Opening Trade Window for Chart or Trade DOM</a> for instructions.  </p>
+
+        <p>  To change the text color, set the  <a href="#ChartTradeWindowTextColor">Chart Trade Window Text Color</a>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowShortLossBackgroundColor">Chart Trade Window Position Short/Loss Background Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowShortLossBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color for the Position display and the Profit/Loss  displays on the Chart Trade Window when there is a Short position or a loss.</p>
+
+        <p>To force an immediate update of the displays on the Chart Trade Window which use this color, it is necessary to close and reopen the Chart Trade Window.   Refer to <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Opening Trade Window for Chart or Trade DOM</a> for instructions.  </p>
+
+        <p>  To change the text color, set the  <a href="#ChartTradeWindowTextColor">Chart Trade Window Text Color</a>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowFlatBackgroundColor">Chart Trade Window Position Flat Background Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowFlatBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color for the Position display and the Profit/Loss  displays on the Chart Trade Window when there is a flat position or no profit/loss.</p>
+
+        <p>To force an immediate update of the displays on the Chart Trade Window which use this color, it is necessary to close and reopen the Chart Trade Window.   Refer to <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Opening Trade Window for Chart or Trade DOM</a> for instructions.  </p>
+
+        <p>To change the text color, set the <a href="#ChartTradeWindowTextColor">Chart Trade Window Text Color</a>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeWindowTextColor">Chart Trade Window Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeWindowTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the text for various text items on the Chart Trade Window. This includes the text for the Position and Profit/Loss displays.</p>
+
+        <p>To force an immediate update of the displays on the Chart Trade Window which use this color, it is necessary to close and reopen the Chart Trade Window. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeModeBox">Chart Trade Mode Box</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeModeBox">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This color sets the color of the Trade Mode Box at the top left of the chart when <b class="menu_item">Trade &gt;&gt; Chart Trade Mode</b> is enabled for the chart and in Trade Simulation Mode is disabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeModeBoxinSIMMode">Chart Trade Mode Box - Simulation</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradeModeBoxinSIMMode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This color sets the color of the Trade Mode Box at the top left of the chart when <b class="menu_item">Trade &gt;&gt; Chart Trade Mode</b> is enabled for the chart and in Trade Simulation Mode.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrdersBeingInputted">Chart Trading Orders Being Inputted</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrdersBeingInputted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This color sets the color for order lines while you are modifying an order or entering an order that requires 2 prices.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineTextColor">Chart Trading Order Line Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>This sets the Color of the foreground text for the Order Lines, Order Fills and Trade Position lines displayed on a chart. </p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineBuyLimit">Chart Trading Order Line Buy Limit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineBuyLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>This sets the Color, Line Style, and Draw Width of Buy Limit and Market if Touched order lines displayed on the chart. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineSellLimit">Chart Trading Order Line Sell Limit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineSellLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Limit and Market if Touched order lines displayed on the chart. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineBuyStop">Chart Trading Order Line Buy Stop</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineBuyStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Buy Stop and Stop-Limit order lines displayed on the chart. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineSellStop">Chart Trading Order Line Sell Stop</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineSellStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Stop and Stop-Limit order lines displayed on the chart. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineBuyLimitChild">Chart Trading Order Line Buy Limit - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineBuyLimitChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Buy Limit and Market if Touched child order lines displayed on the chart. </p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineSellLimitChild">Chart Trading Order Line Sell Limit - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineSellLimitChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Limit and Market if Touched child order lines displayed on the chart. </p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineBuyStopChild">Chart Trading Order Line Buy Stop - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineBuyStopChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Buy Stop and Stop-Limit child order lines displayed on the chart.</p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderLineSellStopChild">Chart Trading Order Line Sell Stop - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderLineSellStopChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Stop and Stop-Limit child order lines displayed on the chart.</p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderAssociationLines">Chart Trading Order Association Lines</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderAssociationLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#DrawOrderAssociationLines">Order Association Lines</a> on the Chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingPositionLineLongProfit">Chart Trading Position Line Long/Profit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingPositionLineLongProfit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of a Trade Position line when the Trade Position for the symbol of the chart is Long and the Trade Position line is set to be colored based upon whether the Trade Position is Long or Short, or the Trade Position has a Profit and the Trade Position line is set to be colored based upon whether there is a Profit or Loss.</p>
+
+        <p>To control whether coloring is based upon Long/Short or Profit/Loss, set <b class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Position &gt;&gt; Coloring of Position Line Based On</b> to either Long/Short or Profit/Loss.</p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="ChartTradingPositionLineShortLoss">Chart Trading Position Line Short/Loss</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingPositionLineShortLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of a Trade Position line when the Trade Position for the symbol of the chart is Short and the Trade Position line is set to be colored based upon whether the Trade Position is Long or Short, or the Trade Position has a Loss and the Trade Position line is set to be colored based upon whether there is a Profit or Loss.</p>
+
+
+        <p>To control whether coloring is based upon Long/Short or Profit/Loss, set <b class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Position &gt;&gt; Coloring of Position Line Based On</b> to either Long/Short  or Profit/Loss.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeOrdersWindowOpenOrder">Trade Orders Window Open Order</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeOrdersWindowOpenOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of Open Orders on the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradeOrders">Trade Orders Window</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeOrdersWindowCompletedOrder">Trade Orders Window Completed Order</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeOrdersWindowCompletedOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of Completed Orders on the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradeOrders">Trade Orders Window</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="PositionTradesChartTradeStatsTabsLongProfit">Position/Trades/ChartTradeStats tabs Long/Profit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#PositionTradesChartTradeStatsTabsLongProfit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the background color of cells that show either Long position or Profit data on the <a href="index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab">Trade Statistics for Charts Tab</a> of the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+        
+        <p>  This sets the text  color for Profit values on the <b>Trade statistics, Trades, Period  Stats, Account Stats</b> tabs of the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>. In the case of the  <b>Trade Statistics</b> tab, this color setting will not go into effect until you select  <b class="menu_item">Edit &gt;&gt; Refresh Log</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="PositionTradesChartTradeStatsTabsShortLoss">Position/Trades/ChartTradeStats tabs Short/Loss</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#PositionTradesChartTradeStatsTabsShortLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> This sets the background color of cells that show either Short position or Loss data on the <a href="index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab">Trade Statistics for Charts Tab</a> of the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+        
+        <p>  This sets the text  color for Loss values on the <b>Trade statistics, Trades, Period  Stats, Account Stats</b> tabs of the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>. In the case of the  <b>Trade Statistics</b> tab, this color setting will not go into effect until you select  <b class="menu_item">Edit &gt;&gt; Refresh Log</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderFillBuyEntry">Chart Trading Order Fill Buy Entry</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderFillBuyEntry">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the color of an order fill arrow and text when it represents a Buy Entry.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderFillBuyExit">Chart Trading Order Fill Buy Exit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderFillBuyExit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the color of an order fill arrow and text when it represents a Buy Exit.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderFillSellEntry">Chart Trading Order Fill Sell Entry</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderFillSellEntry">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the color of an order fill arrow and text when it represents a Sell Entry.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderFillSellExit">Chart Trading Order Fill Sell Exit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderFillSellExit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the color of an order fill arrow and text when it represents a Sell Exit.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderFillEntryExitConnectingLinesPrimary">Chart Trading Order Fill Entry/Exit Connecting Lines Primary</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderFillEntryExitConnectingLinesPrimary">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style and Width of Entry and Exit order fill connecting lines.</p>
+        
+        <p>This setting is only relevant when  <a href = "index3c50.html?page=doc/ChartTrading.html#DisplayingOrderFills">Displaying Order  Fills</a> on the chart. </p>
+
+        <p>Connecting lines can be  enabled by selecting <b class= "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b>. Enable the <b>Order Fills &gt;&gt; Display Entry/Exit Connecting Lines</b> option.</p>
+
+        <p>This is the color of the connecting lines when <b class= "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b>  <b> &gt;&gt; Order Fills &gt;&gt; Color Connecting Lines Based on Profit/Loss</b> is disabled in the Chart Trade Settings window. </p>
+        
+        <p>When <b>Color Connecting Lines Based on Profit/Loss</b> is enabled, then this sets the color when the connecting line is part of a profitable trade. </p>
+        
+        <p> To determine if a trade is a profitable trade and therefore uses this color, it is necessary to enable the <b Class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> <b> &gt;&gt; Order Fills  &gt;&gt; Display Trade Profit Loss</b> option in order to see the  <b>P/L:</b> value on the exit fill displayed on the chart.</p>
+
+        <p>If there any problems with the display of Order Fill connecting lines, then refer to <a href="index3c50.html?page=doc/ChartTrading.html#OrderFillConnectingLinesDoNotDisplay" target="_blank" rel="noopener noreferrer">Resolving Problem Where Order Fill Entry/Exit Connecting Lines Do Not Display</a>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradingOrderFillEntryExitConnectingLinesSecondary">Chart Trading Order Fill Entry/Exit Connecting Lines Secondary</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#ChartTradingOrderFillEntryExitConnectingLinesSecondary">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>This sets the Color, Line Style and Width of Entry and Exit order fill connecting lines.</p>
+        
+        <p>This setting is only relevant when  <a href = "index3c50.html?page=doc/ChartTrading.html#DisplayingOrderFills">Displaying Order  Fills</a> on the chart. </p>
+
+        <p>This is the color of the connecting line when the connecting line is part of a losing trade. This color setting is <em>only used</em> if 
+            <b class= "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b>  <b> &gt;&gt; Order Fills &gt;&gt; Color Connecting Lines Based on Profit/Loss</b> is enabled in the Chart Trade Settings window. </p>
+
+
+        <p>Connecting lines can be  enabled by selecting <b class= "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b>. Enable the <b>Order Fills &gt;&gt; Display Entry/Exit Connecting Lines</b> option.</p>
+
+        <p> To determine if a trade is a losing trade and therefore use the secondary color, it is necessary to enable the <b Class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> <b> &gt;&gt; Order Fills  &gt;&gt; Display Trade Profit Loss</b> option in order to see the  <b>P/L:</b> value on the exit fill displayed on the chart.</p>
+        
+        <p> If  <b>P/L:</b> displays a negative value, then this indicates it is a losing trade. Otherwise, it is a profitable trade.</p>
+        
+        <p>Also refer to <a href = "#ChartTradingOrderFillEntryExitConnectingLinesPrimary">Chart Trading Order Fill Entry/Exit Connecting Lines Primary</a>. </p>
+
+
+        <p>If there any problems with the display of Order Fill connecting lines, then refer to <a href="index3c50.html?page=doc/ChartTrading.html#OrderFillConnectingLinesDoNotDisplay" target="_blank" rel="noopener noreferrer">Resolving Problem Where Order Fill Entry/Exit Connecting Lines Do Not Display</a>. </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TradeDOMColorsLineStylesLineWidths">Trade DOM Colors, Line Styles, and Line Widths</h2>
+    <div class="member-link">[<a href="#TradeDOMColorsLineStylesLineWidths">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastPriceQuantityText">Trade DOM Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastPriceQuantityText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The foreground color of the  header line text at the top of the Trade DOM. This text color also applies to the Volume Numbers for <b class="menu_item">Trade &gt;&gt; Draw DOM Graph On Chart</b> feature.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastPriceQuantityBackground">Trade DOM Background Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastPriceQuantityBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the  header line text at the top of the Trade DOM.</p>
+
+        <p>This also controls the color of the Trade DOM background when the <b>Trade DOM Ask Background</b> and/or the <b>Trade DOM Bid Background</b> options are  <em>not</em> enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMGrid">Trade DOM Grid</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMGrid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of horizontal grid lines on a Trade DOM window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMColumnSeparatorLines">Trade DOM Column Separator Lines</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMColumnSeparatorLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, this specifies the color, width, and line style of the vertical bars that separate the columns in the Chart Trading DOM. It is necessary to check the <b>Enable</b> option for the columns to be drawn.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBuyColumnBackground">Trade DOM Buy Column Background</h3>
+
+        <div class="member-link">[<a href="#TradeDOMBuyColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>When enabled, specifies the background color of the Buy column. This option is also used when the bid/ask columns are combined, and when the Buy/Bid columns are combined. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBuyColumnLines">Trade DOM Buy Column Lines (also Order Entry Highlight Box)</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBuyColumnLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the vertical Buy order column lines and the box which highlights the price level being pointed to in the Buy column.</p>
+
+        <p>In the case of the box which highlights the price level, this is drawn with a special drawing mode for efficiency reasons, so it may not match exactly this color setting. The <b>Trade DOM Buy Column Background</b> color will affect the highlight box color.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMSellColumnBackground">Trade DOM Sell Column Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMSellColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of the Sell column. This option is also used when the Sell/Ask columns are combined. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMSellColumnLines">Trade DOM Sell Column Lines (also Order Entry Highlight Box)</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMSellColumnLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the vertical Sell order column lines and the box which highlights the price level being pointed to in the Sell column.</p>
+
+        <p>In the case of the box which highlights the price level, this is drawn with a special drawing mode for efficiency reasons, so it may not match exactly this color setting. The <b>Trade DOM Sell Column Background</b> color will affect the highlight box color.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidColumnBackground">Trade DOM Bid Column Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBidColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of the Bid column. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskColumnBackground">Trade DOM Ask Column Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMAskColumnBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of the Ask column. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskBackground">Trade DOM Ask Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMAskBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the background above the last trade price and higher on the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidBackground">Trade DOM Bid Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBidBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the background below the last trade price and higher on the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskDepthBackground">Trade DOM Ask Depth Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMAskDepthBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of ask depth entries. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskDepthQuantities">Trade DOM Ask Depth Quantities</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMAskDepthQuantities">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the market depth quantities/sizes on the Ask side.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidDepthBackground">Trade DOM Bid Depth Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBidDepthBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When enabled, specifies the background color of bid depth entries. <em>It is necessary to check the <b>Enable</b> option, for the background color specified with this color setting to actually be drawn</em>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidDepthQuantities">Trade DOM Bid Depth Quantities</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBidDepthQuantities">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the market depth quantities/sizes on the Bid side.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBestBidAskBoxBackground">Trade DOM Best Bid/Ask Box Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBestBidAskBoxBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the background area on the price scale on the Trade DOM from the best Ask price to the best Bid price. To use this, <b>Enable</b> this chart object and set the color as required.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMDailyHighLine">Trade DOM Daily High Line</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMDailyHighLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Daily High line on the Trade DOM.</p>
+        
+        <p>To enable the display of this line, check the <b>Enable</b> option to the right of the Color button. Otherwise, it will not be visible.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMDailyLowLine">Trade DOM Daily Low Line</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMDailyLowLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Daily Low line on the Trade DOM.</p>
+
+        <p>To enable the display of this line, check the <b>Enable</b> option to the right of the Color button. Otherwise, it will not be visible. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecenterLine">Trade DOM Recenter Line</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMRecenterLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+          <p> The color of the Recenter Line on the Trade DOM. The Recenter Line is drawn initially at the last trade price and can be reset with  <b class = "menu_item">Trade &gt;&gt;  Re-center Trade   DOM Scales</b>.</p>
+        
+         <p>To enable the display of this line, check the <b>Enable</b> option to the right of the Color button. Otherwise, it will not be visible. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMProfitLossUp">Trade DOM Profit &amp; Loss Up</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMProfitLossUp">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Profit numbers in the Profit &amp; Loss column on the Trade DOM. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMProfitLossDown">Trade DOM Profit &amp; Loss Down</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMProfitLossDown">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Loss numbers in the Profit &amp; Loss column on the Trade DOM. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMValueText">Trade DOM Values Scale Text</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMValueText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the price values displayed in the Values Scale column on the Trade DOM. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastPriceTextAtBid">Trade DOM Last Price Text Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastPriceTextAtBid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the last trade price on the  chart when it is considered a    <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.  </p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastPriceTextAtAsk">Trade DOM Last Price Text Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastPriceTextAtAsk">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the last trade price on the  chart when it is considered an    <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.  </p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastPriceBackgroundBidTrade">Trade DOM Last Price Background Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastPriceBackgroundBidTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade price on the chart Values Scale when it is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.  </p>
+
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button.   <a href = "index5795.html?page=doc/GraphicsSettings.html#LastTradePriceBox">Last Trade Price Box</a> color setting also needs to be enabled. Otherwise, this setting has no effect.</p>
+
+        <p>This setting applies to the chart whether the Chart DOM is enabled or not. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastPriceBackgroundAskTrade">Trade DOM Last Price Background Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastPriceBackgroundAskTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade price on the chart Values Scale when it is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.  </p>
+
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button.   <a href = "index5795.html?page=doc/GraphicsSettings.html#LastTradePriceBox">Last Trade Price Box</a> color setting also needs to be enabled. Otherwise, this setting has no effect.</p>
+
+        <p>This setting applies to the chart whether the Chart DOM is enabled or not. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeTextBidTrade">Trade DOM Cumulative Last Size Text Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCumulativeLastSizeTextBidTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column area of the Trade DOM when the trade is considered a <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeTextAskTrade">Trade DOM Cumulative Last Size Text Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCumulativeLastSizeTextAskTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column area of the Trade DOM when the trade is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeBackgrounBidTrade">Trade DOM Cumulative Last Size Background Bid Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCumulativeLastSizeBackgrounBidTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column area of the Trade DOM when the trade is considered a <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeBackgroundAskTrade">Trade DOM Cumulative Last Size Background Ask Trade</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCumulativeLastSizeBackgroundAskTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a>  or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column area of the Trade DOM when the trade is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.</p>
+
+        <p> In the case of the <b>Last Size</b>, if there has not been a trading price change for more than four seconds, then this color setting is not used and instead the  <b>Chart DOM Values Scale Text</b>  or <b>Trade DOM Values Scale Text</b>, and the <b>Chart Background </b> or <b>  Trade DOM Last Price/Quantity Background</b> color settings are used instead for the Last Size text and background. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeBidTradeSamePriceAndSideBackgroundColor">Trade DOM Cumulative Last Size Bid Trade Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#TradeDOMCumulativeLastSizeBidTradeSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered a <b>Bid</b> update and the previous update was also a Bid update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeAskTradeSamePriceAndSideBackgroundColor">Trade DOM Cumulative Last Size Ask Trade Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#TradeDOMCumulativeLastSizeAskTradeSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered an <b>Ask</b> update and the previous update was also an Ask update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeBidTradeSamePriceAndSideTextColor">Trade DOM Cumulative Last Size Bid Trade Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#TradeDOMCumulativeLastSizeBidTradeSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered a <b>Bid</b> update and the previous update was also a Bid update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCumulativeLastSizeAskTradeSamePriceAndSideTextColor">Trade DOM Cumulative Last Size Ask Trade Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#TradeDOMCumulativeLastSizeAskTradeSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CumulativeLastSize">Cumulative Last Size</a> or <a href="index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_LastSize">Last Size</a> value on the market data column when there is an update and it is considered an <b>Ask</b> update and the previous update was also an Ask update at the same price.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentBidVolume">Trade DOM Recent Bid Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMRecentBidVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Bid Volume values displayed on the Trade DOM when this column has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentAskVolume">Trade DOM Recent Ask Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMRecentAskVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Ask Volume values displayed on the Trade DOM when this column has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastTradedRecentBidVolumeBackground">Trade DOM Last Traded Recent Bid Volume Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastTradedRecentBidVolumeBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade volume in the <b>Recent Bid Volume</b> column on the Trade DOM when the trade is considered a <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Bid Trade</a>.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLastTradedRecentAskVolumeBackground">Trade DOM Last Traded Recent Ask Volume Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMLastTradedRecentAskVolumeBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the last trade volume in the <b>Recent Ask Volume</b> column on the Trade DOM when the trade is considered an <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Ask Trade</a>.</p>
+
+        <p>To enable use of this color, check the <b>Enable</b> option to the right of the Color button. Otherwise, this setting has no effect.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCurrentTradedTotalVolume">Trade DOM Current Traded Total Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCurrentTradedTotalVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Total Volume values displayed in the <b>Current Traded Total Volume</b> column when it has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCurrentTradedBidVolume">Trade DOM Current Traded Bid Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCurrentTradedBidVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Bid Volume values displayed in the <b>Current Traded Bid Volume</b> column when it has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCurrentTradedAskVolume">Trade DOM Current Traded Ask Volume</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCurrentTradedAskVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Ask Volume values displayed in the <b>Current Traded Ask Volume</b> column when it has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidMarketDepthPullingStacking">Trade DOM Bid Market Depth Pulling/Stacking</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBidMarketDepthPullingStacking">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the positive Bid Market Depth values displayed in the <b>Bid Market Depth Pulling/Stacking</b> column when it has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidMarketDepthPullingStackingNegative">Trade DOM Bid Market Depth Pulling/Stacking Negative</h3>
+        <div class="member-link">[<a href="#TradeDOMBidMarketDepthPullingStackingNegative">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the negative Bid Market Depth values displayed in the <b>Bid Market Depth Pulling/Stacking</b> column when it has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskMarketDepthPullingStacking">Trade DOM Ask Market Depth Pulling/Stacking</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMAskMarketDepthPullingStacking">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Ask Market Depth values displayed in the <b>Ask Market Depth Pulling/Stacking</b> column when it has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskMarketDepthPullingStackingNegative">Trade DOM Ask Market Depth Pulling/Stacking Negative</h3>
+        <div class="member-link">[<a href="#TradeDOMAskMarketDepthPullingStackingNegative">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the negative Ask Market Depth values displayed in the <b>Bid Market Depth Pulling/Stacking</b> column when it has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidMarketOrdersBackground">Trade DOM Bid Market Orders Background</h3>
+        <div class="member-link">[<a href="#TradeDOMBidMarketOrdersBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Bid Market Orders column when the column has been added to the Trade DOM and the option is Enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidMarketOrders">Trade DOM Bid Market Orders</h3>
+        <div class="member-link">[<a href="tradedombidmarketorders.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Bid Market Orders text when the column has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskMarketOrdersBackground">Trade DOM Ask Market Orders Background</h3>
+        <div class="member-link">[<a href="#TradeDOMAskMarketOrdersBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Ask Market Orders column when the column has been added to the Trade DOM and the option is Enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskMarketOrders">Trade DOM Ask Market Orders</h3>
+        <div class="member-link">[<a href="tradedomaskmarketorders.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the Ask Market Orders text when the column has been added to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidVolumeBar">Trade DOM Bid Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBidVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Volume Bars</a> in the Buy column of the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskVolumeBar">Trade DOM Ask Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMAskVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Volume Bars</a> in the Sell column of the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMTotalPercentageText">Trade DOM Total/Percentage Text</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMTotalPercentageText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the text displayed by the  <b Class = "menu_item">Global Settings &gt;&gt; Chart DOM Settings</b>  <b>&gt;&gt; Display DOM Depth Totals</b> and the <b>Display DOM Depth  Percentages</b>  options. These are displayed above and below the market depth quantities on the Trade DOM.</p>
+    </section>    
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentBidVolumeVolumeBar">Trade DOM Recent Bid Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMRecentBidVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Recent Bid Volume column in the Trade DOM when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Recent Bid Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentAskVolumeVolumeBar">Trade DOM Recent Ask Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMRecentAskVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Recent Ask Volume column in the Trade DOM when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Recent Ask Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCurrentTradedBidVolumeVolumeBar">Trade DOM Current Traded Bid Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCurrentTradedBidVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Current Traded Bid Volume column in the Trade DOM when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Current Traded Bid Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCurrentTradedAskVolumeVolumeBar">Trade Dom Current Traded Ask Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCurrentTradedAskVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Current Traded Ask Volume column in the Trade DOM when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Current Traded Ask Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMCurrentTradedTotalVolumeVolumeBar">Trade DOM Current Traded Total Volume Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMCurrentTradedTotalVolumeVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Current Traded Total Volume column in the Trade DOM when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Current Traded Total Volume column.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMBidMarketDepthPullingStackingVolumeBar">Trade DOM Bid Market Depth Pulling/Stacking Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMBidMarketDepthPullingStackingVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Bid Market Depth Pulling/Stacking column in the Trade DOM when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Bid Market Depth Pulling/Stacking column.</p>
+
+        <p>This is also the color used for the Bid Market Depth Pulling/Stacking volume bars in the <b>Total Market Depth Pulling/Stacking</b> column when it is displayed on the DOM with the Show Volume Bars option selected.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMAskMarketDepthPullingStackingVolumeBar">Trade DOM Ask Market Depth Pulling Stacking Volume Bar</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMAskMarketDepthPullingStackingVolumeBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the volume bars displayed for the Ask Market Depth Pulling/Stacking column in the Trade DOM when the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ShowVolumeBars">Show Volume Bars</a> option is selected for the Ask Market Depth Pulling/Stacking column.</p>
+
+        <p>This is also the color used for the Ask Market Depth Pulling/Stacking volume bars in the <b>Total Market Depth Pulling/Stacking</b> column when it is displayed on the DOM with the Show Volume Bars option selected.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentBidBestBidBackground">Trade DOM Recent Bid Best Bid Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMRecentBidBestBidBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Best Bid within the Recent Bid column on the Trade DOM when this coloring is Enabled.</p>
+
+        <p>When the <a href="#TradeDOMLastTradedRecentBidVolumeBackground">Trade DOM Last Traded Recent Bid Volume Background</a> is also enabled and the last trade is at the Best Bid, then the <b>Trade DOM Last Traded Recent Bid Volume Background</b> takes precedence and will be displayed rather than the <b>Trade DOM Recent Bid Best Bid Background</b>. Therefore it is not recommended that these two background colorings be the same.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentAskBestAskBackground">Trade DOM Recent Ask Best Ask Background</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMRecentAskBestAskBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color of the Best Ask within the Recent Ask column on the Trade DOM when this coloring is Enabled.</p>
+
+        <p>When the <a href="#TradeDOMLastTradedRecentAskVolumeBackground">Trade DOM Last Traded Recent Ask Volume Background</a> is also enabled and the last trade is at the Best Ask, then the <b>Trade DOM Last Traded Recent Ask Volume Background</b> takes precedence and will be displayed rather than the <b>Trade DOM Recent Ask Best Ask Background</b>. Therefore it is not recommended that these two background colorings be the same.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentBidSamePriceAndSideBackgroundColor">Trade DOM Recent Bid Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#TradeDOMRecentBidSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color at the price of the last Bid update when the previous update was also a Bid at the same price in the Recent Bid Volume column of the Trade DOM when this coloring is Enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentAskSamePriceAndSideBackgroundColor">Trade DOM Recent Ask Same Price and Side Background Color</h3>
+        <div class="member-link">[<a href="#TradeDOMRecentAskSamePriceAndSideBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The background color at the price of the last Ask update when the previous update was also an Ask at the same price in the Recent Ask Volume column of the Trade DOM when this coloring is Enabled.</p>
+    </section>
+        
+    <section class="h3">
+        <h3 id="TradeDOMRecentBidSamePriceAndSideTextColor">Trade DOM Recent Bid Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#TradeDOMRecentBidSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color at the price of the last Bid update when the previous update was also a Bid at the same price in the Recent Bid Volume column of the Trade DOM when this coloring is Enabled and the <b>Trade DOM Recent Bid Same Price and Side Background Color</b> is also enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMRecentAskSamePriceAndSideTextColor">Trade DOM Recent Ask Same Price and Side Text Color</h3>
+        <div class="member-link">[<a href="#TradeDOMRecentAskSamePriceAndSideTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color at the price of the last Ask update when the previous update was also an Ask at the same price in the Recent Ask Volume column of the Trade DOM when this coloring is Enabled and the <b>Chart DOM Recent Ask Same Price and Side Background Color</b> is also enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMColorForOrdersBeingInputted">Trade DOM Color For Orders Being Inputted</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMColorForOrdersBeingInputted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This color sets the color for order lines when you are modifying an order or entering an order that requires 2 prices on the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineTextColor">Trade DOM Order Line Text Color</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineTextColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The text color used for Order lines and the Trade Position line on the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineBuyLimit">Trade DOM Order Line Buy Limit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineBuyLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Buy Limit and Market if Touched order lines displayed on the chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineSellLimit">Trade DOM Order Line Sell Limit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineSellLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Limit and Market if Touched order lines displayed on the chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineBuyStop">Trade DOM Order Line Buy Stop</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineBuyStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Buy Stop and Stop-Limit order lines displayed on the chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineSellStop">Trade DOM Order Line Sell Stop</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineSellStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Stop and Stop-Limit order lines displayed on the chart. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineBuyLimitChild">Trade DOM Order Line Buy Limit - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineBuyLimitChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Buy Limit and Market if Touched child order lines displayed on the chart.</p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineSellLimitChild">Trade DOM Order Line Sell Limit - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineSellLimitChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Limit and Market if Touched child order lines displayed on the chart.</p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineBuyStopChild">Trade DOM Order Line Buy Stop - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineBuyStopChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Buy Stop and Stop-Limit child order lines displayed on the chart. </p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderLineSellStopChild">Trade DOM Order Line Sell Stop - Child</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderLineSellStopChild">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of Sell Stop and Stop-Limit child order lines displayed on the chart. </p>
+
+        <p>These settings only apply if the order has a <b>Pending Child - Client/Server</b> status. An order may not have  this Status if it is part of a server-side order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMOrderAssociationLines">Trade DOM Order Association Lines</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMOrderAssociationLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The color of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#DrawOrderAssociationLines">Order Association Lines</a> on the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMPositionLineLongProfit">Trade DOM Position Line Long/Profit</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMPositionLineLongProfit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of a Trade Position line when the Trade Position for the symbol of the chart is Long and the Trade Position line is set to be colored based upon whether the Trade Position is Long or Short, or the Trade Position has a Profit and the Trade Position line is set to be colored based upon whether there is a Profit or Loss.</p>
+
+
+        <p>To control whether coloring is based upon Long/Short or Profit/Loss, set <b class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Position &gt;&gt; Coloring of Position Line Based On</b> to either Long/Short  or Profit/Loss.</p>    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMPositionShortLoss">Trade DOM Position Line Short/Loss</h3>
+        <div class="member-link">[<a href="#GlobalGraphicSettings">Associated Settings Window</a>] - [<a href="#TradeDOMPositionShortLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sets the Color, Line Style, and Draw Width of a Trade Position line when the Trade Position for the symbol of the chart is Short and the Trade Position line is set to be colored based upon whether the Trade Position is Long or Short, or the Trade Position has a Loss and the Trade Position line is set to be colored based upon whether there is a Profit or Loss.</p>
+
+        <p>To control whether coloring is based upon Long/Short or Profit/Loss, set <b class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Position &gt;&gt; Coloring of Position Line Based On</b> to either Long/Short  or Profit/Loss.</p>
+    </section>
+</section>
+
+
+<hr><p>*Last modified Friday, 24th March, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChartTradingCustomizingGraphics.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:49:56 GMT -->
+</html>  

@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ContinuousFuturesContractCharts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:34:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1687192503') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ContinuousFuturesContractCharts.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Continuous Futures Contract Charts -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html">Continuous Futures Contract Charts</a></h4> </div>     <h1 class="PageName">Continuous Futures Contract Charts</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    
+    <li><a href="#UsingContinuousFuturesContractCharts">Using Continuous Futures Contract Charts</a>
+    
+    <ul>
+        <li><a href="#StepByStepInstructions">Step-By-Step Instructions</a></li>
+    </ul>
+
+	</li> 
+
+	<li><a href="#RolloverOptions">Continuous Futures Contract Rollover Options</a> 
+		<ul>
+			<li><a href="#ContinuousFuturesContractNone">None</a></li>
+			<li><a href="#ContinuousFuturesContractDateRuleRollover">Date Rule Rollover</a></li>
+			<li><a href="#ContinuousFuturesContractVolumeBasedRollover">Volume Based Rollover</a></li>
+			<li><a href="#ContinuousFuturesContractDateRuleRolloverBackAdjusted">Date Rule Rollover, Back Adjusted</a></li>
+			<li><a href="#ContinuousFuturesContractVolumeBasedRolloverBackAdjusted">Volume Based Rollover, Back Adjusted</a></li>
+			<li><a href="#ContinuousFuturesContract_RolloverEachYear_SameMonth">Rollover Each Year. Same Month</a></li>
+		</ul>
+    </li> 
+    
+    <li><a href="#DisplayingRolloverTransitionTimesAndContractMonths">Displaying Rollover Transition Times and Contract Months</a>
+		<ul>
+		    <li><a href="#CurrentDayAlwaysUsesContractMonthOfSymbolOfChart">Current Day Always Uses Contract Month of Symbol of Chart</a></li>
+		    <li><a href="#AutoAdvancingOfChartSymbolForUnsupportedContractMonthToNextContractMonth">Automatic Advancing of Chart Symbol for Unsupported Contract Month to Next Contract Month</a></li>
+		    <li><a href="#OngoingEffectOfBackAdjustments">Ongoing Effect of Back Adjustments</a></li>
+		</ul>
+	</li>
+    <li><a href="#AutomaticallyRollingOverFuturesContract">Automatically Rolling Over to Next Futures Contract Month</a></li>
+    <li><a href="#SettingRolloverTimeToMatchSessionTimes">Setting Rollover Time to Match Session Times</a></li>
+    <li><a href="#ReDownloadingContinuousFuturesContractData">Re-Downloading Continuous Futures Contract Data</a></li>
+    <li><a href="#IncorrectRolloverDate">Incorrect Rollover Date</a></li>
+    <li><a href="#HandlingSpecificErrorMessages">Handling Specific Error Messages</a></li>
+    <li><a href="#PreventingErrorMessagesByReducingDaysToLoadInChart">Preventing Error Messages by Reducing Days to Load in Chart</a></li>
+    <li><a href="#TextIndicatorDescriptionTable">Text Indicator Description Table</a></li>
+    <li><a href="#Notes">Notes</a></li>
+    <li><a href="#ContinuousFuturesContractChartsWithSkippedMonth">Continuous Futures Contract Charts with Skipped Month</a></li>
+    <li><a href="#ControllingRolloverAmount">Controlling Rollover Amount for Back Adjustments</a>
+		<ul>
+		    <li><a href="#InstructionsForEnteringSettingsForControllingRolloverAmount">Instructions for Entering Settings for Controlling Rollover Amount</a></li>
+		</ul>
+	</li>
+    <li><a href="#UnderstandingBackAdjustedPriceDataAndComparisons">Understanding Back Adjusted Price Data and Comparisons</a></li>
+    <li><a href="#VerifyingCorrectBackAdjustmentAmounts">Verifying Correct Back Adjustment Amounts</a></li>
+    <li><a href="#UsingDateRuleVolumeBasedRollover">Using Date Rule Rollover or Volume Based Rollover?</a></li>
+    <li><a href="#ForwardCurveCharts">Forward Curve Charts</a></li>
+    <li><a href="#Limitations">Limitations</a></li>
+    <li><a href="#BackTestingAndTradingWithContinuousFuturesChart">Back Testing and Trading with Continuous  Futures Chart</a></li>
+    <li><a href="#IssuesWhenSymbolOfChartIsNotCurrentContractAndExpiresLater">Issues When Symbol of Chart is not Current Contract and Expires Later</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>Effective with Sierra Chart version 2346, there is a change with how back adjustments are done for Continuous Futures Contract charts. The prior day settlement prices are now used rather than the current day open prices.  </p>
+    
+    <p class = "GeneralBackgroundHighlight">As of January 1, 2021, the Continuous Futures Contract Chart feature  is not supported when using Interactive Brokers, CQG, Rithmic,  CTS, Transact, or Gain Capital unless Sierra Chart is on a  Service Package (10, 11, 12) which includes the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>  which provides the necessary data for this feature.  
+    <br> <br>
+    Additionally, to use the Continuous Futures Contract Chart feature  with any of these services,  with <em>Intraday</em> charts, requires that you use the  <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>  and pay for the corresponding exchange fee for the symbol that you are charting, to be able to get a Continuous Futures Contract chart.
+     <br> <br> 
+    It must be understood by you that the Continuous Futures Contract chart feature requires access to historical data for expired futures contracts, that there is no missing historical data, and that this data is delivered fast and reliably.  <em>None</em> of the services listed at the top of this highlighted section can meet these requirements. They do not even come close to the historical data capabilities of the Sierra Chart provided data feeds.
+    <br> <br>
+    In other words if you are using any of the Trading services described above, and you are not using the <b> Denali Exchange Data Feed</b> or the  <b>Sierra Chart Historical Data Service</b>, the feature described on this page is either <em>not going to work</em>, or work very poorly and you therefore <em>**absolutely** will have numerous issues</em> with it.
+    
+    <br> <br>  
+    As an alternative to the above listed Trading services, install another installation of Sierra Chart set to use the  <a href = "index765f.html?page=doc/SierraChartHistoricalData.php">Sierra Chart Historical Data Service</a>  to have access to the full historical data for the Continuous Futures Contract  Chart feature.
+    </p>
+
+    <p>A standard futures contract symbol is for a specific delivery month and year. Example <b>ESZ14</b> (S&P 500 mini futures for December 2014). Futures contracts have a limited life. A futures contract chart for a particular symbol, normally does not go back very far in time.</p>
+
+    <p> When you look at a futures contract chart back in time to a point where that particular delivery month and year was not the actively traded one, the bars usually will look incomplete (may look like dashes) and have low-volume. Refer to the below two screenshots indicating this.</p>
+
+    <p>The solution to have a futures contract chart that goes back far in time with complete bars at every point in time in the chart, is to use a <em>Continuous Futures Contract</em> chart which joins together multiple futures contracts. For every bar in this kind of chart, the data will be for the most actively traded delivery month and year at that moment in time.</p>
+
+    <p>Sierra Chart provides a very powerful feature to create Continuous Futures Contract charts. <em>Automatic back adjustment of data is supported</em>.</p>
+
+    <p class = "GeneralBackgroundHighlightLight">It is fully supported to <a href="index9600.html?page=doc/ReplayChart.html" >replay</a> Continuous Futures Contract charts.</p>
+    
+   <div style="text-align: center;"><a href="../images/incompletedatainactivefutureschart.png" rel="lightbox"><img src="../images/incompletedatainactivefutureschart.png" alt="" class="screenshot" loading="lazy" width="500" ></a></div>
+   
+   <div style="text-align: center;"><a href="../images/incompletedatainactivefutureschart_sparsepricebars.png" rel="lightbox"><img src="../images/incompletedatainactivefutureschart_sparsepricebars.png" alt="" class="screenshot" loading="lazy" width="500" ></a></div>
+   
+   <p> The following screenshot is an example of a  Continuous Futures Contract chart. </p>
+   
+      <div style="text-align: center;"><a href="../images/continuousfuturescontractchartexample.png" rel="lightbox"><img src="../images/continuousfuturescontractchartexample.png" alt="" class="screenshot" loading="lazy" width="500" ></a></div>
+   
+</section>
+
+<section class="h2">
+    <h2 id="UsingContinuousFuturesContractCharts">Using Continuous Futures Contract Charts</h2>
+    <div class="member-link">[<a href="#UsingContinuousFuturesContractCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Continuous Contract</b> options are a very powerful feature that activates the Continuous Futures Contract chart feature for <em>both Historical and Intraday charts</em>.</p> 
+
+    <p>When one of the <b>Continuous Contract</b> options is selected other than <b>None</b>, the chart will load in historical futures contracts going back from the futures contract specified with the <b>Symbol</b> setting in the Chart Settings, and based upon the <b>Use Number of Days to Load</b> or <b>Use Date Range</b>  <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadDataLimitingMethod">Load Data Limiting Method</a> Chart Setting.</p>
+
+    <p>Automatic back adjustment of data is supported.</p>
+
+    <p>The Continuous Futures Contract Chart feature is only for futures contracts. It is <em>not for any other kind of market</em>. It will not have any effect with stock, cash index, or market statistics symbols. Therefore, do not use it with these symbols because it is completely unnecessary and adds unnecessary messages to the Message Log.</p>
+
+    <section class="h3">
+		<h3 id="StepByStepInstructions">Step-By-Step Instructions</h3>
+        <div class="member-link">[<a href="#StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div> 
+
+        <ol>
+            <li>To use this feature you should be running a current version of Sierra Chart. To update Sierra Chart, refer to the <a href="indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate">Fast Update</a> instructions.</li>
+
+            <li>   The  Continuous Futures Contract chart feature requires a reliable historical data  service with the particular Data or Trading service you are working with.  If you are using a Sierra Chart provided data feed, then this will be a reliable service and provide the necessary data for the Continuous Futures Contract chart feature.</li>
+
+
+            <li>To make sure the necessary futures contract rollover settings needed for the construction of Continuous Futures Contract charts exist, update the <b>Global Symbol Settings</b> as explained in the <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettings" target="_blank" rel="noopener noreferrer" >Update Symbol Settings</a> section. <em>This step only needs to be performed once</em>.</li>
+           
+           <li> Set  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Download Total Volume for All Contracts for Futures Daily Data</b> to  <b>No</b>. <em>This is essential!</em>.</li> 
+
+            <li>Connect to the data feed if Sierra Chart is not already connected. Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.</li>
+
+            <li>Open or go to either a Historical or an Intraday chart. If you do not have a chart open, open one with <b class="menu_item">File &gt;&gt; Find Symbol</b>. With a Historical chart, you can look at Daily, Weekly, Monthly, Quarterly, and Yearly time frames per bar.</li>
+
+            <li>To enable this option, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b>. Select one of the <b>Continuous Contract</b> options. Refer to the image below.
+
+                <div style="text-align: center;"><a href="../images/continuousfuturescontractoptions.png" rel="lightbox"><img src="../images/continuousfuturescontractoptions.png" alt="" class="screenshot" loading="lazy" width="550" ></a></div>
+            </li>
+
+             <li>Choose  one of the <a href = "#RolloverOptions">Continuous Futures Contract Rollover Options</a>  in the  <b>Continuous Contract</b> list.  </li>
+
+            <li>Select the <b>Symbol</b> tab.</li>
+
+            <li>You <em>must</em> use a standard futures contract symbol for the chart. For example: <b>ESM23-CME</b>. Make certain the <b> Symbol</b> is not a continuous contract symbol. Do not use a symbol with a <b>#</b> in it.</li>
+
+            <li>Make certain the <b>Symbol</b> is set to the current futures contract month assuming that you want the latest contract month at the end of the chart. If the <b>Symbol</b> is set to a further forward futures contract symbol that is not currently actively traded, then this can cause a problem with the construction of the chart.</li>
+
+            <li> Set <b>Data Limiting &gt;&gt; Days to Load for Historical/Intraday Chart Data Type</b> sufficiently high enough to see the number of days that you want in the chart. Keep in mind the higher this number, the longer the chart will take to load in historical data. 
+            <br> <br>
+            <em>It can be a disadvantage to increase this number too large</em>. It takes longer to download the data and increases the possibility of historical data ddownloading errors because data may be requested for  older contracts for which there is no data. Related to this: <a href="#PreventingErrorMessagesByReducingDaysToLoadInChart">Preventing Error Messages by Reducing Days to Load in Chart</a>.</li>
+
+            <li>Press <b>OK</b> to close the <b>Chart Settings</b> window. The necessary chart data will be downloaded if needed, and the chart will be created. You will see <b>Downloading Continuous Contract Data</b> displayed on the chart during the downloading process.</li>
+
+            <li>If there any missing contract months in the chart, missing Daily or Intraday data, the back adjusted prices are incorrect, or a rollover date is significantly off from where it should be, then <a href="#ReDownloadingContinuousFuturesContractData">Re-download the Continuous Futures Contract Data</a> in the chart since there is missing, incomplete or inaccurate data necessary to build the Continuous Futures Contract chart.</li>
+
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="RolloverOptions">Continuous Futures Contract Rollover Options</h2>
+    <div class="member-link">[<a href="#RolloverOptions">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+      <p>The descriptions of the available <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b>&gt;&gt; Symbol &gt;&gt; Continuous Contract</b> rollover options are as follows:</p>
+
+                <section class="h3">
+                    <h3 id="ContinuousFuturesContractNone">None</h3>
+                    <div class="member-link">[<a href="#ContinuousFuturesContractNone">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>The Continuous Futures Contract feature for the chart is disabled. This should be the setting for symbols that are not futures contracts or if you do not want to use this feature.</p>
+                </section>
+
+                <section class="h3">
+                    <h3 id="ContinuousFuturesContractDateRuleRollover">Continuous Futures Contract - Date Rule Rollover</h3>
+                    <div class="member-link">[<a href="#ContinuousFuturesContractDateRuleRollover">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>This option will create a Continuous Futures Contract chart. The transition date from one futures contract to the next is determined by a specific rollover rule defined for the symbol. This works very well for stock index futures. This method is a little faster than <b>Volume Based Rollover</b> because there is slightly less time involved because there does not have to be an analysis of the volume across futures contracts loaded in the chart to determine the rollover dates.</p>
+
+                    <p>The rollover rules are programmed in the <a href="index4404.html?page=doc/GlobalSymbolSettings.php" >Global Symbol Settings</a>. It is not recommended to change the rollover rule for a symbol unless you specifically have a need to do so and you understand the changes you are making. If the rollover rule is not set correctly for a symbol, it might cause the building of the Continuous Futures Contract to not work properly.</p>
+                </section>
+
+                <section class="h3">
+                    <h3 id="ContinuousFuturesContractVolumeBasedRollover">Continuous Futures Contract - Volume Based Rollover</h3>
+                    <div class="member-link">[<a href="#ContinuousFuturesContractVolumeBasedRollover">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>This option will create a Continuous Futures Contract chart and the transition date from one futures contract to the next is determined by when the daily volume, as determined from the historical Daily chart data for the symbol, becomes greater from one contract to the next at a particular day. At that particular day, the rollover occurs. This method is preferred for commodity futures which do not have a very definite calendar-based rollover rule and the rollover date can vary from one rollover to the next.</p>
+                </section>
+
+                <section class="h3">
+                    <h3 id="ContinuousFuturesContractDateRuleRolloverBackAdjusted">Continuous Futures Contract - Date Rule Rollover, Back Adjusted</h3>
+                    <div class="member-link">[<a href="#ContinuousFuturesContractDateRuleRolloverBackAdjusted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>This option is the same as <b>Continuous Futures Contract - Date Rule Rollover</b>, and in addition, prior futures contract months loaded into the chart are back adjusted.</p>
+
+                    <p>When there is a rollover from one futures contract to the next, on the day of the rollover, the difference between the newer futures contract <em>settlement price</em> from the prior day and the prior futures contract <em>settlement price</em> from the prior day is calculated. This is the <em>back adjustment amount</em> between those two contracts.</p>
+
+                    <p>At the very first rollover in the chart, the back adjustment amount is calculated for that rollover and all of the subsequent rollovers.</p>
+
+                    <p>At each rollover, the back adjustment amount for that particular rollover and all of the rollovers forward from that rollover, are added together. This total amount is the amount by which the prior contract is adjusted by. This process continues itself going forward through the contract months.</p>
+
+                    <p>The futures contract settlement prices from the prior day at the date of the rollover are determined from the historical Daily chart data for the symbol.</p>
+                </section>
+
+                <section class="h3">
+                    <h3 id="ContinuousFuturesContractVolumeBasedRolloverBackAdjusted">Continuous Futures Contract - Volume Based Rollover, Back Adjusted</h3>
+                    <div class="member-link">[<a href="#ContinuousFuturesContractVolumeBasedRolloverBackAdjusted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>This option is the same as <b>Continuous Futures Contract - Volume Based Rollover</b>, and in addition, prior futures contract months loaded into the chart are back adjusted. The method by which back adjustment is performed, is explained in the description for the prior option.</p>
+                </section>
+                
+                <section class="h3">
+                    <h3 id="ContinuousFuturesContract_RolloverEachYear_SameMonth">Continuous Futures Contract - Rollover Each Year. Same Month</h3>
+                    <div class="member-link">[<a href="#ContinuousFuturesContract_RolloverEachYear_SameMonth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>This option  means that the particular contract month used in the Continuous Futures Contract chart will be the same month as the current symbol of the chart set through <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.  </p>
+                    
+                     <p>The rollover date, will be the standard rollover date for the particular contract month  for the futures symbol. </p>
+
+                     <p>So if the current symbol is a  June contract, that means each of the prior years in the chart, will also be the   June contract month but for those years.</p>
+                     
+                </section>
+</section>
+
+<section class="h2">
+    <h2  id="DisplayingRolloverTransitionTimesAndContractMonths" ID = "DisplayingRolloverDatesContractMonths">Displaying Rollover Transition Times and Contract Months</h2>
+    <div class="member-link">[<a href="#DisplayingRolloverTransitionTimesAndContractMonths">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> When viewing a Continuous Futures Contract chart it is <em>essential to understand</em> where in the chart there is a transition from one futures contract month to the next  and what the contract year and month is for a particular date in the chart.</p>
+
+    <p> One reason this is very important is because for a particular date, a futures contract for one delivery year and month will have different pricing compared to other contract months for the same underlying futures market.</p>
+
+    <p> This different pricing will cause differences in the price relationships from one contract month to the next especially if the chart bars are not  <a href="#RolloverOptions" >back adjusted</a>.</p>
+
+    <p> Another reason this is important is to clearly identify any problems where there is an incorrect transition from one contract month to the next. </p>
+
+    <p>In Intraday charts, transitions from one contract month to the next occur at the <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b>&gt;&gt; Session Times &gt;&gt; Start Time</b> set for the chart. In the case where the <b>Session Times &gt;&gt; Start Time</b> and <b>Session Times &gt;&gt; End Time</b> are reversed or when using the Evening Session times, this means that the rollover will occur in the <em>prior</em> trading day. For further information, refer to <a href="index4ec1.html?page=doc/SessionTimes.php" Target="_blank" rel="noopener noreferrer">Session Times</a>. It is important to be aware of this.</p>
+
+    <p> To view these transitions, as vertical lines with labels indicating the beginning of a specific contract month and year, go to the chart and enable <b class="menu_item">Chart &gt;&gt; Show Rollover Dates</b>.</p>
+
+    <p>Therefore, use this feature to understand where the transition occurs from one contract month to the next.</p>
+
+    <p>Refer to the image below for an example.</p>
+
+    <div style="text-align: center;"><a href="../images/showrolloverdates.png" rel="lightbox"><img src="../images/showrolloverdates.png" alt="" class="screenshot" loading="lazy" width="600" ></a></div>
+
+    <p>If there any missing contract months in the chart, the back adjusted prices are incorrect, or a rollover date is significantly off from where it should be, then <a href="#ReDownloadingContinuousFuturesContractData">Re-download the Continuous Futures Contract Data</a> in the chart since there is missing, incomplete or inaccurate data necessary to build the Continuous Futures Contract chart.</p>
+    
+    
+    <section class="h3">
+        <h3 id="CurrentDayAlwaysUsesContractMonthOfSymbolOfChart"> Current Day Always Uses Contract Month of Symbol of Chart</h3>
+        <div class="member-link">[<a href="#CurrentDayAlwaysUsesContractMonthOfSymbolOfChart">Link</a>] - [<a href="#top">Top</a>]</div> 
+        
+        <p>The chart bars for the current day in an Intraday Continuous Futures Contract chart from the <b>Session Times &gt;&gt; Start Time</b> for the chart, or the last bar in a Historical Daily chart, will always be for the symbol the chart is set to. </p>
+
+        <p>This is so you always see the current days data for the symbol of the chart even if it is <em>not</em> the most actively traded symbol at the current time.</p>
+
+        <p> Therefore, when the next day comes, and the chart is reloaded with <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>, you reopen the Chartbook, or restart Sierra Chart, what was previously the current day is now the previous day and if the current symbol of the chart is not the actively traded contract, then that previous days chart bars will then change to the prior contract month. </p>
+        
+         <p>This is something to be aware of because it will cause a change in values. The solution to this, is to <em>not use</em> the Continuous Futures Contract feature on a chart when you are looking at a futures contract symbol which currently is <em>not the actively traded</em> contract month.</p>
+         
+         <p> However, if the contract month of the chart is the actively traded contract month  and there is a significant difference in the rollover timing between a Date based  rollover  and the Volume based rollover, then make sure you are using the <a href="#ContinuousFuturesContractVolumeBasedRollover">Volume Based Rollover</a>  setting for the  <b>Continuous Futures Contract</b> option to eliminate the effect of what is described here. </p>
+        
+   </section> 
+
+    <section class="h3" >
+        <h3 id="AutoAdvancingOfChartSymbolForUnsupportedContractMonthToNextContractMonth">Automatic Advancing of Chart Symbol for Unsupported Contract Month to Next Contract Month</h3>
+        <div class="member-link">[<a href="#AutoAdvancingOfChartSymbolForUnsupportedContractMonthToNextContractMonth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For some commodity markets, there are certain contract months which are not actively traded. For example with Soybeans, the August contract is never an active futures contract month.</p>
+
+        <p>Therefore, this contract month will never be included in a Continuous Futures Contract chart. Only the next contract month which is November will be included. If the chart symbol is set to a contract month which is not part of the contract months used in a Continuous Futures Contract chart for the particular futures market, then it will be automatically advanced to the next supported month. Although the symbol of the chart will still show the entered symbol. However, the displayed data will be for the next supported contract month.</p>
+
+        <p>In this particular example August soybeans, will be internally advanced to November automatically. So the chart will display November data. This is something to be aware of.</p>
+    </section> 
+    
+    <section class="h3">
+        <h3 id="OngoingEffectOfBackAdjustments">Ongoing Effect of Back Adjustments</h3>
+        <div class="member-link">[<a href="#OngoingEffectOfBackAdjustments">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When  using one of the Back Adjusted continuous futures contract options, as time goes by, the prices of the contract will change for a particular date and contract month.</p>
+
+
+        <p>For example, the current contract will have unadjusted prices but 10 years from now, if using back adjustments, it will have a very different price with all of the back adjustments applied cumulatively.</p>
+
+        <p>To avoid this problem do not use one of the Back Adjusted options. </p>
+    </section> 
+    
+
+
+</section>
+
+<section class="h2" >
+    <h2 id="AutomaticallyRollingOverFuturesContract">Automatically Rolling Over to Next Futures Contract Month</h2>
+    <div class="member-link">[<a href="#AutomaticallyRollingOverFuturesContract">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class = "GeneralBackgroundHighlightLight">The Continuous Futures Contract feature in Sierra Chart <em>does not</em> automatically roll forward  the current futures contract symbol of the chart  to the next contract when it expires or when the trading volume becomes higher in the next futures contract month (<b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b>).</p>
+
+    <p>  This feature is used to load in historical futures contracts, if necessary, based upon the number of days of data loaded into the chart. The <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html#RolloverOptions">Rollover Options</a>  control the rollover from one contract to the next, for  <em>historical futures contracts</em> within the chart. They have no effect upon automatically rolling over the current symbol of the chart.</p>
+
+    <p>To automatically rollover the futures contracts symbol of a chart, use the <a href="index4cf4.html?page=doc/ChartSettings.html#AutomaticallyRollover">Automatically Rollover Futures Symbol</a> setting in <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>.  However, you need to understand that setting before using it.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SettingRolloverTimeToMatchSessionTimes">Setting Rollover Time to Match Session Times</h2>
+    <div class="member-link">[<a href="#SettingRolloverTimeToMatchSessionTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In newer versions of Sierra Chart the rollover from one contract month to the next in Intraday charts will be according to the <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a> set for the chart. </p>
+
+    <p> The rollover will be at the <b>Session Times &gt;&gt; Start Time</b>. If this is set to a time other than 00:00:00, then the rollover will occur at that time. If the Session Times are reversed, then the rollover will be in the prior trading day at that time. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id = "ReDownloadingContinuousFuturesContractData">Re-Downloading Continuous Futures Contract Data</h2>
+    <div class="member-link">[<a href="#ReDownloadingContinuousFuturesContractData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li>After the Continuous Futures Contract chart data loading is complete, if you notice <a href="index2d36.html?page=doc/ChartDataFiles.html#LocatingMissingData" Target="_blank" rel="noopener noreferrer">missing data</a>, price gaps (related to missing data), significantly invalid price values, out of order timestamps along the timescale at the bottom of the chart, <em>incorrect transition</em> Date-Times from one contract to the next, or the back adjustments are incorrect or do not occur in the chart, then you will need to re-download the data in the chart.
+           <br> <br>
+           Incorrect <a href = "index4404.html?page=doc/GlobalSymbolSettings.php">Symbol Settings</a>  can also cause incorrect an transition Date-Time  to the next contract month, missing data,  and incorrect prices.
+           <br> <br>
+            You can identify the specific contract months which may have missing data and exactly where the transition occurs from one contract month to the next in the chart, by enabling <b class = "menu_item">Chart &gt;&gt; Show Rollover Dates</b>. When this option is enabled, then where a new contract month begins in the chart, there is a vertical line drawn and a Month and Year displayed at the bottom of the line.
+            <br> <br>
+            Therefore, you will know specifically what contract month is being displayed at each bar in the chart. For further information, refer to <a href="#DisplayingRolloverTransitionTimesAndContractMonths">Displaying Rollover Transition Times and Contract Months</a>.</li>
+
+        <li>To make sure the necessary futures contract rollover settings needed for the construction of Continuous Futures Contract charts exist, update the <b>Global Symbol Settings</b> as explained in the <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettings" target="_blank" rel="noopener noreferrer">Update Symbol Settings</a> section. <em>This step only needs to be performed once</em>.</li>
+        
+        <li> Set  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Download Total Volume for All Contracts for Futures Daily Data</b> to  <b>No</b>. <em>This is essential!</em>.</li> 
+        
+        <li class = "GeneralBackgroundHighlight">  <b>Mandatory Step</b>:  This step is absolutely mandatory because it rules out any problems with incorrect Symbol Settings  (rollover rules and price multiplier) which can cause various issues in Continuous Futures Contract charts.  Select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>. Uncheck   <b>Use  Custom Symbol Settings Values</b>.  Press  <b>OK</b>.</li>
+
+        <li> In the case of missing data, the first step is to select <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b> to see if that loads in the missing data. If that corrects the problem, and there are no price gaps (related to missing data), significantly invalid price values, or out of order timestamps along the timescale of the bottom of the chart, then stop here.</li>
+
+        <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting</b>. Set the  <b>Load Data Limiting Method: Days to Load &gt;&gt; Days to Load for Historical/Intraday Chart Data Type</b> sufficiently high enough to see the number of days that you want in the chart.
+        <br> <br>
+        Press <b> OK</b>. Keep in mind the higher this number, the longer the chart will take to load in historical data. 
+        <br> <br>
+            <em>It can be a disadvantage to increase this number too large</em>. It takes longer to download the data and increases the possibility of historical data ddownloading errors because data may be requested for  older contracts for which there is no data. Related to this: <a href="#PreventingErrorMessagesByReducingDaysToLoadInChart">Preventing Error Messages by Reducing Days to Load in Chart</a>.</li>
+            
+        <!-- li> <b>Optional Performance Improvement Step</b>: If you have a lot of charts open, which contain  studies or drawings which significantly increase CPU load, and are loading more than one year of data, then in this particular case close your Chartbooks. Open one new chart for the symbol that you want to re-download data for and do not add any studies to it. In the <b class="menu_item">Chart &gt;&gt; Chart Settings</b> for that chart, set it to load the amount of data that you do in your other charts. 
+        <br> <br>
+        Do not reopen your Chartbooks until you are complete with the remaining steps here. </li --> 
+
+        <li>The next step is to select <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b> on the menu. 
+        <br> <br>
+        <div style="text-align: center;"><a href="../images/editmenu_deletealldataanddownload.png" rel="lightbox"><img src="../images/editmenu_deletealldataanddownload.png" alt="" class="screenshot" loading="lazy" width="" ></a></div>
+            <br> <br>
+            <b>No longer applicable in current versions</b>: If you are using a sub instance of Sierra Chart connected to a DTC Server, which will be the case if you started the instance of Sierra Chart you are currently using with <b Class = "menu_item">File &gt;&gt; New Instance</b>, then you <em>must</em> perform this step and the remaining steps in the main DTC Server instance of Sierra Chart. Once that is done, then perform these steps in the sub instance again. For additional information, refer to <a href="index9bbd.html?page=doc/NewInstance.php#HistoricalDataAndMissingData" target="_blank" rel="noopener noreferrer">Historical Data and Missing Historical Data</a>.</li>
+
+        <li>A <b>Multiple Symbol Selection Window</b> will be displayed listing all of the symbols loaded into the Continuous Futures Contract chart. Refer to the image below.
+            <br> <br>
+            By default only the three most recent symbols are selected. Left click on a symbol to select or unselect it, or use the <b>Select All</b> or <b>Unselect All</b> buttons to select all the symbols or unselect all the symbols. 
+            <br> <br>
+            
+            This way you can control whether you want to re-download data for a particular symbol, some of the symbols or all symbols. 
+            <br> <br>
+            Press the  <b>Select All</b> button  to select all of the symbols, if there is any uncertainty as to how much data you should download or you want to re-download data for all contract months.
+             <br> <br>
+            Always select <em>all of the symbols</em> when there are significantly invalid price values in the chart. You can unselect a particular futures contract symbol if you are sure there is not any missing data for that symbol and the price values are correct for it. 
+
+            <div style="text-align: center;"><a href="../images/multiplesymbolselectionwindow.png" rel="lightbox"><img src="../images/multiplesymbolselectionwindow.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+        </li>
+        
+        <li> In the case of an Intraday chart, if it requires Historical Daily chart data files which would be the case if it is back adjusted,  then if you only want to re-download data for the Historical Daily chart data files, then enable the option <b>Download for Daily Data Files Only</b>. Otherwise keep this disabled. </li>
+         
+         <li> Press <b> OK</b> to re-download data for the selected symbols. </li>
+
+        <li> To improve performance, while the historical data is being downloaded, it is recommended to close the Chartbooks with  <b class="menu_item">File &gt;&gt; Close All Chartbooks</b> until the historical data downloading is complete.  You can monitor  the historical data download progress through the  <b class="menu_item">Window &gt;&gt; Message Log</b> window.</li>
+    </ol>
+</section>	
+	
+<section class="h2">
+    <h2 id="IncorrectRolloverDate">Incorrect Rollover Date</h2>
+    <div class="member-link">[<a href="#IncorrectRolloverDate">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p> There can be different reasons, why the transition from one futures contract  month to the next in a Continuous Futures Contract chart may be incorrect or seemingly incorrect.</p>
+
+    <ol>
+        <li> The first thing to do is to make sure the Symbol Settings are correct for   Date based rollovers. And to disable the use of  <b>Custom Symbol Settings Values</b>.    To do this, follow the <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettings" target="_blank" rel="noopener noreferrer" >Update Symbol Settings</a> section. After this is done, reload the chart with  <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>.</li>
+        
+        <li>Make sure there is no missing data in the chart or in the Historical Daily data used in the background, if there is, then refer to <a href="#ReDownloadingContinuousFuturesContractData">Re-Downloading Continuous Futures Contract Data</a>. </li>
+        
+        <li> When you have changed the symbol of the chart to the  next or other forward futures contract month but that is  <em>not the active a month based upon trading volume</em>  and you are using a  <em>volume-based</em> rollover Continuous Contract setting, then the chart  will rollover according to the Date  based rule instead in this circumstance.   This can make it look like the rollover, is not correct based on volume.  
+         <br> <br>
+         Or instead the rollover date may not be be correct for other reasons.
+        <br> <br>
+        In either case, the solution in this case, is to   <a href = "indexa1a5.html?page=doc/SwitchingSymbols.html">change the symbol of the chart</a>,  back to the  <em>active</em> contract month. 
+        
+        
+        </li>
+    </ol>
+    
+
+</section>	
+
+
+
+<section class="h2">
+    <h2 id="HandlingSpecificErrorMessages">Handling Specific Error Messages</h2>
+    <div class="member-link">[<a href="#HandlingSpecificErrorMessages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section explains the steps to follow when receiving specific error messages for a Continuous Futures Contract chart in the Sierra Chart <b Class = "menu_item">Window &gt;&gt; Message Log</b>, like the following:</p>
+
+    <div class="MessageLog">
+        <pre>
+ZNU16 [CBV] Daily #3 | Error while getting daily settlement price with date 2014-12-22 from file. C:\SierraChart\Data\ZNH15.dly. Error: Date not found.
+        </pre>
+    </div>
+
+    <p>For the above error message, re-download the data for the mentioned symbol and contract month, following these instructions:</p>
+    <ul>
+        <li><a href="#ReDownloadingContinuousFuturesContractData">Re-Downloading Continuous Futures Contract Data</a></li>
+    </ul>
+
+    <p>However, if the problem is that there is not enough historical data available for the particular contract, then refer to the <a href="#PreventingErrorMessagesByReducingDaysToLoadInChart">Preventing Error Messages by Reducing Days to Load in Chart</a> instructions instead. <em>Be sure to follow those instructions</em> and reduce the <b>Days to Load</b> setting in the chart to prevent error messages from occurring every time the chart is loaded.</p> 
+
+
+    <div class="MessageLog">
+        <pre>
+ Unable to determine transition date based on volume from files: ZBU14.dly, ZBZ14.dly
+ The ZBZ14.dly symbol may not be the active contract month.
+        </pre>
+    </div>
+
+    <p>For the above error message, re-download the data for the mentioned symbols/contract months, following these instructions:</p>
+    <ul>
+        <li><a href="#ReDownloadingContinuousFuturesContractData">Re-Downloading Continuous Futures Contract Data</a></li>
+    </ul>
+
+    <div class="MessageLog">
+        <pre>
+ ZNU16 [CBV] Daily #14 | Limiting the number of years to download historical data for to 10 years for the continuous futures chart. Reason: Account limitation
+        </pre>
+    </div>
+
+    <p>For the above error message, select <b Class = "menu_item">Chart &gt;&gt; Chart Settings&gt;&gt; Data Limiting</b>. Set the  <b>Load Data Limiting Method: Days to Load &gt;&gt; Days to Load for Historical/Intraday Chart Data Type</b> to a value less than the number of days in 10 years.</p>
+    
+
+    <div class="MessageLog">
+        <pre>
+TSLA [CB-D] 15 Min #11 | No contract months found for symbol. Unable to build continuous futures contract chart. | (Date-Time)<br> <br>
+TSLA [CB-D] 15 Min #11 | There are no continuous futures contract symbols. Loading data normally. | (Date-Time)
+
+        </pre>
+    </div>
+   
+  <p>Some symbols do not support  Continuous Futures Contract charts. In this case you will see    <em><b>[CB-D]</b></em>  displayed after the symbol. Set  the  <a href = "#RolloverOptions">Chart &gt;&gt; Chart Settings &gt;&gt; Continuous  Contract</a>   setting to  <b> None</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="PreventingErrorMessagesByReducingDaysToLoadInChart">Preventing Error Messages by Reducing Days to Load in Chart</h2>
+    <div class="member-link">[<a href="#PreventingErrorMessagesByReducingDaysToLoadInChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> If you see a large number of messages like the following in the <b Class = "menu_item">Window &gt;&gt; Message Log</b>, then this may be because the <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting &gt;&gt; Load Data Limiting Method: Days to Load &gt;&gt; Days to Load for Historical/Intraday Chart Data Type</b> is set too high and <em>beyond</em> the available historical data for the symbol. </p>
+    
+    <p>  Remember that some futures contracts are relatively new like micro contracts and they have a limited amount of historical data. </p>
+
+    <div class="MessageLog">
+        <pre>
+[symbol] [CB] Daily #2 | File [symbol].dly has a volume of 0 at (Date). | (Date-Time)
+
+Unable to determine transition date based on volume from files: [symbol], [symbol].dly | (Date-Time)
+The [symbol].dly symbol may not be the active contract month. | (Date-Time)
+
+
+[symbol] [CB] Daily #2 | Error while getting daily settlement price with date (Date) from file. C:\SierraChart\Data\[symbol].dly. Error: Date not found | (Date-Time)
+
+[symbol] [CB] Daily #2 | Error while getting daily settlement price with date 0 from file. C:\SierraChart\Data\[symbol].dly. Error: No Data for read. End of file. | (Date-Time)
+
+
+        </pre>
+    </div>    
+    
+    <div class="MessageLog">
+        <pre>
+ Unable to determine transition date based on volume from files: [symbol].dly, [symbol].dly | (Date-Time)
+ The [symbol].dly symbol may not be the active contract month. | (Date-Time)
+        </pre>
+    </div>   
+
+    <p> The solution is to reduce the <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting   &gt;&gt; Load Data Limiting Method: Days to Load &gt;&gt; Days to Load for Historical/Intraday Chart Data Type</b> setting to the number of days which there is historical data available for the symbol.</p>
+    
+    <p>This is something that <em>you must do</em> to prevent these excessive messages displayed in the Message Log repeatedly when charts are loaded.  For example, for these new CME micro stock index futures contracts,  the <b>Days to Load</b> setting cannot be before the starting date for these contracts.</p>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="TextIndicatorDescriptionTable">Text Indicator Description Table</h2>
+    <div class="member-link">[<a href="#TextIndicatorDescriptionTable">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+   <p> When the <b>Continuous Contract</b> option is set to one of the Continuous Futures Contract options, a <b class ="GeneralBackgroundHighlight">[C]</b>, <b class="GeneralBackgroundHighlight">[CB]</b>, <b class="GeneralBackgroundHighlight">[CV]</b>, or <b class ="GeneralBackgroundHighlight">[CBV]</b> is displayed after the symbol of the chart in the Region Data Line and on the title bar of the chart window. </p>
+   
+   <p>Refer to the table  below for descriptions.</p>
+    
+       <table class="pure-table pure-table-striped pure-table-bordered" >
+        <tr>
+            <td> <b class ="GeneralBackgroundHighlight">C</b> = Continuous.</td>
+        </tr>       
+        <tr>
+            <td> <b class ="GeneralBackgroundHighlight">B</b> = Back adjusted.</td>
+        </tr>        
+        <tr>
+            <td> <b class ="GeneralBackgroundHighlight">V</b> = Volume-based rollover.</td>
+        </tr>         
+        <tr>
+            <td> <b class ="GeneralBackgroundHighlight">CV-D</b>. D means disabled.
+           When the Continuous Futures Contract feature has been disabled on a chart, like in the case where there are not Symbol Settings for the symbol, a <b class ="GeneralBackgroundHighlight">-D</b> will be displayed after  the other text indicators.</td>
+        </tr> 
+        </table>        
+</section>
+
+<section class="h2">
+    <h2 id="Notes">Notes</h2>
+    <div class="member-link">[<a href="#Notes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li>Unlike some Data services which use continuous futures contract symbols (for example <b>@ES#</b> for IQ Feed), the Continuous Futures Contract feature in Sierra Chart dynamically joins together individual futures contracts which exist as separate files.
+            <br> <br>
+            The advantage of this is that if you are back adjusting the data, you do not have to re-download the entire historical data for the chart at the time of a futures contract rollover to get updated back adjusted data. Since the back adjustment is done dynamically in memory. The original prices are also preserved and never modified in the chart data file. 
+            <br> <br>
+            Therefore, any changes to back adjustment calculations can be dynamically done without actually modifying data.
+            <br><br>
+            To recalculate the back adjustments and update the chart, simply select <b class = "menu_item">Chart &gt;&gt; Reload and Recalculate</b>. It is that easy.
+            <br>
+            <br> 
+            Additionally, you are also able to modify the rollover dates by changing the <b class = "menu_item">General Settings &gt;&gt; Symbol Settings &gt;&gt; Rollover</b> rules for the symbol.
+            <br>
+            <br>
+            The method used by Sierra Chart to create the Continuous Futures Contract charts and do back adjusting, has no additional overhead compared to Continuous Futures Contract data on the server. And rather than having one large data file for a Continuous Futures Contract chart, there are multiple files which are easier to manage.
+            <br>
+            <br>
+            Now that this feature has been in use for more than 2.5 years, we can unequivocally say that it is far more efficient, orderly, and flexible to generate Continuous Futures Contract charts on the client-side from individual futures contract files rather than maintaining the data on a server.
+        </li>
+
+        <li>When transitioning from one futures contract to the next, the transition from the current futures contract being processed will only occur within the last two months of that particular contract month.</li>
+
+        <li>The transition point from one contract month to the next in a Historical Daily, Weekly, Monthly, Quarterly chart occurs at the particular date according to the date rollover rules or volume depending upon the particular  <a href = "#RolloverOptions">Continuous Futures Contract</a> option you have selected.</li>
+
+        <li>The transition point from one contract month to the next in an Intraday chart occurs at the particular date according to the Date rollover rules or Volume depending upon the particular Continuous Futures Contract option you have selected. In Intraday charts, transitions within a particular Date from one contract month to the next occur at the <b>Session Times &gt;&gt; Start Time</b> which is controlled by the <a href="index4ec1.html?page=doc/SessionTimes.php" Target="_blank" rel="noopener noreferrer">Session Times</a> in the chart. </li>
+
+        <li>In the case of a Continuous Futures Contract chart and Weekly bars, a Weekly bar will contain data from two different contracts around the point of rollover.</li>
+
+
+        <li><b>Back Adjustments of Historical Futures contracts in Chart</b>: If the current symbol of the chart is not considered the current futures contract based upon the Date rules or Volume rollover rules, then the back adjustments for the Continuous Futures Contract chart will not be correct because they cannot be completely calculated. Therefore, in order to use the back adjustment options, the current symbol of the chart <em>must be the active futures</em> contract month based upon the Date rules or Volume rollover rules.</li>
+
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ContinuousFuturesContractChartsWithSkippedMonth">Continuous Futures Contract Charts with Skipped Month</h2>
+    <div class="member-link">[<a href="#ContinuousFuturesContractChartsWithSkippedMonth">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Some futures markets have contract months which are not actively traded. For example, in the case of CBOT Soybeans, the listed contract month letters are as follows: <em>FHKNQUX</em>.  Although in the case of when building a Continuous Futures Contract chart, only the following contract months are included: <em>FHKNX</em> in that chart.  </p>
+    
+    <p>When the symbol of the chart is set to a contract month which is not one of the ones included in a Continuous Futures Contract Chart, then that month will not be included  but the following month will be instead.</p>
+ </section> 
+ 
+<section class="h2">
+    <h2 id="ControllingRolloverAmount">Controlling Rollover Amount for Back Adjustments</h2>
+    <div class="member-link">[<a href="#ControllingRolloverAmount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using one of the <b>Back Adjusted</b> Continuous Futures Contract options, when there is a rollover from one futures contract to the next, on the day of the rollover, the difference between the newer futures contract <em>Settlement price</em> from the prior day and the prior futures contract <em>Settlement price</em>  from the prior day is calculated. </p>
+
+    <p>This is the <em>back adjustment amount</em> between those two contracts. The settlement prices come from Historical Daily data for the futures contracts, not from Intraday data.</p>
+
+    <p> The closing/settlement prices cannot be used because those are calculated by the exchanges using certain algorithms and will not produce correct price differences between one futures contract to the next. While using settlement  prices may seem like the correct  method in certain futures markets, the problem is this is certainly not a universally reliable method to compute the back adjustment amounts.  Overall it is inherently unreliable because the settlement is not the final trade price of the day. </p>
+    
+    <p>The settlement prices <em>are the only accurate method</em> of doing this. The reason for the price difference between one futures contract month to the next relates to the cost of carry which also includes interest rates.</p>
+
+    <p>Furthermore, we must make it clear that the exchanges do not provide any official data about what is the correct back adjustment amount from one futures contract to the next since this concept is not something, to our knowledge, accepted by exchanges.</p>
+
+    <p>Below is an example of what you will see in the Sierra Chart Message Log for the back adjustment calculations. To see these calculations displayed, follow these instructions:</p>
+
+    <ol>
+        <li>Enable <b class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Log &gt;&gt; Detailed Continuous Futures Contract Chart Logging</b>.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li> Go to the Continuous Futures Contract chart and reload it by selecting <b class = "menu_item">Chart &gt;&gt; Reload and Recalculate</b>.</li>
+
+        <li>Select <b class="menu_item">Window &gt;&gt; Message Log</b> to open the Message Log if it is not already open.</li>
+
+        <li> Scroll to the bottom of the Message Log.</li>
+
+        <li>You will see messages like the following:</li>
+    </ol>
+
+    <div class="MessageLog">
+        <pre>
+ZWH16 [CBV] Daily #2 | Symbols used for continuous contract chart: |
+ <b>ZWZ15</b> |
+ <b>ZWH16</b> | 
+ZWH16 [CBV] Daily #2 | Checking for volume based rollover dates. | 
+ZWH16 [CBV] Daily #2 | Volume based rollover from ZWZ15 to ZWH16 occurs at 2015-11-17 | 
+ZWH16 [CBV] Daily #2 | Performing continuous futures contract back adjustment calculations. | 
+ZWH16 [CBV] Daily #2 | ZWZ15 <b>Settlement price on 2015-11-17</b> is 493.5. |
+ZWH16 [CBV] Daily #2 | ZWH16 <b>Settlement price on 2015-11-17</b> is 493.5. |
+ZWH16 [CBV] Daily #2 | ZWZ15 price difference to ZWH16 is 0. |
+ZWH16 [CBV] Daily #2 | Back adjust amount for symbol ZWZ15 is 0. | 
+        </pre>
+    </div>
+
+    <p>These messages can be generated at any time for a Continuous Futures Contract chart by selecting <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>.</p>
+
+    <p>For both Historical Daily charts and Intraday charts, the Settlement prices are determined from the Historical Daily chart data files. </p>
+    
+    <section class="h3">
+    <h3 id="InstructionsForEnteringSettingsForControllingRolloverAmount">Instructions for Entering Settings for Controlling Rollover Amount</h3>
+    <div class="member-link">[<a href="#InstructionsForEnteringSettingsForControllingRolloverAmount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In the particular example Message Log above, if you wanted to adjust the actual back adjustment amount for the transition from the ZWZ15 futures contract symbol to the ZWH16 contract, then follow the instructions below for this.</p>
+
+    <ol> 
+        <li> Before following these instructions, it is a good idea to re-download the data for the two contract months where you want to adjust the back adjustment amount between those contract months. Refer to <a href="#ReDownloadingContinuousFuturesContractData">Re-Downloading Continuous Futures Contract Data</a>. This may correct any error with the back adjustment amount. If it does, then stop here.</li>
+
+        <li>Select <b Class = "menu_item">Global Settings &gt;&gt; Symbol Settings</b>.</li>
+        <li> In the list of Symbols, select the symbol or symbol pattern that you want to adjust the back adjustment amounts for. </li>
+        <li>  In the list of Symbol Settings, select the <b>Custom Continuous Contract Back Adjustment Amounts </b> setting.</li>
+        
+        <li> In the <b>Custom Continuous Contract Back Adjustment Amounts </b>  edit box, you will want to enter the futures contract symbol and amount as an actual price value, to <em>add</em> to the existing back adjustment amount already calculated by Sierra Chart for the particular futures contract month just before the rollover to the next contract. The symbol and the amount need to be separated by an equals (=) sign. To subtract, use a <em>negative</em> value.
+            <br> <br>
+            For example, in the case of the rollover from December wheat to March wheat, if you want to add <em>.5</em> to the existing back adjustment amount then you would enter <em><b>ZWZ15 = .5</b></em>. Additional back adjustment amounts can be entered by separating them with a comma (,) character. Refer to the image below for an example. The image below shows an adjustment to GC June gold.
+
+
+
+            <div style="text-align: center;"><a href="../images/customcontinuouscontractbackadjustmentamounts.png" rel="lightbox"><img src="../images/customcontinuouscontractbackadjustmentamounts.png" alt="" class="screenshot" loading="lazy" width="700" ></a></div>
+
+        </li>
+        <li> Enable the <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#UseCustomSymbolSettingsValues">Use Custom Symbol Settings Values</a> option. </li>
+        <li>Press <b>OK</b> to close <b>Global Symbol Settings</b> window.</li>
+        <li> Go back to the chart and select <b Class = "menu_item">Chart &gt;&gt; Reload and Recalculate</b>. </li>
+
+    </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="UnderstandingBackAdjustedPriceDataAndComparisons">Understanding Back Adjusted Price Data and Comparisons</h2>
+    <div class="member-link">[<a href="#UnderstandingBackAdjustedPriceDataAndComparisons">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+     <p>Continuous Futures Contract charts which use <em>back adjustments</em> will have price data for prior contract months adjusted either up or down  relative to the price difference to the next contract month in the chart.  The most recent contract  month in the chart is not adjusted.  For information about how the calculations are done, refer to <a href="#RolloverOptions">Continuous Futures Contract Rollover Options</a>.</p>
+
+     <p> These adjustments are going to cause differences when comparing to a chart within Sierra Chart that does not use back adjustments. Or when you are comparing to a chart from a completely different service  which uses a different method of back adjusting.  <em>This is important to understand</em>.  </p>
+
+     <p>It is also important to understand what particular contract month you are looking at, at each bar in the chart. For information about this, refer to <a href="#DisplayingRolloverTransitionTimesAndContractMonths">Displaying Rollover Transition Times and Contract Months</a>. </p>
+    
+     <p> You also have the ability to adjust the  price adjustment amount at each transition from one contract month to the next. For instructions, refer to <a href="#ControllingRolloverAmount">Controlling Rollover Amount for Back Adjustments</a>. </p>
+     
+     <p> Finally, if there is an inaccuracy with the back adjustment price amount between contract months  in the chart, then re-download the data from one month before the first contract month  in the chart which is not accurate, all the way to the last contract month loaded in the chart.  To do this, refer to <a href="#ReDownloadingContinuousFuturesContractData">Re-Downloading Continuous Futures Contract Data</a>. </p>
+ 
+
+</section>
+
+
+<section class="h2">
+    <h2 id="VerifyingCorrectBackAdjustmentAmounts">Verifying Correct Back Adjustment Amounts</h2>
+    <div class="member-link">[<a href="#VerifyingCorrectBackAdjustmentAmounts">Link</a>] - [<a href="#top">Top</a>]</div> 
+    
+    <p>  Follow the instructions below to verify the correct back adjustment amounts, when using one of the    <em><b>Back Adjusted</b></em>  <b>Continuous Contract</b> options.</p>
+
+
+    <ol>
+        <li>  Follow the instructions to <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps">Update Symbol Settings</a>.  Be sure to disable the <b>Use Custom Symbol Settings Values</b> setting in the Global Symbol Settings. The step is necessary to avoid any problems with user changed rollover settings which cause incorrect transition dates or back adjustment amounts.
+         <br> <br>
+         In this case  it is recommended to use a Historical Chart and not Intraday.
+        </li>
+
+        <li>  Follow the     <a href = "#UsingContinuousFuturesContractCharts">instructions</a> to set up a Continuous Futures Contract chart if this has not already done.</li>
+        
+        <li> Enable  <b class="menu_item">Chart &gt;&gt; Show Rollover  Dates</b>. For more details, refer to <a href="#DisplayingRolloverTransitionTimesAndContractMonths">Displaying Rollover Transition Times and Contract Months</a>.</li>
+        
+        <li>  Set  <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt;   Log &gt;&gt;  Detailed Continuous Futures Contract Logging</b> to Yes.</li>
+        
+        <li> Set the <a href="#RolloverOptions">Continuous Contract</a>  option in the Chart Settings to <b>Continuous Futures Contract - Date Rule Rollover, Back Adjusted</b>.</li>
+        
+        <li>  Select  <b class="menu_item">Window &gt;&gt; Message Log</b> to open the message log.</li>
+        <li> Scroll to the bottom of that log if not already.</li>
+        <li> You will see messages like the following in the log: 
+         <div class="MessageLog">
+            <pre>
+    ESM22-CME [CB][M]  Daily  #1 | ESH22-CME Settlement price on 2022-03-09 is 4275.25.
+    ESM22-CME [CB][M]  Daily  #1 | ESM22-CME Settlement price on 2022-03-09 is 4266.75. 
+    ESM22-CME [CB][M]  Daily  #1 | ESH22-CME price difference to ESM22-CME is -8.5.
+    ESM22-CME [CB][M]  Daily  #1 | Back adjust amount for symbol ESH21-CME is -43.75. 
+    ESM22-CME [CB][M]  Daily  #1 | Back adjust amount for symbol ESM21-CME is -34.
+    ESM22-CME [CB][M]  Daily  #1 | Back adjust amount for symbol ESU21-CME is -24.5.
+    ESM22-CME [CB][M]  Daily  #1 | Back adjust amount for symbol ESZ21-CME is -15.25. 
+    ESM22-CME [CB][M]  Daily  #1 | Back adjust amount for symbol ESH22-CME is -8.5.         
+            </pre>
+        </div>          
+        </li>
+        <li> You can now see the back adjustment amount for each contract month loaded in the chart. And you can see in the chart, where each contract month begins and ends from the vertical lines at the transition Date and the  Month and Year displayed at the bottom of the vertical line.  For  details, refer to<a href="#DisplayingRolloverTransitionTimesAndContractMonths">Displaying Rollover Transition Times and Contract Months</a>. 
+        
+        </li> 
+        
+          <li> If these back adjustment amounts are not correct, then refer to  <a href="#ControllingRolloverAmount">Controlling Rollover Amount for Back Adjustments</a>. </li>
+          
+        <li>   These back adjustment amounts are added   to the Open, High, Low and Close values of each chart bar.  If the back adjustment amount is negative, then   the Open, High, Low and Close values become lower. </li>
+        
+        <li> Set the <a href="#RolloverOptions">Continuous Contract</a>  option in the Chart Settings to <b>Continuous Futures Contract - Date Rule Rollover</b>.</li>
+        
+        <li> Manually add  the back adjustment amounts   to some of the chart bars Open, High, Low, and Close values to verify that the correct adjustments are performed.   When we say manually add the back adjustment amounts, we simply mean use like a spreadsheet program or something to do the calculations  separately and be able to reference them  in the next step. </li>
+
+      <li>You can  verify the correct adjustments are performed   by making a note of these new  adjusted values and setting the chart <a href="#RolloverOptions">Continuous Contract</a>  option in the Chart Settings to <b>Continuous Futures Contract - Date Rule Rollover, Back Adjusted</b>  and seeing that you have the same results.</li>
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="UsingDateRuleVolumeBasedRollover">Using Date Rule Rollover or Volume Based Rollover?</h2>
+    <div class="member-link">[<a href="#UsingDateRuleVolumeBasedRollover">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For Continuous Futures Contract charts, Sierra Chart provides two methods to determine when to rollover from one futures contract month to the next in a chart.</p>
+
+    <p>Each of them is described below along with an explanation as to when you should use one instead of the other.</p>
+
+    <div style="text-align: center;"><a href="../images/continuousfuturescontractoptions.png" rel="lightbox"><img src="../images/continuousfuturescontractoptions.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+
+    <ul>
+        <li><b>Date Rule Rollover</b>: When using this rollover method, there are specific date-based rules which is used to determine when to rollover from one contract month to the next in the chart. These are set on the <b>Rollover</b> tab in <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> for the symbol pattern. 
+            <br>
+            <br>
+            This is the method to use for stock index and currency futures (ES, NQ, YM, TF, 6E, 6B) because generally these have very definite and reliable rollover dates. Using a date rule rollover is going to be faster than a volume-based rollover and avoids any issues caused by inaccurate volume data. In the case of Intraday charts, there is no reliance on the volume data in a Historical Daily chart data file when using this rollover method.
+        </li>
+
+        <li><b>Volume Based Rollover</b>: This is the method to use for commodity futures because usually these do not have a very definite date-based rule for when the volume transitions from one futures contract month to the next. Sometimes there can be slight variations of the day or two. For a description of how this option works in more detail, refer to the <a href="#RolloverOptions">Rollover Options</a> description.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="ForwardCurveCharts">Forward Curve Charts</h2>
+    <div class="member-link">[<a href="#ForwardCurveCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the steps below to create a Forward Curve chart.</p>
+
+    <ol>
+        <li> Open a Historical Chart through <b Class = "menu_item">File &gt;&gt; Find Symbol &gt;&gt; [select symbol] &gt;&gt; Open Historical Chart</b>. This needs to be a futures contract symbol. This feature will not work properly with Intraday charts. Only <em>Historical Daily Charts</em>. </li>
+
+
+        <li> It is imperative, that you are using the correct symbol and only use the symbols listed in <b class = "menu_item">File &gt;&gt; Find Symbol</b>. If the symbol is not correct, then the Forward Curve chart functionality cannot work. Check to make sure you are using the correct symbol. </li>
+
+
+        <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting</b>.</li>
+        
+        <li> Set  <b>Load Data Limiting Method: Days to Load &gt;&gt; Days to Load for Historical/Intraday Chart Data Type</b> to the number of days forward that you want a forward curve chart for. <em>Do not set this too high.</em> 
+         <br> <br>
+        Only set it to what <em>is necessary</em> because the futures contracts for forward months all have to be downloaded and will update every time Sierra Chart is restarted. Generally it is not recommended to set <b>Days to Load</b> higher than 365.</li>
+        
+        <li> Set the <b>Historical Chart Bar Period </b> to <b>Days</b> and the value beside it needs to be 1. You cannot use a higher timeframe per bar than this.</li>
+        <li>Select the <b>Symbol</b> tab.</li>
+        <li>Set the <b>Continuous Contract</b> option to <b>Continuous Futures Contract - Forward Curve</b>.</li>
+        <li>Press <b>OK</b>.</li>
+        <li> To see a line only, select <b Class = "menu_item">Chart &gt;&gt; Graph Draw Types &gt;&gt; Line On Close</b>.</li>
+        <li> Select <b Class = "menu_item">Chart &gt;&gt; Show Rollover Dates</b> to see which bar is which contract month. </li>
+        
+        <li> You have the ability to alter what particular contract months are used in a Forward Curve chart.   This is done through the <a href = "index4404.html?page=doc/GlobalSymbolSettings.php"> Global Symbol Settings</a>.  Set the  <b>Continuous Contract Months</b> setting to the particular months you want to be included. </li> 
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="Limitations">Limitations</h2>
+    <div class="member-link">[<a href="#Limitations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li>For <em>Historical Daily</em> charts which use 2 or more digit years in the futures contracts symbols, the maximum years back for Continuous Futures Contract charts is  <em>50 years</em>. For <em>single-digit years</em> it is  <em>5 years</em>.
+            <br><br>
+            It is important to be aware of these limits and to adjust the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting &gt;&gt; Days to Load for Historical Chart Data Type</b> setting to be well within this stated limit.   The limits are less if the historical data for a particular symbol has less number of years available.
+        </li>
+
+        <li>For <em>Intraday</em> charts which use 2 or more digit years in the futures contracts symbols, the maximum years back for Continuous Futures Contract charts is  <em>15 years</em>. For <em>single-digit years</em> it is  <em>5 years</em>.
+        </li>
+        
+        
+        <li>To be able to access <em>more than</em> 5 years of historical Intraday data in a Continuous Futures Contract Chart when the particular Trading service you are using only supports <em>single-digit years</em> in the futures symbols (like Rithmic), then follow these instructions:
+
+            <ol>
+             <li>Install another copy of Sierra Chart following the <a href="index6ebd.html?page=doc/MultipleServices.html#StepByStep" Target="_blank" rel="noopener noreferrer">Step-By-Step Instructions to Install Multiple Copies of Sierra Chart</a> instructions.</li>
+             
+             <li> Set that installation to use the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Delayed Exchange Data Feed</a>.  </li>
+           </ol>
+            
+            You can then open charts in this new copy of Sierra Chart using two digit year futures symbols.</li>
+
+        <li> There is also a limit on the number of Historical Daily data downloads that can be done within a single calendar month. When the limit is reached, this will prevent all or some historical data for a Continuous Futures Contract Chart from being complete and will result in missing data and Message Log errors. 
+        <br> <br>
+        This is the error message which will be displayed in the <b class="menu_item">Window &gt;&gt; Message Log</b>:
+
+    <div class="MessageLog">
+        <pre>
+        Max downloads per month exceeded. Downloads = ###. Monthly Limit: #####. 
+        </pre>
+    </div>       
+       
+        <br> <br>
+        For complete details, refer to <a href="index765f.html?page=doc/SierraChartHistoricalData.php#DailyDataDownloadLimit" target="_blank" rel="noopener noreferrer">Daily Data Download Limit</a>. 
+            <br> <br>
+            After increasing the limit, you will need to <a href= "#ReDownloadingContinuousFuturesContractData">re-download</a> the data  for any symbol that is missing Historical Daily data. Once the data is downloaded, it does not need to be downloaded again.
+       </li>
+
+
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="BackTestingAndTradingWithContinuousFuturesChart">Back Testing and Trading with Continuous  Futures Chart</h2>
+    <div class="member-link">[<a href="#BackTestingAndTradingWithContinuousFuturesChart">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When performing <a href="indexf915.html?page=doc/Trading.html" target="_blank" rel="noopener noreferrer">trading</a> from a Continuous Futures Contract chart, whether <a href="indexad24.html?page=doc/TradeSimulation.php" target="_blank" rel="noopener noreferrer">Trade Simulation Mode</a> is enabled or not, and the chart is not replaying,  the symbol for the orders will always be the current symbol of the chart.</p>
+    
+   <p> When performing a <a href="indexe891.html?page=doc/Backtesting.php" target="_blank" rel="noopener noreferrer">Back Test</a> or Chart Replay at any Date-Time in the chart, the symbol for the orders  will always be the current symbol of the chart completely irrespective of the Date-Time of the chart bar the order is submitted at during the  Back Test or a Chart Replay.</p>
+    
+    <p>Therefore, when looking at the trading activity related to the trading from the chart, in the <a href="index509f.html?page=doc/TradeActivityLog.php" target="_blank" rel="noopener noreferrer">Trade Activity Log</a>, you need to select the Symbol in the Trade Activity Log which matches the symbol of the chart, in order to see the trading activity related to the trades made from the chart. It will always be the same symbol completely irrespective of the Date-Time of the chart bar the order was submitted at.</p>
+
+    
+</section>
+<section class="h2">
+    <h2 id="IssuesWhenSymbolOfChartIsNotCurrentContractAndExpiresLater">Issues When Symbol of Chart is not Current Contract and Expires Later</h2>
+    <div class="member-link">[<a href="#IssuesWhenSymbolOfChartIsNotCurrentContractAndExpiresLater">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When the <a href = "index4cf4.html?page=doc/ChartSettings.html#ContinuousFuturesContract">Continuous Contract</a> option is set to an option <em>other</em> than  <b>None</b> and when  the  <a href = "index4cf4.html?page=doc/ChartSettings.html#Symbol">Symbol</a> setting for the chart   is  <em>not</em> set to the  <em>current active contract month</em>  and is instead set to a contract month that is  <em>further  forward in time</em>, then this may/will result in that contract month from not being included in the chart.  </p>
+    
+   <p> To determine if this is the case, set the chart to  <a href="#DisplayingRolloverTransitionTimesAndContractMonths">Display Rollover Dates</a>.  You can see in the chart what is the last contract month included.</p>
+   
+   <p>  If the last contract month included in the chart is not  the active contract month,  and it is a Historical Daily or higher timeframe chart, then the current quote data (High/Low/Close) for the symbol of the chart, will also be included in the last bar in the chart and can cause  a longer chart bar.</p>
+   
+   <p>  If the last contract month included in the chart is not  the active contract month,  and it is an Intraday chart,  then the current data being added into the chart for the symbol of the chart,  will start at the moment of the chart updating  and will not correspond to the prior loaded data.</p>
+   
+   
+  <p> There can also be months skipped   near the end of a  Continuous Futures Contract chart, when using a symbol that is multiple months forward from the current contract. </p>
+    
+  <p> In general the solution in this case  is to set the <a href = "index4cf4.html?page=doc/ChartSettings.html#ContinuousFuturesContract">Continuous Contract</a> option for the chart  to   <b>None</b>. </p>
+
+</section>
+
+
+<hr><p>*Last modified Monday, 19th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ContinuousFuturesContractCharts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:34:09 GMT -->
+</html>  

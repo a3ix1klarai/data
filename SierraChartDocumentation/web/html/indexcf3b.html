@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/HistoricalIntradayData.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:30:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1687267084') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/HistoricalIntradayData.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Historical Intraday Data -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexcf3b.html?page=doc/HistoricalIntradayData.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ManagingData">(Table of Contents) Managing Symbol Data</a> &gt;&gt; <a  href="indexcf3b.html?page=doc/HistoricalIntradayData.html">Historical Intraday Data</a></h4> </div>     <h1 class="PageName">Historical Intraday Data (Missing Data / Download Errors / Viewing More Data)</h1>
+
+<ul>
+    <li><a href="#MissingOrIncompleteIntradayChartData">Missing or Incomplete Intraday Chart Data</a>
+		<ul>
+		    <li><a href="#RetryingDownloadingOfIntradayData">7.1 - Retrying Downloading of Intraday Data</a>
+				<ul>
+					<li><a href="#RetryDownloadDataInChart">Retrying the Download When There is Data in the Chart</a></li>
+					<li><a href="#MissingVolumeProfileData">Missing Volume Profile Data on a Trade DOM</a></li>
+					<li><a href="#DeleteDownloadAllCharts">Deleting and Downloading Intraday Data for All Charts</a></li>
+					<li><a href="#RetryDownloadNoDataInChart">Retrying the Download When There is No Data in the Chart</a></li>
+				</ul>
+			</li>
+		    <li><a href="#MismatchBetweenBarCloseAndPriceBoxOnRightSideScaleOfChart">Mismatch Between Bar Close and Price Box on Right Side Scale of Chart</a></li>
+		    <li><a href="#IncorrectChartAndSessionTimesSettings">Incorrect Chart and Session Times Settings</a></li>
+		    <li><a href="#DatesToExclude">Dates to Exclude</a></li>
+		    <li><a href="#SymbolNotTradingForAParticularPeriodOfTime">Symbol Not Trading for a Particular Period of Time</a></li>
+		    <li><a href="#InvalidSymbol_SymbolNotSupportedByService">Invalid Symbol / Symbol Not Supported by Data/Trading Service</a></li>
+		</ul>
+	</li>
+    <li><a href="#ErrorDownloadingDataSCHistoricalDataServer">Error when Downloading Historical Intraday Data from the Sierra Chart Historical Data Server</a>
+		<ul>
+			<li><a href="#OverviewandSolutions">Overview and Solutions</a></li>
+			<li><a href="#UsingPort80">Using Port 80</a></li>
+			<li><a href="#ImprovingHistoricalIntradayDataDownloadingPerformance">Improving Historical Intraday Data Downloading Performance</a></li>
+		</ul>
+	</li>
+    <li><a href="#DownloadingViewingMoreHistoricalIntradayData">Downloading/Viewing More Historical Intraday Data</a>
+		<ul>
+			<li><a href="#InstructionsToDownloadViewMoreHistoricalIntradayData">Instructions to Download/View More Historical Intraday Data</a></li>
+			<li><a href="#UsingDateRangeInFileFromToDownloadMoreData">Using Date Range in File &gt;&gt; From to Download More Historical Data</a></li>
+			<li><a href="#UsingExpiredFuturesContracts">Using Expired Futures Contracts</a>
+				<ul>
+					<li><a href="#SingleDigitYearLimitation">Single Digit Year Limitation</a></li>
+				</ul>
+			</li>			
+		</ul>
+	</li>
+    <li><a href="#CancelingIntradayDataDownloads">Canceling Intraday Data Downloads</a> </li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="MissingOrIncompleteIntradayChartData">Missing or Incomplete Intraday Chart Data</h2> 
+    <div class="member-link">[<a href="#MissingOrIncompleteIntradayChartData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="RetryingDownloadingOfIntradayData">7.1 - Retrying Downloading of Intraday Data</h3>
+        <div class="member-link">[<a href="#RetryingDownloadingOfIntradayData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Sierra Chart will always download and permanently store historical Intraday chart data for a symbol when you are <em>connected to the data feed</em> and an Intraday chart for the symbol is open <em>or</em> the symbol is listed in the <a href="indexa20c.html?page=doc/EditMenu.html#IntradayFileUpdateList">Global Settings &gt;&gt; Intraday File Update List</a>.  </p>
+
+        <p>If the Data or Trading service Sierra Chart is connected to does not provide streaming real-time or delayed data, then Intraday charts will not automatically be kept up-to-date.  You will need to select <b Class = "menu_item">File &gt;&gt; Disconnect</b> and <b Class = "menu_item">File &gt;&gt; Connect to Data Feed </b>  to cause a historical data download for the Intraday charts so they will be up-to-date. </p>
+        
+        <p>In the case of when using  <b>SC Data-All Services</b>, the historical Intraday charts will be periodically updated without reconnecting to the data feed if they are not receiving streaming data updates.</p>
+
+        <p>When Sierra Chart is connected to the data feed or you open an Intraday chart  for a symbol that was not previously opened while connected to the data feed, the data that is missing from the data file for the symbol <b>and</b> is also available on the data server will <b>definitely</b> be downloaded by Sierra Chart.  </p>
+
+        <p>The amount of Historical Intraday Data that you will receive from the Data or Trading service server depends upon the service you are using and how many days Sierra Chart is set to download. Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on  the menu. Set the <b>Maximum Historical Intraday Days to Download &gt;&gt;  Non-Tick Data / 1-Tick Data</b> settings to the number of days of Intraday data you require be downloaded.</p>
+
+        <p>If the server does not have all the Intraday data for a symbol from the last time in the chart to the present, the <b>Maximum Historical Intraday Days to Download </b> is <em>not high enough</em>, or the server has less than the maximum number of days you have specified to download, then there will be data  <em>missing</em> from the chart.</p>
+
+        <p>In the case of the Sierra Chart Historical Intraday Data services which is used by many of the supported Data and Trading services we support, a problem connecting to this server or a problem downloading data, will  also cause missing data.</p>
+
+        <p>Note: The data server may be providing the all the data.  However, the missing data issue may be caused by the data being filtered out from the chart for other reasons which are explained in the other <a href="#IncorrectChartAndSessionTimesSettings">sections below</a>.</p>
+
+        <section class="h4">
+            <h4 id="RetryDownloadDataInChart">Retrying the Download When There is Data in the Chart</h4> 
+            <div class="member-link">[<a href="#RetryDownloadDataInChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><a href="../images/re-downloadintradaydata.png" rel="lightbox"><img src="../images/re-downloadintradaydata.png" alt="" class="WideFloatRight"></a>If there are bars in the chart, even a few, then to <b>re-download</b> Intraday data for the symbol of the chart, follow these instructions:</p>
+
+            <ol>
+                <li><em>Important</em>: To make sure that the historical Intraday data request is routed to the proper source, it is necessary that the Symbol Settings are up-to-date by following the instructions to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.  This only needs to be done one time.  Although if you have not done this step in a while and there is missing Intraday data, you should do it again now.</li>
+
+                <li>Make certain Sierra Chart is connected to the data feed by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu. If Sierra Chart was not connected, then the data from the last bar in the chart to the present time will be downloaded after you connect. Depending upon the particular Data or Trading service being used, if Sierra Chart cannot connect to the data feed, then historical Intraday data may not be able to be downloaded. To determine if Sierra Chart is connected to the data feed, refer to  <a href="index8793.html?page=doc/FileMenu.html#ConnectToDataFeed" target="_blank" rel="noopener noreferrer">File &gt;&gt; Connect to Data Feed</a>.</li>
+
+                <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu. Make sure the <b>Maximum Historical Intraday Days to Download &gt;&gt; Non-Tick Data / 1 Tick Data</b> settings are set to what you require.  <em>186 is recommended</em>. If you want to get data further back in time than you already have in the chart data file, then you may need to increase this setting, assuming the server has the data. Press <b>OK</b>.</li>
+
+                <li>Make sure your computer's Date and Time are set accurately. For complete details, refer to <a href="index3e87.html?page=helpdetails38.html" target="_blank" rel="noopener noreferrer">Date and Time Issues</a>. This step only needs to be done once. </li>
+
+                <li>Go to your chart and use your Pointer to point to where you want to begin the historical Intraday data download at. This should be right before the missing or incomplete Intraday data.
+                    <br> <br>
+                    Right-click your Pointer and select <b class="menu_item">Delete and Download Data</b> on the Chart Shortcut Menu. This will delete and re-download from the position you pointed to,  all the way to the end of the data file. You will see <b>Downloading Historical Data</b> displayed on the chart window. Refer to the image to the right.
+                    <br><br>
+
+                    If the Intraday chart is missing data at the end of the chart, then just point to a bar near the end of the chart, right-click your pointer and select <b class="menu_item">Delete and Download Data</b> on the chart shortcut menu.<br><br></li>
+
+                <li><b>Deleting All Data</b>: To delete <em>all</em> the data in the chart data file and download all available data from the server, then select <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b> on the menu. You will want to perform this procedure <em>if you did not get any historical when you initially opened the chart, or in the case to get data going further back than you already have</em>. This is also the simplest method just to re-download all of the data.
+                    <br><br>
+
+                    When the chart has one of the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol &gt;&gt; Continuous Contract</b>  options selected,  then you will receive a prompt asking if you want to delete and re-download data for the current symbol of the chart or for all of the symbols loaded into the chart. 
+                    <br> <br>
+                    In this case it is recommended to press  <b> No </b> to delete data for  <em>all of the current and expired symbols</em> loaded in the chart to make sure all of the missing data is downloaded.
+                </li>
+
+
+                <li> When the historical Intraday data download is complete, you will see the following message displayed on the chart.
+
+                    <div style="text-align: center;"><a href="../images/historicaldownloadcomplete.png" rel="lightbox"><img src="../images/historicaldownloadcomplete.png" alt="" class="screenshot" loading="lazy" width="200"></a></div>
+                </li>
+
+
+                <li> If instead you see the following <b>Download Failed</b> message, then refer to the <a href="#ErrorDownloadingDataSCHistoricalDataServer">Error when Downloading Historical Intraday Data from the Sierra Chart Historical Data Server</a> section on this page. Also refer to that section if the download takes a long time with no data being downloaded in the chart.
+
+                    <div style="text-align: center;"><a href="../images/historicaldatadownloadfailed.png" rel="lightbox"><img src="../images/historicaldatadownloadfailed.png" alt="" class="screenshot" loading="lazy" width="200"></a></div>
+                </li>
+
+                <li>For instructions to edit an Intraday data file, refer to the <a href="index7b4b.html?page=doc/IntradayDataEditor.html">Intraday Data Editor</a> documentation page.</li>
+            </ol>
+        </section>
+
+        <section class="h4">
+            <h4 id="MissingVolumeProfileData">Missing Volume Profile Data on a Trade DOM</h4> 
+            <div class="member-link">[<a href="#MissingVolumeProfileData">Link</a>] - [<a href="#top">Top</a>]</div>	
+
+            <p>In the case of a Trade DOM  window that has a <b>Volume by Price</b> study, then this data is built from Intraday chart data. If the Volume Profile looks incomplete which would indicate there is missing Intraday chart data, then what you need to do is go to a standard Intraday chart and follow the procedure above to re-download the Intraday data to fill in any missing Intraday data.</p>
+
+            <p>After this procedure is completed, then go back to the  Trade  DOM and select  <b class = "menu_item">Chart &gt;&gt; Reload and Recalculate</b>. If this command is not available, then update to the latest version.</p>
+        </section>        
+
+        <section class="h4">
+            <h4 id = "DeleteDownloadAllCharts">Deleting and Downloading Intraday Data for All Charts</h4>
+            <div class="member-link">[<a href="#DeleteDownloadAllCharts">Link</a>] - [<a href="#top">Top</a></div>
+
+            <p> It is supported to perform a Delete and Download of Intraday data from a specific Date-Time for all open charts in the Chartbook, in a <em>single operation</em>. Follow these steps: </p>
+
+            <ol> 
+                <li>Select <b class = "menu_item">Global Settings &gt;&gt; Customize Chart Shortcut Menu</b>. </li>
+                <li>Make sure the  <b>Delete & Download Data - All Charts</b> menu command is listed in the  <b>Selected Menu Items</b> list.</li>
+                <li> Press OK. </li>
+                <li>Follow through the <a href="#RetryDownloadDataInChart">Retrying the Download When There is Data in the Chart</a> instructions on this page. At the step where you normally will select the <b class="menu_item">Delete and Download Data</b> menu command, instead select <b class = "menu_item">Delete & Download Data - All Charts</b> on the menu. </li>
+            </ol>
+        </section>
+
+        <section class="h4">
+            <h4 id="RetryDownloadNoDataInChart">Retrying the Download When There is No Data in the Chart</h4> 
+            <div class="member-link">[<a href="#RetryDownloadNoDataInChart">Link</a>] - [<a href="#top">Top</a>]</div>	
+
+            <ol >
+                <li>If there is no data in the chart, then this could be either because the  chart data file for the symbol <em>contains no data</em> or the Session Times in <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times</b>  <a href="#IncorrectChartAndSessionTimesSettings" >are filtering out the data</a>. </li>
+                
+                <li><em>Important</em>: To make sure that the historical Intraday data request is routed to the proper source, it is necessary that the Symbol Settings are up-to-date by following the instructions to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.  This only needs to be done one time.  Although if you have not done this step in a while and there is missing Intraday data, you should do it again now.</li>
+
+                <li>Select <b class="menu_item">Edit &gt;&gt; Edit/Download Data - Intraday Chart</b> on the menu. The editor will not display any data if the data file is empty.</li>
+
+                <li>If the data file is empty, all you need to do to retry downloading the data is to go to the chart and select <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>.</li>
+
+                <li>Otherwise, if there is data displayed in the  Intraday Data Editor,  scroll to the position to where you want to start the  data re-download from and press the <b>Delete and Download Data from Current Position to End</b> button.</li>
+                <li> After the historical data download is complete, if there still is no data, then the symbol may not be correct. Refer to <a href="indexf71c.html?page=doc/helpdetails1.html#Symbols" Target="_blank" rel="noopener noreferrer">Symbols</a>. Or there is no historical Intraday data available for the symbol. </li>
+                </ol>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="MismatchBetweenBarCloseAndPriceBoxOnRightSideScaleOfChart">Mismatch Between Bar Close and Price Box on Right Side Scale of Chart</h3>
+        <div class="member-link">[<a href="#MismatchBetweenBarCloseAndPriceBoxOnRightSideScaleOfChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>If data from the last time in the chart to the present price is missing from the chart, then the close mark on the last bar in the chart will not match the current price box that is displayed on the right of the chart window. </p>
+
+        <p> When the markets are open and there is active trading for the symbol, then the last bar and the price box on the right should definitely match. If they do not, then the problem would be explained in one of the subsections of <a href="index581c.html?page=doc/helpdetails3.html">help topic number 3</a>. </p>
+
+        <p>Another reason the close mark on the last bar in the chart will not match the current price box is because the <b>Start Time</b> and <b>End Time</b> in the <b class="menu_item">Chart &gt;&gt; Chart Settings</b> window are not set to cover the full 24-hour period. In this case, the data that is in the chart data file is not loaded into the chart.  </p>
+
+        <p>The box on the right will always show the current price for the symbol.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="IncorrectChartAndSessionTimesSettings">Incorrect Chart and Session Times Settings</h3>
+        <div class="member-link">[<a href="#IncorrectChartAndSessionTimesSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Data will also appear to be missing from an Intraday chart if some <b class="menu_item">Chart &gt;&gt; Chart Settings</b> are incorrect.  </p>
+        
+         <p>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu  to open the Chart Settings window.</p>
+         
+         <p>Select the   <b>Data Limiting</b> tab.</p>
+
+        <p>If the <b> Load Data Limiting Method: Days to Load &gt;&gt; Days to  Load for Intraday Chart Data Type</b> setting is not set to load all of the data you want to see in the chart, data will seem to be missing. The <b>Days to  Load for Intraday Chart Data Type</b> setting must include weekends as the setting is based upon calendar days.</p>
+        
+         <p> Normally the  <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadDataLimitingMethod_DateRangeFromTo">Load Data Limiting Method: Date Range &gt;&gt; Date Range &gt;&gt; To/From</a>  settings should be blank. However, if you are using those settings make sure they are set to the date range that you want to see.  Normally these settings should not be used.   If you are using a  <b>From</b> date, it is recommended that the  <b>To</b> date is kept <em>blank</em>.</p>
+
+        <p>If the <b> Session Times &gt;&gt;  Intraday Chart Session Times &gt;&gt; Session Start Time</b> and <b> Session Times &gt;&gt;  Intraday Chart Session Times &gt;&gt; Session End Time</b> settings do not cover the time period you want to see, data will be missing from the chart. </p>
+        
+        <p>To cover the full 24 hours use <em>00:00:00</em> for the <b>Session Start Time</b> and <em>23:59:59</em> for the <b>Session End Time</b>.   Try setting these Session Times to cover the full 24 hours to see what data is available.</p>
+
+
+        <p> The  global Time Zone setting or the chart specific Time Zone setting  controls the time zone that times are displayed in. The <b>Session Start Time</b> and <b>Session End Time</b> Session Times  settings for the chart correspond to that <b>Time Zone</b> setting  and need to be set appropriately.  </p>
+        
+        
+        <p>For complete documentation to control the time zone  either globally or for an individual chart, refer  to the <a href="index219e.html?page=doc/TimeZone.html" target="_blank" rel="noopener noreferrer">Time Zone</a> page.</p>
+
+        <p>If the   <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadWeekendData"> Session Times &gt;&gt;  Weekend Data</a>   setting is not  set to load weekend data, then you   will not see the corresponding weekend data in the chart.  A weekend is considered Saturday and Sunday. For additional details, refer to the <a href="index4ec1.html?page=doc/SessionTimes.php#LoadWeekendData" Target="_blank" rel="noopener noreferrer">Weekend Data</a> setting.</p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="DatesToExclude">Dates to Exclude</h3>
+        <div class="member-link">[<a href="#DatesToExclude">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is possible through the <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Chart Data &gt;&gt; Set Dates To Exclude</b> setting to specify one or more calendar dates to exclude from a chart.</p>
+
+        <p>If you see data for a particular Date missing from an Intraday chart, then check the <b> Dates to Exclude </b> setting to be sure that particular date is not listed. If it is, then remove it.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SymbolNotTradingForAParticularPeriodOfTime">Symbol Not Trading for a Particular Period of Time</h3>
+        <div class="member-link">[<a href="#SymbolNotTradingForAParticularPeriodOfTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>One reason for missing data in an Intraday chart for a particular period of time, is that trading did not  occur during that period of time. This is something to be aware of. Check with the contract specifications on the exchange website to find out what times a symbol trades during.</p>
+
+        <p>Obviously if the market is open and there is not trading for a very active symbol for a period of an hour, then almost certainly the data is actually missing.</p>
+
+        <p> However, if there is data missing from 1 to 5 seconds for an active symbol, this is not unusual. The market may not have traded during that short period of time. Data feeds do not transmit data every second when there is not trading occurring for a symbol.</p>
+
+        <p>In the case of the Chicago  Mercantile Exchange which includes the CME, COMEX, CBOT, NYMEX, there is no trading from <em>17:00:00</em> to <em>17:59:59.999</em> US Eastern time for all symbols. And there is no trading on Saturday or on Sunday until 18:00:00 US Eastern time.</p>
+
+        <p>  If you want to have bars in the chart for periods of time where there is no trading, then enable the <a href="index4cf4.html?page=doc/ChartSettings.html#IncludeColumnsWithNoData">Include Columns with No Data</a>  option in the <b Class = "menu_item">Chart &gt;&gt;Chart Settings</b>.</p>
+    </section>
+  
+    <section class="h3">
+        <h3 id="InvalidSymbol_SymbolNotSupportedByService">Invalid Symbol / Symbol Not Supported by Data/Trading Service</h3>
+        <div class="member-link">[<a href="#InvalidSymbol_SymbolNotSupportedByService">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> Symbols are specific to the Data or Trading service being used. One reason for no data in an Intraday chart  or the chart no longer updating is that the  symbol of the chart is  <em>not</em> correct.</p>
+        
+        
+        
+        <p>In this case, refer  to the  <a href = "indexf71c.html?page=doc/helpdetails1.html#Symbols" target="_blank" rel="noopener noreferrer">Symbols</a> section for complete information and instructions on what to do in this case. </p>
+
+
+    </section>
+  
+</section>
+
+<section class="h2">
+    <h2 id="ErrorDownloadingDataSCHistoricalDataServer">Error when Downloading Historical Intraday Data from the Sierra Chart Historical Data Server</h2>
+    <div class="member-link">[<a href="#ErrorDownloadingDataSCHistoricalDataServer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li><a href="#OverviewandSolutions">Overview and Solutions</a></li>
+        <li><a href="#UsingPort80">Using Port 80</a></li>
+        <li><a href="#ImprovingHistoricalIntradayDataDownloadingPerformance">Improving Historical Intraday Data Downloading Performance</a></li>
+    </ul>
+
+    <section class="h3">
+        <h3 id="OverviewandSolutions">Overview and Solutions</h3> 
+        <div class="member-link">[<a href="#OverviewandSolutions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When you are using a Data or Trading service which uses the Sierra Chart Historical Data servers, then in these cases all historical Intraday data  and in some cases historical Daily data is downloaded from the Sierra Chart Historical Data servers.</p>
+
+        <p>The Sierra Chart Historical Data servers are used by many of the supported Data and Trading services. If you do not get any historical Intraday  or Daily data or you have missing historical Intraday or Daily data, and you receive an error displayed in the Message Log that says one of the following:</p>
+
+        <ul>
+
+            <li><b><i>Error downloading historical Intraday data for [symbol]. The download timed out</i></b></li> 
+            <li><b><i>Lost the connection to the Sierra Chart Historical Data server</i></b></li>
+            <li><b><i>Windows error code 10061:  No connection could be made because the target machine actively refused it. </i></b></li>
+            <li><b><i>Socket (#) | Closed. Windows error code 10053: An established connection was aborted by the software in your host machine. </i></b></li>
+            <li><b><i>Windows error code 10013: An attempt was made to access a socket in a way forbidden by its access permissions.</i></b></li>
+            <li><b><i>HD Request # - Error downloading historical Intraday data for [symbol]. The network socket has been closed. Retrying download. </i></b></li>
+            <li><b><i>Socket (#) | Error on address resolution.   Windows error code 11002: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server.</i></b></li>
+            <li><b><i>HD Request # | Error downloading historical Intraday data for [symbol]. Timeout error connecting to server. </i></b></li>
+            <li><b><i>HD Request # | Error downloading historical Daily data for [symbol]. The network socket has been closed. Retrying download. </i></b></li>
+
+        </ul>
+
+        <p>Then these would be due to a firewall blocking the connection to the server, or a network communication problem to the server or a DNS name resolution problem.</p>
+
+        <p>If it is a firewall issue, it could be a software firewall on your computer, a firewall with your router or your ISP (Internet service provider). Most likely, it is a software firewall on your computer. The built-in Windows firewall will not be a problem. If you are using a firewall other than the Windows firewall, then disable it to see if it solves the problem.</p>
+
+        <p>After disabling firewall software, restart Sierra Chart and try again by opening the chart and connecting to the data feed (<b Class = "menu_item">File &gt;&gt; Connect to Data Feed</b>). Firewalls can be very troublesome and disabling them sometimes may not resolve the problem. Only uninstalling them completely from your system might resolve the issue (however not necessarily).</p>
+
+        <p>You may also want to try restarting your computer to see if that resolves the problem if you continue to have a problem.</p>
+
+        <p>Sierra Chart needs to be provided access to ports <b>10149, 10150</b> to connect to the historical data server. If you are using a router, make sure it allows access to ports <b>10149, 10150</b>. Contact your ISP (Internet Service Provider) and make certain they are not blocking ports 10149, 10150. They could be blocking this port or degrading communication over this port. If they are blocking this port, you can <a href="#UsingPort80">use port 80</a> as explained below.</p>
+
+        <p>Once the problem is solved and you are able to connect to the Sierra Chart historical data server, then you will need to re-download the data in your charts to fill in the missing data.  For instructions to do this, refer to <a href="#RetryingDownloadingOfIntradayData">Retrying Downloading of Intraday Data</a>.</p>
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="UsingPort80">Using Port 80</h3> 
+        <div class="member-link">[<a href="#UsingPort80">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Some ISPs will block or restrict data on nonstandard Internet ports. In this case you will need to use the standard Internet port 80 for downloading historical Intraday data from the Sierra Chart historical data server. To do this, follow the steps here:</p>
+
+        <ol>
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings</b>.</li>
+            <li>Set the option <b>Use Port 80 for Historical Data</b> to Yes.</li>
+            <li>Press <b>OK</b>.</li>
+            <li>If you previously were having a problem getting a successful connection to the Sierra Chart historical data server or maintaining that connection during the historical data download,  using port 80 should resolve the problem. The next step is to re-download the data in the charts to fill in the missing data.
+            <br> <br>
+            For instructions to do this, refer to <a href="#RetryDownloadDataInChart">Retrying the Download When There is Data in the Chart</a>.</li>
+        </ol>
+
+        <p><b>Note</b>: It is not normally recommended to use port 80 because some ISPs will block data over port 80 if the data is not true HTTP data and this will cause problems when downloading historical Intraday data. However, if you need to use port 80 because your ISP is blocking other ports, then you will need to use this port.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ImprovingHistoricalIntradayDataDownloadingPerformance">Improving Historical Intraday Data Downloading Performance</h3>
+        <div class="member-link">[<a href="#ImprovingHistoricalIntradayDataDownloadingPerformance">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the below steps to improve the performance  (reducing time) when downloading historical  Intraday data. There normally is not a problem with the performance of downloading historical Daily data because the amount of data transferred with Daily data is extremely small in comparison.</p>
+        
+        <p>When you start using new symbols in Sierra Chart that have not been previously used  or there is no historical data already downloaded for them,  then it will take time for the initial historical data to download for those symbols.   This can be the case when you switch to a different Data or Trading service in Sierra Chart  since the symbols are different between services. So historical data needs to be downloaded for the symbols  for the service you have changed to. </p>
+        
+        
+        <p>We have had numerous reports, that when using Sierra Chart on WINE  and Linux,  that network I/O performance, in particular with receiving data is very slow/poor and receiving historical data when using WINE, in particular tick by tick data, is very very slow.  We do not know why this is the case.  Perhaps it has something to do with the large receive buffer sizes that Sierra Chart uses. However, WINE should not have this issue.  Part of the problem you may be having may be related to WINE.</p>
+        
+
+
+        <ol>
+            <li>Once a historical Intraday data has completed, you can see how long it took from a <b Class = "menu_item">Window &gt;&gt; Message Log</b> line like this:
+                <div class="MessageLog">HD Request # 24 | Intraday download COMPLETE for XAUUSD. Completion time: 7s. Unique request ID: 23</div> 
+                In this particular case it took 7 seconds.  This step is just provided for information. 
+            </li>
+            
+            <li>If historical Intraday data downloads are still in progress, then select   <b class="menu_item">Edit &gt;&gt; Cancel Intraday Data Downloads</b> to cancel the downloads. </li>
+            
+            <li> Select  <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+            
+            <li>Select  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. </li>
+            <li>Increase the <b> Intraday Data Storage Time Unit</b> setting. For the best performance use <b>1 Minute</b>. However, this setting may not be acceptable depending upon the type of chart bars you are using. 
+            <br> <br>
+            For example, with Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars, a setting of <b>1 Second</b> or <b>1 Tick</b> is necessary for accuracy.  
+             <br> <br>
+            
+            However, to improve performance you really need to increase this to   <b>5  Seconds</b> or higher. The larger the time unit, the better the performance.</li>
+            <li> Press <b>OK</b>. </li>
+            
+            <li>  It will also help to reduce the days to load   in charts which are loading a lot of  days of data.  This is controlled through the  <a href = "index4cf4.html?page=doc/ChartSettings.html#DaysToLoad">Days to Load</a> Chart Setting for the chart.</li>
+            
+            <li> Select <b Class = "menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+            
+            <li>If there is still a problem with slow historical data downloads, then follow the instructions in the <a href="#UsingPort80">Using Port 80</a>  section if your ISP throttles data on the default ports of <b>10149, 10150</b>. Generally this is most unlikely and is not going to help and can create a problem  instead of solving it.</li>
+            <li> If there is missing historical Intraday data in your charts due to previous timeout or other errors when downloading data, then follow the  <a href="#RetryDownloadDataInChart">Retrying the Download When There is Data in the Chart</a> instructions.</li>
+
+            <li>If there is a temporary problem with your Internet connection, with your Internet service provider or somewhere else on the Internet causing slow downloading of  historical Intraday data, you will just have to wait for that condition to clear.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DownloadingViewingMoreHistoricalIntradayData">Downloading/Viewing More Historical Intraday Data</h2> 
+    <div class="member-link">[<a href="#DownloadingViewingMoreHistoricalIntradayData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li><a href="#InstructionsToDownloadViewMoreHistoricalIntradayData">Instructions to Download/View More Historical Intraday Data</a></li>
+        <li><a href="#UsingDateRangeInFileFromToDownloadMoreData">Using Date Range in File &gt;&gt; From to Download More Historical Data</a></li>
+        <li><a href="#UsingExpiredFuturesContracts">Using Expired Futures Contracts</a></li>
+    </ul>
+
+    <section class="h3">
+        <h3 id="InstructionsToDownloadViewMoreHistoricalIntradayData">Instructions to Download/View More Historical Intraday Data</h3>
+        <div class="member-link">[<a href="#InstructionsToDownloadViewMoreHistoricalIntradayData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is possible to download and/or view more historical Intraday data than you are currently able to see. To download and/or view more data, follow the steps below.  </p>
+        
+        <p>Keep in mind that the amount of historical data available depends upon the Data or Trading service you are using and the symbol. This help topic subsection applies to <em>Intraday</em> data only.  </p>
+        
+        <p>For help with Historical (Daily, Weekly, Monthly, Quarterly, Yearly) charts, refer to <a href="index5713.html?page=doc/helpdetails6.html" target="_blank" rel="noopener noreferrer">No Historical Chart or Blank Chart | Historical Chart Not Updating | Missing Historical Chart Data</a> instead.</p>
+
+        <p>In the case of a <em>futures contract</em> chart for a specific contract month (Example: <b>H22</b> March 2022), it has a <em>limited life</em>. Therefore, it will only go back so far in time. Also, depending upon the Data or Trading service you are using, it may not go back to the time that trading began in the particular contract. To get data further back in time you will need to  enable the <b>Continuous Futures Contract</b> option for the chart. This will load in multiple futures contracts in the chart.  </p>
+
+        <p>For instructions to do this, refer to the <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" target="_blank" rel="noopener noreferrer">Continuous Futures Contract Charts</a> page. </p>
+        
+        <p>  The time period of data displayed in the current view in the chart depends upon the scroll position of the scroll bar at the bottom of the chart and the chart bar spacing.  Make sure the scrollbar is  enabled and visible through   <a href = "indexfd56.html?page=doc/ChartMenu.html#ShowScrollbar">Chart &gt;&gt; Scrollbar</a>. Use the scrollbar at the bottom of the chart scroll back  in time to see more data. </p>
+
+        <p>For more information and  instructions, refer to  <a href = "index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart">Scrolling The Chart and Right Side Fill Space</a>.</p>
+       
+        <p>To load more data in the chart continue to follow the instructions below. </p>
+
+        <ol>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting</b> on the menu. </b>.  </li>
+            
+            <li> Set the <b> Load Data Limiting Method</b> setting to  <b>Number of Days to Load</b>. </li>
+            
+            <li> Set the <b>Days to Load for Intraday Chart Data Type</b> setting to the number of days you want to load and view in the chart. Press <b>OK</b>. 
+            
+            <br> <br>
+            If that does not load all the data you need to view, then go on to the next step. To see all of the data loaded in the chart you will need to <a href="index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart" target="_blank" rel="noopener noreferrer">scroll back</a> the chart. If you do see the data in the chart that you require, then <em>stop here</em>.
+               
+            <div  style="text-align:center;"><a href="../images/chartsettings_daystoload.png" rel="lightbox"><img src="../images/chartsettings_daystoload.png"  alt=""  width="700"></a></div>
+            
+            </li>
+                
+        <li>Make sure you are using the correct Symbol in the chart  based upon the   <a href = "index2c7f.html?page=doc/DataSourceSettings.php#CurrentSelectedService">Current Selected Service</a>.  Refer to <a href = "indexf71c.html?page=doc/helpdetails1.html#Symbols" target="_blank" rel="noopener noreferrer">Symbols</a>.
+        <br> <br>      
+        In the case of  futures contract symbols, you can translate these to the correct symbol based upon the  <b>Current Selected Service</b>, by using the  <b class="menu_item">Edit &gt;&gt;  <a href = "indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService" target="_blank" rel="noopener noreferrer">Translate Symbols to Current Service</a></b> command.</li> 
+        
+         <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings</b> on the menu. Set the <b>Max (Maximum) Historical Intraday Days to Download Non-Tick Data / 1-Tick Data</b> settings to the number of days of <em>Intraday</em> data you want to have downloaded from the server. The easiest thing to  do is set both of these  settings to 186 and go on to the next step, assuming you do not require more than  6 months of historical data for a non-futures symbol. 
+                <br> <br>
+                In the case of a futures contract symbol, the number of days to download is relative to the last day of the month in the contract month of the symbol, and not to the current date.
+                <br> <br>
+                There is a separate setting for <b>1 Tick Data </b> and <b>Non-Tick Data</b>. To make sure  you get a reasonable amount of data, it is recommended to set both of these to 186. You will need to set  these settings to a higher value to download more historical Intraday data. The <b>1 Tick Data </b> setting applies when the <b> Intraday Data Storage Time Unit</b> is set to 1 Tick, or historical Tick data is downloaded from the Data/Trading service.
+                <br>
+                <br>		
+                There may be a limit to the maximum number of historical Intraday days of data  available from the Data or Trading service you are using.  If you use a setting that is over the limit, only the maximum number of historical Intraday days of data supported by the server will be downloaded.
+
+                <div style="text-align:center;"><a href="../images/maximumhistoricalintradaydaystodownload.png" rel="lightbox"><img src="../images/maximumhistoricalintradaydaystodownload.png" alt="" width="550"></a></div></li>
+
+            <li>If you have increased the <b>Maximum Historical Intraday Days To Download</b>  setting, it will <em>take longer</em> to download the initial historical Intraday data for a chart especially if the data is <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick data</a>. 
+                <br> <br>
+                If you do not use a timeframe per bar in your charts of less than 1 Minute and you are not using <b>Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</b>, then set the <b>Intraday Data Storage Time Unit</b> to <b>4 seconds</b>  or higher to increase download speed.</li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>You should make sure the Symbol Settings are up-to-date before re-downloading the data in the next step. This ensures the historical data request is routed to the correct source. Follow the instructions  to  <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>. <em>This step only needs to be performed once</em>.  If you are not sure whether you should perform this step, then perform this step.</li>
+
+            <li><span class = "GeneralBackgroundHighlight"> <b>Necessary Step:</b> Go to the chart. Select <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b> on the menu.</span>  Press <b> Yes</b> to confirm. Sierra Chart  will request historical Intraday data up to the number of days specified with the <b>Maximum Historical Intraday Days to Download </b>  setting explained above.
+                <br>
+                <br>
+                If you are using the <b>Continuous Futures Contract </b> option in  <b class="menu_item">Chart &gt;&gt; Chart Settings</b>, then  select the particular contract months  in the list you want to re-download data for in the chart. 
+                 <br> <br>
+                Once the download is complete you should be all set.
+                <br> <br>
+
+                <div  style="text-align:center;"><a href="../images/editmenu_deletealldataanddownload.png" rel="lightbox"><img src="../images/editmenu_deletealldataanddownload.png" alt=""></a></div>
+            </li>
+            
+            <li> Finally, if you do not receive the data in the chart that you require, and you are using a sub instance started through <b class = "menu_item">File &gt;&gt; New Instance</b>, then you need to go back to the main instance of Sierra Chart and perform the above steps for that instance.
+             <br> <br>
+            And then return back to the sub instance chart and select <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b>. For additional information about this, refer to <a href="index9bbd.html?page=doc/NewInstance.php#HistoricalDataAndMissingData" target="_blank" rel="noopener noreferrer">Historical Data and Missing Historical Data</a>. </li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="UsingDateRangeInFileFromToDownloadMoreData">Using 'Date Range in File &gt;&gt; From' to Download More Historical Data</h3>
+        <div class="member-link">[<a href="#UsingDateRangeInFileFromToDownloadMoreData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>These instructions explain an alternative way to download more historical  Intraday data in a chart when <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol &gt;&gt; Continuous Contract</b> is set to <b>None</b>. </p> 
+
+        <ol>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Data Limiting</b> on the menu. Set the <b>  Date Range in File From</b>  date to the date that you want the data in the chart to start at. This needs to be set to an earlier date.</li>
+
+            <li> Set the <b>Days to Load for Intraday Chart Data Type</b> to the number of days that you want to view  in the chart.</li>
+            <li> Press OK.</li>
+            <li>You will then be prompted to download more historical Intraday data.  Press  <b>Yes</b> to confirm.</li>
+
+            <li> After the historical data downloading is complete, if you notice any missing data in the chart, then you will need to follow the <a href="#InstructionsToDownloadViewMoreHistoricalIntradayData" >Instructions to Download/View More Historical Intraday Data</a> instead. 
+            
+            <br> <br>
+
+            After following those instructions, then re-download the data with <b Class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b> from the main menu at the top. For additional information, refer to <a href="#RetryDownloadDataInChart">Retrying the Download When There is Data in the Chart</a>. 
+            
+            <br> <br>
+            
+            Normally there should not be any missing data. Although one reason there could be incomplete data, which will not be resolved by re-downloading the data is that the chart is not set to a Continuous Futures Contract chart in the case of a futures symbol. You will need to do that. Refer to <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" Target="_blank" rel="noopener noreferrer" >Continuous Futures Contract Charts</a>.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="UsingExpiredFuturesContracts">Using Expired Futures Contracts</h3>
+        <div class="member-link">[<a href="#UsingExpiredFuturesContracts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>With all of the supported Data and Trading services, it is possible to use an expired futures contract symbol. By using an expired symbol you can get data further back in time for a particular futures market.</p>
+
+        <p> However, there is a better method to access data further back in time for a particular futures market instead of opening an expired futures contracts symbol.   This method is to use the  <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" Target="_blank" rel="noopener noreferrer">Continuous Futures Contract Chart</a> feature. This is the recommended method.</p>
+
+        <p>To open a Historical or an Intraday chart for an expired futures  contract symbol, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu.  Select an expired symbol from the list or <em>manually</em> type one into the <b>Selected Symbol </b> box.  </p>
+        
+        <p>The symbol does not need to actually be listed to open a chart for it.  If it is not listed, you will need to manually type the symbol into the <b>Selected Symbol</b> box. </p>
+        
+        <p> In the case of a futures contract,  to specify an expired contract symbol, you simply need to modify the  <em>month and year</em> portion  of the symbols that you see listed.  For example,  in the case of COMEX gold futures, if you see  <b>GCM20</b>  listed, and you want to open  a chart for the market going back 10 years, then you would manually type in the <b> Selected Symbol</b> box: <b> GCM10</b>. </p>
+        
+        
+        <p>Press the <b>Open Intraday Chart</b> or <b> Open Historical Chart </b> button  to open an Intraday chart or Historical Daily or higher timeframe chart respectively. </p> 
+        
+        <p> If the chart  that has been opened is not displaying the symbol you manually typed in or selected, then select   <b class="menu_item">Chart &gt;&gt; Chart Settings</b> and uncheck   <b>Main Settings  &gt;&gt; Automatically Rollover Futures Symbol</b> (Refer to <a href = "index4cf4.html?page=doc/ChartSettings.html#AutomaticallyRolloverFuturesSymbol">Automatically Rollover Futures Symbol</a>).  After this then type the correct symbol into the symbol box.</p>
+
+        <div style="text-align: center;"><a href="../images/findsymbolenteringunlistedsymbols.png" rel="lightbox"><img src="../images/findsymbolenteringunlistedsymbols.png" alt=""  class="screenshot" loading="lazy" width = "350" ></a></div>
+        
+            <section class="h4">
+                <h4 id="SingleDigitYearLimitation">Single Digit Year Limitation</h4>
+                <div class="member-link">[<a href="#SingleDigitYearLimitation">Link</a>] - [<a href="#top">Top</a>]</div>     
+                
+               <p> For supported Trading services that use symbols that  use single-digit years for futures contracts, it is not possible to open a chart for an expired futures contract for a year which is more than 5 to 8 years prior to the current year and get a reliable match of the intended year, since the single-digit years do not provide a definite identification of which decade the single digit year belongs to. </p>
+               
+               
+               <p> The way to work around this limitation is to install another copy of Sierra Chart on your system into a different folder and use the <b>Sierra Chart Historical Data Service</b>. For instructions, refer to <a href="index765f.html?page=doc/SierraChartHistoricalData.php#SetupInstructions" target="_blank" rel="noopener noreferrer">Sierra Chart Historical Data Service Setup Instructions</a>.</p>
+            </section>
+            
+            
+            
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="CancelingIntradayDataDownloads">Canceling Intraday Data Downloads</h2> 
+    <div class="member-link">[<a href="#CancelingIntradayDataDownloads">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p> To cancel the current and pending historical Intraday data downloads, select <b class="menu_item">File &gt;&gt; Disconnect</b>. </p>
+
+    <p> To resume the historical Intraday data downloads for open charts, select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. </p>
+
+</section>
+
+
+
+
+<hr><p>*Last modified Tuesday, 20th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/HistoricalIntradayData.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:30:44 GMT -->
+</html>  

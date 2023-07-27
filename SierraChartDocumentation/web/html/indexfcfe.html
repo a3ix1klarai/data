@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_Constants.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1546897603') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/cpp_Constants.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title> Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexfcfe.html?page=doc/cpp_Constants.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a></h4> </div>     <h1 class="PageName">C++ Constants</h1>
+
+
+<div class="h2">
+    <h2>Related Documentation Pages</h2>
+    <ul>
+        <li><a href="index7b37.html?page=doc/cpp_VariablesDataTypes.php">C++ Variables and Data Types</a></li>
+        <li>C++ Constants</li>
+        <li><a href="index2b23.html?page=doc/cpp_Operators.php">C++ Operators</a></li>
+        <li><a href="indexfe09.html?page=doc/cpp_ControlStructures.php">C++ Control Structures</a></li>
+        <li><a href="index72d7.html?page=doc/cpp_Functions.php">C++ Functions</a></li>
+    </ul>
+</div>
+
+<hr>
+
+<div class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Literals">Literals</a></li>
+        <li><a href="#DefinedConstants">Defined constants (#define)</a></li>
+        <li><a href="#DeclaredConstants">Declared constants (const)</a></li>
+    </ul>
+
+</div>
+<hr>
+
+<br>
+<div style="text-align:right;">Published by <b>Juan Soulie</b></div>
+<br>
+
+
+<div class="h2">
+
+    <p>Constants are expressions with a fixed value.</p>
+
+    <div class="h3">
+        <h3 id="Literals">Literals</h3>
+        <div class="member-link">[<a href="#Literals">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Literals are the most obvious kind of constants. They are used to express particular values within the source code of a program. We have already used these previously to give concrete values to variables or to express messages we wanted our programs to print out, for example, when we wrote:</p>
+
+
+
+        <div class="CPP_Code">
+            <pre>a<span class="operator"> =</span><span class="int"> 5</span><span class="operator">;</span></pre></div>
+
+        <p>the <b>5</b> in this piece of code was a <em>literal constant</em>.</p>
+
+        <p>Literal constants can be divided in <em>Integer Numerals</em>, <em>Floating-Point Numerals</em>, <em>Characters</em>, <em>Strings</em> and <em>Boolean Values</em>.</p>
+        <div class="h4">
+            <h4 id="IntegerNumerals">Integer Numerals</h4>
+            <div class="member-link">[<a href="#IntegerNumerals">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+
+            <div class="CPP_Code">
+                <pre><span class="int">
+1776
+707</span><span class="operator">
+-</span><span class="int">273</span>
+                </pre></div>
+
+            <p>They are numerical constants that identify integer decimal values. Notice that to express a numerical constant we do not have to write quotes (<b>"</b>) nor any special character. There is no doubt that it is a constant: whenever we write <b>1776</b> in a program, we will be referring to the value 1776.</p>
+
+            <p>In addition to decimal numbers (those that all of us are used to use every day) C++ allows the use as literal constants of octal numbers (<em>base 8</em>) and hexadecimal numbers (<em>base 16</em>). If we want to express an octal number we have to precede it with a <b>0</b> (a <em>zero</em> character). And in order to express a hexadecimal number we have to precede it with the characters <b>0x</b> (<em>zero</em>, <em>x</em>). For example, the following literal constants are all equivalent to each other:</p>
+
+
+
+            <div class="CPP_Code">
+                <pre><span class="int">75</span><span class="comment">         // decimal
+</span><span class="int">0113</span><span class="comment">       // octal
+</span><span class="int">0x4b</span><span class="comment">       // hexadecimal 
+</span></pre></div>
+
+            <p>All of these represent the same number: 75 (seventy-five) expressed as a base-10 numeral, octal numeral and hexadecimal numeral, respectively.</p>
+
+            <p>Literal constants, like variables, are considered to have a specific data type. By default, integer literals are of type <var>int</var>. However, we can force them to either be unsigned by appending the <var>u</var> character to it, or long by appending <var>l</var>:</p>
+
+
+            <div class="CPP_Code">
+                <pre><span class="int">75</span><span class="comment">         // int
+</span><span class="int">
+75u</span><span class="comment">        // unsigned int
+</span><span class="int">75l</span><span class="comment">        // long
+</span><span class="int">75ul</span><span class="comment">       // unsigned long 
+</span></pre></div>
+
+            <p>In both cases, the suffix can be specified using either upper or lowercase letters.</p>
+        </div>
+        <div class="h4">
+            <h4 id="FloatingPointNumbers">Floating Point Numbers</h4>
+            <div class="member-link">[<a href="#FloatingPointNumbers">Link</a>] - [<a href="#top">Top</a>]</div>
+            <p>They express numbers with decimals and/or exponents. They can include either a decimal point, an <b>e</b> character (that expresses "by ten at the Xth height", where X is an integer value that follows the <b>e</b> character), or both a decimal point and an <b>e</b> character:</p>
+
+
+
+            <div class="CPP_Code">
+                <pre><span class="float">3.14159</span><span class="comment">    // 3.14159
+</span><span class="float">6.02e23</span><span class="comment">    // 6.02 x 10^23
+</span><span class="float">1.6e-19</span><span class="comment">    // 1.6 x 10^-19
+</span><span class="float">3.0</span><span class="comment">        // 3.0 </span></pre></div>
+
+            <p>These are four valid numbers with decimals expressed in C++. The first number is PI, the second one is the number of Avogadro, the third is the electric charge of an electron (an extremely small number) -all of them approximated- and the last one is the number three expressed as a floating-point numeric literal.</p>
+
+            <p>The default type for floating point literals is <var>double</var>. If you explicitly want to express a <var>float</var> or a <var>long double</var> numerical literal, you can use the <b>f</b> or <b>l</b> suffixes respectively:</p>
+
+
+            <div class="CPP_Code">
+                <pre><span class="float">3.14159L</span><span class="comment">   // long double
+</span><span class="float">6.02e23f</span><span class="comment">   // float </span></pre></div>
+
+
+            <p>Any of the letters that can be part of a floating-point numerical constant (<b>e</b>, <b>f</b>, <b>l</b>) can be written using either lower or uppercase letters without any difference in their meanings.</p>
+
+            <h4 id="CharacterAndStringLiterals">Character and string literals</h4>
+            <div class="member-link">[<a href="#CharacterAndStringLiterals">Link</a>] - [<a href="#top">Top</a>]</div>
+            <p>There also exist non-numerical constants, like:</p>
+
+
+            <div class="CPP_Code">
+                <pre><span class="char">'z'
+'p'</span><span class="string">
+"Hello world"
+
+"How do you do?"</span></pre></div>
+
+            <p>The first two expressions represent single character constants, and the following two represent string literals composed of several characters. Notice that to represent a single character we enclose it between single quotes (<b>'</b>) and to express a string (which generally consists of more than one character) we enclose it between double quotes (<b>"</b>).</p>
+
+            <p>When writing both single character and string literals, it is necessary to put the quotation marks surrounding them to distinguish them from possible variable identifiers or reserved keywords. Notice the difference between these two expressions:</p>
+
+
+            <div class="CPP_Code">
+                <pre>
+x<span class="char">
+'x'</span>
+                </pre></div>
+
+            <p><b>x</b> alone would refer to a variable whose identifier is <b>x</b>, whereas <b>'x'</b> (enclosed within single quotation marks) would refer to the character constant <var>'x'</var>.</p>
+
+            <p>Character and string literals have certain peculiarities, like the escape codes. These are special characters that are difficult or impossible to express otherwise in the source code of a program, like newline (<b>\n</b>) or tab (<b>\t</b>). All of them are preceded by a backslash (<b>\</b>). Here you have a list of some of such escape codes:</p>
+
+            <table class="doc">
+                <tr><td><b>\n</b></td><td>newline</td></tr>
+                <tr><td><b>\r</b></td><td>carriage return</td></tr>
+                <tr><td><b>\t</b></td><td>tab</td></tr>
+
+                <tr><td><b>\v</b></td><td>vertical tab</td></tr>
+                <tr><td><b>\b</b></td><td>backspace</td></tr>
+                <tr><td><b>\f</b></td><td>form feed (page feed)</td></tr>
+                <tr><td><b>\a</b></td><td>alert (beep)</td></tr>
+                <tr><td><b>\'</b></td><td>single quote (<b>'</b>)</td></tr>
+
+                <tr><td><b>\"</b></td><td>double quote (<b>"</b>)</td></tr>
+                <tr><td><b>\?</b></td><td>question mark (<b>?</b>)</td></tr>
+                <tr><td><b>\\</b></td><td>backslash (<b>\</b>)</td></tr>
+            </table>
+
+            <p>For example:</p>
+
+
+            <div class="CPP_Code">
+                <pre><span class="char">'\n'
+'\t'</span><span class="string">
+"Left \t Right"
+"one\ntwo\nthree"</span></pre></div>
+
+            <p>Additionally, you can express any character by its numerical ASCII code by writing a backslash character (<b>\</b>) followed by the ASCII code expressed as an octal (<em>base-8</em>) or hexadecimal (<em>base-16</em>) number. In the first case (octal) the digits must immediately follow the backslash (for example <b>\23</b> or <b>\40</b>), in the second case (hexadecimal), an <b>x</b> character must be written before the digits themselves (for example <b>\x20</b> or <b>\x4A</b>).</p>
+
+            <p>String literals can extend to more than a single line of code by putting a backslash sign (<b>\</b>) at the end of each unfinished line.</p>
+
+            <div class="CPP_Code">
+                <pre><span class="string">"string expressed in \
+two lines"</span> </pre></div>
+
+            <p>You can also concatenate several string constants separating them by one or several blank spaces, tabulators, newline or any other valid blank character:</p>
+
+
+            <div class="CPP_Code">
+                <pre><span class="string">"this forms" "a single" "string" "of characters"</span></pre></div>
+
+            <p>Finally, if we want the string literal to be explicitly made of wide characters (<var>wchar_t</var> type), instead of narrow characters (<var>char</var> type), we can precede the constant with the <b>L</b> prefix:</p>
+
+
+            <div class="CPP_Code">
+                <pre><span class="string">L"This is a wide character string"</span></pre></div>
+
+            <p>Wide characters are used mainly to represent non-English or exotic character sets.</p>
+
+            <h4 id="BooleanLiterals">Boolean literals</h4>
+            <div class="member-link">[<a href="#BooleanLiterals">Link</a>] - [<a href="#top">Top</a>]</div>
+            <p>There are only two valid Boolean values: <var>true</var> and <var>false</var>. These can be expressed in C++ as values of type <var>bool</var> by using the Boolean literals <b>true</b> and <b>false</b>.</p>
+        </div>
+
+    </div>
+
+    <div class="h3">
+
+
+
+        <h3 id="DefinedConstants">Defined constants (#define)</h3>
+        <div class="member-link">[<a href="#DefinedConstants">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>You can define your own names for constants that you use very often without having to resort to memory-consuming variables, simply by using the <b>#define</b> preprocessor directive. Its format is:</p>
+
+        <p><b>#define identifier value</b></p>
+
+        <p>For example:</p>
+
+
+        <div class="CPP_Code">
+            <pre><span class="pre">
+#define PI 3.14159
+#define NEWLINE '\n' 
+</span></pre></div>
+
+        <p>This defines two new constants: <var>PI</var> and <var>NEWLINE</var>. Once they are defined, you can use them in the rest of the code as if they were any other regular constant, for example:</p>
+
+
+        <div class="CPP_Code">
+            <pre><span class="comment">// defined constants: calculate circumference
+</span><span class="pre">
+#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="pre">
+
+#define PI 3.14159
+#define NEWLINE '\n'
+</span><span class="type">
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  double</span> r<span class="operator">=</span><span class="float">5.0</span><span class="operator">;</span><span class="comment">               // radius
+</span><span class="type">
+  double</span> circle<span class="operator">;</span>
+
+  circle<span class="operator"> =</span><span class="int"> 2</span><span class="operator"> *</span> PI<span class="operator"> *</span> r<span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> circle<span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> NEWLINE<span class="operator">;</span><span class="flow">
+
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span></pre></div>
+
+        <p>In fact the only thing that the compiler preprocessor does when it encounters <b>#define</b> directives is to literally replace any occurrence of their identifier (in the previous example, these were <var>PI</var> and <var>NEWLINE</var>) by the code to which they have been defined (<b>3.14159</b> and <b>'\n'</b> respectively).</p>
+
+        <p>The <b>#define</b> directive is not a C++ statement but a directive for the preprocessor; therefore it assumes the entire line as the directive and does not require a semicolon (<b>;</b>) at its end. If you append a semicolon character (<b>;</b>) at the end, it will also be appended in all occurrences of the identifier within the body of the program that the preprocessor replaces.</p>
+
+
+    </div>
+
+    <div class="h3">
+
+
+        <h3 id="DeclaredConstants">Declared constants (const)</h3>
+        <div class="member-link">[<a href="#DeclaredConstants">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>With the <b>const</b> prefix you can declare constants with a specific type in the same way as you would do with a variable:</p>
+
+
+        <div class="CPP_Code">
+            <pre><span class="keyword">
+const</span><span class="type"> int</span> pathwidth<span class="operator"> =</span><span class="int"> 100</span><span class="operator">;</span><span class="keyword">
+const</span><span class="type"> char</span> tabulator<span class="operator"> =</span><span class="char"> '\t'</span><span class="operator">;</span>
+            </pre></div>
+
+
+        <p>Here, <b>pathwidth</b> and <b>tabulator</b> are two typed constants. They are treated just like regular variables except that their values cannot be modified after their definition.</p>
+    </div>
+</div>
+
+<hr><p>*Last modified Monday, 07th January, 2019.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_Constants.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+</html>  

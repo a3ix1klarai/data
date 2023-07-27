@@ -1,0 +1,1869 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeWindow.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1679646720') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/TradeWindow.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Basic Trading and the Trade Window -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index9473.html?page=doc/TradeWindow.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index9473.html?page=doc/TradeWindow.html">Basic Trading and the Trade Window</a></h4> </div>     <h1 class="PageName">Basic Trading and the Trade Window</h1>
+
+<ul>
+    <li><a href="#Introduction" >Introduction</a></li>
+    <li><a href="#TradeWindow">Entering an Order from the Trade Window</a>
+        <ul>
+            <li><a href="#Modifying">Modifying an Order</a></li>
+            <li><a href="#CancelingAnOrder">Canceling an Order</a></li>
+        </ul>
+    </li>
+    <li><a href="#TradeWindowControls">Trade Window Controls</a>
+        <ul>
+            <li><a href="#CurrentTradePosition">Main/C &gt;&gt; Position Quantity@Price</a></li>
+            <li><a href="#OpenProfitLoss">Main/C &gt;&gt; Open Profit/Loss (P/L)</a></li>
+            <li><a href="#DailyProfitLoss">Main/C &gt;&gt; Daily or Net Profit/Loss (DailyPL / NetPL)</a></li>
+            <li><a href="#SelectingTradeAccount">Selecting Trade Account for Chart / Trade DOM</a></li>
+            <li><a href="#FlattenCancel">Main/C &gt;&gt; Flatten (Flatten and Cancel)</a></li>
+            <li><a href="#ReverseCancel">Main/C &gt;&gt; Reverse (Reverse and Cancel)</a></li>
+            <li><a href="#CancelAll">Main/C &gt;&gt; Cancel All</a></li>
+            <li><a href="#OrderQuantityButtons">Main/C &gt;&gt; Order Quantity Buttons</a>
+				<ul>
+                    <li><a href="#OrderQuantityButtons_KeyboardShortcuts">Keyboard Shortcuts for Preset Order Quantities</a></li>
+                    <li><a href="#OrderQuantityButtons_ControlBarButtons">Control Bar Buttons for Preset Order Quantities</a></li>
+				</ul>
+			</li>
+            <li><a href="#BreakEvenButton">Main/C &gt;&gt; BE (BreakEven button)</a></li>
+            <li><a href="#UseAttachedOrders">Main/C &gt;&gt; Use Attached Orders</a></li>
+            <li><a href="#MenuButton">Main/C &gt;&gt; Menu (M) button</a>
+                <ul>
+                    <li><a href="#TradeSimulationModeOn">Main/C &gt;&gt; Menu &gt;&gt; Trade Simulation Mode On</a></li>
+                    <li><a href="#TradingLocked">Main/C &gt;&gt; Menu &gt;&gt; Trading Locked</a></li>
+                    <li><a href="#AttachTradeWindowToChartWindow">Main/C &gt;&gt; Menu &gt;&gt; Attach Trade Window to Chart Window</a></li>
+                    <li><a href="#CloseTradeWindow">Main/C &gt;&gt; Menu &gt;&gt; Close Trade Window (chart specific)</a></li>
+                    <li><a href="#AutoTradingEnabled-Global">Main/C &gt;&gt; Menu &gt;&gt; Auto Trading Enabled - Global</a></li>
+                    <li><a href="#SaveConfiguration">Main/C &gt;&gt; Menu &gt;&gt; Save Configuration</a></li>
+                    <li><a href="#OrderConfirmations">Main/C &gt;&gt; Menu &gt;&gt; Order Confirmations</a></li>
+                    <li><a href="#Orders">Main/C &gt;&gt; Menu &gt;&gt; Orders</a></li>
+                    <li><a href="#Settings">Main/C &gt;&gt; Menu &gt;&gt; Settings</a></li>
+                    <li><a href="#ChartTradeModeOn">Main/C &gt;&gt; Menu &gt;&gt; Chart Trade Mode On</a></li>
+                    <li><a href="#TradingChartDOMOn">Main/C &gt;&gt; Menu &gt;&gt; Trading Chart DOM On</a></li>
+                    <li><a href="#ShowOrderFills">Main/C &gt;&gt; Menu &gt;&gt; Show Order Fills</a></li>
+                    <li><a href="#OnlyOrdersFromChart">Main/C &gt;&gt; Menu &gt;&gt; Only Orders From Chart</a></li>
+                    <li><a href="#Menu_UseAttachedOrders">Main/C &gt;&gt; Menu &gt;&gt; Use Attached Orders (chart specific)</a></li>
+                    <li><a href="#CustomizeChartTradeDOMColumns">Main/C &gt;&gt; Menu &gt;&gt; Customize Chart/Trade DOM Columns</a></li>
+                    <li><a href="#TradingKeyboardShortcutsEnabled">Main/C &gt;&gt; Menu &gt;&gt; Trading Keyboard Shortcuts Enabled</a></li>
+                    <li><a href="#Help">Main/C &gt;&gt; Menu &gt;&gt; Help</a></li>
+                </ul>
+            </li>
+            <li><a href="#BuyBid">Main/C &gt;&gt; Buy Bid</a></li>
+            <li><a href="#BuyMkt">Main/C &gt;&gt; Buy Mkt</a></li>
+            <li><a href="#BuyAsk">Main/C &gt;&gt; Buy Ask</a></li>
+            <li><a href="#SellBid">Main/C &gt;&gt; Sell Bid</a></li>
+            <li><a href="#SellMkt">Main/C &gt;&gt; Sell Mkt</a></li>
+            <li><a href="#SellAsk">Main/C &gt;&gt; Sell Ask</a></li>
+            <li><a href="#OrderType">Main &gt;&gt; Order Type</a></li>
+            <li><a href="#PriceBoxes">Main &gt;&gt; Price Boxes</a></li>
+            <li><a href="#Quantity"> Main &gt;&gt; Order Quantity (Quantity)</a></li>
+            <li><a href="#TimeInForce">Main &gt;&gt; TimeInForce (Time in Force)</a></li>
+            <li><a href="#DateTimesetting">Main &gt;&gt; Date-Time setting</a></li>
+            <li><a href="#Buy">Main &gt;&gt; Buy</a></li>
+            <li><a href="#Sell">Main &gt;&gt; Sell</a></li>
+            <li><a href="#AttachedOrders">Targets tab (Attached Orders)</a></li>
+            <li><a href="#TradeWindowSetTab">Trade Window 'Set' Tab</a></li>
+            <li><a href="#StopLimitOrderLimitOffset">Set &gt;&gt; Stop-Limit Order Limit Offset</a>
+				<ul>
+				    <li><a href="#StopLimitOrderLimitOffset_PrimaryOrders">Set &gt;&gt; Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</a></li>
+				    <li><a href="#StopLimitOrderLimitOffset_AttachedOrders">Set &gt;&gt; Stop-Limit Order Limit Offset &gt;&gt; Attached Orders</a></li>
+				    <li><a href="#StopLimitOrderLimitOffset_OffsetType">Set &gt;&gt; Stop-Limit Order Limit Offset &gt;&gt; Offset Type</a></li>
+				</ul>
+			</li>
+            <li><a href="#AutoSetPricesOffsetForOCOBuyAndSellOrders">Set &gt;&gt; Auto-Set Prices Offset for OCO Buy and Sell Orders</a></li>
+            <li><a href="#MaximumChaseForChaseLimitOrders">Set &gt;&gt; Maximum Chase for Chase Limit Orders</a></li>
+            <li><a href="#MoveToBEOffset">Set &gt;&gt; Move to BE Offset</a></li>
+            <li><a href="#UseConfigNameAsTextTag">Set &gt;&gt; Use Config Name as Text Tag</a></li>
+            <li><a href="#TextTag">Set &gt;&gt; Text Tag</a></li>
+            <li><a href="#ButtonQuantity">Set &gt;&gt; Button 1-6 Quantity</a></li>
+            <li><a href="#Set_DefaultQuantities">Set &gt;&gt; DefaultQuantities</a></li>
+            <li><a href="#FlattenAndCancelAtSetTime">A &gt;&gt; Flatten and Cancel at Set Time</a></li>
+            <li><a href="#SpreadOrders">A &gt;&gt; Spread Orders</a></li>
+        </ul>
+    </li>
+    <li><a href="#OpeningTradeWindow">Opening Trade Window for Chart or Trade  DOM</a>
+		<ul>
+            <li><a href="#TradeWindowIndependentFromOthers">Each Trade Window is Completely Independent from Others</a></li>
+		</ul>
+	</li>
+    <li><a href="#AttachingTradeWindowRightSide">Attaching Trade Window to Right Side of Chart or Trade  DOM</a></li>
+   
+    <li><a href="#TradeWindowMissingDoesNotAppear">Trade Window is Missing or Does Not Appear</a></li>
+    <li><a href="#TradeWindowSettingsNotApplyingToChartOrTradingDOM">Trade Window Settings Not Applying to Chart or Trading DOM</a></li>
+     <li><a href="#TradeWindowLinking">Trade Window Linking</a></li>
+    <li><a href="#TradeWindowSettingColors">Setting the Colors of the Trade Window Buttons</a></li>
+    <li><a href="#TradeWindowOrderButtons">Enabling/Disabling Trade Window Order Buttons</a></li>
+    <li><a href="#TradeWindowConfigurations">Using and Changing Between Different Trade Window and Attached Orders Configurations</a>
+        <ul>
+            <li><a href="#SavingConfiguration">Saving Trade Window Configuration</a></li>
+            <li><a href="#SelectingConfiguration">Selecting/Using a Trade Window Configuration</a></li>
+            <li><a href="#DeletingConfiguration">Delete Configuration File</a></li>
+             <li><a href="#RenamingConfigurationFile">Renaming Configuration File</a></li>
+            <li><a href="#TradeWindowConfigurationScreenImages">Trade Window Configuration Screen Images</a></li>
+            <li><a href="#ConfigurationFileAnotherSource">Using a Trade Window Configuration File Provided to You</a></li>
+            <li><a href="#LinkingTradeWindowConfigurationBetweenCharts">Linking Trade Window Configuration  Between Charts</a></li>
+        </ul>
+    </li>
+    
+    <li><a href="#TradeWindowConfigurationCausingExistingSettingsToChange">Trade Window Configuration Causing Existing Trade Window Settings to be Changed</a></li>
+    
+    <li><a href="#PriceFormatting">Price Formatting</a></li>
+    
+    <li><a href="#TradingFromKeyboardPointerControlBar">Trading from the Keyboard, Pointer, and Control Bar</a>
+        <ul>
+            <li><a href="#KeyboardShortcuts">Trading Keyboard Shortcuts</a></li>
+            <li><a href="#CustomKeyboardShortcuts">Custom Trading Keyboard Shortcuts</a></li>
+            <li><a href="#ChartTradeShortcutMenu">Chart Trade Shortcut Menu</a></li>
+            <li><a href="#ControlBarTradingShortcuts">Control Bar Trading Shortcuts</a></li>
+            <li><a href="#CustomControlBarTradingShortcuts">Custom Control Bar Trading Shortcuts</a></li>            
+            <li><a href="#ChangingTradeOrderQuantityForChartWithKeyboardShortcut">Changing Trade Order Quantity for Chart  with Keyboard Shortcut</a></li>
+        </ul>
+    </li>
+    
+    <li id="OrderTypes"><a href="index783f.html?page=doc/OrderTypes.html">Order Types</a> (opens a new page)</li>
+    
+    <li><a href="#HidingPLonTradeWindow">Hiding Profit/Loss on Trade Window</a></li>
+    
+    <li><a href="#RejectedMarketOrderWhenUsingFlatten">Rejected Market Order When Using Flatten or Reverse Because of Position Limit Exceeded</a></li>
+    
+    <li><a href="#FlatteningPositionAtSameTimeOfFillResultingInNewPosition">Flattening Position at Same Time of Fill Resulting in New Position</a></li>
+    
+    <li><a href="#NonresponsiveTradeOrder">Nonresponsive Trade Order</a></li>
+    
+    <li><a href="#UsingOrderFillCalculatedTradePositionDataIndependentPosition" >Using Order Fill Calculated Trade Position Data for Independent Position Tracking</a></li>
+   
+    <li><a href="#FlatteningAllPositionsAndCancelingOrders">Flattening All Non-simulated Positions and Canceling All Orders in a Single Operation</a></li> 
+    
+    <li><a href="index5795.html?page=doc/GraphicsSettings.html#AdjustingSizeOfDialogWindows">Adjusting Size of the Trade Window</a></li> 
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <img class="UnScaledFloatRight" alt="" src="../images/trading_window.png">
+
+    <p>The Trade Window is used for <a href="#TradeWindow">non-chart based order entry</a> and for settings for order entry from a chart, Chart DOM, or Trade  DOM. Each chart has its own Trade Window.  Each Trade Window is  independent from each other and is for a particular chart or Trade  DOM. </p>
+
+     <p>To open this window,   go to a chart or Trade DOM and select <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> from the menu.  For further information, refer to <a href = "#OpeningTradeWindow">Opening Trade Window</a>.</p>
+
+    <p>The settings in the Trade Window are saved with the associated chart when you save your charts as a <a href="index7674.html?page=doc/Chartbooks.html">Chartbook</a>.  When you open your Chartbook, the Trade Window will be restored with the previous settings. You are also able to save a Trade Window configuration and easily change among various saved configurations within the Trade Window.  Refer to <a href="#TradeWindowConfigurations">Using and Changing Between Different Trade Window  and Attached Orders Configurations</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindow">Entering an Order from the Trade Window</h2>
+    <div class="member-link">[<a href="#TradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section explains basic order entry from the Trade Window. For descriptions for each of the controls on the Trade Window, refer to the <a href="#TradeWindowControls">Trade Window Controls</a> section. To enter an order, follow these instructions:</p>
+    <ol>
+        <li>For the orders to be simulated, make sure there is a check mark by <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>. If you want  the orders to be sent to your Trading service, make sure there is <b>not</b> a check mark by <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>.</li>
+
+        <li>If you will be entering orders that will be sent to your Trading service, then make sure you are connected to the server by selecting <b class="menu_item">File &gt;&gt; Connect To Data Feed</b>. If this command is disabled on the menu, then this means you are already connected.</li>
+
+        <li>Open or activate  a chart for the symbol you wish to trade.  You can open a chart through <b class="menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+        <li>Select <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> on the menu.  This will open a Trade Window where you can enter orders and also adjust settings, such as Attached Orders, that are also used when entering orders from the chart or ChartDOM. </li>
+
+        <li>Select the <b> Main </b> tab.</li>
+
+        <li>If you wish to attach the Trade Window to the chart, press the <b>Menu (M)</b> button and select  <b>Attach Trade Window to Chart Window</b>. Select this very same command again to detach it. 
+
+            <img class="UnScaledFloatRight" alt="" src="../images/tradewindowmanualorderentrycontrols.png">
+        </li>
+
+        <li>In the list box that contains Order Types, select the Order Type.  Typically you will use either   <b>Market </b> or <b>Limit</b>. Refer to <a href="index783f.html?page=doc/OrderTypes.html" target="_blank" rel="noopener noreferrer">Order Types</a> for descriptions of each.</li>
+
+        <li>If the selected Order Type type, requires a price, then enter price in the Limit or Stop price box. Refer to <a href="#PriceFormatting">Price Formatting</a>.</li>
+
+        <li>Set the order <b>Quantity</b>. You can also press one of the quantity buttons on the Trade Window to quickly select the quantity.</li>
+
+        <li>Set the Time in Force (<b>TimeInForce</b>) to what you require.</li>
+
+        <li>Press either the <b><span style="color:Green;">BUY</span></b> or <b><span style="color:Red;">SELL</span> </b> buttons.</li>
+
+        <li>Or, set the Quantity and Time in Force (TimeInForce) to what you require and press one of the <b><span style="color:Green;">BUY BID</span>, <span style="color:Green;">BUY MKT</span>, <span style="color:Green;">BUY ASK</span>, <span style="color:Red;">SELL BID</span>, <span style="color:Red;">SELL MKT</span>, <span style="color:Red;">SELL ASK</span></b> buttons.</li>
+
+        <li>By default, you will receive a confirmation before the order is processed.  Press <b>Yes</b> to confirm. The confirmations can be disabled by pressing the <b>Menu (M)</b> button and removing the checkmark from the <b class = "menu_item"> Confirm New Orders </b> menu command.</li>
+
+        <li>To view your Orders or your current Positions, refer to the <a href="index7cfb.html?page=doc/TradeStatusWindows.html">Trading Information Windows</a> documentation page. The Orders and  the Position for the symbol of the chart are also displayed directly on the chart when <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> is checked on the menu. </li>
+
+        <li id="HowToPlaceOrderFromChart">For instructions to enter orders directly from the chart or the Chart DOM, refer to <a href="index3c50.html?page=doc/ChartTrading.html">Chart Trading</a>.</li>
+    </ol>
+
+    <section class="h3">
+        <h3 id="Modifying">Modifying an Order</h3>
+        <div class="member-link">[<a href="#Modifying">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To modify a working order, you first need to go to the  chart or Trading DOM that you opened the Trade Window from and enable <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> on the menu.   </p>
+        
+        <p>You will then see the working orders displayed on the chart. To modify the price of the order, click and drag on the order line on the chart to the new price level. </p> 
+         
+        <p>To change the quantity of the order,   left click on the quantity number button on the order line on the chart. For complete details, including modifying orders you cannot see, refer to <a href="index3c50.html?page=doc/ChartTrading.html#ModifyingOrdersOnTheChart">Modifying and Canceling Orders on the Chart</a>.</p>
+         
+    </section>
+
+    <section class="h3">
+        <h3 id="CancelingAnOrder">Canceling an Order</h3>
+        <div class="member-link">[<a href="#CancelingAnOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To Cancel an order do one of the following:</p>
+        <ol >
+            <li>Cancel the order directly from  the chart. For instructions, refer to the <a href="index3c50.html?page=doc/ChartTrading.html#ModifyingOrdersOnTheChart" Target="_blank" rel="noopener noreferrer">Modifying and Canceling Orders on the Chart</a> documentation.</li>
+
+            <li>Select <b class="menu_item">Trade &gt;&gt; Orders an Positions</b> on the main menu. Select the <b> Orders </b> tab. Highlight the order you want to cancel from the list. Press the button labeled <b>Cancel</b> at the top of the Orders and Positions window.</li>
+
+            <li>Press the <a href="#FlattenCancel">Flatten</a> button on the <a href="#OpeningTradeWindow">Trade Window</a> to Flatten your position and cancel all orders for the symbol.</li>
+
+            <li>Press the <a href="#CancelAll">Cancel All</a> button on the <a href="#OpeningTradeWindow">Trade Window</a>. This will cancel all orders for the symbol.</li>
+
+            <li> Add the  <b>Cancel All</b> command to the <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeChartTradeMenu" Target="_blank" rel="noopener noreferrer">Chart Trade shortcut menu</a>. Right-click on the chart and select  <b>Cancel All</b> to use this command. </li>
+        </ol>
+
+        <p>In all of these cases, the cancellation request will be made to your connected Trading service or to the internal Sierra Chart Trade Simulation system.  The order <b>Status</b> will then go to <b>Pending Cancel</b>. Once the order is actually canceled, its order Status will then be set to <b>Canceled</b> in the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> list.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowControls">Trade Window Controls</h2>
+    <div class="member-link">[<a href="#TradeWindowControls">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <img class="UnScaledFloatRight" src="../images/trading_window.png" alt="">
+
+    <p>To open the Trade Window for a chart or a Trade DOM, go to that chart or Trade DOM and select <b class="menu_item">Trade &gt;&gt; Open Trade Window For Chart</b>.</p>
+
+    <p>For complete instructions, refer to <a href="#OpeningTradeWindow">Opening Trade Window for Chart or Trade  DOM</a>.</p>
+
+    <p>The trade window has multiple tabs that are explained below. The tab that just has the letter <b>C</b> on it is a way to display a more compact form of the Trade Window. In the following sections, where it lists the options for <b>Main/C</b> it is referring to when either the Main tab or the C tab is selected.</p>
+
+    <section class="h3">
+        <h3 id="CurrentTradePosition">Main/C &gt;&gt; Position Quantity@Price: / P: (Compact tab)</h3>
+        <div class="member-link">[<a href="#CurrentTradePosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This box displays the current Trade Position Quantity and Average Price for the symbol the Trade Window is for.  For complete information about non-simulated trade Position data, refer to <a href="index7cfb.html?page=doc/TradeStatusWindows.html#PositionsWindow">Trade Positions Window</a>.</p>
+
+        <p>Position Data Format: <b>[quantity]@[position average price]</b></p>
+
+        <p>In Trade Simulation Mode, the Position Quantity and Average Price box on the Trade Window for the chart or Trade DOM, indicates the current simulated Trade Position data for the Symbol and  selected Trade Account. </p>
+
+        <p>For complete information as to how the Trade Position Average Price is calculated and to choose the method of calculation that you want to use, refer to <a href = "index7cfb.html?page=doc/TradeStatusWindows.html#HowAveragePriceForPositionsIsCalculatedAndUsed">How Average Price for Positions is Calculated and Used</a>.</p>
+        
+        <p> In the case of  when using a Position Average Price  calculation method which is  performed by Sierra Chart, there is no consideration of the   <a href = "index4404.html?page=doc/GlobalSymbolSettings.php">commission setting</a> for a  Symbol in this average price calculation. </p>
+        
+        <p>   The following color settings in the <a href = "index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> window affect this particular display: </p> 
+
+        <ol>
+            <li>Chart Trade Window Position Long/Profit Background Color</li>
+            <li>Chart Trade Window Position Short/Loss Background Color</li>
+            <li>Chart Trade Window Position Flat Background Color</li>
+            <li>Chart Trade Window Text Color</li>
+        </ol>
+        
+        <p>The font for this display is controlled through the operating system.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OpenProfitLoss">Main/C &gt;&gt; Open Profit/Loss (P/L)</h3>
+        <div class="member-link">[<a href="#OpenProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For an example of the Open Profit/Loss, refer to the image to the right. It is prefixed with <b>P/L:</b>.</p>
+
+        <p>When there is a nonzero current Trade Position for the symbol of the chart or Trade DOM, the  <b>Open Profit/ Loss</b> displays the Profit or Loss for the current Trade Position. There are various formats that can be displayed.  </p>
+
+        <p>The calculation method is as follows: <b>(Current Price - <a href="index7cfb.html?page=doc/TradeStatusWindows.html#HowAveragePriceForPositionsIsCalculatedAndUsed" Target="_blank" rel="noopener noreferrer">Average Position Price</a>) * Position Quantity</b>. This gives the Open Profit/Loss in <b>Points</b>. </p>
+
+        <p>It can be converted to  other formats including a <b>Currency Value</b> by setting this through the <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt; <a href="index4cf4.html?page=doc/ChartSettings.html#ProfitLossFormat" Target="_blank" rel="noopener noreferrer">Profit/Loss Format</a></b> setting. Refer to the documentation for the <b>Profit/Loss Format</b> setting for the calculation method for <b>Currency Value</b>. </p>
+
+        <p>If there any problems with the display of the Profit/Loss, refer to <a href="index67f1.html?page=doc/ProfitLossCalculationsAndSymbolSettings.php" >Profit/Loss Calculations and Symbol Settings</a>. </p>
+
+        <p>The Current Price used in the formula can be either the last trade price or the current Bid or Ask  price. It is the last trade price if <a href="index4451.html?page=doc/GlobalTradeSettings.html#UseBidAskForPL"  Target="_blank" rel="noopener noreferrer">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Bid/Ask for Open Profit/Loss Calculations</a>  is disabled. When this option is enabled, the current Bid price is used for short positions and the current Ask price is used for long positions.</p>
+        
+        <p> Be aware, that if the market data feed is lagging by a significant amount of time,  the currently displayed Open Profit/Loss will not be completely accurate.  The degree of inaccuracy would be dependent on the amount of time of the lag and the price difference between the actual real-time data, and the received data at the time.</p>
+        
+        <p>   The following color settings in the <a href = "index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> window affect this particular display: </p> 
+
+        <ol>
+            <li>Chart Trade Window Position Long/Profit Background Color</li>
+            <li>Chart Trade Window Position Short/Loss Background Color</li>
+            <li>Chart Trade Window Position Flat Background Color</li>
+            <li>Chart Trade Window Text Color</li>
+        </ol>
+        
+        <p>The font for this display is controlled through the operating system.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DailyProfitLoss">Main/C &gt;&gt; Daily or Net Profit/Loss (DailyPL / NetPL)</h3>
+        <div class="member-link">[<a href="#DailyProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Daily Profit/Loss indicates the Profit or Loss for the trading day not including the current open position Profit/Loss.  </p>
+        
+         <div style="text-align: center;"><a href="../images/dailyprofitloss_tradewindow.png" rel="lightbox"><img src="../images/dailyprofitloss_tradewindow.png" alt="" class="screenshot" loading="lazy" ></a></div>
+        
+        <p>Net Profit/Loss is the Daily Profit/Loss + Open Profit/Loss. For complete details, refer to <a href="index3c50.html?page=doc/ChartTrading.html#ViewingOpenDailyClosedPL" Target="_blank" rel="noopener noreferrer">Viewing Open, Daily, and Closed Profit/Loss</a> on the Chart Trading page.  </p>
+        
+        <p>  To display the Net Profit/Loss instead of the Daily Profit/Loss, enable  <b class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b>   <b>&gt;&gt; Include Open P/L in Chart/Trade DOM P/L Display (NPL) </b>.</p>
+        
+        <p> These Profit/Loss values can be converted to  other formats including a <b>Currency Value</b> by setting this through the <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt; <a href="index4cf4.html?page=doc/ChartSettings.html#ProfitLossFormat" Target="_blank" rel="noopener noreferrer">Profit/Loss Format</a></b> setting. Refer to the documentation for the <b>Profit/Loss Format</b> setting for the calculation method for <b>Currency Value</b>. </p>
+        
+        
+        <p> For help with any  inaccuracy or any unexpected value for the Daily Profit/Loss, refer to <a href = "index1a23.html?page=doc/DailyProfitLossValue.html" Target="_blank" rel="noopener noreferrer">Help with Daily Profit/Loss</a>.</p>
+        
+        <p>   The following color settings in the <a href = "index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> window affect this particular display: </p> 
+
+        <ol>
+            <li>Chart Trade Window Position Long/Profit Background Color</li>
+            <li>Chart Trade Window Position Short/Loss Background Color</li>
+            <li>Chart Trade Window Position Flat Background Color</li>
+            <li>Chart Trade Window Text Color</li>
+        </ol>
+        
+        <p>The font for this display is controlled through the operating system.</p>
+        
+        
+    </section>   
+
+    <section class="h3">
+        <h3 id="SelectingTradeAccount">Main/C &gt;&gt; Trade Account (Selecting Trade Account for Chart / Trade DOM)</h3>
+        <div class="member-link">[<a href="#SelectingTradeAccount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>On the <a href="#OpeningTradeWindow">Trade Window</a>  for the Chart or Trade DOM, the list box containing the Trade Accounts displays the current selected Trade Account.  Refer to the image below.</p>
+        
+        <p> If this   list box is not visible as shown in the image below, then check the <a href = "#HideTradeAccountList">Hide Trade Account List</a>   setting accessible through <b class="menu_item">M/Menu &gt;&gt; Settings &gt;&gt; Hide Trade Account List</b> on the Trade Window. </p>
+
+        <p>This list box allows you to select among the Trade Accounts which are available on the current connection you have to your Trading service when <em>not</em> in Trade Simulation Mode. Refer to the image below.</p>
+        
+        <p> Whether in Trade Simulation Mode or not,  multiple  Trade Accounts are supported.</p>
+        
+        <p>  The Chart or Trade DOM  the <a href="#OpeningTradeWindow">Trade Window</a> is for, will only show Orders and Positions  for the selected Trade Account and Symbol of that Chart or Trade DOM.  Understand that each Chart or Trade DOM has its own Trade Window.  You have to set the Trade Account correctly for each Chart or Trade DOM you want to see Orders and Positions on.</p>
+
+        <div style="text-align: center;"><a href="../images/tradeaccountselection.png" rel="lightbox"><img src="../images/tradeaccountselection.png" alt="" class="screenshot" loading="lazy" ></a></div>
+
+        <p>In the case of when  <b Class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is <em>disabled</em>, to ensure you see the available Trade Accounts  make sure there is a connection  to the trading server  by selecting <b Class = "menu_item">File &gt;&gt; Connect to Data Feed</b> if not currently connected.  </p>
+        
+        <p>If there have been any changes with the Trade Accounts on the username you are logged in with to your Trading service, then <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">Reconnect to the Data Feed</a> after those changes. </p>
+
+        <p>When <b Class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is enabled, there is more than one available Trade Account that can be selected. The number of Trade Accounts is specified through <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Number of Simulation Accounts</b>.  </p>
+
+        <p>You can choose to add up to 1000 Trade Simulation accounts. You can use a different Trade Simulation Account to test different  trading ideas or to separate trading activity for the same Symbol for whatever purpose.</p>
+
+        <p>In the case of Trade Simulation Mode,  the Trade Accounts begin with the text <b class = "GeneralBackgroundHighlight">Sim</b>. </p>
+
+        <p>It is <em>essential</em> to make sure you are working with the correct Trade Window  for the Chart or Trade DOM. This will be easily identified if it is attached. If it is not attached, then  refer to the <a href="#OpeningTradeWindow">Opening Trade Window for Chart or Trade  DOM</a> section  for instructions to open the Trade Window for Chart or Trade DOM. You may be looking at a Trade Window which is for a different Chart if it is not attached.</p>
+
+        <p>When Sierra Chart is connected to your Trading service account, if the available  Trade Accounts you expect to see are not listed in the Trade Account list box,   then contact your trading service about this.   If they add an account, you will need to  <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">reconnect to the data feed</a> to see it  listed in the list of  Trade Accounts. </p>
+        
+        <p> When enabling  <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>, the most recently selected simulation account will then be reselected in the list of  Trade Accounts. When  disabling  <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>, the most recently selected  non-simulated account will then be reselected in the list of  Trade Accounts.   </p>
+        
+         <p> Although in the case of a sub instance of Sierra Chart, when disabling Trade Simulation Mode within that sub instance, the previously selected simulation account will remain selected since it is possible to use that with trading in the main instance of Sierra Chart  which can be set to Trade Simulation Mode. </p>
+         
+         <p>  If you have different usernames with an external trading service you are using,  each with a different Trade Account, then you need to use separate  installations of Sierra Chart for each of those usernames. For documentation, refer to <a href = "index6ebd.html?page=doc/MultipleServices.html">Using Multiple Data and Trading Services at the Same Time</a>. </p> 
+    </section>
+
+
+    <section class="h3">
+        <h3 id="FlattenCancel">Main/C &gt;&gt; Flatten (Flatten and Cancel)</h3>
+        <div class="member-link">[<a href="#FlattenCancel">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command Flattens the position and Cancels all the working orders for the symbol, except for Market orders. When this command is used, the existing Trade Position quantity for the symbol is combined with the quantities of any market orders that will reduce the size of the Position. This is necessary to determine the order quantity to completely flatten the Position. Therefore, if you have a Position of +10 (long) and you have a market sell order with quantity 5, this command will enter a Sell Market order with quantity 5 and cancel all orders except for the working market orders. </p>
+
+        <p>If the <b>Flatten</b> command sees that  there is not a Position, it will indicate this in the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b> (Trade Order Error: Unable to Flatten or Reverse because a position does not exist for the symbol). Any outstanding working orders will still be canceled in this case. </p>
+
+        <p>There is also correct interpretation of partially filled Market orders. For example, if you have a Position of quantity +2, and there is a Sell Market order that is Open with a quantity of 2 and the Filled Quantity is 1, then the Flatten command will not issue a new market order.</p>
+
+        <p> If the Flatten command is disabled on the Trade Window, it will need to be enabled. Refer to <a href="#TradeWindowOrderButtons">Enabling/Disabling Trade Window Order Buttons</a>. </p>
+
+        <p>The Trade Position which is used with the Flatten command is the same  Position you see on the Trade Window. Refer to <a href="#CurrentTradePosition" >Position Quantity@Price</a>.</p>
+
+        <p>The <b>Flatten and Cancel</b> command can also be selected from the Chart Trade  shortcut  menu  which is displayed when right clicking on a chart or Trade DOM away from the price scale and market data columns. Refer to the image below.  If the command is not listed on that menu, then add it through  <b Class = "menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>.</p>
+
+        <div style="text-align: center;"><a href="../images/charttrademenucancelflattenreversemenucommands.png" rel="lightbox"><img src="../images/charttrademenucancelflattenreversemenucommands.png" width="450" alt="" class="screenshot" loading="lazy"></a></div>
+        
+        <p>   The  <b>Flatten and Cancel</b> command can also be sent through a Keyboard Shortcut. Refer to <a href="#KeyboardShortcuts">Trading Keyboard Shortcuts</a>. </p>
+        
+        <p>  When using the   <b>Flatten and Cancel</b> command, it is recommended that you  enable the <a href = "index4451.html?page=doc/GlobalTradeSettings.html#HoldMarketOrderUntilPendingCancelOrdersConfirmed">Hold Market Order Until Pending Cancel Orders Are Confirmed</a> option to avoid the possibility where the  Market order  which flattens the  Trade Position gets rejected due to contract limits or margin requirements  on the account. Since it will not be sent to the Trading service until the outstanding Target and Stop orders and other nonmarket orders are canceled. However, using this option means that there is going to be a  <em>delay</em> with sending the Market order. If there is no acknowledgment of the canceling of the outstanding working orders like Attached Orders, then the market order will never be sent.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReverseCancel">Main/C &gt;&gt; Reverse (Reverse and Cancel)</h3>
+        <div class="member-link">[<a href="#ReverseCancel">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command Reverses the current Trade Position   with a Market order and Cancels all the working orders for the symbol, except for market orders. </p>
+
+        <p>The order quantity of the Market order will be equal to the amount to flatten the existing Trade Position  plus the amount of the current <a href="#Quantity">Order Quantity</a> setting on the Trade Window. </p>
+
+        <p>For example, if the current  Trade Position is -3, the Order Quantity setting on the Trade Window  is 2, there are currently no market orders outstanding, a Buy Market order will be sent with a quantity of 5. When it is filled,  the resulting Trade Position will be +2. </p>
+
+        <p>When Attached Orders are used, there will be two separate market orders. One to flatten the Trade Position and another one to establish the new Position. This is necessary when using Attached Orders. </p>
+
+        <p>When this command is used, the existing Trade Position quantity for the symbol is combined with the quantities of any market orders that will reduce the size of the Trade Position. This is necessary to determine the order quantity to completely flatten the Position and avoid any  unnecessary orders from being sent which would result in an incorrect final Position.</p>
+
+        <p>Therefore, if there is a current Trade Position of +10 (long) and there still is a Sell Market order outstanding with a quantity 5, meaning there is an effective Trade Position of +5, the Order Quantity setting on the Trade Window is 5, then this command will enter a Sell order with a quantity 10 and cancel all orders except for the working market orders. This will result in a new Trade Position of -5. If there is a +10 Position with no working market orders, the Order quantity setting on the Trade Window is 5, then this command will enter  a Sell Market order with a quantity of 15. This will result in a new Trade Position of -5.</p>
+
+        <p>If the <b>Reverse</b> command sees that there is <em>not</em> a current Trade Position for the Symbol and Trade account, it will indicate this in the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b>  (Trade Order Error: Unable to Flatten or Reverse because a Position does not exist). Any outstanding working orders <em>will still be canceled</em> in this case. </p>
+
+        <p>There is also correct interpretation of partially filled Market orders. For example, if you have a Trade Position of quantity +2, and there is a Sell Market order that is Open with a quantity of 4 and the Filled Quantity is 1, then the <b>Reverse</b> command will not issue a new market order.</p>
+
+        <p>If the Reverse command is disabled on the Trade Window, it will need to be enabled. Refer to <a href="#TradeWindowOrderButtons">Enabling/Disabling Trade Window Order Buttons</a>. </p>
+
+        <p>The Trade Position quantity which is used with the Reverse command is the same  Trade Position you see on the Trade Window. Refer to <a href="#CurrentTradePosition" >Position Quantity@Price</a>.</p>
+
+        <p>The <b>Reverse and Cancel</b> command can also be selected from the Chart Trade  shortcut  menu  which is displayed when right clicking on a chart or Trade DOM away from the price scale and market data columns. Refer to the image below.  If the command is not listed on that menu, then add it through  <b Class = "menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>.</p>
+
+        <div style="text-align: center;"><a href="../images/charttrademenucancelflattenreversemenucommands.png" rel="lightbox"><img src="../images/charttrademenucancelflattenreversemenucommands.png" width="450" alt="" class="screenshot" loading="lazy"></a></div>
+        
+        <p>   The  <b>Reverse and Cancel</b> command can also be sent through a Keyboard Shortcut. Refer to <a href="#KeyboardShortcuts">Trading Keyboard Shortcuts</a>. </p>
+         
+         <p>  When using the   <b>Reverse and Cancel</b> command, it is recommended that you  enable the <a href = "index4451.html?page=doc/GlobalTradeSettings.html#HoldMarketOrderUntilPendingCancelOrdersConfirmed">Hold Market Order Until Pending Cancel Orders Are Confirmed</a> option to avoid the possibility where the  Market order  which flattens the  Trade Position gets rejected due to contract limits or margin requirements  on the account, since it will not be sent to the Trading service until the outstanding Target and Stop orders and other nonmarket orders are canceled. However, using this option means that there is going to be a  <em>delay</em> with sending the Market order. If there is no acknowledgment of the canceling of the outstanding working orders like Attached Orders, then the market order will never be sent.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="CancelAll">Main/C &gt;&gt; Cancel All</h3>
+        <div class="member-link">[<a href="#CancelAll">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This button will cancel all working orders for the Symbol and Trade Account  the chart is set to.  </p>
+
+        <p>If there are no working orders for the Symbol and Trade Account of the chart or Trade DOM, then this button will be disabled.</p>
+
+        <p>The <b>Cancel All</b> command can also be selected from the Chart Trade  shortcut  menu  which is displayed when right clicking on a chart or Trade DOM away from the price scale and market data columns. Refer to the image below.  If the command is not listed on that menu, then add it through  <b Class = "menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>.</p>
+
+        <div style="text-align: center;"><a href="../images/charttrademenucancelflattenreversemenucommands.png" rel="lightbox"><img src="../images/charttrademenucancelflattenreversemenucommands.png" width="450" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="OrderQuantityButtons">Main/C &gt;&gt; Order Quantity Buttons</h3>
+        <div class="member-link">[<a href="#OrderQuantityButtons">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>On the <b>Main</b> and <b>C</b> tabs of the Trade Window there is a row of 6 quantity buttons.  Refer to the image below.  </p>
+
+        <p>These buttons allow you to quickly change the order quantity for new orders. The quantity that will be changed to is displayed on the button itself. </p>
+
+        <p>The quantity that these buttons will set is configured through the <b>Set</b> tab  of the Trade Window.  Set the order quantities in the <b>Button 1-6 Quantity</b> boxes.</p>
+
+        <p>To reset the buttons to the default quantities based upon the <b>Default Order Quantity </b> for the symbol, press the <b>Default Quantities</b> button on the <b>Set</b> tab. To modify the <b>Default Order Quantity</b>, you will need to edit the  <a href="index4404.html?page=doc/GlobalSymbolSettings.php" >Global Symbol Settings</a> for the symbol. </p>
+
+        <div style="text-align: center;"><a href="../images/tradewindowquantitybuttons.png" rel="lightbox"><img src="../images/tradewindowquantitybuttons.png" alt="" class="screenshot" loading="lazy" ></a></div>
+
+        <div style="text-align: center;"><a href="../images/tradewindowbuttonquantitysettings.png" rel="lightbox"><img src="../images/tradewindowbuttonquantitysettings.png" alt="" width = "150" class="screenshot" loading="lazy" ></a></div>
+
+        <section class="h4">
+            <h4 id="OrderQuantityButtons_KeyboardShortcuts">Keyboard Shortcuts for Preset Order Quantities</h4>
+            <div class="member-link">[<a href="#OrderQuantityButtons_KeyboardShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> It is supported to configure keyboard shortcuts  to  select  these preset Order Quantity buttons and change the  current <a href = "#Quantity">Order Quantity</a>  to the Quantity specified by the button. For instructions, refer to <a href="#KeyboardShortcuts">Trading Keyboard Shortcuts</a>. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="OrderQuantityButtons_ControlBarButtons">Control Bar Buttons for Preset Order Quantities</h4>
+            <div class="member-link">[<a href="#OrderQuantityButtons_ControlBarButtons">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> It is supported to   add Control Bar buttons to  select these  <a href = "#OrderQuantityButtons">Order Quantity Buttons</a> and change the  <a href = "#Quantity">Order Quantity</a>   on the Trade Window  to the Quantity specified by the button.</p>
+
+           <p> To configure a Control Bar with these buttons, refer to <a href = "index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Control Bars</a>. </p>
+            
+            <p> In <b class="menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar 1-8 </b>,  expand the   <b>Trading Commands</b>  list in the  <b>Available Control Bar Commands</b> list. </p>
+            
+            <p>You will then want to add the  <b>Order Quantity Button #</b> buttons  as you require. </p>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="BreakEvenButton">Main/C &gt;&gt; BE (BreakEven button)</h3>
+        <div class="member-link">[<a href="#BreakEvenButton">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>BE</b> button stands for Break Even. The BE button will move the Stop  <a href="index0ef8.html?page=doc/AttachedOrders.html" >Attached Order</a> to the Average Fill price of the parent order.</p>
+
+        <p>By default, selecting the BE button will only move the <em>nearest</em> attached order to the Average Fill price of the parent. This behavior can be modified by changing the setting of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#MoveToBreakevenCommand" target="_blank" rel="noopener noreferrer">Move to Breakeven (BE) Command</a> setting found in <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings</b>.</p>
+
+        <p>If this option is set to <b>Move All Stop Attached Orders</b> and the option for <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings_DisableOrderConfirmationsGlobal" target="_blank" rel="noopener noreferrer">Disable Order Confirmations - Global</a> is not selected, then when selecting the BE button, a confirmation for each attached Stop order will be presented.</p>
+
+        <p>An offset relative to the Average Fill price of the parent order, can optionally be set on the <b>Set</b> tab of the Trade Window through the <b>Set &gt;&gt; Move To BE Offset (Ticks)</b> setting. This is set in ticks, where 1 equals 1 tick.  If this is set to 1 and the Stop order is a Sell Stop, then the Stop order will be moved to 1 tick above the Average Fill price.  If this is set to -1 and the Stop order is a Sell Stop, then the Stop order will be moved to 1 tick below the Average Fill price.</p>
+        
+         <p> This   command button has no effect on nonattached  Stop orders. </p>
+
+        <div style="text-align: center;"><a href="../images/movetobreakevenbutton.png" rel="lightbox"><img src="../images/movetobreakevenbutton.png" alt=""  class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="UseAttachedOrders">Main/C &gt;&gt; Use Attached Orders</h3>
+        <div class="member-link">[<a href="#UseAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For complete documentation for <b> Use Attached Orders</b>, refer to <a href="index0ef8.html?page=doc/AttachedOrders.html#AttachedOrderWindowInterface">Use Attached Orders</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="MenuButton">Main/C &gt;&gt; Menu (M) button</h3>
+        <div class="member-link">[<a href="#MenuButton">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/tradewindowmenubutton.png" rel="lightbox"><img  class="MediumFloatRight" alt="" src="../images/tradewindowmenubutton.png"></a>
+
+        <p>The <b class="menu_item">Menu (M)</b> button lists a menu with various Trading related commands and options.  Some commands apply globally and some commands apply only to the specific chart or  Trading DOM the Trade Window is associated with. In this case they are labeled <b>(chart specific)</b> in the documentation.</p>
+        
+        <p>On the  <b>Main</b> tab of the Trade Window, the menu is labeled  <b><em>M</em></b>. On the <b>C </b> (Compact) tab, it is labeled  <b><em>Menu</em></b>. </p>
+        
+        
+        <p>  Each Chart or  Trading DOM, has its own  Trade Window. Refer to <a href="#OpeningTradeWindow">Opening Trade Window for Chart or Trade  DOM</a>. </p>
+
+        <p>The commands which are not already listed on the top level <a href="index96f7.html?page=doc/TradeMenu.html">Trade Menu</a> are documented below.</p>
+
+        <section class="h4">
+            <h4 id="TradeSimulationModeOn">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Trade Simulation Mode On</h4>
+            <div class="member-link">[<a href="#TradeSimulationModeOn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#TradeSimulationModeOn">Trade Simulation Mode On</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TradingLocked">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Trading Locked</h4>
+            <div class="member-link">[<a href="#TradingLocked">Link</a>] - [<a href="top.html">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#TradingLocked">Trading Locked</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachTradeWindowToChartWindow">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Attach Trade Window to Chart Window</h4>
+            <div class="member-link">[<a href="#AttachTradeWindowToChartWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#AttachTradeWindow">Attach Trade Window to Chart Window</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CloseTradeWindow">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Close Trade Window (chart specific)</h4>
+            <div class="member-link">[<a href="#CloseTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This command closes the Trade Window for the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AutoTradingEnabled-Global">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Auto Trading Enabled - Global</h4>
+            <div class="member-link">[<a href="#AutoTradingEnabled-Global">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#AutoTradingEnabled">Auto Trading Enabled - Global</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SaveConfiguration">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Save Configuration</h4>
+            <div class="member-link">[<a href="#SaveConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This command is used to save the current configuration of the Trade Window.  Refer to the <a href="#TradeWindowConfigurations">Using and Changing Between Different Trade Window  and Attached Orders Configurations</a> section.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="OrderConfirmations">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Order Confirmations (chart specific)</h4>
+            <div class="member-link">[<a href="#OrderConfirmations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Each chart or Trade DOM has <em>its own set of order confirmation options</em>.  Therefore, on some charts or Trade DOMs, you can have order confirmations enabled and on others you can have them disabled. </p>
+
+            <p> All of the order confirmations can be globally disabled through  <b Class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Disable Order Confirmations - Global</b>. Therefore, <em>uncheck</em> this option  to ensure that the below documented order confirmations will work.</p>
+
+            <p>To disable  a particular order confirmation for a particular chart or Trade DOM do the following:</p>
+
+            <ol>
+                <li> Select <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> to open the Trade Window for the specific chart or Trade DOM you are working with, if it is not already open.  For specific details, refer to <a href="#OpeningTradeWindow">Opening Trade Window for Chart or Trade  DOM</a>. </li>
+
+                <li>Select the <b>Main</b> tab.</li>
+
+                <li>Press the <b>M</b>  button depending upon which tab is selected. Refer to the image below.</li>
+                <li> Select the <b>Confirmations</b> submenu. Refer to the images below.</li>
+
+                <li> Disable the <a href="#ConfirmNewOrders">Confirmations</a> that you do not want by removing the check mark.</li>
+            </ol>
+
+            <div style="text-align: center;">
+                <a href="../images/tradewindowconfirmationsstep1.png" rel="lightbox"><img src="../images/tradewindowconfirmationsstep1.png" alt="" width="143" ></a>  
+                <a href="../images/tradewindowconfirmationsstep2.png" rel="lightbox"><img src="../images/tradewindowconfirmationsstep2.png" alt="" width="515"  ></a>
+            </div>
+
+            <p class="GeneralBackgroundHighlightLight"> <b>Order Confirmations and changing the Trade Window Configuration</b>: Refer to <a href="#TradeWindowConfigurationCausingExistingSettingsToChange" >Trade Window Configuration Causing  Existing Trade window Settings to be Changed</a>.</p>
+
+            <section class="h5">
+                <h5 id="ConfirmNewOrders">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Confirmations &gt;&gt; Confirm New Orders (chart specific)</h5>
+                <div class="member-link">[<a href="#ConfirmNewOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>This command enables or disables the confirmation prompt when placing a new order from the Trade Window, the chart,  Chart DOM, or Trade DOM. When checked, you will be asked to confirm an order. It is <em>safest</em> to keep this option enabled, to prevent inadvertent order entry.</p>
+
+                <p>For more information, refer to <a href="#OrderConfirmations">Order Confirmations</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="ConfirmCancelAll">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Confirmations &gt;&gt; Confirm Cancel All (chart specific)</h5>
+                <div class="member-link">[<a href="#ConfirmCancelAll">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>This command enables or disables the confirmation prompt for the   <b>Cancel All </b> button on the Trade Window for the chart or Trade DOM. This confirmation also applies to the Chart Trade shortcut menu    <b>Cancel All</b> command.</p>
+
+                <p> For more information, refer to <a href="#OrderConfirmations">Order Confirmations</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="ConfirmFlattensReverses">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Confirmations &gt;&gt; Confirm Flatten/Reverse (chart specific)</h5>
+                <div class="member-link">[<a href="#ConfirmFlattensReverses">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>This command enables or disables the confirmation prompt  for the  <b>Flatten  </b> and   <b>Reverse</b> buttons on the Trade Window for the chart or Trade DOM. This confirmation also applies to the Chart Trade shortcut menu    <b>Flatten  </b> and   <b>Reverse</b> commands.</p>
+
+                <p>For more information, refer to <a href="#OrderConfirmations">Order Confirmations</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="ConfirmOrderModifications">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt; &gt; Confirmations &gt;&gt; Confirm Order Modifications (chart specific)</h5>
+                <div class="member-link">[<a href="#ConfirmOrderModifications">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>This command enables or disables the confirmation prompt for Order Modifications from the Trade Window, the chart,  Chart DOM, or Trade DOM.</p>
+
+                <p> For more information, refer to <a href="#OrderConfirmations">Order Confirmations</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="ConfirmOrderCancellations">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt; &gt; Confirmations &gt;&gt; Confirm Order Cancellations (chart specific)</h5>
+                <div class="member-link">[<a href="#ConfirmOrderCancellations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>This command enables or disables the confirmation prompt for Order Cancellations from the Trade Window, the chart, Chart DOM, or Trade DOM.</p>
+
+                <p>For more information, refer to <a href="#OrderConfirmations">Order Confirmations</a>.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="Orders">Main/C &gt;&gt; Menu &gt;&gt; Orders</h4>
+            <div class="member-link">[<a href="#Orders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p></p>
+
+            <section class="h5">
+                <h5 id="SupportScaleIn">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Orders &gt;&gt; Support Scale In (chart specific)</h5>
+                <div class="member-link">[<a href="#SupportScaleIn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>For complete information, refer to <a href="index0ef8.html?page=doc/AttachedOrders.html#ScalingIn">Scaling In</a> section on the Attached Orders page.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="SupportScaleOut">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Orders &gt;&gt; Support Scale Out (chart specific)</h5>
+                <div class="member-link">[<a href="#SupportScaleOut">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>For complete information, refer to <a href="index0ef8.html?page=doc/AttachedOrders.html#ScalingOut">Scaling Out</a> section on the Attached Orders page.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="MaintainSameQuantityForOCOGroupOrders">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Orders &gt;&gt; Maintain Same Quantity for OCO Group Orders (chart specific)</h5>
+                <div class="member-link">[<a href="#MaintainSameQuantityForOCOGroupOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>Target and Stop Attached Orders (submitted at the same time and with the same OCO Group number) and OCO Limit and Stop orders, are contained within the same OCO order pair or group. In the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>, you will see the <b>OCO ID</b> of the orders. The two orders will have the same OCO ID.</p>
+                
+                <p>If 2 orders have the same OCO ID, then they are part of the same OCO pair. When you modify the quantity of one order in an OCO pair, the other order with the same ID will be adjusted to the same quantity if this option is enabled (checked).</p>
+                
+                <p>If this option is not enabled (not checked), this will not occur. You need to also be aware that the Trading service you are using may also automatically adjust the quantities to be the same when you modify a quantity of one of the orders. Even if this option is not checked.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="UseStopLimitOrdersOnChartDOM">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Orders &gt;&gt; Use Stop-Limit Orders on ChartDOM (chart specific)</h5>
+                <div class="member-link">[<a href="#UseStopLimitOrdersOnChartDom">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When this command is enabled, then a Stop order entry on the Chart DOM  / Trade DOM will be submitted as a <b>Stop-Limit</b> order instead. The Limit price is automatically set and based upon <b>Stop-Limit Order Limit Offset</b> setting  on the <b>Set</b> tab of the Trade Window. </p>
+            </section>
+
+            <section class="h5">
+                <h5 id="UseMITOrdersOnChartDOM">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Orders &gt;&gt; Use MIT Orders on ChartDOM (chart specific)</h5>
+                <div class="member-link">[<a href="#UseMITOrdersOnChartDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When this command is enabled, then a Limit order entry on the Chart DOM  / Trade DOM will be submitted as a <b>Market if Touched</b> order instead.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="UseLimitChaseOrders">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Orders &gt;&gt; Use Limit Chase Orders (chart specific)</h5>
+                <div class="member-link">[<a href="#UseLimitChaseOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+                
+                <p>When this command is enabled, then Limit orders from the chart will be converted to <a href="index783f.html?page=doc/OrderTypes.html#LimitChase" >Limit Chase Orders</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="CancelOrdersOnFlatPosition">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Orders &gt;&gt; Cancel Orders on Flat Position (chart specific)</h5>
+                <div class="member-link">[<a href="#CancelOrdersOnFlatPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+                
+                <p>When this command is enabled, and the Trade Position Quantity  for the chart  goes from a nonzero Trade Position  Quantity to a zero  Trade Position Quantity, then any working orders for the Symbol and Trade Account of the chart will then be canceled.</p> 
+                
+                <p> The canceling of working orders only goes into effect when the  Trade Position Quantity  goes to 0 and remains there. If the  Trade Position direction changes from long to short or short to long,  the orders will not be canceled. </p>
+            </section>        
+        </section>
+
+        <section class="h4">
+            <h4 id="Settings">Main/C &gt;&gt; Menu &gt;&gt; Settings</h4>
+            <div class="member-link">[<a href="#Settings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <div style="text-align: center;">
+                <a href="../images/tradewindowconfirmationsstep1.png" rel="lightbox"><img src="../images/tradewindowconfirmationsstep1.png" alt="" width="300" ></a>  
+                <a href="../images/tradewindowsettingsmenu.png" rel="lightbox"><img src="../images/tradewindowsettingsmenu.png" alt="" width="515"  ></a>
+            </div>
+
+
+            <section class="h5">
+                <h5 id="ColorSameAsChart">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Settings &gt;&gt; Color Same As Chart (chart specific)</h5>
+                <div class="member-link">[<a href="#ColorSameAsChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When Trade Simulation Mode is disabled and the Trade Window is  <em>attached</em> to a chart or Trade DOM, then the background color of the Trade Window will be colored the same color as the chart background color when this option is enabled.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="HidePendingAttachedOrders">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Settings &gt;&gt; Hide Pending Attached Orders (chart specific)</h5>
+                <div class="member-link">[<a href="#HidePendingAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When <b>Hide Pending Attached Orders</b> option is enabled, then Attached Orders which are still in a Pending state are hidden on the chart or Trade DOM.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="IgnoreQuantityOnLoadConfiguration">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Settings &gt;&gt; Ignore Quantity on Load Configuration</h5>
+                <div class="member-link">[<a href="#IgnoreQuantityOnLoadConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When Ignore Quantity on Load Configuration is enabled, and a Trade Window configuration is selected, the stored order quantity with that Trade Window configuration is ignored.  Otherwise, the stored quantity is set on the Trade Window.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="ResetQuantitiesOnSymbolChange">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Settings &gt;&gt; Reset Quantities on Symbol Change</h5>
+                <div class="member-link">[<a href="#ResetQuantitiesOnSymbolChange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When Reset Quantities on Symbol Change is enabled, and the symbol of the chart changes, the quantity on the Trade Window will be changed to the Default Order Quantity set for the symbol in the  <a href = "index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a> and the  Quantity buttons will be reset based upon this default order quantity. </p>
+            </section>
+
+            <section class="h5">
+                <h5 id="UseOrderFillCalculatedPosition">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Settings &gt;&gt; Use Order Fill Calculated Position (chart specific)</h5>
+                <div class="member-link">[<a href="#UseOrderFillCalculatedPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>For complete documentation for this setting, refer to <a href="index7cfb.html?page=doc/TradeStatusWindows.html#OrderFillCalculatedPosition">Using Order Fill Calculated Trade Positions</a>.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="OrderAllocationToTradeAccounts">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Settings &gt;&gt; Order Allocation to Trade Accounts</h5>
+                <div class="member-link">[<a href="#OrderAllocationToTradeAccounts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>Selecting this option brings up the <b>Order Allocations to Trade Account</b> window. This window is used to select trading accounts that will have exact copies of the orders that are placed for the chart from which this window is opened.</p>
+
+                <p>Full documentation and Setup Instructions can be found on the <a href="index56e2.html?page=doc/OrderAllocationToTradeAccounts.html">Order Allocation to Trade Accounts</a> documentation page.</p>
+            </section>
+
+            <section class="h5">
+                <h5 id="HideTradeAccountList">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Settings &gt;&gt; Hide Trade Account List</h5>
+                <div class="member-link">[<a href="#HideTradeAccountList">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>When <b>Hide Trade Account List</b> is enabled, the menu to select a Trade Account is not displayed on the Trade Window.</p>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartTradeModeOn">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Chart Trade Mode On</h4>
+            <div class="member-link">[<a href="#ChartTradeModeOn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#ChartTradeModeOn">Chart Trade Mode On</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TradingChartDOMOn">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Trading Chart DOM On</h4>
+            <div class="member-link">[<a href="#TradingChartDOMOn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#TradingChartDOMOn">Trading Chart DOM On</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowOrderFills">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Show Order Fills</h4>
+            <div class="member-link">[<a href="#ShowOrderFills">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#ShowOrderFills">Show Order Fills</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="OnlyOrdersFromChart">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Only Orders From Chart</h4>
+            <div class="member-link">[<a href="#OnlyOrdersFromChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#OnlyOrdersFromChart">Only Orders From Chart</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="Menu_UseAttachedOrders">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Use Attached Orders (chart specific)</h4>
+            <div class="member-link">[<a href="#Menu_UseAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>For complete documentation, refer to <a href="index0ef8.html?page=doc/AttachedOrders.html#AttachedOrderWindowInterface">Use Attached Orders</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CustomizeChartTradeDOMColumns">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Customize Chart/Trade DOM Columns</h4>
+            <div class="member-link">[<a href="customizecharttradedomcolumns.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item">Trade &gt;&gt; <a href="index96f7.html?page=doc/TradeMenu.html#CustomizeChartTradeDOMColumns">Customize Chart Trade DOM Columns</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TradingKeyboardShortcutsEnabled">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Trading Keyboard Shortcuts Enabled</h4>
+            <div class="member-link">[<a href="#TradingKeyboardShortcutsEnabled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the same setting as <b class="menu_item"><a href="index96f7.html?page=doc/TradeMenu.html#TradingKeyboardShortcutsEnabled">Trading Keyboard Shortcuts Enabled</a></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="Help">Main/C &gt;&gt; <a href="#MenuButton">Menu</a> &gt;&gt; Help</h4>
+            <div class="member-link">[<a href="#Help">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This opens this page of the documentation.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="BuyBid">Main/C &gt;&gt; Buy Bid</h3>
+        <div class="member-link">[<a href="#BuyBid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command will set the order type to Limit and set the Limit price to the current Bid price and will enter a Buy order with the specified <a href="#Quantity" >Quantity</a> and <a href="#TimeInForce" >Time in Force</a>.</p>
+        
+        <p>The determination of  the current Bid price is what Sierra Chart has received at the time of the order submission. This value can be old by the time the order gets to the exchange. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="BuyMkt">Main/C &gt;&gt; Buy Mkt</h3>
+        <div class="member-link">[<a href="#BuyMkt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command will set the order type to Market and will enter a Buy order with the specified <a href="#Quantity" >Quantity</a> and <a href="#TimeInForce" >Time in Force</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="BuyAsk">Main/C &gt;&gt; Buy Ask</h3>
+        <div class="member-link">[<a href="#BuyAsk">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command will set the order type to Limit and set the Limit price to the current Ask price and will enter a Buy order with the specified <a href="#Quantity" >Quantity</a> and <a href="#TimeInForce" >Time in Force</a>.</p>
+        
+        <p>The determination of  the current Ask price is what Sierra Chart has received at the time of the order submission. This value can be old by the time the order gets to the exchange. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SellBid">Main/C &gt;&gt; Sell Bid</h3>
+        <div class="member-link">[<a href="#SellBid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command will set the order type to Limit and set the Limit price to the current Bid price and will enter a Sell order with the specified <a href="#Quantity" >Quantity</a> and <a href="#TimeInForce" >Time in Force</a>.</p>
+        
+        <p>The determination of  the current Bid price is what Sierra Chart has received at the time of the order submission. This value can be old by the time the order gets to the exchange. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SellMkt">Main/C &gt;&gt; Sell Mkt</h3>
+        <div class="member-link">[<a href="#SellMkt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command will set the order type to Market and will enter a Sell order  with the specified <a href="#Quantity" >Quantity</a> and <a href="#TimeInForce" >Time in Force</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SellAsk">Main/C &gt;&gt; Sell Ask</h3>
+        <div class="member-link">[<a href="#SellAsk">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command will set the order type to Limit and set the Limit price to the current Ask price and will enter a Sell order with the specified <a href="#Quantity" >Quantity</a> and <a href="#TimeInForce" >Time in Force</a>.</p>
+        
+        <p>The determination of  the current Ask price is what Sierra Chart has received at the time of the order submission. This value can be old by the time the order gets to the exchange. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OrderType">Main &gt;&gt; Order Type</h3>
+        <div class="member-link">[<a href="#OrderType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In the list box that contains the order types, select the order type that you want to use for manual order entry. For documentation for all of the order types, refer to the <a href="index783f.html?page=doc/OrderTypes.html">Order Types</a> documentation.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="PriceBoxes">Main &gt;&gt; Price Boxes</h3>
+        <div class="member-link">[<a href="#PriceBoxes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There are 2 price boxes on the <b>Main</b> tab of the Trade Window. Either none, 1 or 2 price boxes are enabled, depending upon the selected order type.  In a price box you can manually enter a price in the box or select one from the list. All of the current bid and ask prices from market depth data, if available, are listed. Refer to the <a href="#PriceFormatting">Price Formatting</a> section for the format for price entry. For additional information, refer to the <a href="index783f.html?page=doc/OrderTypes.html">Order Types</a> documentation.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Quantity"> Main &gt;&gt; Order Quantity (Quantity)</h3>
+        <div class="member-link">[<a href="#Quantity">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b> Quantity </b>   control in the Trade Window sets the quantity for the order to be submitted. This can be shares, contracts, or the number of currency units in the case of the Forex markets. </p>
+        
+        <p>To open the Trade Window, refer to  <a href="#OpeningTradeWindow">Opening Trade Window</a>. </p>
+
+        <p>Select a number from the drop down list or manually enter the order quantity. </p>
+
+        <p>This order quantity applies to orders directly entered from the Trade Window, the  <a href="index3c50.html?page=doc/ChartTrading.html"  target="_blank" rel="noopener noreferrer">Chart, Chart DOM, or Trade DOM</a>.
+
+        <p>The quantities  listed in the list box are in increments of the  <b>Default Order Quantity</b> for the symbol or symbol pattern in <b  class = "menu_item">Global Settings &gt;&gt; Symbol Settings</b>. For further information, refer to <a href="index4404.html?page=doc/GlobalSymbolSettings.php" >Global Symbol Settings</a>. </p>
+
+        <p>The Order Quantity  can also be quickly changed through the <a href="#OrderQuantityButtons">Order Quantity  Buttons</a>.</p>
+        
+        <p>The Order Quantity  can also be changed through the Trade Mode Box at the top left of the chart when in Chart Trade Mode. Refer to the   <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart"  target="_blank" rel="noopener noreferrer">Entering Orders from the Chart</a>  instructions. </p>
+        
+        <div style="text-align: center;">
+                <a href="../images/tradewindow_quantitycontrols.png" rel="lightbox"><img src="../images/tradewindow_quantitycontrols.png" alt="" width="" ></a>  
+               
+        </div>
+        
+       
+    </section>
+
+    <section class="h3">
+        <h3 id="TimeInForce">Main &gt;&gt; TimeInForce (Time in Force):</h3>
+        <div class="member-link">[<a href="#TimeInForce">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The order time in force. All of the type supported by Sierra Chart are listed. These include:</p>
+        
+        <ul>
+            <li><b>Day</b></li>
+            <li><b>Good till Canceled</b></li>
+            <li><b>Good till Date-Time</b>: In the case of CME order routing,  only the Date portion is used. The Time is ignored. The order will cancel at the end of the trading day on that specific date.  In other cases, how this particular Date-Time is used is Trading service specific.</li>
+            <li><b>Immediate or Cancel</b></li>
+            <li><b>All or None</b></li>
+            <li><b>Fill or Kill</b></li>
+            <li><b>Send Order at Time</b>: When using this Time in Force, this means the order will be sent at the specified time. This will be a time in the future. The time is specified in the box below  the Time in Force list box. The time is specified in this format: <b>HH:MM:SS</b>  and is in the same <a href = "index219e.html?page=doc/TimeZone.html">Time Zone</a> as the chart  the Trade Window is for.
+            <br> <br>
+            When using this Time in Force type, the order is going to be held on the Sierra Chart side until the the specified time is encountered. You can also select the order in the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>  and select  <b>[Send Held]</b> from the menu to send it immediately. In this last case, the order then becomes an order which will be processed immediately without regard to time. 
+            </li>
+        </ul>
+        
+        <p>When in Trade Simulation Mode (<b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is enabled), the Time In Force works as described  in the <a href="indexad24.html?page=doc/TradeSimulation.php#TimeInForceForSimulation">Time In Force for Simulation</a>  section.</p> 
+        
+         <p> There is a separate   <a href = "index0ef8.html?page=doc/AttachedOrders.html#TimeInForce">Time in Force for Attached Orders</a>  setting that needs to be set.   Only a limited number of options are available for this  particular setting.</p>
+
+        <p>Not all external Trading  services or exchanges will support all of the available Time in Force settings. If you use an unsupported type, the order will be rejected. This reject will be logged in the <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a> and also in <b class = "menu_item">Trade &gt;&gt;  Trade Service Log</b>.</p>
+
+        <div style="text-align: center;"><a href="../images/timeinforce.png" rel="lightbox"><img src="../images/timeinforce.png" alt="" class="screenshot" loading="lazy" ></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="DateTimesetting">Main &gt;&gt; Date-Time setting</h3>
+        <div class="member-link">[<a href="#DateTimesetting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you have specified a  <b>Time in Force</b> of <b>Good Till Date-Time </b>, then this control lets you select the expiration date and time.  Some services may not require a time, only a date. In those cases, the time is ignored.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Buy">Main &gt;&gt; Buy</h3>
+        <div class="member-link">[<a href="#Buy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Enter a Buy order using the specified order type,  price, quantity, and time in force</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Sell">Main &gt;&gt; Sell</h3>
+        <div class="member-link">[<a href="#Sell">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Enter a Sell order using the specified order type, price, quantity and  time in force.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachedOrders">Targets tab (Attached Orders)</h3>
+        <div class="member-link">[<a href="#AttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For complete instructions for using Attached Orders, refer to the <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a> page.</p>
+
+        <div style="text-align: center;"><a href="../images/tradewindowtargetstab.png" rel="lightbox"><img src="../images/tradewindowtargetstab.png" alt="" class="screenshot" loading="lazy" ></a> </div>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeWindowSetTab">Trade Window 'Set' Tab</h3>
+        <div class="member-link">[<a href="#TradeWindowSetTab">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div style="text-align: center;"><a href="../images/tradewindowsettingstab.png" rel="lightbox"><img src="../images/tradewindowsettingstab.png" alt="" class="screenshot" loading="lazy" width="260"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="StopLimitOrderLimitOffset">Set &gt;&gt; Stop-Limit Order Limit Offset</h3>
+        <div class="member-link">[<a href="#StopLimitOrderLimitOffset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div style="text-align: center;"><a href="../images/stop-limitorderlimitoffsetsettings.png" rel="lightbox"><img src="../images/stop-limitorderlimitoffsetsettings.png" alt="" class="screenshot" loading="lazy" width="255"></a></div>
+
+        <section class="h4">
+			<h4 id="StopLimitOrderLimitOffset_PrimaryOrders">Set &gt;&gt; Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</h4>
+			<div class="member-link">[<a href="#StopLimitOrderLimitOffset_PrimaryOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting applies to primary or main orders. Not to  Attached Orders. This control specifies the number of Ticks or a Percentage of the current price of the symbol being traded, away from the <b>Stop</b> price that the <b>Limit</b> price for a <b>Stop-Limit</b> order is set to. </p>
+
+            <p>For example, if this is set to 4 Ticks, a <b>Buy Stop-Limit</b> order is entered at 100, the Tick Size is 1 for the symbol, the Limit price will then be automatically set to 104 with the order. This means that once the Stop is triggered at 100, the order will be filled at a price  which is no worse than 104. For additional information, refer to the <a href="index783f.html?page=doc/OrderTypes.html#StopLimit">Stop-Limit Order Type</a>.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="StopLimitOrderLimitOffset_AttachedOrders">Set &gt;&gt; Stop-Limit Order Limit Offset &gt;&gt; Attached Orders</h4>
+			<div class="member-link">[<a href="#StopLimitOrderLimitOffset_AttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting applies Attached Orders only. This control specifies the number of Ticks or a Percentage of the parent order price, away from the <b>Stop</b> price that the <b>Limit</b> price for a <b>Stop-Limit</b> type of Attached Order is set to. For example, if this is set to 4 Ticks, a <b>Buy Stop-Limit</b> Attached Order has a Stop price of 100, the Tick Size is 1 for the symbol, the Limit price will then be automatically set to 104 with the order. This means that once the Stop is triggered at 100, the order will be filled at a price  which is no worse than 104.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="StopLimitOrderLimitOffset_OffsetType">Set &gt;&gt; Stop-Limit Order Limit Offset &gt;&gt; Offset Type</h4>
+			<div class="member-link">[<a href="#StopLimitOrderLimitOffset_OffsetType">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p>This specifies the offset type either as Ticks or a Percentage for the Limit offset for Primary and Attached Stop-Limit orders.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutoSetPricesOffsetForOCOBuyAndSellOrders">Set &gt;&gt; Auto-Set Prices Offset for OCO Buy and Sell Orders</h3>
+        <div class="member-link">[<a href="#AutoSetPricesOffsetForOCOBuyAndSellOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The setting is used with the <a href="index783f.html?page=doc/OrderTypes.html#OCOBuyStopSellStop">OCO Order Types</a>. For the OCO order types that have the 2 OCO orders automatically set from a selected reference price, this is the number of Ticks from this reference price that the orders are set to.  For example, if the selected reference price is 100, the Tick Size is 1 for the symbol being traded, and this is set to 10, then one of the OCO orders will have a price of 110  and the other will have a price of 90.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="MaximumChaseForChaseLimitOrders">Set &gt;&gt; Maximum Chase for Chase Limit Orders</h3>
+        <div class="member-link">[<a href="#MaximumChaseForChaseLimitOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This setting applies to <b>Limit Chase</b> and <b>Limit Touch Chase</b> order types. </p>
+
+        <p>This is the maximum amount in Ticks, that a Limit Chase order will be adjusted by. For example, if a chase order has a limit price of 100 , the Tick Size is 1 for the symbol being traded, and this is set to 4, then the limit price will be adjusted by no more than 4 points.  </p>
+
+        <p>Refer to the <a href="index783f.html?page=doc/OrderTypes.html#LimitChase">Limit Chase</a>  order types for more information about how this setting is used.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="MoveToBEOffset">Set &gt;&gt; Move to BE Offset</h3>
+        <div class="member-link">[<a href="#MoveToBEOffset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the offset, in ticks, that will be applied to an attached order when the <b>BE</b> button is selected on the Main tab of the Trading window. Positive and negative values can be entered.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UseConfigNameAsTextTag">Set &gt;&gt; Use Config Name as Text Tag</h3>
+        <div class="member-link">[<a href="#UseConfigNameAsTextTag">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When checked, the <b>Configuration Name</b> associated with these trades will be used for the <a href="#TextTag">Text Tag</a>. For more information on Trade Configurations, refer to <a href="#TradeWindowConfigurations">Using and Changing Between Different Trade Window and Attached Orders Configurations</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TextTag">Set &gt;&gt; Text Tag</h3>
+        <div class="member-link">[<a href="#TextTag">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Any text entered into this field is displayed in the <b>Note</b> column of the <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a> for an entry for the order. This can be used for filtering specific trades using the <b>Notes</b>  filter control on the Trade   Activity Log window.</p>
+
+        <p>If the <a href="#UseConfigNameAsTextTag">Use Config Name as Text Tag</a> option is   enabled, then this will use  the selected  <a href = "#SelectingConfiguration">Trade Configuration</a>  name instead of the  <b>Text Tag</b> entry in the  <b>Notes</b> column of the Trade Activity Log. </p>
+        
+         <p> To quickly switch between different Text Tag names, use the <a href="#TradeWindowConfigurations">Using and Changing Between Different Trade Window and Attached Orders Configurations</a> functionality. </p>
+         
+         <p> The Text Tag field  has no length limitation in newer versions but it is not recommended to make this too long for efficiency reasons. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ButtonQuantity">Set &gt;&gt; Button 1-6 Quantity</h3>
+        <div class="member-link">[<a href="#ButtonQuantity">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>These text boxes are used to specify the order quantity for the 6  Quantity buttons on the <b>   Main </b> and the <b> C (Compact) </b> tabs of the Trade Window for the chart. Enter the order quantity for each button that you want the specific button to have.</p>
+        
+         <p> For additional information, refer to <a href="#OrderQuantityButtons">Main/C &gt;&gt; Order Quantity Buttons</a>. </p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="DefaultQuantities">Set &gt;&gt; Default Quantities</h3>
+        <div class="member-link">[<a href="#DefaultQuantities">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Use the Default Quantities button to reset the  preset  <a href = "#OrderQuantityButtons">Quantity Buttons</a>  to their default values.</p>
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="FlattenAndCancelAtSetTime">A &gt;&gt; Flatten And Cancel at Set Time</h3>
+        <div class="member-link">[<a href="#FlattenAndCancelAtSetTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Flatten And Cancel at Set Time</b> settings are used to Flatten a Trade Position and/or Cancel open Orders at a set time each day, for the Symbol and Trade Account of the chart or Trading DOM. In addition, these settings can also disable Automated Trading at the same time.</p>
+        
+        <p> For this functionality to work, it is necessary that Sierra Chart is running, the chart or Trading DOM the Trade Window is associated with, is open and for live trading that Sierra Chart is connected to the trading server with  <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. </p>
+
+        <ul>
+            <li><b>Flatten and Cancel at Set Time Options</b>:
+                <ul>
+                    <li><b>Disabled</b>: This setting disables the use of the <b>Flatten and Cancel</b> option. Therefore, any Position and Open Orders will not be changed at the time set in the <b>Time</b> Input.</li>
+
+                    <li><b>Flatten Position and Cancel Orders</b>: This will Flatten the Position and cancel  all open Orders at the time set in the <b>Time</b> Input, for the Symbol and Trade Account.</li>
+
+                    <li><b>Cancel Orders Only</b>: This will cancel any open Orders at the time set in the <b>Time</b> Input, for the symbol and Trade Account. This will <em>not</em> flatten any Position.</li>
+                </ul>
+            </li>
+            
+            <li><b>Time</b> (Chart Time Zone): This sets the time at which the action defined in the <b>Flatten and Cancel at Set Time</b> will occur. This time is in the <em>Chart Time Zone</em>. For more information, refer to  <a href = "index219e.html?page=doc/TimeZone.html#GeneralInformation" target="_blank" rel="noopener noreferrer">Time Zone</a>.</li>
+
+            <li><b>And Disable Auto Trading at Time</b>: When this option is selected and a setting other than <b>Disabled</b> is set in the <b>Flatten and Cancel at Set Time</b>, then the setting <a href="index96f7.html?page=doc/TradeMenu.html#AutoTradingEnabled_Chart" target="_blank" rel="noopener noreferrer">Auto Trading Enabled - Chart</a> is disabled at the time set in the <b>Time</b> setting.</li>
+        </ul>        
+        
+        
+        <p> This functionality only works for real-time trading whether simulated or non-simulated.  It does not work during a Chart Replay or during a Back Test  of an automated trading system. </p>
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="SpreadOrders">A &gt;&gt; Spread Orders</h3>
+        <div class="member-link">[<a href="#SpreadOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>These buttons within the Spread Orders section, allow the entry of a Spread Order. The following buttons are available:</p>
+
+        <ul>
+            <li><b>Enter Spread Order</b>: Selecting this button will open the Settings window of the <a href="indexdd2a.html?page=doc/Trade-SpreadOrderEntryStudy.html">Spread Order Entry Study</a>.</li>
+
+            <li><b>Enable/Disable</b>: This button will change its display depending on the state of the study. If the study is currently disabled and not functioning, then this button will display <b>Enable</b>. Selecting the <b>Enable</b> button will enable the monitoring of the spread prices relative to the entered <b>Spread Entry Price</b>, if the position has not been filled; or this enables the monitoring of the Target and Stop orders if the position has already been filled.
+            <br><br>
+            If the study is currently enabled and monitoring for either the Spread Entry Price or the Target or Stop prices, then this button will display <b>Disable</b>. Selecting the <b>Disable</b> button will disable the monitoring of the spread price relative to the entered <b>Spread Entry Price</b> if the order has not been filled; or this disables the monitoring of the Target and/or Stop orders if the position has already been filled and either a Target or a Stop position has been entered for the study.
+            </li>
+
+            <li><b>Remove Study</b>: This button will remove the <b>Spread Order Entry</b> study from the chart that is associated with the Trade Window on which this button is selected. Removing the study disables the study if it was active, and removes the study from the chart. Be aware that removing the study when it is monitoring for Target or Stop positions will remove this monitoring and any open positions will no longer be automatically closed when the price crosses the entered values for the Target or Stop orders.</li>
+        </ul>
+    </section>
+</section>   
+
+<section class="h2" >
+    <h2 id="OpeningTradeWindow">Opening Trade Window for Chart or Trade DOM</h2>
+    <div class="member-link">[<a href="#OpeningTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Refer to the  images below to understand the difference between attached and not attached Trade Window.</p>
+
+    <p>If the Trade Window is attached to a Chart or Trade DOM, then it is already open and visible and you can interact with the controls. If you cannot fully access the controls because it is partially cut off at the bottom, then detach it by selecting <b Class = "menu_item">Trade &gt;&gt; Attach Trade Window To Chart</b>. This will detach it.  </p>
+
+    <p>After detaching it, if it is no longer visible then select <b Class = "menu_item">Chart &gt;&gt; Reset Child Windows</b>. After this select <b Class = "menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> again.</p>
+
+    <p>If the Trade Window is not already to attached to the Chart or Trade DOM, then go to the Chart or Trade DOM you want to open the Trade Window for and select <b Class = "menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> on the menu.</p>
+
+    <p>If after selecting this command  the trade Window still not visible, then select <b Class = "menu_item">Chart &gt;&gt; Reset Child Windows</b>. After this select <b Class = "menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> again.</p>
+
+    <p>To attach an open Trade Window which is not currently attached to a Chart or Trade DOM, go to the Chart or Trade DOM and select <b Class = "menu_item">Trade &gt;&gt; Attach Trade Window To Chart</b>. </p>
+
+
+    <div style="text-align: center;">
+        <a href="../images/detachedtradewindow.png" rel="lightbox"><img src="../images/detachedtradewindow.png" alt=""  class="screenshot" loading="lazy" width="350"></a>
+        <a href="../images/attachedtradewindow.png" rel="lightbox"><img src="../images/attachedtradewindow.png" alt=""  class="screenshot" loading="lazy" width="300"></a>
+    </div>
+
+    <section class="h3" >
+        <h3 id="TradeWindowIndependentFromOthers">Each Trade Window  is Completely Independent from Others</h3>
+        <div class="member-link">[<a href="#TradeWindowIndependentFromOthers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> If it is not already understood, it needs to be understood that each Chart and Trade DOM has its own Trade Window and each of these Trade Windows and all of the settings contained within them, are completely independent from Trade Windows for other  Charts/Trade DOMs. </p>
+
+        <p>Therefore, changing the settings on one of them, will have no effect on any other Trade Window unless they are linked.</p>
+
+        <p>To link Trade Windows, refer to <a href="#TradeWindowLinking">Trade Window Linking</a>.</p>
+        
+        
+        <p>If the Trade Window is not attached to a chart, and you are using charts which are part of the main Sierra Chart window, not detached, and the chart which is in focus is maximized, as you switch among  other charts, the prior visible Trade Window will be hidden and the Trade Window associated with the next  active chart will be shown  if it previously was. </p>
+    </section>
+</section>
+
+<section class="h2" >
+    <h2 id="AttachingTradeWindowRightSide">Attaching Trade Window to Right Side of Chart or Trade DOM</h2>
+    <div class="member-link">[<a href="#AttachingTradeWindowRightSide">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To open the Trade Window, refer to <a href="#OpeningTradeWindow">Opening Trade Window for Chart or Trade  DOM</a>.</p>
+
+    <p>To attach the Trade Window to a Chart or Trade DOM, select  <b Class = "menu_item">Trade &gt;&gt; Attach Trade Window to Chart</b>.</p>
+
+    <p>To attach the Trade Window to the right side of the Chart or Trade DOM, select <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>.  Enable the <b>Attach Trade Window to Right Side</b> option.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowMissingDoesNotAppear">Trade Window is Missing or Does Not Appear</h2>    
+    <div class="member-link">[<a href="#TradeWindowMissingDoesNotAppear">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When <a href="#OpeningTradeWindow" >opening the Trade Window</a> and it is not attached to a Chart or Trade DOM, and it is not visible, then select <b Class = "menu_item">Chart &gt;&gt; Reset Child Windows</b>.</p>
+
+    <p>After this select <b Class = "menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> again.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowSettingsNotApplyingToChartOrTradingDOM">Trade Window Settings Not Applying to Chart or Trading DOM</h2>
+    <div class="member-link">[<a href="#TradeWindowSettingsNotApplyingToChartOrTradingDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Each chart and Trade DOM window has its own associated Trade Window. So changing the settings on one Trade Window for a different chart will have no effect on another chart or Trade DOM.</p>
+
+    <p>Therefore, if you are changing the settings on a Trade Window and they are not applying to the particular chart or Trade  DOM  you are using, then you are not changing the settings on the correct Trade Window.</p>
+
+    <p>In this case what you need to do is go to the chart or Trade DOM and select <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> to open the trade window for that specific chart. If you do not see it, select <b class="menu_item">Chart &gt;&gt; Reset Child Windows</b> and try again.</p>
+
+    <p>For more information, refer to <a href="#OpeningTradeWindow">Open the Trade Window</a>.</p>
+    
+    <p> One solution to allow  the settings from one Trade Window to apply to another Trade Window for a different  Chart or  Trading DOM   is to use the  <a href = "index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking">Chart Linking</a> feature and to link the  <b>Trade Window</b> between two or more   Charts/Trading DOMs.  </p>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowLinking">Trade Window Linking</h2>
+    <div class="member-link">[<a href="#TradeWindowLinking">Link</a>] - [<a href="#top">Top</a>]</div> 
+ 
+    <p> Each Chart or Trading  DOM  has its own associated Trade Window  whether it is visible or not.   Trade Windows can be linked together  so that when changing any of the settings on one of them, the other linked Trade Windows also update to have identical settings. </p>
+    
+    <p> This linking occurs whether  a chart Trade Window that is linked is visible or not. </p>
+    
+    <p>For complete documentation for this feature, refer to  <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking">Chart Linking</a>. </p>
+    
+     <p>In the   <b class="menu_item">Chart &gt;&gt; Chart Settings</b> you will need to enable the <b> Trade Window</b> Chart Linking option. </p>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowSettingColors">Setting the Colors of the Trade Window Buttons</h2>
+    <div class="member-link">[<a href="#TradeWindowSettingColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The background color of the Trade Window can be colored based upon whether Sierra Chart is in Trade Simulation Mode or not. The color of the buttons can also be colored. To adjust the color setting, select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>. The following are the relevant color settings in <b>Colors and Widths</b> list box:</p>
+
+    <ul>
+        <li><b>Chart Trade Window Background LIVE</b>: </li>
+        <li><b>Chart Trade Window Background SIM</b>: </li>
+        <li><b>Chart Trade Window Buy Button Color</b>: </li>
+        <li><b>Chart Trade Window Sell Button Color</b>: </li>
+        <li><b>Chart Trade Window Flatten/Reverse/Cancel Button Color</b>: </li>
+        <li><b>Chart Trade Window Quantity Buttons Color</b>: </li>
+    </ul>
+
+    <p>After changing the colors of buttons, it is necessary to close the Trade Window by selecting <b class="menu_item">Menu/M &gt;&gt; Close Trade Window</b> on the Trade Window, for the changes to go into effect. </p>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowOrderButtons">Enabling/Disabling Trade Window Order Buttons</h2>
+    <div class="member-link">[<a href="#TradeWindowOrderButtons">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Buy Bid, Buy Ask, Sell Bid, Sell Ask, Flatten and Reverse buttons on the Trade Window can be enabled or disabled. It is not possible to hide the buttons. Only enable or disable them. Follow these instructions: </p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> on the menu.</li>
+
+        <li>In the <b>Trade Window Controls</b> frame, enable or disable the buttons as required.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+    </ol>
+
+    <div style="text-align: center;"><a href="../images/tradewindowcontrolsettings.png" rel="lightbox"><img src="../images/tradewindowcontrolsettings.png" alt="" class="screenshot" loading="lazy" width="700" ></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowConfigurations">Using and Changing Between Different Trade Window  and Attached Orders Configurations</h2>
+    <div class="member-link">[<a href="#TradeWindowConfigurations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>You are able to save a Trade Window configuration which includes the current settings on the   <a href = "#OpeningTradeWindow">Trade Window</a>, to a file.  </p> 
+    
+     <p>The configuration will also include the current   <a href = "index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a> defined on the  <b>Targets</b> tab of the Trade Window. </p>
+     
+     <p>You can easily switch between these saved configurations. <em>This is especially useful for rapidly switching between different Attached Orders configurations</em>.</p>
+
+    <p>Also, the settings on the Trade Window are saved with the associated chart when you save your charts as a <a href="index7674.html?page=doc/Chartbooks.html">Chartbook</a>.  When you open your Chartbook, the Trade Window will be restored with the previous settings.  To save the current chartbook, select <b class="menu_item">File &gt;&gt; Save</b>.  </p>
+    
+    <p>The <a href = "#TradeWindowConfigurationScreenImages">images</a> below  provide visual guidance of using Trade Window configurations. </p>
+
+    <section class="h3">
+        <h3 id="SavingConfiguration">Saving Trade Window Configuration</h3>
+        <div class="member-link">[<a href="#SavingConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To save the current trade window configuration, press the  <b>Menu (M)</b> button on the   <b>Main</b> or <b>C</b> tab of the Trade Window. Select <b class = "menu_item">Save Configuration</b> on the menu.  Enter a  filename in the <b>Filename</b> box on the Save File window, and press <b>Save</b>. Refer to the  <a href = "#TradeWindowConfigurationScreenImages">images</a> below  for a visual for this menu.</p>
+
+        <p>If you wish to have  a Trade Window configuration that does not contain any Attached Orders, then press the <b>Remove</b> button on the <b>Attached Orders</b> tab of the Trade Window and remove all of the Attached Orders before saving the Trade Window configuration.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SelectingConfiguration">Selecting/Using a Trade Window Configuration</h3>
+        <div class="member-link">[<a href="#SelectingConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To select a saved Trade Window configuration, select the one that you want to use  in the list box that contains the Trade Window configuration files at the top of the Trade Window.  Refer to the <a href="#TradeWindowConfigurationScreenImages">image</a> below  where this list box is highlighted. The Trade Window will be immediately updated with the saved configuration. </p>
+        
+        <p> It is also supported to select / load  a saved Trade Window configuration  through Control Bar buttons for easy access through the Control  Bar without having the Trade Window open. Refer to <a href = "index6736.html?page=doc/ControlBar.php#ControlBarTradeWindowConfigurationButtons">Control Bar Trade Window Configuration Buttons</a>. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="DeletingConfiguration">Delete Configuration File</h3>
+        <div class="member-link">[<a href="#DeletingConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To delete a Trade Window Configuration file, follow the below instructions:</p>
+
+        <ol>
+            <li>Press the  <b>Menu (M)</b> button on the   <b>Main</b> or <b>C</b> tab of the Trade Window. </li>
+
+            <li>Select <b class = "menu_item">Save Configuration</b> on the menu.</li>
+
+            <li>In the Save File window, select the file in the list that you want to delete</li>
+            <li>Press the  <b>Delete File(s)</b>  button.</li>
+            <li> Press  <b>Yes</b> to confirm.</li>
+            <li>   Press the <b>Cancel</b> button to cancel out of the Save File window. </li>
+            <li> Another method to delete a Trade Window configuration file is to go to the  Sierra Chart <b> Data Files Folder </b> on your system and delete the <b>.twconfig</b> file for the configuration that you want to delete. You can find the Sierra Chart <b>Data Files Folder  </b> by selecting <b class="menu_item">Global Settings &gt;&gt; General Settings</b>. The <b>Data Files Folder</b>  control displays the path to the folder.</li>
+        </ol>
+    </section>
+    
+    <section class="h3">
+        <h3 id="RenamingConfigurationFile">Renaming Configuration File</h3>
+        <div class="member-link">[<a href="#RenamingConfigurationFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To rename a Trade Window Configuration file, follow the below instructions:</p>
+
+        <ol>
+        
+            <li>   <a href="#OpeningTradeWindow" >Open the Trade Window</a> for the chart if it is not already open.</li>
+            <li>Press the  <b>Menu (M)</b> button on the   <b>Main</b> or <b>C</b> tab of the Trade Window  for the chart. </li>
+
+            <li>Select <b class = "menu_item">Save Configuration</b> on the menu.</li>
+
+            <li>In the Save File window, select the file in the list that you want to rename</li>
+            <li>Press the  <b>Rename</b>  button.</li>
+            <li>Enter the new file name and press OK.</li>
+          
+            <li>   Press the <b>Cancel</b> button to cancel out of the Save  File window. </li>
+          
+        </ol>
+    </section>
+             
+    <section class="h3">
+        <h3 id="TradeWindowConfigurationScreenImages">Trade Window Configuration Screen Images</h3>
+        <div class="member-link">[<a href="#TradeWindowConfigurationScreenImages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <table class="center">
+            <tr>
+                <td> 
+                    <a href="../images/tradewindowconfiguration.png" rel="lightbox"><img src="../images/tradewindowconfiguration.png" class="screenshot" loading="lazy" alt="" width="270" ></a>
+                </td>
+                <td>
+                    <a href="../images/savetradewindowconfig.png" rel="lightbox"><img src="../images/savetradewindowconfig.png" class="screenshot" loading="lazy" alt="" width="400"></a>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="ConfigurationFileAnotherSource">Using a Trade Window Configuration File Provided to You</h3>
+        <div class="member-link">[<a href="#ConfigurationFileAnotherSource">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the steps below to use a Trade Window configuration file that has been provided to you:</p>
+
+        <ol>
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; General Settings</b> on the menu. Make a note of the path to the <b>Data Files Folder </b> as displayed in the <b>Data Files Folder</b> box.</li>
+            <li>Save the Trade Window Configuration file (<b>.twconfig</b> extension) to the <b>Data Files Folder </b> on your system, that you made a note of in the previous step.
+                <div style="text-align: center;"><a href="../images/twconfigfilesupportboard.png" rel="lightbox"><img src="../images/twconfigfilesupportboard.png" width="700" alt="" class="screenshot" loading="lazy"></a></div>
+            </li>
+
+            <li>Go to the <b>Trade Window</b> for the chart or Trade DOM  or <a href="#OpeningTradeWindow">Open the Trade Window</a> if it is not already open. </li>
+
+            <li>In the list box at the top of the Trade Window that contains all of the Trade Window configuration files, select the one you have saved.  Refer to <a href="#TradeWindowConfigurationScreenImages">Trade Window Configuration Screen Images</a>  which show this box highlighted.</li>
+        </ol>
+    </section>
+    
+    <section class="h3">
+        <h3 id="LinkingTradeWindowConfigurationBetweenCharts">Linking Trade Window Configuration Between Charts</h3>
+        <div class="member-link">[<a href="#LinkingTradeWindowConfigurationBetweenCharts">Link</a>] - [<a href="#top">Top</a>]</div>   
+        
+        <p>It is supported to apply all of the Trade Window settings including  the selected Trade Window Configuration, to other charts that are linked to the chart for which you are changing the settings on the associated Trade Window. </p>
+
+
+         <p>To do this, refer to  <a href = "index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking">Chart Linking</a>. You will need to enable  the <b>Trade Window </b> linking  option and set up the Link Number. </p>
+    
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TradeWindowConfigurationCausingExistingSettingsToChange">Trade Window Configuration Causing Existing Trade Window Settings to be Changed</h2>
+    <div class="member-link">[<a href="#TradeWindowConfigurationCausingExistingSettingsToChange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class="GeneralBackgroundHighlightLight">When changing the  <a href="#TradeWindowConfigurations" >Trade Window Configuration</a> all of the existing settings on the Trade Window will be changed  to the settings saved with the Trade Window Configuration file.</p>
+
+    <p>The order Confirmation settings   are also saved as part of a <a href="#TradeWindowConfigurations">Trade Window Configuration</a>.</p>
+
+    <p>Therefore, when you selecting a Trade Window Configuration from the list box at the top of the Trade Window, the order confirmation options that were saved at that time with that configuration, <em>will be restored</em>.  This something to keep in mind when it appears as though that changes to the order confirmations  have reverted back. </p>
+
+    <p>In this case the solution is to set the Order Confirmation options as you require and then again follow the  <a href="#SavingConfiguration">Saving Trade Window Configuration</a> instructions. </p>
+</section>
+
+<section class="h2">
+    <h2 id="PriceFormatting">Price Formatting</h2>
+    <div class="member-link">[<a href="#PriceFormatting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are 3 ways to format prices when entering them into the Trade Window. When you are trading from the chart, Chart DOM, Trade DOM the price formatting is handled automatically. The format you use in Sierra Chart is not necessarily the format used by the software provided by your trading service. We use consistent standardized formats.</p>
+
+    <section class="h3">
+        <section class="h4">
+            <h4>Decimal Format</h4>
+
+            <p>This is a standard decimal number. For example, for the ES futures you can enter <b>1050.25</b>, or  just <b>1050</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4>Fractional Format</h4>
+
+            <p>This is a number with a numerator/denominator fraction. The whole part of the number and numerator/denominator part of the number are separated by a space. For example, for Bonds you can enter <b>100 1/32</b>, or <b>100 1.5/32</b>, or just <b>100</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4>Short Fractional Format</h4>
+
+            <p>This is a number using the short fractional notation where the denominator is specified through the <b>Price Display Format</b> in the <a href="index4cf4.html?page=doc/ChartSettings.html">Chart Settings</a> window. For example, if the <b>Price Display Format</b> is set to <b>1/32</b>, you can enter <b>100'1</b>, or <b>100'1.5</b>, or just <b>100</b>.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TradingFromKeyboardPointerControlBar">Trading from the Keyboard, Pointer, and Control Bar</h2>
+    <div class="member-link">[<a href="#TradingFromKeyboardPointerControlBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following sections describe how to perform trades using shortcut methods created for the Keyboard, Right-Click on the Pointer device, and Control Bar buttons.</p>
+
+    <section class="h3">
+        <h3 id="KeyboardShortcuts">Trading Keyboard Shortcuts</h3>
+        <div class="member-link">[<a href="#KeyboardShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Keyboard shortcuts can be assigned to common trading commands. These allow you to invoke a trading command from a keyboard.</p>
+
+        <p>These are configured through <b class="menu_item">Global Settings &gt;&gt; Customize Keyboard Shortcuts</b>. Assign the keyboard shortcut keys to any of the <b class="menu_item">Trading Keyboard Shortcuts</b> commands. For more information, refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Customize Keyboard Shortcuts</a>.</p>
+
+        <p>For these keyboard shortcuts for trading commands to be active on a chart or a Trade DOM, <b class="menu_item">Trade &gt;&gt; Trading Keyboard Shortcuts Enabled</b> must be checked on the menu for the particular   Chart or Trade DOM.  <em>This option is specific to each individual  Chart/Trade DOM and is not global</em>.</p> 
+        
+        <p>If keyboard shortcuts are not enabled for the chart, there is an error message given in the <b class="menu_item">Window &gt;&gt; Message Log</b> when using one .</p>
+        
+        <p>Additionally, it is necessary for  <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> be enabled for the  particular Chart or Trade DOM that you have enabled keyboard  shortcuts for  and that window must be in focus for it to receive those shortcuts. Otherwise, no action will be taken.</p>
+
+        <div style="text-align: center;"><a href="../images/tradingkeyboardshortcuts.png" rel="lightbox"><img src="../images/tradingkeyboardshortcuts.png" alt="" width="300" class="screenshot" loading="lazy"></a></div>
+
+        <section class="h4">
+            <h4 id="DeterminingOrderForOrderModificationKeyboardShortcuts">Determining Order for Order Modification Keyboard Shortcuts</h4>
+            <div class="member-link">[<a href="#DeterminingOrderForOrderModificationKeyboardShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>In the case of the keyboard shortcuts for order modifications which include the <b>Target Order Tick Up/Down</b> and the <b>Stop Order Tick Up/Down</b> commands,  the particular order that gets modified is going  to be the first found Target or Stop order nearest to the last trade price.</p>
+        </section>
+        
+        
+        <section class="h4">
+            <h4 id="KeyboardShortcutsForTradeWindowConfigurations">Keyboard Shortcuts for Trade Window Configurations</h4>
+            <div class="member-link">[<a href="#KeyboardShortcutsForTradeWindowConfigurations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>  It is fully supported to configure a keyboard shortcut for a Trade Window Configuration. For more information about Trade Window configurations, refer to <a href="#TradeWindowConfigurations">Using and Changing Between Different Trade Window and Attached Orders Configurations</a>. </p>
+            
+            <p> The first step  is to set up a Control Bar button for the particular Trade Window configuration that you want. Refer to <a href = "index6736.html?page=doc/ControlBar.php#ControlBarTradeWindowConfigurationButtons">Control Bar Trade Window Configuration Buttons</a>. </p> 
+            
+            
+            <p> When that is complete,  then you can set up a keyboard shortcut for particular configured Control Bar button  which has been assigned to a Trade Window  Configuration file. Refer to  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Customize Keyboard Shortcuts</a>. </p>
+        </section>        
+        
+        <section class="h4">
+            <h4 id="KeyboardShortcutForSettingFocusToTradeWindowConfiguration">Keyboard Shortcut for Setting Focus to Trade Window Configuration</h4>
+            <div class="member-link">[<a href="#KeyboardShortcutForSettingFocusToTradeWindowConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>In the list of  <b>Customize Keyboard Shortcuts &gt;&gt; Trading Keyboard Shortcuts</b>,  there is the command <b>Set Focus to Trade Window Configuration List Box </b> which can be used to set the focus to the list box containing the available Trade Window Configuration files for the Trade Window for the chart. </p>
+            
+            <p> You can use this to quickly set the focus to that list box and then use the arrow keys to select one of the available configuration files. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TradingKeyboardShortcutsCaution">Trading Keyboard Shortcuts Caution</h4>
+            <div class="member-link">[<a href="#TradingKeyboardShortcutsCaution">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>It is necessary to use trading keyboard shortcuts with caution   because the operating system will repeatedly send the underlying trading command message to Sierra Chart when you press and   hold the particular key combination that you set up for a particular trading command.</p>
+
+            <p>It is recommended to go into the operating system control panel and increase the <b>Keyboard  &gt;&gt; Speed  &gt;&gt; Character Repeat &gt;&gt; Repeat Delay </b> to eliminate the possibility of a repeated  trading command message from being sent if you hold the key combination too long. </p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="CustomKeyboardShortcuts">Custom Trading Keyboard Shortcuts</h3>
+        <div class="member-link">[<a href="#CustomKeyboardShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To create a custom trading keyboard shortcut that will submit an order based upon the specified parameters which include the side, order type, reference price and offset, follow the instructions below.</p>
+        <ol>
+            <li>Select <b Class = "menu_item">Global Settings &gt;&gt; Customize Keyboard Shortcuts</b>.</li>
+
+            <li>In the <b>Commands</b> list, select <b>Custom Trading Keyboard Shortcuts</b>. </li>
+
+            <li>Press the <b>+</b>  beside that list item to expand the list.</li>
+
+            <li>Select <b>Custom Trading Keyboard Shortcut 1</b> or whatever number you want to  configure. </li>
+
+            <li>Assign the keyboard shortcut  you want to that command. Refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts" Target="_blank" rel="noopener noreferrer">Customize Keyboard Shortcuts</a> for detailed instructions.</li>
+
+            <li>Press the <b>Customize Trading Command </b> button to open the configuration window for the particular Custom Trading Keyboard Shortcut selected.</li>
+
+            <li>Set the <b>Trade Type</b> to either <b>Buy </b> or <b>Sell</b> for the order.</li>
+
+            <li>From the <b>Order Type</b> list, select a particular order type to submit for the order.</li>
+
+            <li>Set the <b>Reference Price</b> to either Bid, Ask or Last. The order price will be one of these prices selected.</li>
+
+            <li>Set the <b>Offset From Reference Price</b> to the number of ticks, according to the  <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Tick Size</b>, to add or subtract from the Reference Price. Use 0 for the offset to use the Bid, Ask,  or Last prices without any modification. It is  the Reference Price, along with this offset which calculates the final order price.
+            <br><br>
+            
+             In the case of a Sell Stop order, the offset will need to be negative. In the case of a Buy Stop order the offset will need to be positive.</li>
+
+            <li>Go to a Chart  which is in Chart Trading Mode, or to a Trade DOM and make sure there is a checkmark by  <b Class = "menu_item">Trade &gt;&gt; Trading Keyboard Shortcuts Enabled</b> to enable trading keyboard shortcuts for that particular Chart or Trade DOM.
+            </li>
+
+            <li>When that particular Chart  or Trade DOM  is active, then use the particular keyboard shortcut assigned to  invoke submitting the configured order.</li>
+            
+            <li>With any of the submitted orders, Attached Orders can be used.  Make sure the Attached Orders are configured on the Trade Window and enabled for the chart or Trading DOM. Refer to <a href="index0ef8.html?page=doc/AttachedOrders.html#AttachedOrderWindowInterface"  target="_blank" rel="noopener noreferrer">Using Attached Orders and Attached Order Settings</a>. </li>
+        </ol>
+
+        <div style="text-align: center;"><a href="../images/customtradingkeyboardshortcuts.png" rel="lightbox"><img src="../images/customtradingkeyboardshortcuts.png" alt="" width = "503" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeShortcutMenu"> Chart Trade Shortcut Menu</h3>
+        <div class="member-link">[<a href="#ChartTradeShortcutMenu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Common trading commands can be added to the right-click Chart Trading Shortcut Menu in order to allow quick access to these commands from the pointer.</p>
+
+        <p>The available options for the Chart Trading Shortcut Menu are found in <b class="menu_item">Global Settings &gt;&gt; Customize Chart Trade Menu</b>. </p>
+        
+        <p>For information on how to add and modify the Chart Trading Shortcut Menu, refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeChartTradeMenu">Customize Chart Trade Menu</a>.</p>
+
+        <p>In order to use the Chart Trading Shortcut Menu, ensure that the option <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> is selected, and then right-click with the pointer in the chart to bring up the Chart Trading Shortcut Menu. Note that this menu may be displayed along with other options, depending on where the pointer is clicked. </p>
+        
+        <p>Select the desired option from the list in order to perform trading from this menu.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ControlBarTradingShortcuts">Control Bar Trading Shortcuts</h3>
+        <div class="member-link">[<a href="#ControlBarTradingShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Common trading commands can be added to the Control Bar Buttons in order to allow quick access to these commands.</p>
+
+        <p>The available options for the Control Bar Buttons are found in <b class="menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar # &gt;&gt; Trading Commands</b>. For information on how to add Trading Control Bar Buttons refer to <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Customize Control Bars</a>.</p>
+
+        <p>In order for the Trading Control Bar Buttons to function, it is necessary that the option for <b class="menu_item">Trade &gt;&gt; Enable Keyboard Shortcuts</b> is enabled. If this is not enabled, then when selecting the control bar button, a message will display in the Message Log stating <b>Enable trading keyboard shortcuts with 'Trade &gt;&gt; Trading Keyboard Shortcuts Enabled'</b>.</p>
+
+        <p>Once setup, the Control Bar buttons can be used to produce the specified action by simply clicking on the Control Bar Button.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="CustomControlBarTradingShortcuts">Custom Control Bar Trading Shortcuts</h3>
+        <div class="member-link">[<a href="#CustomControlBarTradingShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is also possible to combine the use of a custom Keyboard Shortcut with a Control Bar button specifically for trading. This can be used if a particular command is not available in the standard options for Trading in the Control Bar Buttons, or if additional control is desired. In order to create these Custom Control Bar Buttons, follow the instructions below:</p>
+
+        <ol>
+            <li>Follow the instructions to create a <a href="#CustomKeyboardShortcuts" target="_blank" rel="noopener noreferrer">Custom Trading Keyboard Shortcut</a>.</li>
+
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Customize Control Bar Buttons &gt;&gt; Control Bar Button #</b>.</li>
+
+            <li>In the <b>Available Control Bar Commands</b>list, select <b>Custom Trading Keyboard Shortcuts</b>.</li>
+
+            <li>Press the <b>+</b> beside that list item to expand the list.</li>
+
+            <li>Select the appropriate <b>Custom Trading Command/Shortcut #</b> to add.</li>
+
+            <li>Select the <b>Add</b> button to add the shortcut to the Control Bar. Refer to <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Customize Control Bars</a> for detailed instructions.</li>
+
+            <li>Select the <b>Properties</b> button to open the Properties window for the particular Custom Trading Control Bar Shortcut selected. Modify the properties as desired.</li>
+
+            <li>Select <b>OK</b> to close the Properties window.</li>
+
+            <li>Select <b>OK</b> to close the Customize Control Bar # window.</li>
+
+            <li>If this is a new Control Bar that is not currently on the main Sierra Chart window, then follow the instructions for <a href="index6736.html?page=doc/ControlBar.php#ControlBar">Customize Control Bars</a> to add it.</li>
+            
+            <li>With any of the submitted orders, Attached Orders can be used.  Make sure the Attached Orders are configured on the Trade Window and enabled for the chart or Trading DOM. Refer to <a href="index0ef8.html?page=doc/AttachedOrders.html#AttachedOrderWindowInterface"  target="_blank" rel="noopener noreferrer">Using Attached Orders and Attached Order Settings</a>. </li>
+        </ol>
+    </section>
+    
+    <section class="h3">
+        <h3 id="ChangingTradeOrderQuantityForChartWithKeyboardShortcut">Changing Trade Order Quantity for Chart with Keyboard Shortcut</h3>
+        <div class="member-link">[<a href="#ChangingTradeOrderQuantityForChartWithKeyboardShortcut">Link</a>] - [<a href="#top">Top</a>]</div>   
+        
+        <p>It is supported to change the  trade Order Quantity within the chart with a keyboard shortcut. </p>
+        <ol>
+            <li>  Go to the chart you want to change the Order Quantity for.</li>
+            
+            <li> Type with your keyboard  the letters  <em>OQ</em>. </li>
+            <li> Type the order quantity you want to change to.  </li>
+            <li>  Press the Enter key on the keyboard.  The Order Quantity will be changed   and can be verified through the <b>Quantity</b> setting on the Trade Window for the chart.  </li>
+            <li>  Example:  <em>OQ5</em> followed by the Enter key.  </li>
+        </ol>
+    
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="HidingPLonTradeWindow">Hiding Profit/Loss on Trade Window</h2>
+    <div class="member-link">[<a href="#HidingPLonTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is possible to hide both the  Open Profit/Loss  and the Daily/Net Profit/Loss on the Trade Window so that they are not  displayed.</p>
+
+    <p>To do this, go to the chart or Trade DOM that the Trade Window is for or is attached to and select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>.</p>
+
+    <p>Set the <b>Profit/Loss Format</b> setting to <b>Do Not Display</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="RejectedMarketOrderWhenUsingFlatten">Rejected Market Order When Using Flatten or Reverse Because of Position Limit Exceeded</h2>
+    <div class="member-link">[<a href="#RejectedMarketOrderWhenUsingFlatten">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p class = "GeneralBackgroundHighlight"> You will <em>not</em> experience this problem described in this section when using  <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing</a>.</p>
+
+    <p>When using the <a href="#FlattenCancel" >Flatten</a> or <a href="#ReverseCancel" >Reverse</a> command buttons / functions, the Market order which is sent in response to these functions can be rejected by the Trading server when there is a working order or orders for the Symbol and Trade  Account that  also exist at the time the Market order is being sent.</p>
+
+    <p>The reason for the possible order rejection in this scenario is that the Trade Position limit in combination with the quantity of working orders has been exceeded. This is a limit that may be set on your Trading account by your Trading service.  </p>
+    
+    
+    <p>The reason that this would occur when it logically seems like it should not  is that the Trade Position that would result by executing all of the orders that are currently working including the new Market order, would cause the Trade Position limit to be exceeded.  </p>
+
+    <p>For example, consider that your account has a Position limit of 2 contracts. Your current Trade Position is +2,  and there are working Target and Stop orders each with a quantity of 2 and they are not  in a server-side OCO group. Therefore, when both of those orders fill, the resulting Trade Position will be -2. If a Sell Market order is also sent with a quantity of 2, this will take the position to -4 according to the calculation by the Trading server. This is what causes the rejection.</p>
+
+    <p> Even though when flattening or reversing a Position the working orders are being canceled, those cancellations  do not become complete at the time the Market order is sent. So it is for this reason, that the new Market order can be rejected. </p>
+
+    <p> When you look in the <b Class = "menu_item">Trade &gt;&gt; Trade  Activity Log </b>  for the line where the order is rejected, you will see the  <b>Order Action Source</b> indicate something like: <b><em>Order update (Order reject). Info: <span class="GeneralBackgroundHighlight">Position limit exceeded</span>.</em></b>. This error is not specific to any particular Trading service. It can occur with any of them. </p>
+    
+    <p class = "GeneralBackgroundHighlight"> You will <em>not</em> experience this problem when using  <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing</a>.</p>
+
+    <p> The solution to this problem, when not using Teton Order Routing, is to enable this option: <a href = "index4451.html?page=doc/GlobalTradeSettings.html#HoldMarketOrderUntilPendingCancelOrdersConfirmed">Hold Market Order Until Pending Cancel Orders Are Confirmed</a> in <b class="menu_item">Global Settings &gt;&gt; General Trade Settings</b>. </p>
+    
+    <p class = "GeneralBackgroundHighlight">The  <em>very best solution</em> to this problem is to use <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing</a>.  You will <em>not</em> experience this problem when using  <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing</a>. </p>
+</section>
+
+
+
+<section class="h2">
+    <h2 id="FlatteningPositionAtSameTimeOfFillResultingInNewPosition">Flattening Position at Same Time of Fill Resulting in New Position</h2>
+    <div class="member-link">[<a href="#FlatteningPositionAtSameTimeOfFillResultingInNewPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+ 
+    <p>Consider the scenario where that you have a  Trade Position for a particular Symbol, and a working Target and Stop order. </p>
+    
+    <p>You flatten the  Trade Position using the  Flatten and Cancel command. However, at that same moment, either the Target order or Stop order has filled which has  then offset the  Trade Position so there is no longer a  Trade Position.</p>
+
+    <p>This  Flatten and Cancel operation then tries to cancel the Target and Stop orders and these are already canceled. Therefore, you receive two rejection messages indicating those orders are no longer working.</p>
+
+    <p>Additionally the market order which was meant to flatten  the original Trade Position, which no longer exists, then instead establishes a new Trade Position in the opposite direction.</p>
+
+    <p>In this scenario you need to Flatten this new  Trade Position.</p>
+</section>
+
+<section class="h2">
+    <h2 id="NonresponsiveTradeOrder">Nonresponsive Trade Order</h2>
+    <div class="member-link">[<a href="#NonresponsiveTradeOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p>If a new order submitted, order modification, or order cancellation is not responded to from the external Trading service, then this will usually have three causes.</p>
+
+    <p>You will know this condition has occurred when you see the following text in the Trade &gt;&gt; Trade Service  Log:     <b><em>Requesting order status for non-responsive order. Time since last action:</em></b>.</p>
+    <p>  When an order has not been responded to,  it may not be possible to cancel the order. It may not even be a working order either.   You will need to contact your broker for further help  with the order. </p>
+
+    <p>The first cause is a network connectivity issue you have with the Trading service. This will eventually resolve itself, within one minute.  However, you can also resolve it sooner by  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" target="_blank" rel="noopener noreferrer">reconnecting</a> to the data feed. </p>
+
+     <p>The second cause will be the external Trading server did not respond to these requests. This is going to be a trading server issue. In this case also <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" target="_blank" rel="noopener noreferrer">reconnect</a> to the data feed. </p>
+
+     <p>The third cause is that there is a mapping problem with  the order response from the trading server to the order Sierra Chart has in its order list. Mapping is accomplished through the Service Order ID and Trade Account fields. If these are not exactly matching between the order response and the order Sierra Chart has in its list, there will be an issue. This last reason is a very very unlikely cause and if it exists, it is something that Sierra Chart would resolve with a particular Trading  service and it will not occur again. Therefore, it is extremely unlikely for this to be applicable.</p>
+
+
+
+</section>
+<section class="h2">
+    <h2 id="UsingOrderFillCalculatedTradePositionDataIndependentPosition">Using Order Fill Calculated Trade Position Data for Independent Position Tracking</h2>
+    <div class="member-link">[<a href="#UsingOrderFillCalculatedTradePositionDataIndependentPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is supported to calculate and display Trade Position data based upon order fills from a specified Date-Time, so that in a particular chart or Trade DOM you can have independent Trade Position tracking which is different than the Trading service provided Trade Position data for a particular Symbol and Trade Account.</p>
+
+    <p>Follow the instructions below to accomplish this.</p>
+    <ol>
+
+        <li> Go to the particular Chart or Trade DOM that you want to use independent Trade Position data for.</li>
+
+        <li>Follow the instructions to <a href="#OpeningTradeWindow">Open the Trade Window for Chart or Trade  DOM</a>. </li>
+        
+        <li>Go to the Trade Window for the chart and select <b class="menu_item">Menu/M &gt;&gt; Settings &gt;&gt; Use Order  Fill Calculated Position</b>. There needs to be a checkmark by this option.</li>
+
+        <li>Select <b class="menu_item">Trade &gt;&gt; Only Orders from Chart</b> on the main menu and make sure there is a checkmark by this option.</li>
+
+        <li> For more details, refer to <a href="index7cfb.html?page=doc/TradeStatusWindows.html#OrderFillCalculatedPosition">Order Fill Calculated Trade Position</a> data.</li> 
+
+        <li>Select  <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>.  Set <b>Order Fills Start Date-Time </b> to the starting date-time where you want the Trade Position data to be calculated from.
+        <br> <br>
+        In the first box, specify the date in the format <b>YYYY-MM-DD</b>. In the second box specify the time in the format <b>HH:MM:SS</b>. This needs to be the Date-Time at or before the first fill for the Trade Position you want to track independently. 
+            <br> <br>
+            The time needs to be based upon the <a href="index219e.html?page=doc/TimeZone.html" >Time Zone</a> setting.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="FlatteningAllPositionsAndCancelingOrders">Flattening All Non-simulated Positions and Canceling All Orders in a Single Operation</h2>
+    <div class="member-link">[<a href="#FlatteningAllPositionsAndCancelingOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below Flatten all non-simulated Trade Positions and Cancel all the non-simulated orders in a single operation. This includes Trade Position and Orders for all non-simulated trading accounts that you have access to.</p>
+
+    <ol>
+        <li>Select  <b Class = "menu_item">Trade &gt;&gt; Trade Positions Window</b> from the main window menu. </li>
+
+        <li> The Positions window will display.</li>
+
+        <li>  Make sure that  <b Class = "menu_item">Position &gt;&gt; Cancel Orders for Symbol When Flatten</b> is enabled/checked if you also want to cancel the working orders for the same Symbol and Trade Account of a Position to be flattened. There will be no attempt to cancel the market orders for that Symbol and Trade Account.</li>
+
+        <li>All of the current non-simulated Trade Positions will be displayed in the <b>Positions</b> list. Select the ones that you want to flatten. Multiple Positions can be selected by holding the  Control key on the keyboard and left clicking on the Position lines. A range of Positions can be selected  by selecting the first one,  pressing the Shift key on the keyboard and then selecting the last one.</li>
+
+        <li>Click  the <b> [Flatten]</b> menu command to flatten the selected Trade Positions and also cancel the related Orders, if that option was enabled. The orders will be canceled first but the market order to flatten the Trade Position will be immediately sent after.</li>
+
+        <li>Press <b> Yes </b> on the confirmation prompt to confirm the operation.  </li>
+    </ol>
+
+    <div style="text-align: center;">
+        <a href="../images/flattentradepositions.png" rel="lightbox"><img src="../images/flattentradepositions.png" alt="" class="screenshot" loading="lazy" width="600"></a>
+    </div>
+
+</section>
+
+
+
+<hr><p>*Last modified Friday, 24th March, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeWindow.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:49:17 GMT -->
+</html>  

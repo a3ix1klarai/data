@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105653') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails2.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 2: Data and Chart Display Errors -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index1230.html?page=doc/helpdetails2.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="index1230.html?page=doc/helpdetails2.html">Help topic 2: Data and Chart Display Errors</a></h4> </div>     <h1 class="PageName">Data Errors or Spikes in Charts, Flat or Flat Line Graph, Compressed Graph, Errors with Date/Time Values</h1>
+
+<br>
+
+<section class="h2">
+    <h2  id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Below is an example of a chart data error which causes a flat or compressed graph. This error causes the  the chart to display incorrectly and be compressed.</p>
+
+    <div style="text-align: center;"><a href="../images/intradaychartdataerror.png" rel="lightbox"><img src="../images/intradaychartdataerror.png" class="screenshot" loading="lazy" alt="" width="470"></a></div>
+
+    <p>There are different types of errors that can affect charts in various ways. This is only one example. There could be data records with incorrect Date-Time values which will cause out of order Date-Time values in the chart. This could cause Chart Drawings and some Studies not to function properly.  </p>
+
+    <p>There could be errors with price values that can be either small or large which can also affect the appearance of the chart.</p>
+
+    <ul>
+        <li><a href="#h2.1">2.1 Intraday Charts</a>
+            <ul>
+                <li><a href="#h2.1.1">2.1.1 Manually Correcting Data Errors</a></li>
+                <li><a href="#IntradayCharts_DeletingAndRedownloadingData">2.1.2 Deleting and Re-downloading Data. (Easier and Recommended Method)</a></li>
+            </ul>
+        </li>
+        <li><a href="#h2.2">2.2 Historical Charts</a>
+            <ul>			
+                <li><a href="#h2.2.0">2.2.0: General Information</a></li>
+                <li><a href="#h2.2.1">2.2.1: Manually Correcting the Data Errors</a></li>
+                <li><a href="#h2.2.2">2.2.2: Correcting  Data Errors by Downloading the Data Again</a></li>
+                <li><a href="#h2.2.3">2.2.3: Last Bar Continues to Have an Error</a></li>
+                <li><a href="#h2.2.4">2.2.4: Data Errors Caused by Symbol Differences</a></li>
+                <li><a href="#h2.2.5">2.2.5: Data Error at Last Bar in Historical Chart Caused by Incorrect Multiplier Settings</a></li>
+                <li><a href="#HistoricalChart_RemovingPermanentDataErrorsfromRealtimeDataFeed">2.2.6: Removing Permanent Data Errors from Real-time Data Feed</a></li>
+            </ul>
+        </li>
+        <li><a href="#MethodToFilterOutIntradayChartDataErrors">2.3 Method to Filter out Intraday Chart Data Errors</a></li>
+        
+        <li><a href="#HowToAnalyzeWhyThereIsInaccurateIncorrectDataInChart">2.4 How to Analyze Why There is Inaccurate/Incorrect Data in Chart</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2 id="h2.1">2.1 Intraday Charts</h2>
+    <div class="member-link">[<a href="#h2.1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are two ways to correct errors in an Intraday chart.</p>
+
+    <section class="h3">
+        <h3 id="h2.1.1">2.1.1 Manually Correcting Data Errors</h3>
+        <div class="member-link">[<a href="#h2.1.1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The first method is to correct or delete data records that contain errors. For instructions to locate these records and perform the edit, see <a href="index7b4b.html?page=doc/IntradayDataEditor.html#quickLoc">Quickly Locating a Specific Record In the Editor</a> on the Intraday Data Editor documentation page.</p>
+    </section>
+
+    <section class="h3">
+        <h3  id="IntradayCharts_DeletingAndRedownloadingData">2.1.2 Deleting and Re-downloading Data. (Easier and Recommended Method)</h3>
+        <div class="member-link">[<a href="#IntradayCharts_DeletingAndRedownloadingData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> The second method is to delete and re-download the historical Intraday data with the possibility that the newly downloaded data will not contain the errors. This method will not always work, since the server may contain the same errors.  </p> 
+        
+        <p>This method is also the very same method used to  <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#RetryDownloadDataInChart" Target="_blank" rel="noopener noreferrer">restore missing  data</a> in an Intraday chart.  </p>
+        
+        <p class = "GeneralBackgroundHighlightLight">The following instructions need to be performed in the main instance of Sierra Chart, not a sub instance started with <b class="menu_item">File &gt;&gt; New Instance</b>  if you are noticing the data errors in the sub instance  and re-downloading the data in the sub instance is not clearing the errors.
+             <br> <br>
+            Once you perform these steps in the main instance, then you need to go back to the sub instance  and perform the identical steps.  This is necessary  since the historical data in a sub instance is downloaded from the available historical data in the main instance.  </p>
+        
+        <p>Refer to the image below for the basic procedure.</p>
+
+        <div style="text-align: center;"><a href="../images/deletingandredownloadingdata.png" rel="lightbox"><img src="../images/deletingandredownloadingdata.png" class="screenshot" loading="lazy" alt="" width="520"></a></div>
+
+        <ol>
+            <li><em>Optional</em>: To make sure that the historical Intraday data request is routed to the proper source, it is necessary that the Symbol Settings are up-to-date by following the instructions to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.  This only needs to be done one time. </li>
+
+            <li>Make certain Sierra Chart is connected to the data feed by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.  Depending upon the particular Data or Trading service being used, if Sierra Chart cannot connect to the data feed, then historical Intraday data may not be able to be downloaded. To determine if Sierra Chart is connected to the data feed, refer to  <a href="index8793.html?page=doc/FileMenu.html#ConnectToDataFeed" target="_blank" rel="noopener noreferrer">File &gt;&gt; Connect to Data Feed</a>.</li>
+
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu. Make sure the <b>Maximum Historical Intraday Days to Download &gt;&gt; Non-Tick Data / 1 Tick Data</b> settings are set to what you require.  <em>186 is recommended</em>. If you want to get data further back in time than you already have  in the chart data file, then you may need to increase this setting, assuming the server has the data.  </li>
+
+
+            <li> Press <b>OK</b>.</li>
+
+            <li>Scroll the chart so that the area before the data errors or missing data is visible. </li>
+
+            <li>Right-click with your  Pointer on the chart before the data errors or missing data. Select <b class="menu_item">Delete and Download Data</b> on the menu.</li>
+
+            <li> Press <b>Yes</b> to confirm. The historical data will be downloaded.  When the download is complete, the chart will be reloaded.</li>
+
+            <li>Optional: To re-download all the data in the chart, select   <b class = "menu_item">Edit &gt;&gt; Delete All  Data and Download</b>. </li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="h2.2">2.2 Historical Charts</h2> 
+    <div class="member-link">[<a href="#h2.2">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="h2.2.0">2.2.0: General Information</h3>
+        <div class="member-link">[<a href="#h2.2.0">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There are two methods to correct an error or errors in Historical charts (Daily, Weekly, Monthly, Quarterly, Yearly bar time frames). The first step with either method is to reconnect to the data feed to attempt to clear errors that may exist with the current days quote data for a symbol. </p>
+
+        <p> To reconnect select <b class="menu_item">File &gt;&gt; Disconnect</b> on the menu and then <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.  </p>
+
+        <p> After reconnecting to the data feed, to clear the potentially invalid data from the prior connection to the real-time data feed providing the current quote data, go to the chart and select  <b Class = "menu_item">Chart &gt;&gt; Reload and Recalculate</b>. </p>
+
+        <p>The current days quote data can be displayed by going to the chart for the symbol and selecting <b class="menu_item">Window  &gt;&gt; Current Quote Window</b>. It is also merged into the very last bar in the chart. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="h2.2.1">2.2.1: Manually Correcting the Data Errors</h3>
+        <div class="member-link">[<a href="#h2.2.1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The first method is to correct the error yourself. Look closely at your chart and find the date of the incorrect value. The <a href="indexb844.html?page=doc/Tools.html#ChartValues">Chart Values Tool</a> on the <b Class = "menu_item">Tools</b> menu can be used to display the exact date.  </p>
+
+        <p>Select <b class="menu_item">Edit &gt;&gt; Edit Data - Historical Chart</b> on the menu to open the text editor. Find the particular date you want to edit in the editor and delete the incorrect data line or correct it.  </p>
+
+        <p><b>Save</b> the file and close the editor. When the editor is closed, the charts that use that data file will automatically reload. Refer to <a href="indexa20c.html?page=doc/EditMenu.html">Edit Menu</a> for more information.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="h2.2.2">2.2.2: Correcting  Data Errors by Downloading the Data Again</h3>
+        <div class="member-link">[<a href="#h2.2.2">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This method relies upon the  Data or Trading service to have corrected the error or errors.</p>  
+        
+        
+         <p>There may not actually be a data error, but in the case  of Historical Daily data, there may have been a stock split, causing a change in prices in which case all of the data needs to be re-downloaded in the chart (explained further down).</p>
+
+        <p>Scroll the chart so that the location of the data error is within view. Right-click on the chart before the data error and select on the displayed menu <b class = "menu_item">Delete and Download Data</b>.  This will re-download the data. </p>
+
+        <p> If the data error is at the last bar in the chart,  or the bar before the last bar, then you can select   <b class = "menu_item">Edit &gt;&gt; Download Data  - Historical Chart</b> on the menu.  Make sure the <b> From  Last Date in Chart Files</b> option is selected. Press  <b>OK</b>. This will download data starting  at the last two records in the historical chart data file, to the present date.</p>
+
+        <p>Depending upon the reason for the data errors and the type of  data errors, it may be necessary to fully re-download the data in the chart. For example, there could be price differences  between recent bars and  prior bars due to a stock split. In these cases,  fully re-download the data in the chart by selecting <b class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b> from the main menu.</p>
+
+        <p>Refer to the <a href="index0956.html?page=doc/DownloadingHistoricalDailyData.php" Target="_blank" rel="noopener noreferrer">Downloading Historical Daily Data</a> documentation page for more information about downloading historical Daily data.</p>
+
+        <p>If the error continues to be in the chart, then use the first method described above (2.2.1) to manually correct it yourself.  If the data error is at the last bar in the chart, then refer to <a href="#h2.2.3">2.2.3: Last Bar Continues to Have an Error</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="h2.2.3">2.2.3: Last Bar Continues to Have an Error</h3>
+        <div class="member-link">[<a href="#h2.2.3">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If the very last bar in a Historical chart continues to have an error with either the <em>prices or volume</em> after following  the instructions in help topic  <a href="#h2.2.0">2.2.0</a>, <a href="#h2.2.1">2.2.1</a> or <a href="#h2.2.2">2.2.2</a>, then  most likely the current days quote data on the real-time data server for the symbol has an error.</p>
+
+        <p>The current days quote data can be displayed with <b class="menu_item">Window  &gt;&gt; Current Quote Window</b>. If you see incorrect values there with the prices or volume, you need to contact your Data or Trading service to have them correct the error.  If the current quote data looks correct, then reload the data in the chart with <b Class = "menu_item">Chart &gt;&gt; Reload and Recalculate</b>.</p>
+
+        <p> If there was a data error with the current quote data from the Data or Trading service and it has been corrected, then follow the instructions in section <a href="#h2.2.0">2.2.0</a> to clear the error from the chart. You may also have to follow section <a href="#h2.2.2">2.2.2: Correcting  Data Errors by Downloading the Data Again</a> to correct the data in the chart data file as well.</p>
+
+        <p>To determine if the error you see at the last bar in the chart is in the chart data file, select <b Class = "menu_item">Edit &gt;&gt; Edit Data - Historical Chart</b>. A text editor will display  showing the data. Go to the bottom of the file and locate the date for the last bar in the chart. Verify the  the prices and volume are correct. If they are incorrect, then the source of the data errors at last in bar is in the data file itself.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="h2.2.4">2.2.4: Data Errors Caused by Symbol Differences</h3>
+        <div class="member-link">[<a href="#h2.2.4">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you have a Historical chart open that uses Historical Daily data from a service different than the real-time  Data or Trading service you are using, and there are symbol differences between these two services, then you may have an error in your chart on the very last bar. </p>
+
+        <p>This could appear as a very long bar which compresses the rest of the chart and makes all the other bars look like a thin line. </p>
+
+        <p>What is actually happening in this case is the Historical Daily chart symbol matches  with another symbol from the real-time data feed but actually is a different symbol. In this case select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Chart Data</b> and disable <b>Allow Real-Time Updating of Historical Chart</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="h2.2.5">2.2.5: Data Error at Last Bar in Historical Chart Caused by Incorrect Multiplier Settings</h3>
+        <div class="member-link">[<a href="#h2.2.5">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Apparent data errors in a chart can be caused by incorrect  chart Multiplier settings.  Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b>.</p>
+
+        <p>Both the <b>Real-time Price Multiplier</b> and <b>Historical Price Multiplier</b> both should be set to 1 in almost all cases.</p>
+
+        <p>Change these to 1 and press <b>OK</b> to see if the data errors are resolved.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="HistoricalChart_RemovingPermanentDataErrorsfromRealtimeDataFeed">2.2.6: Removing Permanent Data Errors from Real-time Data Feed</h3>
+        <div class="member-link">[<a href="#HistoricalChart_RemovingPermanentDataErrorsfromRealtimeDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There may be cases for some symbols, that the real-time data feed Sierra Chart is connected to is providing consistently invalid Current Quote values which are affecting the display of the last bar in a Historical chart. </p>
+       
+       <p>For example, this could be the case with Interactive Brokers  where it provides -1 values for some symbols. This may be in the case where there is not a real-time data subscription for the particular symbol. </p>
+
+        <p>In this particular case, the solution is to go to the particular Historical chart and select <b class = "menu_item">Chart &gt;&gt; Chart Settings</b><b> &gt;&gt;  Chart Data</b>. <em>Uncheck</em> the  <b>Allow Real-time Updating of Historical Chart</b> option. Press <b>OK</b>.  The invalid real-time Current Quote values will be removed from the last bar in the Historical chart.</p>
+    </section>    
+    
+</section>
+
+<section class="h2">
+    <h2 id="MethodToFilterOutIntradayChartDataErrors">2.3  Method to Filter out Intraday Chart Data Errors</h2>
+    <div class="member-link">[<a href="#MethodToFilterOutIntradayChartDataErrors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There is a method to <em>filter out data errors</em> in Intraday charts.</p>
+
+    <p>If the apparent data errors occur at certain regular times, such as outside of regular trading hours, you can adjust the <a href="index4ec1.html?page=doc/SessionTimes.php">Intraday Session Times</a> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> to exclude those times where the data errors occur, to prevent the data with the errors from displaying in the chart.</p>
+
+   
+</section>
+">2.4 
+<section class="h2">
+    <h2 id="HowToAnalyzeWhyThereIsInaccurateIncorrectDataInChart"> How to Analyze Why There is Inaccurate/Incorrect Data in Chart</h2>
+    <div class="member-link">[<a href="#HowToAnalyzeWhyThereIsInaccurateIncorrectDataInChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  When there is a question to Sierra Chart support about incorrect or inaccurate data in a chart, we need a detailed understanding of why there is a problem and how this conclusion is determined. </p>
+
+     <p> Go through the list below to make this determination. </p>
+
+     <ol>
+         <li>  First, <em>remove</em> all studies from the chart. </li>
+         <li> Is the symbol of the chart correct. Refer to Changing Chart Symbol.
+
+        <li>Is there any missing data <a href = "index2d36.html?page=doc/ChartDataFiles.html#LocatingMissingData">missing historical data</a> in the chart?
+
+        <li>     Are there any bar high and low values which are wrong?  if so, how do you know they are wrong? What is the basis of your conclusion?  In the case of a continuous futures contract chart, you need to understand at each chart bar,  <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html#DisplayingRolloverTransitionTimesAndContractMonths">what contract month you are looking at</a> to make a determination as to whether there is a problem with the high and low data for a chart bar for a particular contract month and year. 
+        <br> <br>
+        And you must also  disabled back adjustments. Sierra Chart will not provide any help at all with claims of inaccurate data if you are using a  <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html#RolloverOptions">back adjusted continuous futures contract</a> option. </li>
+        
+        <li>Sierra Chart support will also not provide help with claims of inaccurate data, and for non-Sierra Chart provided data feeds.</li>
+    </ol>
+   
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:03 GMT -->
+</html>  

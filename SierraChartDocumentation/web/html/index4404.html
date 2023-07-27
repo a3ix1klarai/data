@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GlobalSymbolSettings.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1683752956') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/GlobalSymbolSettings.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Global Symbol Settings -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index4404.html?page=doc/GlobalSymbolSettings.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SettingsWindows">(Table of Contents) Settings Windows</a> &gt;&gt; <a  href="index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a></h4> </div>     <h1 class="PageName">Global Symbol Settings</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+
+    <li><a href="#Instructions">Instructions</a>
+		<ul>
+		    <li><a href="#SymbolPatternCharacters">Symbol Pattern Characters</a></li>
+
+		</ul>
+	</li>  
+
+    <li><a href="#DuplicatingExistingSettingsForSymbol">Duplicating Existing Settings for a Symbol</a></li>
+   
+    <li><a href="#SymbolSettingsWindowControls">Symbol Settings Window Controls</a>
+        <ul>
+            <li><a href="#UseCustomSymbolSettingsValues">Use Custom Symbol Settings Values</a></li>
+            <li><a href="#UpdateFromServer">Update From Server (Global Settings &gt;&gt; Symbol Settings)</a></li>
+            <li><a href="#Symbols">Symbols (Global Settings &gt;&gt; Symbol Settings)</a></li>
+            <li><a href="#SettingsForSymbolName">Settings For [Symbol Name] (Global Settings &gt;&gt; Symbol Settings)</a>
+				<ul>
+					<li><a href="#SettingsForSymbolName_Default">Default (Global Settings &gt;&gt; Symbol Settings)</a></li>
+					<li><a href="#SettingsForSymbolName_Custom">Custom (Global Settings &gt;&gt; Symbol Settings)</a></li>
+				</ul>
+			</li>
+			<li><a href="#UseGlobalRoundTurnCommission">Use Global Round Turn Commission (Global Settings &gt;&gt; Symbol Settings)</a></li>
+            
+			<li><a href="#UseGlobalTradePositionLimitControl">Use Global Trade Position Limit (Global Settings &gt;&gt; Symbol Settings)</a></li>
+            
+			<li><a href="#ApplyIntradaySessionTimesToIntradayChart">Apply Intraday Session Times to Intraday Chart (Global Settings &gt;&gt; Symbol Settings)</a></li>
+			<li><a href="#UseTheseSymbolSettingsInNewInstancesWhenStarted">Use These Symbol Settings in New Instances When Started (Global Settings &gt;&gt; Symbol Settings)</a></li>
+        </ul>  
+    </li> 
+    
+    <li><a href="#SymbolSettings">Symbol Settings</a></li>
+
+    <li><a href="#DifferentMethods">Different Methods to Set Symbol Settings in Chart</a></li>
+
+    <li><a href="#SettingIntradaySessionTimes">Setting of Intraday Chart Session Times</a>
+		<ul>
+		    <li><a href="#PreventingTheChangingOfIntradayChartSessionTimes">Preventing the Changing of Intraday Chart Session Times</a></li>
+		    <li><a href="#ApplyingGlobalSymbolSettingsToExistingIntradayChart">Applying Global Symbol Settings to Existing Intraday Chart</a></li>
+		</ul>
+	</li>
+
+    <li><a href="#ChangingSymbolForCustomSymbol">Changing Symbol for Custom Symbol</a></li>
+
+    <li><a href="#UpdateSettings">Update Global Symbol Settings</a>
+        <ul>
+            <li><a href="#UpdateSettingsSteps">Update Symbol Settings</a></li>
+
+            <li><a href="#UpdateChartSettingsSteps">Update/Apply Symbol Settings to Charts</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#DisablingCustomSymbolSettings" >Disabling Custom Symbol Settings</a></li>
+    
+    <li><a href="#DirectEditingGlobalSymbolSettingsUnderlyingFile" >Direct Editing of Global Symbol Settings through Underlying File</a></li>
+
+    <li><a href="#MakingBackupOfGlobalSymbolSettings">Making a Backup of Global Symbol Settings</a></li>
+
+    <li><a href="#UseGlobalTradePositionLimit">Use Global Trade Position Limit</a></li>
+
+    <li><a href="#SymbolSettingsNotFoundMessage">Symbol Settings Not Found Message</a></li>
+</ul>
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Global Symbol Settings </b> window is a central repository for the available symbols for a Data or Trading service and the <b>Tick Size</b>, <b>Price Display Format</b>, <b>Currency Value Per Tick</b>, <b>Price Multipliers</b>, and <b>Intraday Session Times</b> for Intraday charts, and various other settings for the symbols.</p>
+
+    <div style="text-align: center;"><a href="../images/globalsymbolsettings.png" rel="lightbox"><img src="../images/globalsymbolsettings.png" class="screenshot" loading="lazy" width="450" alt="" ></a></div>
+
+    <p>The settings can be defined for a specific symbol or for a symbol pattern. The symbols you see listed in  <b class="menu_item"> File &gt;&gt; Find Symbol</b> originate from the <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>. Whatever symbol or symbol pattern is listed in Global Symbol Settings, will appear in <b>Find Symbol</b>, with the exception of unrecognized symbol patterns.</p>
+
+    <p>When you open a new Historical or Intraday chart, open a Trade DOM, change the symbol of a chart, or press the <b>Apply Global Symbol Settings</b> button on the <b class="menu_item">Chart &gt;&gt; Chart Settings</b> window, then the settings for a symbol defined in the Global Symbol Settings window will be applied to the <b>Chart Settings</b> automatically. These Global Symbol Settings provide a central location for Symbol Settings that can be used without having to manually set these for individual charts.</p>
+
+    <p>Sierra Chart provides a set of symbol settings for the most common symbols for each Data and Trading service we support.</p>
+
+    <p>Any changes that you make to the Global Symbol Settings under <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> <em>do not affect existing open charts</em>. It is only when you open a new chart or Trade DOM, change the symbol of a chart, or press the <b>Apply Global Symbol Settings</b> button on the <b class="menu_item">Chart &gt;&gt; Chart Settings</b> window, do the settings get applied to a chart. Therefore, you have the ability to change any of the settings in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> independent of the Global Symbol Settings for a symbol.</p>
+
+    <p>The settings for a symbol defined in the Global Symbol Settings window are also used for the <b>Trade Activity Log</b>, <b>Trade Orders Window</b> and <b>Trade Positions Window</b>. If you change the settings for a particular symbol and that symbol is currently displayed in the Trade Activity  Log, then select <b class="menu_item">Edit &gt;&gt; Refresh Log</b> on the Trade Activity Log menu to use the new settings.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Instructions">Instructions</h2>
+    <div class="member-link">[<a href="#Instructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart provides symbol settings for many common symbols. To add symbols and the settings for those symbols, follow these instructions. </p>
+
+    <p>These instructions also apply to <em>modifying</em> existing settings for symbols in the Global Symbol Settings list.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> on the menu.</li>
+
+        <li><b>Adding New Symbol</b>: Press the <b>Add</b> button. You <em>need to press the <b>Add</b> button before</em> entering the symbol and the related settings. Alternatively you can select in the list of existing Symbols an individual symbol and press the <b>Duplicate</b> button to duplicate the existing settings so you can use them as a template.
+            <br><br>
+            Enter the name or symbol pattern in the New Symbol window.
+            <br><br>
+            It is not possible to change the name of the symbol once OK has been selected on the New Symbol window. If an error is made during the entry of the symbol name/pattern, then either delete the incorrect symbol and add a new symbol again, or duplicate the incorrect symbol to the correct symbol and then delete the incorrect symbol.</li>
+
+        <li><b>Modifying Existing Symbol</b>: To modify settings for an existing symbol, select the symbol in the <b>Symbols</b> list on the left.</li>
+
+        <li><em>When using a pattern you must enable</em> the <b>Use Pattern Matching Characters</b> option within the symbol settings. Symbols are matched using the '?' patterns. There is an individual '?' that matches with each letter. So a three character symbol will have a <b>???</b> pattern.</li>
+
+        <li>Select a setting to modify on the right side of the window.</li>
+
+        <li>Enter or select the desired value for the setting in the <b>Custom</b> field below the symbol settings on the right.
+            <br><br>
+            By default, when entering a custom value, the radio button next to <b>Custom</b> becomes active indicating that the custom setting will be used rather than the default. If the default value is desired, then select the radio button next to <b>Default</b> to make it the active setting.
+        </li>
+
+        <li>Repeat steps 5 - 6 as necessary to enter, or modify, the necessary information for the symbol.</li>
+
+        <li>Repeat starting at step 2 or step 3 for additional symbols, as needed.</li>
+
+        <li  class = "GeneralBackgroundHighlightLight">If not already checked, be sure to check the box next to <b>Use Custom Symbol Settings Values</b>. If this box is not checked, then any custom symbol settings modifications will not be used.</li>
+
+        <li>Press the <b>OK</b> button when finished to save all changes.</li>
+    </ol>
+
+    <section class="h3">
+        <h3 id="SymbolPatternCharacters">Symbol Pattern Characters</h3>
+        <div class="member-link">[<a href="#SymbolPatternCharacters">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following characters can be used for pattern matching:</p>
+
+        <ul>
+            <li><b>*</b> = any character</li>
+
+            <li><b>~</b> = any character(s) of any length (can be more than 1 character)</li>
+
+            <li><b>?</b> = any alphabetical character</li>
+
+            <li><b>#</b> = any digit.</li>
+        </ul>
+
+        <p>When using a symbol pattern you must have the same number of characters in the Symbol Pattern as the actual symbol, or have used the ~ wildcard. For example, for a symbol pattern to match with the symbol ES-201009-GLOBEX, you would use <b>ES-######-GLOBEX</b>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DuplicatingExistingSettingsForSymbol">Duplicating Existing Settings for a Symbol</h2>
+    <div class="member-link">[<a href="#DuplicatingExistingSettingsForSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you want to add Symbol Settings for a new symbol which is not already listed and it is similar to an existing symbol, then follow the below procedure.</p>
+
+    <p>Under some conditions this is an essential step to perform to get settings from an existing symbol that are not settable through the user interface or which may not be easily set.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>.</li>
+
+        <li>Select an existing symbol in the list of symbols on the Global Symbol Settings window.</li>
+
+        <li>Press the <b>Duplicate</b> button. You will be prompted to change the symbol name/pattern. Select OK after changing the name or select Cancel to end the duplication process.</li>
+
+        <li>Modify the Symbol Settings as required.</li>
+
+        <li>Press OK.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SymbolSettingsWindowControls">Symbol Settings Window Controls</h2>
+    <div class="member-link">[<a href="#SymbolSettingsWindowControls">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section describes the Controls on the Symbol Settings window.</p>
+
+    <section class="h3">
+        <h3 id="UseCustomSymbolSettingsValues">Use Custom Symbol Settings Values (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#UseCustomSymbolSettingsValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This option gives a way to quickly disable the use of custom values for symbols.</p>
+
+        <p>When this option is enabled (checked), custom values/settings that are entered for symbols will be used for all symbols. Otherwise, the custom values are not used and the Default values are used.</p>
+        
+        <p>  This option also needs to be enabled for the Symbol Settings of any manually added symbols to be used. </p>
+        
+        <p> After enabling this option, you need to  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" Target="_blank" rel="noopener noreferrer">reconnect to the data feed</a> for some Symbol Settings to go into effect.   This would be true if you enabled the  setting to record market depth data for a symbol or symbol pattern. </p>
+        
+        <p> Symbol Settings are used  to properly route real-time market data requests and historical market data requests and translate symbols. Symbol settings are used for various other operations as well. </p>
+        
+         <p>Incorrect Symbol Settings can cause various  issues in Sierra Chart including performance issues. Disabling <b> Use Custom Symbol Settings Values</b> can resolve various  issues in Sierra Chart. Sierra Chart support may ask you to do this. </p>
+         
+        <p> Another way to remove custom symbol settings  is to exit from Sierra Chart (<b class="menu_item">File &gt;&gt; Exit</b>) and then go to the SymbolSettings subfolder in the Sierra Chart installation folder. Delete the <b> <em>CustomSymbolSettings.[servicecode].xml</em></b>   files. You can also examine these files  to see the custom symbols you have added and settings you have modified for existing symbols. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UpdateFromServer">Update From Server (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#UpdateFromServer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Selecting this button will request Symbol Settings for the currently selected <a href="index2c7f.html?page=doc/DataSourceSettings.php#Service">Data/Trade Service</a> from the server, and update the settings for the symbols that there are settings for, and add any new symbols available.</p>
+
+        <p>Performing this action will not overwrite any custom symbol settings.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Symbols">Symbols (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#Symbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section of the window contains the list of symbols and symbol patterns available for the currently selected <a href="index2c7f.html?page=doc/DataSourceSettings.php#Service">Data/Trade Service</a>.</p>
+
+        <p>Select a symbol in order to perform an action on that particular symbol</p>
+
+        <p>When a symbol is selected, the Settings on the right side of the window are for that selected symbol.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingsForSymbolName">Settings For [Symbol Name] (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#SettingsForSymbolName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section of the window, located to the right of the <b>Symbols</b> list, displays the Settings for the selected symbol from the <b>Symbols</b> list.</p>
+
+        <p>When the <b>Symbol Settings</b> window is first opened, this section does not display specific information, as no symbol is active. Select a symbol from the <b>Symbols</b> list on the left to have the settings display for that symbol.</p>
+
+        <p>Select a specific setting to view or modify the value for that setting.</p>
+
+        <section class="h4">
+            <h4 id="SettingsForSymbolName_Default">Default (Global Settings &gt;&gt; Symbol Settings)</h4>
+            <div class="member-link">[<a href="#SettingsForSymbolName_Default">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the default setting for the selected <b>Symbol Setting</b>. The default value(s) associated with a particular Symbol Setting are displayed below the <b>Default</b> prompt in a non-editable box.</p>
+
+            <p>If the radio button next to <b>Default</b> is checked, then this <b>Default</b> setting is being used for this Symbol Setting.</p>
+
+            <p>To make the <b>Default</b> the active option for this Symbol Setting, select the <b>Default</b> radio button.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SettingsForSymbolName_Custom">Custom (Global Settings &gt;&gt; Symbol Settings)</h4>
+            <div class="member-link">[<a href="#SettingsForSymbolName_Custom">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the custom setting for the selected <b>Symbol Setting</b>. The custom value(s), if there are any, that are associated with a particular Symbol Setting are displayed below the <b>Custom</b> prompt in a editable box.</p>
+
+            <p>If the radio button next to <b>Custom</b> is checked, then this <b>Custom</b> setting is being used for this Symbol Setting.</p>
+
+            <p>To make the <b>Custom</b> setting the active option for this Symbol Setting, enter a value(s) or select the appropriate choice(s) in the box under the <b>Custom</b> prompt, then select the <b>Custom</b> radio button.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="UseGlobalRoundTurnCommission">Use Global Round Turn Commission (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#UseGlobalRoundTurnCommission">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, then the entered value is used as the round turn commission for all trades where a commission value would apply.   For additional information, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UseCommission">Use Commission (Trade Activity Log)</a>  and <a href = "index4cf4.html?page=doc/ChartSettings.html#UseSymbolCommissionSettingInTradeListAndStatisticsCalculations">Use Commission Setting in Trade List and Statistics  Calculations (Chart Setting)</a>.</p> 
+        
+        <p>To set a commission value per individual symbol, follow the <a href="#Instructions">Instructions</a>  and set the <b>Round Turn Commission</b> setting  for the individual symbol. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UseGlobalTradePositionLimitControl">Use Global Trade Position Limit (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#UseGlobalTradePositionLimitControl">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>For more information, refer to the <a href="#UseGlobalTradePositionLimit">Use Global Trade Position Limit</a> section on this page.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ApplyIntradaySessionTimesToIntradayChart">Apply Intraday Session Times to Intraday Chart (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#ApplyIntradaySessionTimesToIntradayChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled and you change the symbol of an Intraday chart, or you press the <b>Apply Global Symbol Settings</b> button in <b>Chart Settings</b>, then the Intraday Session Times for that symbol will be applied to that chart. Otherwise, if this option is disabled this will not occur.</p>
+
+        <p>If this option is disabled, you can still enable this feature for individual charts in <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times</b> <b>&gt;&gt; Apply Intraday Session Times to Intraday Chart</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UseTheseSymbolSettingsInNewInstancesWhenStarted">Use These Symbol Settings in New Instances When Started (Global Settings &gt;&gt; Symbol Settings)</h3>
+        <div class="member-link">[<a href="#UseTheseSymbolSettingsInNewInstancesWhenStarted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, then when <b class="menu_item">File &gt;&gt; New Instance</b> is used to start a new instance of Sierra Chart, then the Global Symbol Settings from the main instance the new instance is started from, are copied to the new instance. The new instance then uses these Symbol Settings. This is useful to make sure the customized settings you have set in the main instance are used by all of the sub instances.</p>
+        
+        <p> It is important to understand that when this option is enabled, you must not make changes to Symbol Settings within sub  instances started with <b class="menu_item">File &gt;&gt; New Instance</b>.  Otherwise,  when those sub instances are restarted, those  Symbol Settings changes  or custom symbols added, will then be  <em>lost</em>. </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SymbolSettings">Symbol Settings</h2>
+    <div class="member-link">[<a href="#SymbolSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section documents each symbol setting.  To open the Symbol Settings window select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> on the menu.</p>
+
+    <ul>
+
+        <li><b>Historical Chart Symbol</b>: This is the symbol for a Historical Daily chart, when the data for Historical Daily charts comes from an alternate service. This symbol is usually different than what is used by the primary Data or Trading service, but it corresponds to it. In most cases the symbols are the <a href="index765f.html?page=doc/SierraChartHistoricalData.php" target="_blank" rel="noopener noreferrer">Sierra Chart Historical Data Service Symbols</a>.</li>
+
+        <li><b>Use Pattern Matching</b>: When this option is enabled, then you can enter pattern matching characters in the <b>Symbol</b> that will support matching to many different actual symbols. For a list of the pattern matching characters which are supported, refer to <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#SymbolPatternCharacters">Symbol Pattern Characters</a>.  It is also necessary to specify <b>Contract Months</b>  in order for symbols to be automatically generated and be listed in  <b class="menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+        <li><b>Contract Months</b> (for Futures): In the case of a Futures symbol, enable the contract months that the Futures symbol has contracts for. Each contract month is represented by a single letter code. These are standard codes which are listed in the <a href="index765f.html?page=doc/SierraChartHistoricalData.php#MonthCodes" target="_blank" rel="noopener noreferrer">Futures Contract Month Codes</a> section.</li>
+
+        <li><b>Forward Months</b>: When a Symbol or Symbol Pattern is an outright futures contract or a calendar spread, then this setting controls the number of months from the current date for which contracts  or calendar spreads are listed from the current date on the <a href="index8793.html?page=doc/FileMenu.html#FileFindSymbol">Find Symbol</a> window. If there is no value entered, or a value of 0 is present, then this defaults to 3 months.</li>
+
+        <li><b>Description</b>: This is the descriptive name for the symbol.</li>
+
+        <li><b>Category</b>: This is the category that the symbol belongs to. This is for organizing symbols in the <b>File &gt;&gt; Find Symbol</b> window. All symbols in the category specified here will be grouped together into this category.</li>
+
+        <li><b>Security Type</b>:  This is the security type of the symbol.  For example: Futures, Stock/Equity, Index.</li>
+
+        <li><b>Underlying Symbol</b>:  This is the underlying symbol for the symbol.  For example, for a futures contract symbol like  <em>ESZ19</em> the underlying symbol will be  <em>ES</em>. This is internally used in Sierra Chart for some purposes. It is not used in any way with a chart.</li>
+
+        <li><b>Exchange</b>: The exchange code that the symbol trades on. </li>
+
+        <li><b>Price Display Format</b>: This sets the Display Format for all price values for the symbol.</li>
+
+        <li><b>Tick Size</b>: This is the minimum value that the price values for the symbol change by. For example, the ES Futures has a tick size of 0.25, assuming there are 2 decimal places in the quoted prices for the market. For Stocks, this would usually be set to 0.01. In the case of Foreign exchange symbols, there is no definite Tick Size to use. You will need to set this according to your charting and trading requirements. By default for the EURUSD we use .00005. You may want to use .0001. Or you may want to use .00001. All order prices are rounded to the nearest Tick Size upon order submission. When changing the Tick Size for a foreign exchange symbol, then also verify you have the proper <b>Currency Value Per Tick</b> setting to correspond to it.</li>
+
+        <li><b>Currency Value Per Tick</b>: This is the value that each tick is worth in the currency for the particular symbol being traded. For example, if a Futures Contract is equivalent to a 1000 units of the underlying that the contract is for, then this should be set to 1000 times the Tick Size.
+            <br> <br>
+            For a COMEX Gold Contract which is equivalent to 100 ounces of gold and has a Tick Size of 0.1, the Currency Value Per Tick will be 10.  
+            <br> <br>
+            In the case of foreign exchange symbols, where the order quantities match the actual number of currency units being traded, then <b>Currency Value Per Tick</b> must match the Tick Size. In order to trade 10,000 units of a particular currency, you have to use order quantity of 10000, then <b>Currency Value Per Tick</b> always needs to be set to the same value as the <b>Tick Size</b>.
+            <br> <br>
+            <b>CurrencyProfitLoss = PointsProfitLoss / TickSize * CurrencyValuePerTick</b>.
+        </li>
+
+        <li><b>Historical Price Multiplier</b>: This is the multiplier that needs to be applied to the Historical Daily data to match the price format for the corresponding Symbol used by the primary Data or Trading service.</li>
+
+        <li><b>Real-Time Price Multiplier</b>: This sets the multiplier that the real time prices from the connected service for the symbol are multiplied by.</li>
+
+        <li><b>Volume Multiplier</b>: This sets the Volume and Open Interest Multiplier for historical data for the symbol. For more information, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#Volume_OpenInterestMultiplier">Volume and Open Interest Multiplier</a> within Chart Settings.</li>
+
+        <li><b>Volume Display Format</b>: This sets the Volume Value Format for the symbol. For more information, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#VolumeValueFormat">Volume Value Format</a>.</li>
+
+
+        <li id="TimeZone"><b>Time Zone</b>: This specifies the time zone for the Intraday chart <b>Session Times</b> specified in these Symbol Settings. For example, if the Session Times are defined in New York time, then this needs to be set to the New York Time Zone. This does not have to match the Time Zone setting in Sierra Chart. When these Session Times are applied to a chart, then the Session Times will be converted from this time zone to the <b>Time Zone</b> setting in Sierra Chart.
+            <br><br>
+            You should specify what <b>Time Zone</b> the Session Times are relative to, by selecting a <b>Time Zone</b> from the list. In this way you can always be assured that the correct Session Times will be set even if you change the Sierra Chart global <b>Time Zone</b> setting. Otherwise, select <b>Not Specified</b>. 
+            <br><br>
+            It needs to be understood that this <b>Time Zone</b> setting does not specify the time zone that you want times displayed as in the charts for the symbol that this setting is for. To change the time zone of the charts, refer to <a href = "index219e.html?page=doc/TimeZone.html">Time Zone</a>. 
+             <br> <br>
+            This setting only indicates what Time Zone the Session Times set in the Symbol Settings for the symbol, are relative to.
+        </li>
+
+        <li><b>Session Start Time</b>: This is the <b>Start Time</b> used for Intraday charts for the symbol.</li>
+
+        <li><b>Session End Time</b>: This is the <b>End Time</b> used for Intraday charts for the symbol.</li>
+
+        <li><b>Evening Start Time</b>: This is the <b>Evening Session Start Time</b> used for Intraday charts for the symbol.</li>
+
+        <li><b>Evening End Time</b>: This is the <b>Evening Session Stop Time</b> used for Intraday charts for the symbol.</li>
+
+        <li><b>Use Evening Session Times</b>: This sets whether the Evening Session times are used by default, for any new chart that uses this symbol or symbol pattern.</li>
+
+        <li><b>Start New Daily Bar at Session Start</b>: When this option is enabled for the symbol or symbol pattern, then in the case of Historical Charts (Daily, Weekly, Monthly, etc.), when the Start Time for the trading day is encountered, a new Daily bar will begin at that time if there has been market data received after that time. This will be either the <b>Session Start Time</b>, or the <b>Evening Start Time</b> if the <b>Evening Start Time</b> and the <b>Evening End Time</b> are set to values other than 00:00:00 and 00:00:00 or 00:00:00 and 23:59:59, respectively.</li>
+
+        <li><b>Default Order Quantity</b>: This sets the initial order quantity for the Trade Window for a Trade DOM or for a chart. Whenever you open a new chart or Trade DOM for this symbol or symbol pattern, this will be the order quantity. In the list box for the <b>Quantity</b> on the Trade Window, the listed quantities will also be in increments of this <b>Default Order Quantity</b>.</li>
+
+        <li><b>Round Turn Commission</b>: The <b>Round Turn Commission</b> field specifies the commission value as a <em>currency value</em> for a complete trade which includes both Buy and Sell order fills.
+            <br><br>
+            This commission is multiplied by the Quantity of the order fills. So if the Quantity of the order fills is 5, then the commission is multiplied by 5.
+            <br><br>
+            The Round Turn Commission applies to either the Symbol or Symbol pattern. 
+            <br><br>
+            This Round Turn Commission value is used in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b> Profit/Loss calculations when <b>Apply Commission</b> is enabled on the Trade Activity Log window.
+            <br><br>
+            The commission is also used in the Profit/Loss calculations within the Chart, Trade DOM,or Trade Windows when <a href="index4cf4.html?page=doc/ChartSettings.html#UseSymbolCommissionSettingInTradeListAndStatisticsCalculations">Use Symbol Commission Setting in Trade List and Statistics Calculations</a> is enabled in the Chart Settings. Otherwise, it is not used.
+            <br><br>
+            The <b>Round Turn Commission</b> <em>does not</em> apply to the <b>Trade Activity</b> tab. And it only applies to the charts in the <b>Trade Stats for Charts</b> tab of the Trade Activity Log if the chart has the <b>Use Symbol Commission Setting in Trade List and Statistics Calculations</b> option enabled.
+        </li>
+
+        <li><b>Currency</b>: This sets the currency for the selected Symbol. This setting has a specialized purpose and it is not a setting that a user normally would use.</li>
+
+        <li><b>Continuous Contract Months</b>: These contract months are <em>optional</em> and are used to set the particular contract months to build the Continuous Futures Contract from, independent of the standard contract months for a particular futures market.</li>
+
+        <li id="RolloverMethod"><div class="member-link">[<a href="#RolloverMethod">Link</a>] - [<a href="#top">Top</a>]</div>
+            <b>Rollover Method</b>: For future symbols, a rollover rule can be defined for the symbol which will automatically rollover the futures symbol in a chart or Quote Board when it no longer is the actively traded contract (<b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Automatically Rollover Futures Symbol</b>). These settings are also used in the building of Continuous Futures Contract charts. The possible rollover rules are:
+            <br> <br>
+            <ul>
+                <li><b>Not Defined</b></li>
+
+                <li><b>Number of Business Days Before Contract Month (Method1)</b></li>
+
+                <li><b>Number of Business Days Before First Business Day of Contract Month (Method2)</b></li>
+
+                <li><b>Number of Calendar Days Before Friday Count Within Following Contract Month (Method13)</b></li>
+
+                <li><b>Number of Business Days Before Wednesday Count Within Contract Month (Method4)</b></li>
+
+                <li><b>Number of Business Days Before Business Calendar Day Before Contract Month (Method5)</b></li>
+
+                <li><b>Number of Business Days Before Number of Calendar Days Before Contract Month (Method6)</b></li>
+
+                <li><b>Number of Business Days Before Business Calendar Day in Contract Month (Method8)</b></li>
+
+                <li><b>Last Thursday of The Contract Month (Method7)</b></li>
+
+                <li><b>Number of Calendar Days Before Sunday Count Within Contract Month (Method9Sun)</b></li>
+
+                <li><b>Number of Calendar Days Before Monday Count Within Contract Month (Method9Mon)</b></li>
+
+                <li><b>Number of Calendar Days Before Tuesday Count Within Contract Month (Method9Tue)</b></li>
+
+                <li><b>Number of Calendar Days Before Wednesday Count Within Contract Month (Method9Wed)</b></li>
+
+                <li><b>Number of Calendar Days Before Thursday Count Within Contract Month (Method9)</b></li>
+
+                <li><b>Number of Calendar Days Before Friday Count Within Contract Month (Method3)</b></li>
+
+                <li><b>Number of Calendar Days Before Friday Count Within Contract Month (Method9Fri)</b></li>
+
+                <li><b>Number of Calendar Days Before Saturday Count Within Contract Month (Method9Sat)</b></li>
+
+                <li><b>Number of Business Days Before End of Contract Month (Method10)</b></li>
+
+                <li><b>Number of Business Days Before Last Business Day of Contract Month (Method11)</b></li>
+
+                <li><b>Business Days Before Last Business Day of The Second Month Preceding The Contract Month (Method12)</b></li>
+
+                <li><b>Number of Calendar Days Before Contract Month (Method14)</b></li>
+            </ul>
+
+            <br>
+            For each of the rollover rules, there may be 1 or 2 boxes displayed below them to specify additional values for the rollover rule as required by the rule.
+            <br><br>
+            To automatically rollover a symbol of the chart, it is necessary to enable <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Automatically Rollover Futures Symbol</b>. For additional information, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#AutomaticallyRollover">Automatically Rollover Futures Symbol</a>.
+            <br><br>
+            <div style="text-align: center;"><a href="../images/symbolsettingsrolloverrules.png" rel="lightbox"><img src="../images/symbolsettingsrolloverrules.png" class="screenshot" loading="lazy" width="400" alt=""></a></div>
+        </li>
+
+        <li><b>SC Data Symbol</b>:  For internal use.</li>
+
+        <li><b>SC Data Multiplier</b>:  For internal use.</li>
+
+        <li><b>SC Data Service Code</b>:  For internal use.</li>
+
+        <li><b>Trade/Quote Symbol</b>: This specifies the corresponding <b>Trade and Current Quote Symbol</b> which will be automatically set with the <b>Symbol</b> in <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b>. Therefore, this  Symbol set here will set the    <b>Trade and Current Quote Symbol</b> in Chart Settings.
+        <br> <br>
+        Also refer to <a href = "index4cf4.html?page=doc/ChartSettings.html#ClearTradeAndCurrentQuoteSymbolOnSymbolChange">Clear Trade And Current Quote Symbol On Symbol Change</a> in Chart Settings.
+         <br> <br>
+         It is supported as of version 2396 to use a pattern for the <b>Trade/Quote Symbol</b> set here.  This allows proper translation to any particular futures contract month and year.
+        <br> <br>  This is also useful for stock symbol patterns in the case of Interactive Brokers.  For example, for the symbol pattern <b>**-NQTV</b>  you can set  <b>Trade/Quote Symbol</b> to  <b>**-STK-SMART-USD</b>. 
+        </li>
+
+        <li><b>Auto Set Tick Size and Value Format from Data Feed</b>: The default for this option is unchecked/false. Normally this should be disabled by default and the <b>Tick Size</b>, <b>Price Display Format</b> and <b>Currency Value Per Tick</b> should be properly set for the symbol or symbol pattern in the Global Symbol Settings. When this option is <em>enabled</em>, and these settings are available from the connected data feed, then they will be automatically set for the symbol in the <b>Chart Settings</b> of a chart and ignore the Global Symbol Settings.</li>
+
+        <li><b>Supports Market Depth</b>: If the symbol supports market depth data, this needs to be set to Yes.</li>
+
+        <li><b>Record Market Depth Data</b>: When this option is enabled for the symbol or symbol pattern, then market depth data, when available, will be recorded in data files with a <em>.depth</em> file extension, 1 for each day, any time Intraday data is being recorded for the symbol which matches the symbol or symbol pattern. These depth files are located in the <b>MarketDepthData</b> folder of the <a href="index899f.html?page=doc/GeneralSettings.html#DataFilesFolder">Data Files Folder</a>. <em>All</em> market depth updates are recorded without any filtering.</li>
+
+        <li><b>Number of Depth Levels to Subscribe</b>: Entering a non-zero value for this symbol setting will limit the number of market depth levels that are received and recorded for this symbol. The actual number of depth levels will be the value that is entered for this setting for each of the Bid and Ask side (e.g. a value of 10 will give market depth of 10 bid and 10 ask). This setting will take precedence over the <a href="index2c7f.html?page=doc/DataSourceSettings.php#MaxDepthLevels">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; SC Server Settings &gt;&gt; Max Depth Levels</a> setting.</li>
+
+        <li><b>Allow Zero Value</b>:</li>
+
+        <li><b>Generic Sub-Client Server Address</b>:</li>
+
+        <li><b>Historical Data Server</b>:</li>
+
+        <li><b>Historical Daily Data Source</b>:</li>
+
+        <li><b>Historical Intraday Data Source</b>:</li>
+
+        <li><b>Custom Continuous Contract Back Adjustment Amounts</b>: This setting allows you to increase or decrease the calculated back adjustment amounts by the specified value for a particular futures contract when using one of the back adjusted continuous futures contract options. For complete instructions, refer to <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html#ControllingRolloverAmount" target="_blank" rel="noopener noreferrer">Controlling Rollover Amount for Back Adjustments</a>.</li>
+
+        <li><b>Real-Time Data Client</b>:</li>
+
+        <li><b>Trade Position Limit</b>: This field specifies the Position Limit for trading for the symbol. This applies to both simulated and non-simulated trading. This needs to be specified as a number of contracts, shares, or whatever the quantity unit is for trading in the symbol.  
+         <br> <br>
+        A new order which would cause this limit to be exceeded will be rejected. A setting of zero  means there is no limit.</li>
+
+        <li><b>Order Quantity Limit</b>: This field specifies the Order Quantity Limit for new trade orders for the symbol. This applies to both simulated and non-simulated trading. This needs to be specified as a number of contracts, shares, or whatever the quantity unit is for trading in the symbol.
+        <br> <br>
+        A new order which would cause this limit to be exceeded will be rejected. A setting of zero means there is no limit.</li>
+
+        <li><b>Uses Formula Operators</b>:</li>
+
+        <li><b>Source Data Symbol</b>: This is the symbol name or pattern as defined in another instance of Sierra Chart. This is only set when creating a symbol to access data from another instance of Sierra Chart. For more information, refer to <a href="index6ebd.html?page=doc/MultipleServices.html#AccessingMarketDataFromOtherInstancesOfSierra%20Chart">Accessing Market Data from Other Instances of Sierra Chart</a>.</li>
+
+        <li><b>Source Data Multiplier</b>: This is a multiplier that is applied to the the data received from the <b>Source Data Symbol</b>. Normally, this would be left at the default value of 1.0.</li>
+
+        <li><b>Dates to Exclude From Chart</b>:  This specifies the dates that will be excluded from all charts for this symbol or symbol pattern. 
+        Multiple dates need to be separated by a comma character. Example: <b>2014-01-01, 2014-01-02 </b>.  For more information, refer to <a href = "index4cf4.html?page=doc/ChartSettings.html#DatesToExclude">Set Dates to Exclude</a>.</li>
+
+        <li><b>Minimum Market by Order Quantity</b>:  This setting is for  <a href = "index288e.html?page=doc/MarketByOrder.php">Market by Order</a> data.  The default is 0  meaning that the server transmits  market by order data, down to its own minimum  order quantity. A nonzero setting, means that the server will only send market by order data with a minimum quantity that is specified.  
+        <br> <br>
+        You need to  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">Reconnect to the data feed</a> after changing this setting.
+        <br> <br>
+        This particular setting should only be set in the main/primary instance of Sierra Chart. Sub instances that are connected to the primary instance when using <b class="menu_item">File &gt;&gt; New Instance</b>, should have this setting left at 0.
+        <br> <br>
+        It is recommended to leave this setting at 0 in a sub instance.
+        </li>     
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="DifferentMethods">Different Methods to Set Symbol Settings in Chart</h2>
+    <div class="member-link">[<a href="#DifferentMethods">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There two different ways the <b>Tick Size</b>, <b>Currency Value Per Tick</b>, <b>Price Display Format</b>, <b>Price Multiplier</b>, <b>Intraday Session Times for Intraday charts</b>, <b>Trade and Current Quote Symbol</b>, and other settings can be set in <b class="menu_item">Chart &gt;&gt;  Chart Settings</b> for a chart. These are described below.</p>
+
+    <ol>
+        <li>These settings can be manually set in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> simply by modifying them.</li>
+
+        <li>The preferred method is to use the Global Symbol Settings defined under <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> to set these. There are two ways in which the settings are applied to a chart. When you open a new chart or Trade DOM, or change the symbol of a chart. If there are Global Symbol Settings defined for the symbol or there is a symbol pattern which matches the symbol of the chart, then they will be set from the Global Symbol Settings.
+            <br> <br>
+            The other way is to press the <b>Apply Global Symbol Settings</b> button on the <b class="menu_item">Chart &gt;&gt; Chart Settings</b> window. If there are Global Symbol Settings defined for the symbol or there is a symbol pattern which matches the symbol of the chart, then they will be applied from the Global Symbol Settings.</li>
+    </ol>
+
+    <p>Additional information can be found on the <a href="#SettingIntradaySessionTimes">Setting of Intraday Chart Session Times</a> page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SettingIntradaySessionTimes">Setting of Intraday Chart Session Times</h2>
+    <div class="member-link">[<a href="#SettingIntradaySessionTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When opening a new Intraday chart, the   <a href = "index4ec1.html?page=doc/SessionTimes.php">Session Times</a> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> will <em>always</em> be set according to the Session Times set for the symbol in the Symbol Settings.</p>
+    
+    <p>Therefore, if you require the Session Times to be set a certain way, make sure they are set correctly for the symbol or symbol pattern as you require in the <a href = "#Instructions">Global Symbol Settings</a>.</p>
+    
+    <p>If you have set custom Session Times for particular symbol or symbol pattern in the Global Symbol Settings, you need to make sure that <b class="menu_item">Global Settings &gt;&gt; Symbol Settings &gt;&gt;  Use Custom Symbol Settings Values</b> is enabled  for them to be used. </p>
+
+    <p>When changing the symbol of an Intraday chart, the Session Times will be set from the Global Symbol Settings if <em>either</em> of these options are enabled:</p>
+
+    <ul>
+        <li><b class="menu_item">Global Settings &gt;&gt; Symbol Settings &gt;&gt; Apply Intraday Session Times to Intraday Chart</b>.</li>
+
+        <li><b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times &gt;&gt; Apply Intraday Session Times to Intraday Chart</b>.</li>
+    </ul>   
+    
+    <p>Therefore, make sure one or both of those is enabled if you want  the Session Times to be applied when changing the symbol of the chart. </p>
+
+    <section class="h3">
+        <h3 id="PreventingTheChangingOfIntradayChartSessionTimes">Preventing the Changing of Intraday Chart Session Times</h3>
+        <div class="member-link">[<a href="#PreventingTheChangingOfIntradayChartSessionTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>This section gives information on how to prevent the Session Times from being changed to the Session Times for the symbol in the Symbol Settings when the symbol of an Intraday chart is changed.</p>
+
+        <p>First it is best to set the Session Times as you require in <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> for the symbol or symbol pattern as you require. So that when the symbol of the Intraday chart is changed, they will change to what has been set globally.</p>
+
+        <p>If you do not want to use the Session Times as defined in the Symbol Settings when changing the symbol, then follow the below instructions:</p>
+
+        <ol>
+            <li>Make sure <b class="menu_item">Global Settings &gt;&gt; Symbol Settings &gt;&gt; Apply Intraday Session Times to Intraday Chart</b> is unchecked.</li>
+
+            <li>Make sure <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times &gt;&gt; Apply Intraday Session Times to Intraday Chart</b> is unchecked.</li>
+        </ol>
+
+        <p>There are other conditions which can cause the Intraday chart Session Times to change unexpectedly. Refer to the <a href="index4ec1.html?page=doc/SessionTimes.php#SessionTimesAutomaticallyChanging" Target="_blank" rel="noopener noreferrer">Session Times Automatically Changing</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ApplyingGlobalSymbolSettingsToExistingIntradayChart">Applying Global Symbol Settings to Existing Intraday Chart</h3>
+        <div class="member-link">[<a href="#ApplyingGlobalSymbolSettingsToExistingIntradayChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li> Select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>.</li>
+
+            <li>In the list of Symbols, select the particular symbol or symbol pattern of the chart you want to apply the Intraday Session Times to.</li>
+
+            <li>Make sure that Session Times are set as you require. If you have set custom values for these, then enable the <b>  Use Custom Symbol Settings Values</b>  option for them to actually be used.</li>
+
+            <li>Press OK.</li>
+
+            <li> Go to the Intraday chart that you want to apply the Global Symbol Settings to.</li>
+
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> <b>&gt;&gt; Session Times</b>. Make sure the <b>Apply Intraday Session Times to Intraday Chart</b> option is <em>enabled</em>.</li>
+
+            <li>Press the <b>Apply</b> button.</li>
+
+            <li>Select the <b>Symbol</b> tab.</li>
+
+            <li>Press the <b>Global Symbol Settings &gt;&gt; Apply Global Symbol Settings</b> button.</li>
+
+            <li>Press <b>OK</b>.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ChangingSymbolForCustomSymbol">Changing Symbol for Custom Symbol</h2>
+    <div class="member-link">[<a href="#ChangingSymbolForCustomSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The method of renaming a custom settings symbol is to use the <b>Duplicate</b> button to create a copy of the settings with the new symbol, and then   <b>Remove</b> the settings for the old symbol. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="UpdateSettings">Update Global Symbol Settings</h2>
+    <div class="member-link">[<a href="#UpdateSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To update all of the available Symbol related settings for the currently selected Data/Trading service, from the Sierra Chart server, follow one of the procedures below.</p>
+
+    <section class="h3">  
+        <h3 id="UpdateSettingsSteps">Update Symbol Settings</h3>
+        <div class="member-link">[<a href="#UpdateSettingsSteps">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ol>
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> on the menu.</li>
+
+            <li>Press the <b>Update From Server</b> button. The button will be momentarily disabled.
+
+                <div style="text-align: center;"><a href="../images/updatesymbolsettings.png" rel="lightbox"><img src="../images/updatesymbolsettings.png" class="screenshot" loading="lazy" width="450" alt=""></a></div>
+            </li>
+
+            <li><em>Wait</em> for the button to reenable which indicates the updating of the symbol settings is complete. Normally the updating should be done in less than 5 seconds. However, this could take longer depending upon the speed of your Internet connection, how much data has to be downloaded, and how many existing symbols there are. It should not take longer than 30 seconds unless you have a connectivity problem.</li>
+
+            <li>When the update is complete, press <b>OK</b>.</li>
+
+            <li>Reconnect to the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+            
+            <li>If Sierra Chart support has directed you to this section and if after performing the above steps, you still have an issue  which relates to Symbol Settings, then  disable <a href="#UseCustomSymbolSettingsValues">Use Custom Symbol Settings Values</a>  in <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>.
+ 
+           <br> <br>
+                After following this last step, reconnect to the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="UpdateChartSettingsSteps">Update/Apply Symbol Settings to Charts</h3>
+        <div class="member-link">[<a href="#UpdateChartSettingsSteps">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Once the update of the Global Symbol Settings is complete, the individual charts and Trade DOM windows that you already have open, may need to have the new Symbol Settings applied to them. Or you may want to do this for another reason.</p> 
+
+        <p>This will only be necessary if Sierra Chart support has instructed you to do so. Generally the reason why this would be necessary is if the <b>Tick Size</b>,   <b>Value Format</b>, or the  <b>Real-time and Historical Multipliers</b> in the Symbol Settings have changed.</p>
+        
+         <p> If you have not updated the  Symbol Settings already, then follow the <a href = "#UpdateSettingsSteps">Update Symbol Settings</a> instructions before following the instructions below. </p>
+
+        <ol>
+            <li><b>Optional</b>: If you want to apply the Intraday Session Times to the charts as defined in the Global Symbol Settings, then select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>. Enable the <b>Apply Intraday Session Times to Intraday Chart</b> option and press <b>OK</b>. Otherwise, make sure this option is  <em>disabled</em> if you do not want the Session Times settings in the chart changed.</li>
+
+            <li>Go to each chart and Trade DOM window for the particular symbols there is incorrect Symbol Settings for and select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu.</li>
+            
+              <li>Select the  <b>Symbol</b> tab. </li>
+              
+              <li> Set <b> Do Not Change Symbol Settings for Chart on Symbol Change</b> to  No. It needs to be  <em>No</em>.  If it was Yes,  set it to  No and press the  <b>Apply</b> button.</li>
+
+            <li> Left click twice on the <b>Apply Global Symbol Settings</b> button. See image for example.
+             <br> <br>
+              <div style="text-align: center;"><a href="../images/chartsettings_applyglobalsymbolsettings.png" rel="lightbox"><img src="../images/chartsettings_applyglobalsymbolsettings.png" class="screenshot" loading="lazy" width="500" alt="" ></a></div>
+            
+            </li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>In the case of the Historical Daily charts which also includes Daily, Weekly, Monthly, Quarterly, and Yearly chart bars, it is necessary to re-download the data if the chart bars are not displaying correctly relative to the last bar in the chart. To do this, select <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. </li>
+
+            <li>Repeat the above steps for each Chart and Trading/Trade DOM with which you have a Symbol Settings issue.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="DisablingCustomSymbolSettings">Disabling Custom Symbol Settings</h2>
+    <div class="member-link">[<a href="#DisablingCustomSymbolSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>Follow the instructions below to disable the use of Custom Symbol Settings to rule out those  custom settings you have set as the cause of an issue. </p>
+     
+     <p> Incorrect  custom  symbol settings can cause market data routing issues, causing Sierra Chart to not receive real-time data  for the affected symbols. </p>
+     
+      <ol>
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> on the menu.</li>
+
+            <li>Press the <b>Update From Server</b> button. The button will be momentarily disabled.
+            </li>
+            
+            <li>Disable <a href="#UseCustomSymbolSettingsValues">Use Custom Symbol Settings Values</a>.</li>
+            
+             <li>Press <b>OK</b> to close the Global Symbol Settings window.</li>
+
+            <li>Reconnect to the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+            
+            <li>  If the issue you have been having is now resolved, then you may want to  delete the custom symbols file since this  will later cause a problem when re-enabling Custom Symbol Settings.
+              <br> <br>
+               Follow the instructions below to delete the file.
+               <ol>
+                    <li> Exit from Sierra Chart with  <b class="menu_item">File &gt;&gt; Exit</b>.</li>
+                   
+                   <li> Go to the installation folder for Sierra Chart.  Refer to <a href = "index84bb.html?page=doc/MessageLog.html#DeterminingInstallationFolderForSierraChart">Determining Installation Folder for Sierra Chart</a>. </li>
+                    
+                    <li> Go to the <b>/SymbolSettings</b> subfolder.  </li>
+                     
+                    <li>Locate the particular  custom symbol settings file for the particular service you are using.  The service code is embedded within the filename.  The filename will always begin with CustomSymbolSettings. Example file name:    <b>CustomSymbolSettings.scdataallservices.xml</b>.</li>
+                    
+                    <li> Delete or rename this file.</li>
+                    
+                    <li> Start Sierra Chart again.</li>
+               </ol>
+            
+            </li>
+            
+           
+      </ol>
+</section>
+
+<section class="h2">
+    <h2  id="DirectEditingGlobalSymbolSettingsUnderlyingFile">Direct Editing of Global Symbol Settings through Underlying File</h2>
+    
+    <div class="member-link">[<a href="#DirectEditingGlobalSymbolSettingsUnderlyingFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section explains how to edit the <em>custom</em> Global Symbol Settings files. It does not provide any further information on the fields in those files.</p>
+
+
+    <p>The Global Symbol Settings are stored  in the files contained within the  <em><b>SymbolSettings</b></em>  folder located in the folder where Sierra Chart is installed on your system.</p>
+
+    <p>It is assumed that you have an understanding of the <a href="https://en.wikipedia.org/wiki/XML" target="_blank" rel="noopener noreferrer">Extensible Markup Language (XML)</a>.</p>
+   
+    <p> It must be understood, that only the files which begin with <b><em>CustomSymbolSettings.</em></b>  can be edited. Example: <b>CustomSymbolSettings.interactive_brokers.trading.xml</b>.   </p> 
+   
+    <p>These files contain new symbols you have added, and custom changes  you have made to specific fields  for the Sierra Chart provided  Symbol Settings for a particular Data or Trading service.</p>
+   
+    <p>It makes no sense to be editing  Symbol Settings files files that begin with <b><em>SymbolSettings.</em></b>, like SymbolSettings.interactive_brokers.trading.xml because these files are updated  by Sierra Chart with settings from the server and any changes you make will be overwritten.  You will only want to be editing the custom files.</p>
+
+    <ol>
+        <li>Exit from Sierra Chart with <b class="menu_item">File &gt;&gt; Exit</b>. Sierra Chart must not be running while editing any of the  Symbol  Settings files</li>
+
+        <li>Go to the folder where Sierra Chart is installed on your system.</li>
+
+        <li>In that folder, open the <em><b>SymbolSettings</b></em> folder.</li>
+
+        <li> Open any of the XML files that you want to edit in a text editor of your choice.  The file name format is as follows: <b><em>CustomSymbolSettings.[service code].xml</em></b> where  <em>service code</em> is the text identifier for the particular Data or Trading service the Symbol Settings are for. 
+        <br> <br> 
+        Any new user added symbols or changes from the default settings for symbols provided by the server are contained within the  <b>CustomSymbolSettings.[service code].xml</b> files.</li>
+
+        <li>Perform the edits that you require in the file. You can modify symbol settings; add a new symbol by adding the new symbol settings for it by modeling them similar to the settings for other existing symbols; or remove symbol settings for particular symbols.</li>
+
+        <li> Save the file. </li> 
+
+        <li> Run Sierra Chart.</li>
+    </ol>
+    
+     <p> It is supported to copy compatible Symbol Settings from one Symbol Settings XML file to another. For example, if you wanted to in specialized cases use the Sierra Chart Market Statistics symbols with your own custom DTC  Server,  then you are able to do that. Below are the general instructions for this. </p>
+     
+     <p> These instructions do not provide a whole lot of detail and are meant only for advanced users who know what they are doing.</p>
+
+    <ol>
+        <li>Exit from Sierra Chart.</li>
+        <li> Go to the  <b>SymbolSettings</b> folder in the Sierra Chart installation folder and  open this file: SymbolSettings.scdataallservices.xml </li>
+    
+        <li>Copy from that file the symbol settings for market statistics. </li>
+
+         <li> Create this file in the same folder:  CustomSymbolSettings.dtc.xml </li>
+
+        <li> Put a copy of the Symbol Settings in there.  </li>
+
+         <li> Enable <b class="menu_item">Global Settings &gt;&gt; Symbol Settings  &gt;&gt; Use Custom Symbol Settings Values</b>.  </li>
+   </ol>
+</section>
+
+<section class="h2">
+    <h2 id="MakingBackupOfGlobalSymbolSettings">Making a Backup of Global Symbol Settings</h2>
+    <div class="member-link">[<a href="#MakingBackupOfGlobalSymbolSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To make a backup of the Global Symbol Settings in their current state, follow the instructions below.</p>
+
+    <ol>
+        <li>Exit from Sierra Chart by selecting <b class="menu_item">File &gt;&gt; Exit</b>.</li>
+
+        <li>Go to the folder Sierra Chart is installed to through your operating system file manager. Usually this folder will be <em>C:\SierraChart</em>.</li>
+
+        <li>Go to the <em><b>SymbolSettings</b></em>  folder.</li>
+
+        <li>Select all files in this folder and make a copy of them using your operating system file manager. Paste a backup of them into the same folder or a different folder.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="UseGlobalTradePositionLimit">Use Global Trade Position Limit</h2>
+    <div class="member-link">[<a href="#UseGlobalTradePositionLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The  <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> <b> &gt;&gt; Use Global Trade Position Limit</b> setting when enabled establishes a limit for the maximum Position quantity allowed among all of the symbols being traded for a particular Trade Account.</p>
+    
+        
+    <p>It considers the quantity of open orders and already established Positions to perform the calculation.   Both Long and Short  Positions contribute equally towards this  Position Limit.  Therefore, a Short  Position of   4 in one symbol and a Long Position of 4 in another symbol,  would mean a quantity of 8. </p>
+    
+    <p>To use this feature, enable this option and enter the maximum  Position quantity allowed as a positive number. The limit is entered in the edit box beside this option.  See the image below.</p>
+
+    <p>This feature does not work properly when Sierra Chart Trade Simulation Mode is being used. It is only functional for non-simulated trading.</p>
+    
+    <p>The limit applies per Trade Account. It does not consider the open order and Position quantities among all Trade Accounts, only <em>individually</em>.</p>
+    
+     <div style="text-align: center;"><a href="../images/globalpositionlimitsetting.png" rel="lightbox"><img src="../images/globalpositionlimitsetting.png" class="screenshot" loading="lazy" width="425" alt="" ></a></div>
+     
+     <p> Both the Global Trade Position Limit and the  Trade Position Limit, that can be set for an individual symbol, consider the quantity of all working open orders even those that are pending cancellation and established Positions.  It will consider what is the maximum resulting Trade Position if all of the orders were to fill.  </p>
+     
+     <p>There is consideration to certain specific scenarios, where a new order will reduce risk. In this case, that order will be allowed. However, there are certain strict conditions that have to be met.  Therefore, an order that seemingly will not change the Position quantity or would reduce risk by reducing the Position Quantity, can still be get rejected.  This is to ensure that the  Position Quantity Limit will not get violated under the vast majority of scenarios. It is important to understand this.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SymbolSettingsNotFoundMessage">Symbol Settings Not Found Message</h2>
+    <div class="member-link">[<a href="#SymbolSettingsNotFoundMessage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For some symbol types,  which would be less common symbol types like options with some supported Data or Trading services, there are not defined Symbol Settings set up for those symbols.</p>
+    
+    <p>In this particular case when you open a chart from one of those symbols you will see a message that says "<b>Symbol settings not found for current service</b>" displayed on the chart for 30 seconds.</p>
+    
+    <p> This message can be safely ignored. It is only an indication that the Symbol Settings do not exist but in most cases, the important settings like the   <b>Tick Size,</b> and  <b>Price Display Format</b> will be automatically set from the data feed. </p>
+    
+    <p> The only time this message would be relevant, is if you are performing automated trading from ACSIL for one of the symbols, then it is necessary to have Symbol Settings set up for the symbol. </p>
+   
+   <p> If you want to set up symbol settings for the symbol, then it is recommended to use a pattern symbol to match with multiple symbols. For instructions, refer to  <a href="#Instructions">Instructions</a>. </p>
+</section>
+
+
+
+
+<hr><p>*Last modified Wednesday, 10th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GlobalSymbolSettings.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:25 GMT -->
+</html>  

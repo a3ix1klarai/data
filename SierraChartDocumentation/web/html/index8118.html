@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GlobalProfitLossManagement.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1684936390') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/GlobalProfitLossManagement.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Global Profit/Loss Management -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index8118.html?page=doc/GlobalProfitLossManagement.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index8118.html?page=doc/GlobalProfitLossManagement.php">Global Profit/Loss Management</a></h4> </div>     <h1 class="PageName">Global Profit/Loss Management</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#FunctionalDescription">Functional Description</a></li>
+    <li><a href="#HowDailyNetProfitLossIsCalculatedForATradeAccount">How Daily Net Profit/Loss is Calculated for a Trade Account</a></li>
+    <li><a href="#Controls">Control Descriptions</a>
+        <ul>
+            <li><a href="#DailyNetProfitManagement">Daily Net Profit Management</a>
+				<ul>
+				    <li><a href="#DailyNetProfitManagement_FlattenPositionsWhenProfitRulesMet">Daily Net Profit Management &gt;&gt; Flatten Positions When Profit Rules Met</a></li>
+				    <li><a href="#DailyNetProfitManagement_ProfitTriggerValue">Daily Net Profit Management &gt;&gt; Profit Trigger Value</a></li>
+				    <li><a href="#DailyNetProfitManagement_ProfitValueAfterTriggerToFlattenPositions">Daily Net Profit Management &gt;&gt; Profit Value After Trigger To Flatten Positions</a></li>
+				    <li><a href="#TrailDailyNetProfit_Enable">Trail Daily Net Profit &gt;&gt; Enable</a></li>
+				    <li><a href="#TrailDailyNetProfit_AfterTriggerWhenDailyNetProfitIncreasesBy">Trail Daily Net Profit &gt;&gt; After Trigger When Daily Net Profit Increases By</a></li>
+				    <li><a href="#TrailDailyNetProfit_IncreaseProfitValueAfterTriggerToFlattenPositionsBy">Trail Daily Net Profit &gt;&gt; Increase Profit Value After Trigger to Flatten Positions By</a></li>
+				    <li><a href="#DailyNetProfitManagement_Status">Daily Net Profit Management &gt;&gt; Status</a></li>
+				</ul>
+			</li>
+            <li><a href="#LockTrading">Lock Trading</a>
+				<ul>
+					<li><a href="#LockTrading_LockAfterPositionsFlattened">Lock Trading &gt;&gt; Lock After Positions Flattened</a></li>
+					<li><a href="#LockTrading_LockTimeInMinutes">Lock Trading &gt;&gt; Lock Time In Minutes</a></li>
+					<li><a href="#LockTrading_LockForDay">Lock Trading &gt;&gt; Lock for Day</a></li>
+					<li><a href="#LockTrading_DisableAutoTradingOnLock">Lock Trading &gt;&gt; Disable Auto Trading on Lock</a></li>
+					<li><a href="#LockTrading_RemainingLockTime">Lock Trading &gt;&gt; Remaining Lock Time</a></li>
+				</ul>
+			</li>
+            <li><a href="#DailyNetLossManagement">Daily Net Loss Management</a>
+				<ul>
+					<li><a href="#DailyNetLossManagement_FlattenPositionsWhenLossRulesMet">Daily Net Loss Management &gt;&gt; Flatten Positions When Loss Rules Met</a></li>
+					<li><a href="#DailyNetLossManagement_LossTriggerValue">Daily Net Loss Management &gt;&gt; Loss Trigger Value</a></li>
+					<li><a href="#DailyNetLossManagement_TriggerDate">Daily Net Loss Management &gt;&gt; Trigger Date</a></li>
+					<li><a href="#DailyNetLossManagement_Reset">Daily Net Loss Management &gt;&gt; Reset</a></li>
+					<li><a href="#DailyNetLossManagement_Status">Daily Net Loss Management &gt;&gt; Status</a></li>
+				</ul>
+			</li>
+            <li><a href="#DisableGlobalProfitLossManagementoOnStartup">Disable Global Profit/Loss Management on Startup</a></li>
+            <li><a href="#FlattenPositionsAtSetTime">Flatten Positions at Set Time</a></li>
+            <li><a href="#StartOfDay">Start of Day</a></li>
+        </ul>
+    </li>
+    <li><a href="#MonitoringStatus">Monitoring Status</a></li>
+    <li><a href="#ClearingOfProfitLossManagementDataForSimulatedAccounts">Clearing of   Profit/Loss Management Data for Simulated Accounts</a></li>
+    <li><a href="#PotentialForRejectedMarketOrderOnLiveAccountsAndSolution">Potential for Rejected Market Order on Live Accounts and Solution</a></li>
+    <li><a href="#HandlingMultipleCurrencies">Handling Multiple Currencies</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p class="GeneralBackgroundHighlight">The functionality which is documented on this page, is not recommended to be used. It was developed  in response to user requests, but it cannot work reliably on the client side. This functionality is going to be moved to the Teton Order Routing Service and managed on the server side in a highly reliable environment.</p>
+
+    <p> The Global Profit/Loss Management feature is used to flatten/close all of the existing Trade Positions for the currently open Charts or Trade DOMs for a Trade Account when certain defined Profit or Loss conditions are met, or at a set time each day.</p>
+
+    <p>This feature works with both non-simulated trading and <a href="indexad24.html?page=doc/TradeSimulation.php">simulated</a> trading.</p>
+    
+    
+    <p class="GeneralBackgroundHighlight">The Global Profit/Loss Management feature is only supported by charts which are being replayed when  <b class="menu_item">Global Settings &gt;&gt; Global Profit/Loss Management &gt;&gt; Support Replaying Charts</b> is enabled.  However, it should <em>not</em> be used for back testing or fast replays  because it cannot work reliably in those cases.  It is unreliable in those cases.  It should only be used during a chart replay which does not run very fast. Additionally,  when there are multiple trading charts being replayed for the same  Symbol and Trade Account, only one of them is going  to be used to obtain the profit/loss  values. </p>
+
+    <p> <em><b>This feature is meant for day traders who carry no overnight Trade Positions in their trading accounts</b></em>. </p>
+
+    <p class="GeneralBackgroundHighlightLight">For non-simulated trading, this feature only works when connected to the market data feed and trading server (<b class="menu_item">File &gt;&gt; Connect to Data Feed </b>).</p>
+
+    <p class="GeneralBackgroundHighlightLight">This feature has the capability to send market orders to flatten all existing Trade Positions for the symbols that have open Charts or Trade DOM windows for, in any of the Trade Accounts for the Username that you are currently  logged into your Trading Service with. It needs to be used with caution.  It is important that you fully understand how the functionality works.</p>
+
+    <p class="GeneralBackgroundHighlightLight">This feature has no guarantee it will work as expected because it has a dependency on the client-side calculated  <b>Daily Net Profit/Loss</b>  which could be incorrect due to invalid or incomplete fill data or pricing data or incorrect dependent settings.  The probability of a malfunction of this feature is very high if you do not understand the functionality and the relevant settings are not properly configured and the required order fill data is not present  or not being used correctly due to dependent settings.</p>
+    
+     <p class="GeneralBackgroundHighlightLight">Therefore, it is recommended this feature not be used. You have full responsibility with the use of it. And we will not provide technical support for malfunctions.</p>
+
+    <p>For information about how the Daily Net Profit/Loss is calculated, refer to <a href="#HowDailyNetProfitLossIsCalculatedForATradeAccount">How Daily Net Profit/Loss is Calculated for a Trade Account</a>.</p>
+
+    <p class="GeneralBackgroundHighlightLight">This feature should only be used with the full understanding of how it works.</p>
+
+    <p>This feature <em>must not be relied upon</em> when orders are entered outside of Sierra Chart. It should only be used  when orders are entered from within Sierra Chart. </p>
+    
+    <p>This is so that the handling of orders, fills and the determination of the Profit and Loss is done in a known and stable environment. Sierra Chart also needs to be running at all times and connected to the Trading service when using this feature for it to be able to function.</p>
+    
+    <p>In the case of when using a <a href = "index9bbd.html?page=doc/NewInstance.php">sub instance</a> of Sierra Chart and when  <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade  Simulation Mode</a> is disabled in that sub instance,  definitely do not use the Global Profit/Loss   Management  in that sub instance. It must be disabled and instead it can only be used in the main instance of Sierra Chart.    Using  both will lead to conflicts and unpredictable behavior. </p>
+    
+    <p> The   <a href = "index56e2.html?page=doc/OrderAllocationToTradeAccounts.html">Order Allocation to Trade Accounts</a> feature does not work with the Global Profit/Loss  Management feature. Global Profit/Loss  Management  will close all Positions and cancel all open Orders for a single Trade Account,  when the set rules have been met by that individual Trade Account. </p>
+
+
+    <div style="text-align: center;"><a href="../images/globalprofitlossmanagement.png" rel="lightbox"><img src="../images/globalprofitlossmanagement.png" alt="" width="493" class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="FunctionalDescription">Functional Description</h2>
+    <div class="member-link">[<a href="#FunctionalDescription">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The Global Profit/Loss Management feature is separated into two categories.</p>
+
+    <p> The first category flattens  Trade Positions which exist for the symbols which have open Charts or Trade DOMs, based upon certain rules relating to the global <em>Daily Net Profit</em> currency value. The <em>Daily Net  Profit</em> is calculated  only for the symbols which have open Charts or Trade DOM windows. It is calculated separately for each Trade Account.</p>
+
+    <p> The second category flattens Trade Positions which exist for the symbols which have open Charts or Trade DOMs, when the specified global <em>Daily Net Loss</em>  currency value has been reached. The <em>Daily Net Loss</em> is calculated  only for the symbols which have open Charts or Trade DOM windows. It is calculated separately for each Trade Account.</p>
+
+    <p>To use this functionality, select <b Class = "menu_item">Global Settings &gt;&gt; Global  Profit/Loss Management</b>.</p>
+
+    <p> If you want to have  Trade Positions flattened when certain Profit rules are met, then enable the option <b>Flatten Positions When Profit Rules Met</b>. Refer to the <a href="#Controls">Control Descriptions</a> section for information about the controls related to the Profit rules, in order to set those appropriately.</p>
+
+    <p> If you want to have  Trade Positions flattened when certain Loss rules are met, then enable the option <b>Flatten Positions When Loss Rules Met</b>. Refer to the <a href="#Controls">Control Descriptions</a> section for information about the controls related to the Loss rules, in order to set those appropriately.</p>
+
+    <p>When the Trade Positions are flattened because of the Global Profit/Loss Management settings, then a message is added to the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradeServiceLog" Target="_blank" rel="noopener noreferrer">Trade Service Log</a> indicating this.</p>
+
+    <p>When the Trade Position is flattened for a particular Symbol and Trade Account because of the Global Profit/ Loss Management settings, the working orders, if any, for the Symbol and Trade Account are also canceled. </p>
+    
+    <p>You may want to enable the option to wait until the orders are canceled and then submit the  market orders to flatten the Existing Trade Positions.  In this case you need to enable  <a href = "index4451.html?page=doc/GlobalTradeSettings.html#HoldMarketOrderUntilPendingCancelOrdersConfirmed">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Hold Market Order Until Pending Cancel Orders Confirmed</a>.</p>
+
+    <p>Once the loss rules have been met for a particular Trade Account during a day and the Trade Positions for the symbols which have an open Chart or a Trade DOM have been  flattened, then this feature to flatten Trade Positions when a Daily Net Loss value is reached, is then <em>disabled</em> until the next trading day. The start of the trading day is controlled through the <a href="#StartOfDay">Start of Day</a> setting.</p> 
+    
+    <p>That time is relative to the  <a href="index219e.html?page=doc/TimeZone.html">Global Time Zone</a> Sierra Chart is set to.</p>
+    
+    
+    <p> Global Profit/Loss Management is only  monitoring symbols which have open Charts  (<em>which  are enabled for trading</em>) or Trade DOMs. Only the Trade  Accounts for those particular Charts or  Trade DOMs  are monitored. This will limit the number of Positions and Trade Accounts being monitored. Not all Positions and Trade Accounts will be monitored.</p>
+</section>
+
+<section class="h2">
+    <h2 id="HowDailyNetProfitLossIsCalculatedForATradeAccount">How Daily Net Profit/Loss is Calculated for a Trade Account</h2>
+    <div class="member-link">[<a href="#HowDailyNetProfitLossIsCalculatedForATradeAccount">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>The <b>Daily Net Profit/Loss</b> value is determined by adding together, for each  Trade Account <em>separately</em>, the <b>Open Profit/Loss</b>  values with the <b>Daily Profit/Loss</b>  values for all of the Charts and Trade DOMs listed on the  <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab" target="_blank" rel="noopener noreferrer">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Stats for Charts (Chart Stats)</a> tab.</p>
+
+    <p>The <b>Daily Net Profit/Loss</b> value originates from this tab even in the case of sub instances.   If the <b>Open Profit/Loss</b>  or the <b>Daily Profit/Loss</b>   field values are not accurate, then refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsForChartsTab_SolvingInaccurateTradeStatisticsForChartsFieldValues" target="_blank" rel="noopener noreferrer">Solving Inaccurate Trade Statistics for Charts Field Values</a>.  It is your responsibility to verify that these fields are correct at all times.</p>
+    
+     <p> The <b>Daily Net Profit/Loss</b> is calculated separately for each Trade Account being used. A Chart or Trade DOM with the same Symbol and Trade Account as one already  listed on the <b> Trade Stats for Charts (Chart Stats)</b> tab, will <em>not</em> be listed on the  <b>Trade Stats for Charts</b> tab again unless it has a different <b>Order Fills Start Date-Time</b> for  its Trades list.  In any case, the <b>Open Profit/Loss</b>  and the <b>Daily Profit/Loss</b>  values are only counted once per Symbol and Trade Account when the Daily Net Profit/Loss is calculated  for a particular Trade Account for the Global Profit/Loss Management. </p>
+
+
+    <p> Refer to <a href="index9473.html?page=doc/TradeWindow.html#OpenProfitLoss" >Open Position Profit/Loss</a> for information about how this is calculated. </p>
+
+    <p>For an explanation of how <b>Daily Profit/Loss</b> is calculated for a Symbol and Trade Account and possible inaccuracies with it and how to solve those, refer to <a href="index1a23.html?page=doc/DailyProfitLossValue.html">Help With Daily Profit/Loss Value</a>.</p>
+    
+     <p>For charts listed on the <b>Trade Stats for Charts</b> tab of the Trade Activity Log, make sure the   <a href = "index4cf4.html?page=doc/ChartSettings.html#CurrencyValuePerTick">Currency Value per Tick</a>  setting is correct in the chart. For more information, refer to <a href = "index67f1.html?page=doc/ProfitLossCalculationsAndSymbolSettings.php">Profit/Loss Calculations and Symbol Settings</a>.</p>
+    
+    
+    <p>It is also important to understand the <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingAndSettingTheStartDateTimeForATradesList">Start DateTime for a Trades List</a>.</p>
+    
+     <p>If you want to include the commission in the Daily Profit/Loss calculation for a chart, then refer to <a href = "index4cf4.html?page=doc/ChartSettings.html#UseSymbolCommissionSettingInTradeListAndStatisticsCalculations">Use Symbol Commission Setting in Trade List and Statistics Calculations</a>. </p>
+     
+    
+</section>
+
+<section class="h2">
+    <h2 id="Controls">Control Descriptions</h2>
+    <div class="member-link">[<a href="#Controls">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="DailyNetProfitManagement">Daily Net Profit Management</h3>
+        <div class="member-link">[<a href="#DailyNetProfitManagement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+			<h4 id="DailyNetProfitManagement_FlattenPositionsWhenProfitRulesMet">Daily Net Profit Management &gt;&gt; Flatten Positions When Profit Rules Met</h4>
+			<div class="member-link">[<a href="#DailyNetProfitManagement_FlattenPositionsWhenProfitRulesMet">Link</a>] - [<a href="#top">Top</a>]</div>
+						
+            <p>Enable this option to cause all Trade Positions to be flattened for a Trade Account when the profit rules are met. Each currently used Trade Account is tracked separately. So the profit rules are calculated separately for each account.</p>
+
+            <p>When Sierra Chart is restarted, this option is automatically disabled for safety reasons unless the <b>Disable Global Profit/Loss Management on Startup</b> is unchecked.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="DailyNetProfitManagement_ProfitTriggerValue">Daily Net Profit Management &gt;&gt; Profit Trigger Value</h4>
+			<div class="member-link">[<a href="#DailyNetProfitManagement_ProfitTriggerValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the Daily Net Profit as a currency value which has to be met in order for the <b>Daily Net Profit Management &gt;&gt; Profit Value After Trigger To Flatten Positions</b> value to go into effect.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="DailyNetProfitManagement_ProfitValueAfterTriggerToFlattenPositions">Daily Net Profit Management &gt;&gt; Profit Value After Trigger To Flatten Positions</h4>
+			<div class="member-link">[<a href="#DailyNetProfitManagement_ProfitValueAfterTriggerToFlattenPositions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>After the <b>Daily Net Profit Management &gt;&gt; Profit Trigger Value</b> has been met, then the <b>Profit Value After Trigger To Flatten Positions</b> value goes into effect.</p>
+
+            <p>When the <b>Daily Net Profit/Loss</b> value is less than or equal to the <b>Profit Value After Trigger To Flatten Positions</b>, then all Trade Positions for the  Symbols for the Trade Account being monitored which have open charts or Trade DOMs will be flattened by the sending of market orders.</p>
+
+            <p>When this is set to 0, then this means a currency value of zero. So what this means is that after the <b>Profit Trigger Value</b> has been met, the <b>Daily Net Profit/Loss</b> has to go to zero or lower (negative) before the current Trade Positions for the Trade Account will be flattened.</p>
+
+            <p>If you want the Trade Positions to be flattened when the <b>Daily Net Profit Management &gt;&gt; Profit Trigger Value</b> is triggered, then set the <b>Profit Value After Trigger To Flatten Positions</b> to at least twice greater than the <b>Profit Trigger Value</b>.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="TrailDailyNetProfit_Enable">Trail Daily Net Profit &gt;&gt; Enable</h4>
+			<div class="member-link">[<a href="#TrailDailyNetProfit_Enable">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then <b>Profit Value After Trigger To Flatten Positions</b> will be increased by the <b>Increase Profit Value After Trigger to Flatten Positions By</b> amount when the initial <b>Profit Trigger Value</b> has been met and the Daily Net profit increases by the amount specified with <b>After Trigger When Daily Net Profit Increases By</b>.</p>
+            
+            <p>Any time there is a change to the <b>Profit Value After Trigger To Flatten Positions</b> and when <b>Trail Daily Net Profit</b> has been enabled, then this will be logged in the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b>.</p>
+            
+            <p>Also the current <b>Profit Value After Trigger To Flatten Positions</b> value will be displayed in the <b>Status</b> box below the <b>Daily Net Profit Management</b> frame in the <b class="menu_item">Global Settings &gt;&gt; Global Profit/Loss Management</b> window. Example: <b>P/L &lt;= for Flatten: 100.0</b>.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="TrailDailyNetProfit_AfterTriggerWhenDailyNetProfitIncreasesBy">Trail Daily Net Profit &gt;&gt; After Trigger When Daily Net Profit Increases By</h4>
+			<div class="member-link">[<a href="#TrailDailyNetProfit_AfterTriggerWhenDailyNetProfitIncreasesBy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the <b>Profit Trigger Value</b> has been reached, and the Daily Net Profit increases by the amount specified in the <b>After Trigger When Daily Net Profit Increases By</b> setting, then the amount specified in the <b>Increase Profit Value After Trigger to Flatten Positions By</b> setting, will increase the <b>Daily Net Profit Management &gt;&gt; Profit Value After Trigger To Flatten Positions</b> currency value.</p>
+            
+             <p>If the Daily Profit increases by a multiple of <b>After Trigger When Daily Net Profit Increases by</b>, then the <b>Increase Profit Value After Trigger to Flatten Positions By </b> is increased by that same multiple.</p>
+ 
+            <p>For example, if <b>After Trigger When Daily Net Profit Increases by</b> is set to 25 and <b>Increase Profit Value After Trigger to Flatten Positions By</b> is set to 25, then when the Daily Net Profit increases by 50 at one time which is a multiple of two, then the profit value to flatten the Positions will also be increased by a multiple of two which would be 50 in this case.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="TrailDailyNetProfit_IncreaseProfitValueAfterTriggerToFlattenPositionsBy">Trail Daily Net Profit &gt;&gt; Increase Profit Value After Trigger to Flatten Positions By</h4>
+			<div class="member-link">[<a href="#TrailDailyNetProfit_IncreaseProfitValueAfterTriggerToFlattenPositionsBy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Refer to the description for <b> After Trigger When Daily Net Profit Increases By</b>.</p>
+        </section>
+
+
+        <section class="h4">
+			<h4 id="DailyNetProfitManagement_Status">Daily Net Profit Management &gt;&gt; Status</h4>
+			<div class="member-link">[<a href="#DailyNetProfitManagement_Status">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p>This is a text display reporting on the current status of the Daily Net Profit Management feature.</p>
+            
+            <p>If this says <b>Profit Management is disabled</b>, then enable <b>Daily Net Profit Management &gt;&gt; Flatten Positions When Profit Rules Met</b> to enable this functionality.</p>
+
+            <p>When you have just enabled the <b>Flatten Positions When Profit Rules Met</b> option, the status will not be displayed in this text display until you press <b>OK</b> and reopen the <b>Global Profit/Loss Management Settings</b> window.</p>
+            
+            <p>There is also the <b>Trading Profit Management Status</b> study which can be added to the chart through  <b class="menu_item">Analysis &gt;&gt; Studies</b>, which displays the same information as this status display, but is displayed directly on the chart.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="StatusTradeAccount">Status Trade Account (Global Settings &gt;&gt; Global Profit/Loss Management)</h3>
+        <div class="member-link">[<a href="#StatusTradeAccount">Link</a>] - [<a href="#top">Top</a>]</div>  
+
+        <p> This listbox will list all of the Trade Accounts   among the open charts that are  in  <a href = "index3c50.html?page=doc/ChartTrading.html">Chart Trade Mode</a> or otherwise maintaining a Trades list. </p> 
+
+        <p>The selected Trade Account controls what account the status displays on the Global Profit/Loss Management window are displayed for.</p>
+
+        <p> If there are no charts which are open  or in Chart Trade Mode, then this listbox will be disabled.  </p>
+        
+   </section>
+
+    <section class="h3">
+        <h3 id="LockTrading">Lock Trading (Global Settings &gt;&gt; Global Profit/Loss Management)</h3>
+        <div class="member-link">[<a href="#LockTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+			<h4 id="LockTrading_LockAfterPositionsFlattened">Lock Trading &gt;&gt; Lock After Positions Flattened</h4>
+			<div class="member-link">[<a href="#LockTrading_LockAfterPositionsFlattened">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>When Trade Positions are flattened from the <b>Daily Net Profit Management</b>, <b>Daily Net Loss Management</b>, or the <b>Flatten Positions at Set Time</b>  features, then trading can be locked for a period of time.</p>
+            
+            <p>Enable this option to lock trading after the  Trade Positions are flattened.</p>
+
+            <p>When trading has been locked after the   enabled and specified rules have been met, and you need to perform some trading operation like canceling orders or entering a new order for some reason, this can be accomplished by disabling this option (<b class="menu_item">Global Settings &gt;&gt; Global Profit/Loss Management</b> <b>&gt;&gt; Lock Trading &gt;&gt; Lock After Positions Flattened </b>).</p>
+            
+            <p>When this option is disabled you can then perform trading operations so long as <b class="menu_item">Trade &gt;&gt; Trading  Locked</b> is unchecked.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="LockTrading_LockTimeInMinutes">Lock Trading &gt;&gt; Lock Time In Minutes</h4>
+			<div class="member-link">[<a href="#LockTrading_LockTimeInMinutes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This specifies the trading lock time in minutes. After this time has elapsed, trading will be possible.</p>
+
+            <p>If you need to enter an order when trading is locked, it is necessary to uncheck the <b>Lock After Positions Flattened</b> option.</p>
+        </section>
+        
+        <section class="h4">
+			<h4 id="LockTrading_LockForDay">Lock Trading &gt;&gt; Lock for Day</h4>
+			<div class="member-link">[<a href="#LockTrading_LockForDay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the <b>Lock for Day</b> option is enabled, then <b>Lock Time In Minutes</b> is ignored. Trading is locked for the entire day.  </p>
+
+            <p>In version 2107 and higher, a new day is considered to begin  at the <a href = "#StartOfDay"> Start of Day</a> time setting. This time is relative to the  <a href="index219e.html?page=doc/TimeZone.html">global time zone</a> setting. At that time trading is unlocked.</p>
+            
+            
+            <p> In version 2106 and earlier the trading is locked  until 00:00:00 according to the  <a href="index219e.html?page=doc/TimeZone.html">global time zone</a> setting.</p>
+
+            <p>If you need to enter an order when trading is locked, it is necessary to uncheck the <b>Lock After Positions Flattened</b> option.  And press   <b>OK</b>.</p>
+        </section>       
+
+        <section class="h4">
+			<h4 id="LockTrading_DisableAutoTradingOnLock">Lock Trading &gt;&gt; Disable Auto Trading on Lock</h4>
+			<div class="member-link">[<a href="#LockTrading_DisableAutoTradingOnLock">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the <b>Lock Trading &gt;&gt;  Disable Auto Trading on Lock</b> option is enabled, then at the time that Trade Positions are flattened and  Open orders are canceled for any particular Trade Account as the result of the Global Profit or Loss management functionality, then <b class="menu_item">Trade &gt;&gt;  Auto Trading Enabled - Global</b> is disabled.</p>
+
+            <p>It does not automatically reenable, you have to manually do this.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="LockTrading_RemainingLockTime">Lock Trading &gt;&gt; Remaining Lock Time</h4>
+			<div class="member-link">[<a href="#LockTrading_RemainingLockTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This control displays the remaining lock time if trading is currently locked as the result of this feature.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="DailyNetLossManagement">Daily Net Loss Management</h3>
+        <div class="member-link">[<a href="#DailyNetLossManagement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+			<h4 id="DailyNetLossManagement_FlattenPositionsWhenLossRulesMet">Daily Net Loss Management &gt;&gt; Flatten Positions When Loss Rules Met</h4>
+			<div class="member-link">[<a href="#DailyNetLossManagement_FlattenPositionsWhenLossRulesMet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Enable this option to cause all Trade Positions to be flattened when the <b>Loss Trigger Value</b> has been met. Each currently used Trade Account is tracked separately. So the Profit/Loss is calculated separately for each Trade Account being used.</p>
+
+            <p>When Sierra Chart is restarted, this option is automatically disabled for safety reasons unless the <b>Disable Global Profit/Loss Management on Startup</b> is unchecked.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="DailyNetLossManagement_LossTriggerValue">Daily Net Loss Management &gt;&gt; Loss Trigger Value</h4>
+			<div class="member-link">[<a href="#DailyNetLossManagement_LossTriggerValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the Daily Net Loss  as a currency value which needs to be reached for the current Trade Positions to be flattened. </p>
+
+             <p>It is entered as a  <em>negative number</em>. It must be always a currency value.</p>
+
+            <p>Daily Net Loss includes the Profit/Loss for all currently open Trade Positions and closed Positions for the trading day for a particular Trade Account. For more information, refer to <a href="index1a23.html?page=doc/DailyProfitLossValue.html">Help With Daily Profit/Loss Value</a>.</p>
+
+            <p>As an example, if you want to have the currently open Trade Positions flattened when the Daily Net Loss is -500 or higher in the account currency, then enter <em>-500</em>.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="DailyNetLossManagement_TriggerDate">Daily Net Loss Management &gt;&gt; Trigger Date</h4>
+			<div class="member-link">[<a href="#DailyNetLossManagement_TriggerDate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The Trigger Date box displays the date  the Trade Positions were flattened for a Trade Account.</p>
+
+            <p>This is reported separately for each account being used in the trading Charts and Trade DOMs. The accounts are iterated through every five seconds. Therefore, this changes every five seconds if there are multiple Trade Accounts used among the open Charts and Trade DOMs.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="DailyNetLossManagement_Reset">Daily Net Loss Management &gt;&gt; Reset</h4>
+            <div class="member-link">[<a href="#DailyNetLossManagement_Reset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the Trade Positions for a Trade Account are flattened,  the Daily Net Loss Management is disabled until the next trading day.  The start of the trading day is controlled through the <a href = "#StartOfDay">Start of Day</a> setting.  This time is relative to the  <a href="index219e.html?page=doc/TimeZone.html">Time Zone</a> Sierra Chart is set to.</p>
+            
+            <p> The disabling of the  Daily Net Loss Management for the day does  <em>not</em> refer to locking of trading. This is completely separate. </p>
+
+            <p>The Date that the Trade Positions were flattened on is remembered for each Trade Account. This Date is saved when Sierra Chart is  exited and restarted.</p>
+
+            <p>This Date for a particular Trade Account is displayed in the <b>Daily Net Loss Management &gt;&gt; Trigger Date</b> box.</p>
+
+            <p>To reset these dates back to zero to allow the Daily Net Loss Management to be used again for all of the Trade Accounts in the same day, press the  <b>Reset</b> button.  However, this does not unlock trading. </p>
+            
+             <p>To unlock trading, refer to <a href="#LockTrading">Lock Trading</a>. </p>
+             
+            <p> The resetting of the Daily Net Loss Management has no effect upon the resetting of the Daily Profits/Loss  for the charts maintaining a Trades list and being used in the Daily Net  Profit/Loss calculation.  The reset time for those is based  upon the Session Times in the chart. For more information, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime">Understanding Daily Trade Statistics Reset Time</a>. </p>
+        </section>
+
+        <section class="h4">
+			<h4 id="DailyNetLossManagement_Status">Daily Net Loss Management &gt;&gt; Status</h4>
+			<div class="member-link">[<a href="#DailyNetLossManagement_Status">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is a text display reporting on the current status of the Daily Net Loss Management feature.</p>
+
+            <p>This is reported separately for each account being used in the trading Charts and Trade DOMs. The accounts are iterated through every five seconds. Therefore, this changes every five seconds if there are multiple accounts.</p>
+
+            <p> When you have just enabled the <b>Flatten Positions When Loss Rules Met</b> option, the status will not be displayed in this text display until you press <b>OK</b> and reopen the <b>Global Profit/Loss Management Settings</b> window.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="DisableGlobalProfitLossManagementoOnStartup">Disable Global Profit/Loss Management on Startup</h3>
+        <div class="member-link">[<a href="#DisableGlobalProfitLossManagementoOnStartup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, the default, then upon starting of Sierra Chart, the <b>Daily Net Profit Management &gt;&gt; Flatten Positions When Profit Rules Met </b> and the <b>Daily Net Loss Management &gt;&gt; Flatten Positions When Loss Rules Met</b> options will automatically be disabled  preventing the corresponding functionality from working.</p>
+
+        <p>When this option is disabled, then the <b>Daily Net Profit Management</b>  and <b>Daily Net Loss Management</b> features will remain enabled/checked if they already are enabled when Sierra Chart is started.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="FlattenPositionsAtSetTime">Flatten Positions at Set Time</h3>
+        <div class="member-link">[<a href="#FlattenPositionsAtSetTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Flatten Positions at Set Time</b> functionality will flatten/close all of the existing Trade Positions for the currently open Charts or Trade DOMs when the specified time has been encountered.</p>  
+
+        <p>If there is a current nonzero Trade Position quantity for a particular Symbol and Trade Account, and there are also open orders, those open orders will also be canceled. If there are only open orders for a particular Symbol and Trade Account but the Trade Position quantity is 0, then those orders will still remain and <em>not be canceled</em>.</p>
+
+        <p>To use this feature, enable the <b>Flatten Positions at Set Time &gt;&gt; Enabled</b> option, and set the <b>Flatten Time</b>. The  Flatten Time format is Hours:Minutes:Seconds in a 24-hour format. The time is relative to the  <a href="index219e.html?page=doc/TimeZone.html">global time zone</a>  setting.</p>
+    </section>
+   
+    <section class="h3">
+        <h3 id="StartOfDay">Start of Day</h3>
+        <div class="member-link">[<a href="#StartOfDay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Start of  Day</b> time setting is used to set what is considered the start of the trading day and is used  in the Global Profit/Loss management where  the start of the trading day needs to be known.</p> 
+        
+        <p> This time is relative to the Sierra Chart   <a href = "index219e.html?page=doc/TimeZone.html">Time Zone</a> setting. </p>
+        
+        <p>For example, when the profit or loss rules have been met, and the Trade Positions have been closed, then these rules will not apply until the next trading day according to this time.</p>
+
+        <p>The Daily Profit/Loss values within  each chart for a particular Symbol and Trade Account, have their own start of day  setting for resetting the Trade Statistics based upon the Session Times. So that can be different than this Start of Day setting.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SupportReplayingCharts">Support Replaying Charts</h3>
+        <div class="member-link">[<a href="#SupportReplayingCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, then the Global Profit/Loss Management  will include <a href="index9600.html?page=doc/ReplayChart.html">Replaying Charts</a>. Otherwise, the Global Profit/Loss Management checks are not performed for replaying charts.</p>
+        
+         <p> Global Profit/Loss Management  should not be used while back testing because  Global Profit/Loss Management  does not function properly during a back test. </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="MonitoringStatus">Monitoring Status</h2>
+    <div class="member-link">[<a href="#MonitoringStatus">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is supported to monitor the status of Global Profit and Loss Management  to see the current state of it, and the current  Daily Net Profit or Loss value  for the different Charts and Trading DOMs for the currently selected Trade Account.</p>
+    
+    <p>Follow the instructions below to view this status information. </p>
+    
+    
+    <ol>
+    
+     <li> Select  <b class="menu_item">Global Settings &gt;&gt; Global Profit/Loss Management</b>.</li>
+     
+     <li>  At the top right, select the Trade Account you want to monitor the status for.   Refer to the instructional image below. Only Trade Accounts that are selected to be used on Charts or Trading DOMs  which are enabled for trading, <em>will be listed</em>.</li>
+     
+     <li> Look in the status boxes for the current status.  There are separate status boxes for  Profit Management and Loss Management.   They are highlighted in the instructional image below.</li>
+    </ol>
+      
+    <p> There is also the <b>Trading Profit Management Status</b> study which can be added to the chart through  <b class="menu_item">Analysis &gt;&gt; Studies</b> (<a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Adding/Modifying Studies</a>), which displays the same information  as these status displays,  however it is displayed directly on the chart.</p>
+
+    <div style="text-align: center;"><a href="../images/globalprofitlossmanagement_status.png" rel="lightbox"><img src="../images/globalprofitlossmanagement_status.png" alt="" width="493" class="screenshot" loading="lazy"></a></div>
+    
+</section>
+
+<section class="h2">
+    <h2 id="ClearingOfProfitLossManagementDataForSimulatedAccounts">Clearing of Profit/Loss Management Data for Simulated Accounts</h2>
+    <div class="member-link">[<a href="#ClearingOfProfitLossManagementDataForSimulatedAccounts">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Once the <a href="#DailyNetProfitManagement">Daily Net Profit Management</a> or the <a href="#DailyNetLossManagement">Daily Net Loss Management</a> functions have flattened Trade Positions and canceled open orders for a particular Trade Account, that action will not occur again on the same date.</p>
+    
+    <p>In the case of the <b>Daily Net Loss Management</b> the <b>Net Loss Management &gt;&gt; Reset</b> button will clear/reset the dates that the Trade Positions were flattened on for all of the Trade Accounts. Therefore, <b>Daily Net Loss Management</b> can function again on the same day. This does not apply to Daily Net Profit Management.</p>
+    
+    <p>When <b class="menu_item">Trade &gt;&gt; Clear Trade Simulation Orders and Data</b> is selected, all of the Profit/Loss management data for all simulated trade accounts is cleared. Which will allow the <b>Daily Net Profit/Loss Management</b> functions to perform again on the same day.</p>
+    
+    <p>When starting a chart replay, and you press the Yes button to clear the  simulated trade data for the Symbol and Trade Account, then the Profit/Loss management data for that particular Trade Account is also cleared allowing the <b>Daily Net Profit/Loss Management</b> functions to perform again on the same day for that particular Trade Account.</p> 
+
+    <p>Keep in mind, however, that by default, charts that are replaying are not tracked by the Global Profit/Loss Management feature. In order to have the Global Profit/Loss Management function during a chart replay, enable the option <a href="#SupportReplayingCharts">Support Replaying Charts</a> on the Global Profit/Loss Management window.</p>
+</section>
+
+<section class="h2">
+    <h2 id="PotentialForRejectedMarketOrderOnLiveAccountsAndSolution">Potential for Rejected Market Order on Live Accounts and Solution</h2>
+    <div class="member-link">[<a href="#PotentialForRejectedMarketOrderOnLiveAccountsAndSolution">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When using any of the functionality documented on this page to flatten Trade Positions for a <em>Live</em> Trade Account, there is the potential that the risk management  system on the external trading system you are connected to will reject the market order that Sierra Chart sends because it will violate margin requirements or position limits.</p>
+    
+    <p>The solution to this problem is to enable  <a href="index4451.html?page=doc/GlobalTradeSettings.html#HoldMarketOrderUntilPendingCancelOrdersConfirmed">Hold Market Order Until  Pending Cancel Orders Confirmed</a>. This should solve the problem. However, there still could be other scenarios that we are not aware of which could still cause the Market order Sierra Chart sends to flatten a Trade Position to be rejected by the external trading service.</p>
+</section>
+
+<section class="h2">
+    <h2 id="HandlingMultipleCurrencies">Handling Multiple Currencies</h2>
+    <div class="member-link">[<a href="#HandlingMultipleCurrencies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If there are Trade Positions in different currencies you will want to make sure to set a <a href= "index4451.html?page=doc/GlobalTradeSettings.html#CommonProfitLossCurrency">Common Profit/Loss Currency</a>.</p>
+</section>
+
+<hr><p>*Last modified Wednesday, 24th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GlobalProfitLossManagement.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:09 GMT -->
+</html>  

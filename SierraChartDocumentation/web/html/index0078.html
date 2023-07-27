@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/c_ACSILDepthBars.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1641853910') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/c_ACSILDepthBars.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>ACSIL Interface Members - Historical Market Depth Data (c_ACSILDepthBars) -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index0078.html?page=doc/c_ACSILDepthBars.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index6788.html?page=doc/ACSIL_Members.html">ACSIL Interface Members - Introduction</a> &gt;&gt; <a  href="index0078.html?page=doc/c_ACSILDepthBars.php">ACSIL Interface Members - Historical Market Depth Data (c_ACSILDepthBars)</a></h4> </div>     <h1 class="PageName">ACSIL Interface Members - Historical Market Depth Data (c_ACSILDepthBars)</h1>
+
+<ul>
+    <li><a href="#c_ACSILDepthBars">c_ACSILDepthBars</a></li>
+    <li><a href="#c_ACSILDepthBars_Methods">c_ACSILDepthBars Methods</a>
+        <ul>
+            <li><a href="#GetTickSize">GetTickSize</a></li>
+            <li><a href="#PriceToTickIndex">PriceToTickIndex</a></li>
+            <li><a href="#TickIndexToPrice">TickIndexToPrice</a></li>
+            <li><a href="#NumBars">NumBars</a></li>
+            <li><a href="#DepthDataExistsAt">DepthDataExistsAt</a></li>
+            <li><a href="#GetBarHighestPriceTickIndex">GetBarHighestPriceTickIndex</a></li>
+            <li><a href="#GetBarLowestPriceTickIndex">GetBarLowestPriceTickIndex</a></li>
+            <li><a href="#GetNextHigherPriceTickIndex">GetNextHigherPriceTickIndex</a></li>
+            <li><a href="#GetMaxDominantSide">GetMaxDominantSide</a></li>
+            <li><a href="#GetMaxQuantityForSide">GetMaxQuantityForSide</a></li>
+            <li><a href="#GetMaxBidQuantity">GetMaxBidQuantity</a></li>
+            <li><a href="#GetMaxAskQuantity">GetMaxAskQuantity</a></li>
+            <li><a href="#GetMaxQuantity">GetMaxQuantity</a></li>
+            <li><a href="#GetLastDominantSide">GetLastDominantSide</a></li>
+            <li><a href="#GetLastQuantityForSide">GetLastQuantityForSide</a></li>
+            <li><a href="#GetLastBidQuantity">GetLastBidQuantity</a></li>
+            <li><a href="#GetLastAskQuantity">GetLastAskQuantity</a></li>
+            <li><a href="#GetLastQuantity">GetLastQuantity</a></li>
+        </ul>
+    </li>
+    <li><a href="#Examples">Examples</a>
+        <ul>
+            <li><a href="#Example_IteratingPrices">Iterating Through All the Prices Within a Bar</a></li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="c_ACSILDepthBars">c_ACSILDepthBars</h2>
+    <div class="member-link">[<a href="#c_ACSILDepthBars">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The c_ACSILDepthBars C++ class provides an interface for accessing historical market depth data bars loaded into a chart. Use the <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php" Target="_blank" rel="noopener noreferrer">Advanced Custom Study Interface and Language</a> functions <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetMarketDepthBars" Target="_blank" rel="noopener noreferrer">sc.GetMarketDepthBars()</a> or <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetMarketDepthBarsFromChart" Target="_blank" rel="noopener noreferrer">sc.GetMarketDepthBarsFromChart()</a> to get an instance of this class.</p>
+
+    <p>Historical market depth data is stored at multiple price increments, as determined by the tick size for the symbol, for each bar in the chart.  The different price increments are identified by their price tick index, where each adjacent price tick index has a price value difference exactly equal to the tick size on the chart.</p>
+   
+   <p>  For functions that take a  <b>PriceTickIndex </b>  index value, that can be determined from an actual float  price value by using the  <a href=" #PriceToTickIndex">PriceToTickIndex</a>  member function.</p>
+
+    <p>In order for there to be  any historical market depth data to access,  historical market depth data must be loaded into the chart and also should be recorded in real-time. To accomplish both of these, it is necessary to set <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scMaintainHistoricalMarketDepthData">sc.MaintainHistoricalMarketDepthData</a> to TRUE in the study function. This  normally will be done in the  <b>sc.SetDefaults  </b> code block.</p>
+
+    <p>For a study which uses this data, refer to <a href="index0cc3.html?page=doc/StudiesReference.php&amp;ID=375#Market_Depth_Historical_Graph" target="_blank" rel="noopener noreferrer">Market Depth Historical Graph</a> for details.</p>
+
+    <p>It is also supported to access the most recent market depth data. For complete documentation, refer to  <a href="indexd011.html?page=doc/ACSILProgrammingConcepts.html#ProgrammaticallyAccessingHistoricalAndCurrentMarketDepthData">Programmatically Accessing Historical and Current Market Depth Data</a>. This is an alternative to access the current market depth data. You will need to access the current market depth data through these other methods whenever market depth data changes after a chart bar has completed but before there is a new trade for the next bar which has not yet been displayed because there has not yet been a trade for that new upcoming bar.</p>
+</section>
+
+<section class="h2">
+    <h2 id="c_ACSILDepthBars_Methods">c_ACSILDepthBars Methods</h2>
+    <div class="member-link">[<a href="#c_ACSILDepthBars_Methods">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="GetTickSize">GetTickSize</h3>
+        <div class="member-link">[<a href="#GetTickSize">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">float <b>GetTickSize</b>();</p>
+
+        <p>Returns the tick size that was used for storing the historical market depth data.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="PriceToTickIndex">PriceToTickIndex</h3>
+        <div class="member-link">[<a href="#PriceToTickIndex">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>PriceToTickIndex</b>(float <b>Price</b>);</p>
+
+        <p>Converts the given <b>Price</b> value into a price tick index.  This is equivalent to the price divided by the tick size.  Price tick indexes are used to discretely identify price levels in the historical market depth data.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TickIndexToPrice">TickIndexToPrice</h3>
+        <div class="member-link">[<a href="#TickIndexToPrice">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">float <b>TickIndexToPrice</b>(int <b>PriceTickIndex</b>);</p>
+
+        <p>Converts the given <b>PriceTickIndex</b> into the original price value.  This is equivalent to the price tick index multiplied by the tick size.  Price tick indexes are used to discretely identify price levels in the historical market depth data.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="NumBars">NumBars</h3>
+        <div class="member-link">[<a href="#NumBars">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>NumBars</b>();</p>
+
+        <p>Returns the number of historical market depth data bars.  This will generally match the number of bars in the chart, but may be less if there is less market depth data available.  Bar indexes in the historical market depth data will correspond to bar indexes in the chart.  Not every bar may contain historical market depth data.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DepthDataExistsAt">DepthDataExistsAt</h3>
+        <div class="member-link">[<a href="#DepthDataExistsAt">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">bool <b>DepthDataExistsAt</b>(int <b>BarIndex</b>);</p>
+
+        <p>Returns <b>true</b> if any historical market depth data exists within the bar at the given <b>BarIndex</b>.  If the given <b>BarIndex</b> is outside the valid range of bars, this method will return <b>false</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetBarHighestPriceTickIndex">GetBarHighestPriceTickIndex</h3>
+        <div class="member-link">[<a href="#GetBarHighestPriceTickIndex">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetBarHighestPriceTickIndex</b>(int <b>BarIndex</b>);</p>
+
+        <p>Returns the highest price, as a price tick index, that has any known depth quantity within the bar at the given <b>BarIndex</b>.  If no depth data exists within the bar at the given <b>BarIndex</b>, or the given <b>BarIndex</b> is outside the valid range of bars, this method will return <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetBarLowestPriceTickIndex">GetBarLowestPriceTickIndex</h3>
+        <div class="member-link">[<a href="#GetBarLowestPriceTickIndex">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetBarLowestPriceTickIndex</b>(int <b>BarIndex</b>);</p>
+
+        <p>Returns the lowest price, as a price tick index, that has any known depth quantity within the bar at the given <b>BarIndex</b>.  If no depth data exists within the bar at the given <b>BarIndex</b>, or the given <b>BarIndex</b> is outside the valid range of bars, this method will return <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetNextHigherPriceTickIndex">GetNextHigherPriceTickIndex</h3>
+        <div class="member-link">[<a href="#GetNextHigherPriceTickIndex">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">bool <b>GetNextHigherPriceTickIndex</b>(int <b>BarIndex</b>, int& <b>r_PriceTickIndex</b>);</p>
+
+        <p>Increments the given <b>r_PriceTickIndex</b> up to the next price tick index that contains any known depth quantity within the bar at the given <b>BarIndex</b>.  If the given <b>r_PriceTickIndex</b> is already at or beyond the highest price, or if no depth data exists within the bar at the given <b>BarIndex</b>, or the given <b>BarIndex</b> is outside the valid range of bars, this method will return <b>false</b>.  Otherwise the method returns <b>true</b> to indicate that the given <b>r_PriceTickIndex</b> has been set to the next valid price tick index with data.  The given <b>r_PriceTickIndex</b> may be incremented by more than one price level if there are price levels that do not contain any depth quantities.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetMaxDominantSide">GetMaxDominantSide</h3>
+        <div class="member-link">[<a href="#GetMaxDominantSide">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">BuySellEnum <b>GetMaxDominantSide</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the side (<b>BSE_BUY</b> for bid, <b>BSE_SELL</b> for ask) with the greatest maximum quantity within the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If both sides have equal maximum quantities, or no quantities are known, this method returns <b>BSE_UNDEFINED</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetMaxQuantityForSide">GetMaxQuantityForSide</h3>
+        <div class="member-link">[<a href="#GetMaxQuantityForSide">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetMaxQuantityForSide</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>, BuySellEnum <b>Side</b>);</p>
+
+        <p>Returns the maximum quantity within the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>, on the given <b>Side</b> (<b>BSE_BUY</b> for bid, <b>BSE_SELL</b> for ask).  If the maximum bid quantity is equal to the maximum ask quantity, and <b>BSE_UNDEFINED</b> is given for the <b>Side</b>, then the maximum bid quantity will be returned, since both sides are equal.  This is to assist in the case that the dominant side is requested, but there is no dominant side.  Otherwise, if any of these parameters are outside the valid range of data, or there is no known quantity, this method returns <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetMaxBidQuantity">GetMaxBidQuantity</h3>
+        <div class="member-link">[<a href="#GetMaxBidQuantity">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetMaxBidQuantity</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the maximum bid quantity within the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If any of these parameters are outside the valid range of data, or there is no known bid quantity, this method returns <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetMaxAskQuantity">GetMaxAskQuantity</h3>
+        <div class="member-link">[<a href="#GetMaxAskQuantity">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetMaxAskQuantity</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the maximum ask quantity within the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If any of these parameters are outside the valid range of data, or there is no known ask quantity, this method returns <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetMaxQuantity">GetMaxQuantity</h3>
+        <div class="member-link">[<a href="#GetMaxQuantity">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetMaxQuantity</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the maximum quantity, the greater of the maximum bid quantity or the maximum ask quantity, within the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If any of these parameters are outside the valid range of data, or there are no known quantities, this method returns <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetLastDominantSide">GetLastDominantSide</h3>
+        <div class="member-link">[<a href="#GetLastDominantSide">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">BuySellEnum <b>GetLastDominantSide</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the side (<b>BSE_BUY</b> for bid, <b>BSE_SELL</b> for ask) with the greatest last quantity within the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If both sides have equal last quantities, or no quantities are known, this method returns <b>BSE_UNDEFINED</b>.</p>
+        
+        <p>The <a href = "index0cc3.html?page=doc/StudiesReference.php&amp;ID=375#Market_Depth_Historical_Graph">Market Depth Historical Graph</a> study simply defaults to the ask side in any case where the last bid quantity is not greater.  </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetLastQuantityForSide">GetLastQuantityForSide</h3>
+        <div class="member-link">[<a href="#GetLastQuantityForSide">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetLastQuantityForSide</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>, BuySellEnum <b>Side</b>);</p>
+
+        <p>Returns the last quantity for the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>, on the given <b>Side</b> (<b>BSE_BUY</b> for bid, <b>BSE_SELL</b> for ask).  If the last bid quantity is equal to the last ask quantity, and <b>BSE_UNDEFINED</b> is given for the <b>Side</b>, then the last bid quantity will be returned, since both sides are equal.  This is to assist in the case that the dominant side is requested, but there is no dominant side.  Otherwise, if any of these parameters are outside the valid range of data, or there is no known quantity, this method returns <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetLastBidQuantity">GetLastBidQuantity</h3>
+        <div class="member-link">[<a href="#GetLastBidQuantity">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetLastBidQuantity</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the last bid quantity for the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If any of these parameters are outside the valid range of data, or there is no known bid quantity, this method returns <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetLastAskQuantity">GetLastAskQuantity</h3>
+        <div class="member-link">[<a href="#GetLastAskQuantity">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetLastAskQuantity</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the last ask quantity for the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If any of these parameters are outside the valid range of data, or there is no known ask quantity, this method returns <b>0</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GetLastQuantity">GetLastQuantity</h3>
+        <div class="member-link">[<a href="#GetLastQuantity">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetLastQuantity</b>(int <b>BarIndex</b>, int <b>PriceTickIndex</b>);</p>
+
+        <p>Returns the last quantity, the greater of the last bid quantity or the last ask quantity, for the bar at the given <b>BarIndex</b>, at the given <b>PriceTickIndex</b>.  If any of these parameters are outside the valid range of data, or there are no known quantities, this method returns <b>0</b>.</p>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="Examples">Examples</h2>
+    <div class="member-link">[<a href="#Examples">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="Example_IteratingPrices">Iterating Through All the Prices Within a Bar</h3>
+        <div class="member-link">[<a href="#Example_IteratingPrices">link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This code example demonstrates how to iterate through all of the price levels that contain market depth data within a single bar.</p>
+
+        <pre class="Code FullLineHeight">
+// Get access to the market depth bars in the chart the study instance is applied to.
+c_ACSILDepthBars* p_DepthBars = sc.GetMarketDepthBars();
+if (p_DepthBars == NULL)
+    return;
+
+// Do nothing if the bar at the current index has no data.
+if (!p_DepthBars->DepthDataExistsAt(sc.Index))
+    return;
+
+// Iterate through each price index for the bar at the current index.
+int PriceTickIndex = p_DepthBars->GetBarLowestPriceTickIndex(sc.Index);
+
+do
+{
+    // Use PriceTickIndex to get the desired depth data at the current
+    // price level.  For example:
+    const int MaxBidQuantityAtPriceTick = 
+    p_DepthBars->GetMaxBidQuantity(sc.Index, PriceTickIndex);
+}
+while (p_DepthBars->GetNextHigherPriceTickIndex(sc.Index, PriceTickIndex));
+        </pre>
+
+        <p>The <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetMarketDepthBars">sc.GetMarketDepthBars()</a> function is used for getting access to the <a href="#c_ACSILDepthBars">c_ACSILDepthBars</a> object.</p>
+
+        <p><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIndex">sc.Index</a> is used  to specify the  bar index currently being processed.</p>
+
+        <p> Before attempting to get the first price tick index, the code first checks if any depth data exists in the bar using <a href="#DepthDataExistsAt">DepthDataExistsAt()</a>. </p>
+
+        <p><a href="#GetBarLowestPriceTickIndex">GetBarLowestPriceTickIndex()</a> is used to get the first price tick index in the bar, and then <a href="#GetNextHigherPriceTickIndex">GetNextHigherPriceTickIndex()</a> is used in a do-while loop to iterate through the rest of the price tick indexes in the bar.    </p>
+
+        <p>A do-while loop is used so that the first price tick index is processed before moving on to the next price tick index. </p>
+
+    </section>
+</section>
+
+<hr><p>*Last modified Monday, 10th January, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/c_ACSILDepthBars.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:49 GMT -->
+</html>  

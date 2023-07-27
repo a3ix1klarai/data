@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_ControlStructures.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1642806286') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/cpp_ControlStructures.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title> Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexfe09.html?page=doc/cpp_ControlStructures.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a></h4> </div>     <h1 class="PageName">C++ Control Structures</h1>
+
+<section class="h2">
+    <h2>Related Documentation Pages</h2>
+    <ul>
+        <li><a href="index7b37.html?page=doc/cpp_VariablesDataTypes.php">C++ Variables and Data Types</a></li>
+        <li><a href="indexfcfe.html?page=doc/cpp_Constants.php">C++ Constants</a></li>
+        <li><a href="index2b23.html?page=doc/cpp_Operators.php">C++ Operators</a></li>
+        <li>C++ Control Structures</li>
+        <li><a href="index72d7.html?page=doc/cpp_Functions.php">C++ Functions</a></li>
+    </ul>
+</section>
+<hr>
+
+<section class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Conditionalstructure">Conditional structure: if and else</a></li>
+        <li><a href="#Iterationstructures">Iteration structures (loops)</a>
+            <ul>
+                <li><a href="#Thewhileloop">The while loop</a></li>
+                <li><a href="#Theforloop">The for loop</a></li>
+                <li><a href="#Thedo-whileloop">The do-while loop</a></li>
+            </ul>
+        </li>
+        <li><a href="#Jumpstatements">Jump statements</a>
+            <ul>
+                <li><a href="#break">The break statement</a></li>
+                <li><a href="#continue">The continue statement</a></li>
+                <li><a href="#goto">The goto statement</a></li>
+                <li><a href="#exit">The exit function</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#switch">The selective structure: switch</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<br>
+<div style="text-align:right;">Published by <b>Juan Soulie</b></div>
+<br>
+
+
+<section class="h2">
+    <p>A program is usually not limited to a linear sequence of instructions. During its process it may bifurcate, repeat code or take decisions. For that purpose, C++ provides control structures that serve to specify what has to be done by our program, when and under which circumstances.</p>
+
+    <p>With the introduction of control structures we are going to have to introduce a new concept: the <i>compound-statement</i> or <i>block</i>. A block is a group of statements which are separated by semicolons (;) like all C++ statements, but grouped together in a block enclosed in braces: <b>{ }</b>:</p>
+
+    <pre class="Code FullLineHeight">{ statement1; statement2; statement3; }</pre>
+
+    <p>Most of the control structures that we will see in this section require a generic statement as part of its syntax. A statement can be either a simple statement (a simple instruction ending with a semicolon) or a compound statement (several instructions grouped in a block), like the one just described. In the case that we want the statement to be a simple statement, we do not need to enclose it in braces (<b>{}</b>). But in the case that we want the statement to be a compound statement it must be enclosed between braces (<b>{}</b>), forming a block.</p></section>
+
+<section class="h2">
+    <h2 id="Conditionalstructure">Conditional structure: if and else</h2>
+    <div class="member-link">[<a href="#Conditionalstructure">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>if</b> keyword is used to execute a statement or block only if a condition is fulfilled. Its form is:</p>
+
+    <pre class="Code FullLineHeight">
+if (condition)
+{
+  // statement
+}
+    </pre>
+
+    <p>Where <b>condition</b> is the expression that is being evaluated. If this condition is true, <b>statement</b> is executed. If it is false, <b>statement</b> is ignored (not executed) and the program continues right after this conditional structure.</p>
+
+    <p>For example, the following code fragment prints <b>x is 100</b> only if the value stored in the <b>x</b> variable is indeed <b>100</b>:</p>
+
+    <pre class="Code FullLineHeight">
+if (x == 100)
+  cout &lt;&lt; "x is 100";
+    </pre>
+
+    <p>If we want more than a single statement to be executed in case that the condition is true we can specify a block using braces <b>{ }</b>:</p>
+
+    <pre class="Code FullLineHeight">
+if (x == 100)
+{
+   cout &lt;&lt; "x is ";
+   cout &lt;&lt; x;
+}
+    </pre>
+
+    <p>We can additionally specify what we want to happen if the condition is not fulfilled by using the keyword <b>else</b>. Its form used in conjunction with <b>if</b> is:</p>
+
+    <pre class="Code FullLineHeight">
+if (condition) 
+    statement1;
+else 
+    statement2;
+    </pre>
+
+    <p>For example:</p>
+
+    <pre class="Code FullLineHeight">
+if (x == 100)
+  cout &lt;&lt; "x is 100";
+else
+  cout &lt;&lt; "x is not 100";
+    </pre>
+
+    <p>prints on the screen <b>x is 100</b> if indeed <b>x</b> has a value of <b>100</b>, but if it has not -and only if not- it prints out <b>x is not 100</b>.</p>
+
+    <p>The <b>if + else</b> structures can be concatenated with the intention of verifying a range of values. The following example shows its use telling if the value currently stored in <b>x</b> is positive, negative or none of them (i.e. zero):</p>
+
+    <pre class="Code FullLineHeight">
+if (x &gt; 0)
+  cout &lt;&lt; "x is positive";
+else if (x &lt; 0)
+  cout &lt;&lt; "x is negative";
+else
+  cout &lt;&lt; "x is 0";
+    </pre>
+
+    <p>Remember that in case that we want more than a single statement to be executed, we must group them in a block by enclosing them in braces <b>{ }</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Iterationstructures">Iteration structures (loops)</h2>
+    <div class="member-link">[<a href="#Iterationstructures">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Loops have as purpose to repeat a statement a certain number of times or while a condition is fulfilled.</p>
+
+    <section class="h3">
+        <h3 id="Thewhileloop">The while loop</h3>
+        <div class="member-link">[<a href="#Thewhileloop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Its format is:</p>
+        <pre class="Code FullLineHeight">
+while (expression) 
+    statement;
+        </pre>
+
+        <p>and its functionality is simply to repeat statement while the condition set in expression is true.</p>
+
+        <p>For example, we are going to make a program to countdown using a while-loop:</p>
+        <pre class="Code FullLineHeight">
+// custom countdown using while
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+  int n;
+  cout &lt;&lt; "Enter the starting number > ";
+  cin &gt;&gt; n;
+
+  while (n>0) {
+    cout &lt;&lt; n &lt;&lt; ", ";
+    --n;
+  }
+
+  cout &lt;&lt; "FIRE!\n";
+  return 0;
+}
+
+//Output
+//Enter the starting number &gt; 8
+//8, 7, 6, 5, 4, 3, 2, 1, FIRE!
+        </pre>
+
+        <p>When the program starts the user is prompted to insert a starting number for the countdown. Then the <b>while</b> loop begins, if the value entered by the user fulfills the condition <b>n&gt;0</b> (that <b>n</b> is greater than zero) the block that follows the condition will be executed and repeated while the condition (<b>n&gt;0</b>) remains being true.</p>
+
+        <p>The whole process of the previous program can be interpreted according to the following script (beginning in main):</p>
+
+        <ol>
+            <li>User assigns a value to <b>n</b></li>
+            <li>The while condition is checked (<b>n&gt;0</b>). At this point there are two posibilities:<br>
+                * condition is true: statement is executed (to step 3)<br>
+                * condition is false: ignore statement and continue after it (to step 5)</li>
+
+            <li>Execute statement:
+
+                <pre class="Code FullLineHeight">
+cout &lt;&lt; n &lt;&lt; ", ";
+--n;
+                </pre>
+
+                (prints the value of <b>n</b> on the screen and decreases <b>n</b> by <b>1</b>)</li>
+
+            <li>End of block. Return automatically to step 2</li>
+            <li>Continue the program right after the block: print FIRE! and end program.</li>
+        </ol>
+
+        <p>When creating a while-loop, we must always consider that it has to end at some point, therefore we must provide within the block some method to force the condition to become false at some point, otherwise the loop will continue looping forever. In this case we have included <b>--n;</b> that decreases the value of the variable that is being evaluated in the condition (<b>n</b>) by one - this will eventually make the condition (<b>n&gt;0</b>) to become false after a certain number of loop iterations: to be more specific, when <b>n</b> becomes <b>0</b>, that is where our while-loop and our countdown end.</p>
+
+        <p>Of course this is such a simple action for our computer that the whole countdown is performed instantly without any practical delay between numbers.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Thedo-whileloop">The do-while loop</h3>
+        <div class="member-link">[<a href="#Thedo-whileloop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Its format is:</p>
+        <pre class="Code FullLineHeight">
+do statement;
+    while (condition);
+        </pre>
+
+        <p>Its functionality is exactly the same as the while loop, except that <b>condition</b> in the do-while loop is evaluated after the execution of statement instead of before, granting at least one execution of <b>statement</b> even if <b>condition</b> is never fulfilled. For example, the following example program echoes any number you enter until you enter <b>0</b>.</p>
+
+        <pre class="Code FullLineHeight">
+// number echoer
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+  unsigned long n;
+  do {
+    cout &lt;&lt; "Enter number (0 to end): ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "You entered: " &lt;&lt; n &lt;&lt; "\n";
+  } while (n != 0);
+  return 0;
+}
+
+/* Output
+
+Enter number (0 to end): 12345
+You entered: 12345
+Enter number (0 to end): 160277
+You entered: 160277
+Enter number (0 to end): 0
+You entered: 0
+
+*/
+        </pre>
+
+        <p>The do-while loop is usually used when the condition that has to determine the end of the loop is determined <strong>within</strong> the loop statement itself, like in the previous case, where the user input within the block is what is used to determine if the loop has to end. In fact if you never enter the value <b>0</b> in the previous example you can be prompted for more numbers forever.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Theforloop">The for loop</h3>
+        <div class="member-link">[<a href="#Theforloop">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>Its format is:</p>
+
+        <pre class="Code FullLineHeight">
+for (initialization; condition; increase) 
+    statement;
+        </pre>
+
+        <p>and its main function is to repeat <b>statement</b> while <b>condition</b> remains true, like the while loop. But in addition, the <b>for</b> loop provides specific locations to contain an <b>initialization</b> statement and an <b>increase</b> statement. So this loop is specially designed to perform a repetitive action with a counter which is initialized and increased on each iteration.</p>
+
+        <p>It works in the following way:</p>
+
+        <ol>
+            <li><b>initialization</b> is executed. Generally it is an initial value setting for a counter variable. This is executed only once.</li>
+            <li><b>condition</b> is checked. If it is true the loop continues, otherwise the loop ends and <b>statement</b> is skipped (not executed).</li>
+            <li><b>statement</b> is executed. As usual, it can be either a single statement or a block enclosed in braces <b>{ }</b>.</li>
+
+            <li>finally, whatever is specified in the <b>increase</b> field is executed and the loop gets back to step 2.</li>
+        </ol>
+
+        <p>Here is an example of countdown using a for loop:</p>
+
+        <pre class="Code FullLineHeight">
+// countdown using a for loop
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+  for (int n = 10; n &gt; 0; n--) {
+    cout &lt;&lt; n &lt;&lt; ", ";
+  }
+  cout &lt;&lt; "FIRE!\n";
+  return 0;
+}
+
+/* Output
+
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1, FIRE!
+
+*/
+        </pre>
+
+        <p>The <b>initialization</b> and <b>increase</b> fields are optional. They can remain empty, but in all cases the semicolon signs between them must be written. For example we could write: <b>for (;n&lt;10;)</b> if we wanted to specify no initialization and no increase; or <b>for (;n&lt;10;n++)</b> if we wanted to include an increase field but no initialization (maybe because the variable was already initialized before).</p>
+
+        <p>Optionally, using the comma operator (<b>,</b>) we can specify more than one expression in any of the fields included in a <b>for</b> loop, like in <b>initialization</b>, for example. The comma operator (<b>,</b>) is an expression separator, it serves to separate more than one expression where only one is generally expected. For example, suppose that we wanted to initialize more than one variable in our loop:</p>
+
+        <pre class="Code FullLineHeight">
+for ( n = 0, i = 100 ; n != i ; n++, i-- )
+{
+   // whatever here...
+}
+        </pre>
+
+        <p>This loop will execute for 50 times if neither <b>n</b> or <b>i</b> are modified within the loop:</p>
+
+        <img src="https://www.sierrachart.com/images/for_loop.gif" alt="">
+
+        <p>
+            <b>n</b> starts with a value of <b>0</b>, and <b>i</b> with <b>100</b>, the condition is <b>n!=i</b> (that <b>n</b> is not equal to <b>i</b>). Because <b>n</b> is increased by one and <b>i</b> decreased by one, the loop's condition will become false after the 50th loop, when both <b>n</b> and <b>i</b> will be equal to <b>50</b>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Jumpstatements">Jump statements</h2>
+    <div class="member-link">[<a href="#Jumpstatements">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="break">The break statement</h3>
+        <div class="member-link">[<a href="#break">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Using <b>break</b> we can leave a loop even if the condition for its end is not fulfilled. It can be used to end an infinite loop, or to force it to end before its natural end. For example, we are going to stop the count down before its natural end (maybe because of an engine check failure?):</p>
+
+        <pre class="Code FullLineHeight">
+// break loop example
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+  int n;
+  for (n=10; n>0; n--)
+  {
+    cout &lt;&lt; n &lt;&lt; ", ";
+    if (n == 3)
+    {
+      cout &lt;&lt; "countdown aborted!";
+      break;
+    }
+  }
+  return 0;
+}
+
+/* Output
+10, 9, 8, 7, 6, 5, 4, 3, countdown aborted!
+*/
+        </pre>
+    </section>
+
+    <section class="h3">
+        <h3 id="continue">The continue statement</h3>
+        <div class="member-link">[<a href="#continue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>The <b>continue</b> statement causes the program to skip the rest of the loop in the current iteration as if the end of the statement block had been reached, causing it to jump to the start of the following iteration. For example, we are going to skip the number 5 in our countdown:</p>
+
+        <pre class="Code FullLineHeight">
+// break loop example
+
+// continue loop example
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ()
+{
+  for (int n = 10; n &gt; 0; n--) {
+    if (n == 5) 
+        continue;
+
+    cout &lt;&lt; n &lt;&lt; ", ";
+  }
+  cout &lt;&lt; "FIRE!\n";
+  return 0;
+}
+
+/* Output
+10, 9, 8, 7, 6, 4, 3, 2, 1, FIRE!
+*/
+        </pre>
+    </section>
+
+    <section class="h3">
+        <h3 id="goto">The goto statement</h3>
+        <div class="member-link">[<a href="#goto">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>goto</b> allows to make an absolute jump to another point in the program. You should use this feature with caution since its execution causes an unconditional jump ignoring any type of nesting limitations.</p>
+
+        <p>The destination point is identified by a label, which is then used as an argument for the goto statement. A label is made of a valid identifier followed by a colon (<b>:</b>).</p>
+
+        <p>Generally speaking, this instruction has no concrete use in structured or object oriented programming aside from those that low-level programming fans may find for it. For example, here is our countdown loop using <b>goto</b>:</p>
+
+        <pre class="Code FullLineHeight">
+// goto loop example
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  int n=10;
+
+  loop:
+  cout &lt;&lt; n &lt;&lt; ", ";
+  n--;
+
+  if (n &gt; 0) 
+    goto loop;
+
+  cout &lt;&lt; "FIRE!\n";
+  return 0;
+}
+
+/* Output
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1, FIRE!
+*/
+        </pre>
+    </section>
+
+    <section class="h3">
+        <h3 id="exit">The exit function</h3>
+        <div class="member-link">[<a href="#exit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>exit</b> is a function defined in the <b>cstdlib</b> library.</p>
+
+        <p>The purpose of <b>exit</b> is to terminate the current program with a specific exit code. Its prototype is:</p>
+
+        <pre class="Code FullLineHeight">
+void exit (int exitcode);
+        </pre>
+
+        <p>The <b>exitcode</b> is used by some operating systems and may be used by calling programs. By convention, an exit code of <b>0</b> means that the program finished normally and any other value means that some error or unexpected results happened.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="switch">The selective structure: switch</h2>
+    <div class="member-link">[<a href="#switch">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The syntax of the switch statement is a bit peculiar. Its objective is to check several possible constant values for an expression. Something similar to what we did at the beginning of this section with the concatenation of several <b>if</b> and <b>else if</b> instructions. Its form is the following:</p>
+    <pre class="Code FullLineHeight">
+switch (expression)
+{
+    case constant1:
+       group of statements 1;
+       break;
+    case constant2:
+       group of statements 2;
+       break;
+    .
+    .
+    .
+    default:
+       default group of statements
+}
+    </pre>
+
+    <p>It works in the following way: switch evaluates <b>expression</b> and checks if it is equivalent to <b>constant1</b>, if it is, it executes <b>group of statements 1</b> until it finds the <b>break</b> statement. When it finds this <b>break</b> statement the program jumps to the end of the <b>switch</b> selective structure.</p>
+
+    <p>If expression was not equal to <b>constant1</b> it will be checked against <b>constant2</b>. If it is equal to this, it will execute <b>group of statements 2</b> until a break keyword is found, and then will jump to the end of the <b>switch</b> selective structure.</p>
+
+    <p>Finally, if the value of <b>expression</b> did not match any of the previously specified constants (you can include as many <b>case</b> labels as values you want to check), the program will execute the statements included after the <b>default:</b> label, if it exists (since it is optional).</p>
+
+    <p>Both of the following code fragments have the same behavior:</p>
+
+    <table class="doc">
+        <tr><th>switch example</th><th>if-else equivalent</th></tr>
+        <tr><td>
+                <pre class="Code FullLineHeight">
+switch (x) {
+    case 1:
+      cout &lt;&lt; "x is 1";
+      break;
+    case 2:
+      cout &lt;&lt; "x is 2";
+      break;
+    default:
+      cout &lt;&lt; "value of x unknown";
+}
+                </pre>
+            </td><td>
+                <pre class="Code FullLineHeight">
+if (x == 1) {
+    cout &lt;&lt; "x is 1";
+}
+else if (x == 2) {
+    cout &lt;&lt; "x is 2";
+}
+else {
+    cout &lt;&lt; "value of x unknown";
+}
+                </pre>
+            </td></tr>
+    </table>
+
+    <p>The <b>switch</b> statement is a bit peculiar within the C++ language because it uses labels instead of blocks. This forces us to put <b>break</b> statements after the group of statements that we want to be executed for a specific condition. Otherwise the remainder statements -including those corresponding to other labels- will also be executed until the end of the <b>switch</b> selective block or a <b>break</b> statement is reached.</p>
+
+    <p>For example, if we did not include a <b>break</b> statement after the first group for case one, the program will not automatically jump to the end of the <b>switch</b> selective block and it would continue executing the rest of statements until it reaches either a <b>break</b> instruction or the end of the <b>switch</b> selective block. This makes unnecessary to include braces <b>{ }</b> surrounding the statements for each of the cases, and it can also be useful to execute the same block of instructions for different possible values for the expression being evaluated. For example:</p>
+
+    <br>
+
+    <pre class="Code FullLineHeight">
+switch (x) {
+    case 1:
+    case 2:
+    case 3:
+        cout &lt;&lt; "x is 1, 2 or 3";
+        break;
+    default:
+        cout &lt;&lt; "x is not 1, 2 nor 3";
+}
+    </pre>
+
+    <p>Notice that switch can only be used to compare an expression against constants. Therefore we cannot put variables as labels (for example <b>case n:</b> where <b>n</b> is a variable) or ranges (<b>case (1..3):</b>) because they are not valid C++ constants.</p>
+
+    <p>If you need to check ranges or values that are not constants, use a concatenation of <b>if</b> and <b>else if</b> statements.</p>
+</section>
+
+<hr><p>*Last modified Friday, 21st January, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_ControlStructures.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+</html>  

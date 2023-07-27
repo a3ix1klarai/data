@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/UsingAdvancedCustomStudies.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105655') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/UsingAdvancedCustomStudies.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>How to Use an Advanced Custom Study or a Study Collection -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexe791.html?page=doc/UsingAdvancedCustomStudies.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#StudiesIndicators">(Table of Contents) Studies and Indicators</a> &gt;&gt; <a  href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php">How to Use an Advanced Custom Study or a Study Collection</a></h4> </div>     <h1 class="PageName">How to Use an Advanced Custom Study or a Study Collection</h1>
+
+<ul>
+    <li><a href="#UsingAdvancedCustomStudy">How to Use an Advanced Custom Study Provided To You</a></li>
+    <li><a href="#UsingStudyCollection">How to Use a Study Collection</a></li>
+    <li><a href="#AdvancedCustomStudyErrors">Advanced Custom Study Errors</a>
+		<ul>
+		    <li><a href="#ErrorLoadingCustomStudiesDLL">Error Loading Custom Studies DLL</a>
+				<ul>
+					<li><a href="#DLLFileCouldNotBeFound">DLL File Could Not Be Found</a></li>
+					<li><a href="#DLLFileCouldNotBeLoadedBecauseOfMissingDependencyFile">DLL File Could Not Be Loaded Because of Missing Dependency File</a></li>
+				</ul>
+			</li>
+		    <li><a href="#CustomStudyFunctionNotFound">Custom Study Function Not Found</a></li>
+		</ul>
+	</li>
+    <li><a href="indexaeeb.html?page=doc/HowToBuildAnAdvancedCustomStudyFromSourceCode.html">How to Build an Advanced Custom Study from Source Code (.CPP file)</a></li>
+    <li><a href="#CustomStudyNotListedOrNotDisplayingOnChart">Custom Study Not Listed or Not Displaying on Chart</a></li>
+    <li><a href="#ManuallyInstallingAdvancedCustomStudyRelatedFiles">Manually Installing  Advanced Custom Study Related Files</a></li>
+    <li><a href="#CustomStudySecurity">Custom Study Security</a></li>
+    <li><a href="#ChangingOwnershipOfCustomStudyAuthorization">Changing Ownership of Custom Study Authorization</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2  id="UsingAdvancedCustomStudy">How to Use an Advanced Custom Study Provided To You</h2>
+    <div class="member-link">[<a href="#UsingAdvancedCustomStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To use an Advanced Custom Study developed for Sierra Chart which your Sierra Chart account has been authorized to use, follow the instructions below. </p>
+    
+    <p>These instructions assume that the developer of the custom study is using the  file distribution system provided  by Sierra Chart.  If not, then you first need to follow the <a href="#ManuallyInstallingAdvancedCustomStudyRelatedFiles">Manually Installing  Advanced Custom Study Related Files</a> instructions. </p>
+    
+     <p>These instructions also include how use Study Collection and Chartbook files you may have been provided as well.</p>  
+
+    <p>If you have been provided a custom studies/indicators source code file with a <b>CPP</b> file extension, then instead refer to the <a href="indexaeeb.html?page=doc/HowToBuildAnAdvancedCustomStudyFromSourceCode.html" target="_blank" rel="noopener noreferrer">How to Build an Advanced Custom Study from Source Code (.CPP file)</a> documentation for instructions instead of the instructions below.</p>
+
+    <ol>
+    
+
+        <li>If Sierra Chart  is running in <b>Safe Mode</b>, custom studies cannot be used. For more information and to disable Safe Mode, refer to <a href="index878d.html?page=doc/LoginInstructions.php#UsingSafeMode" target="_blank" rel="noopener noreferrer">Safe Mode</a>.</li>
+        
+        <li>You may need to perform a Forced Login  to ensure the files provided by the custom study developer have been   received and your account authorized to use them.  Refer to  <a href = "index878d.html?page=doc/LoginInstructions.php#ForcedLogin" target="_blank" rel="noopener noreferrer">Forced Login</a>. </li>
+        
+        <li> Go to the <a href = "https://www.sierrachart.com/UserControlPanel.php?page=EnabledCustomStudies" Target="_blank" rel="noopener noreferrer">Enabled Custom Studies</a> page.   You will need to login if you are not already logged in, to access that page. Go to the   <b>File Download</b> section near the top of the page. In the <b> Toggle File Download</b> frame, make sure that file downloads are enabled.  You can enable them and disable them as needed.   In this case they must be enabled.</li>
+        
+        <li> It is recommended at this point to restart Sierra Chart to ensure that the necessary files for the custom studies have been downloaded. </li>
+
+
+        <li>To use an Advanced Custom Study,  in Sierra Chart select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu. </li>
+
+        <li>Press the <b>Add Custom Study</b> button. Refer to the image below.
+
+
+            <div style="text-align: center;"><a href="../images/addcustomstudybutton.png" rel="lightbox"><img src="../images/addcustomstudybutton.png" alt="" width="350"  class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>Locate in the list, the name of the Advanced Custom Studies file you wish to use and press the plus sign "<b>+</b>" beside it.
+
+            <div style="text-align: center;"><a href="../images/addingcustomstudies.png" rel="lightbox"><img src="../images/addingcustomstudies.png" alt="" width="550"  class="screenshot" loading="lazy"></a></div>
+            
+            <br> <br>
+             If you do not not see the custom studies name listed, then refer to <a href = "index250e.html?page=doc/ResolvingCustomStudyFileAndAccessIssues.php">Resolving Custom Study File and Access Issues</a>. 
+
+        </li>
+
+        <li>Select in the displayed list the study you want to use, and press the <b>Add</b> button.</li>
+
+        <li> In the case of User Contributed Advanced Custom Studies,  these are located in the <b>User Contributed Studies</b> list in the <b> Add  Study</b> window. We try to keep that list up to date with studies that have been contributed by users if the source code is available from them.  So you will not need to download the DLL files from the <a href="https://www.sierrachart.com/SupportBoard.php" target="_blank" rel="noopener noreferrer">Support Board</a>. 
+        <br><br>
+        However, the  <em>UserContributeStudies.dll</em> file is not installed with Sierra Chart by default. You need to install it by enabling the  <b>Install Optional Components</b> option on the  <a href = "indexc97d.html?page=doc/SoftwareDownload.php">Sierra Chart Installer</a>.
+        </li>
+        
+        <li>  Press the <b>Settings  </b> button  to adjust the settings for the study   as required.  </li>
+        <li> Press   <b>OK  </b>. </li>
+
+        <li> If you were provided Study Collection files (<b>.StdyCollct</b> extension), you can select them directly from the  <b Class = "menu_item">Analysis</b> menu.   For more information, refer to <a href="indexc9c0.html?page=doc/StudyCollections.html" target="_blank" rel="noopener noreferrer">Study Collections</a>.  </li>
+
+        <li> If you were provided  Chartbook files (<b>.Cht</b> extension),  you can open them through  <b Class = "menu_item">File &gt;&gt; Open Chartbook</b>.  For more information, refer to <a href="index7674.html?page=doc/Chartbooks.html" target="_blank" rel="noopener noreferrer">Chartbooks</a>.  </li>
+
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingStudyCollection">How to Use a Study Collection</h2>
+    <div class="member-link">[<a href="#UsingStudyCollection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A study collection is a saved set of studies and their settings that can be applied to the chart with one easy step.</p>
+    <ol>
+        <li>A Study Collection file you want to use from the Sierra Chart Support Board, on the <a href="index079e.html?page=doc/AdditionalFiles.php" target="_blank" rel="noopener noreferrer">Additional Files</a> page, or from other sources, will need to be saved to your Sierra Chart <b>Data Files Folder</b>. 
+            <br> <br>
+            Study Collection files have a <b>.stdycollct</b> extension.  </li>
+
+        <li> The location of your Sierra Chart  Data Files Folder can be found by selecting <b class="menu_item">Global Settings &gt;&gt; General Settings</b> on the menu in Sierra Chart. The folder is shown in the <b>Data Files Folder</b> box. This is usually C:\SierraChart\Data. Refer to the image below.
+
+            <div align="center"> <a href="../images/datafilesfolder.png" rel="lightbox"><img src="../images/datafilesfolder.png" alt="" class="screenshot" loading="lazy" width="600"></a> </div>
+        </li>
+
+        <li>Save the Study Collection you want to use to your Sierra Chart   <b>Data Files Folder</b>. Save any other files that are provided with it and associated with it, to this same folder.</li>
+
+        <li>To apply the Study Collection, select it directly from the <b>Analysis</b> menu. You will see it directly on the <b>Analysis</b> menu and you can select it directly from there. You will also see other Study Collections listed on the menu. Refer to the image below.
+
+            <div align="center">
+                <a href="../images/studycollectionsmenu.png" rel="lightbox"><img src="../images/studycollectionsmenu.png" alt="" class="screenshot" loading="lazy" width="600"></a>
+            </div>
+
+        </li>
+
+        <li>If you wish to understand or modify the settings of the studies in the study collection, refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Modifying Studies</a> section.</li>
+
+        <li>Optional: Refer to the <a href="indexc9c0.html?page=doc/StudyCollections.html">Study Collections</a> section for more information about Study Collections.</li>
+
+        <li>Optional: If any of the studies in the study collection have a <b>Simple Alert Condition</b> formula defined on them, refer to the <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Alert Conditions and Scanning</a> page to learn about <b>Simple Alerts</b> if you wish to make changes and to understand the formulas used.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2  id="AdvancedCustomStudyErrors">Advanced Custom Study Errors</h2>
+    <div class="member-link">[<a href="#AdvancedCustomStudyErrors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+		<h3  id="ErrorLoadingCustomStudiesDLL">Error Loading Custom Studies DLL</h3>
+		<div class="member-link">[<a href="#ErrorLoadingCustomStudiesDLL">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div class="MessageLog">Error loading custom studies DLL: [Path]\CustomStudies.DLL. Windows error code 126: The specified module could not be found. | (date-time)*</div>
+
+        <p> The DLL (dynamic link library) file that contains the Advanced Custom Study or Studies that you are using could not be found or loaded. There are two possible reasons for this error message.</p>
+
+        <section class="h4">
+			<h4  id="DLLFileCouldNotBeFound">DLL File Could Not Be Found</h4>
+			<div class="member-link">[<a href="#DLLFileCouldNotBeFound">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You will need to obtain the specified DLL file and save it to your Sierra Chart Data Files Folder. Refer to <a href="#UsingAdvancedCustomStudy">Step #1 above</a> for instructions.</p>
+
+            <p>When you save the DLL file to the Sierra Chart Data Files Folder, make certain it has a DLL file extension.  Software which blocks malicious software such as antivirus software, can also potentially block the use of a downloaded DLL file and this can also cause this same error message.</p>
+        </section>
+
+        <section class="h4">
+			<h4  id="DLLFileCouldNotBeLoadedBecauseOfMissingDependencyFile">DLL File Could Not Be Loaded Because of Missing Dependency File</h4>
+			<div class="member-link">[<a href="#DLLFileCouldNotBeLoadedBecauseOfMissingDependencyFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> In the second case, the problem is that the DLL file is present but it cannot be loaded because it depends upon another file which is not installed on the computer system. The general reason why this occurs is when it links to external libraries which exist in other DLLs. Commonly  this occurs when using Visual C++ and the Runtime libraries are not statically linked.</p>
+
+            <p>In this particular case you will need to contact the developer of the DLL for help with this. They will need to statically link with the  Runtime libraries.</p>
+
+        </section>
+
+        <p>If you are unable to resolve this error, you will need to remove the Advanced Custom Study/Studies from your chart or charts to prevent the error from appearing again. </p> 
+
+        <p>To do this, go to one of your charts, select <b class="menu_item">Analysis &gt;&gt; Studies</b> to view the <b>Chart Studies </b>window.</p>
+
+        <p>In the <b>Studies to Graph </b>section, select <b>Custom DLL Study </b> (see image below) and press <b>Remove</b> to remove the study.  </p>
+
+        <p>Remove all of the <b>Custom DLL Study </b> studies from the list and press <b>OK </b> to save the settings.</p>
+
+        <p> You will need to do this for each chart that has a <b>Custom DLL Study </b> study which is causing the error.</p>
+
+
+        <div align="center">
+            <a href="../images/studywithmissingdllorfunction.png" rel="lightbox"><img src="../images/studywithmissingdllorfunction.png" alt="" class="screenshot" loading="lazy" width="600"></a>
+        </div>
+    </section>
+
+    <section class="h3">
+        <h3 id="CustomStudyFunctionNotFound">Custom Study Function Not Found</h3>
+        <div class="member-link">[<a href="#CustomStudyFunctionNotFound">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div class="MessageLog">Failed to get the function address for scsf_MyStudy in CustomStudies.DLL. Windows error code 127: The specified procedure could not be found. </div>
+
+        <p>This error means a study function has not been found in the CustomStudies DLL file. This could be because you are using an older version of a <a href="indexc9c0.html?page=doc/StudyCollections.html"  target="_blank" rel="noopener noreferrer">Study Collection</a> file that does not have the updated function name or the function no longer exists in the DLL file.  </p>
+        
+        <p>What you will need to do in this case  is first   <b> Remove  </b> the study or studies from your  chart that is causing this error.  This is done through  <b class = "menu_item">Analysis &gt;&gt; Studies</b> for the chart.   You can access the charts  in the active Chartbook through the   <b class="menu_item">CW</b> menu.  </p>
+        
+        <p>The study to remove  has the name  <b>Custom DLL  Study</b>. After this  <b>Add </b> the study or studies again by following the steps in <a href="#UsingAdvancedCustomStudy">How to Use an Advanced Custom Study</a> section (<b class = "menu_item">Analysis &gt;&gt; Studies &gt;&gt; Add Custom Study</b>). </p>
+
+        <p>If you are unable to resolve this error, you will need to remove the Advanced Custom Study or Studies from your chart or charts to prevent the error from appearing again.  To do this, go to one of your charts, select <b class="menu_item">Analysis &gt;&gt; Studies </b> to view the <b>Chart Studies </b>window.  </p>
+        
+        <p>In the <b>Studies to Graph </b>section, select <b>Custom DLL Study </b> and press <b>Remove</b> to remove the study. Remove all of the <b>Custom DLL Study </b> studies from the list and press <b>OK </b> to save the settings. You will need to do this for each chart that has a <b>Custom DLL Study </b> study which is causing the error.</p>
+    </section>
+</section>
+
+
+<section class="h2">
+    <h2 id="CustomStudyNotListedOrNotDisplayingOnChart" >Custom Study Not Listed or Not Displaying on Chart</h2>
+    <div class="member-link">[<a href="#CustomStudyNotListedOrNotDisplayingOnChart">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> Sierra Chart now only provides a 64-bit CPU architecture  version of the program </p> 
+    
+    
+    <p>   Custom studies which are built for the older 32-bit  versions will not work on the 64-bit  versions of Sierra Chart. In this case, the 32-bit custom studies will not be listed in the    the <b>Add Custom Study</b> window, and if they are already added to the chart they will just be blank. </p>
+    
+    <p>  In this particular case, you need to have the source code for the custom study or studies and build the DLL again under  64-bit version of Sierra Chart, preferably the current version, to be able to use the custom studies.  </p>
+    
+    <p>For instructions, refer to <a href="indexaeeb.html?page=doc/HowToBuildAnAdvancedCustomStudyFromSourceCode.html">How to Build an Advanced Custom Study from Source Code (.CPP file)</a>. </p>
+    
+    <p>A custom studies DLL file name usually will contain the <b>_64 </b> suffix at the end of the file name. However, this is not required. </p>
+    
+    <p> Also refer to <a href = "index250e.html?page=doc/ResolvingCustomStudyFileAndAccessIssues.php">Resolving Custom Study File and Access Issues</a>. </p>
+</section>
+
+
+<section class="h2">
+    <h2 id="ManuallyInstallingAdvancedCustomStudyRelatedFiles">Manually Installing Advanced Custom Study Related Files</h2>
+    <div class="member-link">[<a href="#ManuallyInstallingAdvancedCustomStudyRelatedFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+
+     <p>Follow the instructions below to manually install Advanced Custom Study files and related files you may have been provided.</p>
+     
+     
+    <ol>
+
+        <li>Advanced Custom Studies are contained in DLL files (they have a  <b>.DLL</b> file extension). You need to save the Advanced Custom Studies files, Study Collection files (<b>.StdyCollct</b> extension), and Chartbook Files (<b>.Cht</b> extension) you have been provided to your Sierra Chart <b>Data Files Folder</b>.</li>
+        
+        <li>The location of the <b>Data Files Folder</b> can be found by selecting <b class="menu_item">Global Settings &gt;&gt; General Settings</b> on the menu. The folder is displayed in the <b>Data Files Folder</b> box. This is usually <em>C:\SierraChart\Data</em>. Refer to the image below. Make a note of this folder.
+  
+            <div style="text-align: center;"><a href="../images/datafilesfolder_savingdll.png" rel="lightbox"><img src="../images/datafilesfolder_savingdll.png" alt="" width="550" class="screenshot" loading="lazy"></a></div></li>
+        
+        <li>The Advanced Custom Studies files you have been provided have a <b>.DLL</b>  file extension. Study Collection files have a <b>.StdyCollct</b> extension and  Chartbook files have a <b>.Cht</b> extension.</li>
+
+        <li> Save all of the files you have been provided  to the <b>Data Files Folder</b> which you have made a note of  above. The method to save the files just follows standard procedures for working with files.</li>
+        
+        <li>The files may be in a compressed file, such as a Zip file. In this case you will need to first extract the contents of that file and then save the extracted files in the <b>Data Files Folder</b>.</li>
+    </ol>
+        
+
+</section>
+
+<section class="h2">
+    <h2 id="CustomStudySecurity">Custom Study Security</h2>
+    <div  class="member-link">[<a href="#CustomStudySecurity">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p>This section documents  what a custom study is able to do in Sierra Chart that potentially is  a security risk or accessing user specific information.</p>
+    
+    <p>A custom  can access the currently <a href ="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">selected  Trading account</a> identifier for a chart which is set through the Trade Window.</p>
+    
+    <p>A custom study can access the Sierra Chart username.  However, not the password.</p>
+     
+    <p>A custom study can submit trading orders  whether  <a href = "index96f7.html?page=doc/TradeMenu.html#ChartTradeModeOn">Chart Trade Mode</a> is enabled or not. However, these orders would be simulated if  <a href = "index96f7.html?page=doc/TradeMenu.html#TradeSimulationModeOn">Trade Simulation Mode</a> is enabled.</p>
+</section>
+
+
+
+<section class="h2">
+    <h2 id="ChangingOwnershipOfCustomStudyAuthorization">Changing Ownership of Custom Study Authorization</h2>
+    <div  class="member-link">[<a href="#ChangingOwnershipOfCustomStudyAuthorization">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+ 
+    <p> Some  Sierra Chart Advanced Custom Studies you may be using, may require authorization from the developer of that study to be able to use them.  In this case you may be using the  Sierra Chart  Advanced Custom Study access control  authorization system. For more information, refer to  <a href = "index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php#Redistributing">Redistributing Custom Studies</a>. </p>
+  
+  
+    <p>In this case, you will have given the developer your Sierra Chart Account Name. </p>
+   
+    <p> If you begin to use a different Sierra Chart account, refer to  <a href = "index878d.html?page=doc/LoginInstructions.php#DifferentAccountName">Logging in with Different Account Name</a>. </p>
+    
+    <p> You will also need to give the developer   of the Advanced Custom Studies  your new Sierra Chart Account Name and have them change the authorization to this new   Account Name. </p>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/UsingAdvancedCustomStudies.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:33 GMT -->
+</html>  

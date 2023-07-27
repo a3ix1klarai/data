@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SCMarketStatistics.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1683752957') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SCMarketStatistics.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Sierra Chart Market Statistics -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index6fe4-2.html?page=doc/SCMarketStatistics.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="index6fe4-2.html?page=doc/SCMarketStatistics.php">Sierra Chart Market Statistics</a></h4> </div>     <h1 class="PageName">Sierra Chart Market Statistics</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Usage">Using Market Statistics Data Feed</a></li>
+    <li><a href="#Symbols">Symbols</a></li>
+    <li><a href="#CalculationsAlgorithms">Calculations and Algorithms</a></li>
+    <li><a href="#ForexIndexesCalculation">Forex Indexes Calculation</a></li>
+    <li><a href="#MarketStatisticsHistoricalDailyCharts">Market Statistics Historical Daily Charts</a></li>
+    <li><a href="#Overlaying">Overlaying a Chart on Another Chart as a Study</a></li>
+    <li><a href="#CreatingAdditionalMarketStatistics">Creating Additional Market Statistics</a></li>
+    <li><a href="#ObtainingDataFurtherBackInTime">Obtaining Data Further Back in Time for Some Market Statistics Symbols</a></li>
+    <li><a href="#MarketStatCalculationsComparedToOtherDataServices">Market Statistics Calculations Compared to Other Data Services</a>
+        <ul>
+            <li><a href="#TICKCalculationNotWeighted">TICK Calculation is Not Weighted Based on Market Capitalization of Containing Stocks</a></li>
+            <li><a href="#TICKSP500MatchesIQFeed">TICK for S&amp;P 500 Stocks Matches DTN IQ Feed</a></li>
+            <li><a href="#ExplanationOfBias">Explanation of TICK Positive or Negative Bias and How to Correct</a></li>
+            <li><a href="#RecentAnalysis">Recent Analysis</a></li>
+            <li><a href="#OpeningTICKValues">Opening TICK Values</a></li>
+            <li><a href="#MarketStatisticsCalculationChangeApril2019">Market Statistics Calculation Change April 2019</a></li>
+            <li><a href="#TICKDifferencesConclusion">Conclusion</a></li>
+        </ul>
+    </li>
+    <li><a href="#MathematicallyCalculatingUpIssuesAndDownIssuesInTICKStatistic">Mathematically Calculating Up Issues and Down Issues in TICK  Statistic</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>With Sierra Chart Service Packages, a complete real-time and historical market statistics data feed for the US stock market. The US Dollar index is also provided.</p>
+
+    <p>This real-time data feed works along  with most of the Data and Trading services Sierra Chart  supports. There is no need to select a different Data service  to use this market statistics data feed.</p>
+
+    <p>All of the market statistics are calculated 24 hours a day if market data is available.</p>
+
+    <p>The update frequency is 250 milliseconds for all Sierra Chart market statistics assuming there is trading activity in the underlying symbols. Otherwise, there is no data transmitted. Within each 250 millisecond timeframe, the high and low extremes within that timeframe are also transmitted. Therefore, there can be more than  4 updates per second.</p>
+
+    <p>The market statistics  data feed is a Sierra Chart calculated data feed using a NYSE and NASDAQ  real-time stock data feed.  The market statistics data feed is distributed from Sierra Chart servers.</p>
+
+    <p>The time unit of the historical Intraday data provided by the market statistics data feed is 1 second. This contains all of the updates within the single second. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Usage">Using Market Statistics Data Feed</h2>
+    <div class="member-link">[<a href="#Usage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>All of the Sierra Chart market statistics data feed symbols are listed in  <b class="menu_item">File &gt;&gt; Find Symbol</b> when using any of the supported Trading services. </p>
+
+    <p>If you want to use this data feed independently of the supported Trading services, then set <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b> &gt;&gt; Service </b> to <b>SC Data - All Services</b>. 
+     <br> <br>
+    This service  will provide access to all of the Market Statistics data feed symbols.</p>
+
+
+    <p>Select <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Market Stats</b>  to see the market statistics symbols.</p>
+
+    <p>If you do not see <b>Market Stats</b> section listed, then you will need to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettings"  Target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.</p>
+
+    <p> In the Find Symbol window, the US Dollar  index and other currency indexes are listed  under the <b>FX Indexes</b>  category in   <b>Find Symbol</b>.</p>
+
+    <div style="text-align: center;">
+        <a href="../images/scmarketstatsfindsymbol.png" rel="lightbox"><img src="../images/scmarketstatsfindsymbol.png" alt="SCMarketStatsFindSymbol.png" width="350" class="screenshot" loading="lazy" ></a>
+    </div>
+
+    <p>Select a market statistics symbol and press the <b>Open Historical Chart</b> or <b>Open Intraday Chart</b>  button.</p>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="Symbols">Symbols</h2>
+    <div class="member-link">[<a href="#Symbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>An example of a market statistics symbol is  <b>TICK-NYSE</b>. The general format is  <b>[statistics prefix]-[exchange/index]</b>.</p>
+
+    <p>All of the market statistics symbols can be looked up through <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Market Stats</b>.</p>
+
+    <p>The following table lists all of the market statistics symbol prefixes and their meaning.    There is a separate symbol for each of these prefixes for each supported exchange or index.</p>
+
+    <table class="doc">
+
+        <tr> <td><b>TICK</b></td> <td>The number of stocks that traded at a higher price compared to their previous trade, minus the number of stocks that traded at a lower price compared  to their previous trade. For example, if TICK reads +500, then there are 500 more stocks trading higher compared with stocks trading lower. The opposite is true if it is -500.  <b>TICK-NYSE</b> is equivalent to the old $TICK symbol.</td> </tr>
+
+
+        <tr> <td><b>TRIN</b></td> <td> This is the <a href="https://en.wikipedia.org/wiki/TRIN_(finance)"  target="_blank" rel="noopener noreferrer">Trading Index</a>. This calculation is the number of stocks that are up compared to the previous trading day close, divided by the number of stocks that are down compared to the previous trading day close.  This ratio is then divided by the volume of stocks that are up compared to the previous trading day close,  divided by the volume of stocks that are down compared to the previous trading day close. Formula: <b>TRIN = (ADV / DECL) / (UVOL / DVOL)</b>. <b>TRIN-NYSE</b> is equivalent to the old $TRIN symbol.</td> </tr>
+
+        <tr> <td><b>ADV</b></td> <td>The number of stocks that have traded during the current trading day and are <em>up</em> in price compared to their previous trading day close. Each stock only counts a value of one towards the statistic.</td> </tr>
+
+        <tr> <td><b>DECL</b></td> <td>The number of stocks that have traded during the current trading day and are <em>down</em> in price compared to their previous trading day close. Each stock only counts a value of one towards the statistic.</td> </tr>
+
+        <tr> <td><b>UNCH</b></td> <td> The number of stocks that have traded during the current trading day and are unchanged in price compared to their previous trading day close.  Each stock only counts a value of one towards the statistic.</td> </tr>
+
+        <tr> <td><b>ADR</b></td> <td>The advance decline ratio (ADV / DECL).</td> </tr>
+
+        <tr> <td><b>TISS</b></td> <td>The number of stocks that have traded during the current trading day. Each stock only counts a value of one towards this statistic.</td> </tr>
+
+        <tr> <td><b>NISS</b></td> <td>The difference between <b>ADV</b> and <b>DECL</b>.  This is the symbol to use to get the Advance-Decline line. However, to get the true Advance-Decline line, you need to add the <a href="index7a80.html?page=doc/StudiesReference.php&amp;ID=151#Advance_Decline_Line" >Advance Decline Line</a> study to a chart of this symbol. Refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" >Adding/Modifying Chart Studies</a> for instructions.</td> </tr>
+
+        <tr> <td><b>ISS</b></td> <td> The number of stocks that have traded in the second for which this is reported for. Each stock only counts a value of one towards this statistic.</td> </tr>
+
+        <tr> <td><b>UVOL</b></td> <td>The total volume of the stocks for the particular exchange or index the symbol is for that have traded in the current trading day and are up in price compared to their previous trading day close.
+                <br> <br>        
+                2015-11-27: At the 9:30:00 US Eastern time open of the NYSE and NASDAQ, this volume calculation is reset back to 0. 2017-05-31: This symbol  is only calculated during the day trading session.
+                <br> <br>
+                Reported in thousands.
+            </td> </tr>
+
+        <tr> <td><b>DVOL</b></td> <td>The total volume of the stocks for the particular exchange or index the symbol is for that have traded in the current trading day and are  down in price compared to their previous trading day close. 
+                <br> <br>
+                2015-11-27: At the 9:30:00 US Eastern time open of the NYSE and NASDAQ, this volume calculation is reset back to 0. 2017-05-31: This symbol  is only calculated during the day trading session.
+                <br> <br>
+                Reported in thousands.</td> </tr>
+
+
+        <tr> <td><b>TVOL</b></td> <td> The total volume of stocks for the particular exchange or index the symbol is for that have traded in the current trading day . <br> <br>
+                2015-11-27: At the 9:30:00 US Eastern time open of the NYSE and NASDAQ, this volume calculation is reset back to 0. 2017-05-31: This symbol  is only calculated during the day trading session.
+                <br> <br>
+                Reported in thousands.
+            </td> </tr>
+
+        <tr> <td><b>NVOL</b></td> <td><b>NVOL</b> is the difference between  <b>UVOL</b> and <b>DVOL</b>.</td> </tr>
+
+        <tr> <td><b>UVOL24H</b></td> <td>The total volume of the stocks for the particular exchange or index the symbol is for that have traded in the current trading day and are up in price compared to their previous trading day close.
+                <br> <br>        
+                This symbol is calculated during the entire 24 hour  period which includes the premarket and post market trading.
+                <br> <br>
+                Reported in thousands.
+            </td> </tr>
+
+        <tr> <td><b>DVOL24H</b></td> <td>The total volume of the stocks for the particular exchange or index the symbol is for that have traded in the current trading day and are  down in price compared to their previous trading day close. 
+                <br> <br>
+                This symbol is calculated during the entire 24 hour  period  which includes the premarket and post market trading.                
+                <br> <br>
+                Reported in thousands.</td> </tr>
+
+
+        <tr> <td><b>TVOL24H</b></td> <td> The total volume of stocks for the particular exchange or index the symbol is for that have traded in the current trading day. 
+                <br> <br>
+                This symbol is calculated during the entire 24 hour  period  which includes the premarket and post market trading.
+                <br> <br>
+                Reported in thousands.
+            </td> </tr>
+
+        <tr> <td><b>NVOL24H</b></td> <td><b>NVOL24H</b> is the difference between  <b>UVOL24H</b> and <b>DVOL24H</b>.</td> </tr>
+
+
+        <tr> <td><b>UTCK</b></td> <td>The <em>number of trades</em> of the stocks that have traded in the current trading day and are up in price compared to their previous trading day close. Quoted in 1000s.</td> </tr>
+
+        <tr> <td><b>DTCK</b></td> <td> The <em>number of trades</em> of the stocks that have traded in the current trading day and are down in price compared to their previous trading day close. Quoted in 1000s.</td> </tr>
+
+        <tr> <td><b>TTCK</b></td> <td> The total <em>number of trades</em> of stocks that have traded in the current trading day for the particular exchange or index the symbol is for. Quoted in 1000s.</td> </tr>
+
+        <tr> <td><b>NTCK</b></td> <td><b>NTCK</b> is the difference between <b>UTCK</b> and <b>DTCK</b>. Quoted in 1000s.</td> </tr>
+
+        <tr> <td><b>DTIS</b></td> <td>The number of stocks that traded  at a lower price compared to the previous price or compared to the prior close at the first trade of the day. This is used in the <b>TICK</b> calculation.</td> </tr>
+
+        <tr> <td><b>UTIS</b></td> <td>The number of stocks that traded  at a higher price compared to the previous price or compared to the prior close at the first trade of the day. This is used in the <b>TICK</b> calculation.</td> </tr>
+
+        <tr> <td><b>PVOL</b></td> <td>The total volume for a one second period for the stocks that have traded during that second. The actual volume that you will see for a chart bar will be equal to the volume over the timeframe of the chart bar. So when using the  <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s8" target="_blank" rel="noopener noreferrer">Volume</a> study on a 10 minute per bar chart, the Volume will be for that 10 minutes when using this symbol. The chart bars themselves represent the Open, High, Low, and Close of all of the 1 second total volume intervals regardless of the time length of the bar.  For example, the high of a bar would be the maximum volume  encountered during a one second period, during the timeframe of the chart bar. </td> </tr>
+
+        <tr> <td><b>UDVR</b></td> <td> This is the ratio of <b>UVOL24H</b> to  <b>DVOL24H</b> (<b>UVOL24H / DVOL24H</b>)</td> </tr>
+
+    </table>
+
+
+    <br> <br>
+    <p>The following table lists all of the exchanges and indexes that market statistics are available for and provides descriptions for them.</p>
+
+    <table class="doc">
+        <tr> <td><b>NASDAQ</b></td> <td>Based on the stocks traded on the NASDAQ exchange.</td> </tr>
+        <tr> <td><b>NQ</b></td> <td>Based on the stocks traded in the NASDAQ 100 index.</td> </tr>
+        <tr> <td><b>NYSE</b></td> <td>Based  on the stocks traded on the New York Stock Exchange.</td> </tr>
+        <tr> <td><b>SP</b></td> <td>Based on the stocks traded in the S&amp;P 500 index.</td> </tr>
+        <tr> <td><b>YM</b></td> <td>Based on the stocks traded in the Dow Jones 30 Industrials index.</tr>
+        <tr> <td><b>TF</b></td> <td>Based on the stocks traded in the Russell 2000 index.</tr>
+        <tr> <td><b>NYSEMKT</b></td> <td>Based on the stocks traded in the NYSE Market exchange. Formally AMEX.</tr>
+        <tr> <td><b>NYSE_NASDAQ_NYSEMKT</b></td> <td>Based on the stocks traded in the NYSE, NASDAQ and NYSE Market (AMEX)  exchanges.</tr>
+
+    </table>
+
+    <br> <br>
+    <p>The following table lists all of the foreign exchange indexes (FX Indexes).</p>
+
+    <table class="doc">
+        <tr> <td><b>USDX</b></td> <td>US Dollar Index - calculated using the standard ICE algorithm.</td> </tr>
+        <tr> <td><b>EUR-X</b></td> <td>Euro FX Index</td> </tr>
+        <tr> <td><b>GBP-X</b></td> <td>British Pound FX Index</td> </tr>
+        <tr> <td><b>AUD-X</b></td> <td>Australian Dollar FX Index</td> </tr>
+        <tr> <td><b>NZD-X</b></td> <td>New Zealand Dollar FX Index</tr>
+        <tr> <td><b>CAD-X</b></td> <td>Canadian Dollar FX Index</tr>
+        <tr> <td><b>CHF-X</b></td> <td>Swiss Franc FX Index</tr>
+        <tr> <td><b>JPY-X</b></td> <td>Japanese Yen FX Index</tr>
+        <tr> <td><b>USD-X</b></td> <td>US Dollar FX Index</tr>
+    </table>
+
+    <p>The Open, High,  Low, Close Historical Daily chart values for the FX Index symbols are based upon the time range from 00:00:00 to 23:59:59 UTC time. </p>
+    <p>There is no data earlier than 2014-03 for these symbols. </p>
+</section>
+
+<section class="h2">
+    <h2 id="CalculationsAlgorithms">Calculations and Algorithms</h2>
+    <div class="member-link">[<a href="#CalculationsAlgorithms">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> This section contains additional information about the calculations and algorithms used for market statistics. </p>
+
+    <ol>
+        <li>The data for all market statistics symbols are calculated and provided using Sierra Chart software and systems using a full tick by tick data feed of the NASDAQ and NYSE exchanges.  This includes stocks and ETFs. Although many ETFs trade on NYSE Market and not on the NYSE. Basically all reported and tradable symbols/issues. This documentation makes reference to "stocks" which can include ETFs.</li>
+
+        <li>All stock based statistics are based on the trading day, which includes the pre and post market trading sessions unless otherwise noted. The statistics  are reset at midnight US Eastern time.  This is after the post market session and before the pre market session. They run continuously through the entire trading day.</li>
+
+        <li> The market statistics symbols for US exchanges and indexes will definitely be active from 09:30 to 16:00  US Eastern time on weekdays.  There is also activity during the pre-and post market hours.</li>
+
+        <li>To calculate the stock based statistics, all trades and volume updates are examined for the NYSE and NASDAQ exchanges.  Each trade is used to determine the status of the stock, which is then applied to the proper statistic based on  which exchange or index the stock is a member of.</li>
+
+        <li>A particular stock is not included any the market statistics calculations until it has traded for the current day.</li>
+
+        <li> All stocks start in a neutral state and initially are not included any of the market statistics calculations. When there is the first trade of the day for a particular  stock,  it is compared against the prior days settlement price. If it is unchanged, then it would still not contribute to market statistics that require an up or down consideration of a particular  stock. Otherwise, for volume and number of trades  market statistics, the  stock will be counted as soon as it trades for the day.</li>
+
+
+        <li> There is not a sampling of the stock exchange data. There is an update of market statistics at every single trade that is received from the  full tick by tick feed for the exchanges being monitored.  If there has been no change in direction (up, down, unchanged) for the last  trade for a particular symbol, then the prior direction is used for that symbol in the market statistics  where applicable.</li>
+
+        <li>Volumes and Number of Trades are shown in thousands of shares / trades.</li>
+
+        <li>The <b>TICK-</b> symbols are the total number of stocks trading at a higher price than their prior trade (up tick) minus the total number of stocks trading at a lower price than their  prior trade (down tick).  If a   stock has not traded yet, it is <em>not included in the count</em>. 
+            <br> <br>
+            An up tick is a trade that trades at higher price than the prior trade. A down tick is a trade that trades at a lower price than the prior trade. 
+            <br> <br>
+            When a trade executes at the same price, the prior tick direction is maintained. 
+            <br> <br>
+            For the first trade of the day for  a stock, the price is compared against the prior closing price for that particular   stock.
+            <br> <br>
+            In the case where  a stock changes direction from an up tick to a down tick or the other direction, this causes a change of 2 in the <b>TICK-</b> symbol. For example, if  a stock goes from an up tick to a down tick, the <b>TICK-</b>  will change by -2.
+            <br> <br>
+            The <b>TICK-</b> symbols are updated at every single trade for the particular stocks being monitored and they are transmitted  up to four times a second. The extreme   values during each quarter second are also   maintained and transmitted.
+
+            <br> <br>
+            The <b>TICK-</b> calculations are reset at midnight US Eastern time and effectively start at the pre-open.
+
+            <br> <br>
+            To know the number of stocks involved in the calculation for a particular <b>TICK-</b> symbol at any moment in time, refer to a chart for <b>TISS-[exchange or index]</b> for the same exchange or index.
+        </li>
+
+        <li>As  a stock trades, each trade is compared to the previous  trade  for that stock. The result is an up tick, down tick, or no change. In the case of the <b>TICK-</b> market statistics, they are then updated based on the prior tick state and the current tick state. For example, if  a stock changes from down tick to up tick, both the down ticking total and the up ticking total need to be updated resulting in the net ticks moving +2. In the case of trading at the same price, the tick direction is maintained in the same state, and so there is no change to the tick counts used for the final TICK output.</li> 
+
+
+        <li>The TRIN is the standard calulation: <b>TRIN = (ADV / DECL) / (UVOL / DVOL)</b>. Refer to the <a href="#Symbols">Symbols</a> section for a description of <b>ADV</b>, <b>DECL</b>, <b>UVOL</b>, <b>DVOL</b>.</li>
+
+
+        <li><b>Market Statistics Bid Volume</b>: All market statistics maintain Bid Volume for Intraday data.  Every 1 unit of Bid Volume indicates that the market statistic  had a lower value than the previous value or had the same value as the previous value and the value previous to that was considered a lower value. When market statistics data is stored tick by tick,  Bid Volume or Ask Volume will be 1 for the  Intraday Tick data record.  When looking at the Bid Volume in a chart, a value of 107 for a 1 minute Intraday bar indicates that the market statistic  had 107 lower values for that bar.</li>
+
+        <li><b>Market Statistics Ask Volume</b>: All market statistics maintain Ask Volume for Intraday data.  Every 1 unit of Ask Volume indicates that the market statistic  had a higher value than the previous value or had the same value as the previous value and the value previous to that was considered a higher value. When market statistics data is stored tick by tick,  Bid Volume or Ask Volume will be 1 for the  Intraday Tick data record.   When looking at the  Ask Volume in a chart, a value of 107 for a 1 minute Intraday bar indicates that the market statistic  had 107 lower values for that bar.</li>
+        
+        <li><b>Market Statistics Total Volume</b>: All market statistics maintain Total Volume for Intraday data.  This represents the number of price updates for a particular market statistics symbol.</li>
+        
+        <li>  The Market Statistics   <b>UVOL24H, DVOL24H, TVOL24H, UVOL, DVOL, TVOL</b> symbols,  consider the   all of the trading activity from all of the symbols included  in a particular  exchange or index, that are intended to update the Daily Volume value.   These are reported in thousands. These values can be very high. You can see the real trading volumes on the <a href = "https://www.nyse.com/markets/us-equity-volumes" Target="_blank" rel="noopener noreferrer">NYSE US Equity Volumes</a> page.</li>
+
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ForexIndexesCalculation">Forex Indexes Calculation</h2>
+    <div class="member-link">[<a href="#ForexIndexesCalculation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section documents the formula used for the Forex Indexes <b>EUR-X, GBP-X, AUD-X, NZD-X, CAD-X, CHF-X, JPY-X, USD-X</b>. </p>
+
+    <p>FOREX quotes for commonly traded currency pairs are widely reported. For instance, a quote of EUR.CHF = 1.4929 indicates that 1 Euro is exchanged for 1.4929 Swiss francs. The first currency in the quote symbol is called the <b>base currency</b>, and the second is called the <b>quote currency</b>.</p>
+
+
+    <p>We wish to have an index for each currency that makes no explicit reference to other commonly traded currencies, but is instead averaged over them. In order to write down compact mathematical expressions for these indices, it will be inconvenient to use the FOREX currency abbreviations. Therefore, we will use the following instead.</p>
+
+    <ul>
+        <li>C<sub>1</sub> = EUR</li>
+        <li>C<sub>2</sub> = GBP</li>
+        <li>C<sub>3</sub> = AUD</li>
+        <li>C<sub>4</sub> = NZD</li>
+        <li>C<sub>5</sub> = USD</li>
+        <li>C<sub>6</sub> = CAD</li>
+        <li>C<sub>7</sub> = CHF</li>
+        <li>C<sub>8</sub> = JPY</li>
+    </ul>
+
+    <p>In this nomenclature, C<sub>1</sub>.C<sub>7</sub>=EUR.CHF. Note that reversing the order of the currencies in this expression yields the reciprocal of the previous quote. For example, C<sub>7</sub>.C<sub>1</sub>=1/C<sub>1</sub>.C<sub>7</sub>.  </p>
+
+    <p>In the expressions for the indices, we will also want to cite a reference value of the quote. This will be the value of the quote on  2008-12-31, and it will be denoted by C<sub>1</sub>.C<sub>7</sub>(Ref). Refer to the table below for these values.</p>
+
+    <p>We are now ready to write down an expression for the indices of the currencies. For currency C<sub>j</sub>, its index will be denoted C<sub>j</sub>-X. So for example, C<sub>1</sub>-X or EUR-X is the index for Euros.</p>
+
+    <div style="text-align: center;"><a href="../images/forexindexesformula.png" rel="lightbox"><img src="../images/forexindexesformula.png" alt="" class="screenshot" loading="lazy" width="500"></a></div>
+
+
+    <p>Both the quote C<sub>j</sub>.C<sub>i</sub> and the index C<sub>j</sub>-X are calculated about once per second. We are summing over all i not equal to j to avoid including terms in which a currency is compared with itself. We divide by 7 because we are averaging the expression in the summand for currency j over the other seven currencies. </p>
+
+
+    <p>Values at 2008-12-31: </p>
+    <ul>
+        <li><b>EURJPY</b> = 126.68</li>
+        <li><b>EURCHF</b> = 1.4929</li>
+        <li><b>EURCAD</b> = 1.6992</li>
+        <li><b>EURUSD</b> = 1.3939</li>
+        <li><b>EURNZD</b> = 2.3872</li>
+        <li><b>EURAUD</b> = 1.9744</li>
+        <li><b>EURGBP</b> = 0.9584</li>
+        <li><b>GBPJPY</b> = 132.16</li>
+        <li><b>GBPCHF</b> = 1.5579</li>
+        <li><b>GBPCAD</b> = 1.7726</li>
+        <li><b>GBPUSD</b> = 1.4543</li>
+        <li><b>GBPNZD</b> = 2.4905</li>
+        <li><b>GBPAUD</b> = 2.0594</li>
+        <li><b>AUDJPY</b> =  64.16</li>
+        <li><b>AUDCHF</b> = 0.7565</li>
+        <li><b>AUDCAD</b> = 0.8606</li>
+        <li><b>AUDUSD</b> = 0.7061</li>
+        <li><b>AUDNZD</b> = 1.2090</li>
+        <li><b>NZDJPY</b> =  53.06</li>
+        <li><b>NZDCHF</b> = 0.6256</li>
+        <li><b>NZDCAD</b> = 0.7117</li>
+        <li><b>NZDUSD</b> = 0.5838</li>
+        <li><b>USDJPY</b> =  90.88</li>
+        <li><b>USDCHF</b> = 1.0713</li>
+        <li><b>USDCAD</b> = 1.2188</li>
+        <li><b>CADJPY</b> =  74.55</li>
+        <li><b>CADCHF</b> = 0.8789</li>
+        <li><b>CHFJPY</b> =  84.82</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="MarketStatisticsHistoricalDailyCharts">Market Statistics Historical Daily Charts</h2>
+    <div class="member-link">[<a href="#MarketStatisticsHistoricalDailyCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Normally the type of charts you should use with Sierra Chart Market Statistics are Intraday charts since the historical data for these market statistics  is stored in an Intraday format.</p>
+
+    <p> Historical Daily data is generated from the Intraday data. So when you open a Historical Daily  data chart,   the chart data is built from the Intraday data on the server. These charts only are built from the Intraday data for the time span from 09:30:00 US Eastern time until 16:00:00 US Eastern time. </p>
+
+
+    <p>So there can be differences to the Intraday chart data because of this.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Overlaying">Overlaying a Chart on Another Chart as a Study</h2>
+    <div class="member-link">[<a href="#Overlaying">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To include a market statistic symbol in the study region of another chart, then this can be done by using the <a href="index7014.html?page=doc/StudiesReference.php&amp;ID=400&amp;Name=Add_Additional_Symbol" Target="_blank" rel="noopener noreferrer">Add Additional Symbol</a> study.</p>
+
+    <p>For example,  you you can include the <b>TICK-NYSE</b>   symbol below another chart.</p>
+
+    <p> Follow the   information on the <b>Add Additional Symbol</b> study to do this. </p>
+
+    <p>For general information to work with studies, refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" Target="_blank" rel="noopener noreferrer">Adding Studies</a> section.</p>
+
+    <p>On the  <b>Settings and Inputs </b> tab of the  <b>Study Settings </b> window for the Overlay study, set the <b>Chart Region</b> setting to 2 or whatever region you would like to display the market statistics chart in, on the destination chart.</p>
+
+
+    <div style="text-align: center;"><a href="../images/tick-nyse_overlay.png" rel="lightbox"><img src="../images/tick-nyse_overlay.png" width="550" alt=""  class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="CreatingAdditionalMarketStatistics">Creating Additional Market Statistics</h2>
+    <div class="member-link">[<a href="#CreatingAdditionalMarketStatistics">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is possible to use the existing Market Statistics and combine them to create a new statistic that may be of interest.</p>
+
+    <p>The following instructions give an example of using the NASDAQ Advancers (ADV-NASDAQ) along with the NASDAQ Decliners (DECL-NASDAQ) to generate the ratio of Advancers/(Advancers + Decliners).</p>
+
+    <ol>
+        <li>Find the symbol ADV-NASDAQ and open this symbol into a new Intraday Chart.</li>
+
+        <li>Go to <b class="menu_item">Analysis &gt;&gt; Studies</b> and add the <b>Add Additional Symbol</b> study to the <b>Studies to Graph</b>. For more information refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Adding/Modifying Chart Studies</a>.</li>
+
+        <li>Select <b>Add Additional Symbol</b> in the <b>Studies to Graph</b> area, and select the <b>Settings</b> button to open the Settings window for this study.</li>
+
+        <li>Select the <b>Symbol Input</b> setting and either Find the Symbol or enter the symbol <b>DECL-NASDAQ</b>. Change other settings as desired, and then select OK to close the Settings window for the <b>Add Additional Symbol</b> study.</li>
+
+        <li>Add the <b>Study Subgraphs Add</b> study to the <b>Studies to Graph</b>, select the study in the <b>Studies to Graph</b> area of the window and then select the <b>Settings</b> button to bring up the Settings window for that study.</li>
+
+        <li>Set <b>Input Study 1</b> to <b>Main Price Graph</b> and <b>Last</b> and set  <b>Input Study 2</b> to <b>Symbol: DECL-NASDAQ</b> and <b>Last</b>. Set the other Inputs as desired. Select <b>OK</b> to close the Settings window for this study and have the study added to the chart.</li>
+
+        <li>Add the <b>Study Subgraphs Divide/Ratio</b> study to the <b>Studies to Graph</b>, select the study in the <b>Studies to Graph</b> area of the window and then select the <b>Settings</b> button to bring up the Settings window for that study.</li>
+
+        <li>Set <b>Input Study 1</b> to <b>Main Price Graph</b> and <b>Last</b> and set <b>Input Study 2</b> to <b>Study Subgraphs Add</b> and <b>Add</b>. Set the other Inputs as desired. Select <b>OK</b> to close the Settings window for this study and have the study added to the chart. This study displays the new Market Statistic for Advancers/(Advancers + Decliners) for the NASDAQ.</li>
+
+        <li>Select OK on the <b>Chart Studies</b> window.</li>
+    </ol>
+
+    <p>If desired, the <b>Add Additional Symbol</b> and the <b>Study Subgraphs Add</b> studies can be set to <b>Hide</b> to not have them displayed.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ObtainingDataFurtherBackInTime">Obtaining Data Further Back in Time for Some Market Statistics Symbols</h2>
+    <div class="member-link">[<a href="#ObtainingDataFurtherBackInTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <a href="#Symbols">Symbols</a> documented on this page have data which go back to approximately the beginning of 2014 except for the following which have more history:</p>
+
+    <p>From 2009-08-28 for  <b>NISS-NYSE</b>. From 2008-08-07 for <b>TICK-NYSE</b>.</p>
+
+    <p> To access all of the available historical data  for any of the market statistics symbols, follow the <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DownloadingViewingMoreHistoricalIntradayData" >Downloading / Viewing More Historical Intraday Data</a>.
+
+    <p>Market Statistics symbols are also provided with the <b>Sierra Chart Historical Data Service</b> which uses data from the Barchart Data service. These are completely separate market statistics symbols.</p>
+
+    <p>Follow the instructions on the <a href="index765f.html?page=doc/SierraChartHistoricalData.php">Sierra Chart Historical Data Service</a> page to use that service.</p>
+
+    <p>You can open Historical Daily or Intraday charts for any of the  <a href="index7331.html?page=doc/SierraChartHistoricalData.php&amp;SymbolsPage=MarketStats" >Sierra Chart Historical Data Service Market Statistics symbols</a> using that service. </p>
+
+    <p>The historical Intraday data is in 1 minute units with that service.</p>
+</section>
+
+<section class="h2">
+    <h2 id="MarketStatCalculationsComparedToOtherDataServices">Market Statistics Calculations Compared to Other Data Services</h2>
+    <div class="member-link">[<a href="#MarketStatCalculationsComparedToOtherDataServices">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sometimes we receive comments that the Sierra Chart market statistics in particular the TICK-NYSE differs at times compared to TICK NYSE data provided by other market data services.</p>
+
+    <p>You will see that the Sierra Chart TICK market statistics have the same shapes/patterns as compared to other data services. The actual values do tend to vary slightly, especially at extremes, but that is the case if you compare any of the different vendor TICK values. What we have found is comparing to a known good data feed, which ours is as well, you will find that the Sierra Chart TICK market statistics have lower and higher extremes.</p>
+
+    <p>In this section here, we will explain that the market statistics results provided by the Sierra Chart data feed are very accurate and precise.</p>
+
+
+    <section class="h3">
+        <h3 id="TICKCalculationNotWeighted">TICK Calculation is Not Weighted Based on Market Capitalization of Containing Stocks</h3>
+        <div class="member-link">[<a href="#TICKCalculationNotWeighted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Since the TICK calculation is not weighted, large-capitalization stocks will affect the TICK calculation to the same extent compared to smaller capitalization stocks.</p>
+
+        <p>We have seen some traders run a simple summation of the TICK-NYSE using an Intraday bar interval, and compare that to the  S&amp;P 500 cash index Daily chart to find a correlation.  This is a flawed and unreliable method of analysis for several reasons. One reason is that in the case of the S&amp;P 500 index, the S&amp;P 500 is a weighted index of 500 large capitalization stocks on <em>both</em> the NYSE and NASDAQ. The <b>TICK-NYSE</b> is all of the stocks on the NYSE and there is <em>no weighting</em>. </p>
+
+        <p>The TICK  market statistic is also a short-term market direction indicator. For example, if a stock  is down for the day, it is still possible for that same stock throughout the day to have many upticks but still be down on the day compared to its previous closing price. There is not always a definitive and reliable correlation that can be made between the TICK market statistic and a weighted cash index. Often there will be a correlation but this is not always the case. </p>
+
+        <p>Another reason why this is an unreliable comparison is explained in the <a href="#ExplanationOfBias">Explanation of TICK Positive or Negative Bias and How to Correct</a>. </p>
+
+        <p> Sometimes we hear from users that the S&P 500 is way up/down, but the Sierra Chart TICK calculation, which is accurate, does not reflect this. Once again,  this is a completely flawed method of analysis. The S&P 500 index can be up or down significantly in price, but this is due to the  <em>degree</em> of price change of the stocks contained within it, the fact that it is a weighted index based on market capitalization, and it contains stocks from two different exchanges. </p>
+
+        <p>It is not possible to always make a direct correlation to the <b>TICK-NYSE</b> which does not use any weighting based upon market capitalization, and it includes all symbols on a single exchange.  If you believe this correlation is valid, then instead look at the <b> TICK-SP</b>, which tracks the number of stocks that have traded at a higher price compared to their prior price minus the number of stocks trading at a lower price compared to their prior price,  in the S&P 500. What you will find is that the reading given at the time you see the S&P 500 significantly up or down, is not an extreme reading  and will appear to be inconsistent with the movement of the  S&amp;P 500 cash index. This definitively shows that making this kind of correlation is inherently flawed. </p>
+
+        <p>In summary, the TICK is a short-term calculation indicating the number of stocks that have traded at a higher price compared to their prior price minus the number of stocks trading at a lower price compared to their prior price. Whereas a weighted cash market index like the S&amp;P 500,  is indicating for a group of large capitalization stocks their last trade prices compared to their final trade prices the day before, using a weighted formula based upon market capitalization. </p>
+
+        <p>There is not always a direct correlation between the two.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TICKSP500MatchesIQFeed">TICK for S&amp;P 500 Stocks Matches DTN IQ Feed</h3>
+        <div class="member-link">[<a href="#TICKSP500MatchesIQFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When calculating the TICK  market statistic for the S&amp;P 500 stocks using the DTN IQ Feed data feed and comparing that to the DTN IQ Feed calculated TICK, we see that there is a very close match as the below image shows.</p>       
+
+        <div style="text-align: center;"><a href="../images/tick-spmarketstatisticcomparison.png" rel="lightbox"><img src="../images/tick-spmarketstatisticcomparison.png" alt="" class="screenshot" loading="lazy" width="960"></a></div>
+
+        <p>You will notice that in the first chart at the top of this image, the timestamps differ from the other two charts below because the top chart is using delayed data.  The timestamps differ by 15 minutes but that is beside the point with the comparison being made.</p>
+
+        <p>Interestingly you will see that the Sierra Chart calculated TICK from IQ Feed data has higher extremes which indicates more accurate reporting of these extremes.  This tends to indicate that IQ Feed is using a sampling method whereas the Sierra Chart market statistics calculation involves every single trade  from the S&P 500 stocks.</p>
+
+        <p>We also see a very close match to the Sierra Chart calculated TICK  market statistic for the S&amp;P 500 stocks  using the Barchart data feed compared to the IQ Feed calculated TICK for the S&amp;P 500. </p>
+
+        <p>Aside from the differences with the extremes, the small occasional variations in appearance most likely are due to time stamping differences with the final TICK output.</p>
+
+        <p> Therefore, the Sierra Chart TICK market statistic calculation has proven to be accurate and follows a standard calculation model. The TICK market statistics calculation method is very simple and there never has been a problem with it other than some rare instances of a problem with the underlying data feed.</p>
+
+
+        <p>Therefore, differences with the <b>TICK-NYSE</b> must be primarily due to small differences or variation in the particular stocks being tracked on the NYSE and to some extent time stamping differences. Sierra Chart uses a reliable list of symbols which lists the stocks on the NYSE to do the calculation. The source data comes from Barchart. As of this writing, approximately 3200 stocks are used in the calculation each day and this also matches the number of stocks that DTN IQ Feed shows are traded on the NYSE every day.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ExplanationOfBias">Explanation of TICK Positive or Negative Bias and How to Correct</h3>
+        <div class="member-link">[<a href="#ExplanationOfBias">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is an image of the S&amp;P 500 cash index Daily chart with 3 overlay studies below it.</p>
+
+        <div style="text-align: center;"><a href="../images/tick-spsummationcomparison.png" rel="lightbox"><img src="../images/tick-spsummationcomparison.png" alt="" class="screenshot" loading="lazy" width="960"></a></div>
+
+        <p>The first overlay  is a cumulative summation of the average price of each 1 Minute chart bar of the  TICK market statistic for the S&amp;P 500 stocks calculated by Sierra Chart. This is overlaid as OHLC bars  on to the S&amp;P 500  cash index Daily chart. Notice how it slopes up.</p>
+
+        <p>The second overlay  is a cumulative summation of the average price of each chart bar of the DTN IQ Feed calculated TICK market statistic for the S&amp;P 500 stocks. This is overlaid as OHLC bars  on to the S&amp;P 500  cash index Daily chart. Notice how it slopes down. It goes in a completely opposite direction.</p>
+
+        <p>The third overlay at the bottom is the <a href="indexf7c2.html?page=doc/StudiesReference.php&amp;ID=363#Adjusted_Cumulative_Value" >Cumulative Adjusted Value</a> study on the chart of the TICK market statistic for the S&amp;P 500 stocks calculated by Sierra Chart (symbol <b>TICK-SP</b>). This is overlaid as OHLC bars.  You can now see some correlation at times to the underlying S&P 500 cash index.</p>
+
+        <p>As explained in the <a href="#TICKSP500MatchesIQFeed">TICK for S&amp;P 500 Stocks Matches DTN IQ Feed</a> section we can see that there is a very close match between the Sierra Chart calculated TICK market statistic for the S&amp;P 500 stocks compared to the IQ Feed TICK for the S&amp;P 500.</p>
+
+        <p>We also want to point out, that the Barchart Data Service <b>$TICK</b> symbol data also has a positive bias when performing a cumulative summation  of it over an extended period of time.</p>
+
+        <p>So why therefore is there a 100% difference of slope between the Sierra Chart calculated TICK and the DTN calculated TICK for the S&amp;P 500 stocks?</p>
+
+        <p>Once again, the TICK is <em>not a weighted </em> calculation. Small-cap stocks will have just as much of an effect on the calculation  as large-cap stocks. Although this is not relevant to the discrepancy  and neither the nearly continuous positive or negative slope makes sense.</p>
+
+        <p>All of the reasons why one TICK is sloping up and the other is sloping down, are not exactly known. However, in the case of the IQ Feed calculated TICK for the S&amp;P 500, at times where the market is closed the TICK value  repeats itself and if it is a negative number (which it is in our test case), that then causes a downward slope of the cumulative summation calculation over that period of time. This is one of the reasons which has been observed.</p>
+
+        <p> However, one thing that can conclusively be said, is that this method of analyzing the TICK market statistic by running a simple  summation of the values is inherently flawed and produces <em>completely unreliable results</em> and should never be relied upon.</p>
+
+        <p>What is the solution to the problem that we see? Clearly there is a solution with the third overlay in the image above. In this <a href="http://traderfeed.blogspot.co.nz/2007/09/cumulative-line-for-adjusted-nyse-tick.html"  target="_blank" rel="noopener noreferrer">Cumulative Line for the Adjusted NYSE TICK</a> article, it discusses a calculation that can be used on the TICK market statistic symbol to obtain a relative reading from the TICK. The result of this is the  <em>third overlay</em> at the bottom of the chart above and you can see that it is more closely correlated to the actual underlying S&amp;P 500 cash index Daily chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="RecentAnalysis"> Recent Analysis</h3>
+        <div class="member-link">[<a href="#RecentAnalysis">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Based upon a couple of recent user comments on the Sierra Chart TICK-NYSE  calculation being less than accurate, we are going to once again review this for the date 2017-01-04.</p>
+
+        <p>We are going to explain here once again, after analysis that the TICK-NYSE  market statistic is completely correct and reasonable.</p>
+
+        <p>There are going to be several points of analysis. </p>
+
+        <p>Also we want to point out that it is incorrect to compare the degree of movement in the S&P 500  cash index and try to correlate that to the TICK-NYSE. For complete details about this, refer to <a href="#TICKCalculationNotWeighted">TICK Calculation is Not Weighted Based on Market Capitalization of Containing Stocks</a>. </p>
+
+
+        <ol>
+            <li> We can see in the chart images below, that the number of   issues/stocks the Sierra Chart stock data feed is reporting at the 9:30 AM open is 465. With IQ Feed it is 2283. This is an indication of the number of stocks that have been trading premarket.  For an exchange that has about 3100 stocks on it, the 465 looks more reasonable than the 2283. We do not know the reason for the difference but once again we think with the Sierra Chart data feed which is provided by Barchart, that it is indicating a more reasonable value.
+
+                <div style="text-align: center;"><a href="../images/scdatanyseissuestraded2017-01-04.png" rel="lightbox"><img src="../images/scdatanyseissuestraded2017-01-04.png" alt="" class="screenshot" loading="lazy" width="350"></a></div>
+                <div style="text-align: center;"><a href="../images/iqfeednyseissuestraded2017-01-04.png" rel="lightbox"><img src="../images/iqfeednyseissuestraded2017-01-04.png" alt="" class="screenshot" loading="lazy" width="350"></a></div>
+                <br> <br>
+                At the end of the day IQ Feed is reporting  3134 stocks trading  and the SC Data Feed is reporting  3109. Essentially the same which  indicates Sierra Chart is tracking the correct number of stocks on the NYSE.
+            </li>
+
+            <li>We can see from the above chart images that the number of issues/stocks trading on the NYSE at 9:30:59 with SC Data feed is  1564 on 2017-01-04. IQ Feed is reporting 2721. This is a significant difference and once again we do not know the reason for this difference but it seems as though the 1564 would be more reasonable for an exchange that has 3100 stocks.</li>
+
+            <li>We can see from the chart images below that the number of issues/stocks trading up at 09:30:59  on the NYSE is 906.  The number of issues/stocks trading down is 612.  Resulting in an TICK-NYSE reading of: 294 which is exactly what was reported by the symbol at the time.
+
+                <div style="text-align: center;"><a href="../images/nyseuptickissues2017-01-04.png" rel="lightbox"><img src="../images/nyseuptickissues2017-01-04.png" alt="" class="screenshot" loading="lazy" width="350"></a></div>
+                <div style="text-align: center;"><a href="../images/nysedowntickissues2017-01-04.png" rel="lightbox"><img src="../images/nysedowntickissues2017-01-04.png" alt="" class="screenshot" loading="lazy" width="350"></a></div>
+            </li>
+
+            <li> Finally we are going to compare the S&P 500 cash index to  <b>TICK-SP</b>. We will estimate the TICK-NYSE reading from the TICK-SP to indicate that the Sierra Chart  TICK-NYSE is giving a reliable reading. In the below screenshots we show the S&P 500 TICK from SC Data and from IQ Feed. IQ feed has two different symbols for this.
+
+                <div style="text-align: center;"><a href="../images/iqfeeds%26p500tickexchangeonly2017-01-04.png" rel="lightbox"><img src="../images/iqfeeds%26p500tickexchangeonly2017-01-04.png" alt="" class="screenshot" loading="lazy" width="350"></a></div>
+                <div style="text-align: center;"><a href="../images/iqfeeds%26p500tick2017-01-04.png" rel="lightbox"><img src="../images/iqfeeds%26p500tick2017-01-04.png" alt="" class="screenshot" loading="lazy" width="350"></a></div>
+                <div style="text-align: center;"><a href="../images/scdata_s%26p_500_tick_2017-01-04.png" rel="lightbox"><img src="../images/scdata_s%26p_500_tick_2017-01-04.png" alt="" class="screenshot" loading="lazy" width="350"></a></div>
+                <br> <br>
+                There is variation among these. And also note that the IQ Feed S&P 500 TICK which is based on trades on the exchange only (symbol: LI6N.Z) is actually higher among all of them. And we think this is really where the core problem is.  You can see that the reading is higher when trade data is actually excluded from secondary exchanges. Our understanding is that the underlying Sierra Chart data feed does include secondary exchanges.
+                <br> <br>
+                Based upon the above values we can see there is an average upper value for the S&P 500 TICK of 116 at the 9:30 US Eastern time minute. Calculation: <b>116 = (171 + 76 + 100) / 3</b>.
+                <br> <br>
+                The range for the TICK-NYSE is approximately  +1100 to -1100. A 2200 point range. The range for the  TICK-SP is approximately  +400 to -400. A 800 point range.  The value of 116 is 65% of the S&P 500 TICK range. Applying the same percentage to the TICK-NYSE gives us an estimated reading of 330 <em>which is very close to the 324 <b>TICK-NYSE</b> value that Sierra Chart was indicating at this time</em>. This validates that the  <b>TICK-NYSE</b> reading was correct.
+
+            </li>
+
+        </ol>
+
+        <p>There definitely is nothing wrong with the underlying Barchart NYSE and NASDAQ data feed being used for the TICK and other market statistics calculations. </p>
+
+        <p>We know this for various reasons. The data is not delayed from observations we have done on various symbols at the NYSE open. And no user  of the same real-time US equities data feed has said the data is delayed.  </p>
+
+        <p>When examining the number of trades and volume from Intraday tick data for major symbols such at the ETF SPY and other major stocks, and comparing them to IQ Feed, there are no significant differences (within approximately .0009%).  </p>
+
+        <p>We also know based on the TISS-NYSE which had a value of 3109 at the close of 2017-01-04 with SC Data and comparing to the equivalent IQ Feed symbol at the same time which had a value of 3134 that  there is only a .8% difference in the number of    issues/stocks being tracked. We are using a list of symbols provided  by Barchart to determine what are the NYSE symbols. So once again we know the number of symbols being tracked is accurate. </p>
+
+        <p>We have also asked Barchart about their data feed in relation to the TICK differences, and they said: <em>"As any trades made on NYSE listed securities we will report, and we are certainly not dropped packets which would be another explanation." </em>, <em>"Our US Equities data is from the original exchanges, and includes all trades and bid and ask messages."</em>. They also said this about the other TICK calculations from the other providers: <em>"My guess would be that the difference is others calculate these on only NYSE Arca trades and not across the exchange."</em>. </p>
+
+        <p>Therefore, there is nothing at all wrong with the underlying Barchart data feed being used for the TICK calculations. </p>
+
+        <p>Differences with TICK between different providers primarily is going to be attributable to differences in the underlying data feed.  What the specific reasons are for these differences, we do not know but we also know there is nothing wrong with the underlying Sierra Chart data feed. These differences <em>definitely do not amount</em> to meaning there is a problem with the Sierra Chart TICK calculation. But instead there is simply a difference and if anything the Sierra Chart TICK calculation is <em>more reasonable</em> than others.</p>
+
+        <p>So we can conclude the TICK calculations Sierra Chart is providing are 100 percent accurate based upon the underlying data and we know the underlying data is good. Therefore, concluding there is something  wrong with the TICK is actually faulty reasoning and instead you should question what you are seeing from other providers based upon the fact that we are working with a known good data feed.</p>
+
+        <p>If you are not happy with the TICK-NYSE that we offer, then do not use it but understand what we are providing is accurate and your conclusion that there is something wrong with it is not based upon sound reasoning and is not supported by fact. </p>
+
+        <p>And after this analysis again, we can <em>only conclude</em> that what you are seeing from  <em>other providers is actually questionable</em>  and likely unreasonable and not accurate. They certainly  can be misleading when comparing to the S&amp;P 500 cash index. The TICK calculation provided by Sierra Chart is a much more reasonable and stable representation of unweighted trade activity on the market.</p>
+        
+        <p>For additional information, refer to this <a href = "https://www.sierrachart.com/SupportBoard.php?PostID=118589#P118589">Support Board</a> posting.</p>
+
+
+    </section>
+    
+    <section class="h3">
+        <h3 id="OpeningTICKValues">Opening TICK Values</h3>
+        <div class="member-link">[<a href="#OpeningTICKValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Sometimes we hear the comment, that the market has opened way up or down, and the  TICK calculation does not reflect that. Once again, this is a flawed method of analysis. </p> 
+
+        <p> Trading activity from an exchange, is a single stream of data. At the 9:30 AM US Eastern time NYSE open,  the very first TICK value will either be +1 or -1, for the first stock traded. And then from there, it will increase or decrease  as the data is received from subsequent trading activity since the very first trade. </p>
+
+        <p> Now what actually happens in the case of the Sierra Chart calculated TICK for the NYSE and other exchanges and indexes is that the calculation begins at the open of the premarket which is 4 AM US Eastern time. </p>
+
+        <p> So at the 9:30 AM open, the TICK will reflect the number of stocks trading up minus the number of stocks trading down at that point. However, since most stocks have not yet traded before 9:30 AM, you are <em>not</em> going to see an extreme up or down value at the 9:30 AM open. If you see this extreme with other provided TICK calculations, then right away you need to recognize that those values are indeed <em>very likely erroneous and demonstrate very substandard and incompetent</em>  market statistics by these other providers. This is a basic fact.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="MarketStatisticsCalculationChangeApril2019">Market Statistics Calculation Change April 2019</h3>
+        <div class="member-link">[<a href="#MarketStatisticsCalculationChangeApril2019">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Effective April 25, 2019 a change was made with market statistics calculations where when the best bid/ask prices, both are beyond the last trade price, then  the changes with those bid/ask prices are counted as trades with no volume which then contributes towards the calculations like the TICK and the other market statistics symbols. This applies to the symbols for all of the different exchanges and indexes market statistics are calculated for.  </p>
+        
+        <p>  The way this works is that if the best Bid price is above the last trade price,  and it has increased compared to the prior Bid price, then it is counted as an uptick.  If the best Ask price is below the last trade price and it has decreased compared to the prior  Ask price,  then it is counted as a downtick.   This counting of upticks and downticks continues until such time that the Bid and  Ask  are no longer fully above or below the last trade price.</p>        
+
+        <p>This allows the number of stocks at the open which participate in the TICK and other calculations to be higher and causes greater extremes in the TICK calculation.</p>
+
+        <p>We have been monitoring this change and we believe that is a good change since  some users point out that the market statistics calculations that Sierra Chart offers sometimes are different than other services, in particular around  the daily open  of the stock exchange. </p>         
+
+        <p>Although we have consistently shown, that the calculations we have been providing are correct. We have  <a href = "#MarketStatCalculationsComparedToOtherDataServices">written about this extensively</a>. </p>        
+        
+         <p>So in effect, the reason for the change is to make the market statistics more predictive because  we are including actual order activity which will eventually result in trades.   And to reduce the number of questions we receive about the market statistics which actually has been the case.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TICKDifferencesConclusion">Conclusion</h3>
+        <div class="member-link">[<a href="#TICKDifferencesConclusion">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p> Based upon all of the above information, what can be concluded? The Sierra Chart provided TICK market statistics calculations are <em>accurate and reliable</em>.</p>
+
+        <p>You will see differences among all of the different vendors TICK market statistics calculations. </p>
+
+        <p>Do the differences make one better than the other, perhaps with someone's particular view  that might be the case but as we have shown it does not mean that the Sierra Chart calculated TICK is inaccurate.</p>
+
+        <p>Being that the TICK is not a weighted calculation, due to the nature of the calculation and due to some inevitable variations with the underlying stock data it is calculated from,  this only reveals the inconsistent nature of the TICK calculation among data services when comparing it to the underlying stock indexes. </p>
+
+        <p>If you are not satisfied with the Sierra Chart  calculated TICK  market statistics, then perhaps it is more a nature of the TICK calculation in general  which you should examine as a method of your analysis and the reliance that you currently have on it.</p>
+    </section>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="MathematicallyCalculatingUpIssuesAndDownIssuesInTICKStatistic">Mathematically Calculating Up Issues and Down Issues in TICK  Statistic</h2>
+    <div class="member-link">[<a href="#MathematicallyCalculatingUpIssuesAndDownIssuesInTICKStatistic">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>While there are symbols which provide the number of stocks which have traded up and have traded down on the NYSE which are used in the  TICK-NYSE calculation, it is possible to mathematically determine these values.</p>
+
+    <p>We know the current number of stocks which have traded for the  day from the <b>TISS-NYSE</b> symbol. And we also know the current value of <b>TICK-NYSE </b>.</p>
+
+    <p>Let the number of stocks that have traded up be \(u\), and let the number of stocks that have traded down be \(d\). If we know the sum \(S\) and difference \(D\) of these numbers, then we can compute them by solving the following system of equations.</p>
+
+    \(u + d = S\)
+
+    <br>
+
+    \(u - d = D\)
+
+    <p>When solved, this system yields the formulas \(u = \frac{1}{2}(S + D)\) and \(d = \frac{1}{2}(S - D)\).</p>
+
+</section>
+
+<!--
+
+ The following are screen shots of three different time frames on the day for four sets of TICK data:
+
+http://www.sierrachart.com/image.php?l=1447898874946.png
+http://www.sierrachart.com/image.php?l=1447898986338.png
+http://www.sierrachart.com/image.php?l=1447898756250.png
+
+The tick data series are from top to bottom:
+
+* TICK-SP generated by our algo using IQFeed data
+* Actual S&amp;P TICK from IQFeed (symbol JT6T.Z)
+* TICK-SP generated by our algo using Barchart data
+* TICK-SP generated by our algo using Barchart data via a DTC connection
+
+The first chart is using delayed data, so the timestamps are off from the others, but the data is properly lined up in the images.
+
+-->
+<script type="text/javascript" async src="../images/mathjaxb198.js?config=TeX-MML-AM_CHTML"></script>
+
+<hr><p>*Last modified Wednesday, 10th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SCMarketStatistics.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:47 GMT -->
+</html>  

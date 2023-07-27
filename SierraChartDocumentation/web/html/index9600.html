@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ReplayChart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1683462543') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ReplayChart.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Replaying Charts -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index9600.html?page=doc/ReplayChart.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index9600.html?page=doc/ReplayChart.html">Replaying Charts</a></h4> </div>     
+
+<h1 class="PageName">Replaying Charts</h1>
+
+<ul>
+    <li><a href="#Intro">Introduction</a></li>
+    <li><a href="#BasicInstructions">Basic Chart Replay Instructions</a></li>
+    <li><a href="#ReplayingChartFromSpecificDateTime">Replaying Chart from Specific Date-Time</a></li>
+    <li><a href="#NotVisible">Chart Replay Window Not Visible</a></li>
+    <li><a href="#ReplayControl">Replay Control Panel Controls</a></li>
+    <ul>
+        <li><a href="#ReplayControl_Play">Play</a>
+			<ul>
+			    <li><a href="#ReloadingChart">Reloading of Chart</a></li>
+			    <li><a href="#NewBarsDoNotAppear">New Bars Do Not Appear During a Replay</a></li>
+			</ul>
+		</li>
+        <li><a href="#ReplayControl_Pause">Pause</a></li>
+        <li><a href="#ReplayControl_Stop">Stop</a></li>
+        <li><a href="#ReplayControl_Jump">Jump</a>
+			<ul>
+			    <li><a href="#JumpMethod">Method</a></li>
+			    <li><a href="#JumpUnit">Unit</a></li>
+			    <li><a href="#JumpBack">&lt;&lt; Jump Back</a></li>
+			    <li><a href="#JumpForward">&gt;&gt; Jump Forward</a></li>
+			</ul>
+		</li>
+        <li><a href="#ReplayControl_ReplaySpeed">Speed</a></li>
+        <li><a href="#ReplayControl_ChartsToReplay">Charts To Replay</a>
+			<ul>
+			    <li><a href="#SingleChart">Single Chart</a></li>
+			    <li><a href="#AllChartsInChartbook">All Charts in Chartbook</a></li>
+			    <li><a href="#ChartsWithSameLinkNumber">Charts with Same Link Number</a></li>
+			</ul>
+		</li>
+        <li><a href="#ReplayControl_ReplayMode">Replay Mode</a>
+			<ul>
+			    <li><a href="#StandardReplay">Standard Replay</a></li>
+			</ul>
+		</li>
+        <li><a href="#ReplayControl_UseStartDateTime">Use Start Date-Time</a></li>
+        <li><a href="#ReplayControl_SkipEmptyPeriods">Skip Empty Periods</a></li>
+    </ul>
+    <li><a href="#ClearTradeDataOptions">Clear Trade Data Options</a></li>
+    <li><a href="#StartingReplayWithExistingDataInChart">Starting Replay with Existing Data in Chart</a></li>
+    <li><a href="#BidAndAskPricesDuringReplay">Bid and Ask Prices During Replay</a></li>
+    <li><a href="#ReplayingTradeDOM">Replaying Trade DOM Windows</a></li>
+    <li><a href="#ReplayingOfMarketDepthData">Replaying of Market Depth Data</a></li>
+    <ul>
+        <li><a href="#ReplayingOfMarketDepthData_UpdateFrequencyOfReplayedMarketDepthData">Update Frequency of Replayed Market Depth Data</a></li>
+    </ul>
+	<li><a href="#DailySessionValuesDuringReplay">Daily Session Values During Replay</a></li>
+    <li><a href="#AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization">Automatic Skipping of Periods Where There Is No Trading and Synchronization</a></li>
+    <ul>
+        <li><a href="#AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization_PreventingLossOfSynchronizationBetweenDifferentChartsDuringReplay">Preventing Loss of Synchronization Between  Different Charts During Replay</a></li>
+    </ul>
+    <li><a href="#ReplayTrading">Replay and Trading</a></li>
+    <li><a href="#TradePositionQuantityDuringReplayAndJumpingBack">Trade Position Quantity During Replay and Jumping Back</a></li>
+    <li><a href="#HistoricalIntradayDataRecordTimeframeEffect">Historical Intraday Data Record Timeframe Effect on Replays</a></li>
+    <li><a href="#ChartUpdateInterval">Chart Update Interval During Replays</a></li>
+    <li><a href="#ReplayingHigherTimeframeCharts">Replaying Historical Daily and Higher Timeframe Charts</a></li>
+    <li><a href="#SteppingThroughChartBars">Stepping through Chart Bars One by One</a></li>
+    <li><a href="#ReplayNotStartingAtSpecifiedBarOrDateTime">Replay Not Starting at Specified Bar or Date-Time</a></li>
+    <li><a href="#ReplayingNonSimulatedLiveOrderFills">Replaying Non-Simulated / Live Order Fills</a></li>
+    <li><a href="#ImprovingReplayPerformance_EliminatingFreezing">Improving Replay Performance / Eliminating Freezing</a></li>
+    
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Intro">Introduction</h2>
+    <div class="member-link">[<a href="#Intro">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart is well known for its advanced chart replay functionality. When chart replay is used with <a href="indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a>, you have a very powerful trade simulation platform.</p>
+
+    <p>The Chart Replay feature is used to replay <em>Intraday</em> charts. Multiple charts can be replayed at the same time. To access the Chart replay feature, select  <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart</b> on the menu to open the floating control panel.</p>
+    
+    <p>This control panel can be always visible and moved anywhere you like. It contains controls for controlling the replay, allows you to set the jump time, replay speed, and an option to replay all the charts in your Chartbook. Your replay speed can be slower than normal speed or much faster.</p>
+
+    <p>Market Depth data, if available, can also be recorded and replayed.</p>
+
+    <p>The Time and Sales window for the chart will display the individual trades during a chart replay, assuming the data in the chart data file is stored tick by tick. </p>
+
+    <p>Only Intraday data in the Sierra Chart <b>scid</b>  (Sierra Chart Intraday data) file format can be replayed. By default this is the file format that Sierra Chart uses when Intraday data is stored from the integrated Data/Trading services.</p>
+
+    <p>If you have opened an Intraday chart from Intraday data that is in a text format, you first need to <a href="index0cb7.html?page=doc/ImportExport.html" target="_blank" rel="noopener noreferrer">Import</a > it before you can replay it. You should easily be able to import the data, as various text data line formats are supported.</p>
+</section>
+
+<section class="h2">
+    <h2 id="BasicInstructions">Basic Chart Replay Instructions</h2>
+    <div class="member-link">[<a href="#BasicInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+    
+        <li> Open a new chart or go to an existing open chart. For instructions, refer to <a href = "index03a9.html?page=doc/GettingStarted.php#OpenChart">Open Charts</a>. A replay can only be started from a standard   chart. A replay cannot be started from a Trading DOM window which has no scrollbar, and no visible bars loaded.</li>
+        
+        <li>Select  <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart (Control Panel)</b> on the menu. Or press the <b>Rpl</b> <a href="index6736.html?page=doc/ControlBar.php" target="_blank" rel="noopener noreferrer">Control Bar</a> button. 
+        <br> <br>
+        If the Chart Replay window does not appear, then refer to <a href="#NotVisible">Chart Replay Window Not Visible</a>.
+        <br>
+        <br>
+        In the case of a detached chart, you must select <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart (Control Panel)</b> on the detached chart menu so that the Replay Chart window is opened with the detached chart as the owner. Or if the detached chart has a Control Bar,  press the <b>Rpl</b> button on the Control Bar.
+        </li>
+        
+        <li>Important: On the Chart Replay window be sure to <em>uncheck <b>Use Start Date-Time</b></em>  unless you want to specify the starting Date and Time directly on the Chart Replay control panel.         
+                     
+        <div style="text-align: center;"><a href="../images/replaycontrolpanel_startdatetime.png" rel="lightbox"><img src="../images/replaycontrolpanel_startdatetime.png" alt="" class="screenshot" loading="lazy"></a></div>
+        
+        <br> <br>  
+        If you are using <b>Use Start Date-Time</b>, then skip the next step.  However, in this case it is essential that you ensure that the first Date-Time you want to replay is actually in the chart. Go to the beginning of the chart with  <b class="menu_item">Chart &gt;&gt; Goto Beginning of Chart</b> and look at the first Date-Time in the chart. You can tell by looking at the timescale at the bottom.  To load more data in the chart, refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DownloadingViewingMoreHistoricalIntradayData" target="_blank" rel="noopener noreferrer">Downloading/Viewing More Historical Intraday Data</a>.
+         <br> <br>
+        <span class="GeneralBackgroundHighlight"> If you are starting a replay at a Date-Time which is not in the chart, then there is going to be unexpected behavior with the replay.</span>
+        </li>
+
+        <li>Scroll the chart back to where you want to begin the replay. Use the scroll bar at the bottom of the chart to scroll the chart back. You can also press the <b>Home</b> key on the keyboard to go to the beginning of the chart. Refer to the image below.
+            <br> <br>
+            If you cannot scroll back to the point in time where you wish to begin the replay, then  select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> and increase the <b>Days to Load</b>. Press <b>OK</b> to close the <b>Chart Settings</b> window.  Also, increase the chart bar spacing by pressing the Up Arrow key on your keyboard.
+            <br> <br>
+            If you wish to replay data from an earlier date than what is shown in the <b>Date Range in File</b> box, then refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DownloadingViewingMoreHistoricalIntradayData" target="_blank" rel="noopener noreferrer">Downloading/Viewing More Historical Intraday Data</a> to access more historical Intraday data.</li>
+
+        <li>Set the <b>Speed</b> to what you want to use. If this is your first time with a replay, try running at about 30 or 60 times in order for it to be more obvious a replay is occurring.</li>
+        
+         <li> Set the <a href = "#ReplayControl_ChartsToReplay"  >Charts to  Replay</a> setting to the particular charts you want to replay. If you are just getting started with chart replay, we recommend using just  <b>Single Chart</b>.  </li>
+
+        <li>Press the <b>Play</b> button to start the replay.</li>
+        
+        
+        <li>You will receive a prompt named <a href="#ClearTradeDataOptions">Clear Trade Data </a>. Choose the appropriate option.             
+        </li>
+        
+        
+        
+        <li> In this image, you can see the indicators which indicate that a chart is replaying:
+            <div style="text-align: center;">
+                <a href="../images/chartreplayindicator.png" rel="lightbox"><img src="../images/chartreplayindicator.png" class="screenshot" loading="lazy" width="500" alt=""></a>
+            </div>     
+       </li>   
+        
+        <li>If you do not see the chart advancing to the next bar when you expect it should, there can be two possibilities. The first step is to increase the replay <b>Speed</b> because it is not fast enough. Try increasing the <b>Speed</b> to 120. If that speed does not cause new chart bars to appear, increase the <b>Speed</b> to 1440 for the purpose of confirming the replay functionality is working, and to advance to a point in time where there is data.</li>
+        
+        <li>  In the rare case, there is missing data in the chart or out of order data which is impacting the  replay, re-download all the data in the chart by going to the chart and selecting <b class="menu_item">Edit  &gt;&gt; Delete All Data and Download</b>.   You just need to do this once on any chart for the symbol being replayed. </li>
+
+        
+       <li>The next step is to enable <b>Skip Empty Periods</b> on the Chart Replay window. For more information about this setting, refer to <a href="#AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization">Automatic Skipping of Periods Where There Is No Trading and Synchronization</a>. 
+       <br> <br>
+       Even with this option enabled, you may still have to wait up to about 65 seconds for the next bar to appear based upon the replay Speed you are using, the <b>Intraday Data Storage Time Unit</b> setting, and whether or not trading has occurred at the point in time in the chart you are replaying. For some additional information about this, refer to <a href="#HistoricalIntradayDataRecordTimeframeEffect">Historical Intraday Data Record Timeframe Effect on Replays</a>.</li>
+    </ol>
+
+    <div style="text-align: center;"><a href="../images/replayinstructions.png" rel="lightbox"><img src="../images/replayinstructions.png" class="screenshot" loading="lazy" alt="" width="550"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayingChartFromSpecificDateTime">Replaying Chart from Specific Date-Time</h2>
+    <div class="member-link">[<a href="#ReplayingChartFromSpecificDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To   replay from a specific Date-Time  in the chart, follow the instructions below.</p>
+    
+    
+    <ol>
+        <li> Open a new chart or go to an existing open chart. For instructions, refer to <a href = "index03a9.html?page=doc/GettingStarted.php#OpenChart">Open Charts</a>. A replay can only be started from a standard chart. A replay cannot be started from a Trading DOM window which has no scrollbar, and no visible bars loaded.</li>
+        
+        <li>Select  <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart (Control Panel)</b> on the menu. Or press the <b>Rpl</b> <a href="index6736.html?page=doc/ControlBar.php" target="_blank" rel="noopener noreferrer">Control Bar</a> button. </li>
+        
+        <li>On the Replay control panel, enable the <a href = "#ReplayControl_UseStartDateTime
+            ">Use Start Date-Time</a> option.
+        <div style="text-align: center;"><a href="../images/replaycontrolpanel_startdatetime.png" rel="lightbox"><img src="../images/replaycontrolpanel_startdatetime.png" alt="" class="screenshot" loading="lazy"></a></div>
+        </li>
+       
+       <li>  In the <b>Date</b>  and <b> Time</b> boxes, enter the starting   Date and  Time for the replay in the time zone of the chart. 
+       <br> <br>
+       You need to enter a Date-Time, which is not earlier than the first Date-Time in the chart. Select <b class="menu_item">Chart &gt;&gt; Goto Beginning of Chart</b> and look at the first Date-Time in the chart. You can tell by looking at the timescale at the bottom.  To load more data in the chart, refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DownloadingViewingMoreHistoricalIntradayData" target="_blank" rel="noopener noreferrer">Downloading/Viewing More Historical Intraday Data</a>.</li>
+       
+        <li>Set the <b>Speed</b> to what you want to use. If this is your first time with a replay, try running at about 30 or 60 times in order for it to be more obvious a replay is occurring.</li>
+        
+         <li> Set the <a href = "#ReplayControl_ChartsToReplay"  >Charts to  Replay</a> setting to the particular charts you want to replay. If you are just getting started with chart replay, we recommend using just  <b>Single Chart</b>.  </li>
+
+        <li>Press the <b>Play</b> button to start the replay.</li>
+        <li>For further details, refer to <a href="#BasicInstructions">Basic Chart Replay Instructions</a>.</li>
+    </ol>
+   
+</section>
+
+
+<section class="h2">
+    <h2 id="NotVisible">Chart Replay Window Not Visible</h2>
+    <div class="member-link">[<a href="#NotVisible">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the Replay Control Panel window does not appear at all when you select <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart</b>, then select <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Reset Replay Control Panel Window</b> to reset it back to its default position.</p>
+    
+    <p>After selecting this command, select <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart</b> to display it again.</p>
+    
+     <p>  If you are not able to display the replay control panel  by using the configured keyboard shortcut, then the  check the  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Keyboard Shortcuts</a> to see if it is assigned to something else in Sierra Chart. </p>
+
+
+     <p>  Additionally a keyboard shortcut may not work because at the Operating System level  the keyboard shortcut  may be getting captured and not picked up by Sierra Chart. </p>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayControl">Replay Control Panel Controls</h2>
+    <div class="member-link">[<a href="#ReplayControl">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/replaywindow.png" rel="lightbox"><img src="../images/replaywindow.png" class="MediumFloatRight" alt=""></a>
+
+    <p>All replay functionality is accessed through the Replay Control Panel window. Each of the controls on this window are documented in this section.</p>
+    
+    <p>The Replay Control Panel window can be opened by selecting  <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart</b> on the menu, by pressing the <b>Ctrl-R</b> keyboard shortcut or by pressing the <b>Rpl</b> Control Bar button.</p>
+
+    <p>The ability to <b>Play/Pause</b> and <b>Stop</b> the Replay is also available from the <b class="menu_item">Chart &gt;&gt; Replay Chart</b> menu. If the Chart Replay Window is closed when when of these options is selected, then the Chart Replay Window will be displayed.</p>
+
+    <p><b>Partially Visible Replay Control Panel:</b> If the Replay Control Panel window does not appear at all or some of its controls are partially cut off, then refer to <a href="#NotVisible">Chart Replay Window Not Visible</a>.</p>
+
+    <section class="h3">
+        <h3 id="ReplayControl_Play">Play</h3>
+        <div class="member-link">[<a href="#ReplayControl_Play">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>This button begins or resumes a replay on the active chart. When starting a replay, the first step is to <em>scroll your chart back</em> so that the bar you want to begin the replay at, is the last bar in view on the chart. Press the <b>Play</b> button to begin the replay. When the <b>Charts to Replay</b> option is set to <b>All Charts in Chartbook</b>, then this plays all Intraday charts in the active Chartbook.</p>
+
+
+        <section class="h4">
+            <h4 id="ReloadingChart">Reloading of Chart</h4>
+            <div class="member-link">[<a href="#ReloadingChart">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>When starting a replay or jumping back in time, keep in mind that the chart needs to be <em>reloaded</em>, which can be time-consuming, and therefore it is important that you set the <b>Days to Load</b> to the minimum number of days possible in <b class="menu_item">Chart &gt;&gt;  Chart Settings</b>.</p>
+            
+            <p>If you need to replay data that is far back in time and want to load a minimum number of days, then set the <b>Use Date Range &gt;&gt; From</b> and <b>Use Date Range &gt;&gt; To</b> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> to the date range that you want to replay. The date format is: <b>YYYY-MM-DD</b>.
+            </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="NewBarsDoNotAppear">New Bars Do Not Appear During a Replay</h4>
+            <div class="member-link">[<a href="#NewBarsDoNotAppear">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> When you start a replay and new bars do not appear, then this can be for two possible reasons:</p>
+            
+            <p>1. You are running a replay at too slow of a speed, <b>Speed = 1.0</b> (equivalent to real-time), and the underlying data in the data file has a high timeframe per record such as 1 Minute. Therefore, you would only see a new bar appear every minute assuming there is some trading activity every minute. Increase the replay <b>Speed</b> in this case.</p>
+            
+            <p>2. There is infrequent trading activity at the time you are performing a replay. When you perform a replay at a time in the chart where there has been minimal trading going on, then bars will be appearing infrequently. This is especially true if you are replaying at a slow replay Speed.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_Pause">Pause</h3>
+        <div class="member-link">[<a href="#ReplayControl_Pause">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>After beginning a replay, the <b>Play</b> button becomes the <b>Pause</b> button.  This button pauses a replay on the active chart.</p>
+        
+        <p>When <b>All  Charts in Chartbook</b> is selected, this pauses a replay for all charts in the Chartbook that are being replayed.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_Stop">Stop</h3>
+        <div class="member-link">[<a href="#ReplayControl_Stop">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>When a replay is running or is paused, the <b>Stop</b> button becomes enabled.</p>
+        
+        <p>Press the <b>Stop</b> button to stop the chart replay. When stopping a replay, the chart data is reloaded in the chart up until the most recent time in the Intraday data file.</p>
+        
+        <p>When a Chartbook is closed, the replay is also stopped on all charts within that Chartbook.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_Jump">Jump</h3>
+        <div class="member-link">[<a href="#ReplayControl_Jump">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section of the Replay Window is used to jump forward or backward in time. There are different methods available for the amount to jump by along with the quantity associated with the movement.</p>
+
+        <section class="h4">
+            <h4 id="JumpMethod">Method</h4>
+            <div class="member-link">[<a href="#JumpMethod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This section defines the specific method that is used to move forward or backward in time. The following options are available:</p>
+
+            <ul>
+                <li><b>By Time (hh:mm:ss.ms)</b>: The amount to jump forward or backward is defined by an amount of time in hours (hh), minutes (mm), seconds (ss), and milliseconds (ms) from the current position.</li>
+                
+                <li><b>By Number of Trades</b>: The amount to jump forward is defined by a number of trades that has occurred from the current position.</li>
+               
+               <li><b>To Next Bar</b>: The amount to jump forward is defined as the next bar from the current position. This effectively ends the replay of the current bar, displays the full bar information for the current bar and then begins the replay at the next time period in the chart.</li>
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="JumpUnit">Unit</h4>
+            <div class="member-link">[<a href="#JumpUnit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This value defines the amount that will be skipped in the replay when selecting the <b>&lt;&lt;</b> (Jump Back) or <b>&gt;&gt;</b> (Jump Forward) button.</p>
+
+            <p>The entry of the unit changes depending on the setting of the <b>Method</b>. When <b>Method</b> is set to <b>By Time</b> then the <b>Unit</b> values are entered in the form <b>hh:mm:ss.ms</b> where h=hours, m=minutes, s=seconds, and ms=milliseconds. When <b>Method</b> is set to <b>By Number of Trades</b> then the <b>Unit</b> values are entered as integers for the number of trades.</p>
+            
+            
+            <p> It is important to understand that you cannot specify hours as 24 or Minutes as 60 or Seconds as 60.  24 hours would need to be specified as   <em>23:59:59.999</em>. 60 minutes would be specified as <em>1:00:00.000</em>. 1 minute would be specified as  <em>00:01:00.000</em>. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="JumpBack">&lt;&lt; (Jump Back)</h4>
+            <div class="member-link">[<a href="#JumpBack">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the jump back button. It jumps the replay back by the amount specified in the <b>Unit</b> edit box on the Replay Control Panel. When you use this jump button, the chart is reloaded to the last time displayed in the replay of the chart minus the jump amount. </p>
+            
+             <p>It is only supported jump back by time or to the prior bar, and not by the Number of Trades.</p>
+             
+             <p>If the location to jump to does not exist in the data file then no jump will occur or the jump may not go to the exact time desired. If you want to be able to jump to any time, then enable <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Include Columns with no Data</b>.</p>
+
+
+            <p>To reduce the amount of time to reload the chart when jumping, select <b>Chart &gt;&gt; Chart Settings</b>. Reduce the <b>Days to Load</b> setting to a smaller number.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="JumpForward">&gt;&gt; (Jump Forward)</h4>
+            <div class="member-link">[<a href="#JumpForward">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the jump forward button. It jumps the replay forward by the amount specified in the <b>Unit</b> edit box on the Replay Control Panel. When you use this jump button, the chart is loaded to the last time displayed in the replay of the chart plus the jump amount. </p>
+            
+            <p>If the location to jump to does not exist in the data file, then no jump will occur or the jump may not go to the exact time desired. If you want to be able to jump to any time, then enable <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Bar Period &gt;&gt; Include Columns with no Data</b>.</p>
+            
+            <p>If you have paused one or more charts being replayed, and then you use the  <b>&gt;&gt; (Jump Forward)</b> button  to step through them, the charts will momentarily <em>play</em> to do the jump.  They will go back into a paused state  after the jump is completed. Do not try to pause them during this condition because this can  inadvertently  affect the state of other charts if you are replaying multiple charts.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_ReplaySpeed">Speed</h3>
+        <div class="member-link">[<a href="#ReplayControl_ReplaySpeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This control displays and sets the Replay Speed. A value of <b>1</b> means the chart will be replayed at normal speed. Normal speed is equivalent to the speed at which a chart will update when it is updating in real time. A value of <b>.5</b> means the chart will be replayed at half speed. A value of <b>2</b> means the chart will be replayed at twice the normal speed. Use any replay speed up to 100000. <em>Do not enter</em> a comma with the speed number.</p>
+
+        <p>The speed can be changed at any time. If a replay is running and the speed is changed, the replay will update to the new speed automatically.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_ChartsToReplay">Charts to Replay</h3>
+        <div class="member-link">[<a href="#ReplayControl_ChartsToReplay">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <div style="text-align: center;"><a href="../images/replayallcharts.png" rel="lightbox"><img src="../images/replayallcharts.png" alt="" class="screenshot" loading="lazy" width="550" ></a></div>
+        
+        <section class="h4">
+            <h4 id= "SingleChart">Single Chart</h4>
+            <div class="member-link">[<a href="#SingleChart">Link</a>] - [<a href="#top">Top</a>]</div>
+            <p>This option replays the single active chart.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id= "AllChartsInChartbook">All Charts in Chartbook</h4>
+            <div class="member-link">[<a href="#AllChartsInChartbook">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+            <p>If you want to replay multiple charts or Trade DOM charts at the same time, select the <b>All Charts in Chartbook</b> option.</p>
+            
+            <p>This will cause <b>Play</b>, <b>Pause</b>, <b>&lt;&lt;</b>, <b>&gt;&gt;</b> and <b>Stop</b> to affect all the Intraday charts and Trade DOMs (which are also chart objects) in the same Chartbook where the chart you are controlling the replay from is located.</p>
+
+            <p>When you are replaying multiple charts by using <b>Charts to Replay &gt;&gt; All Charts in Chartbook</b>, they will remain synchronized. However, synchronization potentially can be lost and is explained in the <a href="#AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization">Automatic Skipping of Periods Where There Is No Trading and Synchronization</a> section.</p>
+
+            <p><b class="GeneralBackgroundHighlight">Days to Load Setting:</b> When replaying multiple Intraday charts with the <b>Charts to Replay &gt;&gt; All Charts in Chartbook </b> option, you will <em>need</em> to make sure the <b>Use Number of Days to Load &gt;&gt; Days to Load</b> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> for any other charts being replayed, is set to the <em>same or greater</em> value than the chart you are controlling the replay from.</p>
+
+            <p>For example, if in the current chart you are controlling the replay from, you have <b>Days to Load</b> set to <em>20</em> days and you are starting a replay from the beginning of the chart, then you need to make certain the other charts and Trade DOM windows in the same Chartbook also have <b>Days to Load</b> set to 20 or higher. This is especially true for the <b>Trade DOM</b> charts (<b class="menu_item">File &gt;&gt; Open Trading DOM</b>), in case you want to do simulated trading with a <b>Trade DOM</b>.</p>
+
+            <p>By default Trade DOMs only load 1 day. Additionally, the <b>Session Times</b> in Chart Settings should be identical for all the charts or they should be set to 00:00:00 to 23:59:59. Otherwise, the replay may not run in the other charts at certain times and you may also have synchronization issues.</p>
+            
+            <p> Charts from other  Chartbooks which have been made visible through  <b class="menu_item">Window &gt;&gt; Window Always Window</b> will not be replayed. </p>
+        </section>
+        
+        <section class="h4">
+            <h4 id= "ChartsWithSameLinkNumber">Charts with Same Link Number</h4>
+            <div class="member-link">[<a href="#ChartsWithSameLinkNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+            <p>This option will replay charts with the same chart <a href="index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Link Number</a> which are in the same Chartbook.</p>
+
+            <p>When starting a replay using this option you must have one of the charts active that has the same Link Number of the charts that you want to replay. Otherwise, just the active chart will replay.</p>
+
+            <p>If the expected charts do not replay, then make sure they have the same Link Number, and they are all in the same Chartbook.  When determining  if the charts are in the same Chartbook, keep in mind they could be from another Chartbook if the <a href="indexc5fd.html?page=doc/WindowMenu.html#WindowAlwaysVisible">Window &gt;&gt; Window Always Visible</a> command is enabled.</p>
+            
+            <p> This option is ignored if the chart you are starting the replay from has its   <a href = "index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Link Number</a> set to None or 0. </p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_ReplayMode">Replay Mode</h3>
+        <div class="member-link">[<a href="#ReplayControl_ReplayMode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/replay-replaymode.png" rel="lightbox"><img class="WideFloatRight" alt="" src="../images/replay-replaymode.png"></a>
+
+        <p>There are three possible settings for the Replay Mode. They are described below.</p>
+        
+        <p> The Replay Mode can only be set when a replay is started from a completely stopped state. Any changes to this setting after the replay is started, do not go into effect. </p>
+
+        <section class="h4">
+            <h4 id= "StandardReplay">Standard Replay</h4>
+            <div class="member-link">[<a href="#StandardReplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Use <b>Standard Replay</b> when <em>not</em> performing back testing of an automated trading system and only performing an ordinary chart replay. This will provide the fastest and most efficient replay. There is no reason to use <b>Accurate Trading System Back Test Mode</b>. It is less efficient and only designed for automated trade system back testing.</p>
+
+            <p>The Time and Sales window for the chart that is being replayed is supported during a replay and will display trades as they occur. The Time and Sales window will accurately display the true historical trades if the Intraday data file contains tick by tick data. Otherwise, there will be one trade each displayed for each of the Open, High, Low, Close values of the underlying data records in the Intraday data file.</p>           
+
+
+            <h4>Calculate Same as Real Time</h4>
+
+            <p> This mode performs  a calculation for the studies after the amount of time that elapses during the replay is equal to the  <a href = "index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval">Chart Update Interval</a>.</p>
+
+
+            <h4>Accurate Trading System Back Test Mode</h4>
+
+            <p>If you are performing a replay based back test of an automated trading system when using the <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet System for Trading</a> study or an Advanced Custom Study that uses the <a href="index2bf5.html?page=doc/ACSILTrading.html">ACSIL Trading</a> functions, then you need to set the Replay Mode to <b>Accurate Trading System Back Test Mode</b>.</p> 
+            
+            <p>When you use <b>Accurate Trading System Back Test Mode</b>, the study functions on the chart are going to be called/calculated whenever the High, Low, or Last prices of the latest bar currently loaded into the chart change or there is a new bar added to the chart during the processing of the underlying data records in the Intraday chart data file. This provides a combination of accuracy and efficiency. It will give a <em>consistent</em> result every time you perform a back test of your trading system.</p>
+  
+            <p> If there is a change with the Bid or Ask prices, which are stored with 1 Tick Intraday data, but the High, Low, Last trade prices of the last bar in the chart do not change or there are no new bars added to the chart, the studies on the chart will <em>not</em> be calculated.</p> 
+            
+            <p>Although, any working Simulated orders can still be <a href="indexad24.html?page=doc/TradeSimulation.php#HowOrdersAreFilled">filled</a> from these Bid and Ask prices as they are processed from the Intraday data file. An ACSIL study can be aware of all of the  Bid and Ask price changes by using the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetTimeAndSales">sc.GetTimeAndSalesData</a> function the next time the study function is called.</p>
+
+            <p>When you have enabled <b>Charts to Replay &gt;&gt; All Charts in Chartbook | Charts with Same Link Number </b> and you are using <b>Accurate Trading System Back Test Mode</b>, then in this case there is a <em>multiple chart synchronized replay</em> being performed.</p>  
+                        
+            <p> When there is a multiple chart synchronized replay, the studies are <em> called/calculated</em> whenever the High, Low, or Last prices of the current bar changes or there is a new bar added to the chart during the processing of the data records in the Intraday chart data file.  This ensures consistency with  multiple chart back tests no matter what the replay speed is.</p>
+
+            <p>It needs to be noted, that back testing does not give results which will be exactly what you receive in real-time. This is not possible for various reasons. The actual bid and ask prices are not known and it is not known where in the order queue your order exists. There can be other factors as well.</p> 
+
+            <p>When using <b>Accurate Trading System Back Test Mode</b>, Filled and Canceled orders will be removed from the Trade Orders list, so it does not become full of too many orders and slow down processing.</p>
+            
+            <p>When using <b>Accurate Trading System Back Test Mode</b>, momentary freezing of the Sierra Chart user interface is not unusual because there is a large amount of processing done before the thread processing that data yields back to the user interface of Sierra Chart.</p>
+            
+            <p>When there is a <em>multiple chart</em> synchronized replay,  the amount  of time  of data which is processed in each chart at a time, is prompted for when the replay is started during a multiple chart synchronized replay  with the <b>Enter Processing Step in Seconds</b> prompt.  This also applies when using the <b>Calculate at Every Tick/Trade</b>   Replay Mode.  Therefore, if you use a processing step of 5 seconds, then  5 seconds of trades will be processed at once before the next chart is processed.</p>
+            
+
+            <h4>Calculate at Every Tick/Trade</h4>
+            
+            <p>When using <b>Calculate at Every Tick/Trade</b>, this is identical to the <b>Accurate Trading System Back Test Mode</b> Replay Mode, except that the study functions on the chart are going to be called/calculated for each data record in the Intraday data file. Therefore, when using tick by tick intraday data this is a very high accuracy, but inefficient, Back Test.</p>
+            
+            <p>In the case where an Intraday data record has a timeframe of greater than 1  Tick/Trade, and you need to be aware of when this is the case, then there will be price and volume data consisting of more than one  Tick  added to the chart bars before the study function is called. </p>
+            
+            <p>All of the other information in the <b>Accurate Trading System Back Test Mode</b> section applies to this Replay Mode as well.</p>
+            
+            
+            <p> When multiple charts are being replayed when using  <b>Calculate at Every Tick/Trade</b>  and you are prompted for the <b>Processing Step In Seconds</b> even though there is a calculation at every tick, there still are multiple ticks processed per chart for the specified time increment in seconds before going onto the next chart to be calculated.  </p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_UseStartDateTime">Use Start Date-Time</h3>
+        <div class="member-link">[<a href="#ReplayControl_UseStartDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Use Start Date-Time</b> checkbox allows the entry of a specific Date and Time to be entered as the beginning point of the Replay. When this checkbox is enabled, the following items become available:</p>
+        <ul>
+            <li><b>Date (YYYY/MM/DD)</b>: Enter the date for the start of the replay. The date is entered in the form <b>YYYY/MM/DD</b> where YYYY is the four digit Year, MM is the two digit month Month, and DD is two digit day. For example - <b>2017/09/23</b>.</li>
+            <li><b>Time</b>: Enter the time for the start of the replay. The time is entered in the form <b>hh:mm:ss</b> where hh is hours in the 24 hour format, mm is minutes, and ss is seconds. For example - <b>14:27:00</b>.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReplayControl_SkipEmptyPeriods">Skip Empty Periods</h3>
+        <div class="member-link">[<a href="#ReplayControl_SkipEmptyPeriods">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, the replay will automatically skip over any period in time in which there is a gap of <em>65 seconds or more</em>. For more information, refer to the <a href="#AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization">Automatic Skipping of Periods Where There is No Trading and Synchronization</a> section.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ClearTradeDataOptions">Clear Trade Data Options</h2>
+    <div class="member-link">[<a href="#ClearTradeDataOptions">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>When starting a chart replay from a stopped state,   <em>not a paused state</em>, you will receive  a list of options for clearing trade data for the Symbol and Trade Account of the chart.    </p>
+     
+      <p>This data includes Trade  Activity Data,  open and  finished orders, and the  Trade Position data.   </p>
+     
+     <p>The purpose of clearing this data, is so that if a replay is being done for the purpose of trading,   the data related to prior trades is removed so that the new trades do not get mixed in with the old trades.  </p>
+    
+     <p>If you want to maintain the existing trades from a prior back test, then before starting the replay,  <a href = "index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">change the Trade Account</a>  on the Trade Window to a different account  for the next replay to avoid conflicting  trading data.</p>
+     
+     <p> The descriptions of each of the different options for clearing  trading related data, are given below. </p>
+ 
+    <ul>
+        <li><b>Do Not Clear Trade Data for Symbol and Account</b>: When choosing this option, there is no clearing of the trading data for the symbol and Trade account of the chart.  Any new trade submitted during the replay, will be added in with any existing trading data  for the Symbol and Trade Account of the chart.</li>
+
+		<li><b>Clear All Trade Data for Symbol and Account</b>: When choosing this option,  all prior trading data for the Symbol and Trade Account is cleared. </li>
+
+		<li><b>Clear Trade Data from Start Date-Time for Symbol and Account</b>:  When choosing this option,  trading data for the Symbol and Trade Account is cleared from the starting Date-Time of the replay.  When this type of operation is performed, it is performed asynchronously and  takes some time for it to complete. Normally this is going to be less than one  second. It should be very fast.  So therefore, before actually trading in the chart, it is necessary for this operation to complete. So the chart is placed into a Paused state when you start a replay.
+         <br> <br>
+           To resume the replay simply press the  <b>Play</b> button on the Replay window. If you do not want to have the replay paused, then do not use this option.
+        </li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="StartingReplayWithExistingDataInChart">Starting Replay with Existing Data in Chart</h2>
+    <div class="member-link">[<a href="#StartingReplayWithExistingDataInChart">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Follow the instructions below to start a replay with existing data in the chart.  These instructions assume that you are using the <a href="#ReplayingChartFromSpecificDateTime">Replaying Chart from Specific Date-Time</a>.</p>
+    
+    <ol>
+        <li>Select  <b class="menu_item">Chart  &gt;&gt; Chart Settings  &gt;&gt; Data Limiting</b>.</li>
+        
+        <li>  Set the  <b>Days to Load for Intraday Chart Data Type</b> to the number of days  which will sufficiently  go back further in time before   the Date-Time you are starting the replay at.</li> 
+        <li>    Start the replay according to the <a href="#ReplayingChartFromSpecificDateTime">Replaying Chart from Specific Date-Time</a> instructions.</li> 
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="BidAndAskPricesDuringReplay">Bid and Ask Prices During Replay</h2>
+    <div class="member-link">[<a href="#BidAndAskPricesDuringReplay">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> During a chart replay, the Bid and Ask prices displayed and ced or actual.d in the chart, can either be estimated or actual.  For more information about this, refer to <a href = "indexad24.html?page=doc/TradeSimulation.php#TradeSimulationBidAskPrices">Trade Simulation Accuracy and Bid/Ask Prices During Replays</a>. </p>
+     
+    <p> To always use  simulated  Bid and  Ask prices, enable the <a href = "index4cf4.html?page=doc/ChartSettings.html#AlwaysSimulateBidAndAskPricesDuringReplay">Always Simulate Bid and Ask Prices During Replay (Chart &gt;&gt; Chart Settings &gt;&gt; Trading)</a> Chart Setting.</p>
+     
+     <p> Whether the actual or simulated Bid and Ask prices are used,  the Bid Size and Ask Size values will always be 1  within the chart during a replay. However,  if  <a href = "#ReplayingOfMarketDepthData">market depth data is being replayed</a>, then the qnantities for each of the market depth levels in the market depth data, will contain the actual quantities and not just 1.  However, this still will not affect the best Bid and Ask sizes that are displayed in the   <b class="menu_item">Window &gt;&gt; Current Quote Window</b>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ReplayingTradeDOM">Replaying Trade DOM Windows</h2>
+    <div class="member-link">[<a href="#ReplayingTradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To replay data through a Trade DOM, follow these instructions:</p>
+
+    <ol>
+        <li>Open a Trade DOM through <b class="menu_item">File &gt;&gt; Find Symbol</b> if you do not have one open already.</li>
+
+        <li>On the Trade DOM window, select <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</li>
+        <li> Select the  <b>Data Limiting</b> tab.</li>
+        
+        <li> Set the <b>Load Data Limiting Method: Days to Load &gt;&gt; Days to Load for Intraday Chart Data Type</b>, to the number of days back from today that the replay will be started at. This is <em>essential</em>. It is best to set this too high rather than too low. However, not too high.</li>
+        
+        <li>Select the  <b>Session Times</b> tab. </li>
+        
+        <li> The  <a href = "index4cf4.html?page=doc/ChartSettings.html#TimeZone">Time Zone</a> setting  <em>must match</em> the Time Zone setting in the chart the replay will be started from.  This is <em>essential</em>.</li>
+        
+        <li>If the chart you will be starting the replay from has the <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" target="_blank" rel="noopener noreferrer">Continuous Futures Contract</a> option enabled and it has an identical Symbol to the Trade DOM, then it is <em>necessary</em> to set the <b>Symbol &gt;&gt; Continuous Contract</b>  setting on the Trade DOM to be the same as the chart you will be starting the replay from.</li>
+
+        <li>Press  <b>OK</b> to close the <b>Chart Settings</b> window for the  Trade DOM.</li>
+       
+       <li>  It is most reliable to start the replay from a standard chart and control the Trade DOM replay from there.  Therefore, open or go to the chart you will be starting the replay from. This needs to be a standard chart.</li>
+
+
+        <li> Select <b class="menu_item">Chart &gt;&gt;  Replay Chart &gt;&gt; Replay Chart</b> to open the Chart Replay window.</li>
+
+        <li>On the Chart Replay window, select the <b>Charts to Replay &gt;&gt; All Charts in Chartbook</b> option.</li>
+
+        <li>Start a replay <em>from that specific chart</em> following the <a href="#BasicInstructions">Basic Instructions</a>.</li>
+        
+        <li>You need to <em>disable</em> <b>Skip Empty Periods</b> on the Chart Replay window to prevent any loss of synchronization between the Trading DOM and the associated chart.</li>
+
+        <li>For additional information, refer to the <a href="#AllChartsInChartbook">Charts to Replay &gt;&gt; All Charts in Chartbook</a> section.</li>
+        
+        
+        <li>  If you want to also replay market depth data, then follow the   <a href = "indexbec8.html?page=doc/StudiesReference.php&amp;ID=375&amp;Name=Market_Depth_Historical_Graph#DownloadingOfHistoricalMarketDepthData">Downloading of Historical Market Depth Data</li> instructions.
+         <br> <br>
+         Wait for the historical market depth data to complete, before starting the chart replay. You can check the progress in <b class="menu_item">Window &gt;&gt; Message Log</b>.  Example:
+          <br> <br>
+         HD Request # 73 | Market depth data download  <b>complete</b> for MESM23_FUT_CME. Unique request ID: 73 |  (Date-Time)
+
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayingOfMarketDepthData">Replaying of Market Depth Data</h2>
+    <div class="member-link">[<a href="#ReplayingOfMarketDepthData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to be able to replay <a href = "index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow">market depth</a> data or include market depth data during chart replay.</p>
+    
+    <ol>
+        <li>The first step is for there to be historical market depth data available for the time period being replayed. </li>
+        
+        <li>You will have historical market depth data when using the <a href="index0cc3.html?page=doc/StudiesReference.php&amp;ID=375#Market_Depth_Historical_Graph" target="_blank" rel="noopener noreferrer">Market Depth Historical Graph</a> study. </li>
+        
+        <li> You can also download historical market depth data by following the  <a href = "indexbec8.html?page=doc/StudiesReference.php&amp;ID=375&amp;Name=Market_Depth_Historical_Graph#DownloadingOfHistoricalMarketDepthData">Downloading of Historical Market Depth Data</a> instructions. 
+         <br> <br>
+        The downloading of historical market depth data is only supported with certain exchanges (CME, CBOT, NYMEX, COMEX, EUREX, CFE, NYSE, NASDAQ, AMEX)  and only when using the Denali Exchange Data Feed or the Delayed Exchange Data Feed.  It is not supported with other data feeds.
+        </li>
+
+        <li>To replay a chart follow the <a href="#BasicInstructions">Basic Chart Replay Instructions</a>.</li>
+        
+        <li>Select <b class="menu_item">File &gt;&gt; Open Market Depth Window</b> to see the recorded market depth data. Only Date-Times in the chart where market depth data is available will show market depth data.</li>
+        
+        <li>Other features within a chart which depend upon market depth data, will display the stored market depth data.</li>
+        
+        <li>If you do not see any market depth data during the replay or you only see it at certain times, then verify that there is market depth data available for the particular Date-Time range being replayed.
+            <br> <br>
+            To do this, add the <a href = "indexbec8.html?page=doc/StudiesReference.php&amp;ID=375&amp;Name=Market_Depth_Historical_Graph">Market Depth  Historical Graph</a> study to the chart. This will let you visually  see the market depth data at each chart bar.
+        </li>
+
+        <li>Also refer to <a href = "indexbec8.html?page=doc/StudiesReference.php&amp;ID=375&amp;Name=Market_Depth_Historical_Graph#MarketDepthHistoricalGraphNotDisplaying">Market Depth Historical Graph Not Displaying</a>.</li>
+    </ol>
+    
+    
+    <section class="h3">
+        <h3 id="ReplayingOfMarketDepthData_UpdateFrequencyOfReplayedMarketDepthData">Update Frequency of Replayed Market Depth Data</h3>
+        <div class="member-link">[<a href="#ReplayingOfMarketDepthData_UpdateFrequencyOfReplayedMarketDepthData">Link</a>] - [<a href="#top">Top</a>]</div>    
+   
+        <p>A full snapshot of market depth is recorded once every 10 minutes. At the time you start a replay which includes market depth data, you will not necessarily see all of the market depth levels at that moment. It can take a few seconds or a minute or so to for them to fill in.  Although the levels which are displayed are 100% accurate. </p>
+    </section>
+     
+</section>
+
+
+<section class="h2">
+    <h2 ID="DailySessionValuesDuringReplay">Daily Session Values During Replay</h2>
+    <div class="member-link">[<a href="#DailySessionValuesDuringReplay">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>  During a chart  replay, the daily session values displayed in  <b class="menu_item">Window &gt;&gt; Current Quote Window</b> will be based upon the  price movement of the symbol  in the chart being replayed, from the start of the replay, to the current replay time.    </p>
+     
+      <p>Therefore, the  Daily High, Daily Low, Daily Volume and other values will be based upon  prices and volume encountered from the start of the replay to the current replay time. </p>
+    
+</section>
+
+<section class="h2">
+    <h2 ID="AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization">Automatic Skipping of Periods Where There Is No Trading and Synchronization</h2>
+    <div class="member-link">[<a href="#AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>During a chart replay of an Intraday chart, the replay simulates real-time updating and is also affected by the <b>Replay Speed</b>.</p>
+
+    <p>What this means is that when the Replay Speed is 1, then trading that occurred over a 1 minute period will take 1 minute to replay. When the Replay Speed is increased to 2, then it will take 30 seconds to replay 1 minute of trading.</p> 
+
+    <p>It is important to be aware, that when periods of <em>no trading</em> are encountered in the Intraday chart, that the replay will pause until the replay time, which is affected by the replay speed, catches up to new data with a time equal to or less than the replay time.</p>
+
+    <p>When the <b>Skip Empty Periods</b> option is enabled, then when encountering a period of time in the chart where you will have to wait <em>65 seconds or more</em>, that period is instantly skipped over and the replay continues. This is also true when replaying multiple charts when using <b>Charts to Replay &gt;&gt;  All Charts in Chartbook</b>, unless <b>Accurate Trading System Back Test Mode</b> is selected on the Chart Replay window. In this last case, the data will not be instantly skipped over.</p>
+    
+    <p>It is also important to be aware that when a chart is replayed at an accelerated speed, there is a greater probability of encountering a period of time where the chart pauses when there is no trading activity because the amount of time to wait will be less than 65 seconds because of the acceleration. You will notice that when reducing the Replay Speed at these points, then the period of time where there is no trading will then be instantly skipped over. So in this case it is recommended reduce the Replay Speed to 1 and enable  <b>Skip Empty Periods</b>. The period of time of no trading will get skipped over instantly.</p>
+
+    <p>When data is encountered in the Intraday chart data file which is outside of the <b>Session Times</b> defined in  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times</b> <em>and</em> the <b>Skip Empty Periods</b> option is enabled, then that data is instantly skipped over and the replay continues. This is also true when replaying multiple charts when using <b>Charts to Replay &gt;&gt;  All Charts in Chartbook</b>, unless <b>Accurate Trading System Back Test Mode</b> is selected on the Chart Replay window. In this last case, the data will not be instantly skipped over.</p>
+
+    <p>When you have selected <b>Charts to Replay &gt;&gt; All Charts in Chartbook</b> and you have selected <a href="#ReplayControl_ReplayMode">Accurate Trading System Back Test Mode</a> for the Replay Mode, then in this case there is a <em>multiple chart synchronized</em> replay being performed. The <b>Skip Empty Periods</b> option does <em>not apply</em> in this case. In this case the charts are always kept synchronized regardless of the <b>Skip Empty Periods</b> setting.  In this case to skip over a period of time where there is no trading, increase the <a href="#ReplayControl_ReplaySpeed" >Replay Speed</a>.</p>
+       
+    <p><b>Skip Empty Periods</b> also does <em>not apply</em> when using <b class="menu_item">Trade &gt;&gt; Auto Trade System Replay BackTest</b>. In this last particular case, the replay is run at the maximum possible speed. The speed is dependent upon the computer hardware.</p>
+
+    <p>When there is a skipping of time in the chart during a replay, synchronization is lost between the charts when multiple charts are replaying.</p>
+    
+    <section class="h3">
+        <h3 id="AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization_PreventingLossOfSynchronizationBetweenDifferentChartsDuringReplay">Preventing Loss of Synchronization Between  Different Charts During Replay</h3>
+        <div class="member-link">[<a href="#AutomaticSkippingOfPeriodsWhereThereIsNoTradingAndSynchronization_PreventingLossOfSynchronizationBetweenDifferentChartsDuringReplay">Link</a>] - [<a href="#top">Top</a>]</div>    
+   
+    
+            <p>When replaying multiple charts or Trading DOMs, it is necessary to <em>disable</em> <b>Skip Empty Periods</b> on the Chart Replay window to prevent any loss of synchronization between the charts and Trading DOMs.</p>
+            
+           <p>Select <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart</b> to open the Chart Replay window.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayTrading">Replay and Trading</h2>
+    <div class="member-link">[<a href="#ReplayTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The information in this section applies to version 2128 and higher. </p>
+    
+    <p>When a chart replay is started,  the existing order fills in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b> for the Symbol and  <a href = "index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">selected Trade Account</a> of the chart are loaded into an internal Trades list in the chart.</p>
+    
+    <p>These order fills which are loaded into the chart  start according to the <a href="index509f.html?page=doc/TradeActivityLog.php#UnderstandingAndSettingTheStartDateTimeForATradesList">Understanding and Setting the Start Date-Time for a Trades  List</a>  explanation, assuming they exist, and up to the Date-Time that the replay is being started at. </p> 
+    
+     <p>In the case of simulated order fills, all of the available fills up to the Date-Time that the replay is being started at, are loaded in the chart. </p>
+    
+   <p>Subsequent order fills which exist are loaded in the chart, as the  Date-Time which  they are for is encountered during the replay.</p>
+    
+     <p> During the initial load of order fills, if at that Date-Time, the order fills indicate there is a nonzero Trade Position Quantity, then it will appear on the chart and in Trade Window Position Quantity display. </p>
+     
+     <p>For an understanding of the calculation method, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatsOpenQuantityFieldCalculation">Open Quantity Field Calculation Method</a>.</p>
+
+    <p>This will be the reason why a Trade Position Quantity may appear on a chart and the Trade Window when it did not previously exist when the chart was not replaying.</p>
+    
+     <p> And this is another reason why when you go back in time  during a replay and start the replay again, why the  Trade Position Quantity can and will change. </p>
+</section>
+
+
+
+<section class="h2">
+    <h2 id="TradePositionQuantityDuringReplayAndJumpingBack">Trade Position Quantity During Replay and Jumping Back</h2>
+    <div class="member-link">[<a href="#TradePositionQuantityDuringReplayAndJumpingBack">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> The information in this section applies to version 2128 and higher. </p>
+    
+  <p>  During a Chart Replay, the Position Quantity at the current time of the replay is based upon  the order fills   available in the Trade Activity Log for the Symbol in Trade Account of the chart,  <em>up to the current Date-Time of the replay</em>.</p>
+  
+   <p>For a detailed explanation of the Position Quantity calculation method, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatsOpenQuantityFieldCalculation">Open Quantity Field Calculation</a>.</p>
+   
+   
+   <p> When jumping back in time during a replay, the Position Quantity can change if there were order fills which occurred after the Date-Time you jumped back to. Those order fills will no longer be included in the  Position Quantity calculation.  </p>
+   
+   <p>When those subsequent Date-Times are encountered in chart where the order fills occurred, they they will then be included in the chart and therefore also included in the Position Quantity.    So as the replay progresses after jumping back, and if you are not doing any new trading,  the  Position Quantity will change.</p>
+   
+   <p class = "GeneralBackgroundHighlight"> However, most importantly  When jumping back in time, you must  <em>never</em>  perform trading again during the the timeframe  that you   have jumped  back over.  If you do, this will result  in an incorrect Open/Close state of the order fills, an incorrect Position Quantity of the order fills,  and therefore cause various issues with the display of those order fills,  issues with the Position Quantity calculation,  and issues with order fill matching.  Therefore, trading again over the timeframe that  you have jumped back over, inherently is just  <em>not supported</em>  unless you  <a href = "index509f.html?page=doc/TradeActivityLog.php#ClearingTradeActivityData">clear the order fills</a> first. </p>
+ 
+ </section>
+
+<section class="h2">
+    <h2 id="HistoricalIntradayDataRecordTimeframeEffect">Historical Intraday Data Record Timeframe Effect on Replays</h2>
+    <div class="member-link">[<a href="#HistoricalIntradayDataRecordTimeframeEffect">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When replaying data, updating is <em>not necessarily</em> tick by tick. The replay will be in time units based on the timeframe of the data records in the Intraday chart data file. The timeframe of the data records depends on the timeframe of the historical data from the Data or Trading service you are using and the <b>Intraday Data Storage Time Unit</b> setting.</p>
+    
+    
+    <p>  For example, if the  <b>Intraday Data Storage Time Unit</b> is set to 1 Minute and the replay speed is 1 times, then you will not see any updating of the chart more often  than in 1 minute intervals.</p>
+
+    <p>Select <b class="menu_item">Global Settings &gt;&gt;  Data/Trade Service Settings</b> on the menu. Set the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit</a> to a small setting for smoother replays. It should be at <b>2 Seconds</b> or less.  <b>1 Second</b> is better than  <b>1 Tick</b> for efficiency.</p>
+    
+    <p>The <b>Intraday Data Storage Time Unit</b> setting affects data <em>collected in real-time</em> and also affects historical data downloaded. For complete details, refer to <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick Data Configuration</a>.</p>
+
+    <p>Depending upon the Data or Trading service you are using, there can be a mix of records with different time frames in the same data file. There can be 1 Minute data for some records and 1 Tick data for other records. So you may not always see consistency with the update interval during a replay.</p>
+
+    <p>After you make changes to the <b>Intraday Data Storage Time Unit</b> which affects the data records in the chart data files, you will need to re-download all of the data in the chart data file for the symbol you are replaying because these changes will not affect the existing data in the file. </p>
+    
+    <p>To re-download the data, select <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b>. This only needs to be done once per symbol.</p>
+   
+    <p class="GeneralBackgroundHighlightLight">To visually observe a tick by tick replay, <b>Accurate Trading System Back Test Mode</b> must <em>not</em> be set. This setting is meant for back testing and the chart will not be redrawn frequently but instead infrequently. The actual frequency of drawing is dependent on various variables and cannot be stated here. You simply have to observe it to see what it will be in your particular case. Also, the user interface of Sierra Chart can momentarily freeze when running a back test when using <b>Accurate Trading System Back Test Mode</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChartUpdateInterval">Chart Update Interval During Replays</h2>
+    <div class="member-link">[<a href="#ChartUpdateInterval">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>During a replay, a chart is updated at the interval specified by the <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Chart Update Interval</b> setting when the replay speed is 1. As you increase the replay Speed, the <b>Chart Update Interval</b> is automatically decreased internally in the chart to accelerate the replay intervals to make the chart replay more smooth.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayingHigherTimeframeCharts">Replaying Historical Daily and Higher Timeframe Charts</h2>
+    <div class="member-link">[<a href="#ReplayingHigherTimeframeCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+	
+    <p>It is not possible to replay Historical Daily, Weekly, Monthly and Yearly charts which are opened with <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Open Historical Chart</b> or <b class="menu_item">File &gt;&gt; New/Open Historical Chart</b>.</p>
+    
+	
+    <p>However,  there are two solutions to this.</p>
+    
+    <p>If you want to perform a  Back Test of an automated trading system, then use  the <a href = "indexe891.html?page=doc/Backtesting.php#BarBasedBackTesting">Bar Based Back Testing</a> method. This works with historical Daily and higher timeframe charts.</p>
+    
+    <p>   Otherwise, you need to use an Intraday chart where the chart bars are set to a timeframe of 1 Day or greater. Follow the instructions below to do this.</p>
+	
+    <ol>
+        <li>Open an  Intraday chart by selecting <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; [select symbol] &gt;&gt; Open Intraday Chart</b>.</li>
+		
+        <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu.</li>
+        
+        <li>Set the <b>Chart Data Type</b> to <b>Intraday Chart Only</b>. This control is located just above the <b>Intraday Chart Bar Period</b> frame.</li> 
+		
+        <li> Set the <b>Intraday Chart Bar Period &gt;&gt; Bar Period Type</b> to  <b>Days-Minutes-Seconds</b>.</li>
+		 
+        <li>Set the control under <b>Days-Minutes-Seconds</b> to <b>1-0-0</b>. This will set the chart bars to 1 Day per bar. Use <b>7-0-0</b> for Weekly bars.</li>
+
+        <li>Set the <b>Start Time</b> and the <b>End Time</b> controls in this window to what you require. For more information, refer to <a href="index4ec1.html?page=doc/SessionTimes.php#SessionTimes">Session Times</a>. Using the default <b>Start Time</b> of 00:00:00 and <b>End Time</b> of 23:59:59 is acceptable.</li>
+
+        <li> Press <b>OK</b> to close the <b>Chart Settings</b> window.</li>
+
+        <li>Continue with the <a href="#BasicInstructions">Basic Instructions</a> to replay this Intraday chart.</li>		 
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SteppingThroughChartBars">Stepping through Chart Bars One by One</h2>
+    <div class="member-link">[<a href="#SteppingThroughChartBars">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>It is supported to step through the chart bars one by one manually. To do so, follow these instructions:</p>
+    
+    <ol>
+        <li><a href = "index03a9.html?page=doc/GettingStarted.php#OpenChart">Open an Intraday chart</a>.</li>
+
+        <li>Start replay of an Intraday chart as explained in the <a href="#BasicInstructions">Basic Instructions</a> section.</li> 
+        
+        <li>The <b>Speed</b> setting does not matter and can be anything.</li> 
+        
+        <li>Select <b>To Next Bar</b> in the <a href="#JumpMethod">Jump Method</a> selection box.</li> 
+
+        <li>Press the <a href="#JumpForward">&gt;&gt; (Jump Forward)</a> button to step through the bars one by one. Each time the Jump Forward button is pressed, the chart will advance by one bar and the next bar displayed will be complete.
+        <br> <br>
+        In the case of Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars, the very first trade of the next bar will be displayed and the last bar in the chart will consist only of a single trade.
+        
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayNotStartingAtSpecifiedBarOrDateTime">Replay Not Starting at Specified Bar or Date-Time</h2>
+    <div class="member-link">[<a href="#ReplayNotStartingAtSpecifiedBarOrDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>When you  start a chart replay,   if you notice what appears to be a case where the starting Date-Time of the replay is not as intended, then one reason for this is that if there is a noticeable amount of time to load the chart when you start the replay, then as soon as the replay starts at the specified Date-Time or the bar you started the replay at, there is going to be a fast advancement, depending on the speed of the replay, from that bar due to the elapsed time of the chart loading.  </p>
+     
+      <p> For example, if the replay speed is 60 and it takes 10 seconds to load the chart, then the replay elapsed time will be 60×10 which  is 600 seconds. This is equivalent to 10 minutes. So although the chart will actually indeed start at the specified Date-Time, you will notice that it seems to start at a time which is 10 minutes later. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ReplayingNonSimulatedLiveOrderFills">Replaying Non-Simulated / Live Order Fills</h2>
+    <div class="member-link">[<a href="#ReplayingNonSimulatedLiveOrderFills">Link</a>] - [<a href="#top">Top</a>]</div>
+
+     <p>It is supported to replay live trading activity so long as Sierra Chart has the order fills for that trading activity. You can view the order fills in the  <a href = "index509f.html?page=doc/TradeActivityLog.php">Trade  Activity Log</a>. </p>
+
+    <ol>
+        <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>  in order to get the  list of trading accounts from your Trading  service if they have not been received during the current Sierra Chart session. However, the most recently used Trade Account will be  remembered from the last session.  So this step may not be necessary.</li>
+        
+        <li> Select  <b class="menu_item">File &gt;&gt; Disconnect</b> if you do not have a need to be connected.</li>
+        
+        <li>Enable  <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>.</li>
+
+        <li>On the Trade Window for the chart you will be doing the replay from, select your live trading account identifier. Refer to <a href = "index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" Target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.
+
+        <li>Enable <b class="menu_item"> Trade &gt;&gt; Show Order Fills</b>.</li>
+
+        <li>Perform a <a href = "#BasicInstructions">Chart Replay</a>.</li>
+
+        <li>As the order fills are encountered according to the current Date-Time in the chart as the chart is replaying, they will be displayed and the current Position Quantity will update to reflect  these fills.</li>
+        
+        <li>   Only the order fills will display.  Working orders and Attached Orders will not display. Only the resulting fills from those orders.</li>
+    </ol>
+    
+</section>
+
+<section class="h2">
+    <h2 id="ImprovingReplayPerformance_EliminatingFreezing">Improving Replay Performance / Eliminating Freezing</h2>
+    <div class="member-link">[<a href="#ImprovingReplayPerformance_EliminatingFreezing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+     <p>There are conditions after when starting a chart replay which can cause Sierra Chart to be less  responsive or in a frozen state for momentary periods of time.   Follow these instructions below to avoid this.</p>
+     
+      <p> You will first need to stop the replay by pressing the  <b>Stop</b> button if a replay is running. </p>
+      
+      <p> The information in this section  also helps reduce the time to start the replay. </p>
+
+    <ol>
+        <li>Run Sierra Chart in  <a href = "index878d.html?page=doc/LoginInstructions.php#UsingSafeMode">Safe Mode</a>  if there are custom studies which are using high CPU usage.  </li>
+        
+        <li> Set the  <a href = "index9600.html?page=doc/ReplayChart.html#ReplayControl_ReplayMode">Replay Mode</a>  to  <b>Standard</b>.  </li>
+        
+        <li>  Use a lower   <b>Replay Speed</b> like 50 or less.</li>
+        
+        <li>  Refer to  <a href = "index4f96.html?page=doc/helpdetails30.html">help topic  30</a>   for other conditions which can lead to high CPU usage.</li>
+        
+        <li> Set the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit">Intraday Data Storage Time  Unit</a> to <b>1 Second</b> or higher. </li>
+       
+       <li>If there is a specific date range you want to replay, then first set that date range to load through the Chart Settings.  And then start the replay after.   Refer to <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadDataLimitingMethod_DateRangeFromTo">Load Data Limiting Method </a>. </li>
+    </ol>
+   
+
+
+
+    
+</section>
+
+<hr><p>*Last modified Sunday, 07th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ReplayChart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:23 GMT -->
+</html>  

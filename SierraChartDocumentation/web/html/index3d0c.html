@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DevelopingCustomStudiesAndSystems.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:29:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105666') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DevelopingCustomStudiesAndSystems.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Developing Custom Studies and Systems for Sierra Chart -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing Custom Studies and Systems for Sierra Chart</a></h4> </div>     <h1 class="PageName">Developing Custom Studies and Systems for Sierra Chart</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#ReasonsToChooseSierra">Reasons to Choose Sierra Chart</a></li>
+</ul>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you are developer desiring to develop custom studies, indicators or trading systems for an advanced charting and trading platform, for distribution to users for a cost or  for free, then Sierra Chart is an excellent choice. Below is a list of reasons to choose Sierra Chart.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ReasonsToChooseSierra">Reasons to Choose Sierra Chart</h2>
+    <div class="member-link">[<a href="#ReasonsToChooseSierra">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>We provide an easy to use  <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study/System Interface And Language</a> (ACSIL), with an abundance of advanced capabilities.</li>
+
+        <li>C++ based coding language. This is an industry standard language which is supported across all operating systems. Sierra Chart's use of C++ is very simple.  Only the basics are used, however you will have the advantage of working with a standard nonproprietary language.</li>
+
+        <li>We provide a feature where you will have a web-based control panel to specify those users who are allowed to use your studies or systems. You can specify an expiration date as well. To have access to this control panel, request this feature and provide us the text you use in the <b>SCDLLName</b> function at the top of your source code file. Make this request and provide us the SCDLLName by starting an  <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets">Account Support Ticket</a>.
+            <br>
+            <br>
+            For information about the code changes you need to make to support this feature, refer to the <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php#Redistributing">Redistributing and Allowing Use Only by a Defined List of Users</a>.
+            <br>
+            <br>
+            This feature also supports providing Chartbook, Study Collection and DLL files automatically to those  users installations of Sierra Chart, who authorized to use your custom studies.
+        </li>
+
+        <li>We can list your website that you provide the studies or systems from, on our <a href="index3367.html?page=doc/OtherSitesLinks.php">Other Sites</a> Page. We can also make a posting about what you offer on our <a href="https://www.sierrachart.com/SupportBoard.php">Support Board</a>.</li>
+
+        <li>Since the Sierra Chart Advanced Custom Study Interface and Language is based on C++, you are able to use the Microsoft Visual C++ development environment in addition to the editor and build system Sierra Chart provides. Visual C++ is available for free from Microsoft. </li>
+
+        <li>Since you are working with C++, your compiled study or system is inherently protected and cannot be reverse engineered or decompiled. This is regardless of whether you use Visual C++ or the Sierra Chart provided compiler. There is no need to use any type of obfuscation tool. C++ is proven high performance code that is extremely fast. Working with C++ to create custom studies and systems is very easy for Sierra Chart.</li>
+
+        <li>Develop fully automated trading systems with Sierra Chart. You have the ability to Backtest those systems and obtain reports. These systems can send orders to various supported trading services. For more information, refer to the <a href="index2bf5.html?page=doc/ACSILTrading.html" target="_blank" rel="noopener noreferrer">Automated Trading From an Advanced Custom Study</a> documentation page.</li>
+
+        <li>   The Sierra Chart ACSIL supports numerous Drawing Styles for study subgraphs. You are able to create custom bars derived from the underlying data in the chart. You are able to access all of the drawing tools to draw various lines, shapes, text, and other kinds of chart drawings on the chart.  </li>
+
+        <li>Sierra Chart is well respected and reliable software. We are in the business to provide top quality software that is up to date and properly supported.</li>
+
+        <li>We support many backend data and trading platforms with more coming. We support all of the major platforms. And our integration  to them is very complete and stable.</li>
+
+        <li> Our Advanced Custom Study Interface and Language has support to read files from a Web server. This is useful for the following: 1. To develop your own custom authorization method for your study or system  and restrict it to be used to a list of authorized users.   2. It also allows you to access custom data to be used by your custom study or system that you provide your customers. For example, you could have special price levels that you want to make available to them every day and now this can be automated. 3. You may want to alter the input or settings for your custom study/system and can have your custom study/system get  these variables from your server.
+            <br><br>
+            You only need to have a file on your server with the necessary data and have your custom study or system make the request for it.  For a  complete working example, refer to <a href="indexd011.html?page=doc/ACSILProgrammingConcepts.html#TradingLevelsSample">ACSIL Programming  Concepts</a>.</li>
+
+        <li>If you do promote or list Sierra Chart on your website or are developing something for Sierra Chart for use among the public or your group, we can provide you complimentary access to Sierra Chart.
+            <br><br>
+            Describe what you are doing in the area development, marketing or promotion by starting an <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets">Account Support Ticket</a>. We should be able to provide you complimentary Sierra Chart usage time. The free usage time is given 2-3 months increments at a time.</li>
+
+        <li>Sierra Chart is a very widely used and respected charting and trading platform, used around the world. We have a considerably large user base, that continues to grow. These are serious investors and traders who are paying customers.</li>
+
+        <li> Sierra Chart is an excellent value with low-cost pricing. Sierra Chart is offered free through various brokerage/trading services.  Pricing can be as little as $10/month per user. So there is very little cost that your customers will have to be able to use Sierra Chart.</li>
+        
+        <li>  While Sierra Chart does not provide programming help, if you have basic technical questions that you need answers for, you can post on the  <a href = "https://www.sierrachart.com/SupportBoard.php">Support Board</a>.</li>
+        
+        
+        <li>
+    </ul>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DevelopingCustomStudiesAndSystems.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:29:18 GMT -->
+</html>  

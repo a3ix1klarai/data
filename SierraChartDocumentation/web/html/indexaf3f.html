@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_HistoricalPriceDataMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1653537067') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DTCMessages_HistoricalPriceDataMessages.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Historical Price Data Messages -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexaf3f.html?page=doc/DTCMessages_HistoricalPriceDataMessages.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ExternalInterfaces.DTCProtocol">(Table of Contents) Data and Trading Communications (DTC) Protocol</a> &gt;&gt; <a  href="indexe379.html?page=doc/DTCMessageDocumentation.php">DTC Messages and Procedures</a> &gt;&gt; <a  href="indexaf3f.html?page=doc/DTCMessages_HistoricalPriceDataMessages.php">Historical Price Data Messages</a></h4> </div>     <h1 class="PageName">Historical Price Data Messages</h1>
+
+<ul>
+    <li><a href="#Messages-HISTORICAL_PRICE_DATA_REQUEST">HISTORICAL_PRICE_DATA_REQUEST</a></li>
+    <li><a href="#Messages-HISTORICAL_PRICE_DATA_RESPONSE_HEADER">HISTORICAL_PRICE_DATA_RESPONSE_HEADER</a></li>
+    <li><a href="#Messages-HISTORICAL_PRICE_DATA_REJECT">HISTORICAL_PRICE_DATA_REJECT</a></li>
+    
+    <li><a href="#Messages-HISTORICAL_PRICE_DATA_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_RECORD_RESPONSE</a></li>
+    <li><a href="#Messages-HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE</a></li>
+    
+    <li><a href="#ProvidingBidVolumeAndAskVolumeInHistoricalData" >Providing Bid Volume and Ask Volume in Historical Data</a></li>
+
+</ul>
+
+<hr>
+
+<section class="h2">
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_PRICE_DATA_REQUEST">HISTORICAL_PRICE_DATA_REQUEST [s_HistoricalPriceDataRequest structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_PRICE_DATA_REQUEST">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is a message from the Client to the Server for requesting historical price data.</p> 
+
+        <p>This request  can be on the same or a separate network socket connection compared to the streaming market data. This is going to be specified by the Server.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>    
+                    <p>Unique integer identifier to identify this request. The historical price data response messages from the Server will contain this identifier so they can be matched up with the request from the Client. This identifier only needs to be unique to the historical price data messages.  It can conflict with identifiers used with other classes of messages.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>    
+                    <p>The Symbol historical price data is requested for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>    
+                    <p>Optional: The exchange for the Symbol.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#HistoricalDataIntervalEnum">[HistoricalDataIntervalEnum]</a> <b>RecordInterval</b></td>
+                <td>    
+                    <p>The interval/timeframe of each record for the time range of the historical data requested. Can be any of:</p>
+
+                    <ul>
+                        <li><b>INTERVAL_TICK</b> = 0</li>
+                        <li><b>INTERVAL_1_SECOND</b> = 1</li>
+                        <li><b>INTERVAL_1_MINUTE</b> = 60</li>
+                        <li><b>INTERVAL_1_DAY</b> = 86400</li>
+                        <li><b>INTERVAL_1_WEEK</b> = 604800</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>StartDateTime</b></td>
+                <td>    
+                    <p>The starting Date-Time for the historical price data returned, if available for the specified Symbol. </p>
+
+                    <p>If it is not set or set to 0, then this is a request to the Server to return data starting at the earliest data available for the Symbol.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>EndDateTime</b></td>
+                <td>    
+                    <p>The ending Date-Time for the historical price data returned.</p>
+
+                    <p>If it is not set or set to 0, then this is a request to the Server to return data  ending at the very latest data available for the symbol.</p>
+                </td>
+            </tr>           
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>MaxDaysToReturn</b></td>
+                <td>    
+                    <p><b>MaxDaysToReturn</b> specifies the maximum number of days of data the Server needs to return, if available, counting back from the latest Date-Time of data available for the symbol,  or counting back from <b>EndDateTime</b> if it is set to a value other than  0.</p>
+
+
+                    <p>If <b>MaxDaysToReturn</b> is set to 0, then it is ignored by the Server.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>UseZLibCompression</b></td>
+                <td>    
+                    <p>Set this to 1, to request the Server use <a href="http://zlib.net/">ZLib</a> compression in the response when returning data. The Server can optionally ignore this if it does not support compression or does not want to use compression for any reason.</p>
+                    
+                    <p>The <a href="#Messages-HISTORICAL_PRICE_DATA_RESPONSE_HEADER">HISTORICAL_PRICE_DATA_RESPONSE_HEADER</a> will not be compressed. Only the historical price data records themselves.</p>
+                    
+                    <p>When receiving a batch of data on the network socket, give it to ZLib. It will respond with some uncompressed data and you put that into a buffer and then process as many complete historical data messages out of it that you can. Continue with this process until finished.</p>
+                    
+               </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>RequestDividendAdjustedStockData</b></td>
+                <td>    
+                    <p>In the case of a stock symbol, setting this to a value of 1 will request dividend adjusted data from the Server, if available.   It is optional for the Server to support this.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint16">[unsigned int16]</a> <b>Integer_1</b></td>
+                <td>    
+                    <p>A general purpose 2 byte flag field from the Client to the Server which can be used for any special purpose the Client and Server require.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_PRICE_DATA_RESPONSE_HEADER">HISTORICAL_PRICE_DATA_RESPONSE_HEADER [s_HistoricalPriceDataResponseHeader structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_PRICE_DATA_RESPONSE_HEADER">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>When a historical price data request is not rejected,  this message header will begin the historical price data response from the Server.  There will be one <b>HISTORICAL_PRICE_DATA_RESPONSE_HEADER</b> message sent ahead of the <a href="#Messages-HISTORICAL_PRICE_DATA_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_RECORD_RESPONSE</a> / <a href="#Messages-HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE</a> messages. If the <b>NoRecordsToReturn</b> field is nonzero, then there are no further records that will be sent by the Server in response to the request by the Client.</p>
+
+        <p>This message is never compressed.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>    
+                    <p>The numeric identifier from the historical price data request that this response is in response to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#HistoricalDataIntervalEnum">[HistoricalDataIntervalEnum]</a> <b>RecordInterval</b></td>
+                <td>    
+                    <p>The data interval of type HistoricalDataIntervalEnum requested by the Client.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>UseZLibCompression</b></td>
+                <td>    
+                    <p>1 = All subsequent messages are using standard ZLib compression.  0 = no compression.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>NoRecordsToReturn</b></td>
+                <td>    
+                    <p>If there are no records to return in response to the request and there was no error, this will be set to 1.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>IntToFloatPriceDivisor</b></td>
+                <td>    
+                    <p> This field is no longer used.</p>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_PRICE_DATA_REJECT">HISTORICAL_PRICE_DATA_REJECT [s_HistoricalPriceDataReject structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_PRICE_DATA_REJECT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>When the Server rejects a historical price data request from the Client, a  <b>HISTORICAL_PRICE_DATA_REJECT</b> message will be sent.</p>
+
+        <p>This message is never compressed.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>    
+                    <p>The numeric identifier from the historical price data request that this response is in response to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>RejectText</b></td>
+                <td>    
+                    <p>Text reason for rejection.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#HistoricalPriceDataRejectReasonCodeEnum">[HistoricalPriceDataRejectReasonCodeEnum]</a> <b>RejectReasonCode</b></td>
+                <td>
+                   <p> Integer identifier identifying the reason for the rejection.  For the text reason, refer  to the  <b>RejectText</b> field.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>RetryTimeInSeconds</b></td>
+                <td>
+                    <p>This is an optional field from the Server. This field will normally be zero.  </p>
+
+                     <p>If a retry is intended to be performed, the server may give an  indication of how long to wait  in seconds. This field indicates that.  </p>
+                    
+                    <p>  This field is not recommended to be used.    If it is used,  it is really an indication of a substandard  Server. </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_PRICE_DATA_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_RECORD_RESPONSE [s_HistoricalPriceDataRecordResponse structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_PRICE_DATA_RECORD_RESPONSE">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The  <b>HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE</b>  message is used when the <b>RecordInterval</b> field in a historical data request  message is set to a value greater than  <b>INTERVAL_TICK</b>. For example, if the <b>RecordInterval</b> is  <b>INTERVAL_1_MINUTE</b>, then a message of this type will contain data for a 1 minute timeframe with a start time specified by the <b>StartDateTime</b> field.</p>
+        
+        <p> Even when  <b>RecordInterval</b> is  <b>INTERVAL_TICK</b>,   the <b>HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE</b> message can still be used instead of <a href="#Messages-HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE</a>. </p>
+
+        <p>This message can be part of a compressed series of messages of this same type, if the Client requested compression be used.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>    
+                    <p>The numeric identifier from the historical price data request that this response is in response to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>StartDateTime</b></td>
+                <td>    
+                    <p>The starting Date-Time  in UTC of the data record in this message. </p> 
+                   
+                   <p>It is part of the DTC Protocol specification that this must be the <em>starting</em> Date-Time of the data record.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>OpenPrice</b></td>
+                <td>    
+                    <p>The Open price of the data record in this message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>HighPrice</b></td>
+                <td>    
+                    <p>The High price of the data record in this message.</p>
+                    
+                    <p> In the case where NumTrades is 1, the HighPrice  field can be the Ask/Offer   price at the time of the trade. In this case the OpenPrice  field needs to be 0 in this case.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>LowPrice</b></td>
+                <td>    
+                    <p>The Low price of the data record in this message.</p>
+                    
+                    <p> In the case where NumTrades is 1, the LowPrice  field can be the Bid  price at the time of the trade. In this case the OpenPrice  field needs to be 0 in this case.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>LastPrice</b></td>
+                <td>    
+                    <p>The Last price of the data record in this message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Volume</b></td>
+                <td>    
+                    <p>The Volume of this data record of this message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><b>(union)</b> 
+                    <br> <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a>  <b>OpenInterest</b>
+                    <br> <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a>  <b>NumTrades</b>
+                </td>
+                <td>    
+                    <p>The Open Interest or Number of Trades of this data record in this message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>BidVolume</b></td>
+                <td>    
+                    <p>The volume of trades at the bid price or lower of the data record in this message.</p>
+                    
+                   <p> In the case where this message consists of a single trade,  if the trade was at the Ask, then BidVolume must be zero.</p>
+                   
+                   <p>This is the volume of the trades, where the aggressor of the trade was the seller.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>AskVolume</b></td>
+                <td>    
+                    <p>The volume of trades at the ask price or higher of the data record in this message.</p>
+                    
+                    <p> In the case where this message consists of a single trade,  if the trade was at the Bid, then AskVolume must be zero.</p>
+                    
+                     <p>This is the volume of the trades, where the aggressor of the trade was the buyer.</p>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>IsFinalRecord</b></td>
+                <td>    
+                    <p>Set to 1 to indicate  final record in response to the historical price data request. </p>
+
+                    <p>The default is 0 meaning there are more records to follow.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE [s_HistoricalPriceDataTickRecordResponse structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_PRICE_DATA_TICK_RECORD_RESPONSE">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is the response message when the <b>RecordInterval</b> field in a historical data request  message is set to <b>INTERVAL_TICK</b>.</p> 
+
+        <p>If the Server does not support 1 Tick historical data or does not have 1 Tick historical data for the specified time period, it can respond with  <a href="#Messages-HISTORICAL_PRICE_DATA_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_RECORD_RESPONSE</a> messages instead. The Server must only respond with messages of one type in response to a particular historical price data request.</p>
+
+        <p>This message can be part of a compressed series of messages of this same type, if the Client requested compression be used.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>    
+                    <p>The numeric identifier from the historical price data request that this response is in response to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMilliseconds">[t_DateTimeWithMilliseconds]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The Date-Time of the trade. </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum">[AtBidOrAskEnum]</a> <b>AtBidOrAsk</b></td>
+                <td>    
+                    <p>This indicates whether the trade occurred at the Bid price or lower or at the Ask price or higher.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>The price of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Volume</b></td>
+                <td>    
+                    <p>The volume of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>IsFinalRecord</b></td>
+                <td>    
+                    <p>Set to 1 to indicate  final record in response to the historical price data request. </p>
+
+                    <p>The default is 0 meaning there are more records to follow.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+
+<div class="h2">
+
+    <h2 id="ProvidingBidVolumeAndAskVolumeInHistoricalData">Providing Bid Volume and Ask Volume in Historical Data</h2>
+    <div class="member-link">[<a href="#ProvidingBidVolumeAndAskVolumeInHistoricalData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are different ways of providing  volume of trades that have occurred at the Bid price, and volume of the trades that have occurred at the Ask price, in the historical price data response messages.</p>
+    
+     <p> One way of doing this, is to use the  <a href="#Messages-HISTORICAL_PRICE_DATA_RECORD_RESPONSE">HISTORICAL_PRICE_DATA_RECORD_RESPONSE</a>  message to provide tick by tick data.  Follow the instructions below.</p>
+    
+     <ul>
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::OpenPrice to 0.</li>
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::HighPrice  to the Ask/Offer   price at the time of the trade.</li>
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::LowPrice  to the  Bid  price at the time of the trade.</li>
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::LastPrice  to the trade price.</li>
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::NumTrades to 1.</li>
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::Volume  to the volume or quantity of the trade.</li>
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::BidVolume to the volume of the trade, if it occurred at the Bid.   If you want to let the Client make this determination of whether the trade occurred at the bid or ask, then set this to 0.</li>
+        
+        <li> Set HISTORICAL_PRICE_DATA_RECORD_RESPONSE::AskVolume to the volume of the trade, if it occurred at the Ask.  If you want to let the Client make this determination of whether the trade occurred at the bid or ask, then set this to 0.</li>
+                        
+    </ul>
+    
+     <p>Example of how fields need to be set in the HISTORICAL_PRICE_DATA_RECORD_RESPONSE message.</p>
+    <ul>
+       <li>DTC::t_DateTimeWithMicrosecondsInt StartDateTime = 1640995200000000 (2022-1-1 00:00:00UTC)</li>
+		<li>double OpenPrice = 0</li>
+		<li>double HighPrice = 101.8</li>
+		<li>double LowPrice = 101.7</li>
+		<li>double LastPrice = 101.8</li>
+		<li>double Volume = 10</li>
+		<li>uint32_t NumTrades = 1</li>
+		<li>double BidVolume = 0</li>
+		<li>double AskVolume = 0</li>
+		<li>uint8_t IsFinalRecord = 0</li>
+    </ul>
+     
+      <p> The above  will mean the DTC client will set the AskVolume  to 10. </p>
+</div>
+
+
+<hr><p>*Last modified Thursday, 26th May, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_HistoricalPriceDataMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:56 GMT -->
+</html>  

@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SierraChartDirectOrderRoutingService.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1684411558') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SierraChartDirectOrderRoutingService.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Sierra Chart Teton Futures Order Routing -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Sierra Chart Teton Futures Order Routing</a></h4> </div>     <h1 class="PageName">Sierra Chart Teton Futures Order Routing</h1>
+
+<!-- div style="text-align: center;">
+    <img border="0" src="/images/Logo/SierraChartLogo.png" alt="Sierra Chart Logo">
+</div -->
+
+<img src="../images/tetonmountains.jpg" alt="" class="WideFloatRight">
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Included">What is Included</a></li>
+    <li><a href="#SetupInstructions">Setup Instructions</a></li>
+    <li><a href="#CommonMistakes">Common Mistakes</a></li>
+    <li><a href="#PositionsForSpreadsStrategies">Positions for Spreads/Strategies</a>
+		<ul>
+		    <li><a href="#PositionsForSpreadsStrategies_PriceFormatting">Price Formatting</a></li>
+		</ul>
+	</li>
+    <li><a href="#WebBasedTradingPanel">Web-Based Trading Panel</a>
+		<ul>
+			<li><a href="#WebBasedTradingPanel_ServerSelection">Server Selection</a></li>
+			<li><a href="#WebBasedTradingPanel_TargetAndStopOrders">Target and Stop Orders</a></li>
+			<li><a href="#WebBasedTradingPanel_ViewingAttachedOrders">Viewing Attached Orders</a></li>
+		</ul>
+	</li>
+    <li><a href="#Symbols">Symbols</a>
+		<ul>
+			<li><a href="#Symbols_Spreads">Spreads/Strategies</a></li>
+			<li><a href="#Symbols_Options">Options</a></li>
+		</ul>
+	</li>
+    <li><a href="#UsingDelayedMarketData">Using Delayed Market Data</a></li>
+    <li><a href="#UsingTradeSymbol">Using Trade Symbol</a></li>
+    <li><a href="#FrequentlyAskedQuestions">Frequently Asked Questions</a>
+		<ul>
+		    <li><a href="#FAQ_TransactionFees">Transaction Fees</a></li>
+		    <li><a href="#FAQ_CanOtherProgramsUseTheTradingConnectionAndDataFeed">Can Other Programs Use the Trading Connection and Data Feed?</a></li>
+		    <li><a href="#IsItSecure">Is it Secure?</a></li>
+		    <li><a href="#Reliability">Reliability</a></li>
+		</ul>
+	</li>
+    <li><a href="#PositionAndTradeAccountMonitorWindowFields">Position and Trade Account Monitor Window Fields</a></li>
+    
+    <li><a href="#SecondaryInstanceIsNotAllowingConnections">"Secondary Instance is Not Allowing Connections" Connection Error</a></li>
+    
+    
+    <li><a href="#RejectedOrder_LastTradingDateNotKnown">Rejected Order (Last Trading Date Not Known)</a></li>
+    <li><a href="#NotesRegardingRiskManagement">Notes Regarding Risk Management</a></li>
+    <li><a href="#UnderstandingTheDailyNetLossLimit">Understanding the Daily Net Loss Limit</a></li>
+    <li><a href="#MonitoringAutoLiquidationFunctionality">Monitoring Auto Liquidation Functionality</a></li>
+    <li><a href="#Testimonials">Testimonials (Stage 5)</a>
+		<ul>
+		    <li><a href="#GeneralComments">General Comments</a></li>
+		    <li><a href="#Q1_Stage5">How does Sierra Teton perform versus your previous data feed?</a></li>
+		    <li><a href="#Q2_Stage5">Was migrating your brokerage account over to Sierra Teton a smooth and efficient process?</a></li>
+		    <li><a href="#Q3_Stage5">Were the required changes you made to your trading platform during the transition easy to follow and understand?</a></li>
+		    <li><a href="#Q4_Stage5">Would you recommend Stage 5 Trading and Sierra Teton to a friend/colleague?</a></li>
+		    <li><a href="#Q5_Stage5">Any other feedback or comments you would like to share regarding your experience?</a></li>
+		</ul>
+	</li>
+    <li><a href="#Testimonials_EdgeClear">Testimonials (Edge Clear)</a>
+		<ul>
+			<li><a href="#Q1_EdgeClear">How does Sierra Teton perform versus your previous data?</a></li>
+			<li><a href="#Q2_EdgeClear">Was migrating your brokerage account over to Sierra Teton a smooth and efficient process?</a></li>
+			<li><a href="#Q3_EdgeClear">Were the required changes you made to your trading platform during the transition easy to follow and understand?</a></li>
+			<li><a href="#Q4_EdgeClear">Would you recommend Edge Clear and Sierra Teton to a friend/colleague?</a></li>
+			<li><a href="#Q5_EdgeClear">Any other feedback or comments you would like to share regarding your experience?</a></li>
+		</ul>
+	</li>
+    <li><a href="#Testimonials_Other">Testimonials (Other)</a></li>
+
+</ul>
+
+<hr style="clear: both;">
+
+<p class="GeneralBackgroundHighlight"> The <b>Teton Futures Order Routing </b>service has a <em>zero cost per transaction</em> for Sierra Chart users. </p>
+
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <em> Teton Futures Order Routing</em> service is a high-quality order routing service with advanced risk management from Sierra Chart to provide order routing, for outright futures and spreads, direct to the major exchanges. There is no other intermediary provider. </p>
+
+    <p>Orders are routed direct to the exchange with high reliability and very low latency, in under 500 microseconds.</p>
+
+    <p>Market data is provided by the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Sierra Chart Denali Exchange Data Feed</a>. </p>
+
+    <p>Supported exchanges are CME, CBOT, NYMEX, COMEX, FairX. </p>
+
+    <p>EUREX exchange to be added later. </p>
+
+    <p> Options trading are not currently supported. </p>
+
+    <p class="GeneralBackgroundHighlightLight"> This service is offered at <em>no cost</em> to both clearing firms and to users. It has <em>no</em> transaction fee per contract traded. To our knowledge this is an industry first. This Teton Order Routing service still provides very high quality order routing.</p>
+
+    <p>It has the following features:</p>
+
+    <ul>
+        <li>Low latency order routing to the exchange. In under 500 microseconds. In the case of CME Group order routing, Sierra Chart servers are located in Aurora Illinois colocated with the CME order matching computers. In the case of EUREX order routing (upcoming), Sierra Chart servers are located in Frankfurt Germany colocated with EUREX order matching computers.</li>
+
+        <li>Stable and reliable connectivity.</li>
+
+        <li>Simplified connectivity. There is no other subsequent login required. This eliminates another layer of connectivity issues, various and confusing entitlements from third-party providers, and username or password authentication problems. You will have stable, reliable and secure access to your trading account.</li>
+
+        <li>Long-term (at least 2 years) order fill history with accurate Position data to ensure complete, reliable, hasslefree, and consistent trade statistics reporting within Sierra Chart like the Daily Profit/Loss, the Trade Activity Log Trade Statistics and Trades tabs, and the Trade Statistics for Charts.
+            <br> <br>
+            Additionally another benefit of this, is that all installed instances of Sierra Chart receive the order fill history from the server no matter what instance the trading occurred from, or whether or not the instance was connected to the trading server at the time of the order fills. Therefore, all installed instances of Sierra Chart set to use the Teton Order Routing Service all stay in full synchronization with trading activity.
+        </li>
+
+        <li>Trouble-free and properly managed server-side OCO (order cancels order) orders. Server-side OCO orders are always enabled with this service regardless of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#UseServerSideOCO">Use Server Side OCO Orders</a> setting.</li>
+
+        <li>Trouble-free and properly managed server-side bracket orders. This is a huge advantage as compared to many of the other supported Trading services. With many of the other supported Trading services, either server-side bracket orders are <em>not</em> supported or there are various issues with using them.
+            <br> <br>
+            Properly managed server-side bracket orders are so important since it makes the order handling very safe and low latency. With some of the other supported Trading services, the bracket order management is on the client side with a much higher delay from when the parent order fills, to when the Target and Stop orders are transmitted. This can be for example 300 ms and higher, rather than below 1 millisecond when managed on the server as they are with this service.
+            <br><br>
+            Server managed bracket orders, also mean that when the market is moving fast, there is a greatly <em>reduced</em> possibility that the stop order will be rejected. If the Stop order were rejected, it would leave the position unprotected.
+            <br> <br>
+            Server-side Bracket orders are always enabled with this service regardless of the <a href="index4451.html?page=doc/GlobalTradeSettings.html#UseServerSideBracketOrders">Use Server Side Bracket Orders</a> setting.
+        </li>
+
+        <li>Another advantage of server-side managed OCO and Bracket orders is that if your installation of Sierra Chart loses Internet connectivity or is closed, these orders continue to be managed on the server regardless of this and will protect the Position that they are intended for.</li>
+
+        <li>If you are using CQG, OCO and Bracket orders are not managed properly with that service. And Bracket orders are not server-side. This is all substandard. CQG users need to move to the Teton Order Routing service for properly managed OCO and Bracket orders.</li>
+
+        <li> Trailing Stop orders are still always managed locally on the Sierra Chart client side.</li>
+
+        <li> Monitor your position in queue for Limit orders, for orders of quantity 3 and greater. Requires Service Package 12 and market by order data.</li>
+
+        <li>When flattening your position there is not a possibility of an order rejection due to a Position limit violation.</li>
+
+        <li>Reliable market data with extended market depth and market by order data for CME and EUREX markets (currently 1400 levels).</li>
+
+        <li>Can use free delayed market data.</li>
+
+        <li>Can trade spreads with easy symbol lookup.</li>
+
+        <li>Connects directly to the exchange for routing orders. No intermediary provider.</li>
+
+        <li><em>Full redundancy</em> with order routing. Redundancy with connectivity to the exchange (Total of four A and B connections). Redundancy with servers.</li>
+
+        <li> Triple redundant Internet connectivity to the order routing server. Internet service providers (ISPs) are: Zayo, Verizon, Cogent.</li>
+
+        <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=TradeAccountDataAndOrderEntry_v2">Web-based trading panel</a>. Does not require your Sierra Chart account to be active or not. However, does require a small <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Services Balance</a> for order submission.</li>
+
+        <li> Data feed is included with Sierra Chart <a href="indexa1cf.html?page=doc/Packages.php">Service Packages</a> which includes the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> and is only 10 USD/month before discount. There is a discount when paying for multiple months.</li>
+
+        <li>For market data, the high quality and reliable <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> is used. In the case of authorization for the CME exchanges at the nonprofessional fees which require a funded trading account, when your trading account is linked to your Sierra Chart account this will mean that the CME data is always authorized and can be used independently of this order routing service. And can also be used with the <a href="index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Futures Trading</a> service. There is no need to connect once a month to your trading account.</li>
+
+
+        <li>Support for multiple simultaneous connections to the trading server. There is no limit on the number of trading connections. However, there may be a separate real-time exchange fee for additional data connections on different systems. Refer to <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php#Connections">Denali Exchange Data Feed Connections</a>.</li>
+
+        <li>When the Trading connection is lost and there is a reconnection, this does not disrupt or affect the market data feed connection. Likewise, when there is a lost connection with the market data and a reconnection, this does not disrupt or affect the trading connection. Both connections are fully independent of each other. This does not exist with any other supported trading service that Sierra Chart works with and is a major advantage with this order routing service and contributes to the very best rocksolid connectivity.</li>
+
+        <li>Market Data and Trading are on different socket connections. This contributes to providing the absolute lowest latency for trading. CQG Web API, CTS, Interactive Brokers use the same connection for market data and trading unless you are using the Sierra Chart Exchange Data Feed. When market data and trading are used on the same connection, this can increases the latency for trading, although not necessarily.</li>
+
+        <li>Order routing and market data servers are available 24 hours a day 7 days a week. There may be one minute interruptions during times when the markets are closed but in general, there is full availability over the weekend and other times.</li>
+
+        <li>The service supports an avoidance of a situation where when modifying the price of an order on the client side like from automated trail order management, where this order has a new order quantity still in transmission to Sierra Chart from the server due to bracket order management, the quantity on the server is maintained rather than getting overrided by an old quantity from the client side. This solves a condition which we have seen sometimes over the years which can result in an incorrect final order quantity for a child order.
+            <br> <br>
+            This feature is only available with the Teton Order Routing Service. It is not supported with any other service. And this is yet another reason why if you are serious about your trading, there is no other choice but to use the Teton Order Routing Service.
+        </li>
+
+        <li> Lower cost for CQG users. Although you need to use a Sierra Chart <a href="indexa1cf.html?page=doc/Packages.php">Service Package</a> which includes the <b>Denali Exchange Data Feed</b>. This is only a small amount extra per month. This data feed provides full market depth data (up to 1400 levels) and is a high quality low latency data feed.
+            <br><br>
+            Additionally, when you consider the 15 USD/month fee from CQG for Sierra Chart to use the CQG system, 25 USD/month for historical data (limited to current contracts only and a maximum of 30 days of tick data), and 25 USD/month for their web-based trading interface (total 65 USD), the cost of the Teton Order Routing Service is zero by comparison and provides far more capabilities and safety. Teton is superior in every way to CQG and is the only choice.
+        </li>
+
+        <li> Support for auto liquidation when the daily loss limit has been reached. (Coming in December).</li>
+
+        <li> Upcoming functionality: User controllable daily loss limit in addition to what can be set by the broker. User controllable profit management.</li>
+
+        <li> Iceberg Orders are supported through the <b>Maximum Show Quantity</b> setting on the <b>A</b> tab of the Trade Window.</li>
+
+        <li> Intelligent risk management ensures that orders in an OCO group consume only the margin of one order with the greatest quantity. And when flattening or closing a position, there are no order rejections that can occur unlike other order routing systems.</li>
+
+        <li> All <b class="menu_item">Trade &gt;&gt; Trade Account Monitor</b> fields are supported and are continuously updated in <em>real time</em>. Accurate account balance field which immediately updates when trades are closed. Continuously updating Net Liquidating Value (Account Value) field. Among all of the Trading services supported by Sierra Chart, only Teton has support for all of the Trade Account Monitor fields and updates those fields the fastest.</li>
+
+        <li>Information about <a href="https://www.sierrachart.com/SupportBoard.php?ThreadID=69775">Teton Order Routing Service versus CQG</a>.</li>
+    </ul>
+
+    <p>This new order routing solution is meant to evolve over time to be the very best and lowest cost futures trading solution for the Sierra Chart user base. It allows us to provide a high level of support and reliability to our customer base. So that you have a consistently and trouble-free and reliable trading experience along with trade statistics reporting.</p>
+
+    <p>Over time this is meant to be an alternative or replacement for other supported trading gateways like Rithmic, CQG, CTS, Transact, Gain Capital, Interactive Brokers. It is the intent that it will be cost competitive with other services.</p>
+
+    <p>It allows Sierra Chart development to focus on one solution and making it the best solution rather than spreading our resources thinly among multiple solutions and each of those other multiple solutions being <em>less than the best</em>. And it also allows Sierra Chart development to focus more on the development of Sierra Chart itself rather than chasing all of these other external services and their problems every single day. </p>
+
+    <p> The name Teton comes from the <a href="https://en.wikipedia.org/wiki/Grand_Teton" target="_blank" rel="noopener noreferrer">Grand Teton</a> mountains in Wyoming.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Included">What is Included</h2>
+    <div class="member-link">[<a href="#Included">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>Streaming Real-Time Data: Provided by one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a>.</li>
+
+        <li>Historical Intraday Data: Provided by one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a>.</li>
+
+        <li>Historical Daily Data: Provided through the <a href="index765f.html?page=SierraChartHistoricalData.html">Sierra Chart Historical Daily Data</a> service.</li>
+
+        <li>Historical BidVolume and AskVolume: <b>Yes.</b> Accurate.</li>
+
+        <li>Live Trading Services: <b>Yes.</b></li>
+
+        <li>Simulated Trading: <b>Yes.</b></li>
+
+        <li>Order Types Supported: <b>All except <b>Market if Touched </b> (non client side).</b> CME Market Limit orders are supported.</li>
+
+        <li>Iceberg Orders Supported: <b> Yes</b>. Iceberg Orders are supported through the <b>Maximum Show Quantity</b> setting on the <b>A</b> tab of the Trade Window.</li>
+
+        <li>Server Managed OCO (Order Cancels Order): <b>Yes</b>. Cannot be disabled. Always enabled regardless of how <b class="menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server Side OCO Orders</b> is set.</li>
+
+        <li>Server Managed Bracket Orders: <b>Yes</b>. Cannot be disabled. Always enabled regardless of how <b class="menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server Side bracket Orders</b> is set.</li>
+
+        <li>Automated Trading (applies to Live or Simulated): <b>Yes</b>.</li>
+
+        <li>Historical Order Fills from Trading Server: <b> Yes</b>. At least <em>2 years</em> of order fill history with Position Quantity with each fill.</li>
+
+        <li>Efficient Market Data with Processing on Background Thread: <b>Yes</b>.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="SetupInstructions">Setup Instructions</h2>
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+    <ol>
+        <li>This service supports <em>live trading</em> only. For simulated trading you can enable <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> within Sierra Chart, or use the <a href="index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Futures Trading Service</a>. However, for simulated trading, in order to take advantage of the lower-priced CME exchange fees, requires that you still have a live trading account anyway.</li>
+
+        <li>To be able to use this service, you need to have a live trading account with one of the following clearing firms or one of their Introducing Brokers:
+            <ul>
+
+                <li><a href="https://stage5trading.com/" Target="_blank" rel="noopener noreferrer">Stage 5 Trading</a> (Broker)</li>
+
+                <li><a href="https://www.edgeclear.com/" target="_blank" rel="noopener noreferrer">Edge Clear</a> (Broker)</li>
+
+                <li><a href="https://www.ironbeam.com/" target="_blank" rel="noopener noreferrer">Ironbeam</a> (Clearing firm)</li>
+
+                <li><a href="https://tradeprofutures.com/futures/sierra-charts/" target="_blank" rel="noopener noreferrer">Trade Pro Futures</a> (Broker)</li>
+
+                <li><a href="https://www.agnfutures.com/" target="_blank" rel="noopener noreferrer">AGN Futures</a> (Broker)</li>
+
+                <li><a href="https://www.cannontrading.com/" target="_blank" rel="noopener noreferrer">Canon Trading</a> (Broker)</li>
+
+                <li><a href="https://www.sweetfutures.com/" target="_blank" rel="noopener noreferrer">Sweet Futures</a> (Broker)</li>
+
+                <li><a href="https://deepdiscounttrading.com/" target="_blank" rel="noopener noreferrer">DeepDiscountTrading</a> (Broker)</li>
+
+                <li><a href="https://optimusfutures.com/Sierra-Chart.php" target="_blank" rel="noopener noreferrer">Optimus Futures</a> (Broker)</li>
+
+                <li>Advantage Futures (Clearing firm)</li>
+
+                <li>Dorman Trading (Clearing firm)</li>
+
+                <li>Phillip Capital (Clearing firm)</li>
+
+                <!-- li>ED&amp;F Man (Clearing firm. Expected upcoming support.)</li -->
+
+                <li><a href = "https://www.ampfutures.com/trading-platform/sierra-chart" target="_blank" rel="noopener noreferrer">AMP Futures</a> (Broker) </li>
+
+                <!-- li><a href = "https://www.nirvanats.com/"  target="_blank" rel="noopener noreferrer">NirvanaTS</a> (associated clearing firm ED&amp;F Man) </li -->
+
+
+            </ul>
+
+            If your broker or clearing firm is not listed, then contact your broker, clearing firm or Sierra Chart and make an inquiry about supporting the Teton Order Routing Service.
+        </li>
+
+        <li>Contact your broker and let them know you that you want to use the Sierra Chart <em>direct CME</em> order routing service. This is not the older TT (Trading Technologies) based order routing service. This new service does not involve TT in any way.</li>
+
+        <li> Your clearing firm or broker will do the necessary set up. They will ask you for your Sierra Chart Account name which can be found under <b class="menu_item">Help &gt;&gt; About</b> within Sierra Chart.
+            <br> <br>
+            They do not need any other details regarding your Sierra Chart account. Do <em>not</em> give them your password.
+        </li>
+
+
+        <li>If you require real-time data from CME, CBOT, NYMEX, and/or COMEX exchanges, then activate the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a> for market data.
+            <br> <br>
+            If you need help with this step, start an <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets" target="_blank" rel="noopener noreferrer">Account Support Ticket</a> and we will get this set up for you but you are still responsible for adding the necessary funds to your Sierra Chart account to pay for the data feed and completing the market data agreement.
+        </li>
+
+        <li>Update Sierra Chart to the latest version. To be sure you are running the latest version, refer to the <a href="indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate" target="_blank" rel="noopener noreferrer">Fast Update</a> instructions.</li>
+
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</li>
+
+        <li>Set the <b>Current Selected Service</b> to <b>SC CME Futures Order Routing</b> / <b> Teton CME Order Routing</b> (new name) and select the <b>A</b> button to the right of the selection to accept that entry.
+
+            <div style="text-align: center;">
+                <a href="../images/tetonfuturesorderrouting_datatradingservice.png" rel="lightbox"><img src="../images/tetonfuturesorderrouting_datatradingservice.png" width="650" class="screenshot" loading="lazy" alt=""></a>
+            </div>
+        </li>
+
+        <li>Set the <b>Clearing Firm</b> to the appropriate firm or broker that is being used.</li>
+
+        <li>Press <b> OK</b>.</li>
+
+        <li>Order fills for orders submitted through Sierra Chart, have a <em>.00 USD</em> per contract fee with this service. Therefore, this service has no cost beyond the cost of Sierra Chart.</li>  <!-- Make sure your Services Balance  has a sufficient credit to cover the cost of these fees.
+        <br> <br>
+        
+         In some cases the order  fill fees are billed through your broker. You will need to check with them on this.
+         <br> <br>
+         
+         In the  case where the order   fill  fees are billed to your Sierra Chart account, go to the <a href = "/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a> page to Make a Payment as necessary. If your Sierra Chart account balance goes negative,  then  you may not be able to connect to the Sierra Chart Teton Order Routing service. </li>-->
+
+
+        <li> Connect to the data and trading servers by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.</li>
+
+        <li> If there is any connection error, it will be displayed in the Sierra Chart <a href="index84bb.html?page=doc/MessageLog.html" target="_blank" rel="noopener noreferrer">Window &gt;&gt; Message Log</a> and also in the connection error pop-up window.
+            <br> <br>
+            You will not be able to connect to the service, until your trading account with the clearing firm has been set up on this service.
+            <br> <br>
+            Select <b class="menu_item">File &gt;&gt; Disconnect</b> to prevent further connection attempts if there is an error connecting. Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>, to try connecting again.
+        </li>
+
+        <li>If you receive the connection error: <em><b>Trade account not assigned</b></em>, then this means that the trading account of yours has not been set up on this service.
+        </li>
+
+
+        <li>To open a Historical chart, Intraday chart or Trading DOM, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. Select a symbol in the <b>Futures</b> list and press the appropriate button.</li>
+
+        <li class="GeneralBackgroundHighlight">If you have existing Chartbooks with futures symbols that match another supported Data or Trading service, then to automatically translate those symbols, open the Chartbook and select <b class="menu_item">Edit &gt;&gt; Translate Symbols to Current Service</b>. For complete documentation, refer to <a href="indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService" target="_blank" rel="noopener noreferrer">Translate Symbols to Current Service</a>.</li>
+
+        <li> For Live trading be sure to disable <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>. For trading instructions, refer to <a href="indexf915.html?page=doc/Trading.html">Overview of Trading</a>.</li>
+
+
+        <li>Continue with step number 3 on the <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart" Target="_blank" rel="noopener noreferrer">Getting Started</a> documentation page.</li>
+
+        <li>  If there  are any order rejections, they will be displayed in the  <a href = "index7cfb.html?page=doc/TradeStatusWindows.html#TradeServiceLog">Trade Service Log</a>. Contact your broker for help with order rejections.</li>
+        
+        <li>For web based trading, go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=TradeAccountDataAndOrderEntry_v2"  target="_blank" rel="noopener noreferrer">Web-based Trading Panel</a>.</li>
+
+        <li>If you need help with any of the above, contact us through an <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets" target="_blank" rel="noopener noreferrer">Account Support Ticket</a>.</li>
+
+    </ol>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="CommonMistakes">Common Mistakes</h2>
+    <div class="member-link">[<a href="#CommonMistakes">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p> A user not communicating the correct Sierra Chart Account Name to the clearing firm. The correct username will be found in <b class="menu_item">Help &gt;&gt; About</b> within the users installation of Sierra Chart. </p>
+
+    <p>You also need to choose the correct <b>Clearing Firm</b> in <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>, after you have chosen the correct Trading Service: "Teton CME Order Routing [Trading]". </p>
+
+    <p>Make sure you are running an up-to-date version of Sierra Chart. Update with <b class="menu_item">Help &gt;&gt; Download Current Version</b>. Many improvements are made, to support Teton order routing. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="PositionsForSpreadsStrategies">Positions for Spreads/Strategies</h2>
+    <div class="member-link">[<a href="#PositionsForSpreadsStrategies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Trading exchange traded spreads and strategies with the Teton Order Routing Service is fully supported.</p>
+
+    <p>For instructions to open a Chart or Trading DOM for one of the symbols, refer to <a href="#Symbols">Symbols</a>.</p>
+
+    <p> For an understanding of how Positions are tracked for spreads/strategies, refer to <a href="index785e.html?page=doc/TradeAccountAndRiskManagement.php#TradingSpreadsAndPositionReportingForSpreads">Trading Spreads and Position Reporting for Spreads</a>. </p>
+
+    <p>In the case of exchange traded spreads or strategies, set the <a href="index9473.html?page=doc/TradeWindow.html#Quantity">Order Quantity</a> on the Trade Window to the exact quantity you want to make a trade for, the spread or strategy. </p>
+
+    <section class="h3">
+        <h3 id="PositionsForSpreadsStrategies_PriceFormatting">Price Formatting</h3>
+        <div class="member-link">[<a href="#PositionsForSpreadsStrategies_PriceFormatting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To modify the price formatting for exchange traded spreads and strategies you will want to adjust the following settings in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. For complete details, refer to <a href="index4cf4.html?page=doc/ChartSettings.html">Chart Settings</a>.</p>
+
+        <ol>
+            <li>Main Settings &gt;&gt; Price Display Format</li>
+            <li>Main Settings &gt;&gt; Tick Size</li>
+            <li>Symbol &gt;&gt; Real-Time Price Multiplier</li>
+            <li>Symbol &gt;&gt; Historical Price Multiplier</li>
+        </ol>
+
+        <p>The prices you will use for Order prices will be based upon exactly the prices you see displayed on the Chart or Trade DOM.</p>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="WebBasedTradingPanel">Web-Based Trading Panel</h2>
+    <div class="member-link">[<a href="#WebBasedTradingPanel">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Teton Order Routing Service has a web-based trading panel available. It can be used from any device, including mobile phones through a web browser. When using it on a mobile phone, you will want to choose the option for the mobile phone view on the trading panel.</p>
+
+    <p> The web-based trading panel supports the following features: </p>
+
+    <ul>
+        <li> Current Orders list</li>
+        <li> Current Positions list</li>
+        <li> Account Balances</li>
+        <li> New Order Entry. Target and Stop orders are supported.</li>
+        <li> Order Cancellation</li>
+        <li>Real-time or delayed basic price data (Upcoming).</li>
+    </ul>
+
+
+    <p><a href="https://www.sierrachart.com/UserControlPanel.php?page=TradeAccountDataAndOrderEntry_v2" target="_blank" rel="noopener noreferrer">Link to web-based trading panel</a>. </p>
+
+    <p>By default this web-based trading panel is enabled for all Sierra Chart accounts. To have it deactivated for your Sierra Chart account, request this through an <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets">Account Support Ticket</a>. </p>
+
+
+    <p>Snapshot market data support is expected to be added in September 2021. The data support will be for both real-time and delayed data. You can choose to use delayed data if you are using the real-time data within Sierra Chart and market data rules prohibit you from accessing the real-time data in another application.</p>
+
+    <p> The web-based trading panel can be logged into <em>at the same time</em> while Sierra Chart is connected to the same service. You can connect to it as many times as you require from as many devices as you require. There are no restrictions.</p>
+
+    <section class="h3">
+        <h3 id="WebBasedTradingPanel_ServerSelection">Server Selection</h3>
+        <div class="member-link">[<a href="#WebBasedTradingPanel_ServerSelection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> You are able to connect to any of the available servers on the web-based trading panel by selecting the corresponding link. Refer to the image below.</p>
+
+        <p> You can also use the <b>Connect</b> and <b>Disconnect</b> buttons to connect and disconnect from the server as needed. </p>
+
+        <div style="text-align: center;">
+            <a href="../images/webtradingpanel_serverselection.png" rel="lightbox"><img src="../images/webtradingpanel_serverselection.png" width="500" class="screenshot" loading="lazy" alt=""></a>
+        </div>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="WebBasedTradingPanel_TargetAndStopOrders">Target and Stop Orders</h3>
+        <div class="member-link">[<a href="#WebBasedTradingPanel_TargetAndStopOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> Currently the web-based trading panel does not support market data. That is coming soon. </p>
+
+        <p> Therefore, it is not possible to use a Target and Stop order when the parent order is a Market order through the web-based trading panel. This is not allowed.</p>
+
+        <p>You must make the parent order a Limit order and specify a price for that Limit order in order to use a Target and Stop order. </p>
+
+
+    </section>
+
+    <section class="h3">
+        <h3 id="WebBasedTradingPanel_ViewingAttachedOrders">Viewing Attached Orders</h3>
+        <div class="member-link">[<a href="#WebBasedTradingPanel_ViewingAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Attached Orders will display in the <b>Open Orders</b> table. Although they will only be viewable when server-side OCO and bracket orders are being used which is the case by default unless the parent order has filled. </p>
+
+        <p>If the parent order has not yet filled you will only be able to see the Attached Orders if the web-based trading panel is connected to the same server that Sierra Chart is connected to and that will be the server specified in <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service Setting &gt;&gt; Primary Server</b> within Sierra Chart.</p>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="Symbols">Symbols</h2>
+    <div class="member-link">[<a href="#Symbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The available symbols are listed in <b class="menu_item">File &gt;&gt; Find Symbol</b>. If a market you want to trade is not listed, contact <a href="https://www.sierrachart.com/SupportBoard.php">Sierra Chart Support</a>.</p>
+
+    <section class="h3">
+        <h3 id="Symbols_Spreads">Spreads/Strategies</h3>
+        <div class="member-link">[<a href="#Symbols_Spreads">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li> Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> if this command is not disabled, to connect to the data feed.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Futures</b>.</li>
+
+            <li>Select the top level of a particular futures market and then press the <b>Get Spreads</b> button to get a list of the available spread contracts. This is only only supported for CME symbols at this time.</li>
+        </ol>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="Symbols_Options">Options</h3>
+        <div class="member-link">[<a href="#Symbols_Options">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> It is supported to access market data for futures options and   chart futures options.   Trading   futures options is not supported with Teton Order Routing.</p>
+       
+       <p>  To access symbols for futures options and to open a chart, refer to <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#FuturesOptions">Futures Options</a>.</p>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingDelayedMarketData">Using Delayed Market Data</h2>
+    <div class="member-link">[<a href="#UsingDelayedMarketData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Effective with Sierra Chart version 2012, for any CME, CBOT, NYMEX, COMEX symbol (outright futures, spread, option) that is not receiving real-time data, streaming delayed data will be provided instead. This happens automatically and there is nothing special to do. </p>
+
+    <p>This data is provided by the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a>.</p>
+
+    <p> Delayed data would be provided in the case where you are not using one of the Sierra Chart provided <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Exchange Data Feeds</a> or you have not activated the exchange for which the symbol trades on, in order to receive the real-time data.</p>
+
+    <p> The Teton Order Routing Service has no restrictions on the number of simultaneous connections that can be made to it from a particular Sierra Chart Account. However, due to exchange rules, there are limitations on the number of simultaneous market data connections.</p>
+
+    <p> If you are accessing the Teton Order Routing Service from more than one system at the same time, and due to market data rules from exchanges you cannot access the real-time data on the additional systems, then to use delayed data as an alternative, disable the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> option. </p>
+
+    <p><a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">Reconnect to the data feed</a> after changing the state of this option. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingTradeSymbol">Using Trade Symbol</h2>
+    <div class="member-link">[<a href="#UsingTradeSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> When using the <a href="index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> to trade a different symbol and the particular symbol for trading uses a different <a href="index4cf4.html?page=doc/ChartSettings.html#RealTimePriceMultiplier">Real-time Price Multiplier</a> compared to the main symbol of the chart, the Order and Position prices will not match the main symbol of the chart. This will result in incorrect Order prices which can cause an Order to be rejected, and the Trade Position line will not display at the correct location. </p>
+
+    <p> There is a solution to this. You need to be running Sierra Chart version 2220 or higher for proper support for the required multiplier setting. Refer to <a href="indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate">Fast Update</a> for instructions.</p>
+
+    <p> Enable the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Use as Trade Only Symbol</b> setting for the chart or Trading DOM used for trading. </p>
+
+    <p> Set the corresponding multiplier for the <b>Trade and Current Quote Symbol</b>. Refer to <a href="index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbolPriceMultiplier">Trade and Current Quote Symbol Price Multiplier</a>. </p>
+
+    <p>In the case of using the QM futures contracts symbol, on a CL futures chart, it is necessary to use the following settings in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>:</p>
+    <ul>
+        <li><b>Price Display Format</b>: .001</li>
+        <li><b>Tick Size</b>: .025</li>
+        <li><b>Trade and Current Quote Symbol Price Multiplier</b>: .001</li>
+    </ul>
+
+    <p>In the case of using the M6E futures contracts symbol, on a 6E futures chart, it is necessary to use the following settings in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>:</p>
+    <ul>
+        <li><b>Price Display Format</b>: .00001</li>
+        <li><b>Tick Size</b>: .0001</li>
+        <li><b>Trade and Current Quote Symbol Price Multiplier</b>: 1</li>
+    </ul>
+
+    <p>In the case of using the M6A futures contracts symbol, on a 6A futures chart, it is necessary to use the following settings in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>:</p>
+    <ul>
+        <li><b>Price Display Format</b>: .00001</li>
+        <li><b>Tick Size</b>: .00005</li>
+        <li><b>Trade and Current Quote Symbol Price Multiplier</b>: 1</li>
+    </ul>
+
+    <p>Refer to <a href="index4cf4.html?page=doc/ChartSettings.html">Chart Settings</a> for the documentation for the above settings. </p>
+</section>
+
+<section class="h2">
+    <h2 id="FrequentlyAskedQuestions">Frequently Asked Questions</h2>
+    <div class="member-link">[<a href="#FrequentlyAskedQuestions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="FAQ_TransactionFees"> Transaction Fees</h3>
+        <div class="member-link">[<a href="#FAQ_TransactionFees">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <!--p>  There is a transaction fee for this service of .05 to .10 USD  per contract  for filled orders. </p>
+
+        <p>This cost is deducted from your Sierra Chart account for each transaction. You will  <em>not</em> be billed   for this fee through your clearing firm/broker unless that is arranged for with your trading account ahead of time.  </p-->
+
+        <p> Currently this service has no transaction fee per contract. It is offered for free. </p>
+        <p>You would only be paying for commissions and the fees the exchange charges per contract, to your clearing firm.</p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="FAQ_CanOtherProgramsUseTheTradingConnectionAndDataFeed">Can Other Programs Use the Trading Connection and Data Feed?</h3>
+        <div class="member-link">[<a href="#FAQ_CanOtherProgramsUseTheTradingConnectionAndDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> Yes, they can use the DTC Protocol and connect to the <a href="indexedef.html?page=doc/DTCServer.php">DTC Server</a> in Sierra Chart.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="IsItSecure"> Is it Secure?</h3>
+        <div class="member-link">[<a href="#IsItSecure">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Yes, it is secure for the following reasons: </p>
+
+        <p>Order routing is through secure firewalled servers over encrypted connections. </p>
+
+        <p> Sierra Chart does not store user passwords on our systems. They are one way encrypted. So there simply is not a way for someone to discover your password. Only you know it. </p>
+
+        <p> The Sierra Chart desktop program which connects to your trading account also can be set to not save the password and uses a secure connection to the trading server.</p>
+
+        <p> The web-based trading panel page is only accessible by your own account and requires a secondary login. By default it is enabled but you can request Sierra Chart Support to disable it.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="Reliability">Reliability</h3>
+        <div class="member-link">[<a href="#Reliability">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> The server process which routes orders, operates independently and has full redundancy and gracefully handles failures with other related systems. There is no absolute dependency on any other Sierra Chart systems to be able to connect from Sierra Chart or the web-based trading panel. Your orders are routed straight through to the exchange with very low latency. The order routing process is Sierra Chart itself configured in a multiuser server mode. </p>
+
+
+        <p>Sierra Chart architecture, is based on best practices, and simplicity. Other than the operating system, there are no external software/library dependencies other than Open SSL for encryption which is statically linked. There is no practical risk of a situation developing due to a failure of software which we do not have control over, creating a situation which is technically challenging and time-consuming to recover from. Hardware failures are automatically handled due to multiple servers providing redundancy. </p>
+
+        <p>And the internal design of Sierra Chart itself is maintained as simple as possible and utilizes only the most basic functionality of the operating system and in a way which ensures reliability. For example, there are no complex "databases" being used. Persistent storage is through simple files using simple and reliable file formats. </p>
+
+        <p> The above information describes the Sierra Chart part of this service and the reliability of it. </p>
+
+    </section>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="PositionAndTradeAccountMonitorWindowFields">Position and Trade Account Monitor Window Fields</h2>
+    <div class="member-link">[<a href="#PositionAndTradeAccountMonitorWindowFields">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> This section explains some notes about the various fields available on the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#PositionsWindow">Trade Positions Window</a> and the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#AccountBalanceTab">Trade Account Monitor Window</a>. </p>
+
+    <p>The <b> Average Price</b> on the Position Window and <b>Daily Profit/Loss</b> on the Trade Account Monitor, are based upon a first in first out order fill matching logic when using the Teton Order Routing Service. </p>
+
+    <p>The Daily Profit/Loss also includes the commission for each order fill. Therefore, when a trade is closed, the profit/loss of that trade is added to the Daily Profit/Loss minus the round turn commission. The commissions are set by the clearing firm and often are just an estimate. They are usually not customized for each individual trader, although the Teton order routing system does support commissions at the account level. </p>
+
+    <p>In the case of a micro contract, clearing firms typically will set a per contract commission anywhere from .60 to 1.00 USD. For other contracts they will typically set the per contract commission at 2.50 USD. </p>
+
+    <p> It is also possible the clearing firm has set no commissions. In which case there is no consideration of commissions in the Daily Profit/Loss value. You will need to ask your broker or clearing from about this. </p>
+
+    <p> Whether a commission value per contract for some or all of the symbols is set or not, does not affect the account balance value overnight, when the account balance is synchronized to the account balance value the clearing firm provides for your trading account. At that time, a small credit or debit will be made to account for commission differences. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SecondaryInstanceIsNotAllowingConnections">"Secondary Instance is Not Allowing Connections" Connection Error</h2>
+    <div class="member-link">[<a href="#SecondaryInstanceIsNotAllowingConnections">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p> If you encounter an error that says "Secondary instance is not allowing connections to this server", this can be safely disregarded. </p>
+     
+     <p> It simply means that the secondary server which is there as a backup to the primary server, is not allowing connections which is normally the case.  The secondary is only going to accept connections when in the unlikely event the primary server is unavailable.  </p>
+     
+     <p> When this message occurs, Sierra Chart will automatically reconnect to the primary. The reason  this message occurs is when there are two failed connections to the primary server  which would be due to Internet connectivity,  then Sierra Chart will connect to the secondary server. </p>
+     
+     
+      <div style="text-align: center;">
+          <img border="0" src="../images/tetonconnectionerrorsecondaryinstance.png" alt="">
+      </div>
+
+</section>
+
+<section class="h2">
+    <h2 id="RejectedOrder_LastTradingDateNotKnown">Rejected Order (Last Trading Date Not Known)</h2>
+    <div class="member-link">[<a href="#RejectedOrder_LastTradingDateNotKnown">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The first trader that trades a particular futures markets (ES, CL, GE), will get a <b><em>Info: Trade Order Error - LastTradingDateForSymbol is not known. Need to resubmit order.</em></b> rejection. </p>
+
+    <p> After this rejection, the security definition data is fetched, and the last trading date is then known, and then you can submit the order. In this case resubmit the order. You can do this immediately after.</p>
+
+    <p>Once a trader or traders trades a particular market, then this error will not occur unless that market is no longer traded for about 3 to 4 months. When trading a new contract month for the same underlying futures market, this rejection will <em>not</em> occur.</p>
+
+
+    <p>The reason this rejection occurs is to maintain system efficiency and not have to request and hold data for so many different symbols. This helps to maintain ultra low latency order routing.</p>
+
+    <p>The last trading must be known before the order can be submitted in order to support rejecting orders that are submitted after the last trading date.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="NotesRegardingRiskManagement">Notes Regarding Risk Management</h2>
+    <div class="member-link">[<a href="#NotesRegardingRiskManagement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> This section contains various notes regarding the risk management functionality of the Teton Order Routing Service. The risk management functionality is quite extensive and this section just explains some useful information in some areas of the risk management functionality. </p>
+
+    <p> The Teton order routing service uses advanced/intelligent risk management. One way in which this helps, is that when flattening a position for a particular symbol, there will not be a rejection of the market order to close the position when the account is under margin because risk is being reduced.</p>
+
+
+    <p> It is also possible to reduce the quantity of an existing position when the account is under margin. Simply submit an order which reduces the quantity of the position. It will be allowed. However, if there are attached orders surrounding the position (a Target Limit and Stop order), the quantities of those must be reduced by the quantity of the order that is reducing the quantity of the position. It is not possible to rely upon the <a href="index0ef8.html?page=doc/AttachedOrders.html#ScalingOut">Scale Out</a> functionality in this scenario, since the quantities of the Attached Orders will not be reduced until after the order which reduces the quantity of the position, fills. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="UnderstandingTheDailyNetLossLimit">Understanding the Daily Net Loss Limit</h2>
+    <div class="member-link">[<a href="#UnderstandingTheDailyNetLossLimit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Teton order routing supports the concept of a <em>Daily Net Loss Limit</em>. You can see this field in <b class="menu_item">Trade &gt;&gt; Trade Account Monitor</b>, if your broker has set this. </p>
+    <p> This can either be a fixed currency value or a percentage of the net liquidating value of the account. </p>
+
+    <p> When the <b> Daily Net Profit/Loss</b> equal to or less than the <b>Daily Net Loss Limit</b>, then one of two actions can occur. <b> Daily Net Profit/Loss</b> is the total of the <b>Daily Profit/Loss</b> for the trading day and the <b> Open Positions Profit/Loss</b>.</p>
+
+    <p> These two actions can either be that you will not be able to increase your existing positions or add new positions, or all of the positions will be closed on your account, and any open orders canceled. This last action is called auto liquidation. </p>
+
+    <p> The <b> Daily Profit/Loss</b> is the profit or loss, of all of the trades that have closed during the current trading day. It resets, at approximately 17:30 US Eastern time. It does not carry over into the next trading day.</p>
+
+    <p> However, the <b> Open Positions Profit/Loss</b> which is the profit or loss for your open Positions, does carry over from day to day. Therefore, <b> Daily Net Profit/Loss</b> can and does apply to positions carried overnight. However, there is no consideration to any <b> Daily Profit/Loss</b> from prior trading days. Only the <em>current trading day</em> <b> Daily Profit/Loss</b> for closed trades is included in the <b> Daily Net Profit/Loss</b> value. </p>
+
+    <p>A trading day is considered to go from 17:30 US Eastern time to 17:29:59 US Eastern time the following day.</p>
+
+
+    <p>Therefore, <b> Daily Net Profit/Loss</b> inherently does support Open positions carried for more than the current trading day. </p>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="MonitoringAutoLiquidationFunctionality">Monitoring Auto Liquidation Functionality</h2>
+    <div class="member-link">[<a href="#MonitoringAutoLiquidationFunctionality">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>These steps explain how to determine if auto liquidation is enabled for your trading account and how to monitor this functionality. These steps assume you are <a href="#SetupInstructions">using the Teton order routing service</a>. </p>
+
+    <p> If you do not want auto liquidation functionality used on your trading account, make that clear to your broker. This likely will require higher margin to hold positions.</p>
+
+
+    <ol>
+        <li>Connect to the Teton order routing service with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+
+        <li> Check to see that auto liquidation has been set up on your trading account. You have read-only access to the settings on your trade account on the Teton system.</li>
+
+        <li> Select <b class="menu_item">Trade &gt;&gt; Trade Account Monitor</b>.</li>
+
+        <li> Select your account in the Trade Account Monitor list by left clicking on it and highlighting it.</li>
+
+        <li> Select <b class="menu_item">Manage &gt;&gt; Edit Trade Account</b>. You can now see all of the settings on your account.</li>
+
+        <li>Select the <b>Main</b> tab. Check if the <a href="#/index.php?page=doc/TradeAccountAndRiskManagement.php#AccountAndRiskManagementSettings_Main_FlattenPositionsAtDailyLossLimit">Flatten Positions at Daily Loss Limit</a> setting is set to <b>Yes</b>. If so, then auto liquidation is enabled on your account.</li>
+        <li> Press <b>Close</b> to close the Trade Account Settings Window.</li>
+        <li> Select your account in the Trade Account Monitor list by left clicking on it and highlighting it.</li>
+        <li> Locate the <b>DailyNetLossLimit</b> field. If it has a negative number, then this is the daily loss limit. If you see this field as a negative number but auto liquidation is not enabled on your account, then this means the account is put into liquidation only when the daily net loss limit has been reached. This means you can reduce the quantity of your positions but you cannot increase positions or establish new ones. <br> <br>
+            If this value is zero, there is no daily net loss limit used for your account and there is nothing further to do.
+        </li>
+
+        <li>You can monitor auto liquidation functionality, by referring to the <b> DailyNetP/L</b> field (in newer versions only). Refer to the screenshot. If auto liquidation should have triggered based upon this field having a more negative value than the <b>DailyNetLossLimit</b> field, and has not, then take the appropriate steps.
+
+            <div style="text-align: center;">
+                <img border="0" src="../images/tradeaccountmonitor_dailylosslimit.png" alt="">
+            </div>
+
+        </li>
+        <li>If the <b> DailyNetP/L</b> field is not accurate, then contact your broker and take the appropriate steps, and that may include requesting them to disable auto liquidation or making an adjustment to it.</li>
+
+        <li>If auto liquidation triggers unexpectedly/incorrectly for any reason, then contact your broker and take the appropriate steps. Or take the appropriate steps within Sierra Chart. However, once auto liquidation triggers, you will not be able to open any new positions.</li>
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="Testimonials">Testimonials (Stage 5)</h2>
+    <div class="member-link">[<a href="#Testimonials">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="GeneralComments">General Comments</h3>
+        <div class="member-link">[<a href="#GeneralComments">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Teton is great so far. Migration was smooth.</li>
+            <li>Teton's order routing is excellent. [other service] has always brought delays. Finally, I would like to say that I am very satisfied with your performance!</li>
+
+            <li>Im using Denali MBO and was trading through Rithmic which are very good as an execution venue. I have switched to Teton as of 2-3 weeks ago and am very happy with the execution even though I am thousands of miles away from the CME.
+
+                My IB is [broker] (which have several clearing firms they work with) and they are extremely professional and have competitive rates and especially great customer support.
+
+                Teton right now are a very good deal in terms of cost especially if you trade high volume (2000, 3000 lots and above/month) and also its a good way to support Sierra and their future plans.
+
+                As of today, I can recommend the above combination with confidence.
+            </li>
+
+            <li>Almost a week into this data feed and order routing service and.........I AM IMPRESSED!!!!! The trade activity logging detail is impressively accurate. Exit Orders are filling easier, it appears, which tells me cue placement must be faster. All of the documentation was accurate and easy on how to switch over to DENALI/TETON, if one decides to read it all. Thanks for this Order Routing Service Sierra Chart.</li>
+
+            <li>Now looking forwards to trading via your Teton routing, I am sure it will be a significant improvement over Transact. Having now completed the move, I regret not switching sooner. The whole process of changing to Stage 5 was very easy (much easier than expected), the guys there where very helpful and dealt with all queries/requests promptly. Thanks for prompting the move in this direction.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q1_Stage5">How does Sierra Teton perform versus your previous data feed? (feel free to share which one)</h3>
+        <div class="member-link">[<a href="#Q1_Stage5">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>We feel that the platform has become lighter and the execution of orders faster.</li>
+
+            <li>I used TT-Fix with Sierra Chart's Denali Data Feed before. So the Data-Feed did not change for me. One Year ago before I was using Denali, my data was supplied by Rhitmic's Paper Trading Data Feed which caused a lot of troubles with Sierra Chart. Sierra Charts Denali Feed is usually very stable for me.</li>
+            <li>I was with TT through Denali. I have noticed no degradation in performance. It's hard for me really measure as I don't algo trade.</li>
+            <li>Top notch. CQG</li>
+            <li>I was using Sierra's TT order routing via Dorman. The Teton order routing is noticeably faster, and the acct balance updates faster.</li>
+            <li>I used TT Denali feed. I don't see any difference in terms of trading.</li>
+            <li>Have not had a chance to live trade the Teton order routing but I’m assuming that’s going to be fine. Coming from Transact data and order routing from all I learned from Anthony’s presentations it should be far superior</li>
+            <li>Previously Denali/TT routing. Its working really well. Possibly a bit quicker to report the fill than TT but I could be imagining it :-). Both TT/Teton are great and I much prefer having a single data/trading feed over a separate connection (eg CQG/Gain) as previously - fewer things to go wrong! And obviously with Teton not charging for fills this can make a big difference to costs when trading micros.</li>
+            <li>This is the lowest latency, highest quality data I have ever seen.</li>
+            <li>I was using the Sierra Denali data feed underneath CQG, so it's pretty much the same. However, I have noticed after I load a chartbook I have to disconnect and reconnect for data to download.</li>
+            <li>I don't notice any difference... it behaves the same but I know it's not the same. I've been following the updates on the SC support board so I know there are major advantages but they're in the background. Previously on Denali/TT.</li>
+            <li>I believe I was previously using Sierra Chart’s TT based order routing service. I haven’t noticed a difference, which I consider to be a positive.</li>
+            <li>The data is great and the connection is smooth</li>
+            <li>I haven't noticed any noticiable difference between my previous data feed provider and Sierra Teton. (speed & reliability) I am extremely pleased with it and so far haven’t had any issues with it.</li>
+            <li>As a Sierra Chart user for over 20 years, I can't say enough about the new version with Teton order routing!!!</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q2_Stage5">Was migrating your brokerage account over to Sierra Teton a smooth and efficient process?</h3>
+        <div class="member-link">[<a href="#Q2_Stage5">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Yes, just follow the instructions, everything is explained.</li>
+            <li>Migrating was very easy, you did an awesome job!</li>
+            <li>Could not get any better. Highly efficient</li>
+            <li>Yes, except that trading access to some symbols needed to be manually updated.</li>
+            <li>Migrating was smooth and no issues.</li>
+            <li>Yes indeed that was smooth You guys were spot on with your work and communication and with a bit of testing today looks like it will be a solid connection</li>
+            <li>Extremely quick No issues whatsoever.</li>
+            <li>Yes</li>
+            <li>Yes, thanks to Byron. SierraCharts docs on Teton were also helpful.</li>
+            <li>Yes. very smooth...no glitches.</li>
+            <li>Thank you very much for your help in opening the account. The process is very good.</li>
+            <li>Migrating the account was easy and painless. Sierra and Stage 5 representatives were always quick to respond to my emails.</li>
+            <li>I used to have Tradovate with CQG/Rithmic but when trading the DOM, there were gaps in the feed, and prices jumped around too much. With Sierra's new version (Teton) orders are logged into CME in milliseconds, with no price gaps.
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q3_Stage5">Were the required changes you made to your trading platform during the transition easy to follow and understand?</h3>
+        <div class="member-link">[<a href="#Q3_Stage5">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>I am already familiar with the use of SierraChart, so the required changes were pretty intuitive for me.</li>
+            <li>Yes. SC did a nice job of this</li>
+            <li>Absolutely</li>
+            <li>Yes, because your instructions were easy to follow.</li>
+            <li>No change except configuring Data feed-in SC.</li>
+            <li>Yes with your good instructions and my familiarity with SC it was no problem Gave me the opportunity to clean up data folders etc too Looks like symbol translation switch over was seamless</li>
+            <li>The instructions were clear but unfortunately Sierrachart didn't automatically update the symbols for some reason. I was a bit surprised they needed changing at all as I would have expected Sierra Denali to have the same symbols!</li>
+            <li>Yes</li>
+            <li>Yes...no issues.</li>
+            <li>Extremely easy.</li>
+            <li>I have been using this platform for a long time, so I understand its operation quite well.</li>
+            <li>Sierra Chart has never been the easiest to configure for a newbie. That was largely due to the fact that it is a Professional Platform that has all the options that Professionals need. However, Sierra support was always available if I needed them.
+                <br><br>I have three instances of Sierra Chart on three PC's (though I only trade with one and use the others for market stats, etc. and to trade Cash Markets, and do Research.
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q4_Stage5">Would you recommend Stage 5 Trading and Sierra Teton to a friend/colleague?</h3>
+        <div class="member-link">[<a href="#Q4_Stage5">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Yes, and already did so.</li>
+            <li>Yes. In fact, I have two trading buddies with another broker who are getting ready to switch if that broker doesn't get Teton going soon. I will for sure send them your way as much as I can.</li>
+            <li>Yes</li>
+            <li>Yes, and I have.</li>
+            <li>Sure.</li>
+            <li>I would definitely. I like your approach to changes that are happening in the world and in the business</li>
+            <li>Yes definitely</li>
+            <li>Sierra Chart/Stage 5 and the Teton order routing appears to be the absolute best setup for trading futures. I've tried TradeStation, FuturesPlus, IBKR and ToS for futures as well. FuturesPlus is cool for Futures Options (Web Based) but this Sierra Chart blows them away.</li>
+            <li>I've used it less than a month. I would recommend it for anyone starting with SierraChart from scratch. I need to use it more before recommending someone to switch.</li>
+            <li>I will recommend you and SC to my friends</li>
+            <li>Although I’ve only been with Stage 5 for a short while, I am very happy with the transition so far. I can see myself staying with Stage 5 as my main broker. I am extremely loyal to Sierra Charts and the data feed confirms it. So, yes, I would recommend Stage 5 and Sierra if anyone asks.</li>
+
+            <li>I was aware of the new Teton version some months ago, but was not looking forward to installing the new version. I had not traded for some months after a bad experience, so I took time off to do research and work on charts. After months of searching for a new Broker, I opened a new account with Stage 5 (they started a new division called Sierra Futures). I was really impressed that by exchanging a few emails with their staff, I had Teton installed in just a half hour, with no hitches or hassles.
+                <br><br>
+                I have done two SIM trading sessions since than, with no issues or hassles, and no gap bars, either on the charts or DOM. It just works so smoothly. Stage 5 is the perfect match with Sierra/Teton: Professional and First in Class!
+                <br><br>
+                PS: A heads up for Futures traders who have been tied to the legacy combo of CQG/Rithmic for data and routing, as I have been for years. Here is what you will not get with Sierra Chart: no dropped orders, slow fills, high fees (yes, Teton is Free!), support directly from the firm that built the platform, if any issues. With the legacy systems/brokers you are screwed if something goes wrong, because the broker DOES NOT support the legacy systems if they crash. They have to contact the builder.
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q5_Stage5">Any other feedback or comments you would like to share regarding your experience?</h3>
+        <div class="member-link">[<a href="#Q5_Stage5">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Sierra's Trade Account Monitor has multiple fields for acct balance, P/L, margins, etc. Very nice!</li>
+            <li>I don't have negative feedback about the product since I just started using it. Overall, very happy with it.</li>
+            <li>SC has lots of capabilities and settings in the charting and studies and that had been great and over the years even though they have added functionality it remains straightforward with solid documentation. Having not used their Trade execution tools In the past I can see today examining it that the Trade DOM is quite robust, like the charting, and I’ll be spending some time simplifying order types etc so it fits my needs.</li>
+            <li>I absolutely love the new Web Trading Portal!</li>
+            <li>My experience with you guys has been great so far, hope that continues.</li>
+        </ul>
+    </section>
+
+</section>
+<section class="h2">
+    <h2 id="Testimonials_EdgeClear">Testimonials (Edge Clear)</h2>
+    <div class="member-link">[<a href="#Testimonials_EdgeClear">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="Q1_EdgeClear">How does Sierra Teton perform versus your previous data?</h3>
+        <div class="member-link">[<a href="#Q1_EdgeClear">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Same or better</li>
+            <li> Very well. Even in times of high volatility, I haven’t had a single issue with it.</li>
+            <li>the same or better</li>
+            <li>There is no discernible change between Teton and my previous SC feed.</li>
+            <li>I haven't placed many trades as I'm on a training course but what I have done has seemed fine
+                with no lag issues on the order side.
+            </li>
+            <li>Perfectly</li>
+            <li>About the same</li>
+            <li>seamlessly</li>
+            <li>Vastly superior, execution is very fast compared to the IBKR API. I also would occasionally get
+                orphaned server side orders with IBKR.
+            </li>
+            <li>Perfect could not find any thing wrong with Teton.</li>
+            <li>Both datafeeds work perfect without slipagge in all volatility context.</li>
+            <li>Not sure if there is a whole lot of difference. Unlimited Depth is nice for sure.</li>
+            <li>Far better.</li>
+            <li>This is my first data feed, but I have had no issues at al.</li>
+            <li>Seems as stable or better</li>
+            <li>It seems fine. No trouble with any feature. But I can't ID any specific marginal improvement.</li>
+            <li>Only a little over a month, but very solid so far.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q2_EdgeClear">Was migrating your brokerage account over to Sierra Teton a smooth and efficient process? </h3>
+        <div class="member-link">[<a href="#Q2_EdgeClear">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Yes</li>
+            <li>Absolutely. Sent an email to Ian at edge clear and that was it. Completely smooth.</li>
+            <li>yes</li>
+            <li>Yes! With Ian's help and the instructions provided it was very simple.</li>
+            <li>Yes very straight forward</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>Yes, started with it.</li>
+            <li>Very smooth , not problem at all.</li>
+            <li>Yes of course.</li>
+            <li>Yes very smooth, only complaint would be the process was slow.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+            <li>Yes, I was shocked how easy and quick the switch was.</li>
+            <li>Yes</li>
+            <li>yes</li>
+            <li>Very smooth.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q3_EdgeClear">Were the required changes you made to your trading platform during the transition easy to follow and understand?</h3>
+        <div class="member-link">[<a href="#Q3_EdgeClear">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Yes</li>
+            <li>Didn’t have to make changes. Carried on as usual since I already used Denali data feed.</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>Yes, but i've been using Sierra Chart for years and was already using the Denali feed.</li>
+            <li>Yes , simple setting changes were required.</li>
+            <li>Yes</li>
+            <li>Yes followed directions on Sierra charts website.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+            <li>Yes.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q4_EdgeClear">Would you recommend Edge Clear and Sierra Teton to a friend/colleague?</h3>
+        <div class="member-link">[<a href="#Q4_EdgeClear">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Yes</li>
+            <li>Have already done so to a few friends of mine and don’t know if a better alternative for retail traders.</li>
+            <li>yes</li>
+            <li>Yes. Edge Clear has been amazing to work with. I primarily interface with Ian who is very responsive, knowledgeable, and helpful. I'm also a Convergent member and it's crystal clear to me that FT knows his stuff and has trader's best interests in mind. Keep up the good work!</li>
+            <li>Yes I would</li>
+            <li>Yes</li>
+            <li>Yes</li>
+            <li>likely</li>
+            <li>Yes</li>
+            <li>Absolutely, great combination.</li>
+            <li>Of course</li>
+            <li>Yes</li>
+            <li>Absolutely</li>
+            <li>Yes</li>
+            <li>Yes.</li>
+            <li>Definitely!</li>
+            <li>Absolutely</li>
+            <li>yes</li>
+            <li>Yes I am still using it.</li>
+            <li>Yes, already have actually.</li>
+            <li>Yes! I've never had a problem placing any complex order through Teton, and orders seem to execute as fast as I need them to!</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Q5_EdgeClear"> Any other feedback or comments you would like to share regarding your experience?</h3>
+        <div class="member-link">[<a href="#Q5_EdgeClear">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>Thanks for all that you do to support developing traders!</li>
+            <li>Not right now but I will let you no as I become more active. It would be nice to know when order execution on Eurex will be available.</li>
+            <li>Ian is excellent. Provides exceptional service. Really appreciate having him</li>
+            <li>Great service - thanks for your part in allowing its existence</li>
+            <li>No, other then it's a great service and I'm glad that it's supported. It was one of my reasons for choosing EdgeClear and glad you were an early adopter.</li>
+            <li>Sierra Charts are fabulously stable. The latency with CQG trading from Italy, was horrible...gone the instant I connected with Teton. Love it. Edge Clear and Sierra Charts are a perfect match.</li>
+            <li>Excellent</li>
+            <li>Teton has been a great experience so far!</li>
+            <li>I was a little gun shy going in, but after the switch, not sure why I was worried.</li>
+            <li>The Teton service is easy to use and works very well!</li>
+        </ul>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="Testimonials_Other">Testimonials (Other)</h2>
+    <div class="member-link">[<a href="#Testimonials_Other">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="GeneralComments_Other">General Comments</h3>
+        <div class="member-link">[<a href="#GeneralComments_Other">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ul>
+            <li>
+                <div style="text-align: center;">
+                    <a href="../images/commentabouttetonfuturesorderroutingonfuturesio_2022-04.png" rel="lightbox"><img src="../images/commentabouttetonfuturesorderroutingonfuturesio_2022-04.png" width="650" class="screenshot" loading="lazy" alt=""></a>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>
+
+<hr><p>*Last modified Thursday, 18th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SierraChartDirectOrderRoutingService.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:55 GMT -->
+</html>  

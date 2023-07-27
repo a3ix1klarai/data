@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/Backtesting.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105670') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/Backtesting.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Auto Trade System Back Testing -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexe891.html?page=doc/Backtesting.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="indexe891.html?page=doc/Backtesting.php">Auto Trade System Back Testing</a></h4> </div>     <h1 class="PageName">Auto Trade System Back Testing</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#BarBasedBackTesting">Bar Based Back Testing</a>
+		<ul>
+			<li><a href="#BarBasedBackTestingNotes">Bar Based Back Testing Notes</a></li>
+		</ul>
+	</li>
+    <li><a href="#ReplayBackTestingAutomatic">Replay Back Testing - Automatic</a></li>
+    <li><a href="#ReplayBackTestingManual">Replay Back Testing - Manual</a></li>
+    <li><a href="#BackTestingMultipleCharts" >Performing Back Testing on a Trading System That Uses Multiple Charts</a></li>
+    <li><a href="#ViewingBackTestResults">Viewing Back Test Results</a></li>
+    <li><a href="#RunningMultipleBackTestsForComparisons">Running Multiple Back Tests For Comparisons</a></li>
+    <li><a href="#ImprovingBackTestPerformance">Improving Back Test Performance</a>
+		<ul>
+			<li><a href="#HowToAchieveTheBestBackTestPerformance">How to Achieve the Best Back Test Performance</a></li>
+		</ul>
+	</li>
+    <li><a href="#ImprovingPerformanceSpreadsheets">Improving Back Test Performance of Spreadsheet Trading Systems</a></li>
+    <li><a href="#DifferencesBackTestRealTime">Differences Between Back Testing and Real-Time Auto Trade System Evaluation</a></li>
+    <li><a href="#ContinuousCharts">Back Testing and Continuous Futures Contract Charts</a></li>
+    <li><a href="#ConsistencyBetweenBackTests">Consistency Between Back Tests</a></li>
+    <li><a href="#ComparingBarBasedBackTestAndReplayBackTestResults">Comparing Bar Based Back Test and Replay Back Test Results</a></li>
+    <li><a href="#UsingActualBidAskPrices">Using Actual Bid and Ask Prices During Back Test</a></li>
+    <li><a href="#TroubleshootingAutomatedTradingSystemBehavior">Troubleshooting Automated Trading System Behavior</a></li>
+    <li><a href="indexad24.html?page=doc/TradeSimulation.php#TradeSimulationBidAskPrices ">Trade Simulation Accuracy and Bid/Ask Prices During Replays</a> (Opens a new page)</li>
+    <li><a href="indexad24.html?page=doc/TradeSimulation.php#HowOrdersAreFilled">How Orders Are Filled</a> (Opens a new page)</li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you are using the <a href="indexbc7b.html?page=doc/UsingTheSpreadsheetStudy.php" target="_blank" rel="noopener noreferrer">Spreadsheet System for Trading</a> study or you have created an ACSIL (Advanced Custom Study and Interface Language) trading system study that uses the <a href="index2bf5.html?page=doc/ACSILTrading.html" target="_blank" rel="noopener noreferrer">ACSIL Trading</a> functions, then you can perform Back Testing by using Trade Simulation Mode and <em>replaying the chart</em>, or by performing a <em>Bar Based Back Test</em>.</p>
+
+    <p>In order to evaluate how your trading system has performed historically and to see the historical trades for past data, it is necessary to run a Back Test. </p>
+
+    <p> A <a href="#BarBasedBackTesting">Bar Based Back Test</a> uses the <b>Open, High, Low, Close</b> data of the loaded chart bars themselves to evaluate the automated trading system. It is this data which is incrementally added to the chart during the Back Test.  This method of Back Testing is faster compared to a Replay Back Test, however it is less precise than a Replay Back Test.</p>
+
+    <p>A <a href="#ReplayBackTestingAutomatic">Replay Back Test</a> uses the underlying data the Intraday data file to evaluate the automated trading system. This underlying data has a timeframe per record anywhere from 1 Tick to 1 Minute (depends upon various factors, including Data/Trading service used,  historical data available and Sierra Chart settings).  It is this more detailed underlying data in the Intraday data file which is incrementally added to the chart during the Back Test. This is a slower method of back testing compared to a Bar Based Back Test, however it is more precise.</p>
+
+    <p>With either method of Back Testing, a complete <b> Trade Statistics</b> report can be viewed based upon all of the order fills generated during the Back Test. Refer to <a href="#ViewingBackTestResults">Viewing Back Test Results</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="BarBasedBackTesting">Bar Based Back Testing</h2>
+    <div class="member-link">[<a href="#BarBasedBackTesting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Supported for <b>Historical</b> and  <b>Intraday</b> charts.  </p>
+
+    <p>Back testing on loaded bars  is a back testing method using the Open, High, Low, and Close values of the loaded bars. The underlying data in the data file is not used directly, only the loaded bars themselves. </p>
+
+    <p>This usually does not perform as high accuracy of a Back Test compared to a Replay Back Test. However, it is faster and the recommended method if fast back testing is important.</p>
+
+    <ol>
+        <li> Go to the chart you want to do the back test for and make sure there is a check mark by both <b class="menu_item">Trade &gt;&gt; Auto Trading Enabled - Global</b>  and <b class="menu_item">Trade &gt;&gt; Auto Trading Enabled - Chart</b> if there is not one already. Otherwise, the automated trading system will not generate any trades. </li>
+
+        <li> Disconnect from the data and trade server if not already, by selecting  <b class="menu_item">File &gt;&gt; Disconnect</b>. It is not possible to perform a Bar Based back test  while connected to the data or trade server. </li>
+
+        <li> The speed of the back test is affected by the  <b>Chart Update Interval</b>.    For the fastest back test, it is recommended to reduce the  <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval"  target="_blank" rel="noopener noreferrer">Chart  Update Interval</a> directly on the chart itself.  If you make this very low like under 100 ms and do not normally require that, it is recommended to change it back  to a higher value when you no longer need to do back  testing of the chart.</li>
+
+        <li>To perform a high-speed Back Test based on loaded bars, select <b class="menu_item">Trade &gt;&gt; Auto Trade System Bar Based Back Test</b>. </li>
+
+        <li>You will be prompted for the <b> Bar Processing Increment </b>. The default is 250.  This specifies   the number of bars that are processed at once before user interface input is processed. Which means if you specify 250, then 250 bars be processed at once and then another 250.  Between each of these blocks of processing, you are able to interrupt the Back Test by pressing the Escape key on the keyboard.  The larger the number that is specified, the longer the time that the user interface will remain busy.</li>
+
+        <li>To view detailed results of the Back Test, refer to <a href="#ViewingBackTestResults">Viewing Back Test Results</a>.</li>
+    </ol>
+
+    <section class="h3">
+        <h3 id="BarBasedBackTestingNotes">Bar Based Back Testing Notes</h3>
+        <div class="member-link">[<a href="#BarBasedBackTestingNotes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The studies are calculated on the chart 4 times for each bar.   For each bar in the chart, the studies are calculated first with the Open price, then the High and Low of the bar.  Either the High is used first or the  Low is used first, depending upon the determined direction of price movement. </p>
+
+        <p>The Low is used first  when the Close of the bar is closer to the High of the bar. The High is used first when the Close of the bar is closer to the Low of the bar, or the Close is an equal distance to the High and Low.   Finally, the Close price of the bar is processed. </p>
+
+        <p>The fill prices of orders are going to be based upon the Open, High, Low, and Close bar values or within 1 tick of them, unless the orders are resting orders (nonmarket orders that did not immediately fill). For more information, refer to  <a href="indexad24.html?page=doc/TradeSimulation.php#HowOrdersAreFilled" >How Orders Are Filled</a>. Keep this in mind when looking at the fill prices. The timestamp of an order fill will be the starting time of the bar that the fill occurred at.</p>
+
+        <p>There is nothing special you need to do with development of an ACSIL trading system or a Spreadsheet Trading system when performing bar based back testing.</p>
+
+        <p>If you want to make a trade at the close of the bar when your rules are met, you will know that your system is being evaluated against the closing price when you see that the  <b>sc.LastTradePrice</b>, in the case of an ACSIL trading system, is equal to the bar close value or within 1 tick of it.</p>
+
+        <p>Bar based back testing is a <em>fast</em> method of back testing <em>unless you need high precision tick by tick replay based back testing</em>. </p>
+        
+        <p>Based upon the above, when using bar based back testing with an  <a href = "index2bf5.html?page=doc/ACSILTrading.html">ACSIL Trading system</a>  and only allowing order submission with sc.GetBarHasClosedStatus() == BHCS_BAR_HAS_CLOSED, then this means that  the fill price will always be the Open price of the last bar in the chart at the time of the order submission.  When not using sc.GetBarHasClosedStatus() == BHCS_BAR_HAS_CLOSED, then the fill price can be either the Open, High, Low, or Close of the current chart bar at the time of the fill.  </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayBackTestingAutomatic">Replay Back Testing - Automatic</h2>
+    <div class="member-link">[<a href="#ReplayBackTestingAutomatic">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Supported for <b>Intraday</b> charts only.  </p>
+
+    <p>This section documents how to perform a Back Test by using the <b class="menu_item">Trade &gt;&gt; Auto Trade System Replay Back Test</b>  command.  This simplifies the process of performing a Replay Based Back Test.   </p>
+
+    <ol>
+        <li>Disconnect from the data feed by selecting <b class="menu_item"> File &gt;&gt; Disconnect </b> on the menu.</li>
+
+        <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> and set the <b>Days to Load</b> to the number of days you want to perform your Back Test over. Press <b>OK</b>. Once this is set, it does not have to be changed again.</li>
+
+        <li>Make sure there is a check mark by both <b class="menu_item">Trade &gt;&gt; Auto Trading Enabled - Global</b>  and <b class="menu_item">Trade &gt;&gt; Auto Trading Enabled - Chart</b> if there is not one already.  Otherwise, the automated trading system will not generate any trades.</li>
+
+        <li>Select <b class="menu_item">Trade &gt;&gt; Auto Trade System Replay Back Test</b> on the menu. This command clears all simulated trade data for the chart's symbol and replays the entire chart from the beginning at a high speed. </li>
+
+        <li>Sierra Chart  will be busy during the Back Test.  You can stop the Back Test though by pressing the  <b>Stop</b> button on the Chart Replay window. You will have an opportunity to press this button every few seconds.</li>
+
+        <li>To view detailed results of the Back Test, refer to <a href="#ViewingBackTestResults">Viewing Back Test Results</a>.</li>
+
+        <li>Using the command <b class="menu_item">Trade &gt;&gt; Auto Trade System Replay Back Test</b> cannot fully be replicated by using the  Chart Replay window because the replay starts  at the very first bar in the chart which is not possible to do manually. However, the settings on the Chart Replay window are as follows: <b>For All Charts in Chartbook</b> (Unchecked), <b>Skip Empty Records</b> (Checked), <b>Accurate Trading System Back Test Mode</b> (Selected), <b>Speed</b> (100000).</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ReplayBackTestingManual">Replay Back Testing - Manual</h2>
+    <div class="member-link">[<a href="#ReplayBackTestingManual">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Supported for <b>Intraday</b> charts only.  </p>
+
+    <p> Manual back testing is used when you want to run the Back Test at a slower speed to observe what it is doing and it may be necessary to use this type of Back Test when you are back testing a trading system that involves multiple charts.  </p>
+
+    <ol>
+        <li>Make sure there is a check mark by <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> if there is not one already. However, Sierra Chart will be placed into this mode anyway when you start a Back Test.</li>
+
+        <li>Make sure there is a check mark by both <b class="menu_item">Trade &gt;&gt; Auto Trading Enabled - Global</b>  and <b class="menu_item">Trade &gt;&gt; Auto Trading Enabled - Chart</b> if there is not one already. Otherwise, the automated trading system will not generate any trades.</li>
+
+        <li>Select <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart (Control Panel)</b> to display the replay window.</li>
+        
+        <li>On the Replay Window select <a href="index9600.html?page=doc/ReplayChart.html#ReplayMode" Target="_blank" rel="noopener noreferrer">Replay Mode &gt;&gt; Accurate Trading System Back Test Mode</a>. </li>
+
+        <li>If you want to replay multiple charts in a trading system that uses multiple charts, then  select <b>Charts to Replay &gt;&gt; For All Charts in Chartbook</b> on the Replay Window. Otherwise, select <b>Charts to Replay &gt;&gt; Single Chart</b>. For additional information, refer to <a href="#BackTestingMultipleCharts" >Performing Back Testing on a Trading System That Uses Multiple Charts</a>.</li>
+        
+        <li> Make sure the <b>Use Start Date-Time</b> option is disabled. </li>
+
+        <li>Scroll to the point in the chart where you want to begin the  Back Test at and press the <b>Play</b> button on the Replay Window.</li>
+
+        <li>When the replay is started, the current simulated Trade Position for the symbol, if any, the simulated orders for the symbol, if any, and all of the simulated order fills for the symbol are all cleared.</li>
+
+        <li>For further details, refer to the <a href="index9600.html?page=doc/ReplayChart.html" Target="_blank" rel="noopener noreferrer">Replaying Charts</a> page. </li>
+
+        <li>To view detailed results of the Back Test, refer to <a href="#ViewingBackTestResults">Viewing Back Test Results</a>.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="BackTestingMultipleCharts">Performing Back Testing on a Trading System That Uses Multiple Charts</h2>
+    <div class="member-link">[<a href="#BackTestingMultipleCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you have a trading system that involves multiple charts, the question is whether you need to replay or Back Test only the chart the trading system study is on, or all of the charts that the trading system makes reference to.</p>
+
+    <p>You will want to replay <em>all</em> charts that a trading system is referencing by using the <a href="#ReplayBackTestingManual">Replay Back Testing - Manual</a> method if you want to have your trading system use the price and study values from bars that are in the process of being formed rather than using study and price values in the source charts which have complete and finalized values.  </p>
+
+    <p>For example, consider  a 5 minute per bar chart. In the source chart that the trading system is referring to, if it is not replaying at the same time it will have complete 5 minute bars.  Whereas if you are replaying it, gradually over the five-minute timeframe, a 5 minute bar will build and the study values will change. If it is important to have changing bar values and study values for your trading system, and only you can answer this question,  then you <em>do want to replay</em> all charts the trading system uses.  </p>
+
+    <p>You will want to <em>not</em> replay all the charts that a trading system is referencing and instead only replay or perform a Back Test on the particular chart that the trading system is on, if it is acceptable for you to have complete and finalized bar and study values in the source chart or charts.</p>
+
+    <p>When a trading system is making references to other charts, it needs to use one of two methods to do so. It will need to use the  <a href="indexc0f0.html?page=doc/StudyPriceOverlayStudy.php"  target="_blank" rel="noopener noreferrer">Study/Price Overlay</a> study.  Or in the case of an ACSIL trading system it can make references to other charts by using the method documented on the <a href="indexa852.html?page=doc/ACSILRefOtherTimeFrames.php#DirectReferencing" Target="_blank" rel="noopener noreferrer">Referencing Other Time Frames and Symbols When Using the ACSIL</a> page.</p>
+
+    <p>When using the <b> Study/Price Overlay </b> to overlay price or study data onto the chart that the trading system is on, and the chart bars  are Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars, then you need to set the  <b>Data Copy Mode</b> study  Input to  <b> Use Earliest Value from Corresponding Timeframe</b>. </p>
+
+    <p>Otherwise, in the case of when the other chart being referenced is not replaying and is not synchronized timewise to the destination chart, data from the last bar in the chart being referenced will be used for the current bar being back tested. So the referenced data would not be correct.</p>
+
+    <p>When you are replaying multiple charts at the same time to perform a back test, then you need to use the  <a href="#ReplayBackTestingManual">Replay Back Testing - Manual</a> method.  On the Replay  control  panel window you need  to select the <b>For All Charts in Chartbook</b> option in the  <b>Charts to Replay </b>  list if you have decided to replay all of the charts. </p>
+
+    <p>And on the Replay  control panel window, select <b>Accurate Trading System Back Test Mode</b> or <b>Calculate at Every Tick/Trade</b>.  When you do this, a <em>synchronized Back Test</em> will be performed.  This is essential. For this type of Back Test, it is recommended that you disconnect from the data and trade servers by selecting   <b class = "menu_item">File &gt;&gt; Disconnect</b>.</p>
+
+    <p>With a synchronized Back Test, the dependency between the charts is determined and the calculations are done in the proper order. This ensures consistency and accuracy. You can use any Replay Speed.</p>
+
+    <p>When you start the synchronized Back Test replay you will be asked for the time step increment to perform the back test in (<b>Enter Processing Step in Seconds</b>).  The default is 60 seconds. The smaller the timeframe, the more accurate the Back Test,  however it will take longer to complete. The larger the timeframe, the faster the Back Test will be but it will be less accurate.  However, the accuracy really depends upon the timeframe of the source and destination chart bars.  You would not want to use a time step increment that is longer than the time frame of the bars being involved in the trading system.  You may want to choose a timeframe which is about 25% of the average bar time length.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ViewingBackTestResults">Viewing Back Test Results</h2>
+    <div class="member-link">[<a href="#ViewingBackTestResults">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>You are able to view detailed results of your trading system by selecting <b class="menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Statistics</b> from the menu. </p>
+
+    <p>At the top of the Trade Activity Log,  in the list of symbols, select the symbol that the Back Test was run on. You need to choose the symbol that has <b class = "GeneralBackgroundHighlight">[Sim]</b> in front of it.</p>
+
+    <p>At the top of the Trade Activity Log, from the list of Trade Accounts, select the Trade Account that the Trade Window for the chart that the Back Test was run from, is set to. For more information, refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.</p>
+
+    <p>For complete instructions, refer to <a href="index509f.html?page=doc/TradeActivityLog.php#TradeStatisticsTab" target="_blank" rel="noopener noreferrer">Trade Statistics Tab</a>. There are many fields displayed which provide detailed results of the trading. </p>
+
+    <p>For a Trade by Trade log, select <b class="menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trades</b> from the menu. For complete instructions, refer to <a href="index509f.html?page=doc/TradeActivityLog.php#TradesTab" target="_blank" rel="noopener noreferrer">Trades Tab</a>. </p>
+
+    <p>To view trade order fills visually on the chart, enable <b class="menu_item">Trade &gt;&gt; Show Order Fills</b> on the menu of the main window or the chart window. </p>
+
+    <p>To know exactly when an order was filled, you need to look at the order fills on the chart rather than looking at the arrows placed by a trading system on the chart because those arrows may not necessarily represent actual orders accepted and filled. For additional information about this, refer to <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php#IgnoredSignalsWithSpreadsheetSystemsOrAlerts">Ignored Signals With Spreadsheet Systems or Alerts</a> (This applies to the  <b>Spreadsheet System for Trading</b> study).</p>
+
+    <p>During a loaded Bar Based Back Test, only Fill entries are added to the Trade Activity Log. All the other order related Trade Activity is excluded for performance reasons. </p>
+</section>
+
+<section class="h2">
+    <h2 id="RunningMultipleBackTestsForComparisons">Running Multiple Back Tests For Comparisons</h2>
+    <div class="member-link">[<a href="#RunningMultipleBackTestsForComparisons">Link</a>] - [<a href="#top">Top</a>]</div>
+     
+    <p> It is supported to run a Back Test multiple times for a trading system and  maintain the results of each of those tests <em>separately</em>. This is accomplished by using a different Trade Account  before starting the Back Test.  To do this, go to the Trade Window  for the chart the trading system is on and select a different Trade Account   before the start of the Back Test.  </p>
+    
+    <p>For instructions, refer to  <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" Target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.  </p>
+     
+    <p>The results of the back tests are held in the Trade Activity Log. Refer to <a href="#ViewingBackTestResults">Viewing Back Test Results</a>.</p>
+     
+    <p>One thing to be aware of is that when you are running multiple Back Tests  for the same set of data  and the same trading system,  the data in the Trade   Activity Log accumulates. There are going to be multiple order fills which will often occur at the same time.  The Date-Time of each of these records in the Trade Activity Log  for these order fills cannot be the same.  Sierra Chart will assign a unique millisecond value to each of  these records  to keep them unique.    So you will see order fills at the same time but have a slightly different millisecond value.   This is important to understand if you are running a Back Test  with identical settings but under a different Trade Account.  This in no way affects the consistency of the trading system. This is nothing more than a Date-Time stamp for  logging purposes.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="ImprovingBackTestPerformance">Improving Back Test Performance</h2>
+    <div class="member-link">[<a href="#ImprovingBackTestPerformance">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are items for improving  Back Testing performance.</p>
+
+    <ol>
+        <li>The fastest back testing is going to be when  using the <a href="#BarBasedBackTesting">Bar Based Back Testing</a>  back testing method.  Inherently,   <em>Replay</em>  Back Testing is going to be  <em>slower</em> since individual Intraday data records within each chart bar going to be processed   which takes more time.</li>
+
+        <li>In the case of when using the <b>Spreadsheet System for Trading</b>, refer to <a href="#ImprovingPerformanceSpreadsheets">Improving Back Test Performance of Spreadsheet Trading Systems</a> in addition to the items below.</li>
+
+        <li>Developing an automated trading system using the  <a href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage" Target="_blank" rel="noopener noreferrer">Advanced Custom Study Interface and Language</a> is going to always give the very best performance compared to using  the  <b>Spreadsheet System for Trading</b> study.</li>
+
+        <li>When running a replay type of  Back Test, if the data in the Intraday chart data file contains <em>1 Tick</em> or <em>1  Second</em> data records, back testing will be slower compared to higher timeframe data records in the Intraday data file.
+            <br> <br>  
+            Therefore, increase the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Intraday Data Storage Time Unit</b>. After this is done, re-download the Intraday chart data  by going to the Intraday chart and select <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. This only needs to be done once per symbol. This will help reduce the time for    Back Testing.</li>
+
+        <li>The next thing to check to determine the source of slow Back Testing is to remove all of the studies from the chart or charts that are being replayed, or from the chart a bar based Back Test is being performed on. Run the Back Test again and see if you get better performance. If so, then it is one of those particular studies causing the problem. You can then add studies back gradually one by one to see which one  is taking a longer time to calculate.</li>
+
+        <li>If a Custom Study is causing a performance problem,  then the developer of that study needs to improve the performance of that study. </li>
+
+
+        <li>Make sure that  <a href="index9600.html?page=doc/ReplayChart.html#ReplayMode" Target="_blank" rel="noopener noreferrer">Replay Mode</a> on the  Replay Window  is <em>not</em> set to <b>Calculate At Every Tick/Trade</b>.</li>
+        
+        <li>Disable <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings &gt;&gt; Enable Estimated Position in Queue Tracking</b>.</li>
+    </ol>
+
+    <section class="h3">
+        <h3 id="HowToAchieveTheBestBackTestPerformance">How to Achieve the Best Back Test Performance</h3>
+        <div class="member-link">[<a href="#HowToAchieveTheBestBackTestPerformance">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>The following are the general guidelines to achieve the best back test performance. </p>
+        
+        <ol>
+            <li>The trading system must be developed using the Advanced Custom Study Interface and Language.  Refer to   <a href="index2bf5.html?page=doc/ACSILTrading.html"  target="_blank" rel="noopener noreferrer">Automated Trading From an Advanced Custom Study</a>.</li>
+        
+            <li>Use a <a href="#BarBasedBackTesting" >Bar Based Back Test</a> and make sure the <b>Chart Update Interval </b> is set to a small value.</li>
+        
+            <li>The trading  system code must be efficient code.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ImprovingPerformanceSpreadsheets">Improving Back Test Performance of Spreadsheet Trading Systems</h2>
+    <div class="member-link">[<a href="#ImprovingPerformanceSpreadsheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In the case of when using the <b>Spreadsheet System for Trading</b> study, Back Testing may not be very fast. The reason for this is because all of the chart data is outputted to a separate Spreadsheet object.</p>
+
+    <p>Every time there is a new bar added to the chart during a Back Test, the existing data has to be shifted down in the Sheet. This can cause a lot of calculations. Inherently  using the <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php" target="_blank" rel="noopener noreferrer">Advanced Custom Study Interface and Language</a> is much faster.</p>
+
+    <p>To improve Back Test performance, follow the steps below.</p>
+
+    <ol>
+        <li> Look at your formulas in cells K-Z (last formula column when using 16 formula columns). Determine how many rows from the current row 3, they refer back to. For example, if the formulas refer down no further than row 12, then the Spreadsheet Study only needs to output  10 rows of data to the Spreadsheet.</li>
+
+        <li>Reduce the <b> Number of Rows</b> input in the Study Settings window for the  <b>Spreadsheet System for Trading</b> study to the minimum number of rows required.</li>
+
+        <li> Clear the data from the Sheet rows that are no longer used on the Spreadsheet. To do this, highlight  those rows by selecting the row numbers on the left side of the Sheet of the Spreadsheet and press the <b> Delete </b> key on the keyboard or select <b class="menu_item">Spreadsheet &gt;&gt; Clear Selection</b>.</li>
+       
+       <li> Clear the data from the Sheet  columns  that are no longer used on the Spreadsheet. To do this, highlight  those columns by selecting the column  letters on the  top side of the Sheet of the Spreadsheet and press the <b> Delete </b> key on the keyboard or select <b class="menu_item">Spreadsheet &gt;&gt; Clear Selection</b>. </li>
+        
+        <li> Clear any other unused formulas. </li>
+
+
+        <li>Remove any unused Sheets within the Spreadsheet. At the top left of the Spreadsheet window, select the particular  <b>Sheet#</b> that is not used, and select  <b class="menu_item">Spreadsheet &gt;&gt; Delete Sheet</b>.</li>
+
+        <li>Perform the Back Test using one of the methods described on this page. The fastest back test will be a <a href="#BarBasedBackTesting">Bar Based Back Test</a>.</li>
+        
+        <li>When using a  Bar Based Back Test, the speed is affected by the  <b>Chart Update Interval</b> setting.  For the fastest Back Test,  you will need to reduce the  <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval"  target="_blank" rel="noopener noreferrer">Chart  Update Interval</a> directly on the chart itself. Make it a small value like  100 to 200 milliseconds.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="DifferencesBackTestRealTime">Differences Between Back Testing and Real-Time Auto Trade System Evaluation</h2>
+    <div class="member-link">[<a href="#DifferencesBackTestRealTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>BuyEntry, BuyExit, SellEntry, SellExit</b>  Order Actions are evaluated when the trading study is calculated. During normal real-time chart updating this calculation happens at the <b>Chart Update Interval</b> set in <b class="menu_item">Global Settings &gt;&gt; General Settings</b>.  Each individual chart can also specify their own independent <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval"  target="_blank" rel="noopener noreferrer">Chart Update Interval</a>.</p>
+
+    <p>However, when the <b>Chart Update Interval</b> elapses, the trading studies will only be calculated when there is data being received from the data feed, or there is new/updated trade orders or position data.  During a Back Test, there are definite rules that control when trading studies are calculated.</p>
+
+    <p>For a <em>Bar Based Back Test </em>, the trading studies are calculated for each of the Open, High, Low, Close values in the bar.</p>  
+
+    <p>During a <em>Replay Back Test</em>, the trading studies are calculated when there is a new bar added to the chart and any time there is a change with the High, Low, Close values of the last bar in the chart as the data is processed through the Intraday chart data file.</p>
+
+    <p>During <em>real-time updating</em>, between the times the trading studies are calculated which is at the <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval"  target="_blank" rel="noopener noreferrer">Chart Update Interval</a>, there  potentially may be more than one data record added to the chart. This is especially true with  <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php"  target="_blank" rel="noopener noreferrer">tick by tick data</a>. </p>
+
+    <p>Therefore, the study is  <em>not</em> calculated at every single tick. If you want your Order Actions evaluated as fast as possible during real-time chart updating, then you may want to decrease the  <b>Chart Update Interval</b>.  We do not recommend going lower than 50 to 100 ms. </p>
+    
+    <p> The Bid and Ask prices which are used to fill the orders,  can be different between  Back Testing and also during real-time updating. For more information, refer to <a href="indexad24.html?page=doc/TradeSimulation.php#TradeSimulationBidAskPrices " target="_blank" rel="noopener noreferrer">Trade Simulation Accuracy and Bid/Ask Prices During Replays</a>.</p>
+
+    <p>The point of this discussion is that there can be some inconsistencies between a trading system performing in real-time and during a Back Test due to the conditions and frequency for when the studies including the trading study are calculated.</p>
+
+    <p>You will have the greatest consistency between back testing and real-time auto trade system evaluation when you are performing a <em>Replay Based Back Test on tick by tick data</em>. To ensure you have tick by tick data in the  Intraday data files, refer to <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php" target="_blank" rel="noopener noreferrer">Tick by Tick Data Configuration</a>. </p>
+
+    <p>In the case of the <b>Spreadsheet System for Trading</b> study, if you want to <em>evaluate your condition formulas only on a bar close</em>, then set the corresponding <b>Signal Only on a Bar Close</b> inputs with the <b>Spreadsheet System for Trading</b>  study to <b> Yes</b>. This will give your system greater stability and not be affected by the <b>Chart Update Interval</b>. In the case of an ACSIL trading system, you will want to use <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBarHasClosedStatus">sc.GetBarHasClosedStatus()</a>. </p>
+
+    <p>In the case of a trading system which use multiple charts, during real-time updating of charts, to control the calculation order of the charts based upon the dependency between them you need to enable <b class="menu_item">Global Settings &gt;&gt; General Settings</b>  <b>&gt;&gt; <a href="index899f.html?page=doc/GeneralSettings.html#UseControledOrderChartUpdating" target="_blank" rel="noopener noreferrer" >Use Controlled Order Chart Updating</a></b>. This provides higher consistency between back testing and real-time auto trade system evaluation for trading systems that use multiple charts.</p>
+
+    <p> When performing a Replay Back Test, try performing it at a slower speed to see if you notice more of a consistency. Whether you will or not, is uncertain.  </p>
+
+    <p> If the trading system involves multiple charts, then make sure that all charts are replaying.  This can be done with the  <a href="index9600.html?page=doc/ReplayChart.html#ChartsToReplay" target="_blank" rel="noopener noreferrer">Charts to Replay</a> setting.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ContinuousCharts">Back Testing and Continuous Futures Contract Charts</h2>
+    <div class="member-link">[<a href="#ContinuousCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is supported to perform Back Testing when using one of the <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol &gt;&gt; Continuous Contract</b> options.</p>
+
+    <p>When performing back testing across a Continuous Futures contract chart, although the expired futures contracts are loaded into the chart, the chart only has one symbol which is used for trading even though you are Back Testing across historical data. So the trades are occurring on expired contract prices, but being specified with the current symbol. Therefore, you will only see one symbol when reviewing the trading results in the Trade Activity Log.</p>
+</section>
+
+<section class="h2" >
+    <h2 id = "ConsistencyBetweenBackTests">Consistency Between Back Tests</h2>
+    <div class="member-link">[<a href="#ConsistencyBetweenBackTests">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> When performing Back Testing, you must use one of the methods documented on this page and follow the procedures as given.</p>
+
+    <p>When performing a Replay Based Back Test, on the Replay Window you must select <a href="index9600.html?page=doc/ReplayChart.html#ReplayMode"  target="_blank" rel="noopener noreferrer">Accurate Trading System Back Test Mode</a> or <b>Calculate at Every Tick/Trade</b> in order to have consistency  when Back Testing the same automated trading system under the same conditions.</p>
+
+    <p>During a Back Test, when Sierra Chart is processing through the underlying Intraday chart data records for a Replay Based Back Test or through the bar data for a Bar Based Back Test, the Bid and Ask prices are set from the underlying data records in the Intraday data file or are derived from the Open, High, Low, Close bar data. These Bid and Ask prices are used to fill the orders which are submitted by an automated trading system. </p>
+
+    <p>There is always a 100% consistency with the setting of the Bid and Ask prices between Back Tests on the same chart data as the data is processed, assuming the same back test method is used ( <a href = "#ReplayBackTestingAutomatic">Replay</a> or  <a href = "#BarBasedBackTesting">Bar Based</a>).</p>
+
+    <p>If your trading system gives inconsistent results between Back Tests without making any changes to the chart data, the Chart Settings or to Study Settings, you must look at your own trading  system code/formulas for a cause   since your code is a major and primary portion of the overall functioning of an automated trading system. </p> 
+
+    <p>When there are inconsistencies, this can only be attributed to your own code. It is very unlikely to be the result of how  Sierra Chart is processing the back test.  <em>Inconsistencies  reveals that your own trading system produces inconsistent results based on the way that it is designed and working</em>.</p>
+
+    <p>Even if you do not get a consistent result between Back Tests, generally this does not necessarily mean very much because although you may want to see a consistent result every time you run a Back Test, assuming that your study is working consistently and Sierra Chart does not have any control over that, it does not change the fact that with live trading you will get yet <em>another different result</em> from your trading system.</p>
+    
+    <p> Therefore, to insist that Sierra Chart gives a consistent result of your trading system which it cannot guarantee because <em>you wrote your own trading system and it has its own behavior</em>,  will accomplish nothing.   While it may seem better,  it is not going to change the fact that your trading system itself  is not stable  if it gives inconsistent results, and is going to give a different result during live trading.</p>
+
+    <p>Try one of the Sierra Chart provided trading systems. Run it many times. You will get a consistent result every time. If you do get a consistent result every time, and with your own trading system you do not, then this <em>proves</em> the inconsistency problem is within your own trading system.  If you do not get a consistent result  with a Sierra Chart provided example trading system, then consult with Sierra Chart support for the reason.</p>
+
+    <p>The Sierra Chart example trading systems can be found in <b class="menu_item">Analysis &gt;&gt; Studies &gt;&gt; Add Custom Study &gt;&gt; Sierra Chart Custom Studies and Examples &gt;&gt; Trading Example: *</b>.</p>
+
+    <p>If you are Back Testing a trading system that involves replaying multiple charts at the same time, then this  is something which involves a lot more complexity.  This is something to consider if you have inconsistencies between Back Tests in particular with varying replay speeds.  In this particular case inconsistencies can be possible.  Also, make sure in this case  the  <b>Charts to Replay </b> option on the Replay Window is set to <b> All Charts   in Chartbook</b> or <b>Charts with Same Link Number</b>.  Greater consistency can be achieved in versions of 1863 or  higher of Sierra Chart which support  the Replay Modes <b>Accurate Trading System Back Test Mode</b> or <b>Calculate at Every Tick/Trade</b> when replaying multiple charts.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ComparingBarBasedBackTestAndReplayBackTestResults">Comparing Bar Based Back Test and Replay Back Test Results</h2>
+    <div class="member-link">[<a href="#ComparingBarBasedBackTestAndReplayBackTestResults">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When Back Testing an automated trading system using  either the <a href="#BarBasedBackTesting">Bar Based Back Testing</a> or the <a href="#ReplayBackTestingAutomatic">Replay Back Testing - Automatic</a> method, each method will give a different result.</p>
+   
+   <p>The more accurate result would be from the <b>Replay Back Testing</b> method. However, it is more time-consuming using the replay method.</p>
+</section>
+
+<section class="h2">
+    <h2 id="UsingActualBidAskPrices">Using Actual Bid and Ask Prices During Back Test</h2>
+    <div class="member-link">[<a href="#UsingActualBidAskPrices">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart supports using the actual Bid and Ask prices during  a Replay Based Back Test. These Bid and Ask prices are used to fill orders. This provides a very high degree of accuracy when Back Testing.</p>
+
+    <p>Historical Bid and Ask prices are available when using historical data provided by the Sierra Chart Historical Data services. In most cases this service is being used  for historical data for charts. This historical Bid and Ask price data begins on June 23, 2014. </p>
+
+    <p>Follow these steps to use actual Bid and Ask prices during back testing.</p>
+
+    <ol>
+        <li> Set Sierra Chart to store data tick by tick. Refer to <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick Data Configuration</a>. This is an essential step.</li>
+
+        <li> Perform an automatic or manual <a href="#ReplayBackTestingAutomatic">Replay Back Test</a>.  It must be a <em>Replay</em> Back Test.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="TroubleshootingAutomatedTradingSystemBehavior">Troubleshooting Automated Trading System Behavior</h2>
+    <div class="member-link">[<a href="#TroubleshootingAutomatedTradingSystemBehavior">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If an  automated trading order action is ignored, the reason for this will be given in the <b Class = "menu_item">Trade &gt;&gt; Trade Service Log</b>. Refer to this log for the reason why.</p>
+
+    <p>When using the <b>Spreadsheet System for Trading</b> study, refer to <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php#IgnoredSignalsWithSpreadsheetSystemsOrAlerts">Ignored Signals With Spreadsheet Systems or Alerts</a> for further information. </p>
+
+    <p>It may also be helpful   to go through the <a href="indexf449.html?page=doc/SpreadsheetTradingTestProcedure.php" >Spreadsheet System for Trading Test Procedure</a> to help with understanding how a basic Spreadsheet automatedtrading system will work and indirectly provide help to troubleshoot your automated  Spreadsheet trading system.</p>
+
+    <p>For an ACSIL automated trading system, refer to <a href="index2bf5.html?page=doc/ACSILTrading.html#DebuggingTradingSystems">Debugging/Troubleshooting Automated Trading Systems</a>.</p>
+
+    <p>Also, refer to <a href="index1794.html?page=doc/AutoTradeManagment.php#TroubleshootingAutoTradingSystemBehavior">Troubleshooting Automated Trading System Behavior</a>.  </p>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/Backtesting.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:04 GMT -->
+</html>  

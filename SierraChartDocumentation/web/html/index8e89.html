@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SpreadsheetFunctions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:53:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105658') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SpreadsheetFunctions.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Spreadsheet Functions -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index8e89.html?page=doc/SpreadsheetFunctions.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#UsingSpreadsheets">(Table of Contents) Spreadsheets</a> &gt;&gt; <a  href="index8e89.html?page=doc/SpreadsheetFunctions.html">Spreadsheet Functions</a></h4> </div>     <h1 class="PageName">Spreadsheet Functions</h1>
+
+<section class="h2">
+    <h2>Related Documentation</h2>
+
+    <ul>
+        <li><a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php">Overview of Spreadsheet Studies</a></li>
+        <li><a href="indexbc7b.html?page=doc/UsingTheSpreadsheetStudy.php">Using Spreadsheet Studies</a></li>
+        <li><a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet Systems, Alerts and Automated Trading</a></li>
+        <li><a href="index2192.html?page=doc/SpreadsheetStudyInputs.html">Spreadsheet Study Inputs</a></li>
+        <li><a href="index41e0.html?page=doc/Spreadsheets_ReferencingOtherChartsInFormulas.php">Referencing Other Charts in Spreadsheet Study Formulas</a></li>
+        <li><a href="index0c2c.html?page=doc/SpreadsheetStudiesSpecialTasks.php">Spreadsheet Studies Special Tasks</a></li>
+        <li><a href="index56f7.html?page=doc/Sharing_Spreadsheet_Study.html">Sharing Your Spreadsheet Study With Another User</a></li>
+        <li><a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php">Working with Spreadsheets</a></li>
+        <li><b>Spreadsheet Functions</b></li>
+        <li><a href="index7f0c.html?page=doc/SpreadsheetExampleFormulasAndUsage.php">Spreadsheet Example Formulas and Usage</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#ExternalFunctionReference">External Function Reference</a></li>
+        <li><a href="#UsingSpreadsheetFunctions">Using Spreadsheet Functions</a></li>
+        <li><a href="#FunctionParameterDelimiter">Function Parameter Delimiter</a></li>
+        <li><a href="#SerialDateTimeValues">Serial DateTime Values</a></li>
+        <li><a href="#UsingTheEquivalentOf_COUNTIF_AVERAGEIF_MAXIF_MINIF_SUMIF">Using the Equivalent of COUNTIF, AVERAGEIF, MAXIF, MINIF, SUMIF</a></li>
+        <li><a href="#AvailableFunctions">Available Spreadsheet Functions</a>
+			<ul>
+			    <li><a href="#ABS_Function">ABS</a></li>
+			    <li><a href="#ACOS_Function">ACOS</a></li>
+			    <li><a href="#ACOSH_Function">ACOSH</a></li>
+			    <li><a href="#ADDRESS_Function">ADDRESS</a></li>
+			    <li><a href="#AND_Function">AND</a></li>
+			    <li><a href="#ASIN_Function">ASIN</a></li>
+			    <li><a href="#ASINH_Function">ASINH</a></li>
+			    <li><a href="#ATAN_Function">ATAN</a></li>
+			    <li><a href="#ATANH_Function">ATANH</a></li>
+			    <li><a href="#AVEDEV_Function">AVEDEV</a></li>
+			    <li><a href="#AVERAGE_Function">AVERAGE</a></li>
+			    <li><a href="#AVERAGE_IGNOREZEROS_Function">AVERAGE_IGNOREZEROS</a></li>
+			    <li><a href="#CEILING_Function">CEILING</a></li>
+			    <li><a href="#CELL_Function">CELL</a></li>
+			    <li><a href="#CHOOSE_Function">CHOOSE</a></li>
+			    <li><a href="#COLUMN_Function">COLUMN</a></li>
+			    <li><a href="#COLUMNS_Function">COLUMNS</a></li>
+			    <li><a href="#CONCATENATE_Function">CONCATENATE</a></li>
+			    <li><a href="#CORREL_Function">CORREL</a></li>
+			    <li><a href="#COS_Function">COS</a></li>
+			    <li><a href="#COSH_Function">COSH</a></li>
+			    <li><a href="#COUNT_Function">COUNT</a></li>
+			    <li><a href="#COUNTA_Function">COUNTA</a></li>
+			    <li><a href="#COUNTBLANK_Function">COUNTBLANK</a></li>
+			    <li><a href="#CROSSFROMABOVE_Function">CROSSFROMABOVE</a></li>
+			    <li><a href="#CROSSFROMBELOW_Function">CROSSFROMBELOW</a></li>
+			    <li><a href="#CROSSOVER_Function">CROSSOVER</a></li>
+			    <li><a href="#DATE_Function">DATE</a></li>
+			    <li><a href="#DATEVALUE_Function">DATEVALUE</a></li>
+			    <li><a href="#DAY_Function">DAY</a></li>
+			    <li><a href="#DAYS360_Function">DAYS360</a></li>
+			    <li><a href="#DEVSQ_Function">DEVSQ</a></li>
+			    <li><a href="#DEGREES_Function">DEGREES</a></li>
+			    <li><a href="#EARLIESTNONZEROVALUE_Function">EARLIESTNONZEROVALUE</a></li>
+			    <li><a href="#EDATE_Function">EDATE</a></li>
+			    <li><a href="#EOMONTH_Function">EOMONTH</a></li>
+			    <li><a href="#EVEN_Function">EVEN</a></li>
+			    <li><a href="#EXP_Function">EXP</a></li>
+			    <li><a href="#FIND_Function">FIND</a></li>
+			    <li><a href="#FISHER_Function">FISHER</a></li>
+			    <li><a href="#FISHERINV_Function">FISHERINV</a></li>
+			    <li><a href="#FLOOR_Function">FLOOR</a></li>
+			    <li><a href="#FORECAST_Function">FORECAST</a></li>
+			    <li><a href="#FRACTIME_Function">FRACTIME</a></li>
+			    <li><a href="#GetCorrespondingMatch_Function">GetCorrespondingMatch</a></li>
+			    <li><a href="#HLOOKUP_Function">HLOOKUP</a></li>
+			    <li><a href="#HOUR_Function">HOUR</a></li>
+			    <li><a href="#HULL_INTERMEDIATE_Function">HULL_INTERMEDIATE</a></li>
+			    <li><a href="#HULL_RESULT_Function">HULL_RESULT</a></li>
+			    <li><a href="#IF_Function">IF</a></li>
+			    <li><a href="#INDEX_Function">INDEX</a></li>
+			    <li><a href="#INDIRECT_Function">INDIRECT</a></li>
+			    <li><a href="#INT_Function">INT</a></li>
+			    <li><a href="#INTDATE_Function">INTDATE</a></li>
+			    <li><a href="#ISBLANK_Function">ISBLANK</a></li>
+			    <li><a href="#ISEMPTY_Function">ISEMPTY</a></li>
+			    <li><a href="#ISERR_Function">ISERR</a></li>
+			    <li><a href="#ISEVEN_Function">ISEVEN</a></li>
+			    <li><a href="#ISLOGICAL_Function">ISLOGICAL</a></li>
+			    <li><a href="#ISNULL_Function">ISNULL</a></li>
+			    <li><a href="#ISNUMBER_Function">ISNUMBER</a></li>
+			    <li><a href="#ISODD_Function">ISODD</a></li>
+			    <li><a href="#ISRANGE_Function">ISRANGE</a></li>
+			    <li><a href="#ISREF_Function">ISREF</a></li>
+			    <li><a href="#ISSAMETIMETOHOUR_Function">ISSAMETIMETOHOUR</a></li>
+			    <li><a href="#ISSAMETIMETOMILLISECOND_Function">ISSAMETIMETOMILLISECOND</a></li>
+			    <li><a href="#ISSAMETIMETOMINUTE_Function">ISSAMETIMETOMINUTE</a></li>
+			    <li><a href="#ISSAMETIMETOSECOND_Function">ISSAMETIMETOSECOND</a></li>
+			    <li><a href="#ISTEXT_Function">ISTEXT</a></li>
+			    <li><a href="#LARGE_Function">LARGE</a></li>
+			    <li><a href="#LEN_Function">LEN</a></li>
+			    <li><a href="#LEFT_Function">LEFT</a></li>
+			    <li><a href="#LN_Function">LN</a></li>
+			    <li><a href="#LOG_Function">LOG</a></li>
+			    <li><a href="#LOG10_Function">LOG10</a></li>
+			    <li><a href="#MATCH_Function">MATCH</a></li>
+			    <li><a href="#MAX_Function">MAX</a></li>
+			    <li><a href="#MAXL_Function">MAXL</a></li>
+			    <li><a href="#MEDIAN_Function">MEDIAN</a></li>
+			    <li><a href="#MID_Function">MID</a></li>
+			    <li><a href="#MILLISECOND_Function">MILLISECOND</a></li>
+			    <li><a href="#MIN_Function">MIN</a></li>
+			    <li><a href="#MING_Function">MING</a></li>
+			    <li><a href="#MINUTE_Function">MINUTE</a></li>
+			    <li><a href="#MINZ_Function">MINZ</a></li>
+			    <li><a href="#MOD_Function">MOD</a></li>
+			    <li><a href="#MODE_Function">MODE</a></li>
+			    <li><a href="#MONTH_Function">MONTH</a></li>
+			    <li><a href="#MOSTRECENTNONZEROVALUE_Function">MOSTRECENTNONZEROVALUE</a></li>
+			    <li><a href="#MROUND_Function">MROUND</a></li>
+			    <li><a href="#MROUNDDOWN_Function">MROUNDDOWN</a></li>
+			    <li><a href="#MROUNDUP_Function">MROUNDUP</a></li>
+			    <li><a href="#NETWORKDAYS_Function">NETWORKDAYS</a></li>
+			    <li><a href="#NMATCH_Function">NMATCH</a></li>
+			    <li><a href="#NORM.DIST_Function">NORM.DIST</a></li>
+			    <li><a href="#NORM.S.DIST_Function">NORM.S.DIST</a></li>
+			    <li><a href="#NOW_Function">NOW</a></li>
+			    <li><a href="#ODD_Function">ODD</a></li>
+			    <li><a href="#OFFSET_Function">OFFSET</a></li>
+			    <li><a href="#OR_Function">OR</a></li>
+			    <li><a href="#PEARSON_Function">PEARSON</a></li>
+			    <li><a href="#PERCENTILE_Function">PERCENTILE</a></li>
+			    <li><a href="#PERCENTRANK_Function">PERCENTRANK</a></li>
+			    <li><a href="#PROB_Function">PROB</a></li>
+			    <li><a href="#RADIANS_Function">RADIANS</a></li>
+			    <li><a href="#RAND_Function">RAND</a></li>
+			    <li><a href="#RANDINT_Function">RANDINT</a></li>
+			    <li><a href="#RIGHT_Function">RIGHT</a></li>
+			    <li><a href="#ROUND_Function">ROUND</a></li>
+			    <li><a href="#ROUNDDOWN_Function">ROUNDDOWN</a></li>
+			    <li><a href="#ROUNDUP_Function">ROUNDUP</a></li>
+			    <li><a href="#ROW_Function">ROW</a></li>
+			    <li><a href="#ROWS_Function">ROWS</a></li>
+			    <li><a href="#SEARCH_Function">SEARCH</a></li>
+			    <li><a href="#SECOND_Function">SECOND</a></li>
+			    <li><a href="#SIGN_Function">SIGN</a></li>
+			    <li><a href="#SIN_Function">SIN</a></li>
+			    <li><a href="#SINH_Function">SINH</a></li>
+			    <li><a href="#SLOPE_Function">SLOPE</a></li>
+			    <li><a href="#SMALL_Function">SMALL</a></li>
+			    <li><a href="#SQRT_Function">SQRT</a></li>
+			    <li><a href="#STANDARDIZE_Function">STANDARDIZE</a></li>
+			    <li><a href="#STDEV_Function">STDEV</a></li>
+			    <li><a href="#STDEVP_Function">STDEV.P</a></li>
+			    <li><a href="#STDEVS_Function">STDEV.S</a></li>
+			    <li><a href="#SUM_Function">SUM</a></li>
+			    <li><a href="#SUMPRODUCT_Function">SUMPRODUCT</a></li>
+			    <li><a href="#TAN_Function">TAN</a></li>
+			    <li><a href="#TANH_Function">TANH</a></li>
+			    <li><a href="#TEXT_Function">TEXT</a></li>
+			    <li><a href="#TIME_Function">TIME</a></li>
+			    <li><a href="#TIMEVALUE_Function">TIMEVALUE</a></li>
+			    <li><a href="#TODAY_Function">TODAY</a></li>
+			    <li><a href="#TRIMMEAN_Function">TRIMMEAN</a></li>
+			    <li><a href="#TRUNC_Function">TRUNC</a></li>
+			    <li><a href="#TRUNCHOUR_Function">TRUNCHOUR</a></li>
+			    <li><a href="#TRUNCMIN_Function">TRUNCMIN</a></li>
+			    <li><a href="#TRUNCSEC_Function">TRUNCSEC</a></li>
+			    <li><a href="#TYPE_Function">TYPE</a></li>
+			    <li><a href="#VALUE_Function">VALUE</a></li>
+			    <li><a href="#VLOOKUP_Function">VLOOKUP</a></li>
+			    <li><a href="#WEEKDAY_Function">WEEKDAY</a></li>
+			    <li><a href="#WEEKNUM_Function">WEEKNUM</a></li>
+			    <li><a href="#WEIGHTEDMOVINGAVERAGE_Function">WEIGHTEDMOVINGAVERAGE</a></li>
+			    <li><a href="#WORKDAY_Function">WORKDAY</a></li>
+			    <li><a href="#YEAR_Function">YEAR</a></li>
+			    <li><a href="#ZTEST_Function">ZTEST</a></li>
+			</ul>
+		</li>
+    </ul>
+</section>
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p>This documentation page documents all of the available Spreadsheet functions.</p>
+
+    <p>Spreadsheet functions are entered into cells. They take parameters and data, make calculations on the parameters and data, then return the result to the same cell they are entered in.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ExternalFunctionReference">External Function Reference</h2>
+    <div class="member-link">[<a href="#ExternalFunctionReference">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For more detailed information about any of the Spreadsheet functions documented on this page, refer to the <a href="https://support.office.com/en-US/article/Excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb" target="_blank" rel="noopener noreferrer" >Microsoft Excel Function Reference</a>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingSpreadsheetFunctions">Using Spreadsheet Functions</h2>
+    <div class="member-link">[<a href="#UsingSpreadsheetFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To use a Spreadsheet function, use the <b>=</b> sign to indicate a formula, enter the function name, then enter the parameters and data enclosed in parentheses (). Separate each parameter with a comma ",". The formula does not only have to contain a single function, it can contain anything that can be part of a formula as described on the <a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php">Working with Spreadsheets</a> documentation page.</p>
+
+    <p>Spreadsheet function parameters can be Numbers, Cell and Range References, Other Functions, Text Strings (the text needs to be in quotation marks), Dates and Times, Logical Values (TRUE, FALSE), and Error Values. </p>
+
+    <p>Any of these types can be used as a parameter as long as they are compatible with or can be converted to the parameter type specified in the function format in the list of Spreadsheet Functions. Parameters can also use operators. Use a cell or range reference as a parameter or as part of an expression, if you want to use data for a function parameter that is located in a cell or a range.</p>
+
+    <section class="h3">
+        <h3>Examples:</h3>
+        <p><span class="SpreadsheetFormula">=SQRT(4)</span> This function can be entered in any cell and will return 2.</p>
+        <p><span class="SpreadsheetFormula">=SQRT(B1)</span> Returns the square root of the value in cell B1.</p>
+        <p><span class="SpreadsheetFormula">=SQRT(4+B1)</span> Returns the square root of 4 plus the value in cell B1. The parameter to this function is called an <em>Expression</em>.</p>
+        <p><span class="SpreadsheetFormula">=SUM(F4:F24)</span> Returns the sum of cells F4 through F24.</p>
+    </section>
+    <p>The format for some functions specify an Expression. An expression is just like a formula. Except that it is not prefixed with an =. Therefore, anything you can use in a formula can be used in an expression. See the <a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php">Working with Spreadsheets</a> documentation page for information on formulas and expressions. The simplest form of an expression is a single number ( Example: 5). A logical expression is one that returns TRUE if it evaluates to a nonzero number and  returns FALSE if it evaluates to 0.</p>
+
+    <p>If the function format shows a parameter in brackets ([ ]), then that parameter is optional.</p>
+
+    <p>When a parameter specifies a list, then use a reference to a range or a comma separated list.</p>
+
+    <p>A Text String is text and can be a single character or a series of characters enclosed in quotation ("") marks.</p>
+
+    <p>In the function declarations below, the parameter name <b>Value</b> means  any type of numeric value, text or a cell reference.</p>
+</section>
+
+<section class="h2">
+    <h2 id="FunctionParameterDelimiter">Function Parameter Delimiter</h2>
+    <div class="member-link">[<a href="#FunctionParameterDelimiter">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p>The delimiter to use between parameters specified in Spreadsheet functions can either be a comma (,) or a semicolon (;). Example using comma delimiter: <span class="SpreadsheetFormula">=SUM(1 , 2)</span>. Example using semicolon delimiter: <span class="SpreadsheetFormula">=SUM(1,5 ; 10)</span>.</p>
+
+    <p>Which delimiter is used  depends upon the <b>Region</b> setting in <b class="menu_item">Global Settings &gt;&gt; Spreadsheet Settings</b>. If the region you have set uses a comma (,) as a decimal point  delimiter, then the  Spreadsheet function parameter delimiter will be a  semicolon (;). Keep this in mind when reviewing the functions below. The functions below use a comma (,) delimiter between parameters.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DefiningARangeOfData">Defining a Range of Data</h2>
+    <div class="member-link">[<a href="#DefiningARangeOfData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Some Spreadsheet functions can take a range of data as a parameter. This is specified when two cell references are separated by a colon (:). For these functions, the first cell reference (before the colon) specifies the upper left-hand corner of the range and the second cell reference (after the colon) specifies the lower right-hand corner of the range. This conceptual rectangle must always be drawn from upper left to lower right. As such, the row number specified by the second cell reference must always be equal to or greater than the row number specified by the first cell reference.</p>
+
+    <p>Specifying a range of data within a single column is well understood, as the range is easily viewable and creates a single column of data. It is, however, still necessary that the row values are increasing. For example, specifying the range <b>B3:B5</b> is valid, but <b>B5:B3</b> is not and will give a #REF error.</p>
+
+    <p>It is also possible to specify a range of data that crosses between columns. When doing this, the data that is contained with the rectangle formed from the first cell reference to the second cell reference is the range of data that will be used. For example, specifying a range of <b>B3:C5</b> will include the data in the following cells: B3, B4, B5, C3, C4, and C5. As noted above, giving a range of values where the row number of the second cell reference is less than the row of the first cell reference will result in a #REF error.</p>
+
+    <div style="text-align: center;"><a href="../images/spreadsheetdatarange.png" rel="lightbox"><img  alt="SpreadsheetDataRange" src="../images/spreadsheetdatarange.png" class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="SerialDateTimeValues">Serial DateTime Values</h2>
+    <div class="member-link">[<a href="#SerialDateTimeValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart Spreadsheets store Dates and Times as double precision floating point numbers which represent the time since 1899-Dec-30 at 00:00:00. This date-time is not in any particular time zone. It can represent any time zone. To set the time zone, refer to  <a href="index219e.html?page=doc/TimeZone.html">Time Zone</a>.</p>
+
+    <p>The integer part of the floating-point number represents the days and the fractional part, to the right of the decimal place, represents the time. This is exactly the same way as Excel and OpenOffice Calc represent date and Time values. This is called a Serial Date Time value.<p>
+
+    <p>Note that due to historical issues Excel does have a mistake in that it includes February 29, 1900, which did not exist. Therefore, Excel has 1899-12-31 as day 0 and there will be a 1 day discrepancy between Sierra Chart and Excel for dates prior to March 1, 1900.</p>
+
+    <p>The <b>Spreadsheet Study</b>, <b>Spreadsheet System/Alert</b> and the <b>Spreadsheet System for Trading</b> studies output Date-Time values to column <b>A</b> using this format.</p>
+
+    <p><b>Time Examples:</b> 12 PM would be represented as <em>.5</em>. 1 minute or 00:01:00 would be represented as  <em>1.0/1440.0</em>.  There are 1440 minutes in a day.</p>
+    
+    <p>00:01:10 would be represented as <em>70.0/86400.0</em>. There are 86,400 seconds in a day. 1 second evaluates to 1.15740740E-5.</p>
+
+    <p><b> Date Examples:</b> 1900-Jan-2 would be represented as 3.</p>
+
+    <section class="h3">
+        <h3>Comparing Serial Date-Time Values</h3>
+
+        <p>Since Date-Time values are stored as floating-point numbers, they are imprecise when you are performing comparisons to them. Two Date-Time values that are the same when they are formatted as a Date and Time string, may not give you an exact comparison due to floating point error. You can see the exact values if you format the spreadsheet cell containing the Date-Time value to a number with 9 decimal places.</p>
+
+        <p>A solution when doing an equals comparison between 2 Date-Time values between two different sheets in the Spreadsheet, is to use a formula similar to the following: <span class="SpreadsheetFormula">=ROUND(A3,8)=ROUND(Sheet2!A3,8)</span> .</p>
+    </section>
+    
+    <p>Sierra Chart internally stores Date-Time values in the same way as  Spreadsheets do. For further information, refer  to the  <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> data type page.</p>
+    
+
+    <p>Any of the available <a href="#AvailableFunctions">Spreadsheet Functions</a> which accept a Serial DateTime Value parameter or return a Serial DateTime Value can be used when working with Date-Time values in a Spreadsheet. </p>
+</section>
+
+<section class="h2">
+    <h2 id="UsingTheEquivalentOf_COUNTIF_AVERAGEIF_MAXIF_MINIF_SUMIF">Using the Equivalent of COUNTIF, AVERAGEIF, MAXIF, MINIF, SUMIF</h2>
+    <div class="member-link">[<a href="#UsingTheEquivalentOf_COUNTIF_AVERAGEIF_MAXIF_MINIF_SUMIF">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The Spreadsheets in  Sierra Chart do not support the following functions: <b>COUNTIF, AVERAGEIF, MAXIF, MINIF, SUMIF</b>.</p>
+
+    <p>    These are not supported due to the complexity of supporting criteria text.   However, there is an alternative method to  effectively perform these functions. </p> 
+
+   <p> The  <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php">Spreadsheet  Studies</a>  support up to 60 formula columns. It is possible to use additional formula columns with the basic supported Spreadsheet functions to accomplish the same result as these  unsupported functions. </p>
+
+
+    <p> The formula <b class="SpreadsheetFormula">=COUNTIF(AA3:AA12,">50")</b> can be implemented in the Sierra Chart Spreadsheets as follows:</p>
+
+    <p>In one of the available  Spreadsheet formula columns, by default K through Z, enter this formula: <b class="SpreadsheetFormula">=IF(AA3>50,1,0)</b>. Assuming the prior formula was entered in formula column X, then enter <b class="SpreadsheetFormula">=SUM(X3:X12)</b> in another formula column. The result of this last formula will be the same as <b class="SpreadsheetFormula">=COUNTIF(AA3:AA12,">50")</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AvailableFunctions">Available Functions</h2>
+    <div class="member-link">[<a href="#AvailableFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <br>
+
+    <table class="doc">
+        <tr>
+            <th>Format</th>
+            <th>Description</th>
+        </tr>
+        <tr id="ABS_Function">
+            <td><span class="SpreadsheetFormula"><b>ABS</b>(Number)</span> <a href="#ABS_Function">(Link)</a></td>
+            <td>The absolute value of the given Number.  If the given Number is an integer, the return value will be an integer.  If the given Number value is a double, the return value will be a double.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ACOS_Function">
+            <td><span class="SpreadsheetFormula"><b>ACOS</b>(Number)</span> <a href="#ACOS_Function">(Link)</a></td>
+            <td>The arc cosine of the given Number, in radians [0,pi].  Returns #NUM! if the given Number is outside the range of [-1,1].  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ACOSH_Function">
+            <td><span class="SpreadsheetFormula"><b>ACOSH</b>(Number)</span> <a href="#ACOSH_Function">(Link)</a></td>
+            <td>Returns the inverse hyperbolic cosine of the given Number.  Returns #NUM! if the given Number is less than 1.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ADDRESS_Function">
+            <td><span class="SpreadsheetFormula"><b>ADDRESS</b>(row, column, [ref_type], [ref_style], [sheet_name])</span> <a href="#ADDRESS_Function">(Link)</a></td>
+            <td>Returns an address represented as a text string.  Returns #NUM! if row or column are less than 1. 
+                <br>
+                <br>
+                ref_type:
+                <br>1 = Absolute Row and Column.
+                <br>2 = Absolute Row, Relative Column.
+                <br>3 = Relative Row, Absolute Column.
+                <br>4 = Relative Row and Column.
+            </td>
+        </tr>
+        <tr id="AND_Function">
+            <td><span class="SpreadsheetFormula"><b>AND</b>(Boolean, [...])</span> <a href="#AND_Function">(Link)</a></td>
+
+            <td>Returns TRUE if and only if all of the given parameters are equal to TRUE.  Otherwise, returns FALSE.  Returns #VALUE! if one of the given parameters could not be interpreted as a boolean value. Examples:<br> 
+                <span class="SpreadsheetFormula">=AND(E3 > 10, AA3 = 100)</span>  (Spreadsheet Study formula)<br>
+                <span class="SpreadsheetFormula">=AND(C > 100, SG1 &lt; 50)</span>  (Simple Alert formula)<br>
+                <span class="SpreadsheetFormula">=OR(AND(H > 100, SG1 > 100),AND(L &lt; 80,SG1 &lt; -100))</span>  (Simple Alert formula)
+            </td>
+        </tr>
+        <tr id="ASIN_Function">
+            <td><span class="SpreadsheetFormula"><b>ASIN</b>(Number)</span> <a href="#ASIN_Function">(Link)</a></td>
+            <td>Returns the arc sine of the given Number, in radians [0,pi]. Returns #NUM! if the given Number is outside the range of [-1,1].  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ASINH_Function">
+            <td><span class="SpreadsheetFormula"><b>ASINH</b>(Number)</span> <a href="#ASINH_Function">(Link)</a></td>
+            <td>Returns the inverse hyperbolic sine of the given Number.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ATAN_Function">
+            <td><span class="SpreadsheetFormula"><b>ATAN</b>(Number)</span> <a href="#ATAN_Function">(Link)</a></td>
+            <td>The arc tangent of the given Number, in radians [0,pi].  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ATANH_Function">
+            <td><span class="SpreadsheetFormula"><b>ATANH</b>(Number)</span> <a href="#ATANH_Function">(Link)</a></td>
+            <td>Returns the inverse hyperbolic tangent of the given Number.  Returns #NUM! if the given Number greater or equal than 1 or less or equal that -1.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="AVEDEV_Function">
+            <td><span class="SpreadsheetFormula"><b>AVEDEV</b>(Number, [...])</span> <a href="#AVEDEV_Function">(Link)</a></td>
+            <td>Returns the average of the absolute deviations of the numbers from their mean.  Returns #VALUE! if no numbers are found.</td>
+        </tr>
+        <tr id="AVERAGE_Function">
+            <td><span class="SpreadsheetFormula"><b>AVERAGE</b>(Number, [...])</span> <a href="#AVERAGE_Function">(Link)</a></td>
+            <td>The average of all of the given Numbers.  Null values are not counted as part of the average.  Returns #NUM! if all the given Numbers are null.  Returns #VALUE! if one of the Numbers given could not be interpreted as a number.</td>
+        </tr>
+        <tr id="AVERAGE_IGNOREZEROS_Function">
+            <td><span class="SpreadsheetFormula"><b>AVERAGE_IGNOREZEROS</b>(Number, [...])</span> <a href="#AVERAGE_IGNOREZEROS_Function">(Link)</a></td>
+            <td>The average of all of the given Numbers, except for numbers that are equal to zero.  Null values are not counted as part of the average.  Returns #NUM! if all the given Numbers are either null or zero.  Returns #VALUE! if one of the Numbers given could not be interpreted as a number.</td>
+        </tr>
+        <tr id="CEILING_Function">
+            <td><span class="SpreadsheetFormula"><b>CEILING</b>(Number, [Multiple = 1])</span> <a href="#CEILING_Function">(Link)</a></td>
+            <td>Rounds the given Number up to the next number that is a multiple of the given Multiple, if the given Number does not already satisfy this condition.  If Multiple is 1 or not given, the given Number is rounded up to the next whole integer.  If Multiple is an integer, the returned value will be an integer, otherwise it will be a double.  Returns #NUM! if the given Multiple is zero or negative.  Returns #VALUE! if either the given Number or Multiple is not a number.</td>
+        </tr>
+        <tr id="CELL_Function">
+            <td><span class="SpreadsheetFormula"><b>CELL</b>(Text, [ReferenceOrRange])</span> <a href="#CELL_Function">(Link)</a></td>
+            <td>Returns information about a cell.  If the first argument is "col" or "row" the column or row index is returned.  If the first argument is "contents" the content of the cell is returned, if it is "type" the value type will be returned ("b" for an empty cell, "l" for a cell with constant text and "v" for other values).  If the second argument is provided it is either a cell reference to return information about the referenced cell or a cell range, to return information about the first cell of a range.</td>
+        </tr>
+        <tr id="CHOOSE_Function">
+            <td><span class="SpreadsheetFormula"><b>CHOOSE</b>(ValueNumber, Value1, [Value2, [...]])</span> <a href="#CHOOSE_Function">(Link)</a></td>
+            <td>Returns one of the given Value arguments based on the given ValueNumber.  If ValueNumber is 1, the first given Value is returned.  If a cell range references is given as a value, each of the cells within that range are treated as individual values for this function.  For example, CHOOSE(3, A1:A3) will return the value of A3.  Returns #REF! if the given ValueNumber is outside of the range of the values given.  Returns #VALUE! if the given ValueNumber is not a number.</td>
+        </tr>
+        <tr id="COLUMN_Function">
+            <td><span class="SpreadsheetFormula"><b>COLUMN</b>([Reference])</span> <a href="#COLUMN_Function">(Link)</a></td>
+            <td>Returns the absolute (not relative) number (not index) of the column of the given Reference.  If Reference is not given, then the number of the column containing this formula is returned.  Returns #VALUE! if Reference is given and is not a cell reference value type.  The absolute number of the first column (A) is 1.</td>
+        </tr>
+        <tr id="COLUMNS_Function">
+            <td><span class="SpreadsheetFormula"><b>COLUMNS</b>(Range)</span> <a href="#COLUMNS_Function">(Link)</a></td>
+            <td>Returns the number of columns in the given Range.  Returns #VALUE! if the given Range is not a cell range reference value type.</td>
+        </tr>
+        <tr id="CONCATENATE_Function">
+            <td><span class="SpreadsheetFormula"><b>CONCATENATE</b>(Text, [...])</span> <a href="#CONCATENATE_Function">(Link)</a></td>
+            <td>Combines the given Text values, in the order that they are given, and returns the combination as a single text value.  Returns #VALUE! if one of the given parameters could not be interpreted as a text value.</td>
+        </tr>
+        <tr id="CORREL_Function">
+            <td><span class="SpreadsheetFormula"><b>CORREL</b>()</span> <a href="#CORREL_Function">(Link)</a></td>
+            <td>See: PEARSON</td>
+        </tr>
+        <tr id="COS_Function">
+            <td><span class="SpreadsheetFormula"><b>COS</b>(Number)</span> <a href="#COS_Function">(Link)</a></td>
+            <td>The cosine of the given number.  Returns #VALUE! if the given number is not a number.</td>
+        </tr>
+        <tr id="COSH_Function">
+            <td><span class="SpreadsheetFormula"><b>COSH</b>(Number)</span> <a href="#COSH_Function">(Link)</a></td>
+            <td>Returns the hyperbolic cosine of the given Number.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="COUNT_Function">
+            <td><span class="SpreadsheetFormula"><b>COUNT</b>([Values, [...]])</span> <a href="#COUNT_Function">(Link)</a></td>
+            <td>Returns the number of numeric values given in the parameters list.  If a range is given in the list, this counts the numeric values in the range.  Numeric values are values that have a value type of integer or double.</td>
+        </tr>
+        <tr id="COUNTA_Function">
+            <td><span class="SpreadsheetFormula"><b>COUNTA</b>([Values, [...]])</span> <a href="#COUNTA_Function">(Link)</a></td>
+            <td>Returns the number of non-empty values given in the parameters list.  If a range is given in the list, this counts the non-empty values in the range.</td>
+        </tr>
+        <tr id="COUNTBLANK_Function">
+            <td><span class="SpreadsheetFormula"><b>COUNTBLANK</b>([Values, [...]])</span> <a href="#COUNTBLANK_Function">(Link)</a></td>
+            <td>Returns the number of empty/blank values given in the parameter list.  If a range is given in the list, this counts the empty values in the range.</td>
+        </tr>
+        <tr id="CROSSFROMABOVE_Function">
+            <td><p><span class="SpreadsheetFormula"><b>CROSSFROMABOVE</b>(range1, range2)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSFROMABOVE</b>(AA3:AA4,AB3:AB4)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSFROMABOVE</b>(E3:E5, AA3:AA5)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSFROMABOVE</b>(ID1.SG1@3:ID1.SG1@5,  ID2.SG1@3:ID2.SG1@5)</span>
+                    <br><br>Study Alert Condition Formula Example: <span class="SpreadsheetFormula"><b>CROSSFROMABOVE</b>(SG1, SG2)</span> <a href="#CROSSFROMABOVE_Function">(Link)</a>
+            </td>
+            <td>Compares 2 ranges of values. Each range needs to contain at least 2 numbers and can contain 3 numbers.  For the greatest accuracy use a range which includes 3 values with this function. Determines if the first range of values crosses the second range from above. Returns a boolean value:<br>
+                <b>TRUE</b>	= The first range crosses the second Range from above.<br>
+                <b>FALSE</b>	= The first range does not cross the second Range from above.<br>
+                <br>
+                If one of the range of values  for the crossover needs to be a constant, then it needs to refer to a study Subgraph  or formula column which contains a constant value.
+            </td>
+        </tr>
+        <tr id="CROSSFROMBELOW_Function">
+            <td><p><span class="SpreadsheetFormula"><b>CROSSFROMBELOW</b>(range1, range2)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSFROMBELOW</b>(AA3:AA4,AB3:AB4)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSFROMBELOW</b>(E3:E5, AA3:AA5)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSFROMBELOW</b>(ID1.SG1@3:ID1.SG1@5,  ID2.SG1@3:ID2.SG1@5)</span>
+                    <br><br>Study Alert Condition Formula Example: <span class="SpreadsheetFormula"><b>CROSSFROMBELOW</b>(SG1, SG2)</span> <a href="#CROSSFROMBELOW_Function">(Link)</a>
+            </td>
+
+            <td>Compares 2 ranges of values. Each range needs to contain at least 2 numbers and can contain 3 numbers.  For the greatest accuracy use a range which includes 3 values with this function. Determines if the first range of values crosses the second range from below. Returns a boolean value:<br>
+                <b>TRUE</b>	= The first range crosses the second Range from below.<br>
+                <b>FALSE</b>	= The first range does not cross the second Range from below.<br>
+                <br>
+                If one of the range of values  for the crossover needs to be a constant, then it needs to refer to a study Subgraph  or formula column which contains a constant value.
+            </td>
+        </tr>
+        <tr id="CROSSOVER_Function">
+            <td><p><span class="SpreadsheetFormula"><b>CROSSOVER</b>(range1, range2)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSOVER</b>(AA3:AA4, AB3:AB4)</span>
+                    <br><br>Example: <span class="SpreadsheetFormula">=<b>CROSSOVER</b>(ID0.SG4@3:ID0.SG4@5, ID1.SG1@3:ID1.SG1@5)</span>
+                    <br><br>Study Alert Condition Formula Example: <span class="SpreadsheetFormula"><b>CROSSOVER</b>(SG1, SG2)</span> These study Subgraph identifiers are automatically interpreted as ranges.
+
+                    <br><br>Study Alert Condition Formula example with multiple instances: <span class="SpreadsheetFormula"> =<b>OR</b>( CROSSOVER(C, -500), CROSSOVER(C, -1000), CROSSOVER(C, 500), CROSSOVER(C, 1000) )</span>  <a href="#CROSSOVER_Function">(Link)</a>
+            </td>
+            <td>This function compares 2 ranges of values. Each range needs to contain at least 2 numbers and can contain 3 numbers. For the greatest accuracy, use a range which includes 3 values with this function.  Returns a value which indicates the type of crossing:<br>
+                <b>1</b> = The first Range crosses the second Range from below.<br>
+                <b>-1</b> = The first Range crosses the second Range from above.<br>
+                <b>0</b> = The ranges do not cross each other.<br>
+                <br>
+                If one of the range of values  for the crossover needs to be a constant, then it needs to refer to a study Subgraph  or formula column which contains a constant value.
+            </td>
+        </tr>
+        <tr id="DATE_Function">
+            <td><span class="SpreadsheetFormula"><b>DATE</b>(Year, Month, Day)</span> <a href="#DATE_Function">(Link)</a></td>
+            <td>Returns a <a href="#SerialDateTimeValues">Serial DateTime Value</a> for the given Year, Month, and Day. Returns #NUM! if the given Year, Month, and Day does not specify a valid day.  Returns #VALUE! if any of the parameters could not be interpreted as integer values.</td>
+        </tr>
+        <tr id="DATEVALUE_Function">
+            <td><span class="SpreadsheetFormula"><b>DATEVALUE</b>(Text)</span> <a href="#DATEVALUE_Function">(Link)</a></td>
+            <td>Returns a <a href="#SerialDateTimeValues">Serial DateTime Value</a> for the given Text, interpreted as a date string. The Text must be given in the form "m/d/YYYY" including quotes, where m is the numerical month (one or two digits), d is numerical day (one or two digits) and YYYY is the year - For example "3/22/2018". Returns #NUM! if the given Text cannot be interpreted as a valid date.  Returns #VALUE! if the given Text cannot be interpreted as text value.</td>
+        </tr>
+        <tr id="DAY_Function">
+            <td><span class="SpreadsheetFormula"><b>DAY</b>(<a href="#SerialDateTimeValues">Serial DateTime Value</a>)</span> <a href="#DAY_Function">(Link)</a></td>
+            <td>Returns the day of the month for the given serial date-time value. 1 is returned for the first day of the month.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date value.</td>
+        </tr>
+        <tr id="DAYS360_Function">
+            <td><span class="SpreadsheetFormula"><b>DAYS360</b>()</span> <a href="#DAYS360_Function">(Link)</a></td>
+            <td>Returns the number of days between the start date and the end date using a 360-day year, 30 day month calendar that is used in accounting systems.</td>
+        </tr>
+        <tr id="DEVSQ_Function">
+            <td><span class="SpreadsheetFormula"><b>DEVSQ</b>(Numbers, [...])</span> <a href="#DEVSQ_Function">(Link)</a></td>
+            <td>Returns the sum of the squares of deviations from the average.  Returns #VALUE! if no numbers are found.</td>
+        </tr>
+        <tr id="DEGREES_Function">
+            <td><span class="SpreadsheetFormula"><b>DEGREES</b>(Radians)</span> <a href="#DEGREES_Function">(Link)</a></td>
+            <td>Converts the given Radians into degrees about a unit circle.  Returns #VALUE! if the given Radians is not a number.</td>
+        </tr>
+        <tr id="EARLIESTNONZEROVALUE_Function">
+            <td><span class="SpreadsheetFormula"><b>EARLIESTNONZEROVALUE</b>(Range)</span> <a href="#EARLIESTNONZEROVALUE_Function">(Link)</a></td>
+            <td>Returns the last non-zero value in the given Range.  Empty cells are considered equivalent to zero.  Returns a null value if all of the values in the Range are either null or zero.</td>
+        </tr>
+        <tr id="EDATE_Function">
+            <td><span class="SpreadsheetFormula"><b>EDATE</b>(Date, Months)</span> <a href="#EDATE_Function">(Link)</a></td>
+            <td>Returns the serial date that is the given number of Months after the specified Date. If Months is less than 0, the return value is the date that is the indicated number of months before the given Date.  If the same day of the month does not exist in the resulting month, then the last day of the resulting month is returned.  Returns #VALUE! if the arguments are not integers.</td>
+        </tr>
+        <tr id="EOMONTH_Function">
+            <td><span class="SpreadsheetFormula"><b>EOMONTH</b>(Date, Months)</span> <a href="#EOMONTH_Function">(Link)</a></td>
+            <td>Returns the serial date number of the last day of the month that is a number of months after the specified date.  If the second argument is less than 0, the return value is the date that is the last day of the month the indicated number of months before the date.  Returns #VALUE! if the arguments are not integers.</td>
+        </tr>
+        <tr id="EVEN_Function">
+            <td><span class="SpreadsheetFormula"><b>EVEN</b>(Number)</span> <a href="#EVEN_Function">(Link)</a></td>
+            <td>If the number is not even, rounds it up to the next even number.  If the Number is less than 0 it will be rounded away from 0.  Returns #VALUE! if the argument is not a number.</td>
+        </tr>
+        <tr id="EXP_Function">
+            <td><span class="SpreadsheetFormula"><b>EXP</b>(Number)</span> <a href="#EXP_Function">(Link)</a></td>
+            <td>Returns the value of e (mathematical constant) raised to the given Number.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="FIND_Function">
+            <td><span class="SpreadsheetFormula"><b>FIND</b>(SubString, FullString, [StartPosition = 1])</span> <a href="#FIND_Function">(Link)</a></td>
+            <td>Returns the starting position of the first instance of the given SubString text within the given FullString text.  The return value is 1-based, meaning if the given SubString is found at the very beginning of the given FullString, the return value will be 1.  By default, FIND begins the search for the given SubString at the beginning of the given FullString, but this can be moved by specifying a value greater than 1 for the optional StartPosition parameter.  The search is case-sensitive (use <a href="#SEARCH_Function">SEARCH</a> for a case-insensitive search).  Returns 1 if the given SubString is empty.  Returns #VALUE! if no match is found, or the given StartPosition is beyond the length of the given FullString, or one of the strings is not a text value, or the given StartPosition is not an integer value.  Returns #NUM! if the given StartPosition is less than 1.</td>
+        </tr>
+        <tr id="FISHER_Function">
+            <td><span class="SpreadsheetFormula"><b>FISHER</b>(Number)</span> <a href="#FISHER_Function">(Link)</a></td>
+            <td>Returns the Fisher Transformation for a given number.  Returns #NUM! if the Number is less than or equal to -1, or greater than or equal to 1.  Returns #VALUE! if the argument is not a number.</td>
+        </tr>
+        <tr id="FISHERINV_Function">
+            <td><span class="SpreadsheetFormula"><b>FISHERINV</b>(Number)</span> <a href="#FISHERINV_Function">(Link)</a></td>
+            <td>Returns the Inverse Fisher Transformation for a given number.  Returns #VALUE! if the argument is not a number.</td>
+        </tr>
+        <tr id="FLOOR_Function">
+            <td><span class="SpreadsheetFormula"><b>FLOOR</b>(Number, [Multiple = 1])</span> <a href="#FLOOR_Function">(Link)</a></td>
+            <td>Rounds the given Number down to the next number that is a multiple of the given Multiple, if the given Number does not already satisfy this condition.  If Multiple is 1 or not given, the given Number is rounded down to the next whole integer.  If Multiple is an integer, the returned value will be an integer, otherwise it will be a double.  Returns #NUM! if the given Multiple is zero or negative.  Returns #VALUE! if either the given Number or Multiple is not a number.</td>
+        </tr>
+        <tr id="FORECAST_Function">
+            <td><span class="SpreadsheetFormula"><b>FORECAST</b>(X, KnownYs, KnownXs)</span> <a href="#FORECAST_Function">(Link)</a></td>
+            <td>Returns a predicted value using linear regression based on the known X and known Y values. Refer to <a href="index7f0c.html?page=doc/SpreadsheetExampleFormulasAndUsage.php#UsingTheForecastFunction">Using the FORECAST Function</a> for more information.</td>
+        </tr>
+        <tr id="FRACTIME_Function">
+            <td><span class="SpreadsheetFormula"><b>FRACTIME</b>(DateTime)</span> <a href="#FRACTIME_Function">(Link)</a></td>
+            <td>Returns the fractional time part of the given DateTime value.  Returns 0 if the given DateTime value is empty.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="GetCorrespondingMatch_Function">
+            <td><span class="SpreadsheetFormula"><b>GetCorrespondingMatch</b>(SearchColumn, SearchValue, NearestOrExact, SearchRangeOrderingFlag, SameValueResolution, ReturnResultColumn, ReturnResultRowOffset)</span> <a href="#GetCorrespondingMatch_Function">(Link)</a></td>
+
+            <td> 
+            
+                <p>Searches a range of values for the SearchValue and returns a reference to the corresponding cell at the same found row index, or an offset, in another column range.</p>
+
+                <p><b>SearchColumn</b>:  The column range to be searched. Example: AA3:AA102.</p>
+
+                <p><b>SearchValue</b>: The value to search for in the SearchColumn. Only doubles, integers and TRUE/FALSE are supported. Specifying a text value returns an error. Searching for text is not supported. Any value given for <b>SearchValue</b> that cannot be interpreted as a double, integer or TRUE/FALSE value results in a #VALUE! error. Example: 50.0.</p>
+                
+                
+                <p><b>NearestOrExact</b>:  0 = exact match. 1 = nearest match. While iterating through the ordered elements, and an exact match cannot be found and the  <b>NearestOrExact</b> parameter is set to 1, the nearest match will instead be returned. Example: 0.</p>
+                
+                <p><b>SearchRangeOrderingFlag</b>: 1 = SearchColumn values are ascending. (Lowest numbered row has the lowest numbers. Highest numbered row has higher numbers).
+
+                    <br><br>0 = SearchColumn is unordered. The first found match will be used.  Using a value of 0 delivers lower performance. So it is best to always use 1 or -1 if possible.
+
+                    <br><br>-1 = SearchColumn values are descending. (Lowest numbered row has the highest numbers. Highest numbered row has lowest numbers).
+                    <br><br>Example: 0.
+                </p>
+                
+                <p><b>SameValueResolution</b>: When there are values which repeat within an ordered SearchColumn, this parameter indicates how to resolve that. 1 = Use higher numbered row index. 0 = Use lower numbered row index. Example: 0.</p>
+               
+ 
+                <p><b>ReturnResultColumn</b>: The column range where a reference will be returned for the corresponding row where the match was found. This parameter can be the same as <b>SearchColumn</b>. Example: AA3:AA102.</p>
+
+                <p><b>ReturnResultRowOffset</b>: A positive or negative row offset for the row returned by ReturnResultColumn. Example: 0.</p>
+                
+                <p>Example: <span class="SpreadsheetFormula">= GetCorrespondingMatch(AA$3:AA$402, 9, 1, 0, 0, AA$3:AA$402, 0)</span></p>
+            </td>
+        </tr>
+        <tr id="HLOOKUP_Function">
+            <td><span class="SpreadsheetFormula"><b>HLOOKUP</b>(Value, Range, RowInRange, [ApproximateMatch])</span> <a href="#HLOOKUP_Function">(Link)</a></td>
+            <td>Searches for the given <b>Value</b> in the top-most row of the given <b>Range</b>, and returns a reference the the cell at the same column of the found value, at the row at the given <b>RowInRange</b>.  
+            <br> <br>
+            <b>RowInRange</b> is a row index within the given <b>Range</b>, where 1 is the top-most row of the given <b>Range</b>.  
+            <br> <br>
+            If <b>ApproximateMatch</b> is given as <b>TRUE</b>, and no exact match is found, the last value within the given <b>Range</b> that is less than the given <b>Value</b> will be used.  
+            <br> <br>            
+            When <b>ApproximateMatch</b> is given as <b>TRUE</b>, the values in the top-most row of the given <b>Range</b> are assumed to be in ascending order.  
+            <br> <br>
+            If <b>ApproximateMatch</b> is not given or given as <b>FALSE</b> and the given <b>Value</b> is not found, <b>#N/A!</b> is returned. 
+            <br> <br>
+            Returns <b>#VALUE!</b> if the given <b>Value</b> cannot be resolved to an actual value (such as if a range reference is given), or the given <b>RowInRange</b> cannot be interpreted as an integer value, or the given <b>ApproximateMatch</b> cannot be interpreted as a boolean value. 
+            <br> <br>
+            Returns <b>#REF!</b> if the given <b>Range</b> is not valid, or the given <b>RowInRange</b> is beyond the number of rows in the given <b>Range</b>. 
+            <br> <br>
+            Returns <b>#NUM!</b> if the given <b>RowInRange</b> is less than 1.</td>
+        </tr>
+
+        <tr id="HOUR_Function">
+            <td><span class="SpreadsheetFormula"><b>HOUR</b>(<a href="#SerialDateTimeValues">Serial DateTime Value</a>)</span> <a href="#HOUR_Function">(Link)</a></td>
+            <td>Returns the hour for the given <a href="#SerialDateTimeValues">Serial DateTime Value</a>. This function will return values in the range 0-23.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date-time value.</td>
+        </tr>
+
+        <tr id="HULL_INTERMEDIATE_Function">
+            <td><span class="SpreadsheetFormula"><b>HULL_INTERMEDIATE</b>(Reference, Value)</span> <a href="#HULL_INTERMEDIATE_Function">(Link)</a></td>
+            <td>Returns the Intermediate calculation values for the Hull Moving Average. This is meant to be used in combination with the HULL_RESULT function, with this function in one column and the HULL_RESULT function in another column. The <b>Reference</b> is to the first (top) cell of the data and the <b>Value</b> defines the length of the Moving Average (the number of cells to include). The <b>Value</b> used in this function needs to match the value used in the HULL_RESULT function. Empty cells are considered to have a value of 0. Returns #VALUE if the first parameter is not a reference to a cell, or if the second parameter is not an integer, or if any of the values within the input range is not a number. Returns #NUM if the Value parameter is not large enough for a complete calculation.</td>
+        </tr>
+
+        <tr id="HULL_RESULT_Function">
+            <td><span class="SpreadsheetFormula"><b>HULL_RESULT</b>(Reference, Value)</span> <a href="#HULL_RESULT_Function">(Link)</a></td>
+            <td>Returns the final calculation values for the Hull Moving Average. This is meant to be used in combination with the HULL_INTERMEDIATE function, with this function in one column and the HULL_INTERMEDIATE function in another column. The <b>Reference</b> is to the first (top) cell of the HULL_INTERMEDIATE column and the <b>Value</b> defines the length of the Moving Average (the number of cells to include). The <b>Value</b> used in this function needs to match the value used in the HULL_INTERMEDIATE function. Empty cells are considered to have a value of 0. Returns #VALUE if the first parameter is not a reference to a cell, or if the second parameter is not an integer, or if any of the values within the input range is not a number. Returns #NUM if the Value parameter is not large enough for a complete calculation.</td>
+        </tr>
+
+        <tr id="IF_Function">
+            <td><span class="SpreadsheetFormula"><b>IF</b>(Condition, TrueValue, FalseValue)</span> <a href="#IF_Function">(Link)</a></td>
+            <td>Returns the value of TrueValue if the given Condition is equal to TRUE.  Returns the value of FalseValue if the given Condition is equal to FALSE.  Returns #VALUE! if the condition could not be interpreted as a boolean value.
+                <br><br>
+                Multiple IF statements can be strung together to create a series of IF/ELSE IF functions. To do this, simply put additional IF statements for the FalseValue arguments. For example: <span class="SpreadsheetFormula">IF(A &gt; B, 1, IF(B &gt; C, 2, 0))</span>. This would evaluate as: if A is greater than B then 1, else if B is greater than C then 2, else 0.</td>
+        </tr>
+
+        <tr id="INDEX_Function">
+            <td><span class="SpreadsheetFormula"><b>INDEX</b>(Range, Index)</span> or <span class="SpreadsheetFormula"><b>INDEX</b>(Range, Row, Column)</span> <a href="#INDEX_Function">(Link)</a></td>
+            <td>Returns a cell reference within the given Range, either at the given Index or the given Row and Column within the Range.  If using Index (only one parameter after Range) on a Range with multiple rows and columns, the items are ordered down by rows first, and then across by columns.  
+                <br> <br>
+                Index, Row, and Column are all 1-based, meaning using a value of 1 will return the first value.  Returns #REF! if the given Index, Row, or Column is outside of the given Range.  Returns #VALUE! if the given Range is not a cell reference range type, or if the given Index, Row, or Column could not be interpreted as integer values.</td>
+        </tr>
+        
+        <tr id="INDIRECT_Function"> 
+            <td><span class="SpreadsheetFormula"><b>INDIRECT</b>(ReferenceText)</span> <a href="#INDIRECT_Function">(Link)</a></td> 
+            <td>Returns a reference specified by the given ReferenceText.  The ReferenceText must be a text value that can be parsed as a standard reference as used in formulas.  This function only supports basic cell references, basic cell range references, and basic column range references; advanced references are not supported.  Returns a #REF! error if the given ReferenceText cannot be parsed or is otherwise invalid.  Returns #VALUE! if the given ReferenceText is not a text value. 
+                <br> <br> 
+                An example ReferenceText is <b>"E3"</b>.  ReferenceText can be created by a formula.  For example, if cell <b>H5</b> contains the number 3, then the following formula will return <b>E3</b>: <span class="SpreadsheetFormula">CONCATENATE("E", H5)</span>. 
+            </td> 
+        </tr> 
+
+        
+        <tr id="INT_Function">
+            <td><span class="SpreadsheetFormula"><b>INT</b>(Number)</span> <a href="#INT_Function">(Link)</a></td>
+            <td>Rounds the given Number down to the next whole integer.  Returns #VALUE! if the given Number is not a number. Returns 0 if Number is an empty value,  like a reference to a cell that contains no data. </td>
+        </tr>
+        <tr id="INTDATE_Function">
+            <td><span class="SpreadsheetFormula"><b>INTDATE</b>(DateTime)</span> <a href="#INTDATE_Function">(Link)</a></td>
+            <td>Returns the integer date part of the given DateTime value.  Returns 0 if the given DateTime value is empty.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="ISBLANK_Function">
+            <td><span class="SpreadsheetFormula"><b>ISBLANK</b>(Value)</span> <a href="#ISBLANK_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Value is blank, which means no value type.  Otherwise returns FALSE.</td>
+        </tr>        
+        <tr id="ISEMPTY_Function">
+            <td><span class="SpreadsheetFormula"><b>ISEMPTY</b>(Value)</span> <a href="#ISEMPTY_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Value is empty, which means no value type.  Otherwise returns FALSE.</td>
+        </tr>
+        <tr id="ISERR_Function">
+            <td><span class="SpreadsheetFormula"><b>ISERR</b>(Value)</span> <a href="#ISERR_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Value is an error value type.  Otherwise returns FALSE.
+            <br> <br>
+            IFERROR(A, B, C) can be written as <span class="SpreadsheetFormula">IF(ERR(A), B, C)</span>.
+            <br> <br>
+            IFNA(A, B, C) can be written as  <span class="SpreadsheetFormula">IF(A=#N/A, B, C)</span>.
+            </td>
+        </tr>
+        <tr id="ISEVEN_Function">
+            <td><span class="SpreadsheetFormula"><b>ISEVEN</b>(Number)</span> <a href="#ISEVEN_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Number is an even number.  Otherwise returns FALSE.  If the given Number is a double value, only the integer part is checked.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ISLOGICAL_Function">
+            <td><span class="SpreadsheetFormula"><b>ISLOGICAL</b>(Value)</span> <a href="#ISLOGICAL_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Value is a boolean value type.  Otherwise returns FALSE.</td>
+        </tr>
+        <tr id="ISNULL_Function">
+            <td><span class="SpreadsheetFormula"><b>ISNULL</b>(Number)</span> <a href="#ISNULL_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Value is null, which means no value type.  Otherwise returns FALSE.</td>
+        </tr>
+        <tr id="ISNUMBER_Function">
+            <td><span class="SpreadsheetFormula"><b>ISNUMBER</b>(Number)</span> <a href="#ISNUMBER_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Value is an integer or double value type.  Otherwise returns FALSE.</td>
+        </tr>
+        <tr id="ISODD_Function">
+            <td><span class="SpreadsheetFormula"><b>ISODD</b>(Number)</span> <a href="#ISODD_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Number is an odd number. Otherwise returns FALSE. If the given Number is a double value, only the integer part is checked.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="ISRANGE_Function">
+            <td><span class="SpreadsheetFormula"><b>ISRANGE</b>(Value)</span> <a href="#ISRANGE_Function">(Link)</a></td>
+            <td>Returns TRUE if the type of the given Value is a range type.  Otherwise returns FALSE.</td>
+        </tr>
+        <tr id="ISREF_Function">
+            <td><span class="SpreadsheetFormula"><b>ISREF</b>(Value)</span> <a href="#ISREF_Function">(Link)</a></td>
+            <td>Returns TRUE if the type of the given Value is a reference type.  Otherwise returns FALSE.</td>
+        </tr>
+        <tr id="ISSAMETIMETOHOUR_Function">
+            <td><span class="SpreadsheetFormula"><b>ISSAMETIMETOHOUR</b>(DateTime1, DateTime2)</span> <a href="#ISSAMETIMETOHOUR_Function">(Link)</a></td>
+            <td>Returns TRUE if the time values for both of the given <a href="#SerialDateTimeValues">serial date-time values</a> are at the same time, down to the hour.  Example: comparing 12:00:00.000 to 12:59:59.999 would return TRUE, but comparing 12:59:59.999 to 13:00:00.000 would return FALSE.  The date component of both values is ignored.  Returns #VALUE! if either of the given values cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="ISSAMETIMETOMILLISECOND_Function">
+            <td><span class="SpreadsheetFormula"><b>ISSAMETIMETOMILLISECOND</b>(DateTime1, DateTime2)</span> <a href="#ISSAMETIMETOMILLISECOND_Function">(Link)</a></td>
+            <td>Returns TRUE if the time values for both of the given <a href="#SerialDateTimeValues">serial date-time values</a> are at the same time, down to the millisecond.  Example: comparing 12:00:00.000 to 12:00:00.000 would return TRUE, but comparing 12:00:00.000 to 12:00:00.001 would return FALSE.  The date component of both values is ignored.  Returns #VALUE! if either of the given values cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="ISSAMETIMETOMINUTE_Function">
+            <td><span class="SpreadsheetFormula"><b>ISSAMETIMETOMINUTE</b>(DateTime1, DateTime2)</span> <a href="#ISSAMETIMETOMINUTE_Function">(Link)</a></td>
+            <td>Returns TRUE if the time values for both of the given <a href="#SerialDateTimeValues">serial date-time values</a> are at the same time, down to the minute.  Example: comparing 12:00:00.000 to 12:00:59.999 would return TRUE, but comparing 12:00:59.999 to 12:01:00.000 would return FALSE.  The date component of both values is ignored.  Returns #VALUE! if either of the given values cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="ISSAMETIMETOSECOND_Function">
+            <td><span class="SpreadsheetFormula"><b>ISSAMETIMETOSECOND</b>(DateTime1, DateTime2)</span> <a href="#ISSAMETIMETOSECOND_Function">(Link)</a></td>
+            <td>Returns TRUE if the time values for both of the given <a href="#SerialDateTimeValues">serial date-time values</a> are at the same time, down to the second.  Example: comparing 12:00:00.000 to 12:00:00.999 would return TRUE, but comparing 12:00:00.999 to 12:00:01.000 would return FALSE.  The date component of both values is ignored.  Returns #VALUE! if either of the given values cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="ISTEXT_Function">
+            <td><span class="SpreadsheetFormula"><b>ISTEXT</b>(Value)</span> <a href="#ISTEXT_Function">(Link)</a></td>
+            <td>Returns TRUE if the given Value is a text value type.  Otherwise returns FALSE.</td>
+        </tr>
+        <tr id="LARGE_Function">
+            <td><span class="SpreadsheetFormula"><b>LARGE</b>(Numbers, NthLargest)</span> <a href="#LARGE_Function">(Link)</a></td>
+            <td>Returns the Nth largest number from an array of numbers.  The first argument is the array, while the last argument controls which number will be returned.  1 means the largest number, 2 the second largest and so on.  
+            <br> <br>
+            
+            Empty cells are not counted, TRUE will be considered as 1, FALSE as 0.  Returns #VALUE! if the last argument is larger than 1 or greater than the number of numerical values (and booleans) in the array.</td>
+        </tr>
+        <tr id="LEN_Function">
+            <td><span class="SpreadsheetFormula"><b>LEN</b>(Text)</span> <a href="#LEN_Function">(Link)</a></td>
+            <td>Returns the number of characters in the given Text string.  Returns #VALUE! if Text is not a string.</td>
+        </tr>
+        <tr id="LEFT_Function">
+            <td><span class="SpreadsheetFormula"><b>LEFT</b>(Text, Count)</span> <a href="#LEFT_Function">(Link)</a></td>
+            <td>Returns the given Count number of characters from left side of the given Text string.  If Count is greater than the length of the given Text string, then the entire string will be returned.  If Count is 0, an empty string is returned.  If the given Count is negative, then the entire length of the given Text string, except for -Count characters, will be returned.  Returns #VALUE! if Text is not a string, or Count is not an integer.</td>
+        </tr>
+        <tr id="LN_Function">
+            <td><span class="SpreadsheetFormula"><b>LN</b>(Number)</span> <a href="#LN_Function">(Link)</a></td>
+            <td>Returns the natural logarithm (using base e) of the given Number.  Returns #NUM! if the given Number is less than or equal to 0.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="LOG_Function">
+            <td><span class="SpreadsheetFormula"><b>LOG</b>(Number, [Base = 10])</span> <a href="#LOG_Function">(Link)</a></td>
+            <td>Returns the logarithm of the given Number using the given Base.  If Base is not given, the base defaults to 10.  Returns #NUM! if either the given Number or Base is less than or equal to 0.  Returns #VALUE! if either the given Number or Base is not a number.</td>
+        </tr>
+        <tr id="LOG10_Function">
+            <td><span class="SpreadsheetFormula"><b>LOG10</b>(Number)</span> <a href="#LOG10_Function">(Link)</a></td>
+            <td>Returns the logarithm of the given Number using base 10.  Returns #NUM! if the given Number is less than or equal to 0.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="MATCH_Function">
+            <td><span class="SpreadsheetFormula"><b>MATCH</b>(Number, Range, [MatchType])</span> <a href="#MATCH_Function">(Link)</a></td>
+
+            <td><span class="GeneralBackgroundHighlight">It is strongly recommended to use the new <a href="#GetCorrespondingMatch_Function" >GetCorrespondingMatch</a> function which is highly optimized and has performance 90% faster than MATCH</span>.
+                <br>
+                <br>
+                Searches an array/range for <b>Number</b> using <b>MatchType</b> as the comparison method, and returns  the one-based index into this array/range of numbers indicating the position of the match. Returns <b>#N/A!</b> if no match is found.
+                <br>
+                <br>
+                <b>MatchType</b>: This is optional and the default value is 0. It can be one of the following: 
+                <ul>
+                    <li>-1 =  Returns the index to the smallest number in the array/range that is greater than or equal to  <b>Number</b>. Array/range must be in descending order.</li>
+                    <li>0 = Returns the index  to the number in the array/range that is equal to  <b>Number</b>. </li>
+                    <li>1 =   Returns the index to the largest number in the array/range that is less than or equal to  <b>Number</b>. Array/range must be in ascending order.</li>
+                </ul>
+            </td>
+
+        </tr>
+        <tr id="MAX_Function">
+            <td><span class="SpreadsheetFormula"><b>MAX</b>(Numbers, [...])</span> <a href="#MAX_Function">(Link)</a></td>
+            <td>Returns the number with the maximum value out of all the given Numbers.  Returns #VALUE! if one of the given Numbers could not be interpreted as a number.</td>
+        </tr>
+        <tr id="MAXL_Function">
+            <td><span class="SpreadsheetFormula"><b>MAXL</b>(Value, Numbers, [...])</span> <a href="#MAXL_Function">(Link)</a></td>
+            <td>Returns the number with the maximum value out of all the given Numbers that is less than the given Value.  Returns #VALUE! if the given Value or one of the given Numbers could not be interpreted as a number.</td>
+        </tr>
+        <tr id="MEDIAN_Function">
+            <td><span class="SpreadsheetFormula"><b>MEDIAN</b>(Numbers, [...])</span> <a href="#MEDIAN_Function">(Link)</a></td>
+            <td>The median value of all of the given Numbers.  Null values are not counted as part of the median.  No value is returned if all the given Numbers are null.  Returns #VALUE! if one of the Numbers given could not be interpreted as a number.</td>
+        </tr>
+        <tr id="MID_Function">
+            <td><span class="SpreadsheetFormula"><b>MID</b>(Text, Offset, Count)</span> <a href="#MID_Function">(Link)</a></td>
+            <td>Returns the text string from the middle of the given Text string, starting at the given Offset, and including the given Count number of characters.  If Offset is 0, the result will start at the beginning of the string.  If Offset + Count is greater than the length of the given Text string, the returned text will go up to the end of the given Text string.  If Count is 0, or Offset is greater than or equal to the length of the sting, an empty string will be returned.  Returns #NUM! if the given Offset or Count is negative.  Returns #VALUE! if Text is not a text value, or if Offset or Count could not be interpreted as integer values.</td>
+        </tr>
+        <tr id="MILLISECOND_Function">
+            <td><span class="SpreadsheetFormula"><b>MILLISECOND</b>(<a href="#SerialDateTimeValues">Serial DateTime Value</a>)</span> <a href="#MILLISECOND_Function">(Link)</a></td>
+            <td>Returns the millisecond for the given <a href="#SerialDateTimeValues">Serial DateTime Value</a>.  This function will return values in the range 0-999.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="MIN_Function">
+            <td><span class="SpreadsheetFormula"><b>MIN</b>(Numbers, [...])</span> <a href="#MIN_Function">(Link)</a></td>
+            <td>Returns the number with the minimum value out of all the given Numbers.  Returns #VALUE! if one of the given Numbers could not be interpreted as a number.</td>
+        </tr>
+        <tr id="MING_Function">
+            <td><span class="SpreadsheetFormula"><b>MING</b>(Value, Numbers, [...])</span> <a href="#MING_Function">(Link)</a></td>
+            <td>Returns the number with the minimum value out of all the given Numbers that is greater than the given Value.  Returns #VALUE! if the given Value or one of the given Numbers could not be interpreted as a number.</td>
+        </tr>
+        <tr id="MINUTE_Function">
+            <td><span class="SpreadsheetFormula"><b>MINUTE</b>(<a href="#SerialDateTimeValues">Serial DateTime Value</a>)</span> <a href="#MINUTE_Function">(Link)</a></td>
+            <td>Returns the minute for the given <a href="#SerialDateTimeValues">Serial DateTime Value</a>. This function will return values in the range 0-59.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="MINZ_Function">
+            <td><span class="SpreadsheetFormula"><b>MINZ</b>(Numbers, [...])</span> <a href="#MINZ_Function">(Link)</a></td>
+            <td>Returns the number with the minimum value out of all the given Numbers that is greater than zero.  Returns #VALUE! if one of the given Numbers could not be interpreted as a number.</td>
+        </tr>
+        <tr id="MOD_Function">
+            <td><span class="SpreadsheetFormula"><b>MOD</b>(Number, Divisor)</span> <a href="#MOD_Function">(Link)</a></td>
+            <td>The remainder of the given Number divided by the given Divisor.  Returns #DIV/0! if the given Divisor is 0.  Calculates the return value using the formula Number - Divisor * INT(Number/Divisor) that gives the result when the arguments are not integers.</td>
+        </tr>
+        <tr id="MODE_Function">
+            <td><span class="SpreadsheetFormula"><b>MODE</b>(Values, [...])</span> <a href="#MODE_Function">(Link)</a></td>
+            <td>Returns the value that occurs most frequently among the given Values.  Returns the first value in the order given if multiple different values are tied for the most frequent occurrence.  Returns #N/A if there are no values that occur more than once.  Empty values are not counted.  This function works with both numeric and text values, but if there is an error value among the given values, the first error value is returned.</td>
+        </tr>
+        <tr id="MONTH_Function">
+            <td><span class="SpreadsheetFormula"><b>MONTH</b>(DateTime)</span> <a href="#MONTH_Function">(Link)</a></td>
+            <td>Returns the month for the given <a href="#SerialDateTimeValues">Serial DateTime Value</a>. 1 is returned for the first month of the year (January).  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date value.</td>
+        </tr>
+        <tr id="MOSTRECENTNONZEROVALUE_Function">
+            <td><span class="SpreadsheetFormula"><b>MOSTRECENTNONZEROVALUE</b>(Range)</span> <a href="#MOSTRECENTNONZEROVALUE_Function">(Link)</a></td>
+            <td>Returns the first non-zero value in the given Range.  Empty cells are considered equivalent to zero.  Returns a null value if all of the values in the Range are either null or zero.</td>
+        </tr>
+        <tr id="MROUND_Function">
+            <td><span class="SpreadsheetFormula"><b>MROUND</b>(Number, Multiple)</span> <a href="#MROUND_Function">(Link)</a></td>
+            <td>Rounds the given Number to the nearest number that is a multiple of the given Multiple, if the given Number does not already satisfy this condition.  If Multiple is 1, the given Number is rounded to the nearest whole integer.  If Multiple is an integer, the returned value will be an integer, otherwise it will be a double.  Returns #NUM! if the given Multiple is zero or negative.  Returns #VALUE! if either the given Number or Multiple is not a number.</td>
+        </tr>
+        <tr id="MROUNDDOWN_Function">
+            <td><span class="SpreadsheetFormula"><b>MROUNDDOWN</b>()</span> <a href="#MROUNDDOWN_Function">(Link)</a></td>
+            <td>Refer to <b>FLOOR</b>.</td>
+        </tr>
+        <tr id="MROUNDUP_Function">
+            <td><span class="SpreadsheetFormula"><b>MROUNDUP</b>()</span> <a href="#MROUNDUP_Function">(Link)</a></td>
+            <td>Refer to <b>CEILING</b>.</td>
+        </tr>
+        <tr id="NETWORKDAYS_Function">
+            <td><span class="SpreadsheetFormula"><b>NETWORKDAYS</b>(StartDate, EndDate, [Holidays])</span> <a href="#NETWORKDAYS_Function">(Link)</a></td>
+            <td>Returns work days between the given StartDate and EndDate, including both the StartDate and the EndDate, not counting weekends or the specified Holidays.</td>
+        </tr>
+        <tr id="NMATCH_Function">
+            <td><span class="SpreadsheetFormula"><b>NMATCH</b>(N, Value, Range, [MatchType])</span> <a href="#NMATCH_Function">(Link)</a></td>
+            <td>Same as <b>MATCH</b>, except the search continues until the Nth matching item is found, where <b>N</b> is a positive integer.  Searches the given <b>Range</b> for the given <b>Value</b> using <b>MatchType</b> as the comparison method.  Returns a one-based index into the given <b>Range</b> indicating the position of the match.  Returns #N/A! if <b>N</b> matches were not found.
+                <br>
+                <br>
+                <b>MatchType</b>: This is optional and the default value is 0.  It can be one of the following:
+                <ul>
+                    <li>-1 = Returns the index to the Nth smallest value in the range that is greater than or equal to the given <b>Value</b>.  Values in the given <b>Range</b> must be in descending order.</li>
+                    <li>0 = Returns the index to the Nth value in the given <b>Range</b> that is equal to the given <b>Value</b>.</li>
+                    <li>1 = Returns the index to the Nth largest value in the given <b>Range</b> that is less than or equal to the given <b>Value</b>.  Values in the given <b>Range</b> must be in ascending order.</li>
+                </ul>
+            </td>
+        </tr>
+		<tr id="NORM.DIST_Function">
+            <td><span class="SpreadsheetFormula"><b>NORM.DIST</b>(X, Mean, StdDev, Cumulative)</span> <a href="#NORM.DIST_Function">(Link)</a></td>
+            <td>Computes the the Normal Distribution for X, Mean, and StdDev. If Cumulative is set to 1, the function returns the value of the Cumulative Distribution Function (CDF). If Cumulative is set to 0, the function returns the value of the Probability Distribution Function (PDF).</td>
+        </tr>
+		<tr id="NORM.S.DIST_Function">
+            <td><span class="SpreadsheetFormula"><b>NORM.S.DIST</b>(X, Cumulative)</span> <a href="#NORM.S.DIST_Function">(Link)</a></td>
+            <td>Computes the Standard Normal Distribution for X (with Mean 0 and StdDev 1). If Cumulative is set to 1, the function returns the value of the Cumulative Distribution Function (CDF). If Cumulative is set to 0, the function returns the value of the Probability Distribution Function (PDF).</td>
+        </tr>
+        <tr id="NOW_Function">
+            <td><span class="SpreadsheetFormula"><b>NOW</b>()</span> <a href="#NOW_Function">(Link)</a></td>
+            <td>Returns the current local date and time as a <a href="#SerialDateTimeValues">Serial DateTime Value</a>. The serial date-time value 2.0 represents 00:00:00 (midnight), January 1st, 1900, and 2.5 represents 12:00:00 (noon) for that same day.</td>
+        </tr>
+        <tr id="ODD_Function">
+            <td><span class="SpreadsheetFormula"><b>ODD</b>(Number)</span> <a href="#ODD_Function">(Link)</a></td>
+            <td>If the number is not odd, rounds it up to the next odd number.  If the Number is less than 0 it will be rounded away from 0.  Returns #VALUE! if the argument is not a number.</td>
+        </tr>
+        <tr id="OFFSET_Function">
+            <td><span class="SpreadsheetFormula"><b>OFFSET</b>(From, Rows, Columns, [Height], [Width])</span> <a href="#OFFSET_Function">(Link)</a></td>
+            <td>Returns the reference or the cell range calculated from a reference or a cell range (passed as the first argument) and some offset values.</td>
+        </tr>
+        <tr id="OR_Function">
+            <td><span class="SpreadsheetFormula"><b>OR</b>(Boolean, [...])</span> <a href="#OR_Function">(Link)</a></td>
+
+            <td>Returns FALSE if and only if all of the given parameters are equal to FALSE.  Otherwise returns TRUE.  Returns #VALUE! if one of the given parameters could not be interpreted as a boolean value. Examples:<br> 
+                <span class="SpreadsheetFormula">=OR(E3 &lt; 10, E3 &gt; 15)</span> (Spreadsheet Study formula)<br>
+                <span class="SpreadsheetFormula">=OR(SG1 &gt; 40, SG1 &lt; 20)</span> (Simple Alert formula)<br>
+                <span class="SpreadsheetFormula">=OR(AND(H > 100, SG1 > 100),AND(L &lt; 80,SG1 &lt; -100))</span> (Simple Alert formula)</td>
+        </tr>
+        <tr id="PEARSON_Function">
+            <td><span class="SpreadsheetFormula"><b>PEARSON</b>(Array1, Array2)</span> <a href="#PEARSON_Function">(Link)</a></td>
+            <td>Returns the Pearson product moment correlation coefficient between -1.0 and 1.0.  Returns #VALUE! if the size of the arrays are not equal or the arrays are empty.  Returns #DIV/0! for certain arrays.</td>
+        </tr>
+        <tr id="PERCENTILE_Function">
+            <td><span class="SpreadsheetFormula"><b>PERCENTILE</b>(Numbers, K)</span> <a href="#PERCENTILE_Function">(Link)</a></td>
+            <td>Returns the K-th percentile of values in a cell range.  Uses linear interpolation between values if K is not a multiple of 1 / (n - 1), where n is the number of the numerical values found in the cell range.  Returns #VALUE! if K is not a number.  Returns #NUM! if K is less than 0 or greater than 1.</td>
+        </tr>
+        <tr id="PERCENTRANK_Function">
+            <td><span class="SpreadsheetFormula"><b>PERCENTRANK</b>(Array, X, [Significance])</span> <a href="#PERCENTRANK_Function">(Link)</a></td>
+            <td>Returns the rank of a value in a data set as a percentage of the data set size.  If the value can be found in between two values of the set, the return value will be calculated by linear interpolation.  Returns #VALUE! if the number is less than the smallest or greater than the biggest number.  Returns #NUM! if the array is empty.  If the third argument is provided it will control how many digits will be used to compare values.  If the third argument is less than 1 the #NUM! error will be returned.</td>
+        </tr>
+        <tr id="PROB_Function">
+            <td><span class="SpreadsheetFormula"><b>PROB</b>(Values, Probability, LowerLimit, [UpperLimit])</span> <a href="#PROB_Function">(Link)</a></td>
+            <td>Calculates the probability that values in a range are between two limits.  If the upper limit is omitted calculates the probability that values in the range are equal to the lower limit.  If the Numbers and the Probabilities contain different number of data points the function will return #N/A error.  If any probability value is less or equal to 0 or greater than 1.0 the function will return #NUM! error.  If the total of the probability is not 1.0 the functions returns #NUM! error.</td>
+        </tr>
+        <tr id="RADIANS_Function">
+            <td><span class="SpreadsheetFormula"><b>RADIANS</b>(Degrees)</span> <a href="#RADIANS_Function">(Link)</a></td>
+            <td>Converts the given Degrees into radians about a unit circle.  Returns #VALUE! if the given Degrees is not a number.</td>
+        </tr>
+        <tr id="RAND_Function">
+            <td><span class="SpreadsheetFormula"><b>RAND</b>()</span> Or <span class="SpreadsheetFormula"><b>RAND</b>(Low, High)</span> <a href="#RAND_Function">(Link)</a></td>
+            <td>Generates a random decimal number.  If no arguments are given, returns a random decimal number from 0.0 to 1.0.  Returns #ARGS! if only one argument is given.  If the two arguments Low and High are given, returns a random decimal number from Low to High.  Returns #NUM! if Low is greater than High.  Returns #VALUE if the given Low or High could not be interpreted as numbers.</td>
+        </tr>
+        <tr id="RANDINT_Function">
+            <td><span class="SpreadsheetFormula"><b>RANDINT</b>()</span> Or <span class="SpreadsheetFormula"><b>RANDINT</b>(Low, High)</span> <a href="#RANDINT_Function">(Link)</a></td>
+            <td>Generates a random integer number.  If the single argument Count is given, returns a randomly selected integer from 1 to Count.  Returns #NUM! if Count is less than 1.  If the two arguments Low and High are given, returns a randomly selected integer from Low to High.  Returns #NUM! if Low is greater than High.  Returns #VALUE! if Count, Low, or High could not be interpreted as integer values.</td>
+        </tr>
+        <tr id="RIGHT_Function">
+            <td><span class="SpreadsheetFormula"><b>RIGHT</b>(Text, Count)</span> <a href="#RIGHT_Function">(Link)</a></td>
+            <td>Returns the given Count number of characters from right side of the given Text string.  If Count is greater than the length of the given Text string, then the entire string will be returned.  If Count is 0, an empty string is returned.  If the given Count is negative, then the entire length of the given Text string, except for -Count characters, will be returned.  Returns #VALUE! if Text is not a string, or Count is not an integer.</td>
+        </tr>
+
+        <tr id="ROUND_Function">
+            <td><span class="SpreadsheetFormula"><b>ROUND</b>(Number, [Digits = 0])</span> <a href="#ROUND_Function">(Link)</a></td>
+            <td>Rounds the given Number to the nearest number with the number of given Digits.  If Digits is 0 or not given, the given Number is rounded to the nearest whole integer.  If Digits is positive, the given Number is rounded to the nearest number with that many decimal digits.  Example: ROUND(1.235,1) = 1.2; ROUND(1.235,2) = 1.24.  If Digits is negative, the given Number is rounded to the nearest number that is a multiple of 10^(-Digits).  Example: ROUND(1235, -1) = 1240; ROUND(1235, -2) = 1200.  If Digits >= 0, the returned value will be an integer, otherwise it will be a double.  Returns #VALUE! if the given Number is not a number, or if the given Digits (when given) is not an integer.</td>
+        </tr>
+        <tr id="ROUNDDOWN_Function">
+            <td><span class="SpreadsheetFormula"><b>ROUNDDOWN</b>(Number, [Digits = 0])</span> <a href="#ROUNDDOWN_Function">(Link)</a></td>
+            <td>Rounds the given Number down to the next number with the number of given Digits, if the given Number does not already satisfy this condition.  Rounding down means closer to 0, so a positive number rounded down will be less than or equal to the given Number, and a negative number rounded down will be greater than or equal to the given Number.  If Digits is 0 or not given, the given Number is rounded down to the next whole integer.  If Digits is positive, the given Number is rounded down to the next number with that many decimal digits.  Example: ROUNDDOWN(1.235,1) = 1.2; ROUNDDOWN(1.235,2) = 1.23.  If Digits is negative, the given Number is rounded down to the next number that is a multiple of 10^(-Digits).  Example: ROUNDDOWN(1235, -1) = 1230; ROUNDDOWN(1235, -2) = 1200.  If Digits >= 0, the returned value will be an integer, otherwise it will be a double.  Returns #VALUE! if the given Number is not a number, or if the given Digits (when given) is not an integer.</td>
+        </tr>
+        <tr id="ROUNDUP_Function">
+            <td><span class="SpreadsheetFormula"><b>ROUNDUP</b>(Number, [Digits = 0])</span> <a href="#ROUNDUP_Function">(Link)</a></td>
+            <td>Rounds the given Number up to the next number with the number of given Digits, if the given Number does not already satisfy this condition.  Rounding up means farther away from 0, so a positive number rounded up will be greater than or equal to the given Number, and a negative number rounded up will be less than or equal to the given Number.  If Digits is 0 or not given, the given Number is rounded up to the next whole integer.  If Digits is positive, the given Number is rounded up to the next number with that many decimal digits.  Example: ROUNDUP(1.235,1) = 1.3; ROUNDUP(1.235,2) = 1.24.  If Digits is negative, the given Number is rounded up to the next number that is a multiple of 10^(-Digits).  Example: ROUNDUP(1235, -1) = 1240; ROUNDUP(1235, -2) = 1300.  If Digits >= 0, the returned value will be an integer, otherwise it will be a double.  Returns #VALUE! if the given Number is not a number, or if the given Digits (when given) is not an integer.</td>
+        </tr>
+        <tr id="ROW_Function">
+            <td><span class="SpreadsheetFormula"><b>ROW</b>([Reference])</span> <a href="#ROW_Function">(Link)</a></td>
+            <td>Returns the absolute (not relative) number (not index) of the row of the given Reference.  If Reference is not given, then the number of the row containing this formula is returned.  Returns #VALUE! if Reference is given and is not a cell reference value type.  The absolute number of the first row (1) is 1.</td>
+        </tr>
+
+        <tr id="ROWS_Function">
+            <td><span class="SpreadsheetFormula"><b>ROWS</b>(Range)</span> <a href="#ROWS_Function">(Link)</a></td>
+            <td>Returns the number of rows in the given Range.  Returns #VALUE! if the given Range is not a cell range reference value type.</td>
+        </tr>
+        <tr id="SEARCH_Function">
+            <td><span class="SpreadsheetFormula"><b>SEARCH</b>(SubString, FullString, [StartPosition = 1])</span> <a href="#SEARCH_Function">(Link)</a></td>
+            <td>Returns the starting position of the first instance of the given SubString text within the given FullString text.  The return value is 1-based, meaning if the given SubString is found at the very beginning of the given FullString, the return value will be 1.  By default, SEARCH begins the search for the given SubString at the beginning of the given FullString, but this can be moved by specifying a value greater than 1 for the optional StartPosition parameter.  The search is case-insensitive (use <a href="#FIND_Function">FIND</a> for a case-sensitive search).  Returns 1 if the given SubString is empty.  Returns #VALUE! if no match is found, or the given StartPosition is beyond the length of the given FullString, or one of the strings is not a text value, or the given StartPosition is not an integer value.  Returns #NUM! if the given StartPosition is less than 1.</td>
+        </tr>
+        <tr id="SECOND_Function">
+            <td><span class="SpreadsheetFormula"><b>SECOND</b>(<a href="#SerialDateTimeValues">Serial DateTime Value</a>)</span> <a href="#SECOND_Function">(Link)</a></td>
+            <td>Returns the second for the given <a href="#SerialDateTimeValues">Serial DateTime Value</a>. This function will return values in the range 0-59.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date-time value.</td>
+        </tr>
+        <tr id="SIGN_Function">
+            <td><span class="SpreadsheetFormula"><b>SIGN</b>(Number)</span> <a href="#SIGN_Function">(Link)</a></td>
+            <td>Returns 1 if the given Number is positive, -1 if the given Number is negative, or 0 if the given Number is zero.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="SIN_Function">
+            <td><span class="SpreadsheetFormula"><b>SIN</b>(Number)</span> <a href="#SIN_Function">(Link)</a></td>
+            <td>The sine of the given number.  Returns #VALUE! if the given number is not a number.</td>
+        </tr>
+        <tr id="SINH_Function">
+            <td><span class="SpreadsheetFormula"><b>SINH</b>(Number)</span> <a href="#SINH_Function">(Link)</a></td>
+            <td>Returns the hyperbolic sine of the given Number.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="SLOPE_Function">
+            <td><span class="SpreadsheetFormula"><b>SLOPE</b>(KnownYs, KnownXs)</span> <a href="#SLOPE_Function">(Link)</a></td>
+            <td>
+                <p>Returns the slope of the linear regression line through a set of known X and Y values.  The first parameter is a reference to a range of cells containing the known Y values, and the second parameter is a reference to a range of cells containing the known X values.  Only numeric values in the given ranges will be used.  Returns #NUM! if the number of known X and Y values do not match.  Returns #DIV/0! if no numeric values are given, or the slope is vertical.</p>
+
+                <p><b>Example:</b><br>
+                    <span class="SpreadsheetFormula">=<b>SLOPE</b>(E3:E12, A3:A12)</span><br>
+                    This formula will calculate the slope of the last 10 bar Closes in relation the the date-times of those bars, when used in context of the the Spreadsheet study.  For this example, the range E3:E12 contains the Close values of the last 10 bars, and the range A3:A12 contains the corresponding date-time values for those same 10 bars.  The result will be a positive value when the Close values are generally ascending over time, and a negative value when the Close values are generally descending.</p>
+            </td>
+        </tr>
+        <tr id="SMALL_Function">
+            <td><span class="SpreadsheetFormula"><b>SMALL</b>(Numbers, NthSmallest)</span> <a href="#SMALL_Function">(Link)</a></td>
+            <td>Returns the Nth smallest number from an array of numbers.  The first argument is the array, while the last argument controls which number will be returned.  1 means the smallest number, 2 the second smallest and so on.  Empty cells are not counted, TRUE will be considered as 1, FALSE as 0.  Returns #VALUE! if the last argument is smaller than 1 or greater than the number of numerical values (and booleans) in the array.</td>
+        </tr>
+        <tr id="SQRT_Function">
+            <td><span class="SpreadsheetFormula"><b>SQRT</b>(Numbers)</span> <a href="#SQRT_Function">(Link)</a></td>
+            <td>The square root of the given Number.  Returns #NUM! if the given Number is negative.  Returns #VALUE! if the given Number is not a number.</td>
+        </tr>
+        <tr id="STANDARDIZE_Function">
+            <td><span class="SpreadsheetFormula"><b>STANDARDIZE</b>(X, Mean, StandardDev)</span> <a href="#STANDARDIZE_Function">(Link)</a></td>
+            <td>Returns the normalized value from a distribution characterized by the given Mean and StandardDev.  The equation for the normalized value is [ (X - Mean) / StandardDev ].  Returns #NUM! if the given StandardDev is less than or equal to 0.</td>
+        </tr>
+        <tr id="STDEV_Function">
+            <td><span class="SpreadsheetFormula"><b>STDEV</b>(Numbers, [...])</span> <a href="#STDEV_Function">(Link)</a></td>
+            <td>Refer to <b>STDEV.S</b>.</td>
+        </tr>
+        <tr id="STDEVP_Function">
+            <td><span class="SpreadsheetFormula"><b>STDEV.P</b>(Numbers, [...])</span> <a href="#STDEVP_Function">(Link)</a></td>
+            <td>Returns the standard deviation of a population.  Empty values are ignored.  Returns #VALUE! if one of the Numbers could not be interpreted as a number, or if there are fewer than 2 numbers in the arguments.</td>
+        </tr>
+        <tr id="STDEVS_Function">
+            <td><span class="SpreadsheetFormula"><b>STDEV.S</b>(Numbers, [...])</span> <a href="#STDEVS_Function">(Link)</a></td>
+            <td>Returns the standard deviation of a sample.  Empty values are ignored.  Returns #VALUE! if one of the Numbers could not be interpreted as a number, or if there are fewer than 2 numbers in the arguments.  For the formula used, refer to <a href = "https://support.microsoft.com/en-us/office/stdev-function-51fecaaa-231e-4bbb-9230-33650a72c9b0" Target="_blank" rel="noopener noreferrer">STDEV</a>.</td>
+        </tr>
+        <tr id="SUM_Function">
+            <td><span class="SpreadsheetFormula"><b>SUM</b>(Numbers, [...])</span> <a href="#SUM_Function">(Link)</a></td>
+            <td>The total of all the numbers given added together.  If all the given Numbers are integer values, then the result will be an integer value.  Otherwise the result will be a double value.  Returns #VALUE! if one of the given Numbers could not be interpreted as a number.</td>
+        </tr>
+        <tr id="SUMPRODUCT_Function">
+            <td><span class="SpreadsheetFormula"><b>SUMPRODUCT</b>(Range1, [Range2, ...])</span> <a href="#SUMPRODUCT_Function">(Link)</a></td>
+            <td>Multiplies the corresponding cell values in all of the given ranges, and then returns the sum of those products.  For example, if three ranges are given, the values of the first cells in all three ranges will be multiplied together; that product will be added to the product of the second cell in all three ranges, and so on until the last cell of all three ranges.  Any cells that do not contain a numeric value are treated as having a value of zero.  Returns #VALUE! if any of the arguments are not cell range reference.  Returns #NUM! if all the ranges do not have the same number of cells.</td>
+        </tr>
+        <tr id="TAN_Function">
+            <td><span class="SpreadsheetFormula"><b>TAN</b>(Numbers)</span> <a href="#TAN_Function">(Link)</a></td>
+            <td>The tangent of the given number.  Returns #VALUE! if the given number is not a number.</td>
+        </tr>
+        <tr id="TANH_Function">
+            <td><span class="SpreadsheetFormula"><b>TANH</b>(Numbers)</span> <a href="#TANH_Function">(Link)</a></td>
+            <td>The hyperbolic tangent of the given number.  Returns #VALUE! if the given number is not a number.</td>
+        </tr> 
+
+        <tr id="TEXT_Function">
+            <td><span class="SpreadsheetFormula"><b>TEXT</b>(Value, Format)</span> <a href="#TEXT_Function">(Link)</a></td>
+            <td>Returns the given <b>Value</b> as a text value. The given <b>Format</b> text is used for formatting numeric values. It is optional and has no effect on other value types. 
+                <br><br>
+                To format a number with a specific number of decimal places, use a format such as ".000" or ".###". For each "0" following the decimal point in the Format, that many decimal points will be displayed, even if they are insignificant. For example: TEXT(0.05, "0.000") will return "0.050". For each number sign (#) following the decimal point in the Format, that many decimal points will be displayed, except for trailing zeros. For example: TEXT(0.05, "0.###") will return "0.05". 
+                <br><br>
+                These two methods can be combined such that ".00##" will format numbers with a minimum of two decimal digits and a maximum of four decimal digits. Values will be rounded to the maximum number of decimal digits that can be shown.
+                <br><br>
+                Zeros placed before the decimal point indicate to use leading zeros for the whole number. For example: TEXT(2.5, "000.##") will return "002.5".
+                <br><br>
+                Number signs (#) before the decimal point have no effect. The decimal point in the Format text must match the global setting that specifies the decimal point character. The decimal point character used in the returned value will match the global setting.</td>
+        </tr>   
+
+        <tr id="TIME_Function">
+            <td><span class="SpreadsheetFormula"><b>TIME</b>(Hour, Minute, Second, [Millisecond = 0])</span> <a href="#TIME_Function">(Link)</a></td>
+            <td>Returns a <a href="#SerialDateTimeValues">Serial DateTime Value</a> for the given Hour, Minute, Second, and Millisecond.  If Millisecond is not given, a value of 0 is used for the millisecond portion.  Returns #NUM! if the given Hour, Minute, Second, and Millisecond does not specify a valid time.  Returns #VALUE if any of the parameters cannot be interpreted as integer values.
+            <br><br>
+            Here is an example of a formula to use in one of the formula columns at Sheet row 3 which returns TRUE(1) when the time value   in the Date-Time column of the Sheet used by the Spreadsheet Study at the corresponding row is between the times 9:30:00 and 9:34:59
+<span class="SpreadsheetFormula">=AND(FRACTIME(A3)&gt;=TIME(9, 29, 59, 750), FRACTIME(A3)&lt;TIME(9, 34, 59, 250))</span>
+
+            <br><br>
+            Milliseconds are used to make this an accurate comparison due to floating-point error.
+            </td>
+        </tr>
+
+        <tr id="TIMEVALUE_Function">
+            <td><span class="SpreadsheetFormula"><b>TIMEVALUE</b>(Text)</span> <a href="#TIMEVALUE_Function">(Link)</a></td>
+            <td>Returns a <a href="#SerialDateTimeValues">Serial DateTime Value</a> for the given Text, interpreted as a time string. Returns #NUM! if the given Text cannot be interpreted as a valid time.  Returns #VALUE if the given Text cannot be interpreted as text value.</td>
+        </tr>  
+        <tr id="TODAY_Function">
+            <td><span class="SpreadsheetFormula"><b>TODAY</b>()</span> <a href="#TODAY_Function">(Link)</a></td>
+            <td>Returns the current local date as a <a href="#SerialDateTimeValues">Serial DateTime Value</a>.  A serial date value is the number of days since 1899-12-30 (day 0). The serial date value for January 1st, 1900 is 2.</td>
+        </tr>
+        <tr id="TRIMMEAN_Function">
+            <td><span class="SpreadsheetFormula"><b>TRIMMEAN</b>(Range, Percent)</span> <a href="#TRIMMEAN_Function">(Link)</a></td>
+            <td>Sorts the values in the given Range, and returns the average of the inner values, excluding a percentage of the outer values (the extremes).  The number of excluded values is equal to the number of values in the range, multiplied by the given Percent, rounded down to the nearest multiple of 2.  This way an equal number of values will be excluded from both the high and and the low end of the range of values.  Cells with no value are not counted as part of the values in the range.  Returns #NUM! if there are either no values to average, or the given Percent is less than zero or greater than one.  Returns #VALUE! if the given Range contains any non-numeric values.</td>
+        </tr>  
+        <tr id="TRUNC_Function">
+            <td><span class="SpreadsheetFormula"><b>TRUNC</b>(Number, [Digits = 0])</span> <a href="#TRUNC_Function">(Link)</a></td>
+            <td>Returns the given Number truncated to the given number of Digits.  If the given number of Digits is 0 or not specified, then the Number is truncated to a whole number.  If the given number of Digits is greater than 0, then the given Number is truncated to that many decimal digits.  If the given number of Digits is less than 0, then the given Number is truncated to the multiple of 10^(-Digits).  Returns #VALUE! if the given Number is not a number, or the given Digits is not an integer.</td>
+        </tr>  
+        <tr id="TRUNCHOUR_Function">
+            <td><span class="SpreadsheetFormula"><b>TRUNCHOUR</b>(DateTime, [Hours = 1])</span> <a href="#TRUNCHOUR_Function">(Link)</a></td>
+            <td>Returns the given DateTime truncated down to the exact hour.  If Hours is greater than 1, the given DateTime is truncated down to the interval of the given Hours (e.g. 2 hours, 3 hours, etc.).  Returns #NUM! if the given Hours is less than 1.  Returns #VALUE! if the given DateTime is not a number, or the given Hours is not an integer.</td>
+        </tr>  
+        <tr id="TRUNCMIN_Function">
+            <td><span class="SpreadsheetFormula"><b>TRUNCMIN</b>(DateTime, [Minutes = 1])</span> <a href="#TRUNCMIN_Function">(Link)</a></td>
+            <td>Returns the given DateTime truncated down to the exact minute.  If Minutes is greater than 1, the given DateTime is truncated down to the interval of the given Minutes (e.g. 5 minutes, 10 minutes, etc.).  Returns #NUM! if the given Minutes is less than 1.  Returns #VALUE! if the given DateTime is not a number, or the given Minutes is not an integer.</td>
+        </tr>  
+        <tr id="TRUNCSEC_Function">
+            <td><span class="SpreadsheetFormula"><b>TRUNCSEC</b>(DateTime, [Seconds = 1])</span> <a href="#TRUNCSEC_Function">(Link)</a></td>
+            <td>Returns the given DateTime truncated down to the exact second.  If Seconds is greater than 1, the given DateTime is truncated down to the interval of the given Seconds (e.g. 5 seconds, 10 seconds, etc.).  Returns #NUM! if the given Seconds is less than 1.  Returns #VALUE! if the given DateTime is not a number, or the given Seconds is not an integer.</td>
+        </tr>  
+        <tr id="TYPE_Function">
+            <td><span class="SpreadsheetFormula"><b>TYPE</b>(Argument)</span> <a href="#TYPE_Function">(Link)</a></td>
+            <td>Returns the type of an argument encoded as an integer. Empty cells considered to have a numerical value returning 1. Return values:
+                <br>1 = Number
+                <br>2 = Text string
+                <br>4 = Logical value
+                <br>16 = Error value
+                <br>64 = Cell range</td>
+        </tr>
+        <tr id="VALUE_Function">
+            <td><span class="SpreadsheetFormula"><b>VALUE</b>(Text)</span> <a href="#VALUE_Function">(Link)</a></td>
+            <td>Converts the given Text into a number.  Returns #VALUE! if the text cannot be properly converted into a number.  If a numeric value type is given for the Text, that value is simply returned.</td>
+        </tr>
+        <tr id="VLOOKUP_Function">
+            <td><span class="SpreadsheetFormula"><b>VLOOKUP</b>(Value, Range, ColumnInRange, [ApproximateMatch])</span> <a href="#VLOOKUP_Function">(Link)</a></td>
+            <td>Searches for the given <b>Value</b> in the left-most column of the given  <b>Range</b>, and returns a reference the the cell at the same row of the found value, at the column at the given <b>ColumnInRange</b>.  
+            <br> <br>
+            <b>ColumnInRange</b> is a column index within the given <b>Range</b>, where 1 is the left-most column of the given <b>Range</b>.
+            <br> <br>
+            If <b>ApproximateMatch</b> is given as <b>TRUE</b>, and no exact match is found, the last value within the given <b>Range</b> that is less than the given <b>Value</b> will be used.
+            <br> <br>
+            When <b>ApproximateMatch</b> is given as <b>TRUE</b>, the values in the left-most column of the given <b>Range</b> are assumed to be in ascending order.  
+            <br> <br>
+            If <b>ApproximateMatch</b> is not given or given as <b>FALSE</b> and the given <b>Value</b> is not found, <b>#N/A!</b> is returned.  
+            <br> <br>
+            Returns <b>#VALUE!</b> if the given <b>Value</b> cannot be resolved to an actual value (such as if a range reference is given), or the given <b>ColumnInRange</b> cannot be interpreted as an integer value, or the given <b>ApproximateMatch</b> cannot be interpreted as a boolean value.  
+            <br> <br>
+            Returns <b>#REF!</b> if the given <b>Range</b> is not valid, or the given <b>ColumnInRange</b> is beyond the number of columns in the given <b>Range</b>.
+            <br> <br>
+            Returns <b>#NUM!</b> if the given <b>ColumnInRange</b> is less than 1.</td>
+        </tr>
+        <tr id="WEEKDAY_Function">
+            <td><span class="SpreadsheetFormula"><b>WEEKDAY</b>(<a href="#SerialDateTimeValues">Serial DateTime Value</a>)</span> <a href="#WEEKDAY_Function">(Link)</a></td>
+            <td>Returns an integer representing the day of the week for the given <a href="#SerialDateTimeValues">Serial DateTime Value</a>.  The return value will be in the range of 1-7 (1=Sunday, 7=Saturday).  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date value.</td>
+        </tr>
+        <tr id="WEEKNUM_Function">
+            <td><span class="SpreadsheetFormula"><b>WEEKNUM</b>(<a href="#SerialDateTimeValues">Serial DateTime Value</a>)</span> <a href="#WEEKNUM_Function">(Link)</a></td>
+            <td>Returns an integer representing the week number that contains the given <a href="#SerialDateTimeValues">Serial DateTime Value</a>.  The return value will be in the range of 1-53.  A date of January 1st of any given year will always return a value of 1.  Subsequent weeks start at midnight on Sunday.  Returns #VALUE! if the given DateTime cannot be interpreted as a serial date value.</td>
+        </tr>
+        <tr id="WEIGHTEDMOVINGAVERAGE_Function">
+            <td><span class="SpreadsheetFormula"><b>WEIGHTEDMOVINGAVERAGE</b>(Range)</span> <a href="#WEIGHTEDMOVINGAVERAGE_Function">(Link)</a></td>
+            <td>Returns the Weighted Moving Average of the inputted <b>Range</b> of values. Returns #VALUE! if the given range of data does not contain numeric values. Refer to <a href="indexe77c.html?page=doc/StudiesReference.php&amp;ID=28&amp;Name=Moving_Average_-_Weighted">Moving Average - Weighted</a> for information on the calculation.</td>
+        </tr>
+        <tr id="WORKDAY_Function">
+            <td><span class="SpreadsheetFormula"><b>WORKDAY</b>(StartDate, WorkDays, [Holidays])</span> <a href="#WORKDAY_Function">(Link)</a></td>
+            <td>Returns the serial date that is the given number of WorkDays before or after the given StartDate.  Work days exclude weekends and any given Holidays.</td>
+        </tr>
+        <tr id="YEAR_Function">
+            <td><span class="SpreadsheetFormula"><b>YEAR</b>(DateTime)</span> <a href="#YEAR_Function">(Link)</a></td>
+            <td>Returns the year for the given <a href="#SerialDateTimeValues">Serial DateTime Value</a> value. Returns #VALUE! if the given DateTime cannot be interpreted as a serial date value.</td>
+        </tr>
+        <tr id="ZTEST_Function">
+            <td><span class="SpreadsheetFormula"><b>ZTEST</b>(Array, Mu, [Sigma])</span> <a href="#ZTEST_Function">(Link)</a></td>
+            <td>Calculates the one-tailed z-test for comparing the sample mean of the Array to the hypothesized population mean Mu.  The third argument is the population standard deviation, but if it is omitted, then the sample standard deviation of the Array will be used instead.  If the array is empty the #N/A! error will be returned. A two-tailed test can be done as follows: 2*<b>MIN</b>(<b>ZTEST</b>(Array, Mu, [Sigma]), 1 - <b>ZTEST</b>(Array, Mu, Sigma)).</td>
+        </tr>
+
+    </table>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SpreadsheetFunctions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:53:53 GMT -->
+</html>  

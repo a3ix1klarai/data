@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GettingQuotes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686060596') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/GettingQuotes.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Getting Quotes -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index1eaf.html?page=doc/GettingQuotes.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index1eaf.html?page=doc/GettingQuotes.html">Getting Quotes</a></h4> </div>     <h1 class="PageName">Getting Quotes</h1>
+
+<ul>
+    <li><a href="#QuoteBoard">Quote Board</a>
+        <ul>
+            <li><a href="#QuoteBoardIntroduction">Introduction</a></li>
+            <li><a href="#OpeningQuoteBoard">Opening Quote Board</a></li>
+            <li><a href="#SettingSymbols">Setting Symbols</a></li>
+            <li><a href="#SavingLoadingImportSymbolList">Saving/Loading Symbol Lists and Importing Symbols</a></li>
+            <li><a href="#SettingColors">Setting Colors</a></li>
+            <li><a href="#SettingFieldsDisplay">Setting Fields to Display</a></li>
+            <li><a href="#FuturesContractRollover">Futures Contract Rollover</a></li>
+            <li><a href="#ChangingSymbolOfChart">Changing Symbol of a Chart or Trade DOM</a>
+				<ul>
+					<li><a href="#QuoteBoardLinkingToChartAndChartDrawings">Quote Board  Linking to a Chart and Chart Drawings</a></li>
+					<li><a href="#QuoteBoardLinkingAcrossChartbooks">Quote Board Linking Across Chartbooks</a></li>
+				</ul>
+			</li>
+            <li><a href="#NewHighAndLowHighlightingAndAlert">New Daily High and Low Highlighting and Alert</a></li>
+            <li><a href="#AdjustingWidths">Adjusting Column Widths</a></li>
+            <li><a href="#AttachingQuoteBoard">Attaching and Detaching Quote Board</a></li>
+            <li><a href="#AlwaysVisible">Always Visible or Always on Top</a></li>            
+            <li><a href="#ChangingFont">Changing Quote Board Font</a></li>   
+            <li><a href="#SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+            <li><a href="#QuoteBoardLabelRows">Quote Board Label Rows</a></li>
+            <li><a href="#QuoteBoardScrollBars">Quote Board Scroll Bars</a></li>
+			<li><a href="#DeleteRows">Delete Rows</a></li>
+			<li><a href="#InsertRows">Insert Rows</a></li>
+			<li><a href="#MoveSymbol">Move Symbol</a></li>
+           <li><a href="#QuoteBoardSorting">Quote Board Sorting</a></li>
+           <li><a href="#QuoteBoardNotVisible">Quote Board Not Visible</a></li>
+        </ul>
+    </li>
+    <li><a href="#QuotesOnSpreadsheets">Quotes on Spreadsheets</a>
+        <ul>
+            <li><a href="#QuotesOnSpreadsheetsIntroduction">Introduction</a></li>
+            <li><a href="#Creating">Creating a Spreadsheet and Getting Quotes</a></li>
+            <li><a href="#QuoteSpreadsheetSettings">Quote Spreadsheet Settings</a></li>
+            <li><a href="#NumberFormat">Number Format</a></li>
+            <li><a href="#ColorCoding">Color Coding</a></li>
+            <li><a href="#Scrolling">Scrolling and Locking  Header Row and Symbol Column</a>
+				<ul>
+					<li><a href="#Scrolling_Scrolling">Scrolling</a></li>
+					<li><a href="#Scrolling_LockingHeaderRow">Locking Header Row</a></li>
+					<li><a href="#Scrolling_LockingSymbolColumn">Locking Symbol Column</a></li>
+				</ul>
+			</li>
+            <li><a href="#OpeningChart">Opening or Activating a Chart for a Quote Line</a></li>
+            <li><a href="#Sorting">Sorting</a></li>            
+        </ul>
+    </li>
+
+    <li><a href="#FieldDescriptions">Field Descriptions</a></li>
+
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="QuoteBoard">Quote Board</h2>
+    <div class="member-link">[<a href="#QuoteBoard">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="QuoteBoardIntroduction">Introduction</h3>
+        <div class="member-link">[<a href="#QuoteBoardIntroduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Sierra Chart provides a Quote Board feature. A Quote Board provides real-time and current daily quote data  for a list of symbols. The symbols can be selected to change the symbol of the associated chart. Open Order and Position data for the symbols is provided on the Quote Board as well.</p>
+
+        <div style="text-align: center;"><a href="../images/quoteboard.png" rel="lightbox"><img src="../images/quoteboard.png" class="screenshot" loading="lazy" alt="" ></a></div>
+
+        <p>Symbols that provide historical data only and not streaming real-time or delayed data, will only provide zero values on the Quote Board.</p>
+        
+        <p>  Theupdate interval of the Quote Board is controlled through a setting and updates at specific  time intervals.   <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Quote Board Update Interval in Milliseconds</b>.  The default is 800 ms. We do not recommend making this too low of a value as it will increase CPU usage. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OpeningQuoteBoard">Opening Quote Board</h3>
+        <div class="member-link">[<a href="#OpeningQuoteBoard">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To open a  Quote Board, select <b class="menu_item">File &gt;&gt; New Quote Board </b>. </p>
+
+        <p>A Quote Board is associated with the active Chartbook at the time it is opened. If a Chartbook is not already open, when you open a new  Quote Board, then a Chartbook will be created.  </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingSymbols">Setting Symbols</h3>
+        <div class="member-link">[<a href="#SettingSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To set the symbols on the Quote Board, select <b class="menu_item">Settings &gt;&gt; Set Symbols</b> on the menu on the Quote Board window.</p>
+
+        <p>To add a symbol to the end of the list of symbols, select the last row in the list of symbols and type the symbol into the box below the list or press the <b> Find </b> button and select a symbol from the list of available symbols. To add a symbol anywhere else in the list, click at the location in the list where you want to add the symbol and press the <b> Add </b> button.  After inserting a blank row into the list, type the symbol into the box below the list  or press the <b> Find </b>button . </p>
+
+        <p>In the case of when using the Sierra Chart Quote Board, you do not need to prefix symbols with a  <b>/</b> or <b>#</b> when adding them to the list of symbols, unlike when you enter Quote Request symbols on a Spreadsheet.</p>
+
+        <p>The list of symbols for a Quote Board is specific to each individual Quote Board window.</p>
+
+        <div style="text-align: center;"><a href="../images/quoteboardsymbollist.png" rel="lightbox"><img src="../images/quoteboardsymbollist.png" class="screenshot" loading="lazy" alt="" ></a></div>
+
+        <p>Select a symbol in the list of symbols and use the  <b>Move Up</b> or <b>Move Down</b> buttons to move the symbol up or down in the list. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SavingLoadingImportSymbolList">Saving/Loading Symbol Lists and Importing Symbols</h3>
+        <div class="member-link">[<a href="#SavingLoadingImportSymbolList">Link</a>] - [<a href="#top">Top</a>]</div>       
+
+        <p>To easily save and load a set of symbols to and from a text file respectively, select <b class="menu_item">File  &gt;&gt; Save Symbol List</b> or <b class="menu_item">File &gt;&gt; Load Symbol List</b> on the Quote Board menu. </p>
+
+        <p>The default file extension is <b>SymbolList</b>. The files are plain text files. If you are loading a list of symbols from other sources, the symbols can be separated with a comma character, a tab character or a new line character.  </p>
+
+        <p>The <b class="menu_item">Settings &gt;&gt; Set Symbols</b> window also has <b>Import</b> and <b>Export </b> commands for reading and saving a list of symbols from and to a text file, respectively. The symbols in this text file can be separated with a comma character, a tab character or a new line character.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingColors">Setting Colors</h3>
+        <div class="member-link">[<a href="#SettingColors">Link</a>] - [<a href="#top">Top</a>]</div>       
+
+        <p>To set the colors for the Quote Board, select  <b class="menu_item">Settings &gt;&gt; Graphics Settings</b> on the menu on the Quote Board window. The relevant color settings begin with <b>Quote Board</b> in the list of  <b>Colors and Widths</b>.</p>
+
+        <ul>
+            <li><b>Quote Board: Background</b>: This is the background color of the Quote Board window.</li>
+            <li><b>Quote Board: Blank Row Background</b>: This is the background color for a blank row.</li>
+            <li><b>Quote Board: Label Row Background</b>: This is the background color for a row used as a label.</li>
+            <li><b>Quote Board: Foreground/Text</b>: This is the color for the quote board text.</li>
+            <li><b>Quote Board: Label Row Foreground/Text</b>: This is the color for the label text.</li>
+            
+            <li><b>Quote Board: Price Change Up</b>: This is the color for  <b>DailyChange, DailyChange%,  TradeDirection, ChangeFromOpen, Non-Sim Position  </b>  field values which are positive.</li>
+           
+           <li><b>Quote Board: Price Change Down</b>: This is the color for  <b>DailyChange, DailyChange%,  TradeDirection, ChangeFromOpen, Non-Sim Position  </b>  field  values which are negative.</li>
+            
+            <li><b>Quote Board: New High Highlight</b>:  This is the background color for the high price of the day when a new high is reached. </li>
+            <li><b>Quote Board: New Low Highlight</b>: This is the background color for the low price of the day when a new low is reached.</li>
+            <li><b>Quote Board: Alert Triggered Highlight</b>: This is the highlight color for a symbol which has an alert condition which is true.</li>
+            <li><b>Quote Board: Gridlines</b>: This is the color for gridlines on the Quote Board.</li>
+            <li><b>Quote Board: Selected Symbol</b>: This is the background color for the selected symbol.</li>
+            <li><b>Quote Board: Selected Border Highlight</b>: This is the color for the border around the selected cell in a Quote Board.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingFieldsDisplay">Setting Fields to Display</h3>
+        <div class="member-link">[<a href="#SettingFieldsDisplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To set the fields to display  and the order of those fields, select the <b class="menu_item">Settings &gt;&gt; Set Fields</b>  on the menu on the Quote Board window.</p>
+
+        <p>The Quote Board field configuration is specific to each individual Quote Board window.  For a new Quote Board window, the initial field configuration will be based upon the global Quote Line field configuration for Quote Spreadsheets which is set through <b class="menu_item">Global Settings &gt;&gt; Quote  Spreadsheet Settings</b>.</p>
+
+        <p>For a description of the available fields, refer to <a href="#FieldDescriptions">Field Descriptions</a>.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="FuturesContractRollover">Futures Contract Rollover</h3>
+        <div class="member-link">[<a href="#FuturesContractRollover">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When a Quote Board is opened, any expired futures symbols  will be automatically rolled over to the current  contract month if  <b class="menu_item">Settings &gt;&gt; Auto Rollover Futures Symbols</b> on the Quote Board menu  is enabled which is the default.  This occurs when the Quote Board is opened as part of a Chartbook.</p>
+
+        <p> The actual rollover date for a particular symbol is controlled by the rollover rules for the symbol in the  <a href = "index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a>. There are very specific date based rollover rules for each futures contract symbol which are based upon the exchange rules.</p>
+        
+          <p> The <a href = "index899f.html?page=doc/GeneralSettings.html#DetectRolloverOfCurrentFuturesContractsSymbolsBasedOnRealTimeVolume">Detect Rollover Of Current Futures Contracts Symbols Based On Real Time Volume</a>  setting has no effect upon  the rollover date for the Quote Board.  </p>
+
+        <p>To manually rollover a symbol, right-click anywhere along the Quote Line for the symbol on the Quote Board, and select <b class="menu_item">Roll Forward Futures Symbol</b>. You also have the ability to roll back a symbol by using  <b class="menu_item">Roll Back Futures Symbol</b>.</p>
+
+        <p>All future symbols  in the Quote Board can be rolled  over at any time by selecting <b Class = "menu_item">Settings &gt;&gt; Rollover Futures Symbols Now</b> on  the Quote Board menu.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangingSymbolOfChart">Changing Symbol of a Chart or Trade DOM</h3>
+        <div class="member-link">[<a href="#ChangingSymbolOfChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To change the symbol of a chart or Trade DOM to the selected Quote Board symbol, it is first necessary to establish a common link between a Quote Board and the charts and/or Trade DOMs.</p>
+
+        <p>To do this, set a nonzero link number on the Quote board by selecting <b class="menu_item">Settings &gt;&gt; Set Chart Link</b> on the menu on the Quote Board window.</p>
+
+        <p>To set the same  link number on a chart or Trade DOM, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Linking</b> from the menu. In the <b>Chart Linking &gt;&gt; Link Number</b> list box, select the same Link Number as is set for the Quote Board. Press <b>OK</b>. Any number of charts or Trade DOMs  can use the same link number so they are changed to the same selected symbol on the Quote Board.<p>
+
+        <p>For complete documentation about Chart Linking, refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking">Chart Linking</a>.</p>
+
+        <p>Simply left click on the symbol in the  <b>Symbol</b> column on the Quote Board to change the symbol of the linked charts or Trade DOMs. The selected symbol will be highlighted on the Quote Board.  Either the symbol field will be highlighted or the entire  Quote Board line for the symbol will be highlighted if <b class = "menu_item">Settings &gt;&gt; Highlight All Fields</b> is enabled on the Quote Board menu.</p>
+
+        <p>After left clicking on one of the lines on the Quote Board, it is then possible to use the <b>Up Arrow</b> key and  <b>Down Arrow</b> key on your keyboard to move up and down through the list of symbols on a Quote Board. </p>
+        
+        <p>You will not want to link a Quote Board to a chart that uses the <a href = "#">Trade and Current Quote Symbol</a>,  unless  you specify a  Trade and Current Quote Symbol in the   <b class="menu_item">Global Settings &gt;&gt; Global Symbol  Settings</b> for the Symbols you are using  in the Quote Board. Otherwise, what you will find is that the  <b>Trade and Current Quote Symbol</b> will remain with the chart and only the main symbol of the chart changes. </p>
+
+
+        <div style="text-align: center;"><a href="../images/quoteboardlinknumber.png" rel="lightbox"><img src="../images/quoteboardlinknumber.png" class="screenshot" loading="lazy" alt="" ></a></div>
+
+        <section class="h4">
+            <h4 id="QuoteBoardLinkingToChartAndChartDrawings">Quote Board  Linking to a Chart and Chart Drawings</h4>
+            <div class="member-link">[<a href="#QuoteBoardLinkingToChartAndChartDrawings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>If you have used one of the  <a href="indexb844.html?page=doc/Tools.html" target="_blank" rel="noopener noreferrer">Drawing Tools</a> on the chart, make sure that   <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b> &gt;&gt;  Chart Drawings &gt;&gt; Show Chart Drawings for Different Symbols </b>  is disabled to prevent  Chart Drawings for other symbols from displaying   on the chart for a different symbol that you have changed to from the Quote Board. </p>
+
+            <p>For more information, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#ShowChartDrawingsForDifferentSymbol">Show Chart Drawings for Different Symbols</a>. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="QuoteBoardLinkingAcrossChartbooks">Quote Board Linking Across Chartbooks</h4>
+            <div class="member-link">[<a href="#QuoteBoardLinkingAcrossChartbooks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Beginning with version 1338 it is supported for a Quote Board for one Chartbook to be able to link to charts in another Chartbook. Follow these steps.</p> 
+
+            <ol>
+                <li>Open a  <a href=" #OpeningQuoteBoard" >new Quote Board</a> or go to an existing Quote Board and enable <b Class = "menu_item">Settings &gt;&gt; Always Visible Across Chartbooks</b>. </li>
+
+                <li>Set a nonzero Link Number on the Quote board by selecting <b class="menu_item">Settings &gt;&gt; Set Chart Link</b> on the menu on the Quote Board window. Select one of the Link Numbers ( <b>L#</b>).</li>
+
+                <li> Go to the Chartbook you want to link to. Go to the particular Chart or Trade DOM you want to link to.</li>
+
+                <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Linking</b> from the menu. In the <b>Chart Linking &gt;&gt; Link Number</b> list box, select the same Link Number as is set for the Quote Board. </li>
+
+                <li>Press <b>OK</b>.</li>
+
+                <li>Simply left click on the symbol in the  <b>Symbol</b> column on the Quote Board to change the symbol of the linked charts or Trade DOMs. Selecting a symbol on the Quote Board is only going to affect the charts in the active Chartbook with the same  Link Number as the Quote Board is set to.</li>
+            </ol>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="NewHighAndLowHighlightingAndAlert">New Daily High and Low Highlighting  and Alert</h3>
+        <div class="member-link">[<a href="#NewHighAndLowHighlightingAndAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Sierra Chart Quote Board will highlight a new Daily High or Low on the quote board when the High and/or Low fields are displayed.  The High and Low fields are directly highlighted.</p>
+        
+        <p>The color is controlled by the   <b>Quote Board: New High/Low Highlight</b> color setting set  through the <b class="menu_item">Global Settings &gt;&gt; Graphics Settings  - Global</b> or <b Class = "menu_item">Chart &gt;&gt; Graphics Settings</b> windows. Refer to   <a href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a>  for complete details.</p>
+        
+        <p> The highlight will remain for approximately 30 seconds.</p>
+        
+        <p> An optional alert sound can also be enabled through <b Class = "menu_item">Alerts &gt;&gt; Alert Number For New High/Low</b> on the Quote Board menu.  Select a particular Alert Number that you want to use for a new   Daily High or Low.    To configure that particular Alert Number, refer to <a href="index899f.html?page=doc/GeneralSettings.html#Tab_Alerts">Alert Sound Settings</a>.</p>
+    </section>
+
+    <section class="h3"> 
+        <h3 id="AdjustingWidths">Adjusting Column Widths</h3>
+        <div class="member-link">[<a href="#AdjustingWidths">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To adjust the width of a column on the Quote Board, move your  Pointer to the column header line at the top of the Quote Board window that displays the column names.  </p>
+
+         <p> After this move the  Pointer to the right side of the column that you want to adjust.  You will notice that the dividing area between columns will then change to a different color (normally red). Left click with the  Pointer to start the adjustment operation and move left or right, then release.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachingQuoteBoard">Attaching and Detaching Quote Board</h3>
+        <div class="member-link">[<a href="#AttachingQuoteBoard">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A Quote Board window is a floating window which by default is owned by the main Sierra Chart window and will remain on top of the main window.  It can be freely moved around outside of the main window frame.</p>
+
+        <p>To detach a Quote Board from the main Sierra Chart window and allow the Quote Board to be completely independent so that it can be moved to other monitors or anywhere on your screen space, select <b class="menu_item">Settings &gt;&gt; Attach/Detach Window</b> on the Quote Board menu. Select that command again to reattach it to the main Sierra Chart window.</p>
+    </section>    
+
+    <section class="h3"> 
+        <h3 id="AlwaysVisible">Always Visible or Always on Top</h3>
+        <div class="member-link">[<a href="#AlwaysVisible">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A Quote Board can be made always visible no matter which Chartbook is active, by enabling <b class = "menu_item">Settings &gt;&gt; Always Visible Across Chartbooks</b>. </p>
+
+        <p>If you want the Quote Board to be always on top of other windows  on your system, then enable  <b Class = "menu_item">Settings &gt;&gt; Always on Top</b>. This is only supported when  a Quote Board is detached.   To detach a Quote  Board, refer to   <a href=" #AttachingQuoteBoard">Attaching and Detaching Quote Board</a>. </p>
+    </section>  
+
+    <section class="h3"> 
+        <h3 id="ChangingFont">Changing Quote Board Font</h3>
+        <div class="member-link">[<a href="#ChangingFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The font used for the text on the Quote Board can be changed.</p>
+
+        <p>To change the Quote Board Font, select <b class = "menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Fonts</b>.</p>
+
+        <p>For complete documentation, refer to <a href="index5795.html?page=doc/GraphicsSettings.html#Fonts">Fonts</a> on the Graphics Settings page.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingCommentsOnSymbols">Setting Comments on Symbols</h3>
+        <div class="member-link">[<a href="#SettingCommentsOnSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is supported on a Quote Board to set up to 10 comments per Quote Line for a symbol. Follow the instructions below.</p>
+
+        <ol>
+            <li>On the Quote Board menu select  <b Class = "menu_item">Settings &gt;&gt; Set Fields</b>. </li>
+            <li> In the <b> Available Fields </b> list, there will be the fields Comment1 through Comment10. Add the comment fields that you want for a Quote Line. </li>
+            <li>Press OK. </li>
+
+            <li>Go to one of the Comment# fields you added for a quote line for a symbol on the Quote Board. Left click on that field two times. </li>
+            <li>An edit box will display. Type the Comment in the edit box and press OK. </li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="QuoteBoardLabelRows">Quote Board Label Rows</h3>
+        <div class="member-link">[<a href="#QuoteBoardLabelRows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Quote Boards support custom Label Rows to identify groups of symbols. Follow the instructions below.</p>
+
+        <ol>
+            <li>On the Quote Board menu select  <b Class = "menu_item">Settings &gt;&gt; Set Symbols</b>. This will display the symbols list window.</li>
+            <li>On the right side of that window there is the list of symbols. Select the line where you want to insert a label. </li>
+            <li> Press the <b>Add Label</b> button. A new entry will be added that is prefixed with <b> Label: </b>.</li>
+            <li>Make sure that line is selected in the list of symbols and in the edit box below the list of symbols, type the label name that you want. </li>
+
+            <li>  Press the <b>Close</b> button when done. The label will then be displayed on the Quote Board.</li>
+            <li> To set the color for a label row, on the Quote Board menu select <b Class = "menu_item">Settings &gt;&gt; Graphics Settings</b>. Set the <b>Quote Board: Label Row Background Color</b>.</li>
+        </ol>
+        <div style="text-align: center;"><a href="../images/quoteboardlabelrowsexample.png" rel="lightbox"><img src="../images/quoteboardlabelrowsexample.png" class="screenshot" loading="lazy" alt="" ></a></div>
+    </section>
+	
+    <section class="h3">
+        <h3 id="QuoteBoardScrollBars">Quote Board Scroll Bars</h3>
+        <div class="member-link">[<a href="#QuoteBoardScrollBars">Link</a>] - [<a href="#top">Top</a></div>
+        
+        <p> The vertical scroll bar on a Quote Board will display  when there are more lines in the Quote Board than can be displayed based on the size of the window. The number of quote lines can be adjusted  through <a href="#SettingSymbols">Setting Symbols</a>.</p>
+        
+        <p> To remove the scroll bar  by adjusting the size of the Quote Board window, use the standard Windows functionality to grab the side or corner of the window and drag it to make the window larger. </p>
+
+        <p> Likewise for the horizontal scroll bar, that will display when there are more   fields displayed and the width of those fields  is greater than can fit in the current window size.  </p>
+
+         <p>There are several solutions to this. Make the window larger as explained above. <a href="#AdjustingWidths" >Adjust the width</a> of the columns. Or, remove fields. To do this, refer to <a href="#SettingFieldsDisplay">Setting Fields to Display</a>. </p>
+    </section>
+	
+    <section class="h3">
+        <h3 id="DeleteRows">Delete Rows</h3>
+        <div class="member-link">[<a href="#DeleteRows">Link</a>] - [<a href="#top">Top</a></div>
+        
+        <p> One or more rows in the quote board can be selected and deleted. One row can be selected by clicking on it and multiple rows can be selected by holding Ctrl or Shift Key while clicking on a row. The selected rows can then be deleted in the following ways: 
+		<li>1. Press the <b>Delete</b> key on the keyboard.</li>
+		<li>2. Right-click on the quote board window and select the <b>Delete Rows</b> option from the menu.</li></p>
+		
+    </section>
+	
+	<section class="h3">
+        <h3 id="InsertRows">Insert Rows</h3>
+        <div class="member-link">[<a href="#InsertRows">Link</a>] - [<a href="#top">Top</a></div>
+        
+        <p> One or more rows can be inserted above the first selected row in the Quote Board.</p> 
+        
+        <p>Inserting is not supported when  Quote Board column sorting is being used.  Sorting can be disabled, by left clicking  with your Pointer on the header of any of columns until there is no longer an arrow shown on that header.</p>
+
+        <p> One row can be selected by left clicking on it and multiple rows can be selected by holding Control or Shift Key while left clicking on a row. Rows can then be inserted in the following ways: 
+        
+		<li>1. Press the <b>Insert</b> key on the keyboard.</li>
+        
+		<li>2. Right-click on the quote board window and select the <b>Insert Rows</b> option from the menu.</li></p>
+		
+		<p>Note that the number of rows inserted is equal to the number of rows selected.</p>
+		
+    </section>
+	
+	<section class="h3">
+        <h3 id="MoveSymbol">Move Symbol</h3>
+        <div class="member-link">[<a href="#MoveSymbol">Link</a>] - [<a href="#top">Top</a></div>
+
+        <p>Keyboard shortcuts can be assigned to move a selected symbol up and down. Keyboard shortcuts <b>Move Symbol Up</b> and <b>Move Symbol Down</b> can be configured by selecting <b class="menu_item">Global Settings &gt;&gt; Customize Keyboard Shortcuts</b> and selecting the <b>QuoteBoard Keyboard Shortcuts</b>. For example, if <b>U</b> is assigned to <b>Move Symbol Up</b>, then pressing the <b>U</b> key in the quote board window will move the selected symbol up.</p>  
+		
+		<p>Refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">index.php?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts</a> for instructions to assign a keyboard shortcut.</p>
+		
+		<p>Note that the assigned keyboard shortcut key is global and cannot be used for any other functionality even if the quote board window is closed. Refer to <a href="indexfbca.html?page=doc/KeyboardCommands.html#KeyboardShortcutsAreGlobalAndAffectAllWindows">Keyboard Shortcuts are Global and Affect All Windows</a> for information.</p>
+    </section>	
+    
+	<section class="h3">
+        <h3 id="QuoteBoardSorting">Quote Board Sorting</h3>
+        <div class="member-link">[<a href="#QuoteBoardSorting">Link</a>] - [<a href="#top">Top</a></div>
+        <p>The columns of a Quote Board can be  sorted alphabetically or numerically either ascending or descending. Sorting can also be disabled. When sorting is enabled for a particular column, it does increase the CPU usage of the  Quote Board. Sorting should only be used when necessary.</p>  
+		
+		<p> Left clicking on a column header, (Symbol, Last, Bid, Ask, ...)  on the Quote Board window will either enable sorting ascending, enable sorting descending, or disable sorting.   </p>
+        
+        <p>When an up arrow is displayed on the column header, the sorting is enabled and ascending. When a down arrow is displayed on the column header, the sorting is enabled and descending. When there is no arrow displayed, on any of the Quote Board columns, then sorting is disabled.</p>
+		 
+    </section>
+        
+    
+	<section class="h3">
+        <h3 id="QuoteBoardNotVisible">Quote Board Not Visible</h3>
+        <div class="member-link">[<a href="#QuoteBoardNotVisible">Link</a>] - [<a href="#top">Top</a></div>
+        
+         <p> If a  Quote Board is not visible, then select   <b class="menu_item">Window  &gt;&gt; Reset Windows</b>.  It should then appear near the top left.  </p>
+         
+         <p> If it does  not appear, close the Chartbook with   <b class="menu_item">File &gt;&gt; Close Chartbook</b> and reopen it. </p>
+         
+         <p> To make the Quote Board appear on the taskbar, then detach it. You can do that through <b class="menu_item">Settings &gt;&gt; Attach/Detach Window</b> from the  Quote Board menu.  </p>
+    </section>	
+	
+</section>
+
+<section class="h2">
+    <h2 id="QuotesOnSpreadsheets">Quotes on Spreadsheets</h2>
+    <div class="member-link">[<a href="#QuotesOnSpreadsheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="QuotesOnSpreadsheetsIntroduction">Introduction</h3>
+        <div class="member-link">[<a href="#QuotesOnSpreadsheetsIntroduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/gq_img1.png" rel="lightbox"><img src="../images/gq_img1.png" class="WideFloatRight" alt=""></a>
+
+        <p>Symbols can be entered into a Sheet in a Spreadsheet window to obtain detailed quotes that are continuously updated while connected to the data feed. This is called a Quote Spreadsheet.</p>
+
+        <p>The symbol entered to request a quote needs to follow the format required by the Data or Trading  service Sierra Chart is currently connected to. </p>
+
+        <p>The advantage with a Sierra Chart Quote Spreadsheet is that they are highly customizable. You are using a fully functional Spreadsheet that can contain Excel formulas and can perform calculations on the Quote data. Therefore, you can enter custom formulas to perform many different kinds of calculations that you may require.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Creating">Creating a Spreadsheet and Getting Quotes</h3>
+        <div class="member-link">[<a href="#Creating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li>Sierra Chart needs to be connected to the real-time data feed to get continuously updating quotes. Select <b class="menu_item">File &gt;&gt; Connect To Data Feed</b> on the menu to connect if not already connected. If this command is disabled,  then this means Sierra Chart is already connected to the data feed.</li>
+
+            <li>Create a new Spreadsheet or open an existing Spreadsheet. Select <b class="menu_item">File &gt;&gt; New Quote Spreadsheet</b> on the menu to create a new Spreadsheet. </li>
+
+            <li>For more information about Spreadsheets,  refer to the <a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php">Working with Spreadsheets</a> documentation page. </li>
+
+            <li>To open an existing Spreadsheet, select <b class="menu_item">File &gt;&gt; Open Spreadsheet</b>.</li>
+
+            <li>Go to the Spreadsheet window and make sure the <b class = "menu_item">Spreadsheet &gt;&gt; Quote Spreadsheet</b> menu option is checked.</li>
+
+
+            <li>Right-click with the Pointer on a row on the Spreadsheet where you want to insert a Quote Line and select <b class="menu_item">Find Symbol and Insert</b> on the shortcut menu. This will give you a list of many of the symbols available for the Data or Trading service you are using. Simply select one and press  <b>Insert</b>. 
+                <br> 
+                <br>
+                If the symbol is not listed, then manually type the symbol into the  <b> Selected Symbol </b> box. The  symbol needs to follow the symbol format used by the Data or Trading  service you are using.
+                <br> 
+                <br>
+                You can also left click on the row on the Spreadsheet and select <b class="menu_item">Spreadsheet &gt;&gt; Find Symbol and Insert</b> from the top level menu.</li>
+
+            <li><b>Alternative Quote Request Entry Method</b>:  Left click two times in column A in the row on a Sheet  where you want to enter a Quote Line. Manually enter the symbol and press OK.
+                <br> 
+                <br>
+                A symbol has to be in rows 1 to 150 and has to be in one of the first 10 Sheets in the Spreadsheet. They cannot be entered just anywhere on a Spreadsheet. With cell references, you can use the data anywhere on a Spreadsheet. </li>
+
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="QuoteSpreadsheetSettings">Quote Spreadsheet Settings</h3>
+        <div class="member-link">[<a href="#QuoteSpreadsheetSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To set which fields to display along a Quote Line on a Spreadsheet and to configure  <a href=" #ColorCoding">Color</a> and <a href="#Sorting">Sort</a> settings, refer to the <a href="index1698.html?page=doc/QuoteLineFields.html">Quote Spreadsheet Settings</a> documentation page.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="NumberFormat">Number Format</h3>
+        <div class="member-link">[<a href="#NumberFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For a Quote Line on a Spreadsheet, all numeric values are automatically formatted with the appropriate number of decimal places.</p>
+
+        <p>Prices are formatted according to the  <b>Price Display Format</b> setting in <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> for the symbol or symbol pattern.</p>
+
+        <p>Volume values are typically formatted with no decimal place. </p>
+
+        <p>If you want to change the format for prices, then alter the  <b>Price Display Format</b> setting in <b class = "menu_item">Global Settings &gt;&gt; Symbol Settings</b> for the symbol or symbol pattern. For further details, refer to <a href="index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ColorCoding">Color Coding</h3>
+        <div class="member-link">[<a href="#ColorCoding">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Bid, Ask, Bid Size, Ask Size, Last, High, Low, Last Size, and Net Change Fields can be color coded based upon if they are Increasing, Decreasing or not changing. To enable this color coding and to set these colors, select <b class="menu_item">Global Settings &gt;&gt; Quote Spreadsheet Settings &gt;&gt; Color Settings</b> on the menu. Enable  the option <b>Enable Coloring of Quote Request Fields</b>. Set the color controls as you require.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="Scrolling">Scrolling and Locking  Header Row and Symbol Column</h3>
+        <div class="member-link">[<a href="#Scrolling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <section class="h4">
+			<h4 id="Scrolling_Scrolling">Scrolling</h4>
+			<div class="member-link">[<a href="#Scrolling_Scrolling">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p>The Quote Spreadsheet can be scrolled by using either the horizontal or vertical scrollbars on the edge of the Spreadsheet window.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="Scrolling_LockingHeaderRow">Locking Header Row</h4>
+			<div class="member-link">[<a href="#Scrolling_LockingHeaderRow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Select a cell on the header line and select <b class="menu_item">Spreadsheet &gt;&gt; Fix Row</b> on the menu to fix the header row and keep the header line from scrolling while the Spreadsheet is scrolled vertically.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="Scrolling_LockingSymbolColumn">Locking Symbol Column</h4>
+			<div class="member-link">[<a href="#Scrolling_LockingSymbolColumn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Select a cell in the A column or click on the A column title and  select <b class="menu_item">Spreadsheet &gt;&gt; Fix Column</b> on the menu to fix this column and prevent the symbol column from scrolling off the window when scrolling through the other columns.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="OpeningChart">Opening or Activating a Chart for a Quote Line</h3>
+        <div class="member-link">[<a href="#OpeningChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When you select any cell along a Quote Line on a Spreadsheet, then select <b class="menu_item"> Spreadsheet  &gt;&gt;  Open Historical Chart</b> or <b class="menu_item">Spreadsheet  &gt;&gt;  Open Intraday Chart</b> on the menu and the symbol for the Quote Line will be opened as a Historical or an Intraday Chart respectfully, or be activated if the chart is already open.  </p>
+
+        <p>You can also right click on any cell along a Quote Line to access these commands.</p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="Sorting">Sorting</h3>
+        <div class="member-link">[<a href="#Sorting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In Quote Spreadsheets it is supported to sort Quote Lines based on a selected Quote Line field. For example, you may want to sort based upon the <b>Daily Change %</b> field. </p>
+
+        <p>Follow the step-by-step instructions below to configure sorting.</p>
+
+        <ol>
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Quote Spreadsheet Settings &gt;&gt;  Sort Settings</b>. </li>
+
+            <li>Set the <b>Field to Sort By</B> to the Quote Line field you want to sort by. Select <b>No  Sorting</b> to disable sorting.</li>
+
+            <li>Set the <b>Sort Order</B> to the either <b>Ascending</b> or <b>Descending</b>.</li>
+
+            <li>If you want to include additional Sheet columns in the rows to be sorted than are normally outputted by a Quote Line, then set the <b>Sort Range &gt;&gt; Last Column</b> to the last column to include. 
+                <br> <br>
+                Otherwise, this is not necessary because Sierra Chart sets the number of columns to sort to the number of  Quote Line fields being outputted. Only if the <b>Last Column</b> is greater than number of fields outputted, will it increase the number of columns to sort.</li>
+
+            <li>Press OK.</li>
+        </ol>
+    </section>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="FieldDescriptions">Field Descriptions</h2>
+    <div class="member-link">[<a href="#FieldDescriptions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are the descriptions for the fields for both Quote Boards and Quote Spreadsheets.</p>
+    
+    <!--
+
+    <p><b>NumTrades:</b> This field indicates the number of trades for the symbol. If this data is available from your data service, then it indicates the number of trades since the start of the trading day. Most services do not provide this data. Therefore, it is the number of trades received from the data feed since  you last connected to the data feed.</p>
+
+    <p><b>OpenInterest:</b> The open interest.  This applies to futures and options only.</p>
+    <p><b>NetChange%:</b> The daily net change as a percentage.</p>
+    <p><b>PreviousClose:</b> Previous days closing price. Depending upon the particular data feed being used,  if there is a settlement price provided, this is going to be the settlement price. The settlement price is calculated by the exchange using a formula. It is not the final last trade price of the trading session.</p>
+    <p><b>SettlementPrice:</b>Previous days closing price. Depending upon the particular data feed being used,  if there is a settlement price provided, this is going to be the settlement price. The settlement price is calculated by the exchange using a formula. It is not the final last trade price of the trading session.</p>
+
+
+    <p><b>EPS:</b> Earnings-per-share.</p>
+    <p><b>P/E:</b> Price of a stock divided by its earnings per share.</p>
+    
+-->
+    <ul>
+        <li><b>Symbol</b>: This is the symbol for the Quote Line. This will be an abbreviation used by  the Data or Trading service to represent the stock, futures contract, index, forex market, CFD, option contract, or cryptocurrency.</li>
+
+        <li><b>Last</b>: This is the last trade price for the symbol.</li>
+        <li><b>Last Size</b>: This is the size/quantity of the last trade.</li>
+        <li><b>Last Time</b>:  This is the time of the last trade. This is in the <a href="index219e.html?page=doc/TimeZone.html" >Time Zone</a> setting Sierra Chart is set to.</li>
+       
+       <li><b>Trade Direction</b>: This field either will be a + or a -. This indicates whether the last trade received from the data feed was at a higher price (+) or lower price (-) than the previous trade. If the price did not change, then the previous <b>Trade Direction</b> is displayed/maintained. 
+        <br> <br>
+       It is important to be aware that this field can look misleading when comparing visually to the <b>Last </b> trade price because the Last trade price does not update visually at every single trade but on a timer instead. So all of the trades are not going to be visible.</li>
+
+        <li><b>Settlement Price</b>: Previous days closing price. Depending upon the particular data feed being used,  if there is a settlement price provided, this is going to be the official settlement price. The settlement price is calculated by the exchange  <em>using a formula</em>.  <em>It is not the final last trade price of the day trading session necessarily</em>. This is important to understand.        
+         <br> <br>
+        The Settlement Price is also not necessarily going to be evenly divisible  by the Tick Size (minimum price increment) for the symbol.  So this can result in a  Daily  Change value which is off from the tick size.
+        <br> <br>
+        If you want to control what is considered the Settlement Price and calculate for example the Daily Change  according to a different point in time, it is necessary to use an Intraday chart set to Daily bars and using <a href = "index4ec1.html?page=doc/SessionTimes.php#CreatingDailyBarsCustomSessionTimes">Custom Session Times</a>. Make sure the   <a href = "index69b6.html?page=doc/WorkingWithCharts.html#RegionDataLine">Chart Header</a> is set to display the  <b>Bar Price Change</b> field  so you can view it.
+        </li>
+
+        <li id = "FieldDescription_DailyChange"><b>Daily Change</b>: The Daily Change is the difference between the  <b>Last </b> trade price and the   <b>Settlement Price</b>. Refer to the  <b>Settlement Price</b> description for an understanding of what the Settlement Price is. If the Daily Change is not correct, then you need to  check to see what the Settlement Price is. 
+         <br> <br>
+        If that is not correct, then contact your Data or Trading  service provider about that.  The Settlement Price is also called the Previous Close  and that  price value can be viewed when a chart is open through  <b Class = "menu_item">Window &gt;&gt; Current Quote Window</b>.
+        <br> <br>
+         With some Data or Trading services it might help to  <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" >reconnect to the data  feed</a>  to get the current and correct Settlement Price. When using a Sierra Chart provided data feed, it is not necessary to reconnect.
+        <br> <br>
+        When an updated Settlement  Price is provided at the end of the trading day  <em>from the  exchange</em>, then it is normal and correct for the  Daily Price Change  to then be  closer to 0  at that time and shortly thereafter.   Therefore, you are not going to see the  Daily Price  Change   representing what the price change was during the trading day, at the close of the trading day and during the evening.  It also needs to be understood, that an exchange  can send through a settlement price before the final close of the trading day.  In this case, this will be a <em>preliminary settlement</em>. The CME  sends multiple settlement prices through.
+
+        </li>
+
+        <li><b> Bid</b>:  This is the current  Bid price.</li>
+        <li><b> Ask</b>:  This is the current Ask price.</li>
+        <li><b> Bid Size</b>:  This is the  quantity of contracts/shares to be bought at the Bid price.</li>
+        <li><b> Ask Size</b>:  This is the  quantity of contracts/shares to be sold at the Ask price.</li>
+        <li><b>Number Trades</b>:  This is the number of trades for the trading day. If this field is not supported by the  Data/Trading service, this is the number of  trades since connecting to the data feed.</li>
+       
+       <li><b>Bid Ask Spread</b>:  This the a difference between the Ask and Bid prices expressed in   <em>ticks</em>.  The Tick Size for the symbol  is set through the <a href="index4404.html?page=doc/GlobalSymbolSettings.php" >Global Symbol Settings</a>. Therefore, it is important to understand  what the  Tick Size is for the symbol as it is set in the Symbol Settings when understanding the  Bid Ask  Spread.</li>
+        
+        <li><b>High</b>:  This is the Daily  High price for the current day.</li>
+        <li><b> Low</b>:  This is the Daily  Low price for the current day.</li>
+        <li><b> Open</b>:  This is the Daily Open price for the current day.</li>
+       
+       <li><b>Volume</b>: This is the daily trade volume. It could represent a trading session shorter than a single day depending upon the particular symbol and the particular Data or Trading service being used. 
+        <br> <br>
+        It is the       number of shares or contracts traded within the day.  Or it could be the number of price updates in the case of cash Forex markets and indexes. For additional information, refer to <a href="index2d36.html?page=doc/ChartDataFiles.html#VolumeData">Volume Data</a>.</li>
+       
+       <li><b> Trade Indicator</b>:  If the data feed provides a trade indicator, it will be displayed in this field.  This is data feed specific.  This is going to usually be an alphabetic code.</li>
+       
+        <li><b> Open Interest</b>:   This only applies to futures contracts and is  the current open interest  as reported by the exchange.  This is the number of outstanding futures contracts.</li>
+        
+        <li><b>Percent from High</b>:   The Daily Range is calculated as the Daily High minus the Daily Low. If the Daily Range is zero, then 0 is returned. If the Daily Range is nonzero, then Percent from High is calculated as the difference of Daily High minus Last Trade Price, divided by Daily Range, multiplied by 100.</li>
+        
+        <li><b>Percent from Low</b>:   The Daily Range is calculated as the Daily High minus the Daily Low. If the Daily Range is zero, then 0 is returned. If the Daily Range is nonzero, then Percent from Low is calculated as the difference of Last Trade Price minus Daily Low, divided by Daily Range, multiplied by 100.</li>
+        
+        <li><b>Daily Change Percent</b>: This is the Daily Change as a percent. Refer to the <a href = "#FieldDescription_DailyChange">Daily Change</a> description for more details as to how the Daily Change is calculated.
+         <br> <br>
+        Daily Change Percent = 100 * (DailyChange / SettlementPrice)
+         <br> <br>
+         If the SettlementPrice is 0 which indicates it is not available, then Daily Change Percent will be 0.
+
+        </li>
+        
+        
+        <li><b>Change from Open</b>:  This is the difference between the  <b>Last  </b> trade price and the  <b>Daily Open price</b>. </li>
+        
+        <li><b>Buy Rollover Interest</b>:  This is the buy  (long positions) rollover interest as reported by the  Trading service. This only applies to  cash Forex and CFD markets.</li>
+        
+        <li><b>Sell Rollover Interest</b>: This is the  sell (short positions) rollover  interest as reported by the  Trading service. This only applies to  cash Forex and CFD markets.</li>
+        
+        <li><b>Shares Outstanding</b>: This is the number of shares outstanding. This only applies to stock/equity symbols. This  field is only available if the data feed provides it.</li>
+        <li><b>Open Buy Quantity (Non-Simulated)</b>:   This  is the  total   quantity for open Buy  orders for the   Symbol. This  only applies to non-simulated  orders.</li>
+        <li><b>Open Sell Quantity (Non-Simulated)</b>:  This  is the  total   quantity for open Sell  orders for the   Symbol. This  only applies to non-simulated  orders.</li>
+        <li><b>Position (Non-Simulated)</b>:  This is the current non-simulated Trade Position quantity for the symbol. For more information, refer to the  <a href="index7cfb.html?page=doc/TradeStatusWindows.html#PositionsWindow">Trade Positions Window</a>. </li>
+        <li><b>Inverse Last</b>: This is 1.0 divided by the  <b>Last </b> trade price. </li>
+        <li><b>Strike Price</b>:   In the case of an option symbol, this is the strike price of the particular contract.</li>
+        <li><b> Last Trading Date</b>:  This is the last trading date for a futures contract.</li>
+        <li><b> Name</b>:  This is the descriptive name of the symbol. In the case of stocks, this will be the company name.</li>
+        <li><b>Earnings Per Share</b>:    This is the earnings per share for equity/stock symbols. </li>
+        <li><b>Price/Earnings Per Share</b>:   This is the ratio of the current price and the earnings per share for equity/stock symbols.</li>
+        <li><b>Comment1</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment2</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment3</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment4</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment5</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment6</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment7</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment8</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment9</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Comment10</b>: Refer to <a href=" #SettingCommentsOnSymbols">Setting Comments on Symbols</a></li>
+        <li><b>Alert</b>:   This text field is related to  <a href="index2ac2.html?page=doc/AlertsManager.html#SymbolAlerts" >Symbol Alerts</a>.  It indicates the number of Symbol Alerts for the symbol of the Quote line that have been set up and enabled (E) and the number of times the Symbol Alerts have been triggered for the symbol (T). Otherwise, it is blank. </li>
+        
+        <li><b>Trade Date</b>:  This is the trading date for the last trade of the symbol. This field may not be available with some data feeds.  This will be the actual trading day date. For example, Sunday evening will display a date of Monday.</li>
+        
+        <li><b>Open Position Profit Loss</b>:  This field only applies to the  <a href="index9df4.html?page=doc/StudySummaryWindow.php" >Study Summary</a> window. It displays  the currently Open Position Profit or  Loss  for the Symbol and Trade Account the chart is set to.</li>
+        
+        <li><b>Daily Profit Loss</b>: This field only applies to the  <a href="index9df4.html?page=doc/StudySummaryWindow.php" >Study Summary</a> window. It displays  the   <a href="index1a23.html?page=doc/DailyProfitLossValue.html" >Daily Profit/Loss</a>  for the Symbol and Trade Account the chart is set to.</li>
+		
+		<li><b>Change From Open Percent</b>:This is <b>Change from Open</b> as a percent. <b>Change from Open</b> is calculated as the difference between the  <b>Last  </b> trade price and the  <b>Daily Open price</b>
+		<br> <br>
+        Change From Open Percent = 100 * (Last Trade Price - Daily Open / Daily Open)
+        <br> <br>
+		</li>
+		
+		<li><b>Daily Range</b>:This is the daily range and it is calculated as the Daily High minus the Daily Low</li>
+		
+		<li><b>Trading Status</b>:This is the trading status.</li>
+		
+		<li><b>Currency Value per Tick</b>:This is the currency value per tick for the symbol.</li>
+		
+		<li><b>Currency</b>:This is the currency code for the symbol.</li>
+		
+		<li><b>Currency Value per Points</b>:This is the currency value per point for the symbol.A Point is the smallest price increment change that can occur on the left side of the decimal point.A Tick is the smallest price increment change that can occur on the right side of the decimal point.
+		<br> <br>
+        Currency Value per Points = Currency Value per Tick / Tick Size
+        <br> <br>
+		</li>
+		
+		<li><b>Daily Range per Ticks</b>:This is the daily range in ticks. 
+		<br> <br>
+        Daily Range per Ticks = Daily High - Daily Low / Tick Size
+        <br> <br>
+		</li>
+		
+		<li><b>Daily Range in Currency</b>:This is the daily range in currency value. 
+		<br> <br>
+        Daily Range per Currency = (Daily High - Daily Low) * Currency Value per Tick / Tick Size
+        <br> <br>
+		</li>
+		
+		<li><b>Tick Size</b>: This is the Tick Size for the symbol. This value comes from the   <a href = "index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a> for the symbol.</li>
+        
+        
+		<li><b>Imbalance Direction</b>: The following information is from NASDAQ. The market side of the order imbalance.
+        <ul>
+            <li>"B" = Buy imbalance</li>
+            <li>"S" = Sell imbalance</li>
+            <li>"N" = No imbalance</li>
+            <li>"O" = Insufficient orders to calculate</li>
+        </ul>
+
+       </li>   
+       
+		<li><b>Cross Type</b>: The following information is from NASDAQ. The type of Nasdaq  cross for which the NOII message is being generated.
+        <ul>
+            <li>"O" = Nasdaq Opening Cross</li>
+            <li>"C" = Nasdaq Closing Cross</li>
+            <li>"H" = Cross for IPO and halted / paused securities</li>
+        </ul>
+
+       </li>
+    </ul>
+</section>
+
+<hr><p>*Last modified Tuesday, 06th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GettingQuotes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:14 GMT -->
+</html>  

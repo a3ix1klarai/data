@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TimeandSalesWindow.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686060747') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/TimeandSalesWindow.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Time and Sales Window -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexc3ee.html?page=doc/TimeandSalesWindow.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="indexc3ee.html?page=doc/TimeandSalesWindow.html">Time and Sales Window</a></h4> </div>     <h1 class="PageName">Time and Sales Window</h1>
+
+<a href="../images/timeandsales.png" rel="lightbox"><img class="WideFloatRight" src="../images/timeandsales.png" alt="Time And Sales Window"></a>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Instructions">Instructions</a></li>
+    <li><a href="#TimeAndSales_Clear">Clear</a></li>
+    <li><a href="#Settings">Settings Menu</a>
+        <ul>
+            <li><a href="#SettingsWindow">Time and Sales Settings</a>
+				<ul>
+				    <li><a href="#Columns">Columns</a></li>	
+				    <li><a href="#ShowBidAndAskRecords">Show Bid and Ask Records</a></li>	
+				    <li><a href="#ShowGridLines">Show Grid Lines</a></li>	
+				    <li><a href="#ShowTitleBar">Show Title Bar</a></li>	
+				    <li><a href="#IncludeMillisecondsAndMicrosecondsInTime">Include Milliseconds and Microseconds in Time</a></li>	
+				    <li><a href="#InputFilteringVolumeGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Volume &gt;= | Volume &lt;=</a></li>	
+				    <li><a href="#InputFilteringPriceGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Price &gt;= | Price &lt;=</a></li>	
+				    <li><a href="#InputFilteringAskSizeGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Ask Size &gt;= | Ask Size &lt;=</a></li>	
+				    <li><a href="#InputFilteringBidSizeGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Bid Size &gt;= | Bid Size &lt;=</a></li>	
+				    <li><a href="#CombineFilteringVolumeGreaterAndLesserThanOrEqualTo">Combined Filtering &gt;&gt; Volume &gt;= | Volume &lt;=</a></li>	
+				    <li><a href="#CombineFilteringTradesGreaterAndLesserThanOrEqualTo">Combined Filtering &gt;&gt; Trades &gt;= | Trades &lt;=</a></li>	
+				    <li><a href="#ListFont">List Font</a></li>	
+				    <li><a href="#HighlightByField">Highlight &gt;&gt; ByField</a></li>	
+				    <li><a href="#HighlightCondition">Highlight &gt;&gt; Condition</a></li>	
+				    <li><a href="#HighlightValue">Highlight &gt;&gt; Value</a></li>	
+				    <li><a href="#HighlightColorRow">Highlight &gt;&gt; Color Row</a></li>	
+				    <li><a href="#HighlightColor">Highlight &gt;&gt; Color</a></li>	
+				    <li><a href="#HighlightBidTradeAlert">Highlight &gt;&gt; Bid Trade Alert</a></li>	
+				    <li><a href="#HighlightAskTradeAlert">Highlight &gt;&gt; Ask Trade Alert</a></li>	
+				    <li><a href="#CombineRecords_DoNotCombine">Combine Records &gt;&gt; Do Not Combine</a></li>	
+				    <li><a href="#CombineRecordswithSamePriceandType">Combine Records &gt;&gt; Combine Records with Same Price and Type</a></li>	
+				    <li><a href="#CombineRecordswithSameTimeandPrice">Combine Records &gt;&gt; Combine Records with Same Time and Price</a></li>	
+				    <li><a href="#CombineRecordswithSameTimeandType">Combine Records &gt;&gt; Combine Records with Same Time and Type</a></li>	
+				    <li><a href="#CombineRecordsintoExchangeReportedOriginalSummaryTrade">Combine Records &gt;&gt; Combine Records into Exchange Reported Original Summary Trade</a></li>
+				</ul>
+			</li>
+            <li><a href="#AttachDetachWindow">Attach/Detach Window</a></li>
+        </ul>
+    </li>
+    <li><a href="#ColorConfiguration">Color Configuration</a></li>	
+    <li><a href="#ColumnDescriptions">Column Descriptions</a>
+		<ul>
+		    <li><a href="#MonthDay">Month/Day</a></li>	
+		    <li><a href="#Time">Time</a></li>	
+		    <li><a href="#Price">Price</a></li>	
+		    <li><a href="#Volume">Volume</a></li>	
+		    <li><a href="#NumTrades">Num Trades</a></li>	
+		    <li><a href="#Type">Type</a>
+				<ul>
+					<li><a href="#BidAsk">Bid Ask</a></li>	
+					<li><a href="#BidTrade">Bid Trade</a></li>	
+					<li><a href="#AskTrade">Ask Trade</a></li>	
+					<li><a href="#AdditionalInformation">Additional Information</a></li>
+				</ul>
+			</li>	
+		    <li><a href="#Bid">Bid</a></li>	
+		    <li><a href="#BidSize">Bid Size</a></li>	
+		    <li><a href="#Ask">Ask</a></li>	
+		    <li><a href="#AskSize">Ask Size</a></li>
+		</ul>
+	</li>	
+    <li><a href="#OpeningMultipleTimeAndSalesWindowsForTheSameSymbol">Opening Multiple Time and Sales Windows for the Same Symbol</a></li>	
+    <li><a href="#UsingDefaultTimeAndSalesSettings">Using Default Time and Sales Settings</a></li>	
+    <li><a href="#SameTimeSalesWindowVisibleAcrossChartbooks">Keeping Same Time and Sales Window Visible across Chartbooks</a></li>
+
+    <li><a href="#TimeAndSalesWindowNotVisible">Time and Sales Window Not Visible</a></li>	
+    <li><a href="#TimeAndSalesWindowAlwaysOnTop">Time and Sales Window Always on Top</a></li>	
+    <li><a href="#TimeAndSalesWindowNotUpdating">Time and Sales Window Not Updating</a></li>	
+    <li><a href="#TimeSalesDataDuringReplay">Time and Sales Data During a Replay</a></li>
+    <li><a href="#ComparisonsOfTimeAndSalesDataToChartBarsBarVolumeAndTtoNumbersBars">Comparisons of Time and Sales Data to Chart Bars, Bar Volume and to Numbers Bars</a></li>
+    <li><a href="#ViewingTimeAndSalesDataAsStudiesOnAChart">Viewing Time and Sales Data as Studies on a Chart</a></li>
+    <li><a href="#AccessingTimeAndSalesDataInACS">Accessing Time and Sales Data in Advanced Custom Studies</a></li>
+    <li><a href="#ViewingTimeAndSalesOnASpreadsheet">Viewing Time and Sales on a Spreadsheet</a></li>
+    <li><a href="#SolvingMissingTimeAndSalesRecordsIssue">Solving Missing Time and Sales Records Issue</a></li>
+
+</ul>
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Time and Sales window lists in a table the Trades and Quotes received from the data feed. Trades refers to actual trades made for the symbol. Quotes refers to Bid and Ask data. Quotes can be optionally displayed based on the <b>Show Bid and Ask Records</b> setting. </p>
+
+    <p> Time and Sales data is another  name for a trade by trade history which includes the date and time of the trade and the volume of the trade. </p>
+
+    <p> There are various filtering,  record combining, highlighting, coloring, and column configuration options available.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Instructions">Instructions</h2>
+    <div class="member-link">[<a href="#Instructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow these instructions to use the Time and Sales windows:</p>
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the Sierra Chart menu. </li>
+
+        <li>The <b> Number of Stored Time and Sales Records</b> setting is set to the number of Time and Sales records for each Symbol held in memory. For example, if you set <b>Number of Stored Time and Sales Records </b> to 1000, then the Time and Sales window will be able to list up to 1000 rows initially, assuming 1000 records already exist, plus more as it fills up in real time. When you close and reopen the Time and Sales window or adjust its settings, 1000 rows will initially appear. <em>Do not</em> set the  <b>Number of Stored Time and Sales Records</b> setting <em>too high</em> because it will slow down the Time and Sales window and maintaining a lot of records in memory will consume excessive memory.</li>
+
+        <li>Press <b>OK</b>. Time and Sales setting in <b> Data/Trade Service Settings </b> does not need to be modified again  unless you want to change it. If you did make a change to this setting, select <b class="menu_item">File &gt;&gt; Disconnect</b> and then <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+
+        <li>To open a Time and Sales window for a chart, select  <b class="menu_item">Chart &gt;&gt; Open Time and Sales Window</b> on the Sierra Chart menu. Or, you can select <b class="menu_item">File &gt;&gt; Open Time and Sales Window</b>. </li>
+
+        <li>If the Time and Sales window does not display when you try to open it, then select <b class="menu_item">Chart &gt;&gt; Reset Child Windows</b>. Open it again with  <b class = "menu_item">Chart &gt;&gt; Open Time and Sales Window</b>.</li>
+
+        <li>The Time and Sales window is <em>associated with a specific chart</em>.  Each chart can have only <em>one associated</em> Time and Sales window.  Once you open a Time and Sales window for a chart, and you select <b class="menu_item">Chart &gt;&gt; Open Time and Sales</b> again, you will not get another Time and Sales window.  If you want another Time and Sales window you will have to switch to another chart or open another chart and then open a Time and Sales window for that chart.</li>
+
+        <li>The Time and Sales window displays the individual trades and individual Bid and Ask price changes. Bid and Ask price changes will not be displayed, unless the <b>Show Bid and Ask Records</b> option is enabled in the <b>Time and Sales Settings</b> window opened through the <b class="menu_item">Settings</b> menu. New lines are added as the data is received.</li>
+
+        <li>To modify any of the Time and Sales window settings,  select the <b class="menu_item">Settings</b> menu item.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="TimeAndSales_Clear">Clear</h2>
+    <div class="member-link">[<a href="#TimeAndSales_Clear">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Selecting <b>Clear</b>  on the menu of the Time and Sales Window will clear all the data that is in the Time and Sales Window and will start a new accumulation of data from that point.</p>
+
+    <p>Note that this is not a pulldown menu, but is a button that performs this action when selected.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Settings">Settings Menu</h2>
+    <div class="member-link">[<a href="#Settings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The <b class="menu_item">Settings</b> menu is a pulldown menu to access the Settings for the <b>Time and Sales Window</b>. And to Attach or Detach the  Time and Sales window to or from the main Sierra Chart window,   or to or from a detached chart window.</p>
+
+
+    <section class="h3">
+        <h3 id="SettingsWindow">Time and Sales Settings</h3>
+        <div class="member-link">[<a href="#SettingsWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> To access the Time and Sales settings, select <b class="menu_item">Settings &gt;&gt; Settings Window</b>  on the menu of the <b>Time and Sales</b> window  for the chart. This allows you to change various settings. </p>
+        
+        <p>Each of the settings is documented below.</p>
+
+        <p>To open the <b>Time and Sales</b> window, follow the <a href="#Instructions">Instructions</a> on this page.</p>
+
+        <div style="text-align: center;"><a href="../images/timeandsalessettingswindow.png" rel="lightbox"><img src="../images/timeandsalessettingswindow.png" alt="" width="450"  class="screenshot" loading="lazy"></a></div>
+
+        <section class="h4">
+            <h4 id="Columns" >Columns</h4>
+            <div class="member-link">[<a href="#Columns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Enable or disable the columns you want to display in the Time and Sales window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowBidAndAskRecords">Show Bid and Ask Records</h4>
+            <div class="member-link">[<a href="#ShowBidAndAskRecords">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Enable this option to display Quote records whenever there are changes with bid and ask data. If you have enabled this option, then ensure the <b>Store Bid and Ask Records</b>option is enabled in the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> window. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowGridLines">Show Grid Lines</h4>
+            <div class="member-link">[<a href="#ShowGridLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+            <p>When this option is enabled, gridlines will be shown on the Time and Sales window</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowTitleBar">Show Title Bar</h4>
+			<div class="member-link">[<a href="#ShowTitleBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then the title bar on the Time and Sales window will be displayed. When this option is disabled, the Title Bar will be hidden. When it is hidden, it is not possible to easily move the Time and Sales window. It is only possible to resize it by dragging the edges of the window. </p>
+
+            <p> If you notice any problems  when disabling this option like the title bar does not get hidden under certain conditions, then do not disable this option because  the problem is going to be caused by an operating system level problem that Sierra Chart has no control over.</p>
+            <p>  Sierra Chart does not recommend disabling this option. There can be various issues with removing a title bar on a window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IncludeMillisecondsAndMicrosecondsInTime">Include Milliseconds and Microseconds in Time</h4>
+			<div class="member-link">[<a href="#IncludeMillisecondsAndMicrosecondsInTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> When this option is enabled, the Time displayed in the Time column will show the time of the trade including the milliseconds or microseconds (when available).</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="InputFilteringVolumeGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Volume &gt;= | Volume &lt;=</h4>
+			<div class="member-link">[<a href="#InputFilteringVolumeGreaterAndLesserThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+            <p>These controls display and set the minimum and maximum volume of the individual trades that will be displayed in the Time and Sales window. This is for filtering out individual trades that do not fall within the specified volume range. Input Volume filtering applies to the individual trades before they are combined into a single record when <b>Combine Records</b> is set to any value other than <b>Do Not Combine</b>. </p>
+            
+            <p>For example: If you only want to see trade records that have an individual volume of 10 or greater, then type <b>10</b> in the <b>Volume &gt;=</b> Input Filtering text box.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="InputFilteringPriceGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Price &gt;= | Price &lt;=</h4>
+			<div class="member-link">[<a href="#InputFilteringPriceGreaterAndLesserThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> These controls display and set the minimum and maximum price of the individual trades that will be displayed in the Time and Sales window. This is for filtering out trades that do not fall within the specified price range.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="InputFilteringAskSizeGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Ask Size &gt;= | Ask Size &lt;=</h4>
+			<div class="member-link">[<a href="#InputFilteringAskSizeGreaterAndLesserThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> These controls display and set the minimum and maximum Ask Size of the individual trades that will be displayed in the Time and Sales window. This is for filtering out Ask trades that do not fall within the specified size range. Input Ask Size filtering applies to the individual trades before they are combined into a single record when <b>Combine Records</b> is set to any value other than <b>Do Not Combine</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="InputFilteringBidSizeGreaterAndLesserThanOrEqualTo">Input Filtering &gt;&gt; Bid Size &gt;= | Bid Size &lt;=</h4>
+			<div class="member-link">[<a href="#InputFilteringBidSizeGreaterAndLesserThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>These controls display and set the minimum and maximum Bid Size of the individual trades that will be displayed in the Time and Sales window. This is for filtering out Bid trades that do not fall within the specified size range. Input Bid Size filtering applies to the individual trades before they are combined into a single record when <b>Combine Records</b> is set to any value other than <b>Do Not Combine</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CombineFilteringVolumeGreaterAndLesserThanOrEqualTo">Combined Filtering &gt;&gt; Volume &gt;= | Volume &lt;=</h4>
+			<div class="member-link">[<a href="#CombineFilteringVolumeGreaterAndLesserThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>These controls display and set the minimum and maximum volume of the combined trades that will be displayed in the Time and Sales window. This is for filtering out trades that do not fall within the specified volume range. Combined Volume filtering applies to summed trades after they are combined into a single record when <b>Combine Records</b> is set to any value other than <b>Do Not Combine</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CombineFilteringTradesGreaterAndLesserThanOrEqualTo">Combined Filtering &gt;&gt; Trades &gt;= | Trades &lt;=</h4>
+			<div class="member-link">[<a href="#CombineFilteringTradesGreaterAndLesserThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> These controls display and set the minimum and maximum number of trades of the combined trades that will be displayed in the Time and Sales window. This is for filtering out trades that do not fall within the specified number of trades range. Combined Trades filtering applies to summed trades after they are combined into a single record when <b>Combine Records</b> is set to any value other than <b>Do Not Combine</b>.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="ListFont">List Font</h4>
+			<div class="member-link">[<a href="#ListFont">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>  These are the font settings for the lines and the header in the Time and Sales window. Press the <b>Select</b> button in the <b>List Font</b> frame to display and set the Font settings. Set the <b>Font</b>, <b>Font Style</b>, and <b>Size</b> as required. You should always see a sample of the font in the <b>Sample</b> frame. If not, then choose a different <b>Font</b> name. </p>
+
+            <p> If you find that after closing the <b>Time and Sales Settings</b> window or after closing the Chartbook which contains the chart that the Time and Sales window is associated with, that the <b>Font &gt;&gt; Size</b> setting is not previously as you set, then choose a different <b>Font</b> name because the one you have selected may not be supported by the operating system or not properly supported.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="HighlightByField">Highlight &gt;&gt; ByField</h4>
+			<div class="member-link">[<a href="#HighlightByField">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>  Set this to either <b>Price</b> or <b>Volume</b> to enable highlighting of the trade lines within the Time and Sales window based upon Price or Volume. When this is set to <b>None</b>, then highlighting and Alerts are disabled and all of the other fields within the <b>Highlight</b> frame are not used</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="HighlightCondition">Highlight &gt;&gt; Condition</h4>
+			<div class="member-link">[<a href="#HighlightCondition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The operator used in the comparison of the Field to the Value. For example, if the <b>Field</b> is set to <b>Price</b>, the Condition is set to <b>=</b>, and the Value is 100, then when the Price equals 100, the trade line will be highlighted (if enabled) and an Alert Sound  will be played (if enabled).  Supported operators: <b>=, &gt;, &gt;=, &lt;, &lt;=</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="HighlightValue">Highlight &gt;&gt; Value</h4>
+			<div class="member-link">[<a href="#HighlightValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The value to be compared to the Field.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="HighlightColorRow">Highlight &gt;&gt; Color Row</h4>
+			<div class="member-link">[<a href="#HighlightColorRow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Enable this option to highlight the trade line in the Time and Sales window using the Highlight Color when the condition is met.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="HighlightColor">Highlight &gt;&gt; Color</h4>
+			<div class="member-link">[<a href="#HighlightColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The color to highlight the trade line when the condition is met.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="HighlightBidTradeAlert">Highlight &gt;&gt; Bid Trade Alert</h4>
+			<div class="member-link">[<a href="#HighlightBidTradeAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Sets the particular Alert Number to trigger when the trade is at the Bid price or lower. If you want to have an alert sound play whenever your Highlight condition is met, then set this to one of the <b>Alert #</b> items in the list. Otherwise, select <b>No Alert Sound</b>.  </p>
+            
+            <p> You will then need to configure that particular Alert Number in the <b class="menu_item">Global Settings &gt;&gt; <a href="index899f.html?page=doc/GeneralSettings.html#Tab_Alerts">General Settings</a></b> window. </p>
+
+             <p>If you want the Alerts Log to open every time there is a Time and Sales alert, then  enable the <a href = "index899f.html?page=doc/GeneralSettings.html#ShowAlertsLogOnStudyAlert">Show Alerts Log on Study Alert</a>.</p>
+             
+        </section>
+
+        <section class="h4">
+            <h4 id="HighlightAskTradeAlert">Highlight &gt;&gt; Ask Trade Alert</h4>
+			<div class="member-link">[<a href="#HighlightAskTradeAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Sets the particular Alert Number to trigger when the trade is at the Ask price or higher. If you want to have an alert sound play whenever your Highlight condition is met, then set this to one of the <b>Alert #</b> items in the list. Otherwise, select <b>No Alert Sound</b>. </p> 
+            
+            <p>You will then need to configure that particular Alert Number in the <b class="menu_item">Global Settings &gt;&gt; <a href="index899f.html?page=doc/GeneralSettings.html#Tab_Alerts">General Settings</a></b> window.</p>
+                
+            <p>If you want the Alerts Log to open every time there is a Time and Sales alert, then  enable the <a href = "index899f.html?page=doc/GeneralSettings.html#ShowAlertsLogOnStudyAlert">Show Alerts Log on Study Alert</a>.  </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CombineRecords_DoNotCombine">Combine Records &gt;&gt; Do Not Combine</h4>
+			<div class="member-link">[<a href="#CombineRecords_DoNotCombine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> When this option is enabled, then the Time and Sales records are not combined together. <div class="member-link">[<a href="#CombineRecords_DoNotCombine">link</a>] - [<a href="#top">Top</a>]</div>  </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CombineRecordswithSamePriceandType">Combine Records &gt;&gt; Combine Records with Same Price and Type</h4>
+			<div class="member-link">[<a href="#CombineRecordswithSamePriceandType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> When this option is enabled, then time and sales records that have an identical trade price, and an identical type with regard to Bid Trade or Ask Trade, are combined into a single record in the Time and Sales list window.</p>
+            
+            <p> When this option is enabled, then be sure to use the <b>Combined Filtering</b> settings, if you want the filtering to be based upon the combined Time and Sales record.  </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CombineRecordswithSameTimeandPrice">Combine Records &gt;&gt; Combine Records with Same Time and Price</h4>
+			<div class="member-link">[<a href="#CombineRecordswithSameTimeandPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>   When this option is enabled, then time and sales records that have an identical timestamp, compared down to the second, and an identical trade price, are combined into a single record in the Time and Sales list window. </p>
+            
+            
+              <p>When this option is enabled, then be sure to use the <b>Combined Filtering</b> settings, if you want the filtering to be based upon the combined Time and Sales record. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CombineRecordswithSameTimeandType">Combine Records &gt;&gt; Combine Records with Same Time and Type</h4>
+			<div class="member-link">[<a href="#CombineRecordswithSameTimeandType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> When this option is enabled, then time and sales records that have an identical timestamp, compared down to the second, and an identical type with regard to Bid Trade or Ask Trade, are combined into a single record in the Time and Sales list window. </p>
+            
+            <p>When this option is enabled, then be sure to use the <b>Combined Filtering</b> settings, if you want the filtering to be based upon the combined Time and Sales record.  </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CombineRecordsintoExchangeReportedOriginalSummaryTrade">Combine Records &gt;&gt; Combine Records into Exchange Reported Original Summary Trade</h4>
+			<div class="member-link">[<a href="#CombineRecordsintoExchangeReportedOriginalSummaryTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> When this option is enabled, then Time and Sales records which are part of a larger summary trade are combined into the original reported summary trade.  </p>
+            
+            <p>This only works with  CME Group, EUREX, and CFE symbols and only when using  the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a>. The summary trades are only going to be for the same single price. Not multiple prices.</p>
+            
+            <p>When using <b>Combine Records into Exchange Reported Original Summary Trade</b>, then   both the <b>Input Filtering </b> and the <b>Combined Filtering</b>   settings apply. When multiple individual trades are combined into a summary trade,  then the <b>Combined Filtering</b> settings apply.  When there is no combining, then the standard  <b>Input Filtering </b>  settings apply.  So both must be specified.</p>
+            
+            
+            <p>During a chart replay, using <b>Combine Records into Exchange Reported Original Summary Trade</b> is ignored. If you want to have records combined into the original summary trade in the Time and Sales window during a chart replay, you will instead need to enable the <a href = "index4cf4.html?page=doc/ChartSettings.html#CombineTradesIntoOriginalSummaryTrade">Combine Trades into Original Summary Trade</a>  option  in   <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. However, during a replay the <b>Num Trades</b> field will always be 1 still.    </p>
+                    
+             <p>You can tell that individual trades have been combined into a summary trade when  the  <b>Num Trades</b> field for the Time and Sales row has a value greater or equal to 2. </p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachDetachWindow">Attach/Detach Window</h3>
+        <div class="member-link">[<a href="#AttachDetachWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is selected, the <b>Time and Sales Window</b> will be attached or detached from the chart with which it is associated.</p>
+
+        <p>Note that the action of Attaching the window does not dock the window into the chart, but rather becomes associated with the chart window so it is no longer a separate window independent window on the system desktop.</p>
+
+        <p>The main difference for when the window is attached versus detached is that when it is attached, the window will stay on top of the chart windows. Whereas, when it is detached, it becomes a window at the desktop level and will have its own icon in the  operating system Taskbar and therefore will move to the back when another window is selected.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ColorConfiguration">Color Configuration</h2>
+    <div class="member-link">[<a href="#ColorConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>The Colors for the background and text are controlled on the <a href = "#">Graphics Settings</a>  windows.  </p>
+        
+        <p> Refer to the <b>Time and Sales</b> items within <a href="index5795.html?page=doc/GraphicsSettings.html#ColorsDrawWidths">Colors and Widths</a> list.</p>
+        
+        <p>The background color of the Time and Sales window  where there are no records displayed  is the same color as the  Chart Backgroundcolor that Time and Sales window is associated with. </p>
+        
+        <p>  The  <b>Chart Grid</b> is also used for the Time and Sales   grid color.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ColumnDescriptions">Column Descriptions</h2>
+    <div class="member-link">[<a href="#ColumnDescriptions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+		<h3 id="MonthDay">Month/Day</h3>
+        <div class="member-link">[<a href="#MonthDay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This column displays the date of the Trade or Quote. The format is MM/DD.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="Time">Time</h3>
+        <div class="member-link">[<a href="#Time">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p>This column displays the time of the Trade or Quote in the format HH:MM:SS.msec. <b>msec</b> = milliseconds.</p>
+
+        <p>The milliseconds portion acts as a counter when trades occur within the same second. The second trade to occur in the same second will have a milliseconds value of 001 and this value is incremented for additional trades within the same second, up to a maximum of 999.</p>
+
+        <p>When replaying a chart and the historical Intraday data records of the chart data file are not 1 tick/trade per record, the timestamps of the 3 Trades listed will each have the same second and there will be no milliseconds component.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="Price">Price</h3>
+        <div class="member-link">[<a href="#Price">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p>This column displays the trade price in the case of a <b>Bid Trade</b> or <b>Ask Trade</b> record type. In the case of a <b>Bid Ask</b> record type, the trade Price is the price of the last trade received and does not indicate a new trade.</p>
+        
+        
+        <p>It is supported to limit the number of characters displayed to the specified number of rightmost characters.  Refer to this Chart Setting: <a href = "index4cf4.html?page=doc/ChartSettings.html#LimitPriceDisplayedToNRightCharacters">Limit Price Displayed to N Right Characters</a>.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="Volume">Volume</h3>
+        <div class="member-link">[<a href="#Volume">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p>This column displays the quantity of shares or contracts of the trade in the case of a <b>Bid Trade</b> or <b>Ask Trade</b> record type. In the case of a <b>Bid Ask</b> record type, the Volume is the volume of the last trade received and does not indicate a new trade.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="NumTrades">Num Trades</h3>
+        <div class="member-link">[<a href="#NumTrades">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p>This indicates the number of trades per displayed Time and Sales record. This will be 1 unless you are using one of the <b>Settings &gt;&gt; Combine Records</b> options.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="Type">Type</h3>
+        <div class="member-link">[<a href="#Type">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p>The Time and Sales record type can be one of the following:</p>
+
+        <section class="h4">
+			<h4 id="BidAsk">Bid Ask</h4>
+			<div class="member-link">[<a href="#BidAsk">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Time and Sales record type indicates that there has been a change with the Bid, Ask, Bid Size, or Ask Size received from the data feed or during a chart replay. These market data values are called Quote data. The <b>Price</b> and <b>Volume</b> fields for the record are for the last trade received and they do not indicate a new trade.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="BidTrade">Bid Trade</h4>
+			<div class="member-link">[<a href="#BidTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p>This record type indicates a new trade that occurred at the Bid price or lower. Or was considered to be a Bid Trade based upon other logic. For details, refer to <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Numbers Bars Definitions</a>.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="AskTrade">Ask Trade</h4>
+			<div class="member-link">[<a href="#AskTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p>This record type indicates a new trade that occurred at the Ask price or higher. Or was considered to be a Ask Trade based upon other logic. For details, refer to <a href="index5ee6.html?page=doc/NumbersBars.php#Definitions">Numbers Bars Definitions</a>.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="AdditionalInformation">Additional Information</h4>
+			<div class="member-link">[<a href="#AdditionalInformation">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p>It is Sierra Chart which determines whether a trade is at the Bid or Ask with some exceptions. One exception is CME (Chicago Mercantile Exchange) data using the <b>Sierra Chart Exchange Data Feed</b> or when using Rithmic. In these cases, it is the exchange which indicates whether a trade is at the Bid or Ask. All trades need to happen at the Bid or Ask when trades are executed on an exchange. Therefore, the concept of a trade between the Bid or Ask or trade above or below the Bid or Ask prices is due to a lack of Bid and Ask updates.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+		<h3 id="Bid">Bid</h3>
+        <div class="member-link">[<a href="#Bid">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p> This column displays the Bid price at the time of the trade or at the time of the Bid and Ask update.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="BidSize">Bid Size</h3>
+        <div class="member-link">[<a href="#BidSize">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This column displays the Bid Size at the time of the trade or at the time of the Bid and Ask update.</p>
+
+        <p>This is the quantity of shares or contracts at the best Bid price, waiting to be filled. This value is provided by the Data or Trading service Sierra Chart is connected to.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="Ask">Ask</h3>
+        <div class="member-link">[<a href="#Ask">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p> This column displays the Ask price at the time of the trade or at the time of the Bid and Ask update.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="AskSize">Ask Size</h3>
+        <div class="member-link">[<a href="#AskSize">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p>This column displays the Ask Size at the time of the trade or at the time of the Bid and Ask update.</p>
+
+        <p>This is the quantity of shares or contracts at the best Ask price, waiting to be filled. This value is provided by the Data or Trading service Sierra Chart is connected to.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="OpeningMultipleTimeAndSalesWindowsForTheSameSymbol">Opening Multiple Time and Sales Windows for the Same Symbol</h2>
+    <div class="member-link">[<a href="#OpeningMultipleTimeAndSalesWindowsForTheSameSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To open multiple Time and Sales windows for the same symbol, what you will need to do is open multiple charts for the same symbol. For each of those additional charts, select <b class="menu_item">Chart &gt;&gt; Display Time and Sales</b> to open a Time and Sales window.</p>
+
+    <p>If you do not need the additional charts other than for the purpose of viewing Time and Sales windows for them, then simply Minimize them. This can be done by clicking on the standard Windows Minimize button at the top right of each chart window. Or select <b class="menu_item">Window &gt;&gt; Hide Window</b>.</p>
+
+    <p>If the charts are minimized or hidden, it is recommended that you reduce the Days to Load setting for them since you will not be using them other than for the purpose of Time and Sales. To do this select <b class="menu_item">Chart &gt;&gt;  Chart Settings</b>. Reduce the <b>Days to Load</b> setting to <b>1</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="UsingDefaultTimeAndSalesSettings">Using Default Time and Sales Settings</h2>
+    <div class="member-link">[<a href="#UsingDefaultTimeAndSalesSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Each chart has its own associated Time and Sales window. Therefore, to use default Time and Sales settings, requires that your charts are saved as part of a <a href="index7674.html?page=doc/Chartbooks.html">Chartbook</a> by selecting <b class="menu_item">File &gt;&gt; Save</b>, if you have not already saved them previously. When the Chartbook is opened, the Time and Sales windows previously set will have the same settings as previously.</p>
+
+    <p>The Time and Sales window settings are contained within the chart that it is associated with. When a chart is active and you select <b class="menu_item">File &gt;&gt; Open Time and Sales Window</b>, then that particular Time and Sales window which has been opened is associated with the active chart and that always remains.</p>
+
+    <p>When you duplicate the chart, then the Time and Sales window for the duplicated chart will have the same settings as the Time and Sales window for the original chart.</p>
+
+    <p>Therefore, when you want to use the same Time and Sales settings as an existing Time and Sales window associated with an existing chart, go to that chart and select <b class="menu_item">Chart &gt;&gt; Duplicate Chart</b> or <b class="menu_item">Chart &gt;&gt; Duplicate Chart to Chartbook</b> on the menu. The new chart will use the same Time and Sales settings from the chart that you duplicated.</p>
+
+    <p>You can then open a Time and Sales window for that duplicated chart with <b class="menu_item">File &gt;&gt; Open Time and Sales Window</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SameTimeSalesWindowVisibleAcrossChartbooks">Keeping Same Time and Sales Window Visible across Chartbooks</h2>
+    <div class="member-link">[<a href="#SameTimeSalesWindowVisibleAcrossChartbooks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A Time and Sales window is a child of a chart it was open for and is always associated with that chart.</p>
+
+    <p>When switching to a different Chartbook, the Time and Sales windows associated with charts in a previously visible Chartbook will be hidden.</p>
+
+    <p>To keep a Time and Sales window visible across all Chartbooks, go to the chart it is associated with and enable <b class="menu_item">Window &gt;&gt; Window Always Visible</b>. This will also keep the chart visible across Chartbooks.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TimeAndSalesWindowNotVisible">Time and Sales Window Not Visible</h2>
+    <div class="member-link">[<a href="#TimeAndSalesWindowNotVisible">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the Time and Sales window does not display when you try to open it, then select <b class="menu_item">Chart &gt;&gt; Reset Child Windows</b>.  </p>
+
+    <p>Open it again with  <b class = "menu_item">Chart &gt;&gt; Open Time and Sales Window</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TimeAndSalesWindowAlwaysOnTop">Time and Sales Window Always on Top</h2>
+    <div class="member-link">[<a href="#TimeAndSalesWindowAlwaysOnTop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A Time and Sales window is associated with a particular Chart or Trading DOM window. It will always be on top relative to that particular Chart/Trading DOM.</p>
+
+    <p>If it is not on top relative to that window, then go to that Chart or Trading DOM window and select <b class="menu_item">Chart &gt;&gt; Open Time and Sales</b> window. This Time and Sales window will always be on top relative to it.</p>
+    
+    <p> When a  Time and Sales window is detached  through the  Time and Sales window  <b class="menu_item">Settings &gt;&gt; Attach/Detach Window</b> menu,  then it is possible to enable   <b class="menu_item">Settings &gt;&gt; Always on Top</b>. This command is only relevant for a detached Time and Sales window. <b>Always on Top</b> has no relevancy for an attached Time and Sales window and will always be  an owned window of the main Sierra Chart window.</p>
+</section>
+
+<section class="h2">
+    <h2  id="TimeAndSalesWindowNotUpdating">Time and Sales Window Not Updating</h2>
+    <div class="member-link">[<a href="#TimeAndSalesWindowNotUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If a Time and Sales window is not updating, then follow these steps.</p>
+
+    <ol>
+        <li>Go to the Time and Sales window, and  press the  <b>Home</b> key to cause it to scroll all the way to the top  in case it was not previously which would prevent it from showing new records being added. </li>
+        <li>On the Time and Sales window, select the <b>Settings</b> menu. Set all of the <b>Filtering</b> settings to 0.</li>
+        <li>Press <b>OK</b>.</li>
+        <li>If this does not resolve the problem, then close the Time and Sales window.</li>
+        <li>Go to the chart that you want a Time and Sales window for.</li>
+        <li>Make sure this chart is updating. If not, refer to <a href="index581c.html?page=doc/helpdetails3.html">help topic 3</a>.</li>
+        <li>Open a Time and Sales window again by selecting <b class="menu_item">File &gt;&gt; Open Time and Sales Window</b>. If you do not see the Time and Sales window, then go to the chart and select <b class="menu_item">Chart &gt;&gt; Reset Child Windows</b> and try opening it again.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="TimeSalesDataDuringReplay">Time and Sales Data During a Replay</h2>
+    <div class="member-link">[<a href="#TimeSalesDataDuringReplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> It is fully supported to replay time and sales data during a chart replay. Time and Sales data is nothing more than trade by trade data which is stored by Sierra Chart in the Intraday chart data file for the symbol when Sierra Chart is set to use a <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php"  target="_blank" rel="noopener noreferrer">tick by tick data storage configuration</a>.</p>
+
+    <p>The Trades listed in the Time and Sales window during real-time chart updating, represent the actual trades received in real-time from the connected data feed. The prices and volumes are accurate and complete, assuming the data feed is providing accurate and complete data.</p>
+
+    <p>During a replay, the Trades listed in the Time and Sales window are derived from the historical Intraday data.</p>
+
+    <p>If the historical Intraday data is not stored <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php" target="_blank" rel="noopener noreferrer">tick by tick</a> (1 trade per data record), there will be 3 Trades listed in the Time and Sales window per historical data record. One for the data record High, Low, and Last. The volume for each of these records is one third of the total volume of the historical data record.</p>
+
+    <p>If the historical Intraday data is stored tick by tick, then there will be one Trade per data record listed in the Time and Sales window during the replay. The price and volume of the trade will be accurate and all Trades will be listed.</p>
+
+    <p>Follow the instructions on the <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick Data Configuration</a> page to configure Sierra Chart for a tick by tick data configuration. Even with a tick by tick data configuration, the historical data may not all be tick by tick if the particular Data or Trading service you are using does not provide historical 1 tick data.</p>
+
+    <p>The Bid Size/Quantity and Ask Size/Quantity fields will always be 1 during a replay.</p>
+</section>
+
+<section class="h2">
+    <h2  id="ComparisonsOfTimeAndSalesDataToChartBarsBarVolumeAndTtoNumbersBars">Comparisons of Time and Sales Data to Chart Bars, Bar Volume and to Numbers Bars</h2>
+    <div class="member-link">[<a href="#ComparisonsOfTimeAndSalesDataToChartBarsBarVolumeAndTtoNumbersBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When comparing trades listed in the Time and Sales window for a chart to the chart bar values, the volume of the chart bars and to the price level volume in Numbers Bars, then be aware that the following settings can and will cause differences with these types of comparisons:</p>
+
+    <ul>
+        <li><b class="menu_item">Chart &gt;&gt; Open Time and Sales Window &gt;&gt; Settings &gt;&gt; Combine Records</b></li>
+
+        <li><b class="menu_item">Chart &gt;&gt; Open Time and Sales Window &gt;&gt; Settings &gt;&gt; Volume Filtering</b></li>
+
+        <li><b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting &gt;&gt; Volume Filter</b></li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="ViewingTimeAndSalesDataAsStudiesOnAChart">Viewing Time and Sales Data as Studies on a Chart</h2>
+    <div class="member-link">[<a href="#ViewingTimeAndSalesDataAsStudiesOnAChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To view a graph of the Time and Sales data on a chart, select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu.  You can add any of the available Time and Sales studies available. They are as follows:</p>
+
+    <ul>
+        <li><b>Time and Sales AskSize</b></li>
+        <li><b>Time and Sales Bid&amp;Ask</b></li>
+        <li><b>Time and Sales BidSize</b></li>
+        <li><b>Time and Sales Price</b></li>
+        <li><b>Time and Sales Time</b></li>
+        <li><b>Time and Sales Volume</b></li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="AccessingTimeAndSalesDataInACS">Accessing Time and Sales Data in Advanced Custom Studies</h2>
+    <div class="member-link">[<a href="#AccessingTimeAndSalesDataInACS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Time and Sales data is programmatically available through the Advanced Custom Study Interface and Language (ACSIL). For information on how to use this data in an Advanced Custom Study function, refer to the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetTimeAndSales">sc.GetTimeAndSales()</a> function.</p>
+
+    <p>For long-term Time and Sales (trade by trade) data access, refer to  <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#AlternativeWayForObtainingTimeSalesData">Alternative Way for Obtaining Time and Sales Data</a>.</p>
+
+    <p> It is also supported to access the individual trades within each chart bar by using the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scReadIntradayFileRecordForBarIndexAndSubIndex" >sc.ReadIntradayFileRecordForBarIndexAndSubIndex</a> function.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ViewingTimeAndSalesOnASpreadsheet">Viewing Time and Sales on a Spreadsheet</h2>
+    <div class="member-link">[<a href="#ViewingTimeAndSalesOnASpreadsheet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The most reliable way to view long-term Time and Sales data is to use the underlying trade by trade (tick by tick) data in the Intraday chart data file.  When Sierra Chart is set to store data tick by tick, the  Intraday chart data files, store every single trade so there is long-term permanent history made of "Time and Sales" data.   </p>
+    
+     <p> Follow the instructions below.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings</b>.  Set the <b>Intraday Data Storage Time Unit</b> to 1 Tick.  For complete instructions, refer to  <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php"   Target="_blank" rel="noopener noreferrer">Tick by Tick Data Configuration</a>.   </li>
+
+        <li> Press <b>OK</b>. </li>
+
+        <li>Open an <em>Intraday</em> chart for the symbol that you want Time and Sales data for, through <b Class = "menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+        <li>If you changed the <b>Intraday Data Storage Time Unit</b> setting at Step 1 above, then  select <b Class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b> to re-download the data in the Intraday chart to get the 1 tick data. This only needs to be done once per symbol.</li>
+
+        <li>Select <b class="menu_item">Chart &gt;&gt;  Chart Settings</b> on the menu.  </li>
+
+        <li>Set <b>Days To Load</b> to 1 or 2 days.  Or alternatively set the   <b>Use Date Range &gt;&gt; To</b> and <b>Use Date Range &gt;&gt; From</b>  controls to specify the beginning and ending dates  of the time range that you want to view Time and Sales data for.  The date format is: <B>YYYY-MM-DD</B>.</li>
+
+        <li>Set the <b>Intraday Bar Period &gt;&gt; Bar Period Type </b> to <b>Number of Trades Per Bar</b> and set the value in the box below this setting to <b>1</b>.  </li>
+
+        <li>If you want to display only trades above a certain volume, then select the <b>Data Limiting </b> tab. Set the  <a href="index4cf4.html?page=doc/ChartSettings.html#VolumeFilter" target="_blank" rel="noopener noreferrer">Volume Filter</a> as you require. And enable <b>Filter Trade Completely</b>. </li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li>Select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu.</li>
+
+        <li>Add the <b>Spreadsheet Study </b> study to the chart.</li>
+
+        <li>Press the <b>Settings</b> button.  Set a unique name for the <b>Spreadsheet Name</b>.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li> A Spreadsheet window will open.  If you do not see this window, you can find it listed as the specified Spreadsheet Name on the <b class="menu_item">CW</b> menu.</li>
+
+        <li>For more information about the <b>Spreadsheet Study</b>, refer to the <a href="indexbc7b.html?page=doc/UsingTheSpreadsheetStudy.php">Spreadsheet  Study</a> documentation.</li>
+
+        <li>You will now have each trade on a separate line of the Spreadsheet. The chart bars also will display 1 trade per bar.</li>
+
+        <li>If you want to have the Bid Volume and Ask Volume for each trade displayed on the Spreadsheet, then add the  <a href = "index5808.html?page=doc/StudiesReference.php&amp;ID=167&amp;Name=Bid_Volume">Bid Volume</a> and  <a href = "indexa869.html?page=doc/StudiesReference.php&amp;ID=168&amp;Name=Ask_Volume">Ask Volume</a>studies to the chart.  
+         <br> <br>
+        These will be displayed on the Spreadsheet beginning at column AA by default if 16 formula columns are being used, which is the default.</li>
+       
+
+       <li> To see the actual Bid price and Ask price at each trade, then add the <a href = "index866e.html?page=doc/StudiesReference.php&amp;ID=430&amp;Name=Difference_-_Bid_and_Ask_Prices">Bid and Ask Prices</a> study to the chart.
+        <br> <br>
+       This data will be displayed on the Spreadsheet beginning at column AA by default if 16 formula columns are being used, which is the default.</li>
+
+        <li>To see more rows, increase the <b>Number of Rows</b> input with the <b>Spreadsheet Study</b>. Refer to  <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Adding/Modifying Studies</a>.</li>
+
+        <li>The data on a Spreadsheet can be saved as a text file by selecting  <b class = "menu_item">File &gt;&gt; Save As</b>. In the <b>File Type</b> list box on the Save File window, select <b>Text Files</b>. Enter a file name and press the  <b>Save</b> button.</li>
+        
+        <li>As an alternative to using a Spreadsheet, you can export the data within the chart to a text file. For instructions, refer to <a href = "indexa20c.html?page=doc/EditMenu.html#ExportBarStudyDataToTextFile">Export Bar and Study Data to Text File</a>. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SolvingMissingTimeAndSalesRecordsIssue">Solving Missing Time and Sales Records Issue</h2>
+    <div class="member-link">[<a href="#SolvingMissingTimeAndSalesRecordsIssue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There can be different reasons, why there are missing Time and Sales records in the Time and Sales window. One reason is that the trade data was not received from the external data feed.</p>
+    
+    <p> A much less common reason is an internal technical issue   where when there is a slow rate of updating with the Time and Sales window,  and there are quote and trade updates received from the data feed or during a chart replay, for a symbol which exceed the time and sales buffer size, in between the Time and Sales window updates.</p>
+    
+     <p>  To solve this second issue, select  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings</b>.</p>
+     
+     <p>  Increase the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#StoredTimeSalesRecords">Number of Stored Time and Sales Records</a> setting. Normally there is not a need for this to be more than 5000.  You really should never need more than 10,000. </p>
+
+
+</section>
+
+<hr><p>*Last modified Tuesday, 06th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TimeandSalesWindow.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:51 GMT -->
+</html>  

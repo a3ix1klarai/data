@@ -1,0 +1,1564 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_Members_scInputs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105672') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACSIL_Members_scInputs.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>ACSIL Interface Members - sc.Input Array -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index0fb1.html?page=doc/ACSIL_Members_scInputs.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index6788.html?page=doc/ACSIL_Members.html">ACSIL Interface Members - Introduction</a> &gt;&gt; <a  href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html">ACSIL Interface Members - sc.Input Array</a></h4> </div>      <h1 class="PageName">ACSIL Interface Members - sc.Input Array</h1>
+
+<div class="h2">
+    <h2>Related Documentation</h2>
+
+    <ul>
+        <li><a href="index6788.html?page=doc/ACSIL_Members.html">ACSIL Interface Members - Introduction</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html">ACSIL Interface Members - Variables and Arrays</a></li>
+        <li><b>ACSIL Interface Members - sc.Input Array</b></li>
+        <li><a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html">ACSIL Interface Members - sc.Subgraph Array</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html">ACSIL Interface Members - Functions</a></li>
+    </ul>
+</div>    
+<hr>
+
+<div class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#UsingReferencesInputs">Using References to Inputs</a></li>
+        <li><a href="#ControllingDisplayOrderOfInputs">Controlling the Display Order of Inputs in the Study Settings Window</a></li>
+        <li><a href="#ACSILInputMembers">ACSIL sc.Input[] Members</a>
+            <ul>
+                <li><a href="#scInputName">sc.Input[].Name</a></li>
+                <li><a href="#scInputSetInt">sc.Input[].SetInt()</a></li>
+                <li><a href="#scInputGetInt">sc.Input[].GetInt()</a></li>
+                <li><a href="#scInputSetIntLimits">sc.Input[].SetIntLimits()</a></li>
+                <li><a href="#scInputSetFloat">sc.Input[].SetFloat()</a></li>
+                <li><a href="#scInputGetFloat">sc.Input[].GetFloat()</a></li>
+                <li><a href="#scInputSetFloatLimits">sc.Input[].SetFloatLimits()</a></li>
+                <li><a href="#scInputSetYesNo">sc.Input[].SetYesNo()</a></li>
+                <li><a href="#scInputGetYesNo">sc.Input[].GetYesNo()</a></li>
+                <li><a href="#scInputGetBoolean">sc.Input[].GetBoolean()</a></li>
+                <li><a href="#scInputSetInputDataIndex">sc.Input[].SetInputDataIndex()</a></li>
+                <li><a href="#scInputGetInputDataIndex">sc.Input[].GetInputDataIndex()</a></li>
+                <li><a href="#scInputSetMovAvgType">sc.Input[].SetMovAvgType()</a></li>         
+                <li><a href="#scInputGetMovAvgType">sc.Input[].GetMovAvgType()</a></li>
+                <li><a href="#scInputSetDate">sc.Input[].SetDate()</a></li>
+                <li><a href="#scInputGetDate">sc.Input[].GetDate()</a></li>
+                <li><a href="#scInputSetTime">sc.Input[].SetTime()</a></li>
+                <li><a href="#scInputSetTimeAsSCDateTime">sc.Input[].SetTimeAsSCDateTime()</a></li>
+                <li><a href="#scInputGetTime">sc.Input[].GetTime()</a></li>
+                <li><a href="#scInputSetDateTime">sc.Input[].SetDateTime()</a></li>
+                <li><a href="#scInputGetDateTime">sc.Input[].GetDateTime()</a></li>         
+                <li><a href="#scInputSetCustomInputStrings">sc.Input[].SetCustomInputStrings()</a></li>
+                <li><a href="#scInputSetCustomInputIndex">sc.Input[].SetCustomInputIndex()</a></li>
+                <li><a href="#scInputGetSelectedCustomString">sc.Input[].GetSelectedCustomString()</a></li>
+                <li><a href="#scInputGetColor">sc.Input[].GetColor()</a></li>
+                <li><a href="#scInputSetColor">sc.Input[].SetColor()</a></li>
+                <li><a href="#scInputGetIndex">sc.Input[].GetIndex()</a></li>
+                <li><a href="#scInputSetDouble">sc.Input[].SetDouble()</a></li>
+                <li><a href="#scInputGetDouble">sc.Input[].GetDouble()</a></li>
+                <li><a href="#scInputSetDoubleLimits">sc.Input[].SetDoubleLimits()</a></li>
+                <li><a href="#scInputSetTimePeriodType">sc.Input[].SetTimePeriodType()</a></li>
+                <li><a href="#scInputGetTimePeriodType">sc.Input[].GetTimePeriodType()</a></li>
+                <li><a href="#scInputSetAlertSoundNumber">sc.Input[].SetAlertSoundNumber()</a></li>
+                <li><a href="#scInputGetAlertSoundNumber">sc.Input[].GetAlertSoundNumber()</a></li>
+                <li><a href="#scInputSetStudyID">sc.Input[].SetStudyID()</a></li>
+                <li><a href="#scInputGetStudyID">sc.Input[].GetStudyID()</a></li>
+                <li><a href="#scInputSetChartNumber">sc.Input[].SetChartNumber()</a></li>
+                <li><a href="#scInputGetChartNumber">sc.Input[].GetChartNumber()</a></li>
+                <li><a href="#scInputSetChartStudySubgraphValues">sc.Input[].SetChartStudySubgraphValues()</a></li>
+                <li><a href="#scInputGetChartStudySubgraphValues">sc.Input[].GetChartStudySubgraphValues()</a></li>
+                <li><a href="#scInputSetStudySubgraphValues">sc.Input[].SetStudySubgraphValues()</a></li>
+                <li><a href="#scInputGetSubgraphIndex">sc.Input[].GetSubgraphIndex()</a></li>
+                <li><a href="#scInputSetChartStudyValues">sc.Input[].SetChartStudyValues()</a></li>
+                <li><a href="#scInputSetDescription">sc.Input[].SetDescription()</a></li>
+                <li><a href="#scInputSetString">sc.Input[].SetString()</a></li>
+                <li><a href="#scInputGetString">sc.Input[].GetString()</a></li>
+                <li><a href="#scInputSetPathAndFileName">sc.Input[].SetPathAndFileName()</a></li>
+                <li><a href="#scInputGetPathAndFileName">sc.Input[].GetPathAndFileName()</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<hr>
+
+<div class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p><b>sc.Input[]</b> is an array of the Inputs that a study can use.</p> 
+
+    <p>A study Input contained within the <b>sc.Input[]</b> array is a s_SCInput_# type of data structure.</p>
+
+    <p>Inputs allow user-specified inputs or parameters to a study function. Inputs are listed on the <a href="index9099.html?page=doc/ChartStudies.html#SettingsandInputsTab" target="_blank" rel="noopener noreferrer">Settings and Inputs</a> tab of the <b>Study Settings</b> window for each study. These allow various types input parameters to the study.  </p>
+    
+    
+    <p>Inputs can can consist of numbers (both integers and floating-point numbers), text strings and other various types of settings.</p>
+
+    <p>There is a maximum of <b>SC_INPUTS_AVAILABLE</b> (128)  Inputs available for a custom study to use. </p>
+
+    <p> The  sc.Input[] array  starts at 0. The first element is at index 0, the second element is at index 1, and so on. For example: <b>sc.Input[0]</b> refers to the first  Input and <b>sc.Input[9]</b> refers to the tenth  Input. </p>
+    
+    <p>When you are adding or removing study Inputs in the source code for an existing applied study instance to a chart, it is necessary to remove the study from the chart and  add it again. Or close and reopen the Chartbook it is contained within.</p>
+    
+    
+    <p> The <b>sc.Input[]</b> array  has both Set* and  Get*  member functions.   Use the Set* functions in the    <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSetDefaults" >sc.SetDefaults</a> code block to add an Input to a Study and set its initial value.   Use the  <b>Get* </b> member functions outside  of the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSetDefaults" >sc.SetDefaults</a> code block to get the current Input setting.</p>
+    
+    <p> Unless otherwise noted in the descriptions below,  the <b>sc.Input[].Set*</b> and <b>sc.Input[].Get*</b>   functions with the same name after Set/Get, correspond with each other. Use the <b>Set*</b> function to add the Input to the study and set its initial value. Use the <b>Get*</b> function to get the current Input setting.  For example, <a href="#scInputSetYesNo">sc.Input[].SetYesNo()</a> and <a href="#scInputGetYesNo">sc.Input[].GetYesNo()</a>  correspond with each other. </p>
+
+</div>
+
+<div class="h2">
+
+    <h2 id="UsingReferencesInputs">Using References to Inputs</h2>
+
+    <div class="member-link">[<a href="#UsingReferencesInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Input reference type, <b>SCInputRef</b>, can be used to set a reference to any of the available inputs to simplify writing code. It is most recommended you use <b>SCInputRef</b>, to make your code more readable. Refer to the example below.</p>
+
+
+    <div class="h4">
+        <h4>Code Example</h4>
+        <pre class="Code FullLineHeight">      
+SCSFExport scsf_SimpMovAvg(SCStudyInterfaceRef sc)
+{
+    SCSubgraphRef Average = sc.Subgraph[0];
+
+    SCInputRef Length = sc.Input[0];
+
+    // Set configuration variables
+    if (sc.SetDefaults)
+    {
+        // Set the configuration and defaults
+
+        sc.GraphName = "Simple Moving Average";
+
+        sc.StudyDescription = "Example function for calculating a simple moving average.";
+
+        // Set the region to draw the graph in. Region zero is the main
+        // price graph region.
+        sc.GraphRegion = 0;
+
+        // Set the name of the first subgraph
+        Average.Name = "Average";
+
+        // Set the color, style and line width for the subgraph
+        Average.PrimaryColor = RGB(0,255,0);
+        Average.DrawStyle = DRAWSTYLE_LINE;
+        Average.LineWidth = 3;
+
+        // Set the Length input and default it to 30
+        Length.Name = "Length";
+        Length.SetInt(30);
+
+        Length.SetIntLimits(1, 1000);
+
+        sc.AutoLoop = 1;//Automatic Looping
+
+        sc.AlertOnlyOncePerBar = TRUE;       
+
+        // Must return before doing any data processing if sc.SetDefaults is set
+        return;
+    }
+
+    // Do data processing
+
+    // Set the index of the first array element to begin drawing at
+    sc.DataStartIndex = Length.GetInt(); - 1;
+
+    // Calculate a simple moving average from the base data
+    sc.SimpleMovAvg(sc.Close,Average,Length.GetInt());
+
+    if (sc.CrossOver(Average,sc.Close))
+    {
+        // Since we are using auto-looping we do not specify the Index parameter.
+        sc.SetAlert(1, "Moving average has crossed last price."); 
+    }
+}
+        </pre>
+    </div>
+</div>
+
+<div class="h2">
+    <h2 id="ControllingDisplayOrderOfInputs">Controlling the Display Order of Inputs in the Study Settings Window</h2>
+    <div class="member-link">[<a href="#ControllingDisplayOrderOfInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The order in which ACSIL study inputs are displayed on the <b>Inputs </b> list on the  <b>Setting and Inputs</b> tab of the <b> Study Settings</b> window,  depends upon the index number into the  <b>sc.Input[]</b> array a particular Input is using. <b>sc.Input[0]</b> is listed first. <b>sc.Input[1]</b> is listed second and so on.</p>
+
+    <p>It is supported to alter the display order through the  <b>sc.Input[].DisplayOrder</b> member. This is a 1-based integer used to control the display order in the list of study Inputs. For example,  <b>sc.Input[10].DisplayOrder = 1</b> , will be the first study  listed in the list of Inputs. </p>
+
+    <div style="text-align: center;"><a href="../images/studyinputlist.png" rel="lightbox"><img src="../images/studyinputlist.png" alt="" width="500"  class="screenshot" loading="lazy"></a></div>
+    
+     <p>It is not valid to repeat the value used for DisplayOrder within the same study. The valid range is from 1  through SC_INPUTS_AVAILABLE  (128). </p>
+
+</div>
+
+<div class="h2">
+    <h2 id="ACSILInputMembers">ACSIL sc.Input[] Members</h2>
+    <div class="member-link">[<a href="#ACSILInputMembers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following sections document all of the members of the <b>sc.Input[]</b> array of Input structures.</p>
+
+
+    <div class="h3">
+
+
+        <!-- done -->
+
+        <h3 id="scInputName">sc.Input[].Name</h3>
+        <div class="member-link">[<a href="#scInputName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: Read/Write SCString variable. </p>
+
+        <p>Initial value: "" (empty string)</p>
+
+        <p><b>sc.Input[].Name</b> is the name of the Input. An input will only display in the list of Inputs for the study on the Study Settings window if a name is set for it.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>Name<span class="operator"> =</span><span class="string"> "Length"</span><span class="operator">;</span></pre></div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+        <h3 id="scInputSetInt">sc.Input[].SetInt()</h3>
+        <div class="member-link">[<a href="#scInputSetInt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetInt</b>(int <b>Value</b>);</p>
+
+        <p>The <b>sc.Input[].SetInt()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is an Integer value. This Input displays a text box in which an Integer value can be entered.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">9</span><span class="operator">].</span>SetInt<span class="operator">(</span><span class="int">20</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done-->
+
+        <h3 id="scInputGetInt">sc.Input[].GetInt()</h3>
+        <div class="member-link">[<a href="#scInputGetInt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p>The <b>sc.Input[].GetInt()</b> function gets the value from a study Input set with the <b>sc.Input[].SetInt()</b> function. User changes to the input also apply when getting the value. </p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">int</span> InInteger<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">9</span><span class="operator">].</span>GetInt<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetIntLimits">sc.Input[].SetIntLimits()</h3>
+        <div class="member-link">[<a href="#scInputSetIntLimits">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting"> <b>sc.Input[].SetIntLimits</b>(int <b>Min</b>, int <b>Max</b>);</p>
+
+        <p>The <b>sc.Input[].SetIntLimits()</b> function sets the minimum and maximum limits for an Integer Input. The user will not be able to set a value for this Input outside of the range that is specified through this function.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">9</span><span class="operator">].</span>SetIntLimits<span class="operator">(</span><span class="int">1</span><span class="operator">,</span><span class="int"> 100</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="h3">
+
+        <!--done-->
+
+        <h3 id="scInputSetFloat">sc.Input[].SetFloat()</h3>
+        <div class="member-link">[<a href="#scInputSetFloat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetFloat</b>(float <b>Value</b>);</p>
+
+        <p>The <b>sc.Input[].SetFloat()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is a single precision floating point value. This Input displays a text box in which a float value can be entered.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">4</span><span class="operator">].</span>SetFloat<span class="operator">(</span><span class="float">5.5f</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetFloat">sc.Input[].GetFloat()</h3>
+        <div class="member-link">[<a href="#scInputGetFloat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">float <b>sc.Input[].GetFloat</b>();</p>
+
+        <p>The <b>sc.Input[].GetFloat()</b> function gets the value from a study Input set with the <b>sc.Input[].SetFloat()</b> function. User changes to the input also apply when getting the value. </p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">float</span> InFloat<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">4</span><span class="operator">].</span>GetFloat<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetFloatLimits">sc.Input[].SetFloatLimits()</h3>
+        <div class="member-link">[<a href="#scInputSetFloatLimits">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting"> <b>sc.Input[].SetFloatLimits</b>(float <b>Min</b>, float <b>Max</b>);</p>
+
+        <p>The <b>sc.Input[].SetFloatLimits()</b> function sets the minimum and maximum limits for a float Input. The user will not be able to set a value for this Input outside of the range that is specified through this function.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">4</span><span class="operator">].</span>SetFloat<span class="operator">(</span><span class="float">5.5f</span><span class="operator">);</span><span class="keyword">
+
+sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">4</span><span class="operator">].</span>SetFloatLimits<span class="operator">(-</span><span class="float">10.0f</span><span class="operator">,</span><span class="float"> 10.0f</span><span class="operator">);</span></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetYesNo">sc.Input[].SetYesNo()</h3>
+        <div class="member-link">[<a href="#scInputSetYesNo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetYesNo</b>(unsigned int <b>Value</b>);</p>
+
+        <p>The <b>sc.Input[].SetYesNo()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value can either be 1 for <b>Yes</b> or 0 for <b>No</b>. This Input displays a list box with the choices <b>Yes</b> and <b>No</b>.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">5</span><span class="operator">].</span>SetYesNo<span class="operator">(</span><span class="int">0</span><span class="operator">);</span></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- Done -->
+
+        <h3 id="scInputGetYesNo">sc.Input[].GetYesNo()</h3>
+        <div class="member-link">[<a href="#scInputGetYesNo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetYesNo</b>();</p>
+
+        <p>The <b>sc.Input[].GetYesNo()</b> function gets the value from a study Input set with the <b>sc.Input[].SetYesNo()</b> function. User changes to the input also apply when getting the value. 0 is returned for No/False, and 1 is returned for Yes/True.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">int</span> InYesNo<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">5</span><span class="operator">].</span>GetYesNo<span class="operator">();</span></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetBoolean">sc.Input[].GetBoolean()</h3>
+        <div class="member-link">[<a href="#scInputGetBoolean">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">int <b>sc.Input[].GetBoolean</b>();</p>
+
+        <p>The <b>sc.Input[].GetBoolean()</b> function gets the value from a study Input set with the <b>sc.Input[].SetYesNo()</b> function. User changes to the input also apply when getting the value. 0 is returned for No/False, and 1 is returned for Yes/True.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">int</span> InYesNoValue<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetBoolean<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done-->
+
+        <h3 id="scInputSetInputDataIndex">sc.Input[].SetInputDataIndex()</h3>
+        <div class="member-link">[<a href="#scInputSetInputDataIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetInputDataIndex</b>(unsigned int <b>Index</b>);</p>
+
+        <p><b>sc.Input[].SetInputDataIndex()</b> creates an Input Data type of Input in the Study Settings window for the study and sets the selected Input Data item.  You can set the  <b>Index</b> parameter to any of the constants: <b>SC_OPEN</b>, <b>SC_HIGH</b>, ... which are listed in the <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></b> description. The Input is shown in the Technical Study Settings window as a list box with the options: Open, High, Low, Close, ....</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetInputDataIndex<span class="operator">(</span>SC_HIGH<span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetInputDataIndex">sc.Input[].GetInputDataIndex()</h3>
+        <div class="member-link">[<a href="#scInputGetInputDataIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetInputDataIndex</b>();</p>
+
+        <p><b>sc.Input[].GetInputDataIndex()</b> gets the index of the selected Input Data item for the study input. This value can be used as an index into the <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></b> arrays.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="comment">// Get the input data index for the first input
+</span><span class="type">int</span> InputDataIndex<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetInputDataIndex<span class="operator">();</span><span class="comment">
+
+//The following line copies an element at the current index from
+//the sc.BaseData array selected with sc.Input[0], to the element
+//at the current index of the first Subgraph.
+</span><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">][</span><span class="keyword">sc</span><span class="operator">.</span>Index<span class="operator">] =</span><span class="keyword"> sc</span><span class="operator">.</span>BaseData<span class="operator">[</span>InputDataIndex<span class="operator">][</span><span class="keyword">sc</span><span class="operator">.</span>Index<span class="operator">];</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetMovAvgType">sc.Input[].SetMovAvgType()</h3>
+        <div class="member-link">[<a href="#scInputSetMovAvgType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetMovAvgType</b>(unsigned int <b>MovingAverageType</b>);</p>
+
+        <p><b>sc.Input[].SetMovAvgType()</b> sets the moving average type for the input. The input is shown in the Technical Study Settings window as a list containing the various different moving average types supported for the input. The parameter <b>MovingAverageType</b> can be one of the following values:</p>
+
+        <ul>
+            <li><b>MOVAVGTYPE_EXPONENTIAL</b></li>
+            <li><b>MOVAVGTYPE_LINEARREGRESSION</b></li>
+            <li><b>MOVAVGTYPE_SIMPLE</b></li>
+            <li><b>MOVAVGTYPE_WEIGHTED</b></li>
+            <li><b>MOVAVGTYPE_WILDERS</b></li>
+            <li><b>MOVAVGTYPE_SIMPLE_SKIP_ZEROS</b></li>
+            <li><b>MOVAVGTYPE_SMOOTHED</b></li>
+        </ul>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">3</span><span class="operator">].</span>SetMovAvgType<span class="operator">(</span>MOVAVGTYPE_SIMPLE<span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetMovAvgType">sc.Input[].GetMovAvgType()</h3>
+        <div class="member-link">[<a href="#scInputGetMovAvgType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetMovAvgType</b>();</p>
+
+        <p><b>sc.Input[].GetMovAvgType()</b> gets the moving average type from the input. A moving average type can be one of the following values:</p>
+
+        <ul>
+            <li><b>MOVAVGTYPE_EXPONENTIAL</b></li>
+            <li><b>MOVAVGTYPE_LINEARREGRESSION</b></li>
+            <li><b>MOVAVGTYPE_SIMPLE</b></li>
+            <li><b>MOVAVGTYPE_WEIGHTED</b></li>
+            <li><b>MOVAVGTYPE_WILDERS</b></li>
+            <li><b>MOVAVGTYPE_SIMPLE_SKIP_ZEROS</b></li>
+            <li><b>MOVAVGTYPE_SMOOTHED</b></li>
+        </ul>
+
+        <div class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>ATR<span class="operator">(</span><span class="keyword">sc</span><span class="operator">.</span>BaseDataIn<span class="operator">,</span> ATR<span class="operator">,</span> Length<span class="operator">.</span>GetInt<span class="operator">(),</span> MAType<span class="operator">.</span>GetMovAvgType<span class="operator">());</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetDate">sc.Input[].SetDate()</h3>
+        <div class="member-link">[<a href="#scInputSetDate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetDate</b>(int <b>Date</b>);</p>
+
+        <p>
+            The <b>sc.Input[].SetDate()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is a <a href="indexac34.html?page=doc/SCDateTime.html#DateValue">Date Value</a>. This Input displays a standard Windows date picker interface. Unless there is a specific date we want to specify as an initial value, we should use zero for the Date parameter.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetDate<span class="operator">(</span><span class="int">0</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetDate">sc.Input[].GetDate()</h3>
+        <div class="member-link">[<a href="#scInputGetDate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">int <b>sc.Input[].GetDate</b>();</p>
+
+
+        <p>The <b>sc.Input[].GetDate()</b>  function gets the date value from a study Input set with the <b>sc.Input[].SetDate()</b> function. User changes to the input also apply when getting the value. The value returned is a <a href="indexac34.html?page=doc/SCDateTime.html#DateValue">Date Value</a>.</p>
+
+        <div class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="type">int</span> InDate<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetDate<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetTime">sc.Input[].SetTime()</h3>
+        <div class="member-link">[<a href="#scInputSetTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetTime</b>(int <b>Value</b>);</p>
+
+        <p>
+            The <b>sc.Input[].SetTime()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is a <a href="indexac34.html?page=doc/SCDateTime.html#TimeValue">Time Value</a>. This Input displays a Time interface. Unless there is a specific time you want to specify as an initial value,  use zero for the Time parameter.</p>
+
+        <div class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="comment">// The HMS_TIME function is used to make a time value from hours, minutes, and seconds
+</span><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetTime<span class="operator">(</span>HMS_TIME<span class="operator">(</span><span class="int">8</span><span class="operator">,</span><span class="int">30</span><span class="operator">,</span><span class="int">0</span><span class="operator">));</span><span class="comment"> // Set the time for the input to 8:30</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetTimeAsSCDateTime">sc.Input[].SetTimeAsSCDateTime()</h3>
+        <div class="member-link">[<a href="#scInputSetTimeAsSCDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetTimeAsSCDateTime</b>(int <b>Value</b>);</p>
+
+        <p> The <b>sc.Input[].SetTimeAsSCDateTime()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is a Time as a <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> variable. </p>
+            
+       <p>  This Input displays a standard Time interface. Unless there is a specific time you want to specify as an initial value, use zero for the Time parameter.</p>
+       
+       <p>This function supports setting a Time value with milliseconds or greater precision. </p>
+
+    </div>
+    
+    
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetTime">sc.Input[].GetTime()</h3>
+        <div class="member-link">[<a href="#scInputGetTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">int <b>sc.Input[].GetTime</b>();</p>
+
+        <p>The <b>sc.Input[].GetTime()</b>  function gets the time value from a study Input set with the <b>sc.Input[].SetTime()</b> function. User changes to the input also apply when getting the value. The value returned is a <a href="indexac34.html?page=doc/SCDateTime.html#TimeValue">Time Value</a>.</p>
+
+        <div class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="type">int</span> InTime<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetTime<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetDateTime">sc.Input[].SetDateTime()</h3>
+        <div class="member-link">[<a href="#scInputSetDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetDateTime</b>(SCDateTime <b>DateTime</b>);</p>
+
+        <p>The <b>sc.Input[].SetDateTime()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is a <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> value. This Input displays a standard Windows date and time interface. Unless there is a specific date-time we want to specify as an initial value, we should use zero for the DateTime parameter.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetDateTime<span class="operator">(</span><span class="int">0</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetDateTime">sc.Input[].GetDateTime()</h3>
+        <div class="member-link">[<a href="#scInputGetDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCDateTime <b>sc.Input[].GetDateTime</b>();</p>
+
+        <p>The <b>sc.Input[].GetDateTime()</b> function gets the <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> value from a study Input set with the sc.Input[].SetDateTime() function. User changes to the input also apply when getting the value. The value returned is a SCDateTime value.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCDateTime InDateTime<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetDateTime<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+        <h3 id="scInputSetCustomInputStrings">sc.Input[].SetCustomInputStrings()</h3>
+        <div class="member-link">[<a href="#scInputSetCustomInputStrings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">void <b>sc.Input[].SetCustomInputStrings</b>(const char* p_CustomStrings)</p>
+
+        <p>The <b>sc.Input[].SetCustomInputStrings()</b> function works in conjunction with the <b>sc.Input[].SetCustomInputIndex()</b> input. These functions together allow you to specify a custom list of text strings for a user study input and set the default selected text string. The <b>sc.Input[].SetCustomInputIndex()</b> function allows you set the default selected text string in the input list. Each text string in the input list maps to a zero-based Integer index. The first one is 0, the second one is 1 and so on. To get the Integer index of the selected text string in the input list, use the function  <b> sc.Input[].GetIndex()</b>.</p>
+
+        <p>For a complete code example, refer to the <b>scsf_CustomStringsInputExample</b> function in the <b>/ACSSource/studies.cpp</b> file in the folder where Sierra Chart is installed to.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="comment">// Define a reference to an available input to make it easier to refer to
+</span>SCInputRef CustomInput<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">];</span><span class="flow">
+
+if</span><span class="operator"> (</span><span class="keyword">sc</span><span class="operator">.</span>SetDefaults<span class="operator">)
+{</span>
+CustomInput<span class="operator">.</span>Name<span class="operator"> =</span><span class="string"> "List of options"</span><span class="operator">;</span><span class="comment">
+
+// Define the list of strings for our custom input
+</span>CustomInput<span class="operator">.</span>SetCustomInputStrings<span class="operator">(</span><span class="string">"Option 1;Option 2;Option 3;Option 4"</span><span class="operator">);</span><span class="comment">
+
+// Set the first text string as the initial selected item in the custom list of text strings
+</span>CustomInput<span class="operator">.</span>SetCustomInputIndex<span class="operator">(</span><span class="int">0</span><span class="operator">);
+}</span><span class="comment">
+
+// Get the index of the selected text string. This is zero-based.
+</span><span class="type">int</span> Selection<span class="operator"> =</span> CustomInput<span class="operator">.</span>GetIndex<span class="operator">();</span></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+        <h3 id="scInputSetCustomInputIndex">sc.Input[].SetCustomInputIndex()</h3>
+        <div class="member-link">[<a href="#scInputSetCustomInputIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">void <b>sc.Input[].SetCustomInputIndex</b>(int StringIndex)</p>
+
+        <p>For complete details about this function and an example, refer to the <a href="#scInputSetCustomInputStrings">sc.Input[].SetCustomInputStrings ()</a> description.</p>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetIndex">sc.Input[].GetIndex()</h3>
+        <div class="member-link">[<a href="#scInputGetIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetIndex</b>();</p>
+
+        <p>The <b>sc.Input[].GetIndex()</b> function gets the Integer index of the selection for the sc.Input[]. For more details about this function and an example, refer to the <a href="#scInputSetCustomInputStrings">sc.Input[].SetCustomInputStrings()</a> description.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">int</span> SelectedIndex<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetIndex<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+        <h3 id="scInputGetSelectedCustomString">sc.Input[].GetSelectedCustomString()</h3>
+        <div class="member-link">[<a href="#scInputGetSelectedCustomString">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCString <b>sc.Input[].GetSelectedCustomString()</b></p>
+
+        <p>This function can be used when an input has been set to hold a list of text strings with the <a href="#scInputSetCustomInputStrings">sc.Input[].SetCustomInputStrings()</a> function. This function returns the selected text string, and not the Integer index. The return value is a  SCString.</p>
+
+        <div class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="type">SCString</span> SelectedStringText<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetSelectedCustomString<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetColor">sc.Input[].SetColor()</h3>
+        <div class="member-link">[<a href="#scInputSetColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetColor</b>(unsigned int <b>Color</b>);</p>
+
+        <p>The <b>sc.Input[].SetColor()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is a RBG color value. This input displays a color button.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetColor<span class="operator">(</span><span class="int">128</span><span class="operator">,</span><span class="int"> 128</span><span class="operator">,</span><span class="int"> 128</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetColor">sc.Input[].GetColor()</h3>
+        <div class="member-link">[<a href="#scInputGetColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetColor</b>();</p>
+
+        <p>The <b>sc.Input[].GetColor()</b> function gets the value from a study Input set with the <b>sc.Input[].SetColor()</b> function. User changes to the input also apply when getting the value. The value returned is a RGB color value.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="comment">// Get the color value 
+</span><span class="type">unsigned int</span> ColorValue<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetColor<span class="operator">();</span></pre>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetDouble">sc.Input[].SetDouble()</h3>
+        <div class="member-link">[<a href="#scInputSetDouble">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetDouble</b>(double <b>Value</b>);</p>
+
+        <p>The <b>sc.Input[].SetDouble()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is a double precision floating point value. This Input displays a text box in which a float value can be entered.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetDouble<span class="operator">(</span><span class="float">10.5</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetDouble">sc.Input[].GetDouble()</h3>
+        <div class="member-link">[<a href="#scInputGetDouble">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">double <b>sc.Input[].GetDouble</b>();</p>
+
+        <p>The <b>sc.Input[].GetDouble()</b> function gets the value from a study Input set with the <b>sc.Input[].SetDouble()</b> function. User changes to the input also apply when getting the value. </p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">double</span> InValue<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetDouble<span class="operator">();</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetDoubleLimits">sc.Input[].SetDoubleLimits()</h3>
+        <div class="member-link">[<a href="#scInputSetDoubleLimits">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetDoubleLimits</b>(double <b>Min</b>, double <b>Max</b>);</p>
+
+        <p>The <b>sc.Input[].SetDoubleLimits()</b> function sets the minimum and maximum limits for a double Input. The user will not be able to set a value for this Input outside of the range that is specified through this function.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetDoubleLimits<span class="operator">(</span><span class="float">1.0</span><span class="operator">,</span><span class="float"> 100.0</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetTimePeriodType">sc.Input[].SetTimePeriodType()</h3>
+        <div class="member-link">[<a href="#scInputSetTimePeriodType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetTimePeriodType</b>(unsigned int <b>Value</b>);</p>
+
+        <p>The <b>sc.Input[].SetTimePeriodType()</b> function adds an Input to the Study Settings window for the study and sets the initial value. The initial value is an Integer value of one of the constants listed below. This Input displays a list box in which one of the choices can be selected.</p>
+        <ul>
+            <li>TIME_PERIOD_LENGTH_UNIT_MINUTES</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_DAYS</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_WEEKS</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_MONTHS</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_YEARS</li>
+        </ul>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCInputRef TimePeriodType<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">];</span> 
+TimePeriodType<span class="operator">.</span>Name<span class="operator"> =</span><span class="string"> "Time Period Type"</span><span class="operator">;</span> 
+TimePeriodType<span class="operator">.</span>SetTimePeriodType<span class="operator">(</span>TIME_PERIOD_LENGTH_UNIT_MINUTES<span class="operator">);</span> </pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetTimePeriodType">sc.Input[].GetGetTimePeriodType()</h3>
+        <div class="member-link">[<a href="#scInputGetTimePeriodType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetTimePeriodType</b>();</p>
+
+        <p>The <b>sc.Input[].GetTimePeriodType()</b> function gets the value from a study Input set with the <b>sc.Input[].SetTimePeriodType()</b> function. User changes to the input also apply when getting the value. The return value is one the constants listed below.</p>
+        <ul>
+            <li>TIME_PERIOD_LENGTH_UNIT_MINUTES</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_DAYS</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_WEEKS</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_MONTHS</li>
+            <li>TIME_PERIOD_LENGTH_UNIT_YEARS</li>
+        </ul>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCInputRef TimePeriodType<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">];</span><span class="flow">
+
+if</span><span class="operator"> (</span>TimePeriodType<span class="operator">.</span>GetTimePeriodType<span class="operator">() ==</span> TIME_PERIOD_LENGTH_UNIT_DAYS<span class="operator"> )
+{</span>
+    NumMins<span class="operator"> =</span> MINUTES_PER_DAY<span class="operator">;
+}</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetAlertSoundNumber">sc.Input[].SetAlertSoundNumber()</h3>
+        <div class="member-link">[<a href="#scInputSetAlertSoundNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetAlertSoundNumber</b>(int <b>Value</b>);</p>
+
+        <p>The <b>sc.Input[].SetAlertSoundNumber()</b> function adds an Input to the Study Settings window for the study and sets the initial value. </p>
+
+        <p>This Input displays a list box in which one of the choices can be selected.</p>
+
+        <p>The initial value can be one of the following:</p>
+
+        <ul>
+            <li><b>0</b>: Alert Disabled. This means that the alert is completely disabled and your code should not generate an alert message or sound.</li>
+            <li><b>1</b>: No Alert Sound. This means the alert will not generate a sound but can generate a message.</li>
+            <li><b>&gt;= 2</b>: The Alert Number + 1 which corresponds to all of the Alert Numbers  in <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts</b>. As of this writing, there are currently 150 of them. This value needs to have 1 subtracted from it to get the actual Alert Number to use.</li>
+        </ul>
+
+
+        <div class="h3">
+            <h3>Code Example</h3>
+            <pre class="Code FullLineHeight">
+SCInputRef HighAlert = sc.Input[0];
+
+if(sc.SetDefaults)
+{
+   HighAlert.Name =  "High Alert Sound";
+   HighAlert.SetAlertSoundNumber(2);
+}
+            </pre>
+        </div>
+
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputGetAlertSoundNumber">sc.Input[].GetAlertSoundNumber()</h3>
+        <div class="member-link">[<a href="#scInputGetAlertSoundNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetAlertSoundNumber</b>();</p>
+
+        <p>The <b>sc.Input[].GetAlertSoundNumber()</b> function gets the value from a study Input set with the <b>sc.Input[].SetAlertSoundNumber()</b> function. User changes to the input also apply when getting the value. </p>
+
+        <p>The return value can be one of the following:</p>
+
+        <ul>
+            <li><b>0</b>: Alert Disabled. This means that the alert is completely disabled and your code should not generate an alert message or sound.</li>
+            <li><b>1</b>: No Alert Sound. This means the alert will not generate a sound but can generate a message.</li>
+            <li><b>&gt;= 2</b>: The Alert Number + 1 which corresponds to all of the Alert Numbers  in <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts</b>. As of this writing, there are currently 150 of them. This value needs to have 1 subtracted from it to get the actual Alert Number to use.</li>
+        </ul>
+
+        <div class="h3">
+            <h3>Code Example</h3>
+            <pre class="Code FullLineHeight">
+SCString Message;
+Message.Format("New Daily High: %f. Previous high: %f", sc.DailyHigh, PreviousHigh);
+sc.PlaySound(HighAlert.GetAlertSoundNumber() - 1, Message);
+            </pre>
+        </div>
+
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetStudyID">sc.Input[].SetStudyID()</h3>
+        <div class="member-link">[<a href="#scInputSetStudyID">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetStudyID</b>(unsigned int <b>Value</b>);</p>
+
+        <p><b>sc.Input[].SetStudyID()</b> sets the unique Study ID for the purpose of referencing another study. Each study on the chart has its own   unique Study   Identifier.  For further information, refer to <a href = "indexd011.html?page=doc/ACSILProgrammingConcepts.html#UniqueStudyInstanceIdentifiers"  target="_blank" rel="noopener noreferrer">Unique Study Instance Identifiers</a>.</p>
+
+        <p>When an Input is set to this type, it will list all of the studies that are on the chart. The users selection will set the  Input to the proper value.  </p>
+        
+        <p>  Use <a href="#scInputGetStudyID">sc.Input[].GetStudyID()</a> to get the current setting for this Input.  </p>
+        
+        
+        <p>This   Input type works with the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyArrayUsingID">sc.GetStudyArrayUsingID()</a> function and other functions that require  the unique Study ID. This normally should be set to 1 in the  <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSetDefaults" >sc.SetDefaults</a> code block.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetStudyID<span class="operator">(</span><span class="int">1</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+        <h3 id="scInputGetStudyID">sc.Input[].GetStudyID()</h3>
+        <div class="member-link">[<a href="#scInputGetStudyID">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetStudyID</b>();</p>
+
+        <p><b>sc.Input[].GetStudyID()</b> gets the unique instance ID for the selected study from the input. This input type works with the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyArrayUsingID">sc.GetStudyArrayUsingID()</a>  function and other functions that require a Study ID. </p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCFloatArray Study1Array<span class="operator">;</span><span class="keyword"> 
+sc</span><span class="operator">.</span>GetStudyArrayUsingID<span class="operator">(</span>InputStudy1<span class="operator">.</span>GetStudyID<span class="operator">(),</span> Study1Subgraph<span class="operator">.</span>GetSubgraphIndex<span class="operator">(),</span> Study1Array<span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+        <h3 id="scInputSetChartNumber">sc.Input[].SetChartNumber()</h3>
+        <div class="member-link">[<a href="#scInputSetChartNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetChartNumber</b>(int <b>ChartNumber</b>);</p>
+
+        <p>The <b>sc.Input[].SetChartNumber()</b> function sets the input to a Chart Number input type which lists all of the charts within the same chartbook as the chart that the instance of your study is applied to. Each chart has a unique number which is displayed on the title bar of the chart. That number can be given to the  <b>ChartNumber</b> parameter to this function. Or you can pass 1 which would be the first chart. It is essential to call this function, in order to set the input to a Chart Number type.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetChartNumber<span class="operator">(</span><span class="int">1</span><span class="operator">);</span> </pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+        <h3 id="scInputGetChartNumber">sc.Input[].GetChartNumber()</h3>
+        <div class="member-link">[<a href="#scInputGetChartNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">int <b>sc.Input[].GetChartNumber</b>();</p>
+
+        <p>The <b>sc.Input[].GetChartNumber()</b> function returns the selected Chart Number from the study input. This function works with the  <b>sc.Input[].SetChartNumber()</b> function. Each chart has a unique number which is displayed on the title bar of the chart. The chart number is used with various ACSIL functions that require a   <b>ChartNumber</b> parameter.</p>
+
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">int</span> ChartNumber<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetChartNumber<span class="operator">();</span><span class="type">
+
+int</span> Index<span class="operator"> =</span> GetExactMatchForSCDateTime<span class="operator">(</span>ChartNumber<span class="operator">,</span> DateTimeValue<span class="operator">);</span></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetChartStudySubgraphValues">sc.Input[].SetChartStudySubgraphValues()</h3>
+        <div class="member-link">[<a href="#scInputSetChartStudySubgraphValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetChartStudySubgraphValues</b>(int <b>ChartNumber</b>, int <b>StudyID</b>, int <b>SubgraphIndex</b>);</p>
+
+        <p>The <b>sc.Input[].SetChartStudySubgraphValues()</b> function adds an Input to the Study Settings window for the study and sets the initial values. The example given below shows the recommended initial values. This Input displays 3 list boxes which allows a user to choose a chart in the chartbook that your study is applied to, a specific study on that chart, and a specific Subgraph within that selected study. This sc.Input[] Set function works with the corresponding <a href="#scInputGetChartStudySubgraphValues">sc.Input[].GetChartStudySubgraphValues()</a> function to get the values that have been set. </p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCInputRef StudySubgraphReference<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">];</span>
+
+StudySubgraphReference<span class="operator">.</span>Name<span class="operator"> =</span><span class="string"> "Study And Subgraph To Display"</span><span class="operator">;</span>
+StudySubgraphReference<span class="operator">.</span>SetChartStudySubgraphValues<span class="operator">(</span><span class="int">1</span><span class="operator">,</span><span class="int">1</span><span class="operator">,</span><span class="int"> 0</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!--done -->
+
+        <h3 id="scInputGetChartStudySubgraphValues">sc.Input[].GetChartStudySubgraphValues()</h3>
+        <div class="member-link">[<a href="#scInputGetChartStudySubgraphValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">s_ChartStudySubgraphValues <b>sc.Input[].GetChartStudySubgraphValues</b>();</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>sc.Input[].GetChartStudySubgraphValues</b>(int&amp; <b>ChartNumber</b>, int&amp; <b>StudyID</b>, int&amp; <b>SubgraphIndex</b>);</p>
+
+        <p>The <b>sc.Input[].GetChartStudySubgraphValues()</b> function gets the values from a study Input set with the <b>sc.Input[].SetChartStudySubgraphValues()</b> function. User changes to the input also apply when getting the values. </p>
+
+        <div class="h4"><h4>Example</h4>
+             <pre class="Code FullLineHeight">
+SCInputRef StudySubgraphReference = sc.Input[0];
+
+if (sc.SetDefaults)
+{
+    StudySubgraphReference.Name = "Study And Subgraph To Display";
+
+    StudySubgraphReference.SetChartStudySubgraphValues(1,1, 0);
+    return;
+}
+
+SCFloatArray StudyReference;
+sc.GetStudyArrayFromChartUsingID(StudySubgraphReference.GetChartStudySubgraphValues(), StudyReference);
+
+//Alternative way to specify parameters
+sc.GetStudyArrayFromChartUsingID(StudySubgraphReference.GetChartNumber(), StudySubgraphReference.GetStudyID(), StudySubgraphReference.GetSubgraphIndex(), StudyReference);
+            </pre>
+
+        </div>
+        
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetStudySubgraphValues">sc.Input[].SetStudySubgraphValues()</h3>
+        <div class="member-link">[<a href="#scInputSetStudySubgraphValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetStudySubgraphValues</b>(int StudyID, int SubgraphIndex);</p>
+
+        <p>The <b>sc.Input[].SetStudySubgraphValues()</b> function adds an Input to the Study Settings window for the study and sets the initial values. The example given below shows the recommended initial values.  </p>
+        
+          <p>This Input displays 2 list boxes which allows a user to choose a study on the same chart that your study is applied to, and a   <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html" >Subgraph</a> within that selected study.  </p>
+        
+        <p> This function works in conjunction with <b>sc.Input[].GetStudyID()</b> to get the selected study's unique ID and the <b>sc.Input[].GetSubgraphIndex()</b> function to get the selected Subgraph index. </p>
+        
+        
+         <p> The  <b>StudyID</b> parameter  is the  study's  <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scStudyGraphInstanceID" >Graph  Instance ID</a>.  The underlying main price graph in the chart will have  a graph instance ID of 0. The   <b>SubgraphIndex</b> parameter is zero based.  The  maximum will be MAX_STUDY_SUBGRAPHS -  1.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCInputRef StudySugbraph1<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">];</span>
+
+StudySugbraph1<span class="operator">.</span>Name<span class="operator"> =</span><span class="string"> "Input Study 1"</span><span class="operator">;</span>
+StudySugbraph1<span class="operator">.</span>SetStudySubgraphValues<span class="operator">(</span><span class="int">0</span><span class="operator">,</span><span class="int"> 0</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+
+        <h3 id="scInputGetSubgraphIndex">sc.Input[].GetSubgraphIndex()</h3>
+        <div class="member-link">[<a href="#scInputGetSubgraphIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">unsigned int <b>sc.Input[].GetSubgraphIndex</b>();</p>
+
+        <p>The <b>sc.Input[].GetSubgraphIndex</b> function returns the zero based index of the selected study Subgraph from the sc.Input[]. It can be used with Inputs set with the <b>sc.Input[].SetStudySubgraphValues()</b> and <b>sc.Input[]. SetChartStudySubgraphValues()</b> functions.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCInputRef StudyReference<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">];</span><span class="flow">
+
+if</span><span class="operator"> (</span><span class="keyword">sc</span><span class="operator">.</span>SetDefaults<span class="operator">)
+{</span>
+    StudyReference<span class="operator">.</span>Name<span class="operator"> =</span><span class="string"> "Study Reference"</span><span class="operator">;</span>
+
+    StudyReference<span class="operator">.</span>SetStudySubgraphValues<span class="operator">(</span><span class="int">1</span><span class="operator">,</span><span class="int">0</span><span class="operator">);</span><span class="flow">
+
+    return</span><span class="operator">;
+}</span><span class="comment">
+
+// Get the study subgraph
+
+</span>SCFloatArray SubgraphArray<span class="operator">;</span><span class="keyword">
+sc</span><span class="operator">.</span>GetStudyArrayUsingID<span class="operator">(</span>StudyReference<span class="operator">.</span>GetStudyID<span class="operator">(),</span> StudyReference<span class="operator">.</span>GetSubgraphIndex<span class="operator">(),</span> SubgraphArray<span class="operator">);</span><span class="flow">
+
+if</span><span class="operator"> (</span>SubgraphArray<span class="operator">.</span>GetArraySize<span class="operator">() ==</span><span class="int"> 0</span><span class="operator">)</span><span class="flow">
+    return</span><span class="operator">;</span><span class="comment"> // No subgraph data</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!--done -->
+
+        <h3 id="scInputSetChartStudyValues">sc.Input[].SetChartStudyValues()</h3>
+        <div class="member-link">[<a href="#scInputSetChartStudyValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetChartStudyValues</b>(int <b>ChartNumber</b>, int <b>StudyID</b>);</p>
+
+        <p>The <b>sc.Input[].SetChartStudyValues()</b> function adds an Input to the Study Settings window for the study and sets the initial values. The initial values are a <b>ChartNumber</b> and <b>StudyID</b>. This Input displays two list boxes allowing the selection of a chart and study.</p>
+
+        <p>This function works in conjunction with <b>sc.Input[].GetChartNumber()</b> to get the selected chart number and the <b>sc.Input[].GetStudyID()</b> function to get the unique ID of the selected study.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetChartStudyValues<span class="operator">(</span><span class="int">1</span><span class="operator">,</span><span class="int"> 1</span><span class="operator">);</span><span class="type">
+
+int</span> ChartNumber<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetChartNumber<span class="operator">();</span><span class="type">
+
+int</span> StudyID<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetStudyID<span class="operator">();</span></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <!-- done -->
+
+        <h3 id="scInputSetDescription">sc.Input[].SetDescription()</h3>
+        <div class="member-link">[<a href="#scInputSetDescription">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetDescription</b>(const char* <b>Description</b>);</p>
+
+        <p>The <b>sc.Input[].SetDescription()</b> function sets the user documentation for your Input. This is displayed on an automatically generated HTML page. For more information refer to the <a href="index3b5f.html?page=doc/ACSILDocumentationMembers.html">ACSIL Study Documentation Interface Members</a> page.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetDescription<span class="operator">(</span><span class="string">"This input sets the length of the study calculation"</span><span class="operator">);</span></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h3">
+
+        <h3 id="scInputSetString">sc.Input[].SetString()</h3>
+        <div class="member-link">[<a href="#scInputSetString">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">SCInputRef <b>sc.Input[].SetString</b>(const char* <b>Value</b>);</p>
+
+        <p>The <b>sc.Input[].SetString()</b> function adds an Input to the Study Settings window for the study and 
+            sets the initial value. The initial value is a string value. This Input displays a text box in which a string value can be entered.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SetString<span class="operator">(</span><span class="string">"String Value"</span><span class="operator">);</span></pre>
+
+            </div>
+
+        </div>
+    </div>
+
+    <section class="h3"> <!-- done -->
+        <h3 id="scInputGetString">sc.Input[].GetString()</h3>
+        <div class="member-link">[<a href="#scInputGetString">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">const char* <b>sc.Input[].GetString</b>();</p>
+
+        <p>The <b>sc.Input[].GetString()</b> function gets the value from a study Input set with the <b>sc.Input[].SetString()</b> function. User changes to the input also apply when getting the value.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="type">const char*</span> InValue<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Input<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GetString<span class="operator">();</span></pre>
+            </div>
+        </section>
+    </section>
+
+    <section class="h3"> <!-- done -->
+        <h3 id="scInputSetPathAndFileName">sc.Input[].SetPathAndFileName()</h3>
+        <div class="member-link">[<a href="#scInputSetPathAndFileName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Set function. </p>
+
+        <p class="ACSILFunctionHighlighting">const char* <b>sc.Input[].SetPathAndFileName</b>();</p>
+
+        <p>The <b>sc.Input[].SetPathAndFileName()</b> function sets the Input type to support a file path and filename and specifies the initial path and filename.  This can initially be empty/blank just by specifying empty quotes like "".</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>sc.Input[0].SetPathAndFileName("");</pre>
+            </div>
+        </section>
+    </section>
+     
+    <section class="h3"> <!-- done -->
+        <h3 id="scInputGetPathAndFileName">sc.Input[].GetPathAndFileName()</h3>
+        <div class="member-link">[<a href="#scInputGetPathAndFileName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Type: sc.Input[] Get function. </p>
+
+        <p class="ACSILFunctionHighlighting">const char* <b>sc.Input[].GetPathAndFileName</b>();</p>
+
+        <p>The <b>sc.Input[].GetPathAndFileName()</b> function gets the path and filename text string from the study Input set with the <b>sc.Input[].SetPathAndFileName()</b> function. User changes to the Input also apply when getting the value.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCString PathAndFileName = sc.Input[0].GetPathAndFileName();</pre>
+            </div>
+        </section>
+    </section>
+</div>
+
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_Members_scInputs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:45 GMT -->
+</html>  

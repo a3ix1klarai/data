@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/AlertsManager.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686060596') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/AlertsManager.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Alerts Manager -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2ac2.html?page=doc/AlertsManager.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index2ac2.html?page=doc/AlertsManager.html">Alerts Manager</a></h4> </div>     <h1  class="PageName">Alerts Manager</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#AlertsLog">Alerts Log</a></li>
+    <li><a href="#SymbolAlerts">Symbol Alerts</a>
+		<ul>
+			<li><a href="#AddSymbolAlert">Add Symbol Alert</a></li>
+			<li><a href="#AddSymbolAlert_Inputs">Symbol Alert Inputs</a></li>
+			<li><a href="#ViewingEditingDeltingOrDisablingSymbolAlert">Viewing, Editing, Deleting or Disabling Symbol Alert</a></li>			
+		</ul>
+	</li>
+    <li><a href="#TimeAlerts">Time Alerts</a></li>
+    <li><a href="#Controls">Alerts Manager Controls</a>
+		<ul>
+			<li><a href="#File_SaveLogToFile">File &gt;&gt; Save Log to File</a></li>
+			<li><a href="#File_AlwaysOnTop">File &gt;&gt; Always on Top</a></li>
+			<li><a href="#File_Close">File &gt;&gt; Close</a></li>
+			<li><a href="#ClearLog">Edit &gt;&gt; Clear Log</a></li>
+			<li><a href="#GoToChart">Go To Chart</a></li>
+			<li><a href="#CopySelection">Edit &gt;&gt; Copy Selection</a></li>
+			<li><a href="#CopySymbols">Edit &gt;&gt; Copy Symbols</a></li>
+			<li><a href="#CustomizeColumns">Settings &gt;&gt; Customize Columns</a></li>
+			<li><a href="#AutoSetAlertTextColumnWidth">Settings &gt;&gt; Auto Set Alert Text Column Width</a></li>
+		</ul>
+	</li>
+    <li><a href="#Fonts">Font Type and Size</a></li>
+    <li><a href="#TroubleshootingSymbolAlerts">Troubleshooting Symbol Alerts</a></li>
+
+    <li><a href="#DisablingAlertSounds">Disabling Alert Sounds</a>
+        <ul>
+            <li><a href="#GloballyMuteAlertSounds">Globally Mute Alert Sounds</a></li>
+            <li><a href="#DisablingAlertSoundsStudies">Disabling Alert Sounds from Studies</a></li>
+            <li><a href="#DisablingAlertSoundsPriceGraph">Disabling Alert Sounds for Main Price Graph</a></li>
+            <li><a href="#DisablingAlertSoundsChartDrawings">Disabling Alert Sounds for Chart Drawings</a></li>
+            <li><a href="#DisablingAlertSoundsTradingEvents">Disabling Alert Sounds for Trading Events</a></li>
+            <li><a href="#ClearingCurrentAlertSoundQueue">Clearing Current Alert Sound Queue</a></li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Sierra Chart <b>  Alerts Manager</b>  is opened by selecting <b class="menu_item">Window &gt;&gt;  Alerts Manager</b> on the menu.</p>
+
+    <p>It contains 3 different tabs.  Each of them are documented below.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AlertsLog">Alerts Log</h2>
+    <div class="member-link">[<a href="#AlertsLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To open the Alerts Log, select <b class="menu_item">Window &gt;&gt; Alerts Manager &gt;&gt; Alerts Log</b>.</p>
+
+    <p>The  <b>Alerts Log</b> tab  lists <b>Simple Alert</b> and Spreadsheet System/Alert messages which contain detailed information given when an Alert Condition Formula has become TRUE.</p>
+
+    <p>Other events, like trading events and automated trading signals which trigger an alert are also added to the  Alerts Log.</p>
+
+    <p>When the last line is selected in the <b>Alerts Log</b>, and a new  Alert Message is added, the log will automatically be scrolled  to the newly added line to the Alerts Log. Therefore, it is recommended to keep the last line selected so that the new Alert Message lines will be visible  when they are added.</p>
+
+    <p>To prevent the Alerts Log from opening automatically when a study or chart alert event occurs, then uncheck <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Show Alerts Log On Study Alert</b>. </p>
+    
+     <p> Refer to the <a href="#Controls">Alerts Manager Controls</a> section for the available commands to use with the <b>Alerts Log</b>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="SymbolAlerts">Symbol Alerts</h2>
+    <div class="member-link">[<a href="#SymbolAlerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To open the <b>Symbol Alerts</b> tab, select <b class="menu_item">Window &gt;&gt;  Alerts Manager &gt;&gt; Symbol Alerts</b>.</p>
+
+    <p>A <b>Symbol Alert</b> is an alert condition set on a particular Symbol and uses the  <a href="indexc5fd.html?page=doc/WindowMenu.html#CurrentQuoteWindow" >Current Quote</a> data for the symbol to trigger the alert.</p>
+
+    <p>The <b>Symbol Alerts</b> tab lists all of the configured  Symbol Alerts.</p>
+    
+    <p>Sierra Chart must be  <a href = "index8793.html?page=doc/FileMenu.html#ConnectToDataFeed">connected</a> to the configured data feed to access streaming  quote and trade data for the Symbol with  the configured  Symbol Alert which is necessary  to evaluate this alert. When Sierra Chart is not running or it is disconnected from the data feed, Symbol Alerts will <em>not</em> be evaluated. </p>
+
+    <section class="h3">
+    <h3 id="AddSymbolAlert">Add Symbol Alert</h3>
+    <div class="member-link">[<a href="#AddSymbolAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A Symbol Alert is an alert condition set on a particular Symbol and uses the <a href="indexc5fd.html?page=doc/WindowMenu.html#CurrentQuoteWindow" target="_blank" rel="noopener noreferrer">Current Quote</a> data for the symbol to trigger the alert. Therefore, it only works when connected to the data feed  (<b class="menu_item">File &gt;&gt; Connect to Data Feed</b>).</p>
+
+        <p>Due to the reliance on the Current Quote data, Symbol Alerts will not function properly during a replay.</p>
+
+        <div style="text-align: center;"><a href="../images/addsymbolalert.png" rel="lightbox"><img src="../images/addsymbolalert.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+        <p>To add a new Symbol Alert,  follow the instructions below:</p>
+       
+       <ol>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Add Symbol Alert</b>.</li>
+
+            <li>Or, right click on a chart at the price level that you want to set the alert at and select <b class="menu_item">Add Symbol Alert</b>. To add this command to the Chart Shortcut Menu if it is not already listed, refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeChartShortcutMenu" target="_blank" rel="noopener noreferrer">Customize Chart Shortcut Menu</a>.
+             <br> <br>
+            The <b>Value</b> field in the <b> Add Symbol Alert</b> window will be set to the price level you right-clicked at on the chart.</li>
+
+            <li> Or,  select <b class="menu_item">Alerts &gt;&gt; Add Symbol Alert</b> on the   <a href = "index1eaf.html?page=doc/GettingQuotes.html">Quote Board</a> or  <a href = "index9df4.html?page=doc/StudySummaryWindow.php">Study Summary</a> windows.</li>
+
+            <li> Or, open the <b>Alerts Manager</b> window by selecting <b class="menu_item">Window &gt;&gt; Alert Manager</b> and select the <b>Symbol Alert</b> tab. Select the <b class="menu_item">Alerts &gt;&gt; Add Symbol Alert</b> menu command. Alternatively, right click on any cell and select <b>New Alert</b>.</li>
+
+
+            <li>Once the Add Symbol Alert settings window is open, set all of the settings as required. Most especially the <b>Symbol</b> if it is not already set. Press the <b>Find</b> button to look up the symbol.</li>
+
+            <li> Press the <b>Add</b> button to add the Symbol Alert or press the <b>Cancel</b> button to not add it.</li>
+        </ol>
+
+        <p>In order to modify or remove a Symbol Alert, select <b class="menu_item">Window &gt;&gt; Alert Manager</b> and select the <b>Symbol Alerts</b> tab. Right click on the alert to modify or remove and select <b>Edit</b> or <b>Delete</b>. </p>
+
+        <p>Alternatively, select the alert by left clicking on it and then select <b class="menu_item">Edit &gt;&gt; Edit Alert</b>, <b class="menu_item">Edit &gt;&gt; Delete Alert</b>, or <b class="menu_item">Edit &gt;&gt; Delete All Alerts</b> from the Alert Manager window. It is also possible to edit the alert by double left clicking on it in the Alerts Manager window.</p>
+        
+         <p> To mute alert sounds including Symbol Alerts, enable <b Class = "menu_item">Global Settings &gt;&gt;  Mute All Alert Sounds</b>. Or <b Class = "menu_item">Alerts &gt;&gt; Mute all Alert Sounds</b> on the  <a href="index1eaf.html?page=doc/GettingQuotes.html#QuoteBoard">Quote Board</a> menu.  Remove the check mark from this menu command to reenable alert sounds. </p>
+   </section >
+   
+    <section class="h3">
+        <h3 id="AddSymbolAlert_Inputs">Symbol Alert Inputs</h3>
+        <div class="member-link">[<a href="#AddSymbolAlert_Inputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ul>
+            <li><b>Symbol</b>: Enter the symbol for which the alert is to be created.</li>
+
+            <li><b>Find</b>: Selecting this button brings up the <b>Find Symbol</b> window. A symbol from the list can be selected and used for the alert.</li>
+
+            <li><b>Field</b>: Select one of the following options as the item to be tested for the alert.
+                <ul>
+                    <li><b>Open</b>: The Open value of the Current Quote Data for the symbol.</li>
+
+                    <li><b>High</b>: The High value of the Current Quote Data for the symbol.</li>
+
+                    <li><b>Low</b>: The Low value of the Current Quote Data for the symbol.</li>
+
+                    <li><b>Last</b>: The Last value of the Current Quote Data for the symbol.</li>
+
+                    <li><b>Volume</b>: The Volume of the Current Quote Data for the symbol.</li>
+
+                    <li><b># Trades</b>: The Number of Trades of the Current Quote Data for the symbol.</li>
+
+                    <li><b>OHLC Avg</b>: The Average of the Open, High, Low, and Close (Last) of the Current Quote Data for the symbol.</li>
+
+                    <li><b>HLC Avg</b>: The Average of the High, Low, and Close (Last) of the Current Quote Data for the symbol.</li>
+
+                    <li><b>HL Avg</b>: The Average of the High and Low of the Current Quote Data for the symbol.</li>
+                </ul>
+            </li>
+
+            <li><b>Comparison</b>: Select one of the following options as the comparison operator for the alert.
+                <ul>
+                    <li><b>Crossing</b>: The alert checks if the selected <b>Field</b> item is crossing the amount set in the <b>Value</b> Input, either from above or from below.</li>
+
+                    <li><b>Above</b>: The alert checks if the selected <b>Field</b> is above (greater than) the amount set in the <b>Value</b> Input.</li>
+
+                    <li><b>Below</b>: The alert checks if the selected <b>Field</b> is below (less than) the amount set in the <b>Value</b> Input.</li>
+
+                    <li><b>Equal To</b>: The alert checks if the selected <b>Field</b> is equal to the amount set in the <b>Value</b> Input.</li>
+
+                    <li><b>Crossing or Equal To</b>: The alert checks if the selected <b>Field</b> is crossing the amount set in the <b>Value</b> Input, either from above or from below; or if the selected <b>Field</b> is equal to the amount set in the <b>Value</b> Input.</li>
+
+                    <li><b>Above or Equal To</b>: The alert checks if the selected <b>Field</b> is above (greater than) or equal to the amount set in the <b>Value</b> Input.</li>
+
+                    <li><b>Below or Equal To</b>: The alert checks if the selected <b>Field</b> is below (less than) or equal to the amount set in the <b>Value</b> Input.</li>
+                </ul>
+            </li>
+
+            <li><b>Value</b>: Enter the value for the alert to check against. If the <b>Add Symbol Alert</b> page was accessed through the right click menu, then this value will be filled in with the value at the level where the mouse was clicked on the chart.</li>
+
+            <li><b>Monitoring Option</b>: Select one of the two options for this section.
+                <ul>        
+                    <li><b>One Time</b>: The alert will only trigger once. After it is triggered the alert becomes disabled.</li>
+
+                    <li><b>Continuous</b>: The alert will continually monitor the data and change between True and False depending on the selected options. 
+                    <br><br>
+                        Note that like all other Alerts, it is necessary for this alert to become False before it can trigger a new True state. For example, if the alert is set to check if the Last is Above a value of 2700.00, then when the Last goes over 2700.00 the alert becomes True. As long as the Last stays above 2700.00, the alert stays True and does not continually trigger a new True state with each update.
+                    </li>
+                </ul>
+            </li>
+
+            <li><b>Triggered Value</b>: When a Symbol Alert is setup and has a <b>Monitoring Option</b> of <b>One Time</b>, this field displays the value at which the alert went <b>True</b>. Otherwise, this field is blank.</li>
+
+            <li><b>Triggered At</b>: When a Symbol Alert is setup and has a <b>Monitoring Option</b> of <b>One Time</b>, this field displays the time at which the alert went <b>True</b>. Otherwise, this field is blank.</li>
+
+            <li><b>Comment</b>: Text entered into this field is displayed in the <b>Comment</b> column of the Symbol Alerts tab of the Alert Manager window.</li>
+
+            <li><b>Show Alert Log When Triggered</b>: If this option is enabled, then when the Symbol Alert is triggered as <b>True</b>, then the Alert Manager window will be displayed.</li>
+
+            <li><b>Show Alert Popup When Triggered</b>: If this option is enabled, then when the Symbol Alert is triggered as <b>True</b>, a popup window is displayed with information on the alert.</li>
+
+            <li><b>Alert Num</b>: This defines the Alert Number to be used when the Symbol Alert is triggered as <b>True</b>. For more information, refer to <a href="index899f.html?page=doc/GeneralSettings.html#Tab_Alerts">Alert Settings</a>.</li>
+
+            <li><b>Comparison Precision</b>: This is the precision that is used when making the comparison between the selected <b>Field</b> and the entered <b>Value</b>. Any data that is less than this <b>Comparison Precision</b> is ignored during the comparison.</li>
+
+            <li><b>Enable/Change</b>: This button either <b>Enables</b> the alert or invokes any <b>Changes</b> that have been made to the alert. The particular wording displayed depends on the state of the alert at the time that the <b>Enable/Edit/Add Alert Symbol</b> window is opened. If the alert has not been created previously, or if the alert is in a <b>Disabled</b> state by having already triggered in a <b>One Time</b> condition, then the button will state <b>Enable</b>. Otherwise, the button will state <b>Change</b>.</li>
+
+            <li><b>Cancel</b>: This button will cancel all changes made to the <b>Enable/Edit/Add Alert Symbol</b> window.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="ViewingEditingDeltingOrDisablingSymbolAlert">Viewing, Editing, Deleting or Disabling Symbol Alert</h3>
+        <div class="member-link">[<a href="#ViewingEditingDeltingOrDisablingSymbolAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>All of the existing added Symbol Alerts, can be edited, deleted or disabled by following the instructions below. </p>
+        <ol>            
+            <li>Select <b class = "menu_item">Window &gt;&gt; Alert Manager &gt;&gt; Symbol Alerts</b>.</li>
+
+            <li> Right-click over the particular Symbol Alert you want to edit, delete or disable.</li>
+
+            <li> The menu will display. Select one of the following: <b>Edit, Delete, Disable</b>. </li>
+        </ol>
+    </section>   
+</section>
+
+<section class="h2">
+    <h2 id="TimeAlerts">Time Alerts</h2>
+    <div class="member-link">[<a href="#TimeAlerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To open the Time Alerts tab, select <b Class = "menu_item">Window &gt;&gt;  Alerts Manager</b> if it is not already visible. Select the  <b>Time Alerts </b> tab.</p>
+
+    <p>The <b>Time Alerts</b> tab lists all of the configured Time Alerts.  To add a Time Alert, go to the <b>Time Alerts</b> tab. Press the  <b>Add Time Alert</b> button. Set all of the fields as you require. Press the  <b>Add</b> button when done. You should now see it listed on the Time Alerts tab.</p>
+
+    <p>When right clicking with your  Pointer on an existing Time Alert in the <b>Time Alerts</b> list, you are able to <b>Edit, Delete,  Disable</b>, the Time Alert.</p>
+
+    <p>The <b>Alert Time</b> and <b>Alert Date</b> need to be relative to the <a href="index219e.html?page=doc/TimeZone.html" target="_blank" rel="noopener noreferrer" >global Time Zone</a> setting in Sierra Chart. </p>
+    
+     <p>On the <b>Add Time Alert</b> window, when you have enabled <b> Show Alert Pop up when Triggered</b>, there will be a pop-up window displayed  when the particular time event has been triggered.  If this pop-up window is not visible when you expect to see it, then select <b>Window &gt;&gt; Reset Windows</b>. It will be visible next time. </p>
+</section>
+
+<section class="h2">
+    <h2 id="Controls">Alert Manager Controls</h2>
+    <div class="member-link">[<a href="#Controls">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> The following lists descriptions of the various menu commands available on the  Alerts Manager.</p>
+
+    <section class="h3">
+        <h3 id="File_SaveLogToFile">File &gt;&gt; Save Log to File</h3>
+        <div class="member-link">[<a href="#File_SaveLogToFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this command is selected, the current contents of the Alerts Log will be saved to a file. Enter or choose a file name and press the <b> Save</b> button.</p>
+    </section>   
+    
+    <section class="h3">
+        <h3 id="File_AlwaysOnTop">File &gt;&gt; Always on Top</h3>
+        <div class="member-link">[<a href="#File_AlwaysOnTop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When this option is enabled, the Alerts Manager window remains on top of other windows.</p>
+    </section>    
+    
+    <section class="h3">
+        <h3 id="File_Close">File &gt;&gt; Close</h3>
+        <div class="member-link">[<a href="#File_Close">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Closes the Alerts Manager window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ClearLog">Edit &gt;&gt; Clear Log</h3>
+        <div class="member-link">[<a href="#ClearLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This button will clear the contents of the Alerts Log permanently. You will be prompted to confirm.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GoToChart">Go To Chart</h3>
+        <div class="member-link">[<a href="#GoToChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command only applies to the <b>Alerts Log </b> tab.</p>
+
+        <p>If an alert message is selected in the  <b>Alerts Log</b>, the <b> Go to Chart</b>  command will open the chart that has given this alert message. If the chart has been changed to a different symbol, the chart will be changed back to the symbol  that triggered the alert.</p>
+
+        <p>When you select the <b>Go to Chart</b>  command when the  <b>Alerts Log</b> tab is selected in the Alerts Manager, the chart the alert originated from will be scrolled to the Date-Time the Alert Condition became TRUE at. </p>
+
+        <p>The chart will be scrolled so that the last bar is at that particular Date-Time. To go to the end of the chart, press the <b>End</b> key on your keyboard,  use the scrollbar to go back to the end of the chart, or select  <b class = "menu_item">Chart &gt;&gt; Goto End of Chart</b>.</p>
+        
+        
+        <p> When  <b class="menu_item">Edit &gt;&gt; Close Window when Goto Chart</b> is enabled, then the Alerts Manager window will be closed  when selecting the  <b>Go to Chart</b>  command.</p>
+
+    </section>
+
+
+    <section class="h3">
+        <h3 id="CopySelection">Edit &gt;&gt; Copy Selection </h3>
+        <div class="member-link">[<a href="copyselection.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command copies the selected alert message lines on the Alerts Log tab to the system clipboard.  After this you can paste the contents into another program.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="CopySymbols">Edit &gt;&gt; Copy Symbols</h3>
+        <div class="member-link">[<a href="#CopySymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This menu command only applies to the  <b>Alerts Log</b> tab. This command will create a list of the symbols from each of the alert message lines that are selected and put them on the system clipboard. Each symbol will be on its own line.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="CustomizeColumns">Settings &gt;&gt; Customize Columns</h3>
+        <div class="member-link">[<a href="customizecolumns.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This menu command applies to the <b>Symbol Alerts</b> and <b>Time Alerts</b> tabs only.</p>
+        
+        <p>Select this command to open the  Customize Symbol/Time Alerts Tab Columns window to <b>Add, Remove, Move Up, Move Down</b> columns for these tabs.</p>
+    </section> 
+    
+    <section class="h3">
+        <h3 id="AutoSetAlertTextColumnWidth">Settings &gt;&gt; Auto Set Alert Text Column Width</h3>
+        <div class="member-link">[<a href="#AutoSetAlertTextColumnWidth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This menu command applies to the <b>Alerts Log</b> tab only. When it is enabled, then the <b>Alert Text</b> column width is automatically set based upon the maximum size of the text among all of the rows in the Alert Text column.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Fonts">Font Type and Size</h2>
+    <div class="member-link">[<a href="#Fonts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To change the Font Type and Size of the text in the Alerts Manager, select <b class = "menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other &gt;&gt; Text Windows Font&gt;&gt; Select</b> from the menu.  </p>
+    
+    <p>The <b>Font</b> window will open. Choose the  <b>Font, Font Style</b>, and <b>Size</b>  and press  <b>OK</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TroubleshootingSymbolAlerts">Troubleshooting Symbol Alerts</h2>
+    <div class="member-link">[<a href="#TroubleshootingSymbolAlerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+     <p>Follow the instructions below to troubleshoot a problem where Symbol Alerts are not triggering or not giving a sound.</p>
+
+     <ol>
+        <li> Review the Settings of each Symbol Alert that is not working and make sure they are correct. To do this, select <b class="menu_item">Window &gt;&gt; Alerts Manager &gt;&gt; Symbol Alert</b>. Select a symbol alert line. Right-click on that line and select edit. Make sure the <b>Comparison Precision</b> setting is correct. </li>
+        
+        <li>Make sure that Sierra Chart is connected to the data feed with  <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.
+         
+         <li>Make sure there is data available  from the data feed for a particular Symbol Alert by monitoring the quote data for it through the  <a href = "index1eaf.html?page=doc/GettingQuotes.html">Quote Board</a>.</li>
+
+         <li>If you are not receiving a sound for the Symbol Alert, then refer to  <a href = "index899f.html?page=doc/GeneralSettings.html#TroubleshootingAlertSounds">Troubleshooting Alert Sounds</a>. </li>
+    </ol>
+    
+</section>
+<section class="h2">
+    <h2 id="DisablingAlertSounds">Disabling Alert Sounds</h2>
+    <div class="member-link">[<a href="#DisablingAlertSounds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Alert sounds that you hear can come from the Alert Condition Formulas defined on the main price graphs and are set through  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Alerts</b>, from Studies, Chart Drawings from drawing Tools, from Trading events, or data feed connection and disconnections.</p>
+
+    <p>Below is the Alerts Log showing Alert Messages.  To open the Alerts  Log, select <b class="menu_item">Window &gt;&gt; Alerts Manager &gt;&gt;  Log</b>.</p>
+
+    <div style="text-align: center;"><a href="../images/alertslogwithstudyalertexample.png" rel="lightbox"><img src="../images/alertslogwithstudyalertexample.png" alt="" width="800" class="screenshot" loading="lazy"></a></div>
+
+    <section class="h3">
+        <h3 id="GloballyMuteAlertSounds">Globally Mute Alert Sounds</h3>
+        <div class="member-link">[<a href="#GloballyMuteAlertSounds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To globally  mute (prevent from playing)  all alert sounds, check the menu option  <b class = "menu_item">Global Settings &gt;&gt;  Mute All Alert Sounds</b>. Uncheck this menu option to un-mute the sounds.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DisablingAlertSoundsStudies">Disabling Alert Sounds from Studies</h3>
+        <div class="member-link">[<a href="#DisablingAlertSoundsStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To disable alert sounds from studies, select <b class="menu_item">Window &gt;&gt;  Alerts Manager &gt;&gt; Alerts Log</b>.</p>
+
+        <p>The <b> Source</b> column will indicate the particular source Chart and study the Alert Message is from. The Chart Number (#)  is also given. After the | character, the name of the  Study is given.</p>
+
+        <p>Once you know the particular Chart and Study the alert is from, then go to the chart where the Alert Message originated from.</p>
+
+        <p>Select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu. Open the <b>Study Settings</b> window for the specific study, that is given in the Alerts Log <b>Source </b> column, that the Alert Message originated from.</p>
+
+        <p>Select the <b> Alerts </b>tab.  Set the <b>Alert Sound</b> to <b>No Alert</b> or uncheck the <b> Enabled</b> option.</p>
+
+        <p> Press the <b>OK</b> button to close the <b>Study Settings</b> window. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="DisablingAlertSoundsPriceGraph">Disabling Alert Sounds for Main Price Graph</h3>
+        <div class="member-link">[<a href="#DisablingAlertSoundsPriceGraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To disable alert sounds that are set through <b class="menu_item">Chart  &gt;&gt; Chart Settings &gt;&gt; Alerts</b> for a chart, select <b class="menu_item">Window &gt;&gt;  Alerts Manager &gt;&gt;  Alerts Log	</b>.</p>
+
+        <p>The <b> Source</b> column will indicate the particular source chart the alert is from. The Chart Number (#)  is also given.</p>
+
+        <p>Go to the chart where the alert originated from.  Select <b class="menu_item">Chart &gt;&gt;  Chart Settings &gt;&gt; Alerts</b>.  Set the <b>Alert Sound</b>  setting to <b>No Alert</b>  or you can remove the Alert Condition formula.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DisablingAlertSoundsChartDrawings">Disabling Alert Sounds for Chart Drawings</h3>
+        <div class="member-link">[<a href="#DisablingAlertSoundsChartDrawings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Alert Sounds can also originate from Chart Drawing Alerts that you have set up on  <em>Chart Drawings</em>. A Chart Drawing is a drawing drawn by one of the drawing Tools from the <b class="menu_item">Tools</b> menu, like a <b> Line </b>.</p>
+
+        <p>Here is an example chart drawing alert message in the <b class="menu_item">Window &gt;&gt;  Alerts Manager &gt;&gt; Alerts Log</b>: <em>Chart Drawing Alert: 6EZ14 1 Min #2, Horizontal Line, Low (1.3300) Below line <b>#80</b> (1.3320)</em>.</p>
+
+        <p>To find this chart drawing, select <b class="menu_item">Tools &gt;&gt; Manage Chart Drawings Window</b>. Find the  Chart Drawing in the list. This Chart Drawing is   <b>#80</b>.  The list of Chart Drawings also has the drawing numbers  to be able to find the corresponding drawing easily.  Once you find the drawing in the list, press the <b> Alert</b> button. Uncheck the <b>Enable Alert for Chart Drawing </b> option to disable the alert.</p>
+
+        <div style="text-align: center;"><a href="../images/managechartdrawingsforalerts.png" rel="lightbox"><img src="../images/managechartdrawingsforalerts.png" alt="" width="550" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="DisablingAlertSoundsTradingEvents">Disabling Alert Sounds for Trading Events</h3>
+        <div class="member-link">[<a href="#DisablingAlertSoundsTradingEvents">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To disable alert sounds for Trading events, select <b class="menu_item">Trade &gt;&gt; General Trade Settings</b> and set the Alert settings to <b>No Alert</b>.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="DisablingAlertSounds_DataFeedConnectionEvents">Disabling Alert Sounds for Data Feed Connection Events</h3>
+        <div class="member-link">[<a href="#DisablingAlertSounds_DataFeedConnectionEvents">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To disable alert sounds for Trading events, select <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts</b>.  </p>
+        
+        <p> Set <b>Server Connected Alert</b>  and <b> Server Connection Lost Alert</b> to   <b> No Alert Sound</b>. Press OK. </p>
+        
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="ClearingCurrentAlertSoundQueue">Clearing Current Alert Sound Queue</h3>
+        <div class="member-link">[<a href="#DisablingAlertSoundsTradingEvents">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There can be many alert sounds that have been triggered in Sierra Chart from one or more studies, which have been placed in the queue waiting to be played. In this case, you will be hearing sound after sound until the queue becomes empty.</p>
+
+        <p>To clear the alert sound queue, select <b class="menu_item">Global Settings  &gt;&gt; Clear Alert Sound Queue</b>  on the menu.</p>
+
+    </section>
+</section>
+
+<hr><p>*Last modified Tuesday, 06th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/AlertsManager.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:34:00 GMT -->
+</html>  

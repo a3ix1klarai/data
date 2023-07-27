@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/CustomCalculatedSymbols.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:34:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105668') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/CustomCalculatedSymbols.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Custom Calculated Symbols -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index479a.html?page=doc/CustomCalculatedSymbols.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index479a.html?page=doc/CustomCalculatedSymbols.html">Custom Calculated Symbols</a></h4> </div>     <h1 class="PageName">Custom Calculated Symbols</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Instructions">Instructions</a></li>
+    <li><a href="#ResolvingMissingHistoricalDataIssue">Resolving Missing Historical Data Issue</a></li>
+    <li><a href="#HistoricalDataDownloadTakingLongTimeToComplete">Historical Data Download Taking Long Time to Complete</a></li>
+    <li><a href="#StockIndexFuturesPremiums">Stock Index Futures Premiums</a></li>
+    <li><a href="#MeaningOfFSCandFSEDisplayedAfterSymbol">Meaning of FSC and FSE Displayed After the Symbol</a></li>
+    
+    <li><a href="#CustomCalculatedSymbolsVolumeCalculations">Custom Calculated Symbols Volume Calculations</a></li>
+    <li><a href="#TradingCustomCalculatedSymbols">Trading Custom Calculated Symbols</a></li>
+    
+    <!-- To be documented: "Download Historical Data for Formula Symbol". -->
+</ul>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p class = "GeneralBackgroundHighlight">The Custom Calculated Symbols feature requires that you  use an up-to-date version of Sierra Chart. This is essential for historical data support for custom calculated symbols.  </p>
+
+    <p>Custom Calculated Symbols  is a feature where you can create a new symbol which is calculated from data from  two or more symbols using a formula that you specify. </p>
+
+     <p>The calculations are done using the real-time streaming data (when connected to the data feed with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>).  Historical data for custom calculated symbols is calculated from historical data downloaded for the individual symbol components in the custom  formula symbol.</p>
+    
+     <p>This feature only works with <em>Intraday charts and the  <a href = "index1eaf.html?page=doc/GettingQuotes.html#QuoteBoard">Quote Board</a></em>. </p> 
+     
+     
+     <p>Custom calculated symbols using this particular feature are not supported with Historical  Daily charts. For   Historical Daily  charts, it is necessary to use the various studies available like the   <a href = "index04f8.html?page=doc/StudiesReference.php&amp;ID=3&amp;Name=Difference_-_Bar">Difference (Bar)</a> study. </p>
+      
+      <p> The advantage of this feature is that you can create accurate spread charts for nonexchange traded spreads or where exchange traded spread data is not available. </p>
+      
+      
+      <p>  The historical Intraday data  generated for Custom Calculated Symbols has a time increment  of  1 second. So all of the trading activity of the symbols used in the calculation for this 1 second time are consolidated into a single 1 second Intraday record. </p>
+      
+      <p> When historical Intraday data is generated for Custom Calculated Symbols according to the formula in the symbol, when there is not historical data at the same Date-Time among all of the different symbols in the calculation, the most recent data from the other symbols will be used going back to a maximum of 24 hours. </p>
+      
+      <p> There is no market depth data or Bid or Ask values for a  Custom Calculated Symbol. </p>
+      
+       <p>  <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html">Continuous Futures Contract  Charts</a> are not supported for Custom Calculated  Symbols. </p>
+       
+</section>
+      
+<section class="h2">
+    <h2 id="Instructions">Instructions</h2>
+    <div class="member-link">[<a href="#Instructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li> If you are using sub instances of Sierra Chart,  unless you want to set up a  Custom Calculated Symbol specific to a particular sub instance, then make sure the   <b class="menu_item">Global Settings &gt;&gt; Symbol Settings &gt;&gt; <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#UseTheseSymbolSettingsInNewInstancesWhenStarted">Use These Symbol Settings in New Instances When Started</a></b>    option is enabled in the  <em>main instance</em> of Sierra Chart and follow the instructions below within the main instance  <em>only</em>. 
+        <br> <br>
+         If you want to use  Custom Calculated Symbols in a sub instance, you will then need to restart the sub instances  for them to receive the updated symbol Settings  after following the below instructions.
+         <br> <br>
+         If you want to set up a   Custom Calculated Symbols  in a particular sub instance only, then these instructions below can be followed in the sub instance.  Although in this case it is essential that the <b class="menu_item">Global Settings &gt;&gt; Symbol Settings &gt;&gt; <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#UseTheseSymbolSettingsInNewInstancesWhenStarted">Use These Symbol Settings in New Instances When Started</a></b>  option is  <em>disabled</em> in the main instance of Sierra Chart. This is so you do not overwrite the custom Symbol Settings you will have set up with the below instructions when the sub instance is restarted.
+        </li>
+        
+        
+        <li>Custom symbols are  <em>specific to each individual Data or Trading service</em> Sierra Chart is set to. Therefore, select  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. Set the  <b>Current Selected Service</b> that you want the custom calculated symbol to be associated with. Press  <b>OK</b>.</li>
+        
+        <li>Select <b class="menu_item">Global Settings &gt;&gt;  <a href="index4404.html?page=doc/GlobalSymbolSettings.php">Symbol Settings</a></b>.</li>
+
+        <li>Ensure that the option for <b>Use Custom Symbol Settings Values</b> is Enabled. If it is not enabled, then select the Checkbox next to this option to Enable it.</li>
+      
+        <li>Press the <b>New</b> button to create a new symbol.</li>
+       
+        <li>In the <b>New Symbol</b> box, enter the symbol according to the following format. The square brackets simply represent optional characters. The curly braces ,{},  need to be entered around a symbol to identify the symbol to the parser.
+        <br> <br>
+            Format: <em><b>[numeric value][operator]{symbol}[operator][numeric value][operator]{symbol}</b></em>. 
+         <br> <br>
+            The <em>[ ]</em> characters are not used in the formula symbol itself.
+        <br> <br>
+            This pattern can repeat with  as many symbols as necessary. Example: <b>2*{EURUSD}-2*{EURGBP}</b>.
+        <br> <br>
+            Any of the standard <a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php#ArithmeticOperators" target="_blank" rel="noopener noreferrer">Arithmetic Operators</a> can be used.
+        </li>
+        
+         <li>The following steps describe setting Symbol Settings for custom calculated symbols. For detailed instructions  about how to do this, refer to <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#Instructions"  target="_blank" rel="noopener noreferrer">Global Symbol Settings Instructions</a>. </li>
+       
+        <li>Set appropriate values for the <b>Price Format</b>, <b>Tick Size</b>, and <b>Currency Value Per Tick</b> settings.</li>
+        
+        <li>Enter an appropriate name for the <b>Category</b> setting. We recommend using <em><b>Custom Symbols</b></em> for the Category.</li>
+        
+        <li>Set the <b>Uses Formula Operators</b> setting to <b>Yes</b>. It is <em>absolutely essential</em> to have this option enabled.</li>
+        
+        <li>Set the <b>Download Historical Data for Formula Symbol</b> setting  to either <b>Yes</b> or  <b>No</b> depending upon  whether you want historical data   downloaded and calculated for this custom formula symbol or not.  Downloading historical data will take more time.  So it is not necessarily an advantage  to download historical data.  By default this is set to <b>No</b>.</li>
+        
+        <li class="GeneralBackgroundHighlight"><em>No other settings need to be set</em>. Do not contact Sierra Chart support about how to set other settings because they are <em>not needed. Leave them at their default settings!</em>.  However, it is fine to set the  Intraday Session Times.</li>
+        
+        <li>Press  <b>OK</b>.</li>
+
+        <li>Open the symbol through <b class="menu_item">File &gt;&gt; Find Symbol</b>. You will see it listed in the specified Category.</li>
+
+        <li>Select the Symbol from the list and press <b>Open Intraday Chart</b>. You cannot open a Historical Daily chart for a custom symbol.</li>
+        
+       <li> Historical Intraday data download will be downloaded for each of the individual symbol components   in the custom formula symbol.  Once this is complete, the historical data from each of the individual components  will be calculated into the Intraday data file for the custom  formula symbol. This process can take a while.  The chart will indicate "Downloading Historical Data" while this is occurring. </li>
+
+        <li>Once the historical data downloading   and calculations are complete,  as real-time data is received you will see the custom calculated symbol being updated on the chart.
+        <br><br>
+            Regardless of how the chart Session Times are set, the data is still recorded outside of those session times if connected to the data feed. Refer to <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a>, for instructions to change the Chart Session Times. 
+        </li>
+    </ol>
+</section>
+
+   
+<section class="h2">
+    <h2 id="ResolvingMissingHistoricalDataIssue">Resolving Missing Historical Data Issue</h2>
+    <div class="member-link">[<a href="#ResolvingMissingHistoricalDataIssue">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+      <p>First, make sure you are running an up-to-date version of Sierra Chart. To update, refer to the   <a href = "indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate">Fast Update</a> instructions. </p>
+      
+      <p> It is important  to understand that historical data for a custom calculated symbol  has two sources.    </p>
+      
+      <p>The first source is from downloaded historical data for the component symbols, and is then merged together into the custom calculated symbol.   This historical data  can be enabled or disabled based upon the <b>Download Historical Data for Formula Symbol</b> Symbol Setting  for the custom calculated symbol in the Global Symbol Settings.  </p>
+      
+      <p>  The second source is historical data that is accumulated from the real time or delayed updating of the custom calculated symbol from the data received from the data feeds. </p>
+      
+      <p> To enable the <b>Download Historical Data for Formula Symbol</b> Symbol Setting for the custom calculated symbol, refer to the <a href="#Instructions">Instructions</a>. Understand though that enabling this option,  does have a   significant negative impact  upon the real-time updating  of the custom calculated symbol.  Real-time updating cannot occur until the downloading is complete. </p>
+      
+      <p>  The following information is only applicable when using the <b>Download Historical Data for Formula Symbol</b>   Symbol  Setting for the custom calculated symbol in the  <b>Global Symbol Settings</b>. </p>
+    
+    <p>If there is missing historical data in a chart for a Custom Calculated Symbol,  the first step is to open the <em>individual</em> charts for each symbol used within that custom formula.  Open the  <em>Intraday charts</em>  following the <a href = "index03a9.html?page=doc/GettingStarted.php#OpenChart">Open Chart</a> instructions. For example, for the symbol <b>{US30}-{SPX500}</b> you would open Intraday Charts for the <b>US30</b> and <b>SPX500</b> symbols.</p>
+    
+     <p>Follow the <a href = "indexcf3b.html?page=doc/HistoricalIntradayData.html#RetryingDownloadingOfIntradayData">Retrying Downloading of Intraday Data</a> instructions if  there is any missing data for those symbols. </p>
+    
+     <p>Once you are sure that there is no missing data in the Intraday Charts for the individual symbols, then the next step is to go to the Intraday chart for the Custom Calculated Symbol.  Select <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b> to redownload the data from the individual Intraday symbol files.</p>
+    
+</section>
+
+
+<section class="h2">
+    <h2 id="HistoricalDataDownloadTakingLongTimeToComplete">Historical  Data Download Taking Long Time to Complete</h2>
+    <div class="member-link">[<a href="#HistoricalDataDownloadTakingLongTimeToComplete">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>To create historical data for custom calculated symbols, this has to be calculated and generated from existing historical data for the individual symbols  in the custom calculated symbol.  The calculation   and generation of this historical data  can potentially take a long time. </p>
+    
+    <p>  In this case, you will see  <b> Downloading Historical Data</b>  or if the historical data download has not yet started, <b> Waiting to Download Historical Data</b> displayed on the chart.  </p>
+    
+    <p> There are two possibilities of what to do.  You can disable historical data downloading and calculations.   To do this,  select   <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>.  In the list of symbols, select the formula symbol.  Set the  <b>Download Historical Data for Formula Symbol</b> setting to No. Press OK.  </p>
+    
+    
+    <p>Or, to speed up the process of downloading historical data for a custom calculated symbol,  follow the instructions below.</p>
+    
+    <ol>
+     <li> Select   <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+     <li> Set the  <a href = "index2c7f.html?page=doc/DataSourceSettings.php#MaxHistoricalIntradayDaysToDownload">Maximum Historical Intraday Days to Download</a> setting to a smaller value.</li>
+     <li>   <a href = "index2d36.html?page=doc/ChartDataFiles.html#DeletingChartDataFile">Delete</a> the existing Intraday data files  which make up the custom calculated symbols.</li>
+     <li>  Connect to the data feed with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+      <li> Open the custom calculated symbol chart if it is not already open. </li>
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="StockIndexFuturesPremiums">Stock Index Futures Premiums</h2>
+    <div class="member-link">[<a href="#StockIndexFuturesPremiums">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p> The calculation for a stock index futures premium is the  <em>difference between the futures price and the cash index price</em>.</p>
+    
+    <p>As of March, 2020 Sierra Chart recommends a new method for calculating stock index futures premiums as compared to using specific symbols for these premiums available with the Sierra Chart Exchange Data Feed.</p>
+
+    <p>There are two reasons for this.</p>
+
+    <p>There is the new Custom Calculated Symbols feature which makes this easy to accomplish.</p>
+
+    <p>Second, if the user is not using the <b> Sierra Chart Exchange Data Feed </b> which was previously necessary to access stock index futures premiums symbols, it is now possible to do these calculations without relying upon this data feed or at least without relying on it for the real-time futures data.</p>
+
+    <p>To do this calculation requires that you have real-time data for the stock index futures symbol  and real-time data for the cash index symbol.</p>
+     
+     
+
+    <p>The most accurate way to calculate the premiums is to use the real cash index  symbols. If you require this high accuracy, you need to use the <a href = "index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php"  target="_blank" rel="noopener noreferrer">Sierra Chart Exchange Data Feed</a>  which is an additional cost. You have to pay for the data feed.  And you have to pay for the  exchanges the cash index symbols are from. For further information, refer to   <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#CashIndexes">Cash Indexes</a>.  </p>
+      
+    <p>As an alternative you can use the  <a href = "indexc82f.html?page=doc/SCRealTimeFOREX.php">CFD symbols</a> like  <b>SPX500</b>.    Initially we recommend just using the CFD symbols.</p>
+
+    <p>You also need to have real-time data for the particular stock index futures contract you want to use in the calculation. This can be provided through the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> or be provided through the data feed from an external  Trading  service you may be using. </p>
+
+
+    <p>For example,  to be able   to calculate the   S&P 500 futures premium  you will need to use the formula symbol: <b>{ESM20-CME}-{$INX}</b> or <b>{ESM20-CME}-{SPX500}</b>.  Accessing data for these symbols is explained above. $INX is on the <b>S&amp;P Indices</b> exchange.</p>
+    
+    <p> To do this calculation in Sierra Chart, refer to the <a href = "#Instructions">Custom Calculated Symbols</a> page. </p>
+
+    <p>The only requirements for the custom symbol are as follows:</p>
+    
+	<ul>
+		<li><b>Symbol</b>: {ESM20-CME}-{SPX500} (Example. Use the appropriate symbol.)</li>
+		<li><b>Category</b>: Custom Symbols</li>
+		<li><b>Uses Formula Operators</b>: true</li>
+	</ul>
+</section>
+
+<section class="h2">
+    <h2 id="MeaningOfFSCandFSEDisplayedAfterSymbol">Meaning of FSC and FSE Displayed After the Symbol</h2>
+    <div class="member-link">[<a href="#MeaningOfFSCandFSEDisplayedAfterSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Since it can take some time to download all the data and perform the initial calculations for a Custom Calculated Symbol, an indicator is displayed after the Symbol Name to give some basic information. This indicator will be displayed after the symbol name in the Title Bar and the Chart Header (if the Chart Header has the display of the Symbol Name enabled).</p> 
+
+    <p>The following two items may be displayed:</p>
+
+    <ul>
+        <li><b>[FSC]</b>: Formula Symbol Calculating. This indicates that the Custom Calculated Symbol is functioning properly and calculations are being performed.</li>
+
+        <li><b>[FSE]</b>: Formula Symbol Error. This indicates that there is an error with the Custom Calculated Symbol. It could be that one of the symbols that makes up the Custom Calculated Symbol is out of date and therefore there is no data to match up, or that there is a more serious error that would need to be reported.</li>
+    </ul>
+    
+    <div style="text-align: center;"><a href="../images/customcalculatedsymbol_error.png" rel="lightbox"><img src="../images/customcalculatedsymbol_error.png" alt="TD Ameritrade Service Settings" width="800" class="screenshot" loading="lazy"></a></div>
+    
+    <div style="text-align: center;"><a href="../images/customcalculatedsymbol_calculating.png" rel="lightbox"><img src="../images/customcalculatedsymbol_calculating.png" alt="TD Ameritrade Service Settings" width="800" class="screenshot" loading="lazy"></a></div>
+    
+</section>
+
+<section class="h2">
+    <h2 id="CustomCalculatedSymbolsVolumeCalculations">Custom Calculated Symbols Volume Calculations</h2>
+    <div class="member-link">[<a href="#CustomCalculatedSymbolsVolumeCalculations">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p> In the case of a custom calculated symbol, the following fields: <b>TotalVolume, BidVolume, AskVolume, and NumTrades</b> for each generated <a href = "index4e87.html?page=doc/IntradayDataFileFormat.html#DataStructures">Intraday data record</a> are the <em>total sum</em> from these same fields of all of the component symbols used in the custom calculated symbol.    </p>
+
+      <p>This sum is calculated   across all of the trades  contained within the standard time increment of 1 second.</p>
+      <p>You cannot reliably use the generated data for Custom  Calculated Symbols with the Numbers Bars study. </p>
+    
+</section>    
+
+<section class="h2">
+    <h2 id="TradingCustomCalculatedSymbols">Trading Custom Calculated Symbols</h2>
+    <div class="member-link">[<a href="#TradingCustomCalculatedSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+      
+      <p> A custom calculated symbol can be traded  when using <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a>  both during a  <a href = "index9600.html?page=doc/ReplayChart.html">chart replay</a> and with real-time or delayed streaming data. </p> 
+      
+      <p> When trading a  Custom Calculated Symbol, be sure to set the  <b>Currency Value Per Tick</b>  Symbol Setting for the custom symbol. </p>
+
+       <p>However, there is  <em>no support</em> for trading one of the  Custom Calculated Symbols using the external connected Trading service. Support for trading custom calculated symbols   when connected to an external Trading service will come in a future release.</p>
+      
+    
+</section>    
+
+ <p>Keywords: synthetic, spreads</p>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/CustomCalculatedSymbols.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:34:21 GMT -->
+</html>  

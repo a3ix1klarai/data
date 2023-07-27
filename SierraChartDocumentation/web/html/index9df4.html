@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudySummaryWindow.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105657') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/StudySummaryWindow.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Study Summary Window -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index9df4.html?page=doc/StudySummaryWindow.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#StudiesIndicators">(Table of Contents) Studies and Indicators</a> &gt;&gt; <a  href="index9df4.html?page=doc/StudySummaryWindow.php">Study Summary Window</a></h4> </div>     <h1 class="PageName">Study Summary Window</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#UsingStudySummary">Using Study Summary</a></li>
+    <li><a href="#Menus">Menus</a>
+        <ul>
+            <li><a href="#Settings">Settings</a>
+				<ul>
+				    <li><a href="#GraphicsSettings">Settings &gt;&gt; Graphics Settings</a></li>
+				    <li><a href="#SetTitle">Settings &gt;&gt; Set Title</a></li>
+				    <li><a href="#SelectionHighlightsAllColumns">Settings &gt;&gt; Selection Highlights All Columns</a></li>
+				    <li><a href="#SortLocked">Settings &gt;&gt; Sort Locked</a></li>
+				    <li><a href="#IncludeHiddenStudies">Settings &gt;&gt; Include Hidden Studies</a></li>
+				    <li><a href="#IncludeHiddenSubgraphs">Settings &gt;&gt; Include Hidden Subgraphs</a></li>
+				    <li><a href="#DisplayStudyNames">Settings &gt;&gt; Display Study Names</a></li>
+				    <li><a href="#TextDrawStylesDisplayText">Settings &gt;&gt; Text Draw Styles Display Text</a></li>
+				    <li><a href="#TextDrawStylesDisplayWhenTrue">Settings &gt;&gt; Text Draw Styles Display When True</a></li>
+				    <li><a href="#DisplayValuesForLastVisibleBar">Settings &gt;&gt; Display Values for Last Visible Bar</a></li>
+				    <li><a href="#DisplayDailyQuoteDataFields">Settings &gt;&gt; Display Daily Quote Data Fields</a></li>
+				    <li><a href="#SetQuoteFields">Settings &gt;&gt; Set Quote Fields</a></li>
+				    <li><a href="#AttachDetachWindow">Settings &gt;&gt; Attach/Detach Window</a></li>
+				    <li><a href="#AlwaysOnTop">Settings &gt;&gt; Always on Top</a></li>
+				    <li><a href="#AlwaysVisibleAcrossChartbooks">Settings &gt;&gt; Always Visible Across Chartbooks</a></li>
+				    <li><a href="#IncludeAllChartbooks">Settings &gt;&gt; Include All Chartbooks</a></li>
+				</ul>
+			</li>
+            <li><a href="#Alerts">Alerts</a>
+				<ul>
+				    <li><a href="#ShowAlertManager">Alerts &gt;&gt; Show Alert Manager</a></li>
+				    <li><a href="#AddSymbolAlert">Alerts &gt;&gt; Add Symbol Alert</a></li>
+				    <li><a href="#MuteAllAlertSounds">Alerts &gt;&gt; Mute All Alert Sounds</a></li>
+				    <li><a href="#AlertNumberForNewHighLow">Alerts &gt;&gt; Alert Number for New High/Low</a></li>
+				</ul>
+			</li>
+        </ul>
+    </li>
+    <li><a href="#SortingDataBySelectingColumnHeader">Sorting Data by Selecting Column Header</a></li>
+    <li><a href="#NavigatingToChartsFromStudySummary">Navigating to Charts from Study Summary</a></li>
+    <li><a href="#SettingAlertsAndAlertHighlighting">Setting Alerts and Alert Highlighting</a></li>
+    <li><a href="#ChartManagementRelatedToStudySummary">Chart Management Related to Study Summary</a></li>
+    <li><a href="#StudyManagementRelatedToStudySummary">Study Management Related to Study Summary</a></li>
+    <li><a href="#NumberTextAndColorControlForStudySummarySubgraphCells">Number, Text, and Color Control for Study Summary Subgraph Cells</a></li>
+    <li><a href="#StudySummaryRowsIncludingMultipleCharts">Study Summary Rows Including Multiple Charts</a> </li>
+    <li><a href="#WhyChartIsRequiredForStudiesInStudySummaryWindow">Why a Chart is Required for the Studies in the Study Summary Window</a></li>
+</ul>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+   
+    <p>The <b>Study Summary</b> window  provides a table view of the Study Subgraphs of studies in the charts in an open <a href="index7674.html?page=doc/Chartbooks.html" target="_blank" rel="noopener noreferrer">Chartbook</a>, set to be included in the Study Summary. Refer to the example image below.</p>
+    
+   <p>There is only one Study Summary window per Chartbook and it is saved with the Chartbook. A Study Summary window can be set to display data from all Chartbooks by enabling <b class = "menu_item">Settings &gt;&gt; Include All Chartbooks</b> on the Study Summary window menu.</p>
+
+    <div style="text-align: center;"><a href="../images/studysummarywindow.png" rel="lightbox"><img src="../images/studysummarywindow.png" alt="" width="600"  class="screenshot" loading="lazy"></a></div>
+    
+    <p>Charts and Studies that have <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php" target="_blank" rel="noopener noreferrer">Alert Condition Formulas</a> defined for them and the result evaluates to TRUE, are highlighted in the Study Summary using the <b>Study Summary: Alert True Background</b> color configured through the <a href="index5795.html?page=doc/GraphicsSettings.html" target="_blank" rel="noopener noreferrer">Graphics Settings</a>. </p>
+    
+    <p>The Study Summary consists of a table where the rows represent each chart in the Chartbook that either has a TRUE Alert Condition Formula result or has a study which is set to be included in the Study Summary.   </p>
+    
+    <p>If none of the columns are set to be sorted, then the order  of the charts among the  rows  is dependent upon the internal order of charts within the Chartbook.</p>
+    
+    <p>The columns represent the Study Subgraphs set to be included in the Study Summary on those charts.</p>
+        
+    <p>Each Study Subgraph can be set to be included in the Study Summary or not.  Among all of the rows/charts that are displayed, only the same named study can be  included  <em>once</em> for those charts.  So for example, if the ADX study is set to be included in one or more charts, it will  only be displayed once in the table. Any additional instances of this study within the same chart will be skipped. </p>
+    
+    <p> When determining whether a study is skipped or not, it is identified by its name and whether it is set to be included in the Study Summary. You can change the study name through the <a href="index9099.html?page=doc/ChartStudies.html#ShortName" Target="_blank" rel="noopener noreferrer">Short Name</a> setting on a study to include more than one instance of the same study in the Study Summary.</p>
+        
+    <p> The order of the studies on the Study Summary depends upon the display priority of a particular  named study. The display priority first is determined by the number of times it occurs among all of the charts that are set to be included in the Study Summary. And second by the order  the study exists in the <a href="index9099.html?page=doc/ChartStudies.html#StudyDisplayOrder"  target="_blank" rel="noopener noreferrer">Studies To Graph</a> list relative to other studies.</p>
+
+    <p>When determining the number of times it occurs among all of the charts that are set to include it in the Study Summary, only the first instance of the study per chart is counted. </p>      
+</section>
+
+<section class="h2">
+    <h2 id="UsingStudySummary">Using Study Summary</h2>
+    <div class="member-link">[<a href="#UsingStudySummary">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Follow the instructions below to use the Study Summary window.</p>
+    <ol>
+        <li><a href="index03a9.html?page=doc/GettingStarted.php#OpenChart" target="_blank" rel="noopener noreferrer" >Open the charts</a> that you want to include in the Study Summary window.</li>
+        
+        <li><a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Add the  studies</a> that you want to include in a Study Summary window to those charts. </li>
+        
+        <li>Open the  <a href="index9099.html?page=doc/ChartStudies.html#TechnicalStudySettingsWindow" target="_blank" rel="noopener noreferrer">Study Settings</a> window for a study to be included in the Study Summary window.</li>
+        
+        <li> Select the <b>Settings and Inputs</b> tab and enable the <b>Include in Study Summary</b> option. For new studies this is enabled by default. Refer to the image below.</li>
+        
+        
+        <div style="text-align: center;"><a href="../images/studymainsettingsincludeinstudysummary.png" rel="lightbox"><img src="../images/studymainsettingsincludeinstudysummary.png" alt="" width="600"  class="screenshot" loading="lazy"></a></div>
+        
+        <li> Optionally set a  <a href="index9099.html?page=doc/ChartStudies.html#ShortName" target="_blank" rel="noopener noreferrer">Short Name</a> on the study.</li>
+   
+   
+        <li> Select the <b>Subgraphs</b> tab. Select a particular Subgraph you want included in the Study Summary  in the list of Subgraphs.  </li>
+
+        <li>Enable the  <b>Include in Study Summary</b> option. For new studies this is enabled by default. Refer to the image below. </li>   
+        
+        <div style="text-align: center;"><a href="../images/studysubgraphsettingsincludeinstudysummary.png" rel="lightbox"><img src="../images/studysubgraphsettingsincludeinstudysummary.png" alt="" width="600"  class="screenshot" loading="lazy"></a></div>
+        
+        <li> Press OK. </li>
+        <li> Repeat steps 3 through 7 for each study to be included in the Study Summary window. </li>
+        
+        <li> <a href="index9099.html?page=doc/ChartStudies.html#StudyDisplayOrder" >Adjust the order</a> of the  studies in the <b>Studies to Graph</b> list according to the order in which you want them displayed on the Study Summary window.</li>
+        
+        <li> Press OK. </li>
+   
+        <li> Open the Study Summary window through  <b class = "menu_item">File &gt;&gt; Open Study Summary Window</b>.</li>
+        <li>Adjust the size of this window as required. </li>
+        <li>Adjust the column widths as you require. The column widths can be adjusted by left clicking and dragging at the border between columns on the header at the top. The location where you need to left click, you will notice a short red vertical line display signifying that an adjustment can take place by left clicking and dragging.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="Menus">Menus</h2>
+    <div class="member-link">[<a href="#Menus">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following sections gives an overview of the items available through the pulldown menus on the Study Summary Window.</p>
+
+    <section class="h3">
+        <h3 id="Settings">Settings</h3>
+        <div class="member-link">[<a href="#Settings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following item are available through the <b>Settings</b> pulldown menu on the Study Summary Window.</p>
+
+        <section class="h4">
+            <h4 id="GraphicsSettings">Settings &gt;&gt; Graphics Settings</h4>
+            <div class="member-link">[<a href="#GraphicsSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option brings up the Global Graphics Settings Window. For more information refer to <a href="index5795.html?page=doc/GraphicsSettings.html" target="_blank" rel="noopener noreferrer">Graphics Settings</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SetTitle">Settings &gt;&gt; Set Title</h4>
+            <div class="member-link">[<a href="#SetTitle">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option brings up the <b>Enter Custom Title</b> window into which text can be entered. Select OK on the <b>Enter Custom Title</b> window to have the entered text displayed in the Title Bar instead of the standard <b>Study Summary</b> text.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SelectionHighlightsAllColumns">Settings &gt;&gt; Selection Highlights All Columns</h4>
+            <div class="member-link">[<a href="selectionhighlightsallcolumns.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether the entire row of data is highlighted using the <a href="index5795.html?page=doc/GraphicsSettings.html#StudySummary_Background" target="_blank" rel="noopener noreferrer">Study Summary: Background</a> color.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SortLocked">Settings &gt;&gt; Sort Locked</h4>
+            <div class="member-link">[<a href="#SortLocked">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether selecting a column Title sorts the information in the <b>Study Summary</b> by the information in that column. Having this option checked (selected) disables the ability to sort.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IncludeHiddenStudies">Settings &gt;&gt; Include Hidden Studies</h4>
+            <div class="member-link">[<a href="#IncludeHiddenStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether studies that have the option <a href="index9099.html?page=doc/ChartStudies.html#HideStudy" target="_blank" rel="noopener noreferrer">Hide Study</a> selected are displayed in the <b>Study Summary</b> or not. Having this option checked (selected) will display information for hidden studies.</p>
+
+            <p>Note that selecting this option will only display the column for the hidden studies if there is subgraph data to display. If the subgraphs in the hidden studies are also hidden, and the option <b>Include Hidden Subgraphs</b> is not enabled, then a column for the hidden study will not be displayed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IncludeHiddenSubgraphs">Settings &gt;&gt; Include Hidden Subgraphs</h4>
+            <div class="member-link">[<a href="#IncludeHiddenSubgraphs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether data for subgraphs that have their <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle" target="_blank" rel="noopener noreferrer">Draw Style</a> set to either <b>Hidden</b> or <b>Ignore</b> is displayed. Having this option checked (selected) will display information for hidden subgraphs.</p>
+
+            <p>Note that selecting this option will only display the column for the hidden subgraph if there is a study to display. If the Study for the hidden subgraph is also hidden, and the option <b>Include Hidden Studies</b> is not enabled, then a column for the hidden subgraph will not be displayed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DisplayStudyNames">Settings &gt;&gt; Display Study Names</h4>
+            <div class="member-link">[<a href="displaystudynames.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether the study name is displayed in the column header. Having this option checked (selected) will display the study name.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TextDrawStylesDisplayText">Settings &gt;&gt; Text Draw Styles Display Text</h4>
+            <div class="member-link">[<a href="#TextDrawStylesDisplayText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether Subgraphs that display information as text will display as text,  or if the Subgraph data  will be displayed as a number formatted according to the  <a href = "index9099.html?page=doc/ChartStudies.html#ValueFormat">Value Format</a> defined for the study of which the Subgraph is a member. 
+            
+            <p>Having this option checked (selected) will display the data as text.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="TextDrawStylesDisplayWhenTrue">Settings &gt;&gt; Text Draw Styles Display When True</h4>
+            <div class="member-link">[<a href="#TextDrawStylesDisplayWhenTrue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then a study that displays a text value will only be displayed when its   <a href = "index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Simple Alert</a> state is currently true.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="DisplayValuesForLastVisibleBar">Settings &gt;&gt; Display Values for Last Visible Bar</h4>
+            <div class="member-link">[<a href="displayvaluesforlastvisiblebar.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Normally the Study Summary window displays the study values and other chart values  at the very last column/bar in the chart.</p>
+            
+            <p> When this option is enabled, then the Study Summary window will display study values and other chart values based upon the last visible bar.   </p>
+            
+            <p>This lets you scroll the chart  and allows you to see the values in the study summary window based upon the current scroll position of the chart.</p>
+            
+            <p>In this particular case you may want  to enable the  <b>Scroll Position</b>  <a href = "index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking">Chart Linking</a> option for the charts used with the Study Summary window so that they  all scroll together and there is consistency with the information displayed in the Study Summary window. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DisplayDailyQuoteDataFields">Settings &gt;&gt; Display Daily Quote Data Fields</h4>
+            <div class="member-link">[<a href="displaydailyquotedatafields.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether daily Quote Data fields are displayed in the <b>Study Summary</b> or not. Having this option checked (selected) will display the Quote Data fields.</p>
+
+            <p>The specific fields that are displayed when this option is checked is controlled by selecting Settings &gt;&gt; Set Quote Fields on the Study Summary window.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SetQuoteFields">Settings &gt;&gt; Set Quote Fields</h4>
+            <div class="member-link">[<a href="#SetQuoteFields">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option opens the <b>Customize Quote Board Fields</b> window. This window allows for changes to the columns of data that are displayed for each symbol when the <b>Display Daily Quote Data Fields</b> option is selected.<p>
+
+            <p>The <b>Customize Quote Board Fields</b> window is shared with the <a href="index1eaf.html?page=doc/GettingQuotes.html" target="_blank" rel="noopener noreferrer">Quote Board</a>, including the saving and loading of defaults.</p>
+
+            <p>For information on the available fields, refer to <a href="index1eaf.html?page=doc/GettingQuotes.html#FieldDescriptions">Field Descriptions</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AttachDetachWindow">Settings &gt;&gt; Attach/Detach Window</h4>
+            <div class="member-link">[<a href="#AttachDetachWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option will Attach or Detach the Study Summary Window to the main Sierra Chart application.</p>
+
+            <p>When this window is <em>Attached</em>, then it is managed by Sierra Chart and is part of the windows within the application. Therefore, the <b>Study Summary Window</b> will always be displayed when changing between Charts and Chartbooks that are also attached to the main Sierra Chart application.</p>
+
+            <p>When this window is <em>Detached</em>, then it is managed by the Operating System. Therefore, the <b>Study Summary Window</b> will have its own icon in the taskbar and will move behind or in front of other windows as selected. This also means that the <b>Study Summary Window</b> will not always be visible when moving between Charts and Chartbooks within the main Sierra Chart application.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AlwaysOnTop">Settings &gt;&gt; Always on Top</h4>
+            <div class="member-link">[<a href="#AlwaysOnTop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether the <b>Study Summary Window</b> will always be on top of all other windows, and therefore always in view. Having this option checked (selected) will force the window to always be on top of all other windows.</p>
+
+            <p>This option is only available when the Study Summary Window is <em>Detached</em>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AlwaysVisibleAcrossChartbooks">Settings &gt;&gt; Always Visible Across Chartbooks</h4>
+            <div class="member-link">[<a href="#AlwaysVisibleAcrossChartbooks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether the <b>Study Summary Window</b> is visible in all Chartbooks, or only the Chartbook for which it displays the study information. Having this option checked (selected) will make the <b>Study Summary Window</b> display in all Chartbooks.</p>
+
+            <p>This option is only valid when the <b>Study Summary Window</b> is <em>Attached</em>. Otherwise, this option has no impact on the <b>Study Summary Window</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IncludeAllChartbooks">Settings &gt;&gt; Include All Chartbooks</h4>
+            <div class="member-link">[<a href="#IncludeAllChartbooks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether the <b>Study Summary Window</b> includes data from all Chartbooks, or only data from the Chartbook in which it was originally opened. Having this option checked (selected) will make the <b>Study Summary Window</b> display data from all Chartbooks.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="Alerts">Alerts</h3>
+        <div class="member-link">[<a href="#Alerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following item are available through the <b>Alerts</b> pulldown menu on the Study Summary Window.</p>
+
+        <section class="h4">
+            <h4 id="ShowAlertManager">Alerts &gt;&gt; Show Alert Manager</h4>
+            <div class="member-link">[<a href="#ShowAlertManager">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option brings up the <b>Alert Manager</b> window. For more information, refer to <a href="index2ac2.html?page=doc/AlertsManager.html">Alerts Manager</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AddSymbolAlert">Alerts &gt;&gt; Add Symbol Alert</h4>
+            <div class="member-link">[<a href="#AddSymbolAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option brings up the <b>Add Symbol Alert</b> window. For more information, refer to <a href="index2ac2.html?page=doc/AlertsManager.html#SymbolAlerts">Symbol Alerts</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MuteAllAlertSounds">Alerts &gt;&gt; Mute All Alert Sounds</h4>
+            <div class="member-link">[<a href="#MuteAllAlertSounds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option toggles whether all Alert sounds are muted or not. Having this option checked (selected) will mute all Alert sounds.</p>
+
+            <p>This option toggles the setting in the main pulldown menus for <b class="menu_item">Global Settings &gt;&gt; Mute All Alert Sounds</b>. For more information refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#MuteAllAlertSounds">Mute All Alert Sounds (Global Settings)</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AlertNumberForNewHighLow">Alerts &gt;&gt; Alert Number for New High/Low</h4>
+            <div class="member-link">[<a href="alertnumberfornewhighlow.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option brings up the <b>Set Alert Number for New Highs/Lows</b> window. Setting a number in this window between 1 and 100 will utilize that Alert Number if there is a new High or Low value for the symbol referenced by the study displayed in the chart.</p>
+
+            <p>For more information, refer to <a href="index1eaf.html?page=doc/GettingQuotes.html#NewHighAndLowHighlightingAndAlert">New High and Low Highlighting Alert</a>.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SortingDataBySelectingColumnHeader">Sorting Data by Selecting Column Header</h2>
+    <div class="member-link">[<a href="#SortingDataBySelectingColumnHeader">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is possible to sort the data within the Study Summary window based on a particular column's information. In order to sort the data, the  <b class="menu_item">Settings &gt;&gt; Sort Locked</b>  option  on the Study Summary  menu needs to be not be enabled. If this option is enabled, then selecting a column header will only select the column, and will not sort the data.</p>
+
+    <div style="text-align: center;"><a href="../images/studysummary-sorted.png" rel="lightbox"><img src="../images/studysummary-sorted.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <p>To sort the data, left-click the desired column header that contains the data to be the basis for the sort. It may be necessary to click twice, as the first click will be interpreted as the selection of the column, if the column was not already the selected column. When sorted a small up or down arrow will appear on the right side of the column header.</p>
+
+    <p>The first sort option is denoted as an arrow pointing up, and sets  the column sorting in <b>Ascending</b> order. When sorted in this order, the entire row of data is moved up or down such that the value in the selected column that has the smallest value is listed in the first row with the rest of the rows getting larger as you move down the rows to the last row of data in the column.</p>
+
+    <div style="text-align: center;"><a href="../images/studysummary-sorted-ascending.png" rel="lightbox"><img src="../images/studysummary-sorted-ascending.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <p>Selecting the same column again will set the second sort option denoted as an arrow pointing down, and sets the column sorting in <b>Descending</b> order. When sorted in this order, the entire row of data is moved up or down such that the value in the selected column that has the largest value is listed in the first row with the rest of the rows getting smaller as you move down the rows to the last row in the column.</p>
+
+    <div style="text-align: center;"><a href="../images/studysummary-sorted-descending.png" rel="lightbox"><img src="../images/studysummary-sorted-descending.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <p>It is possible to sort by a specific column and then lock the sorting (<b class="menu_item">Settings &gt;&gt; Sort Locked</b>), which will not allow for further sorting changes to be made. Any additional data that is added to the Study Summary will be sorted based on the sorting that already selected.</p>
+</section>
+
+<section class="h2">
+        <h2 id="NavigatingToChartsFromStudySummary">Navigating to Charts from Study Summary</h2>
+        <div class="member-link">[<a href="#NavigatingToChartsFromStudySummary">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> It is supported through the Study Summary window to navigate to the associated chart for a row displayed on the Study Summary window for that particular chart.</p>
+        
+        <p> This is accomplished simply by performing a double-click operation with your Pointer anywhere along that row for the chart. The chart will be activated. </p>
+        
+        <p>If the  Chartbook the chart is contained in is currently not the visible Chartbook, it will be made the visible Chartbook first. It may not be visible Chartbook if the Study Summary window has enabled  <b class = "menu_item">Settings &gt;&gt; Always Visible Across Chartbooks</b>.</p>
+</section>
+<section class="h2">
+        <h2 id="SettingAlertsAndAlertHighlighting">Setting Alerts and Alert Highlighting</h2>
+        <div class="member-link">[<a href="#SettingAlertsAndAlertHighlighting">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>A chart  which has an  Alert Condition Formula set on it which is TRUE,  will have the Chart field  for it highlighted in the Study Summary. To set the Alert Condition Formula  on the chart, refer to <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php#EnterAlertOnMainPriceGraph"   target="_blank" rel="noopener noreferrer" >To Enter an Alert Condition on the Main Chart/Price Graph</a>.</p>
+        
+        <p>A study on a chart set to be included in the Study Summary that has an Alert Condition Formula set on it which is TRUE  will have its  Subgraphs fields highlighted in the Study Summary. To set the  Alert Condition Formula  on a study, refer to <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php#EnterAlertOnStudy"   target="_blank" rel="noopener noreferrer">To Enter an Alert Condition on a Study</a>.</p>
+        
+       <p>To set the highlight color, select <b class = "menu_item">Global Settings &gt;&gt; Graphics Settings - Global</b>. Set the  <b>Study Summary: Alert True Background</b> color to what you require. For complete documentation, refer to <a href="index5795.html?page=doc/GraphicsSettings.html"  target="_blank" rel="noopener noreferrer" >Graphics Settings</a>.</p>
+
+        
+</section>
+
+<section class="h2">
+        <h2 id="ChartManagementRelatedToStudySummary">Chart Management Related to Study Summary</h2>
+        <div class="member-link">[<a href="#ChartManagementRelatedToStudySummary">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p> This section documents various methods for managing multiple charts to be included in the Study Summary window in an organized, consistent, and efficient way. </p>
+        
+        <p>If you have a large number of charts you want to include in the Study Summary window  and do not normally need to look at those charts, then the charts can be put in a separate <a href="index7674.html?page=doc/Chartbooks.html"   target="_blank" rel="noopener noreferrer">Chartbook</a>. </p>
+        
+        <p>The Study Summary window for that Chartbook and be made always visible by enabling       <b class = "menu_item">Settings &gt;&gt; Always Visible Across Chartbooks</b> on the Study Summary Window menu. Or as an alternative, on the Study Summary  window menu, enable   <b class = "menu_item">Settings &gt;&gt; Include All Chartbooks</b>.</p>
+
+        <p>Charts can  also be hidden through <a href="indexc5fd.html?page=doc/WindowMenu.html#HideWindow"   target="_blank" rel="noopener noreferrer">Window &gt;&gt; Hide Window</a>.  Charts Windows can also be destroyed when hidden by enabling <a href="index899f.html?page=doc/GeneralSettings.html#DestroyChartWindowsWhenHidden"  target="_blank" rel="noopener noreferrer">Destroy Chart Windows  When Hidden</a>.</p>
+
+        <p>You can reduce the <a href="index4cf4.html?page=doc/ChartSettings.html#DaysToLoad"  target="_blank" rel="noopener noreferrer">Use Days to Load &gt;&gt; Days to Load</a> within a chart, if the data is not necessary  for the study values at the last bar in the chart. This will make the chart load faster and also conserve memory.</p>
+
+        <p>When setting up a large number of charts, you can use the <a href="indexfd56.html?page=doc/ChartMenu.html#DuplicateChart"  target="_blank" rel="noopener noreferrer">Chart &gt;&gt; Duplicate  Chart</a> command to duplicate a new chart from an existing chart with identical settings.</p>
+
+        <p>Use the  <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking"  target="_blank" rel="noopener noreferrer">Chart Linking</a> feature for charts to maintain consistent settings among a group of charts. There are different categories of settings that can be linked.</p>
+        
+        <p>The order in which the charts are displayed in the Study Summary window,  when there is not a table column set for sorting, is according  to the internal order of charts as they exist in the Chartbook.  To make sure there is no column set for sorting on the Study Summary window, left click on the   <b>Name </b> header at the top left  until it shows no Up or Down arrow.</p>
+        
+        <p>To set a custom name for chart that is visible on the Study Summary window in the first column (<b>Chart</b>), set this through the <a href="index4cf4.html?page=doc/ChartSettings.html#TitleBarName"  target="_blank" rel="noopener noreferrer">Title Bar Name</a>  in the   <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>. </p>
+</section>
+
+<section class="h2">
+        <h2 id="StudyManagementRelatedToStudySummary">Study Management Related to Study Summary</h2>
+        <div class="member-link">[<a href="#StudyManagementRelatedToStudySummary">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>If you want to have a set of charts with a consistent set of studies on each of those charts to be able to use in the Study Summary window, then use the  <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking" Target="_blank" rel="noopener noreferrer">Chart Linking</a> feature and link the <b>Studies </b> among all of those charts.</p>
+       
+        <p>In this way, when a study or studies is changed on one chart, all other charts with the same  Link Number will all update and all be identical to each other in regards to the study configuration.</p>
+</section>
+
+<section class="h2">
+    <h2 id="NumberTextAndColorControlForStudySummarySubgraphCells">Number, Text, and Color Control for Study Summary Subgraph Cells</h2>
+    <div class="member-link">[<a href="#NumberTextAndColorControlForStudySummarySubgraphCells">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>For each Study Subgraph at each row  in the study Summary, by default what is displayed is the value for the last chart bar for the Study Subgraph. The format is controlled by the <a href="index9099.html?page=doc/ChartStudies.html#ValueFormat" Target="_blank" rel="noopener noreferrer">Value Format</a> of the study.</p>
+
+    <p>When <b class="menu_item">Settings &gt;&gt; Text Draw Styles Display Text</b> is enabled on the Study Summary menu and the <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle" target="_blank" rel="noopener noreferrer">Subgraph Draw Style</a> is <b>Text, Transparent Text, Text with Background</b>,  then the <b>Text to Draw</b> to set  for the Subgraph is displayed instead of the Subgraph value.</p>		
+
+    <p>An <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php"  target="_blank" rel="noopener noreferrer">ACSIL</a> study  which sets <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraph_StudySummaryCellText">sc.Subgraph[].StudySummaryCellText</a> to a text string for particular study Subgraph will then have that text displayed for the study Subgraph instead of the Subgraph value.</p>
+    
+    <p>The Font size for the text displayed in the Study Summary is controlled through the <b>Study Summary</b> item on the <a href="index5795.html?page=doc/GraphicsSettings.html#FontsAndText">Fonts and Text</a> tab of the Graphics Settings window.</p>
+
+    <p>The following describes the foreground coloring rule for Study Subgraphs values displayed in the Study Summary:</p>
+     
+    <ul>
+        <li>The foreground/text color for values or text for study Subgraphs in the Study Summary is the <a href="index9099.html?page=doc/ChartStudies.html#SubgraphsColor"  target="_blank" rel="noopener noreferrer">Study Subgraph Color</a> itself.</li>
+    </ul>
+       
+    <p>The background coloring of cells for Study Subgraphs displayed in the Study Summary Window is done per cell. The following describes the background coloring rules for Study Subgraphs displayed in the Study Summary:</p>
+
+    <ul>
+        <li>If an  <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php"  target="_blank" rel="noopener noreferrer">ACSIL</a> study has set  <a href = "index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraph_UseStudySummaryCellBackgroundColor">sc.Subgraph[].UseStudySummaryCellBackgroundColor</a> to true, then the background color is set with <a href = "index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraph_StudySummaryCellBackgroundColor">sc.Subgraph[].StudySummaryCellBackgroundColor</a>.</li>
+
+        <li>If the study is a <b>Spreadsheet System/Alert</b> type of study and for a particular Study Subgraph the alert state is true, then the background color is the Study Summary <a href = "#SettingAlertsAndAlertHighlighting">Alert True Background</a> color.</li>
+        
+        <li>If the study is not a <b>Spreadsheet/System Alert</b> type of study and the alert status is true for the study, then the background color is the Study Summary  <a href = "#SettingAlertsAndAlertHighlighting">Alert True Background</a> color. 
+         <br> <br>
+        However, in the case of the <b>Color Background Based on Alert Condition</b> study, the foreground text color will become the Study Summary Row Background color and the background color will be the Subgraph Primary color setting for the <b>Color Background Based on Alert Condition</b> study.</li>
+                            
+        <li>If the study is on a selected row and <b class = "menu_item">Settings &gt;&gt; Selection Highlights All Columns</b>, then the background color will be the Study Summary Selected Row color.</li>
+        
+        <li>Otherwise, the background color will be the Study Summary Row Background color.</li>
+    </ul>
+    
+     <p>  The foreground coloring for  the <b>Chart, Symbol,  Last Time, Last, Daily Change, Bid, Ask, Bid Size, Ask Size, High, Low, Volume,   Daily Change %, Name</b> fields within the Study Summary window use the  <b>Chart Text</b> color setting. To set this, refer to  <a href = "index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a>.</p>
+</section>
+
+<section class="h2">
+        <h2 id="StudySummaryRowsIncludingMultipleCharts">Study Summary Rows Including Multiple Charts</h2>
+        <div class="member-link">[<a href="#StudySummaryRowsIncludingMultipleCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>  To include study data from multiple charts in a single row on the Study Summary will require that you  overlay studies from multiple charts into a single chart which is then included in the Study Summary. </p>
+        
+        <p> To do this, use the  <a href = "indexc0f0.html?page=doc/StudyPriceOverlayStudy.php">Study/Price Overlay</a> study. </p>
+        
+        <p>  To be sure each instance  of the <b>Study/Price Overlay</b> study uniquely shows up on the Study Summary requires that each instance use a different  <a href="index9099.html?page=doc/ChartStudies.html#ShortName" Target="_blank" rel="noopener noreferrer">Short Name</a>. </p>
+ 
+ </section>
+<section class="h2">
+        <h2 id="WhyChartIsRequiredForStudiesInStudySummaryWindow">Why a Chart is Required for the Studies in the Study Summary Window</h2>
+        <div class="member-link">[<a href="#WhyChartIsRequiredForStudiesInStudySummaryWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+        <p>The concept of study values on the <a href="index1eaf.html?page=doc/GettingQuotes.html" >Quote Board</a> without an associated chart has no reasonable method to the implementation.</p>
+
+        <p>Some questions about this are:</p>
+
+        <ul>
+            <li>Historical data is required but Quote Boards do not have historical data. Therefore, at least one chart object  which loads historical data, is required in the background for each symbol.</li>
+            
+            <li> How can studies be calculated without a chart object? They cannot be. A chart is required. </li>
+            
+            <li>What are the Study Settings for the study values? It is necessary to set Study Settings and this requires a chart object which supports  <a href="index9099.html?page=doc/ChartStudies.html" >Chart Studies</a> and  <a href="index9099.html?page=doc/ChartStudies.html#TechnicalStudySettingsWindow">Study Settings</a>  windows.</li>
+            
+            <li>What are the Chart Settings for the chart? How much historical data is needed? This requires a chart and also requires the   <a href="index4cf4.html?page=doc/ChartSettings.html" >Chart Settings</a> window.</li>
+            
+            <li>Is there any missing data in the historical data the calculations are performed on?   This requires a chart to visualize this.</li>
+            
+            <li>In the case of a futures contract near rollover, what about the historical futures data for the prior contract? Does this data even exist? What is the rollover date? Is it back adjusted?   This requires a chart to configure the settings and to ensure there is no missing data.</li>
+            
+            <li>If a Sierra Chart user says there is something wrong with a study value on a Quote Board, first how would they obviously know this to begin with just by looking at it in isolation without seeing it on the chart and seeing the underlying price bars? The answer is they cannot. The next question is what is the historical data it is based on? Is it complete and does it have any data errors? If the data requires back adjustment, is the back adjustment enabled, and is it working properly and is all of the necessary data for that present. All of this is exceptionally difficult to even answer to the <em>literal point of insanity  without being able to see the chart.</em></li>
+            
+            
+        </ul>
+
+        <p>A chart object with  <b>Chart Settings</b> and <b>Study Settings</b> windows is absolutely is required for studies on the Study Summary window.</p>
+        
+         <p>The basic elements of a chart object are as follows:</p>
+         <ul>
+             <li>The loading on a thread of the chart data from  the data stored in the chart data files.</li>
+             <li>The building of the chart bars according to settings which there are numerous ones.</li>
+             <li>The storage of the resulting bars.</li>
+             <li>The display of the resulting bars which is not relevant in this case and can be disabled on a chart by hiding the chart and by enabling the option to destroy a chart window when hidden.</li>
+             <li>The calculation of technical  studies on that data.</li>
+             <li>The ability to access the resulting calculations.</li>
+             <li>A Chart Settings interface. </li>
+             <li>A Study Settings interface. </li>
+         </ul>
+         
+         <p>These are the basic components of a Sierra Chart chart object and that type of object is absolutely needed to produce  a study  for a timeframe per bar that a chart is not already   opened for. </p>
+</section>
+<hr>
+
+ <p>Keywords: Study Summary, Study Board, Radar Screen.</p>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudySummaryWindow.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:46 GMT -->
+</html>  

@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_AccountBalanceDataMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1558586931') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DTCMessages_AccountBalanceDataMessages.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Account Balance Data Messages -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexbfb0.html?page=doc/DTCMessages_AccountBalanceDataMessages.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ExternalInterfaces.DTCProtocol">(Table of Contents) Data and Trading Communications (DTC) Protocol</a> &gt;&gt; <a  href="indexe379.html?page=doc/DTCMessageDocumentation.php">DTC Messages and Procedures</a> &gt;&gt; <a  href="indexbfb0.html?page=doc/DTCMessages_AccountBalanceDataMessages.php">Account Balance Data Messages</a></h4> </div>     <h1 class="PageName">Account Balance Data Messages</h1>
+
+<ul>
+    <li><a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a></li>
+    <li><a href="#Messages-ACCOUNT_BALANCE_REJECT">ACCOUNT_BALANCE_REJECT</a></li>
+    <li><a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a></li>
+
+    <li><a href="#Messages-HISTORICAL_ACCOUNT_BALANCES_REQUEST">HISTORICAL_ACCOUNT_BALANCES_REQUEST</a></li>
+    <li><a href="#Messages-HISTORICAL_ACCOUNT_BALANCES_REJECT">HISTORICAL_ACCOUNT_BALANCES_REJECT</a></li>
+    <li><a href="#Messages-HISTORICAL_ACCOUNT_BALANCE_RESPONSE">HISTORICAL_ACCOUNT_BALANCE_RESPONSE</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+
+
+    <div class="h3">
+        <h3 id="Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST [s_AccountBalanceRequest structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-ACCOUNT_BALANCE_REQUEST">Link</a>] - [<a href="#Top">Top</a>]</div>
+
+        <p>This is a message from the Client to the Server to request Trade Account Balance data.</p>
+
+        <p>The Server will respond with an <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> or reject the request.  </p>
+
+        <p>The Server will set the <b>RequestID</b> in the  <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> message to match the <b>RequestID</b>  in the <b>ACCOUNT_BALANCE_REQUEST</b>.</p>
+
+        <p>The Server will periodically send <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> messages as the Account Balance data changes. The frequency of the updates is determined by the Server. Account Balance updates are considered automatically subscribed to. When unsolicited <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> messages are sent by the Server, the <b>RequestID</b> will be 0.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>
+                    <p>A unique request identifier for this request.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>TradeAccount</b></td>
+                <td>
+                    <p>This is an optional field. Leave this  empty to request the Server to return Account Balance data for all Trade Accounts on the logged in Username. Otherwise, specify a particular Trade Account to request Account Balance data for.</p>
+                </td>
+            </tr>            
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-ACCOUNT_BALANCE_REJECT">ACCOUNT_BALANCE_REJECT [s_AccountBalanceReject structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-ACCOUNT_BALANCE_REJECT">Link</a>] - [<a href="#Top">Top</a>]</div>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>
+                    <p> The unique request identifier sent in the corresponding request.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>RejectText</b></td>
+                <td>
+                    <p> The text reason the <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message was rejected. </p>
+                </td>
+            </tr>    		
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE [s_AccountBalanceUpdate structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-ACCOUNT_BALANCE_UPDATE">Link</a>] - [<a href="#Top">Top</a>]</div>
+
+        <p>This is an optional message from the Server to Client to provide Account Balance information for a particular Trade Account. The server needs to provide a separate message for each Trade Account associated with the logged in username if it supports Account Balance updates.</p>
+
+        <p>The Server will respond with an <b>ACCOUNT_BALANCE_UPDATE</b> in response to a <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message. The Server will set the <b>RequestID</b> in the <b>ACCOUNT_BALANCE_UPDATE</b> message to match the RequestID  in the  <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message.</p>
+
+        <p>The Server will periodically send <b>ACCOUNT_BALANCE_UPDATE</b> messages as the Account Balance data changes. The frequency of the updates is determined by the Server. Account Balance updates are considered automatically subscribed to. When an unsolicited <b>ACCOUNT_BALANCE_UPDATE</b> message is sent, the <b>RequestID</b> field will be 0.</p>
+
+        <p>When the server is responding with one or more <b>ACCOUNT_BALANCE_UPDATE</b> messages in response to a <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message,  it must not send any unsolicited   <b>ACCOUNT_BALANCE_UPDATE</b> messages interleaved with the solicited  <b>ACCOUNT_BALANCE_UPDATE</b>  messages in response to the <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message. </p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a>  <b>RequestID</b></td>
+                <td>
+                    <p>This is the  RequestID which was set in the <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> that this message is in response to.</p>
+
+                    <p>In the case when this is a periodic unsolicited Account Balance update,  RequestID must be set to 0, the default.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>CashBalance</b></td>
+                <td>
+                    <p>The current cash balance for the account in the currency specified by the AccountCurrency field.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>BalanceAvailableForNewPositions</b></td>
+                <td>
+                    <p>The <b>CashBalance</b>  minus the cash required to maintain securities on margin the Trade Account currently has.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>AccountCurrency</b></td>
+                <td>
+                    <p>ISO Currency Code for the cash values in this message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>TradeAccount</b></td>
+                <td>
+                    <p>The trade account identifier for the Account Balance information.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>SecuritiesValue</b></td>
+                <td>
+                    <p>This is the value of all cash and securities as a cash value.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>MarginRequirement</b></td>
+                <td>
+                    <p>This is the current cash requirement to maintain securities on margin the Trade Account currently has.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>TotalNumberMessages</b></td>
+                <td>
+                    <p>This indicates the total number of Account Balance Update messages when a batch of messages is being sent. If there is only one Account Balance Update message being sent, this will be 1. Use a value of 1 for an unsolicited message.  </p>
+
+                    <p>A Client should not rely on this field for an unsolicited message. This is required to be set.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>MessageNumber</b></td>
+                <td>
+
+                    <p>This indicates the 1-based index of the Account Balance Update message when a batch of  messages is being sent. If there is only one Account Balance Update message being sent, this will be 1. Use a value of 1 for an unsolicited message.  </p>
+
+                    <p> A Client should not rely on this field for an unsolicited message. This is required to be set.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int8">[unsigned int8]</a> <b>NoAccountBalances</b></td>
+                <td>
+                    <p>Set to an integer value of 1 to indicate there are no Account Balances in response to an <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message.</p>  
+
+                    <p>Otherwise, the Server must leave this at the default of 0.  </p>
+
+                    <p>The Server is always expected to respond with a single  <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> message when there is no <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> message for any Trade Account when the Account Balances have been requested  by the Client with an  <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message.</p>
+
+                    <p>When the Server is sending an <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> message to the Client and it is indicating that the balance related fields are all zero, then  the <b>NoAccountBalances</b> field must be left at the default of 0. It is not used indicate the balance related fields are all zero.</p>
+
+                    <p>This is always set to the default of 0 for an unsolicited <a href="#Messages-ACCOUNT_BALANCE_UPDATE">ACCOUNT_BALANCE_UPDATE</a> .</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int8">[unsigned int8]</a> <b>Unsolicited</b></td>
+                <td>
+                    <p>Set to 1 to indicate this is an unsolicited Account Balance Update message.  In other words, it is a real-time  Account Balance Update message which is not an initial response to an <a href="#Messages-ACCOUNT_BALANCE_REQUEST">ACCOUNT_BALANCE_REQUEST</a> message.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_ACCOUNT_BALANCES_REQUEST">HISTORICAL_ACCOUNT_BALANCES_REQUEST [ structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_ACCOUNT_BALANCES_REQUEST">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is a message from the Client to the Server to request a history of  Cash Balance changes for the specified Trade Account.</p>
+
+        <p>The Server will respond  with multiple <a href="#Messages-HISTORICAL_ACCOUNT_BALANCE_RESPONSE">HISTORICAL_ACCOUNT_BALANCE_RESPONSE</a>  messages or reject he request with a <a href = "#"></a> message. </p>
+
+        <p>The Server will set the <b>RequestID</b> in the  <a href="#Messages-HISTORICAL_ACCOUNT_BALANCE_RESPONSE">HISTORICAL_ACCOUNT_BALANCE_RESPONSE</a> message to match the <b>RequestID</b>  in the <b>HISTORICAL_ACCOUNT_BALANCES_REQUEST</b>.</p>
+
+        <table class="doc">
+
+
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>
+                    <p>A unique request identifier for this request.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>TradeAccount</b></td>
+                <td>
+                    <p>This is a required field.  Set to the particular Trade Account for which to request historical Account Balance data.</p>
+                </td>
+            </tr> 
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>StartDateTime</b></td>
+                <td>
+                    <p> Set this to the Date-Time that the server is to send historical cash balance updates starting with.</p>
+                </td>
+            </tr> 
+
+
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_ACCOUNT_BALANCES_REJECT">HISTORICAL_ACCOUNT_BALANCES_REJECT [ structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_ACCOUNT_BALANCES_REJECT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+
+        <p>This is a message from the  Server to the Client to reject a <a href = "messages-historical_account_balances_request.html">HISTORICAL_ACCOUNT_BALANCES_REQUEST</a> request.</p>
+
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>
+                    <p>The unique request identifier sent in the corresponding request message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>RejectText</b></td>
+                <td>
+                    <p> The text reason the <a href="#Messages-HISTORICAL_ACCOUNT_BALANCES_REQUEST">HISTORICAL_ACCOUNT_BALANCES_REQUEST</a> message was rejected. </p>
+                </td>
+            </tr>              
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HISTORICAL_ACCOUNT_BALANCE_RESPONSE">HISTORICAL_ACCOUNT_BALANCE_RESPONSE [ structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-HISTORICAL_ACCOUNT_BALANCE_RESPONSE">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+
+        <p>This is a message from the  Server to the Client  in response to a <a href = "messages-historical_account_balances_request.html">HISTORICAL_ACCOUNT_BALANCES_REQUEST</a>  message. </p>
+        
+        <p>There is a separate message for each Cash Balance update.</p>
+
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>RequestID</b></td>
+                <td>
+                    <p>   The same <b>RequestID</b>  set in the  <a href = "messages-historical_account_balances_request.html">HISTORICAL_ACCOUNT_BALANCES_REQUEST</a> message.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[t_DateTimeWithMilliseconds]</a> <b>DateTime</b></td>
+                <td>
+                    <p> The timestamp of the Cash Balance update.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>CashBalance</b></td>
+                <td>
+                    <p> The Cash Balance in the currency of the account.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>AccountCurrency</b></td>
+                <td>
+                    <p> The account currency. This is the standard   <a href = "https://www.iso.org/iso-4217-currency-codes.html" target="_blank" rel="noopener noreferrer">ISO  Currency Code</a> for the  currency.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>TradeAccount</b></td>
+                <td>
+                     <p>  The  Trade Account identifier of the  Cash Balance update. </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int8">[unsigned uint8]</a> <b>IsFinalResponse</b></td>
+                <td>
+                    <p>  Set to 1 to indicate if this is the final response. Otherwise, the value is zero.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int8">[unsigned uint8]</a> <b>NoAccountBalances</b></td>
+                <td>
+                    <p> Set to 1 to indicate if there are no historical Cash Balance updates to return in response to a <a href = "messages-historical_account_balances_request.html">HISTORICAL_ACCOUNT_BALANCES_REQUEST</a>. Otherwise, the value is zero.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>InfoText</b></td>
+                <td>
+                    <p> Any related information text for the Cash Balance update.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>TransactionId</b></td>
+                <td>
+                    <p> The transaction identifier for the Cash Balance update.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<hr><p>*Last modified Thursday, 23rd May, 2019.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_AccountBalanceDataMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:56 GMT -->
+</html>  

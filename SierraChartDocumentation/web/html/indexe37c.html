@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/CQGTrading.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1679063467') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/CQGTrading.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>CQG Trading Platform Service -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexe37c.html?page=doc/CQGTrading.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="indexe37c.html?page=doc/CQGTrading.php">CQG Trading Platform Service</a></h4> </div>     <h1 class="PageName">CQG Trading Platform Service</h1>
+
+<div style="text-align: center;">
+    <a href="http://www.cqg.com/" target="_blank" rel="noopener noreferrer"><img border="0" src="../images/cqg_logo.png" alt="CQG Logo"></a>
+</div>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Included">What is Included</a></li>
+    <li><a href="#SetupInstructions">Setup Instructions</a></li>
+    <li><a href="#CQGAccountRequirements">CQG Account Requirements</a></li>
+    <li><a href="#MarketDataAuthorizationsForSymbols">Market Data Authorizations for Symbols/Exchanges</a></li>
+    <li><a href="#CommonErrorMessages">Common Error Messages</a></li>
+    <li><a href="#CQGSymbolFormat">CQG Symbol Format</a></li>
+    <li><a href="#ExchangeTradedStrategySymbolFormat">CQG Exchange Traded Strategies/Spreads Symbol Format</a></li>
+    <li><a href="#HistoricalPriceData">Historical Price Data</a></li>
+    <li><a href="#SolvingMarketDataFeedProblems" >Solving CQG Market Data Feed Problems</a></li>
+    <li><a href="#FrequentServerDisconnectionsWhenUsingCQG" >Frequent Server Disconnections when Using CQG</a></li>
+    <li><a href="#CQGTradingAccountNumbers" >CQG Trading Account Numbers</a></li>
+    <li><a href="#CQGMarketDepthData" >CQG Market Depth Data</a></li>
+    <li><a href="#SolvingContractIDMappingErrorWhenSubmittingOrder" >Solving Contract ID Mapping Error  when Submitting Order </a></li>
+    <li><a href="#TechnicalSupportPolicyRegardingCQGMarketData" >Technical Support  Policy Regarding CQG Market Data</a></li>
+    <li><a href="#CQGDemoAccountsNotSupported" >CQG Demo Accounts Not Supported</a></li>
+</ul>
+
+
+<hr>
+
+<div class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class = "GeneralBackgroundHighlight"><a href="#CQGDemoAccountsNotSupported" >CQG Demo Accounts Not Supported</a></p>
+    
+     <p> Information about <a href = "https://www.sierrachart.com/SupportBoard.php?ThreadID=69775">Teton Order Routing Service versus CQG</a>. </p>
+
+    <p class = "GeneralBackgroundHighlight"> Notice:   Sierra Chart is asking current and potential  CQG users who are trading the <em>CME Group</em> of markets to use the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a> instead  of CQG. You will have a superior level of service and safety with Teton and no transaction fees! The service has superior functionality, risk management, and connectivity as compared to CQG.  <em>Server-side bracket orders are also supported with the Teton Order Routing Service, unlike with CQG</em>.  There are no transaction fees unlike the .10 USD  per contract fill fee from CQG. And no monthly connection fee. </p>
+
+
+    <p> With the CQG Trading platform service you are able to chart and trade futures for many exchanges in the world.  </p>
+
+    <p>Refer to the <a href="http://www.cqg.com/partners/exchanges" target="_blank" rel="noopener noreferrer">supported CQG exchange list</a> for the exchanges that you can trade on.</p>
+
+
+    <p> When using CQG, CME Group data  and EUREX data is only provided through the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a>. Sierra Chart does not support data from these exchanges from CQG. </p>
+
+    <p> CQG demo accounts are not supported, only live accounts. For simulated trading you need to use the  <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php">Sierra Chart Simulated Trading Service</a>.</p>
+
+
+    <p class = "GeneralBackgroundHighlightLight">Effective  May 15, 2022, Sierra Chart   <a href = "indexa1cf.html?page=doc/Packages.php">Service Package 10</a> or higher is required to use CQG.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="Included">What is Included</h2>
+    <div class="member-link">[<a href="#Included">Link</a>] - [<a href="#top">Top</a>]</div>
+    <ul>
+        <li> Supported Exchanges:  Refer to the <a href="http://www.cqg.com/partners/exchanges" target="_blank" rel="noopener noreferrer">supported CQG exchange list</a>. </li>
+
+        <li>Streaming Real-Time Data: For CME Group and EUREX only provided when using the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.  Market data from these exchanges is not supported from CQG.  For other exchanges you need to use market data from CQG.</li>
+
+        <li>Historical Intraday Data:  For CME Group and EUREX only provided when using the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.  Market data from these exchanges is not supported from CQG.  For other exchanges you need to use market data from CQG. </li>
+
+        <li>Historical Daily Data:  For CME Group and EUREX only provided when using the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.  Market data from these exchanges is not supported from CQG.  For other exchanges you need to use market data from CQG. </li>
+
+        <li>Historical BidVolume and AskVolume: For CME Group and EUREX only provided when using the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.  Market data from these exchanges is not supported from CQG.  For other exchanges you need to use market data from CQG.</li>
+        
+        <li>Market Depth Data: For CME Group and EUREX only provided when using the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.  Market data from these exchanges is not supported from CQG.  For other exchanges you need to use market data from CQG. </li>
+        
+        <li>Live Trading Services: <b>Yes.</b></li>
+        <li>Simulated Trading: <b>Yes.</b> Only through Sierra Chart Trade Simulation Mode.</li>
+        <li>Order Types Supported: <b>All including Market if Touched.</b></li>
+
+        <li>Server Managed OCO (Order Cancels Order): <b>Yes</b>. Server side OCO orders are always enabled.
+        <br> <br>
+        However, once one of the OCO orders partially fills  the other side will be fully canceled.  So if the order quantities are different for the two orders in the OCO group, this creates a problem  where the other side of the OCO group gets canceled instead of having a remaining working quantity.  To have the OCO orders  managed as expected, where the other side of the OCO order when there is a fill of one side, is reduced in quantity and only canceled if there is no longer a remaining quantity, it is necessary to use the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a>.</li>
+
+        <li>Server Managed Bracket Orders: <b>No</b>. Support has been removed as of version 1819 due to unexpected behavior with this order type on CQG. For  Server Managed Bracket orders, it is necessary that you use the  <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a> instead of CQG.
+          <br> <br>        
+        This is actually one of the strongest reasons why Sierra Chart recommends using the Teton  Order Routing Service instead of CQG, if you are trading CME Group. When server-side bracket orders, are not supported, this makes order handling less safe.</li>
+
+        <li>Automated Trading (applies to Live or Simulated): <b>Yes.</b></li>
+        
+        <li>Historical Order Fills from Trading Server: <b> Yes.  </b>  <em>Current day only and clears  at the end of the trading day</em>.   For at least 1 Year of order fill history, use the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a>.</li>
+        
+        <li>Efficient Market Data with Processing on Background Thread: No. For support for this you need to use the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.</li>
+        
+        <li>  Processing of  Historical Downloaded Data on Background Thread: No. For support for this you need to use the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.</li>
+    </ul>
+</div>
+
+<div class="h2">
+    <h2 id="SetupInstructions">Setup Instructions</h2>
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol> 
+        <li>CQG demo accounts are not supported, only live accounts. For simulated trading you need to use the  <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php">Sierra Chart Simulated Trading Service</a>  or  <a href = "#">Trade Simulation Mode</a>.  In this case stop here.</li>
+
+        <li>In order to use the CQG Trading Platform service, you must have an account  with a broker or clearing firm supporting CQG. 
+         <br> <br>
+         Sierra Chart strongly recommends users do not use CQG and instead use  <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php" target="_blank" rel="noopener noreferrer">Teton Order Routing</a> if you are trading on the  <em>CME Group</em> of markets.
+        </li>
+
+
+        <li>Your broker will need to set you up with an account on the CQG system.   Your broker will then provide you with the necessary CQG Username and Password. You will need that from them before you can proceed.</li>
+        
+         <li> If you are trading on the CME  Group or EUREX exchanges, then your broker must not authorize your CQG account for market data for these exchanges since that is not supported by Sierra Chart. This market data can only come from the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a>. 
+         <br> <br>
+         In the case of EUREX data, refer to <a href = "indexa1cf.html?page=doc/Packages.php#EUREXHistoricalAndRealtimeData" target="_blank" rel="noopener noreferrer">EUREX Historical and Real-time Data</a>. </li>
+
+        <li>Make sure your broker has configured your CQG account with the necessary  <a href="#CQGAccountRequirements">Product Enablements</a>. This is <em>essential</em> to be able to connect.</li>
+
+
+        <li> Update Sierra Chart to the current version following the <a href="indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate" Target="_blank" rel="noopener noreferrer">Fast Update</a> instructions. </li>
+
+        <li>Go to Sierra Chart. Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu. 
+
+            <div style="text-align: center;">
+                <a href="../images/globalsettings_datatradeservicesettings.png" rel="lightbox"><img src="../images/globalsettings_datatradeservicesettings.png"  class="screenshot" loading="lazy" alt=""></a>
+            </div>
+        </li>
+
+        <li> In the <b>Current Selected Service</b> list box, select the <b>CQG Web API [trading]</b> service name from the list.</li>
+
+        <li>In the <b>Service Settings &gt;&gt; Username </b> box enter your CQG trading account username. In the <b>Service Settings &gt;&gt; Password </b> box enter your CQG trading account  password.  <span class="GeneralBackgroundHighlight">These are case sensitive!</span>  Make certain  you enter them exactly as provided by your broker/trading service.
+
+            <div style="text-align: center;">
+                <a href="../images/cqgtradingservicesettings.png" rel="lightbox"><img src="../images/cqgtradingservicesettings.png" class="screenshot" loading="lazy" width="425" alt=""></a>
+            </div>
+        </li>
+
+
+        <li>Press <b>OK</b> to close the <b>Data/Trade Service Settings</b> window.</li>
+
+
+        <li>To connect to the data and trading servers, select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.
+
+            <div style="text-align: center;">
+                <a href="../images/file_connecttodatafeed.png" rel="lightbox"><img src="../images/file_connecttodatafeed.png" class="screenshot" loading="lazy" alt="Connect"></a>
+            </div>
+        </li>
+
+
+        <li>If the <b Class = "menu_item">Window &gt;&gt; Message Log</b> window opens and displays messages indicating there was an error connecting to the CQG Trading service, then select <b class="menu_item">File &gt;&gt; Disconnect</b> to prevent further connection attempts. Carefully review the setup steps above again. 
+            <br>
+            <br>
+            Refer to the <a href="#CommonErrorMessages">Common Error Messages</a> section for help with what to do for each known error message.
+            <br> 
+            <br>
+            If there is some other message displayed in the Message Log,  then in most cases it is a message from the CQG system. You need to read what it says and contact your broker/trading service about it. The message should be self-explanatory. If not, then have your broker/trading service contact CQG for  interpretation of that particular message.
+
+            <br> <br>
+            After checking the connection settings in the <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> window and your CQG account enablements through your Trading service, try connecting to the data and trading servers again by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.
+            <br> <br>
+            If there still is an error connecting, then review <a href="indexf71c.html?page=doc/helpdetails1.html#ContactingSupportForConnectionHelp">help topic 1.5</a>.</li>
+
+
+        <li>To open a <b>Historical Chart</b>, an <b>Intraday Chart</b> or a <b>Trading DOM</b>, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. Locate the symbol in the lists and press the appropriate button. If you do not see the symbol that you need to use listed,  contact Sierra Chart support so that we can add it for you.
+
+
+            <div style="text-align: center;">
+                <a href="../images/cqgtradingfindsymbol.png" rel="lightbox"><img src="../images/cqgtradingfindsymbol.png" class="screenshot" loading="lazy" width="320" alt="Find Symbol"></a>
+            </div>
+            <br>
+            <br>
+            If you do not see any symbols listed in the <b>Find Symbol</b> window, then select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings &gt;&gt; Update From Server</b>.  Wait for the symbol list to update and then press <b>OK</b> and try opening the  <b>Find Symbol</b> window again.</li>
+
+        <li> For a complete list of CQG symbols, refer to the <a href="http://help.cqg.com/fcm/symbols.xlsx">CQG Tradable Symbols XLSX</a>.</li>
+
+
+        <li>Note: When performing trading,  the Trade Account in the list of  <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" >accounts on the Trade Window</a>, may be different than your actual Trade Account identifier. </li>
+        
+        <li>Continue with step number 3 on the <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart">Getting Started</a> documentation page.</li>
+    </ol>
+
+</div>
+
+<div class="h2">
+
+    <h2 id="CQGAccountRequirements">CQG Account Requirements</h2>
+    <div class="member-link">[<a href="#CQGAccountRequirements">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>To use Sierra Chart with CQG requires that you have a CQG account which has the following enablement: The <em>Sierra Chart</em> Connection Mode with the  <em>SierraChartData</em> private label.  This is another reason why we do not recommend CQG! Too much complexity with usage and cost.</p>
+
+    <p>CQG only allows one connection to the CQG system per CQG username at a time. The solution to this is to use the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a> instead of CQG. </p>
+
+</div>
+
+<div class="h2">
+
+    <h2 id="MarketDataAuthorizationsForSymbols">Market Data  Authorizations for Symbols/Exchanges</h2>
+    <div class="member-link">[<a href="#MarketDataAuthorizationsForSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To receive streaming real-time data from the CQG Trading Platform service for a particular symbol requires that your CQG Trading account is authorized for the exchange that the symbol trades on.</p>
+    
+     <p> However, in the case of CME, CBOT,  NYMEX, COMEX,  EUREX exchanges, market data can only come from the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>  (set up instructions are on this linked page). Sierra Chart does  <em>not</em> support market data from CQG for these exchanges. The Denali Data Feed does integrate to the CQG Trading platform service and you can still trade on CQG when using the Denali Data Feed.</p>
+
+
+    <p> If you will be using the CQG data feed, it is necessary to contact your Trading service and have them authorize your CQG account for the exchanges that you require but not for CME, CBOT,  NYMEX, COMEX,  EUREX.</p>
+
+    <p> An example message you will see in the Sierra Chart <b class = "menu_item">Window &gt;&gt; Message Log</b> is the following which indicates your CQG trading account is not authorized for the particular exchange the symbol trades on: </p>
+
+    <div class="MessageLog">
+
+        <p>CQG FIX Trading | Market data subscription for <em>[symbol]</em> was unsuccessful. Text:  <em>Real-time data for instrument [symbol] (corresponding to ID = 1) are not allowed</em>.</p>
+    </div>
+    
+
+    <p> You will also see <b Class = "GeneralBackgroundHighlight">Symbol is Unknown</b> displayed on the chart for 30 seconds when a  Symbol is not authorized on your CQG trading account.</p>
+
+    <p> After your account has been authorized for the exchange or exchanges for the symbol or symbols that you want to follow,  and you have set your correct CQG Username and Password in <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>,   then follow the procedure to <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" target="_blank" rel="noopener noreferrer">reconnect to the data feed</a>. </p>
+
+
+</div>
+
+<div class="h2">
+    <h2 id="CommonErrorMessages">Common Error Messages</h2>
+    <div class="member-link">[<a href="#CommonErrorMessages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>This section lists common error messages you may receive in the Sierra Chart Message Log (<b class="menu_item">Window &gt;&gt; Message Log</b>) or Trade Service Log (<b class="menu_item">Trade &gt;&gt; Trade Service Log</b>) relating to CQG Trading.</p>
+
+    <ol>           
+        <li>
+             If there is a message in the   <b class="menu_item">Window &gt;&gt; Message Log </b> indicating a connection error and you are using a  <em>CQG demo account</em>, then those are not supported by Sierra Chart. Refer to <a href="#CQGDemoAccountsNotSupported" >CQG Demo Accounts Not Supported</a>.
+        </li> 
+        
+        <li>
+            <p>Removed.</p>
+        </li>
+
+        <li>
+            <p>Removed.</p>
+        </li>
+
+        <li>
+            <div class="MessageLog">CQG WebAPI | Market data logon unsuccessful. Server message: Unknown client application.</div>    
+
+            <p>If you receive the above message  in the Message Log, then contact your Trading service and refer them to the <a href="#CQGAccountRequirements">CQG Account Requirements</a> section for what needs to be enabled on your CQG account in order to be able to connect.</p>
+        </li>
+
+        <li>
+            <div class="MessageLog">CQG WebAPI | Logon unsuccessful. Server message: Username or password is incorrect.</div>    
+
+            <p>If you receive any of the above messages in the <b class="menu_item">Window &gt;&gt; Message Log</b> or in the pop-up message after connecting to an external service when there is an error connecting, then check the Username and Password in <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt;  Service Settings</b> and make sure they are correct. </p>
+
+            <p>These need to be set to your CQG provided Username and Password.   </p>
+
+
+            <p>Contact your broker/trading service to find out  what your CQG Username and Password  are if you do not know.  </p>
+            
+            <p>Sierra Chart support will <em>not know</em> what they are. These are different than your Sierra Chart Account Name and Password.</p>
+
+            <p> Press  <b>OK</b> to close the  <b>Data/Trade  Service Settings</b>  window. Try connecting again with  <b class = "menu_item">File &gt;&gt; Connect to Data Feed</b>.  </p>
+
+            <p> For complete setup instructions, refer to <a href="#SetupInstructions">Setup Instructions</a>.</p>
+        </li>
+
+        <li id="">
+            <div class="member-link">[<a href="#">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> Information in this section no longer relevant.</p>
+
+        </li>
+
+        <li ID= "CommonErrorMessage_TooManyLogonAttempts">
+            <div class="member-link">[<a href="#CommonErrorMessage_TooManyLogonAttempts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <div class="MessageLog">CQG Trading FIX: Received a Logout message.  Text = Too many logon attempts. Please contact your FCM.</div>
+
+            <p>The above message, "Too many logon attempts. Please contact your FCM." means there have been too many connection attempts to the CQG FIX server and further connections are being blocked. Follow through the instructions at step 4 in the <a href="#SetupInstructions">Setup Instructions</a> and reenter your Username and Password to make sure they are correct. If you are not sure what they are, contact your broker and get your current CQG Username and Password and reenter them into <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</p>
+
+            <p>Connect again to the server with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. If you continue to get the message "Too many logon attempts.", contact your broker and see if they need to unlock your account.</p>
+        </li>
+
+
+        <li id="CommonErrorMessage_TraderIsNotEnabledToUseSierraChartData">
+            <div class="member-link">[<a href="#CommonErrorMessage_TraderIsNotEnabledToUseSierraChartData">Link</a>] - [<a href="#top">Top</a>]</div>
+            <div class="MessageLog">CQG WebAPI | Market data logon unsuccessful. Server message: Trader is not enabled to use SierraChartData. Please contact your FCM.</div>
+
+            <p> If you  encounter the above message,  you need to contact your broker/trading service and have them enable the <em>Sierra Chart</em> Connection Mode with the  <em>SierraChartData</em> private label to be able to connect to the CQG Web API. For additional details, refer to <a href="#CQGAccountRequirements">CQG Account Requirements</a>.</p>
+            
+            <p> However, we strongly recommend  instead of using CQG if you are trading the CME Group of markets, use the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a>  for a superior level of service in multiple ways.   And use a broker supporting the service.</p>
+            
+            
+        </li>
+
+        <li>    
+            <div class="MessageLog">Logon rate has exceeded the allowable limit 20 logins per 5 minutes. Contact Customer Support for assistance.</div>
+
+            <p> <em>This message is from CQG.</em> When you see this message, select  <b class="menu_item">File &gt;&gt; Disconnect</b>. Wait 5 minutes. And then try connecting again. </p>
+
+            <p>If there is another error after connecting, see if that error message is listed in this section here and take the appropriate steps to resolve.</p>
+        </li>
+
+
+        <li>    
+            <div class="MessageLog">Text: Order Action rate exceeded. Order Modification failed. Please call CQG.</div>
+
+            <p>A message containing the above text can be displayed in the Trade Service Log when there are too many order  actions (new orders, order modifications, or order cancellations) occurring within too short of a time period. You need to contact CQG  and have them increase the allowed order action rate for your account. This message comes from CQG.</p>
+        </li> 
+
+
+        <li>    
+            <div class="MessageLog">CQG WebAPI | Market data logon unsuccessful. Server message: Trade routing is not available now. Contact customer support for assistance.</div>
+
+            <p> This message in the Message Log  or displayed in the  Connection Error pop up box,  is an error from CQG,  indicating that you cannot connect  to the CQG trading server because it is not possible to route orders   at the time this message is received.  </p>
+
+            <p>We cannot provide any further help with this.   You need to contact your broker about this if it is unexpected. Certainly this message can be expected to be received over the weekend and before Sunday evening.</p>
+        </li>
+
+        <li>    
+            <div class="MessageLog">CQG WebAPI | Logon unsuccessful. Server message: Your logon is disabled. Contact your FCM. </div>
+
+            <p>This means your broker, has disabled your connection to CQG.  You need to contact your broker for help with this.  </p>
+
+            <p> In the meantime:  </p>
+            
+            <p>To access historical and streaming market data independent from your Trading service (CQG), follow these instructions.  </p>
+
+
+            <p>Set  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Current Selected Service</b> to  <b>SC Data-All Services</b>. </p>
+
+            <p>Press  <b>OK</b>. </p>
+
+            <p>Translate the symbols in your Chartbooks  and symbols elsewhere in Sierra Chart using the  <a href = "indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService">Edit &gt;&gt; Translate Symbols to Current Service</a> command.  </p>
+
+            <p>You can then use the data provided by Sierra Chart independent of your trading service.  </p>
+        </li>
+    </ol>
+</div>
+
+
+<section class="h2">
+    <h2 id="CQGSymbolFormat">CQG Symbol Format</h2>
+    <div class="member-link">[<a href="#CQGSymbolFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>The symbols used with the CQG system need to be formatted as shown below.</p>
+
+    <p>Refer to the <a href="http://help.cqg.com/fcm/symbols.xlsx">CQG Tradable Symbols XLSX</a> document for the available symbols. </p>
+
+    <table class="doc">
+        <tr>
+            <th>Type</th> 
+            <th>Formula</th>                
+        </tr>
+        <tr>
+            <td>Futures</td> 
+            <td>F.[commodity prefix].[instrument symbol][month code] [two-digit year code]</td>
+        </tr>
+        <tr>
+            <td>Relative Daily Future</td> 
+            <td>F.[commodity prefix].[instrument symbol]</td>
+        </tr>
+        <tr>
+            <td>Options</td>
+            <td>[C or P].[commodity prefix].[instrument symbol][month code][twodigit year code][strike price]</td>
+        </tr>
+        <tr>
+            <td>Fixed Income</td>
+            <td>T.[commodity prefix].[instrument symbol]</td>
+        </tr>
+        <tr>
+            <td>Cash and Currency</td>
+            <td>X.[commodity prefix].[instrument symbol]</td>
+        </tr>
+        <tr>
+            <td>Exchange-Traded Spreads</td> 
+            <td>The [instrument symbol] should include the type of strategy and strategy leg gap without additional periods. See: <a href="http://www.cqg.com/Docs/ExchangeTradedStrategies.pdf">http://www.cqg.com/Docs/ExchangeTradedStrategies.pdf</a></td>
+        </tr>
+    </table>
+
+    <p>The commodity prefix is usually US. You can confirm the prefix using Symbol Search in CQG IC. Some exceptions are stocks on the Australian Stock Exchange (AU), the Bombay Stock Exchange (IN), and German Equities (DE), for example.</p>
+
+    <p> The most common symbols are listed in <b class="menu_item">File &gt;&gt; Find Symbol</b>.  If the symbol is not listed, then just simply manually  enter  it in the  <b>Selected Symbol</b> box and open a chart.  </p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="ExchangeTradedStrategySymbolFormat">CQG Exchange Traded Strategies/Spreads Symbol Format</h2>
+    <div class="member-link">[<a href="#ExchangeTradedStrategySymbolFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart supports CQG exchange traded strategy and spread symbols. It is necessary to use the standard CQG format for these.</p>
+
+
+    <p>The format is described in the <a href="http://www.cqg.com/Docs/ExchangeTradedStrategies.pdf" target="_blank" rel="noopener noreferrer">Symbology for Exchange-Traded Strategies</a> PDF document.</p>
+
+    <p>Once the correct symbol format is determined, add <b>F.US.</b> in front of it. Example: <b>F.US.ZSES4N18</b>. This is required.</p>
+
+    <p>The year is two digits.   So you may need to change the year to two digits if necessary.  For a particular  strategy/spread contract, you must use a two digit year in the symbol and consistently use that symbol in the different charts, Trading DOMs, and   Quote Boards. </p> 
+    
+    <p>If for the particular  strategy/spread contract, there is a symbol inconsistency in the different places you are using that symbol in Sierra Chart, there will be conflicts with symbol data mapping due to how the CQG system works. This is not related to Sierra Chart itself.  If you have changed between a single digit year  and a two digit year for a particular   strategy/spread contract  you must  <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect"  target="_blank" rel="noopener noreferrer">reconnect to the data feed</a>.</p>
+
+    <p>To open a chart or Trade  DOM for one of these strategy symbols, select <b class="menu_item">File &gt;&gt; Find Symbol</b>. In the <b>Selected Symbol</b> box, enter the complete symbol and press the appropriate button.</p>
+
+    <p>The strategy symbols listed in <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Futures Spreads - * (SC Exchange Data)</b> are only for when using one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a>.</p>
+
+    <p>If you want to change the symbol of an existing chart or Trade DOM, refer to the <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#ChangingChartSymbol" Target="_blank" rel="noopener noreferrer">Changing the Symbol of a Chart</a> section.</p>
+
+    <p>If you want to trade exchange traded strategies/spreads, it is recommended use the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a> instead of CQG. That service supports automatically getting a list off available spread symbols for a particular futures market. There is also full historical data provided for these symbols.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="HistoricalPriceData">Historical Price Data</h2>
+    <div class="member-link">[<a href="#HistoricalPriceData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To be able to receive historical  price data for strategies/spreads  and some less common futures markets, requires that your CQG account is authorized for historical price data. You will need to contact your broker or clearing firm and request this be done.</p>
+
+    <p>If it is not, you will see a message like the following in the <b Class = "menu_item">Window &gt;&gt; Message Log</b>.</p>
+
+    <div class="MessageLog">
+        Time and sales data for instrument F.US.EDAL12 (corresponding to ID = 21) is not allowed.
+    </div>
+</section>
+
+
+
+<section class="h2">
+    <h2 id="SolvingMarketDataFeedProblems">Solving CQG Market Data Feed Problems</h2>
+    <div class="member-link">[<a href="#SolvingMarketDataFeedProblems">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using CQG the following problems can be encountered with market data from CQG.</p>
+
+
+    <ul>
+        <li><em>Symbol does not update in real time on a Chart, Trade DOM, or Quote Board</em>.
+            <ol>
+                <li> Make sure you are using the correct symbol format. Refer to <a href="#CQGSymbolFormat">CQG Symbol Format</a>. </li>
+
+                <li>Refer to the <a href="#MarketDataAuthorizationsForSymbols">Market Data  Authorizations for Symbols/Exchanges</a> section to make sure your CQG trading account has the proper authorizations for the exchanges that you need data  for.</li>
+            </ol>
+        </li>
+
+
+        <li><em>Data is Lagging</em>.
+            <ol>
+                <li>Refer to <a href="#MarketDataAuthorizationsForSymbols" target="_blank" rel="noopener noreferrer">help topic 4</a>. </li>
+
+
+                <li>If you are unable to resolve the problem, then use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a>. </li>
+            </ol>
+        </li>
+
+        <li><em>Data is Incomplete</em>.
+            <ol>
+
+                <li>  To re-download the existing Intraday data  in an Intraday chart to recover any missing data, refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#RetryDownloadDataInChart" >Retrying the Download When There is Data in the Chart</a>. </li>
+
+                <li>To avoid this problem to begin with, use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a>. </li>
+            </ol>
+        </li>
+
+        <li><em>Data Feed Stops</em>.
+            <ol>
+                <li><a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" target="_blank" rel="noopener noreferrer">Reconnect to the data feed</a>.</li>
+
+                <li>If this problem is ongoing and you have to frequently reconnect, then use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a>.</li>
+            </ol> 
+        </li>
+
+        <li><em>Frequent Reconnections</em>.
+            <br><br>
+            If the data feed stops, there is a reconnection to the data feed and the following messages are listed in the  <b Class = "menu_item">Window &gt;&gt; Message Log</b> at that time, then this indicates the connection has been lost which can be for various reasons.
+
+            <div class="MessageLog">
+                CQG WebSocket socket (35) | Close event error. Windows error code 10053: An established connection was aborted by the software in your host machine.
+                <br> CQG WebSocket socket (35) | Socket gracefully closed by remote side.
+                <br> CQG WebSocket socket (35) | Received socket Close event.
+                <br> CQG WebSocket socket (35) | Initiating close of socket by core.
+                <br> CQG WebSocket | Network socket for WebSocket has been closed by remote side.
+            </div>
+            <br>
+            Or
+            <br>
+            <div class="MessageLog">
+                CQG WebAPI | Websocket received OpCode Close. Received status code: 1000
+                <br>Connection to the external service has been lost.
+            </div>
+
+            If this problem is ongoing, then it is recommended you use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a>.
+        </li>
+    </ul>
+</section>
+
+
+<section class="h2">
+    <h2 id="FrequentServerDisconnectionsWhenUsingCQG">Frequent Server Disconnections when Using CQG</h2>
+    <div class="member-link">[<a href="#FrequentServerDisconnectionsWhenUsingCQG">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p> If you have a problem where there are relatively frequent disconnections of Sierra Chart  from the CQG server,  then  this is going to be a CQG server problem, a network connectivity issue somewhere, or you have more than one connection to the same CQG username from either Sierra Chart or another program.  Sierra Chart cannot help with these issues other than what is explained here. </p>
+
+    <p> As a matter of policy we will only refer to the documentation here.  Under no circumstances will we put any effort into looking into or helping with CQG connection problems because we cannot solve them and they are  <em>very very common</em> among the users for reasons which we have explained here. </p>
+
+    <p>  If the problem is related to having more than one connection to CQG using the same username, then the Message Log will have messages like the following:</p>
+
+    <div class="MessageLog">CQG WebAPI | Received LoggedOff message. Reason: Your session was closed due to a concurrent session.</div>  
+
+    <p>In this case you need to disconnect all copies of Sierra Chart and other programs  using your CQG username other than one. A Sierra Chart instance can be disconnected from the data feed with   <b class="menu_item">File &gt;&gt; Disconnect</b>. </p> 
+
+    <p> If you continue to have the problem, the next step is to discontinue use of CQG and instead use the   <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a> which provides stable connectivity assuming there is not an  external network connectivity issue.  Based on user feedback of users who have switched, the network connectivity issues are resolved.  However, this does not mean you are never going to have a network connectivity issue. You still can due to connectivity issues on the Internet somewhere.</p>
+
+    <p>Other than the above, there is no further help Sierra Chart support can provide with CQG connection problems. </p>      
+
+    <p>For the record, Sierra Chart uses a very reliable and high-performance  network communications foundation fully developed by Sierra Chart  senior engineers which runs on a separate thread.   There simply is no possibility  this issue could be within Sierra Chart itself. This is the very same foundation and code, used throughout the entire Sierra Chart  infrastructure which handles immense amounts of market data every day reliably including the market statistics data feed which many of you use and can see does not have a frequent disconnection problem. </p>
+
+    <p>Additionally Sierra Chart sets  the operating system  <em>TCP No Delay</em> flag for all network communications, so there is no delay when any data is sent out to the network by Sierra Chart.   And the same dedicated background thread of execution and code handles multiple network connections including the CQG connection. So if this were a problem within Sierra Chart  or at the operating system level, all of the network connections  would be affected. They are not. Only the CQG connection gets lost.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="CQGTradingAccountNumbers">CQG Trading Account Numbers</h2>
+    <div class="member-link">[<a href="#CQGTradingAccountNumbers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When Sierra Chart connects to the CQG trading server, it receives the account number or numbers assigned to your CQG username. You can select a particular Trade Account you want to use, on the Trade Window. Refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.</p>
+
+    <p>The correct account number should be properly assigned to your  CQG username, however you need to check with your broker about this.</p>
+
+    <p> The account number that you actually see from the  FIX server and listed on the Trade Window may be different than the account number you see on the account statements from your broker. The account number you see listed is the account number from FIX Tag 1. This is a valid account number.</p>
+
+    <p> Trust the account number received from the FIX server is the correct account number  and maps to the correct account name that your broker may use. Your broker should be able to confirm this.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="CQGMarketDepthData">CQG Market Depth Data</h2>
+    <div class="member-link">[<a href="#CQGMarketDepthData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Currently CQG provides a large number of market depth levels for WTI crude oil (CL) futures on the CME. This is over 100 levels of market depth.  </p>
+
+    <p>Due to the fact that the communication of this market depth for the initial snapshot and for the 20 minute refreshes that CQG does, spans more than one message with no signal as to the end of  a snapshot or refresh and no indication of the beginning of a refresh, this causes studies like the <b>Bid and Ask Depth Bars</b> to show a "spike" every 20 minutes. </p>
+
+    <p> <em>These refreshes also cause problems with the market depth pulling and stacking data as well</em>.  </p>
+
+    <p>  This refreshing of market depth data every 20 minutes is regarded as an   <em>inefficient hack</em> which is trying to correct  for some other deficiency in the  CQG transmission of market depth data. </p>
+
+    <!-- p> These issues only occur when a large number of market depth levels is provided for the symbol and currently that is only for the CL futures. </p -->
+
+    <p>The solution to this problem if you are affected by it, is to use the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>  from Sierra Chart which provides high quality and accurate market depth data, at least 800 levels, which works properly and accurately with all of the Sierra Chart  market depth functionality.  </p>
+
+    <p> Any studies within Sierra Chart which use market depth data, they will only be assured to be accurate when using Sierra Chart provided data feeds. </p>
+
+    <p>And this market depth data  from Sierra Chart  data feeds is provided very efficiently with no refreshes, which are  unnecessary to begin with. The Sierra Chart Data Feeds are properly engineered and reliable.</p>
+
+    <p> <em>There is no other solution Sierra Chart can provide to this issue</em>. </p>
+
+    <p>Any questions that Sierra Chart  support receives regarding any market depth related features within Sierra Chart  which relate to the data feed  and when you are using CQG data, will be  <em>declined</em>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SolvingContractIDMappingErrorWhenSubmittingOrder">Solving Contract ID Mapping Error when Submitting Order</h2>
+    <div class="member-link">[<a href="#SolvingContractIDMappingErrorWhenSubmittingOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>With the CQG Web API, when submitting a trading related request to CQG for a particular symbol, it requires a contract ID number. </p>
+
+    <p>Therefore,    when using the   <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> setting in the  <b class="menu_item">Chart &gt;&gt; Chart Settings</b> and you have enabled   <b>Use as Trade Only Symbol</b>,  when an order is submitted it will initially get rejected for that symbol. Below is an example of the rejection message.  </p>
+
+    <p>The solution to this is to resubmit the order since at the time of the rejection, the necessary contract ID number will have been requested from CQG. </p>
+
+
+    <div class="MessageLog">
+
+        <p> CQG WebAPI order update (Order reject). Info: Order Error - No symbol contract ID mapping. Unable to submit the order. Text: Parent order. Internal Order ID:  #. Service Order ID: #. Symbol: F.US.MQOZ19.</p>
+    </div>  
+
+
+</section>
+
+<section class="h2">
+    <h2 id="TechnicalSupportPolicyRegardingCQGMarketData">Technical Support  Policy Regarding CQG Market Data</h2>
+    <div class="member-link">[<a href="#TechnicalSupportPolicyRegardingCQGMarketData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p> Sierra Chart support does not provide any technical support for market data issues when using the CQG provided data feed. </p>
+
+
+    <p> If you only have a need for CME/CBOT/NYMEX/COMEX data, then if you want a reliable data feed for CME/CBOT/NYMEX/COMEX  to power Sierra Chart, use the  <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.   This data feed is fully integrated when using CQG. So you can still use CQG for order routing.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="CQGDemoAccountsNotSupported">CQG Demo Accounts Not Supported</h2>
+    <div class="member-link">[<a href="#CQGDemoAccountsNotSupported">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Sierra Chart does not support  CQG  Demo accounts.  Users instead need to follow the  <a href = "index9587.html?page=doc/BasicInstructionsForDemo.php" target="_blank" rel="noopener noreferrer">Basic Instructions for Demo</a>. </p> 
+
+    <p>You will be provided  full and unrestricted access to the  <a href = "indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a>  which is available  for all Sierra Chart users. </p>
+
+    <p> This Sierra Chart provided Delayed Exchange Data Feed and the Sierra Chart  Simulated Trading Services or the built-in Trade Simulation Mode provide a high quality of service <em>drastically far and above</em> which would be available with a CQG  demo account.   </p>
+
+    <p>You have access to outright futures data, futures spreads and futures  options data.  All of these types of markets can be traded.  Full historical data for current and expired futures contracts is provided. </p>
+
+    <p>The CQG data feed also provides a limited / poor impression of Sierra Chart because there are limitations with it, in particular with market depth data, and there are issues with market depth data.  </p>
+
+    <p>There is more of a support burden upon Sierra Chart, supporting CQG demo accounts as compared to Sierra Chart provided services.</p>
+
+    <p>Another reason CQG demo accounts are not supported is because after the demo period is up which would be at most 30 days, you are locked out of that account for good. You have no access  to market data, you have no access to your  Orders, Positions, or Fill history. And then you can no longer continue with your Sierra Chart trial  at least in the same way that you did before.  </p>
+
+    <p> Whereas with the Sierra Chart provided services you will continue to have access to  these Sierra Chart provided services. For complete details, refer to <a href = "index9587.html?page=doc/BasicInstructionsForDemo.php" target="_blank" rel="noopener noreferrer">Basic Instructions for Demo</a>.</p> 
+
+
+</section>
+
+
+
+<hr><p>*Last modified Friday, 17th March, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/CQGTrading.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:03 GMT -->
+</html>  

@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails30.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1681722917') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails30.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 30: High CPU Usage/Long Time to Load Chart Data -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index4f96.html?page=doc/helpdetails30.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="index4f96.html?page=doc/helpdetails30.html">Help topic 30: High CPU Usage/Long Time to Load Chart Data</a></h4> </div>     <h1 class="PageName">High CPU Usage | Inactive User Interface | Long Time to Load Chart Data | Charts Reloading Often</h1>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page explains solutions to the problems of: High CPU usage. The user interface of Sierra Chart becoming inactive for a noticeable period of time. Dialog windows, such as the <b>Chart Studies</b> window, not appearing or not appearing right away. Excessive memory use. Charts Reloading Often.</p>
+
+    <p>There are many possible reasons for all of these issues. This pages list the known conditions which can cause these issues and provides the solution in each case.</p>
+
+    <p class="GeneralBackgroundHighlightLight">If the solutions listed below to reduce CPU usage and lessen the times when the user interface is inactive, are still not solving the problem, then run <em>additional instances</em> of Sierra Chart. For instructions to do this, refer to <a href="index9bbd.html?page=doc/NewInstance.php#UsingDTCServerForDataAndTradingInAnotherSCInstance">Using DTC Server for Data and Trading in Another Sierra Chart Instance</a>. And refer to <a href="indexf915.html?page=doc/Trading.html#SierraChartConfigurationForMostLowResponseTimeTrading">Sierra Chart Configuration for Most Low Response Time Trading</a>.</p>
+
+    <p>Your computer should be using a minimum of a 6 core CPU with 16 gigabytes of memory for the best performance. It is also important to use SSDs (Solid-state drives). Adding more memory to your system may also help. There are processors available with even more CPU cores. It may also help to get more CPU cores, a faster CPU, more memory, and generally faster hardware. Although this is not necessarily the case.   The first step is always to try to resolve the problem, with the software first rather than resorting to improved hardware.</p>
+    
+    <p>For further details about solid-state drives, refer to use <a href="#SolidStateDrives">Solid State Drives</a>.</p>
+
+    <p>If your computer is under very heavy load, and the user interface is often inactive or frozen and/or you cannot open any dialog windows (Example: <b class="menu_item">Global Settings &gt;&gt; General Settings </b>), then the very first step is press the <b>Escape (Esc)</b> key on your keyboard and then disconnect from the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> so you can work on resolving the problem.</p>
+    
+   <p> The first help topic we recommend you start with in most cases, is   <a href = "index4f96.html?page=doc/helpdetails30.html#BasicStepsToResolvePerformanceIssueInSierraChart">30.48 - Basic Steps to Resolve Performance Issue in Sierra Chart</a>. </p>
+
+    <p class="GeneralBackgroundHighlightLight"><em>Never is the solution to a performance issue going to be to uninstall Sierra Chart and reinstall. We never recommend doing that!</em></p>
+
+    <ul>
+        <li><a href="#TooMuchDataToLoadOrLoaded">30.1 - Too Much Data Loaded</a></li>
+        <li><a href="#SpreadsheetStudy">30.2 - Spreadsheet Study</a></li>
+        <li><a href="#ChartsReloadingOften">30.3 - Charts Reloading Often</a>
+			<ul>
+			    <li><a href="#TPOChartsReloadingOften">TPO Charts Reloading Often</a></li>
+			</ul>
+		</li>
+        <li><a href="#InefficientAdvancedCustomStudies">30.4 - Inefficient Study Configurations or Advanced Custom Studies</a>
+			<ul>
+				<li><a href="#SierraChartProvidedStudies">Sierra Chart Provided Studies</a></li>
+			</ul>
+		</li>
+        <li><a href="#ChartUpdateInterval">30.5 - Chart Update Interval</a>
+			<ul>
+				<li><a href="#UsingHigherChartUpdateIntervalChartsUseALotCPUTime">Using Higher Chart Update Interval for Charts Which Use a Lot of CPU Time</a></li>
+			</ul>
+		</li>
+        <li><a href="#TooManyChartsVisible">30.6 - Too Many Charts Visible</a></li>
+        <li><a href="#AntivirusAntiMalwareSoftware">30.8 - Antivirus/Anti-Malware Software</a></li>
+        <li><a href="#ReferencesToOtherCharts">30.9 - References to Other Charts / Continuous Full Recalculation of Charts</a>
+			<ul>
+				<li><a href="#EfficientUseACSILFunctionsToReferenceDataOtherCharts">Efficient Use of ACSIL Functions to Reference Data from Other Charts</a></li>
+			</ul>
+		</li>
+        <li><a href="#ShortBarTimeFramesPeriods_IncludeColumnsWithNoData">30.10 - Short Bar Time Frames/Periods. Include Columns with No Data.</a></li>
+        <li><a href="#LargeDataFiles">30.11 - Large Data Files</a></li>
+        <li><a href="#IntradayDataStorageTimeUnit_HistoricalDataRecordTimeFrame">30.12 - Intraday Data Storage Time Unit. Historical Data Record Time Frame.</a></li>
+        <li><a href="#SplitDataRecords">30.13 - Split Data Records</a></li>
+        <li><a href="#DisplayContinuousTimeCountdown">30.14 - Display Continuous Time Countdown (CountDown Timer)</a></li>
+        <li><a href="#HighlightToolsDrawings">30.15 - Highlight Tools Drawings</a></li>
+        <li><a href="#WhatToDoIfSCIsFrozenForExtendedTimeDueToHighCPUUsageCausedOpenedChartbook">30.16 - What to do if Sierra Chart is in a frozen state for an extended time due to extended high CPU usage caused by an automatically or manually opened Chartbook</a></li>
+        <li><a href="#RebuildingYourChartbook">30.17 - Rebuilding Your Chartbook</a></li>
+        <li><a href="#StudiesThatUseTheInternalSettingUpdateAlways">30.18 - Studies that use the Internal Setting: UpdateAlways.</a></li>
+        <li><a href="#MaintainingTooManyTimeAndSalesRecords">30.19 - Maintaining Too Many Time and Sales Records.</a></li>
+        <li><a href="#TransparentDrawStyles">30.20 - Transparent Draw Styles</a></li>
+        <li><a href="#ReducingFileSizesByUsingIntradayDataFileManagementFeature">30.21 - Reducing File Sizes by Using Intraday Data File Management Feature</a></li>
+        <!-- 30.22 removed -->
+        <li><a href="#ChartTickSizeAndVolumeAtPriceProcessing">30.23 - Chart Tick Size and Volume at Price Processing</a></li>
+        <li><a href="#SpreadsheetWindowsVisible">30.24 - Spreadsheet Windows Visible</a></li>
+        <li><a href="#ExcessiveMemoryUseCausedByTimeAndSalesRecordsSetting">30.25 - Excessive Memory Use Caused By Time And Sales Records Setting</a></li>
+        <li><a href="#TooManyChartDrawings">30.26 - Too Many Chart Drawings</a></li>
+        <li><a href="#AdvancedCustomStudyControlBarButtons">30.27 - ACS (Advanced Custom Study) Control Bar Buttons</a></li>
+        <li><a href="#MemoryOrGraphicsDeviceInterfaceObjectLeak">30.28 - Memory or Graphics Device Interface Object Leak</a></li>
+        <li><a href="#SolidStateDrives">30.29 - Solid State Drives</a></li>
+        <li><a href="#ControlledOrderChartUpdating">30.30 - Controlled Order Chart Updating</a></li>
+        <li><a href="#SystemMemoryNotReleasing">30.31 - System Memory Not Releasing</a></li>
+        <li><a href="#LinkingScrollPosition">30.32 - Linking Scroll Position</a></li>
+        <li><a href="#DottedOrDashedLines2PixelsinWidth">30.33 - Dotted or Dashed Lines >= 2 Pixels in Width</a></li>
+        <li><a href="#TPOProfileChartLetterBlockPriceIncrement">30.34 - TPO Profile Chart Letter/Block Price Increment / Volume by Price Ticks Per Volume Bar</a></li>
+        <li><a href="#VolumeByPriceStudyConfigurations">30.35 - Volume by Price Study Configurations</a></li>
+        <li><a href="#ChartDataFileErrorOutOfRangeValue">30.36 - Chart Data File Error/Out of Range Value</a></li>
+        <li><a href="#DeterminingCPULoadfromSierraChart">30.37 - Determining CPU Load from Sierra Chart</a></li>
+        <li><a href="#LongTimeToDownloadHistoricalChartData">30.38 - Long Time to Download Historical Chart Data</a></li>
+        <li><a href="#AverageTimeToOpenChartbooks">30.39 - Average Time to Open Chartbooks</a></li>
+        <li><a href="#DialogWindowsDoNotDisplay">30.40 - Dialog Windows Do Not Display</a></li>
+        <li><a href="#SlowReplayDueToBackTestModes">30.41 - Slow Replay Due To Back Test Modes</a></li>
+        <li><a href="#DetachedCharts">30.42 - Detached Charts</a></li>
+        <li><a href="#BidAndAskDepthBarsStudy">30.43 - Bid and Ask Depth Bars Study</a></li>
+        <li><a href="#PerformanceDifferencesBetweenVersionsOfSierraChart">30.44 - Performance Differences Between Versions of Sierra Chart</a></li>
+        <li><a href="#DetailedContinuousFuturesContractLogging">30.45 - Detailed Continuous Futures Contract Logging</a></li>
+        <li><a href="#MarketDepthCombineIncrementInTicks">30.46 - Market Depth Combine Increment in Ticks</a></li>
+        <li><a href="#UseSubInstancesToDistributeProcessingLoad">30.47 - Use Sub Instances to Distribute Processing Load</a></li>
+        <li><a href="#BasicStepsToResolvePerformanceIssueInSierraChart">30.48 - Basic Steps to Resolve Performance Issue in Sierra Chart</a></li>
+        <li><a href="#StudiesRecalculatingAtEarlierIndexAndStudyDependencies">30.49 - Studies Recalculating at Earlier Index and Study Dependencies</a></li>
+
+        <li><a href="index3c50.html?page=doc/ChartTrading.html#ImprovingPerformanceOfChartTradeDOM" target="_blank" rel="noopener noreferrer">30.50 - Improving Performance of Chart or Trade DOM</a> (Opens a new page)</li>
+
+        <li><a href="#VeryLargeAndOrLargeNumberOfTradeActivityFiles">30.51 - Very Large and/or Large Number of Trade Activity Files</a></li>
+
+        <li><a href="#RecentBidAskVolume_CurrentTradedBidAskTotalVolume">30.52 - Recent Bid/Ask Volume | Current Traded Bid/Ask/Total Volume</a></li>
+
+        <li><a href="#CausesOfHighMemoryUsage">30.53 - Causes of High Memory Usage</a></li>
+        <li><a href="#ImprovingChartDataLoadingAndHistoricalDataDownloadingTimes">30.54 - Improving Chart Data Loading and  Historical Data Downloading Times</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2 id="TooMuchDataToLoadOrLoaded">30.1 - Too Much Data to Load or Loaded</h2>
+    <div class="member-link">[<a href="#TooMuchDataToLoadOrLoaded">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Specifying <em>too much data to load or loaded</em> into one or more charts will increase the amount of time it takes for the chart data to load and for the studies on the chart to be calculated when there is a full recalculation of the studies.</p>
+
+    <p>The usual case which causes a full recalculation of studies is when the chart is opened as part of a Chartbook or   <a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Study Settings</a> are changed.</p>
+
+    <p>To reduce the amount of days of chart data loaded into a chart, select <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Data Limiting</b> on the menu. Set the <b>Use Number of Days to Load &gt;&gt; Days to Load</b> setting to a smaller number. This issue primarily applies to Intraday charts. Not Historical  Daily and higher timeframe charts. </p>
+    
+    <p>Although with Historical charts, if you are using studies on those charts that are time-consuming to calculate, then reducing the number of days in the Historical chart can reduce CPU usage.
+
+    <p>Reducing the <b>Days to Load</b> will definitely decrease the amount of time it takes to load Intraday chart data.</p>
+
+    <p>The amount of time it takes to load Intraday chart data with a particular <b>Days to Load</b> setting, is affected by the number of data records in that data file. The <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Intraday Data Storage Time Unit</b> affects this and also the frequency of trading for the symbol. If the <b>Intraday Data Storage Time Unit</b> is set to 1 Tick, and there is a lot of trading that occurs for a symbol, it will take longer to load Intraday chart data compared to a symbol that trades less frequently.</p>
+
+    <p>Also, take note of the information given in <a href="#IntradayDataStorageTimeUnit_HistoricalDataRecordTimeFrame">30.12 - Intraday Data Storage Time Unit. Historical Data Time Frame.</a></p>
+
+    <p>When you are loading a large number of days into a chart, have a lot of charts open, and a lot of studies on those charts, then as historical Intraday data is being downloaded, this can increase CPU usage.</p>
+
+    <p>Therefore, when large amounts of data are being downloaded or you are re-downloading Intraday data for a particular symbol, it may be a good idea to close your Chartbooks and open a small number of charts without studies to work with while you are performing operations like re-downloading data or other operations involving managing of chart data.</p>
+
+    <p>This is generally not necessary. However, it can be helpful with very complex Chartbook configurations. If you do this, then when Sierra Chart is finished with downloading data, you will no longer see <b>Downloading Historical Data</b> on the chart, at that time go ahead and open your usual Chartbooks.</p>
+
+    <p>Even when a study is set to be hidden, it will still be calculated and does not eliminate the calculations. Although it does eliminate the graphics processing if it is on a visible chart.</p>
+
+    <p>You are able to see the full recalculation time of a study in the Chart Studies window. For details, refer to <a href="index9099.html?page=doc/ChartStudies.html#StudiesToGraph">Studies to Graph</a>. In general the full recalculation time of a study is going to be reduced by reducing the number of days loaded in the chart.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SpreadsheetStudy">30.2 - Spreadsheet Study</h2>
+    <div class="member-link">[<a href="#SpreadsheetStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Number of Rows</b> input for a Spreadsheet Study is set to a very high number. This potentially can cause high CPU usage when new bars are added to the chart or there is a full recalculation of studies. You may want to reduce this to 1000. Refer to the <a href="index2192.html?page=doc/SpreadsheetStudyInputs.html#NumberofRows">Number of Rows Input</a> description on the <b>Spreadsheet Study Inputs</b> documentation page for more information about when this can cause a problem.</p>
+
+    <p>Another possible reason for high CPU usage is you are using the same Spreadsheet file, which is used by the Spreadsheet Study, in more than one currently open Chartbook at the same time. Refer to the <a href="index2192.html?page=doc/SpreadsheetStudyInputs.html#NumberofRows">Number of Rows Input</a> description on the <b>Spreadsheet Study Inputs</b> documentation page for more information about when this can cause a problem.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ChartsReloadingOften">30.3 - Charts Reloading Often</h2>
+    <div class="member-link">[<a href="#ChartsReloadingOften">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If a chart is reloading itself often, then there can be two causes of this.</p>
+
+    <p>One cause is because the chart is being <em>referenced by 2 or more charts</em>, that contain a study that refer to other charts. In this case, each of the charts that is referencing the chart that is reloading often, has different Chart Settings.</p>
+
+    <p>These Chart Settings include the time period per bar, Session Times, and Number of Days to Load or Date Range settings. Differences between these settings among 2 or more destination charts will cause the source chart to reload to match the settings of the destination chart. This causes continuous reloading of the chart data in the source chart being referenced by those other charts.</p>
+
+    <p>To determine if a chart is being referenced by other charts, select <b class="menu_item"> Chart &gt;&gt; Chart Settings</b> on the menu. Look at the top of the <b> Chart Settings</b> window. If the chart is being referenced by other charts, you will see the chart numbers referencing it after <b class="GeneralBackgroundHighlight">Ref. by: </b> on the title bar of the <b>Chart Settings</b> window.</p>
+
+    <p>An indication that this is occurring will be indicated by messages like this in the Message Log:</p>
+
+    <section class="MessageLog">
+        <pre>
+Chart #1 has tagged chart #13 for full recalculation. Chartbook: Chartbook1.Cht 
+Chart #1 has tagged chart #13 for full recalculation. Chartbook: Chartbook1.Cht 
+Chart #13 is performing a full recalculation because it has been tagged. Chartbook: Chartbook1.Cht 
+Chart Settings have been synchronized between Destination chart number #13 and Source data chart number #1. Performing a chart reload of source data chart. </pre>
+    </section>
+
+    <p>Other indications of this occurring is a chart switching between different time periods per bar or the cursor often changes to an hourglass.</p>
+
+    <p>Studies like the <b>Difference</b> study will refer to other charts. For example, given charts #1, #2, and #3, if studies on charts #1 and #2 both make a reference to #3, and #1 and #2 have different time periods per bar, then chart #3 will often reload and switch between different time periods per bar.</p>
+
+    <p>Studies like the <b>Difference</b> and <b>Ratio</b> studies make references to other charts for the necessary data they need.</p>
+
+    <p><em>The proper solution to this issue is to open another chart</em>, and have the #2 chart refer to that new chart instead of #3. It could even be that you no longer need charts #1 and #2 to refer to #3 any longer and you just need to remove the studies that make reference to a source chart, from charts #1 and #2.</p>
+
+    <p><em>A second cause of this problem</em> is an <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php"> Advanced Custom Study</a> which is changing one of the Chart Settings which is causing a reload of the chart. If this reloading is continuous, then the study is not functioning properly.</p>
+
+    <section class="h3">
+		<h3 id="TPOChartsReloadingOften">TPO Charts Reloading Often</h3>
+		<div class="member-link">[<a href="#TPOChartsReloadingOften">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+		
+        <p>Another scenario which can cause a chart to continuously reload its data is if the chart has a <b> TPO Profile Chart </b> study on it. This in and of itself will not cause a reloading problem, but there is a scenario where this can happen.</p>
+
+        <p>The <b>TPO Profile Chart</b> study will change the underlying timeframe per bar to 1 minute. When this happens and the chart is being referred to by another chart with a different timeframe for bar, then the chart will reload and set its timeframe per bar to be the same as the referencing chart.</p>
+
+        <p>After that reload completes, the TPO Profile Chart study will then set the chart back to 1 Minute per bar. This results in an endless cycle of reloading. In this case, make certain the TPO Profile chart is not referred to by any other chart.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="InefficientAdvancedCustomStudies">30.4 - Inefficient Study Configurations or Advanced Custom Studies</h2>
+    <div class="member-link">[<a href="#InefficientAdvancedCustomStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>One or more <b>Advanced Custom Studies</b> that you are using, is using a lot of CPU time. These are studies which are added through <b class="menu_item">Analysis &gt;&gt; Studies &gt;&gt; Add Custom Study </b> but excluding the Sierra Chart provided studies. This also includes studies from the "User Contributed Studies" DLL.</p>
+
+    <p>To confirm if these studies are the problem, restart Sierra Chart and on the Sierra Chart Login window, enable the <a href="index878d.html?page=doc/LoginInstructions.php#UsingSafeMode">Safe Mode</a> option.</p>
+
+    <p>For complete details, refer to <a href="index63c5.html?page=doc/helpdetails17.html#h17.1">help topic 17.1</a>.</p>
+
+    <p>If you no longer notice high CPU usage, then one or more of those studies was the problem. You need to contact the developer of the study or studies to correct this problem.</p>
+
+    <p>It is not unusual for user developed Advanced Custom Studies to use a high amount of CPU usage due to inefficient programming.</p>
+    <p>You are able to see the full recalculation time of a custom study and any study in the Chart Studies window. For details, refer to the <a href="index9099.html?page=doc/ChartStudies.html#StudiesToGraph">Studies to Graph</a> list.</p>
+
+    <p>During a full recalculation of a chart which happens when a chart is reloaded (like when changing the timeframe of chart bars), or when a Chartbook is opened and the studies are calculated, or when enabling and disabling <b class="menu_item">Trade &gt;&gt;Trade Simulation Mode</b>, then the study calculation time is going to take longer because of the full recalculation. </p>
+
+    <section class="h3">
+		<h3 id="SierraChartProvidedStudies">Sierra Chart Provided Studies</h3>
+		<div class="member-link">[<a href="#SierraChartProvidedStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Sierra Chart provided studies can also be configured in a way which causes high CPU usage and inefficiencies as well. To determine which study is causing a problem, it is helpful to look at the full recalculation time of the study in the <a href="index9099.html?page=doc/ChartStudies.html#StudiesToGraph">Studies to Graph</a> list.</p>
+
+        <video controls src="https://videos.sierrachart.com/Study_Calculation_Time.webm" width="600" height="400"> Sorry, your browser does not support embedded videos.</video>
+
+        <p>Another approach is to <a href="index9099.html?page=doc/ChartStudies.html#ChartStudies_Remove">Remove</a> one study at a time from the open charts to see which particular study is causing excessively high CPU usage and maybe causing a performance issue.</p>
+
+        <p>When you remove a particular study from a chart, and you notice a performance improvement this is a good indication, that study was causing a performance issue. You then need to look at the Input Settings of it.</p>
+
+        <p>Another way to reduce the calculation time is to decrease the <b>Days to Load</b> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ChartUpdateInterval">30.5 - Chart Update Interval</h2>
+    <div class="member-link">[<a href="#ChartUpdateInterval">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Chart Update Interval</b> is set to a small interval which causes increased CPU usage.</p>
+
+    <p>To increase the global <b>Chart Update Interval</b> setting, select <b class="menu_item">Global Settings &gt;&gt; General Settings</b> on the menu. Enter the value in the <b>Chart Update Interval</b> box in milliseconds. Try increasing it to 900 ms or higher.</p>
+
+    <p>Individual charts and Trade DOMs can override the global <b> Chart Update Interval</b> setting. Go to a chart and select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Display</b>. Set the <b>Chart Update Interval in Milliseconds</b> 0 to use the global setting.</p>
+
+    <p>If you are using a <b>Chart Update Interval</b> under 100 ms, then <em>do not contact support for high CPU usage problems</em>. Be aware that using an extreme setting like under 50 ms is not regarded as efficient and you should be aware of the potential negative consequences with CPU usage that this will cause. In other words, use these more extreme settings at your own risk!</p>
+
+    <p>For complete information, refer to the <a href="index899f.html?page=doc/GeneralSettings.html">General Settings</a> documentation page.</p>
+
+    <p>Also, refer to the <a href="#ControlledOrderChartUpdating">30.30 - Controlled Order Chart Updating</a> setting. In almost all cases, <b>Use Controlled Order Chart Updating </b> should be disabled. It is only for use with special types of trading systems.</p>
+
+    <section class="h3">
+        <h3 id="UsingHigherChartUpdateIntervalChartsUseALotCPUTime">Using Higher Chart Update Interval for Charts Which Use a Lot of CPU Time</h3>
+        <div class="member-link">[<a href="#UsingHigherChartUpdateIntervalChartsUseALotCPUTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For charts that you know use a lot of CPU time it is recommended to use an independent Chart Update Interval for them. Go to those charts and select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Display</b>. Set the <b>Chart Update Interval in Milliseconds</b> to a nonzero value. We recommend using a range of 1500 to 3000 milliseconds.</p>
+
+        <p>Or what you can do is increase <b Class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Chart Update Interval</b> to a higher value, and in those charts that you want to update more frequently you can use a shorter Chart Update Interval for those.</p>
+    </section>
+
+    <p>Also refer to <a href="indexf915.html?page=doc/Trading.html#SierraChartConfigurationForMostLowResponseTimeTrading">Sierra Chart Configuration for Most Low Response Time Trading</a> section.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TooManyChartsVisible">30.6 - Too Many Charts Visible</h2>
+    <div class="member-link">[<a href="#TooManyChartsVisible">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Having many charts visible at the same time may cause an issue. Although not typically. Try minimizing the charts that you do not need to see or reduce their overall size.</p>
+
+    <p>It is possible to hide a Chart window through <b Class="menu_item">Window &gt;&gt; Hide Window</b>. Refer to <a href="indexc5fd.html?page=doc/WindowMenu.html#HideWindow">Hide Window</a>.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="AntivirusAntiMalwareSoftware">30.8 - Antivirus/Anti-Malware Software</h2>
+    <div class="member-link">[<a href="#AntivirusAntiMalwareSoftware">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class="GeneralBackgroundHighlight">Antivirus/Anti-Malware software programs can cause high CPU usage within Sierra Chart, a long time to load chart data, and longer times to download historical data.</p>
+
+    <p>To solve this, exclude files with a <b>scid</b> extension from being scanned by the Antivirus/Anti-Malware program, set the Sierra Chart folder (usually C:\SierraChart) to be excluded from scanning, or disable the Antivirus/Anti-Malware program altogether.</p>
+
+    <p>Antivirus/Anti-Malware programs can cause a significant increase in CPU usage if <b>scid</b> files are being scanned during real-time chart updating. If you exclude the <b>scid</b> file extension or the Sierra Chart folder from being scanned and you still notice high CPU usage, then disable your Antivirus/Anti-Malware program.</p>
+
+    <p>After disabling the Antivirus/Anti-malware program, it is necessary to restart Sierra Chart. You should in general not run these types of programs on a computer for trading. In our experience, Antivirus/Anti-Malware and firewall programs typically are the source of numerous problems on computer systems.</p>
+
+    <p>One indication that an Antivirus/Anti-malware program is causing high CPU usage is if you select <b class="menu_item">File &gt;&gt; Close All Chartbooks</b> and <b class="menu_item">File &gt;&gt; Disconnect</b> and you still notice high CPU usage by the Sierra Chart process as reported by the operating system, then this is a definitive indication that it is being caused by the Antivirus/Anti-malware program.</p>
+
+    <p>In some cases it is <em>not enough</em> to disable the Antivirus/Anti-malware program from your system and instead you <em>must remove</em> the Antivirus/Anti-Malware program completely from your system and confirm that is removed and confirm there are no left over Services from it. Disabling it is not sufficient. Our statements here are backed up with lots of experience. We have seen issues like this before. This is a definite step you need to take if you still notice the high CPU usage even after closing the Chartbooks and disconnecting from the data feed.</p>
+
+    <p><b> Microsoft Security Essentials </b>: Many users of Microsoft Windows will be using the Microsoft Security Essentials anti-malware software offered by the Microsoft operating system. For users that are running Microsoft Security Essentials, <em>it is essential that you set it to exclude the folder Sierra Chart is installed to from being scanned and also exclude <b>scid </b> file types</em>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ReferencesToOtherCharts">30.9 References to Other Charts / Continuous Full Recalculation of Charts</h2>
+    <div class="member-link">[<a href="#ReferencesToOtherCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Some studies, this includes the <b>Difference (Bar/Single Line)</b> and the <b>Study/Price Overlay</b> studies and others, will reference data on <em>other charts</em>.</p>
+
+    <p>You need to be aware of what are known as <em>circular references</em>. A circular reference is when two charts refer to each other. An example of this would be when Chart #1 has studies that reference Chart #2 and Chart #2 has studies that reference Chart #1. This kind of circular reference can lead to unreliable behavior with the studies.</p>
+
+    <p>Sierra Chart should detect this kind of circular reference and will prevent any consequence from it. However, what potentially can occur is that each of these charts would be continuously updated at the <b>Chart Update Interval</b> set in <b class="menu_item">Global Settings &gt;&gt;General Settings</b>.</p>
+
+    <p>This is what you will see in the Sierra Chart Message Log when the circular reference is detected:</p>
+
+    <div class="MessageLog">Circular chart reference detected. Charts: 1, 2. Chartbook: Chartbook253.Cht.</div>
+
+    <p>You also need to be aware of <em>indirect circular references</em>. An example of an indirect circular reference is: #1 -&gt; #2 -&gt; #3 -&gt; #1. This will cause continuous full recalculation of the charts. Sierra Chart will not be able to detect an indirect circular reference.</p>
+
+    <p>If there is continuous full recalculation of charts, as is evidenced by the Message Log messages below, or you have a circular reference, remove the studies that are causing the circular reference from <em>one of the charts</em> or have them refer to <em>another source chart</em> with a timeframe per bar and with the studies that you require, but which does not reference back to the destination chart which is referencing that source chart.</p>
+
+    <p>A chart continuously reloading can also cause these same messages and that is explained further below.</p>
+
+    <p>Below is an example of what you will see in the Sierra Chart Message Log as the result of an indirect circular reference:</p>
+
+    <div class="MessageLog">Chart #2 is performing a full recalculation because it has been tagged. Chartbook: Chartbook253.Cht <br> Chart #2 has tagged chart #1 for full recalculation. Chartbook: Chartbook253.Cht <br> Chart #1 is performing a full recalculation because it has been tagged. Chartbook: Chartbook253.Cht <br> Chart #1 has tagged chart #3 for full recalculation. Chartbook: Chartbook253.Cht <br> Chart #3 is performing a full recalculation because it has been tagged. Chartbook: Chartbook253.Cht <br> Chart #3 has tagged chart #2 for full recalculation. Chartbook: Chartbook253.Cht</div>
+
+    <p>Another condition which can cause the above messages is a chart continuously reloading. In which case it will tag charts for a full recalculation, that reference it. For further information about this condition and how to solve it, refer to <a href="#ChartsReloadingOften">30.3 - Charts Reloading Often</a>.</p>
+
+    <p>To determine if a chart is being referenced by other charts, select <b class="menu_item"> Chart &gt;&gt; Chart Settings</b> on the menu. Look at the top of the <b> Chart Settings</b> window. If the chart is being referenced by other charts, you will see the chart numbers referencing it after <b class="GeneralBackgroundHighlight">Ref. by: </b> on the title bar of the <b>Chart Settings</b> window.</p>
+
+    <p class="GeneralBackgroundHighlightLight"> If Sierra Chart support referred you to this help topic subsection and you are very confused by all of this and do not know what to do, then select <b class="menu_item">File &gt;&gt; Close Chartbook</b> to close the Chartbook you are currently using, assuming it is that Chartbook which is causing the above continuous full recalculation messages.</p>
+
+    <p class="GeneralBackgroundHighlightLight"> This should stop the above messages. If not, continue closing Chartbooks until the messages stop. <em>Do not use the Chartbook causing those messages again</em> and create a new one with <b class="menu_item">File &gt;&gt; New Chartbook</b>. The Chartbook you closed has a circular reference condition which needs to be solved if you want to continue to use it.</p>
+
+    <section class="h3">
+        <h3 id="EfficientUseACSILFunctionsToReferenceDataOtherCharts">Efficient Use of ACSIL Functions to Reference Data from Other Charts</h3>
+        <div class="member-link">[<a href="#EfficientUseACSILFunctionsToReferenceDataOtherCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you are a custom study developer and you are using ACSIL functions to get main price graph or study data from other charts, then it is important to use these functions efficiently. Refer to the <b>scsf_DifferenceBar</b> function in the <b>/ACS_Source/studies6.cpp</b> file in the Sierra Chart installation folder for an example.</p>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="ShortBarTimeFramesPeriods_IncludeColumnsWithNoData">30.10 - Short Bar Time Frames/Periods. Include Columns with No Data.</h2>
+    <div class="member-link">[<a href="#ShortBarTimeFramesPeriods_IncludeColumnsWithNoData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Using a short time frame/period per chart bar or using the <b>Include Columns with No Data</b> option, especially with a high <b>Days to Load</b> setting, will cause very long Intraday chart load times with high CPU usage and an inactive user interface. </p>
+
+    <p>A short time period per bar includes using a time period under 1 Minute per bar, a small <b>Number of Trades Per Bar</b>, <b>Volume Per Bar</b>, or a small <b>Range Per Bar</b> setting. For example, a timeframe per bar of <em>1 Second</em> is considered short. This will use a lot of memory if the number of days loaded in the chart is high like 30 days or more.</p>
+
+    <p>To change these settings, select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu. Decrease the <b>Days to Load</b> setting. Uncheck the<b> Bar Period &gt;&gt; Include Columns with No Data</b> option. And increase the time period per bar in the <b>Intraday Bars Period</b> frame.</p>
+
+    <p>An example of a problem would be if you set the Intraday chart bars to 1 <b>Number of Trades Per Bar</b>, try to load 30 days of data, and there is tick by tick data in the chart data file. In this case you may be waiting a long time to load up that chart. The solution is to decrease the <b>Days to Load</b> setting or use a higher time period per bar. If you combine this issue with the issue discussed in subtopic 30.3, then you are going to have a real problem.</p>
+
+    <p>Another thing to understand is that if you are using <b> Number of Trades </b> or <b>Volume </b> chart bars, and the necessary data to calculate the number of trades or volume per bar is not available, then the <b>Days-Minutes-Seconds</b> setting will be used instead. If that is a small setting, such as under 10 seconds, then this also can cause long load times under some conditions.</p>
+</section>
+
+<section class="h2">
+    <h2 id="LargeDataFiles">30.11 - Large Data Files</h2>
+    <div class="member-link">[<a href="#LargeDataFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Very large data files will cause long load times when you open a chart.</p>
+
+    <p>To reduce the size of files automatically, select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Data File Management</b> on the menu. For complete details, refer to <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataFileManagement">Data File Management</a>.</p>
+
+    <p>If using a <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick Data Configuration</a>, this will cause larger data files.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="IntradayDataStorageTimeUnit_HistoricalDataRecordTimeFrame">30.12 - Intraday Data Storage Time Unit. Historical Data Record Time Frame.</h2>
+    <div class="member-link">[<a href="#IntradayDataStorageTimeUnit_HistoricalDataRecordTimeFrame">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Using a larger <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" target="_blank" rel="noopener noreferrer">Intraday Data Storage Time Unit</a> will reduce storage space used for Intraday chart data, reduce the time to read chart data from the Intraday data file any time that occurs, such as when opening Chartbooks or changing the timeframe of the chart bars, and will speed up historical data downloads significantly when downloading Intraday data when using Data and Trading services that use the Sierra Chart historical data server.</p>
+    
+    
+    <p>Related information can be found in the <a href = "index5017.html?page=doc/ChangingPeriodOfBars.php#ImprovingPerformanceOfLoadingChartData">Improving Performance of Loading Chart Data</a> section.  </p>
+    
+
+    <p>The amount of time to load Intraday data in a chart is dependent upon the number of days being loaded into a chart, the size of an Intraday data file (file sizes can be determined through <b class="menu_item">File &gt;&gt; New/Open Intraday Chart</b>, and whether Volume at Price data is required to be maintained or not. <a href="#AntivirusAntiMalwareSoftware"> Antivirus/Security</a> software can also have a detrimental impact.</p>
+
+    <p>If the <b>Intraday Data Storage Time Unit</b> is 1 Tick, then the downloading of tick by tick data can be very time-consuming. Unless you need charts that use a bar period of less than 1 minute or you use Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars, you definitely should use an <b>Intraday Data Storage Time Unit</b> of <b>1 Second </b> or higher.   </p>
+    
+    <p>This will reduce the storage space for Intraday chart data, reduce CPU usage, and reduce the amount of time to download historical data.</p>
+
+    <p>Even if you are using Number of Trades, Volume, Range, Reversal, Renko, Delta, Price Change bars, you probably will still want to increase the <b>Intraday Data Storage Time Unit</b> to 1 Second. The chart bars may not be 100% precise, but due to increased trading volumes, tick by tick data is simply burdensome on your system to work with. Therefore, you have to consider this and find what is a good balance. Sierra Chart will still produce reasonably accurate charts of these types from <b>1 Second</b> data.</p>
+
+    <p>If you perform chart replays or you are using the <b>Volume by Price</b> study or other studies which require volume data in small time units, and you only use minute-based charts, then it is recommended to use an <b>Intraday Data Storage Time Unit</b> relatively small like 1 Second rather than 1 minute. This will still give you good performance improvements over 1 Tick.</p>
+
+    <p>To change the <b>Intraday Data Storage Time Unit</b>, select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu. Set the <b>Intraday Data Storage Time Unit</b> to a setting higher than 1 Tick.</p>
+
+    <p>After changing the <b>Intraday Data Storage Time Unit</b>, you may want to download all of the data again in the chart data file to get data at the higher timeframe per record. To do this, go to your chart and select <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b>.</p>
+
+    <p>Additionally, in the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> window, you may wish to reduce the <b>Maximum Historical Intraday Days to Download</b> setting from the default. For example, if it is 45 and you do not need that much data, you may want to reduce it to 10 in the case when you are downloading historical 1 Tick data. This will speed up the data downloading process.</p>
+
+    <p>If you set the <b>Intraday Data Storage Time Unit</b> to 1 Minute, you will notice a dramatic improvement with chart loading and overall performance. Although you do not have to go as high as 1 Minute. A good balance would be to use a setting of 2 seconds.</p>
+    
+    <p>   In the case of CQG historical data (provided by CQG), since Sierra Chart  has only supported 1 minute data, or limited amount of tick by tick data from CQG, this is why when using CQG data, charts will load faster. Since there is less, a lot less, tick by tick data.  You can solve this problem by using an  <b>Intraday Data Storage Time Unit</b> of <em>1 Second</em> or  <em>2 Seconds</em> or higher. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SplitDataRecords">30.13 - Split Data Records</h2>
+    <div class="member-link">[<a href="#SplitDataRecords">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Split Data Records</b> option in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> may increase the number of bars created in an Intraday chart when using Tick, Volume, or Range based bar charts. This potentially will cause increased chart loading times. This may especially be true when using a small number of Ticks or Volume per bar or a small Range per bar. Try disabling the <b>Split Data Records</b> option. Keep in mind if you disable the option, you may not have 100% constant Tick, Volume or Range charts. Although it can speed up load times.</p>
+
+    <p>Reducing the size of your data files as described in subsections <b>30.11</b> and <b>30.12</b> will also definitely help speed up chart loading times.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DisplayContinuousTimeCountdown">30.14 - Display Continuous Time Countdown (CountDown Timer)</h2>
+    <div class="member-link">[<a href="#DisplayContinuousTimeCountdown">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you are using the  <a href = "indexcf90.html?page=doc/StudiesReference.php&amp;ID=201&amp;Name=Countdown_Timer">CountDown Timer</a> study,   and having enabled the Input <b>Display Continuous Time Countdown Based on Real-Time Clock</b> will cause the countdown timer to be updated at the  <a href = "index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval">Chart Update Interval</a>. When this happens, the entire chart is redrawn.</p>
+    
+    <p>This can cause high CPU usage, and it is recommended that this option only be enabled on 1 or 2 charts at any given time. The CPU demand may be even higher if it is enabled on detached charts.</p>
+    
+     <p>   The  <a href = "indexfa3f.html?page=doc/StudiesReference.php&amp;ID=364&amp;Name=Clock_RealTime">Clock - Realtime </a> study will also cause the above described issue. </p>
+     
+     <p>  A solution to this is to increase the <a href = "#">Chart Update Interval</a> to a higher number.</p>
+</section>
+
+<section class="h2">
+    <h2 id="HighlightToolsDrawings">30.15 - Highlight Tools Drawings</h2>
+    <div class="member-link">[<a href="#HighlightToolsDrawings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you have used the highlight tools, Rectangle Highlight, Ellipse Highlight or Angle Ellipse Highlight, the drawings created can cause high CPU usage when they are visible on the chart. This high CPU usage will be when the chart is being redrawn. The reason for this is that they use an advanced method to create the transparency.</p>
+</section>
+
+<section class="h2">
+    <h2 id="WhatToDoIfSCIsFrozenForExtendedTimeDueToHighCPUUsageCausedOpenedChartbook">30.16 - What to do if Sierra Chart is in a frozen state for an extended time due to extended high CPU usage caused by an automatically or manually opened Chartbook</h2>
+    <div class="member-link">[<a href="#WhatToDoIfSCIsFrozenForExtendedTimeDueToHighCPUUsageCausedOpenedChartbook">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When a Chartbook is opened automatically or manually and Sierra Chart goes into a frozen state for an extended time because the Chartbook is using the full amount of available CPU usage for an extended time, then you may want to or need to avoid using this Chartbook. In this case you may want to <a href="#RebuildingYourChartbook">Rebuild Your Chartbook</a>.</p>
+
+    <p>In the case of an <em>automatically opened</em> Chartbook, you will need to prevent this Chartbook from opening automatically so that you can start Sierra Chart without it going into a frozen state.</p>
+
+    <p>The first step is to exit from Sierra Chart. If Sierra Chart is in a frozen state, you will need to terminate the process. This can be done through the Windows Task Manager.</p>
+
+    <p>Start Sierra Chart again. On the Login window press the <b>Cancel</b> button once to stop the login process. Enable the <b>Safe Mode</b> option and disable the <b>Open Files on Startup</b> option. This will prevent Chartbooks from automatically being opened and <em>prevent the loading of custom studies which could also be the source of the problem</em>. For detailed instructions, refer to <a href="index878d.html?page=doc/LoginInstructions.php#UsingSafeMode" Target="_blank" rel="noopener noreferrer">Using Safe Mode</a>. After this continue with the Login process.</p>
+
+    <p>It is then recommended that you simply rebuild a new Chartbook because there is something in that Chartbook configuration which is using high CPU usage for an extended time or it could be caused by a custom study. However, read further in this section to understand the possible reasons for the problem.</p>
+
+    <p>There are several reasons for this problem. There could be certain chart or study settings which are causing high CPU usage for an extended time and is freezing Sierra Chart.</p>
+
+    <p>There could be some kind of data error in the chart data file which is causing an unusual problem with certain types of bar period types.</p>
+
+    <p>The problem could be caused by custom studies from outside developers which will not be loaded when using Safe Mode. So you can try opening the Chartbook again manually through <b class="menu_item">File &gt;&gt; Open Chartbook</b> and see if you encounter the problem now that you are using Safe Mode.</p>
+
+    <p>One of the reasons for high CPU usage causing a Chartbook to freeze could be that the Tick Size is not set correctly and there is an excessive amount of Volume at Price data. This not only will cause a long time to build that data, but it will cause the primary thread to freeze when the primary thread is building that data or studies are using that data. For more information, refer <a href="#ChartTickSizeAndVolumeAtPriceProcessing">30.23 - Chart Tick Size and Volume at Price Processing</a>.</p>
+
+    <p>When a chart is being loaded, the building of the Volume at Price data happens on a background thread. But it also happens on the primary thread when historical data is being downloaded gradually.</p>
+
+    <p>In the case of where a chart data file is causing a problem, in most cases is going to be an Intraday data file. Instead of avoid using the Chartbook which is freezing Sierra Chart, what you can alternatively do is delete the Intraday chart data file or files as explained below.</p>
+
+    <ol>
+        <li>Select <b Class="menu_item">Global Settings &gt;&gt; General Settings</b>. Make a note of the file path in the <b>Data Files Folder</b> box.</li>
+        <li>Select <b Class="menu_item">File &gt;&gt; Exit</b>.</li>
+        <li>Go to the Sierra Chart <b>Data Files Folder</b> on your system that you made a note previously.</li>
+        <li>Locate the Intraday chart data files which are actively being used. The name of the file for a symbol will be the symbol and it will have a <b>SCID</b> extension.</li>
+        <li>Delete the file or files.</li>
+        <li>Start Sierra Chart again and and then try opening the Chartbook again. Fresh Historical Intraday data will be downloaded from the server again.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="RebuildingYourChartbook">30.17 - Rebuilding Your Chartbook</h2>
+    <div class="member-link">[<a href="#RebuildingYourChartbook">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have reviewed all of the issues and solutions on this page and still have not found any reasonable solution to your high CPU usage problem and when you close your Chartbook or Chartbooks with <b class="menu_item">File &gt;&gt; Close All Chartbooks</b>, the CPU usage goes down to normal, then obviously there is something you are doing in one or more charts in those Chartbooks which is causing high CPU usage.</p>
+
+    <p>In this case it is then recommended that you rebuild a new Chartbook in order to start from a completely simple and clean state. Gradually as you rebuild your Chartbook, you should identify what is causing the high CPU usage when you begin to notice an increase in CPU usage from the particular settings and studies you are using.</p>
+
+    <p>For the charts in this new Chartbook, set the <b>Days to Load</b> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> to a small value.</p>
+</section>
+
+<section class="h2">
+    <h2 id="StudiesThatUseTheInternalSettingUpdateAlways">30.18 - Studies that use the Internal Setting: UpdateAlways</h2>
+    <div class="member-link">[<a href="#StudiesThatUseTheInternalSettingUpdateAlways">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Studies have an internal setting called UpdateAlways. When this is set to true, then the study will be continuously calculated and the chart window will be redrawn every chart update interval. However, the minimum interval is no less than approximately 300 ms when this setting is true. The only two studies that are built into Sierra Chart that use this are Countdown Timer, used only in some cases and discussed in help topic <a href="#DisplayContinuousTimeCountdown">30.14</a>, and the SC Woodies Panel. What this setting means is that you will have higher CPU usage when using studies that use this setting and you will have higher CPU usage than normal even when disconnected from the data feed.</p>
+</section>
+
+<section class="h2">
+    <h2 id="MaintainingTooManyTimeAndSalesRecords">30.19 - Maintaining Too Many Time and Sales Records</h2>
+    <div class="member-link">[<a href="#MaintainingTooManyTimeAndSalesRecords">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>, if you have the number of Time and Sales records to maintain set to a large number like more than 50,000, then this is definitely high and potentially, although not necessarily, can increase CPU usage. It's recommended that if this is causing higher CPU usage, then reduce it to a smaller number.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TransparentDrawStyles">30.20 - Transparent Draw Styles</h2>
+    <div class="member-link">[<a href="#TransparentDrawStyles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you are using the Transparent Draw Styles with a study or using the Transparency option with the Volume by Price study, then this will increase CPU usage. This is something to be aware of. The level of transparency can be controlled under <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>. Whether this makes any difference with CPU usage, is not known.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ReducingFileSizesByUsingIntradayDataFileManagementFeature">30.21 - Reducing File Sizes by Using Intraday Data File Management Feature</h2>
+    <div class="member-link">[<a href="#ReducingFileSizesByUsingIntradayDataFileManagementFeature">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>As has been explained in sections <a href="#LargeDataFiles">30.11</a> and <a href="#IntradayDataStorageTimeUnit_HistoricalDataRecordTimeFrame">30.12</a>, large Intraday data files or Intraday data files containing tick by tick data will take longer to load into a chart.</p>
+
+    <p>One solution to this issue is to reduce the size of these files by compressing older data in them by using the <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataFileManagement">Intraday Data File Management</a> feature.</p>
+
+    <p>It is <em>strongly recommended</em> to use this feature for older historical data if you have long Intraday chart data loading times.</p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="ChartTickSizeAndVolumeAtPriceProcessing">30.23 - Chart Tick Size and Volume at Price Processing</h2>
+    <div class="member-link">[<a href="#ChartTickSizeAndVolumeAtPriceProcessing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using studies that rely on the <em>Volume at Price</em> data, which include the <b>Volume by Price, Numbers Bars, TPO Profile Chart, Volume Value Area Lines, TPO Value Area Lines</b> and some other studies, it can potentially take an <em>extended time to load chart data</em> from the chart data file due to the Volume at Price data processing.  </p>
+
+    <p>Or the chart may not load at all due to an extremely long load time and excessive memory usage.</p>
+    
+    <p> Another effect of this, is that there can be very high memory usage by the chart. </p>
+
+    <p> Another problem is that there could be high CPU usage and potentially freezing, during real-time chart updating  or chart scrolling due to excessive volume at price processing and an excessive number of price levels to draw on the chart. </p>
+
+    <p> This can be true when you have tick by tick data in the chart data file.</p>
+
+    <p>If the chart <b>Tick Size </b> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> is incorrectly set, and is too small, this can dramatically increase the time to load chart data and also increase memory use.</p>
+
+    <p class="GeneralBackgroundHighlight"> This type of issue is especially a problem with <em>crypto currency</em> markets where the chart <b>Tick Size</b> may be set to a small value and as a practical matter it is just too small. So you must increase it dramatically like sometimes 100 or a 1000 times larger. </p>
+
+    <p>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. Press the <b> Apply Global Symbol Settings </b> button to automatically set the <b>Tick Size</b> for known symbols. If it is still not set correctly, then <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>. </p>
+
+    <p>After updating the Symbol Settings, apply them to the chart again using the <b> Apply Global Symbol Settings </b> button on the Chart Settings window. </p>
+
+    <p>If the symbol is not defined in the Global Symbol Settings or it needs to be manually increased, then you will need to manually set the <b>Tick Size </b> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. When you manually set the <b>Tick Size</b> make sure that <a href="index4cf4.html?page=doc/ChartSettings.html#AutoSetFromDataFeed">Auto Set from Data Feed</a> is disabled on the <b>Chart Settings</b> window.</p>
+
+    <p>Having an incorrect or too small of a Tick Size can also cause the chart to scroll slowly and result in high CPU usage and also high CPU usage during real-time updating of a chart.</p>
+
+    <p>Additionally, even when the <b>Tick Size</b> is set correctly, if there are a wide range of prices containing a large number of price ticks (based upon the chart <b>Tick Size</b> setting), this will increase the amount of time to load chart data, cause high CPU usage during real-time chart updating and cause the chart to scroll slowly. In extreme cases this will cause freezing of Sierra Chart. <em>This is especially true with Historical Daily charts, higher timeframe per bar charts, and crypto currency symbols</em>.</p>
+
+    <p>In the case of the foreign exchange market symbols, you will need to avoid using too small of a <b>Tick Size</b> and <em>increase</em> the <b>Tick Size</b> setting in <b Class="menu_item">Chart &gt;&gt; Chart Settings</b>.</p>
+
+    <p>Or increase the <b>Volume at Price Multiplier</b> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> in the case of when charting a foreign exchange cash market symbol or in the case of Historical Daily Charts.</p>
+
+    <p>If the <b>Days to Load </b> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> is set too high, this will increase the time to load chart data when using any study that relies on the Volume at Price data.</p>
+
+    <p>When using studies that require the <em>Volume at Price</em> data on Historical Daily charts, then this will definitely slow the process of loading the Historical Daily data from the chart data file and will freeze the Sierra Chart user interface during the process of loading the data from the chart data file. The solution to this kind of problem with Historical Daily charts is to increase the <b>Volume at Price Multiplier</b> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. It is recommended to use a minimum setting of 5 or even as high as 100 if necessary.</p>
+    
+    
+    <p>To avoid a problem where the  <b>Volume by Price</b> study or other studies which require Volume at Price data are automatically added to a chart and where the default settings for the chart cause a very long chart data load time, make sure  there is no  <a href = "index899f.html?page=doc/GeneralSettings.html#DefaultStudyCollection">Default  Study Collection</a> set to be  applied to a chart. </p>
+    
+    <p>Also refer to <a href="#VolumeByPriceStudyConfigurations">30.35 - Volume by Price Study Configurations</a>. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SpreadsheetWindowsVisible">30.24 - Spreadsheet Windows Visible</h2>
+    <div class="member-link">[<a href="#SpreadsheetWindowsVisible">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>While it is not a problem having a Spreadsheet window visible (these are the windows that are opened with <b class="menu_item">File &gt;&gt; Open Spreadsheet</b> or automatically opened by one of the Spreadsheet studies), if there is frequent updating of one of the visible sheets in a Spreadsheet such as by the Spreadsheet Study, then this will contribute to CPU usage and if you have many Spreadsheets visible, then that is even more CPU usage. The simple solution is to minimize the Spreadsheet window if you are not looking at it, if it's contributing a significant amount to CPU usage.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ExcessiveMemoryUseCausedByTimeAndSalesRecordsSetting">30.25 - Excessive Memory Use Caused By Time And Sales Records Setting</h2>
+    <div class="member-link">[<a href="#ExcessiveMemoryUseCausedByTimeAndSalesRecordsSetting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Select <b class="menu_item"> Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu. If the <b class="menu_item">Time and Sales &gt;&gt; Records</b> is over 10000, then this can cause high memory use. If it's significantly higher, then your memory usage can be very very high. Reduce it to a smaller number and reconnect to the data feed.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="TooManyChartDrawings">30.26 - Too Many Chart Drawings</h2>
+    <div class="member-link">[<a href="#TooManyChartDrawings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have hundreds of chart drawings (Lines, Rays, Text drawings, Price Retracements, Rectangles, ...) on a chart, then this can cause high CPU usage and sluggish chart performance.</p>
+
+    <p>Reduce the number of Chart Drawings on the chart by deleting some of the drawings. There are several ways this can be done including using <b class="menu_item">Tools &gt;&gt; Manage Chart Drawings Window</b>.</p>
+
+    <p>Refer to <a href="indexb844.html?page=doc/Tools.html#ErasingChartDrawings">Erasing Chart Drawings</a>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="AdvancedCustomStudyControlBarButtons">30.27 - ACS (Advanced Custom Study) Control Bar Buttons</h2>
+    <div class="member-link">[<a href="#AdvancedCustomStudyControlBarButtons">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using one of the <b class="menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar # &gt;&gt; Tools - Advanced Custom Study Buttons </b> (appears as <b>CS#</b> on the Control Bar), this button is been enabled on the Control Bar (this will be indicated by one of these buttons being selected), there is a custom study on the chart which has set <b>sc.ReceiveMousePointerEvents= true</b>, the <b>Pointer</b> or <b>Chart Values</b> Tool is active, and your Pointer is moved around the chart window, this can result in high CPU usage.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="MemoryOrGraphicsDeviceInterfaceObjectLeak">30.28 - Memory or Graphics Device Interface Object Leak</h2>
+    <div class="member-link">[<a href="#MemoryOrGraphicsDeviceInterfaceObjectLeak">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A memory leak in a custom Sierra Chart study or from some other software component running within the address space of Sierra Chart, will cause high memory use and slow Sierra Chart performance.</p>
+
+    <p>To see if there is a memory leak, start the Windows Task Manager. Go to the <b>Processes</b> tab. Select <b class="menu_item">View &gt;&gt; Select Columns</b> on the menu. Make sure the <b>Memory - Working Set</b> column is enabled. Press OK.</p>
+
+    <p>Locate the <b>SierraChart.exe</b> process in the list and see if the <b>Working Set</b> memory is increasing at an obvious rate or the memory use is very high.</p>
+
+    <p>In either of these cases, this is an indication of a possible memory leak. While a memory leak could be caused by Sierra Chart itself, this is extremely unlikely. Although keep in mind as Sierra Chart continues to run for an extended time, Intraday charts will use gradually more memory over time but this is a small increase over long spans of time.</p>
+
+    <p>In almost all cases excessively increasing memory is an issue with a custom study you are using or some other software component running within the address space of Sierra Chart using a lot of memory. </p>
+
+    <p>It is also known that when Sierra Chart is reading Intraday files, the operating system can cache the data and this will cause an increase in memory use which may not be released until Sierra Chart is exited. This increase in memory can also be caused by drivers which are monitoring files.</p>
+
+    <p>To prevent custom studies from being used if they are the cause of the memory leak, run Sierra Chart in <a href="index878d.html?page=doc/LoginInstructions.php#UsingSafeMode">Safe Mode</a>. </p>
+
+    <p>A Graphics Device Interface object leak is something that is very rare, but has occurred in some cases. To determine if there is a GDI object leak, start the Windows Task Manager. Go to the <b>Processes</b> tab. Select <b class="menu_item">View &gt;&gt; Select Columns</b> on the menu. Make sure the <b>GDI Objects</b> column is enabled. Press OK. Locate the <b>SierraChart.exe</b> process in the list and see if the <b>GDI Objects</b> count is increasing. If you notice it increasing, let Sierra Chart support know.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SolidStateDrives">30.29 - Solid State Drives</h2>
+    <div class="member-link">[<a href="#SolidStateDrives">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For the very best performance it is recommended that Sierra Chart be installed on a dedicated <em>solid-state</em> storage drive (storage device) on your system. Only Sierra Chart should be on that particular drive. It should not be used for any other purpose.</p>
+
+    <p> Solid-state drives are considerably faster than hard drives. This will greatly improve the performance of Sierra Chart especially with loading Intraday chart data. And also ensures the best performance for Sierra Chart because no other program will be using that drive.</p>
+
+    <p>Another reason for this is when there are a lot of file I/O operations going on related to Sierra Chart, you do not want the operating system or other programs affected. For example, there will be a lot of data read from the storage drive when Intraday data is being read from a chart data file. </p>
+
+    <p>For example, you can have a very high performance system with solid-state drives and when a lot of Intraday charts are being opened at once, that could cause your system to freeze because Intraday data is going to be read at a very high rate from the storage drive due to the performance of the system and that is going to block I/O operations being performed by the operating system and other programs causing your system to freeze at times.</p>
+
+    <p>We are not referring to a drive partition here. We are referring to a separate physical storage device on your system dedicated for the use of Sierra Chart only.</p>
+
+    <p>It is recommended to use a solid-state drive and in particular a NVME storage drive. For further details, refer to <a href="https://www.pcworld.com/article/2899351/storage/everything-you-need-to-know-about-nvme.html" target="_blank" rel="noopener noreferrer">NVMe SSDs: Everything you need to know about this insanely fast storage</a>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ControlledOrderChartUpdating">30.30 - Controlled Order Chart Updating</h2>
+    <div class="member-link">[<a href="#ControlledOrderChartUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts &gt;&gt; <a href="index899f.html?page=doc/GeneralSettings.html#UseControledOrderChartUpdating">Use Controlled Order Chart Updating</a></b> is enabled, then all of the charts within a Chartbook are updated and calculated at once, rather than separately if it is disabled. This can result in the user interface of Sierra Chart momentarily freezing while this is happening.</p>
+
+    <p>This option should only be enabled if required.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SystemMemoryNotReleasing">30.31 - System Memory Not Releasing</h2>
+    <div class="member-link">[<a href="#SystemMemoryNotReleasing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart is very memory efficient. It uses the absolute minimum amount of memory that is possible based upon what you are doing within Sierra Chart.</p>
+
+    <p>Memory is released by charts when they are closed and prior memory use within a chart is released when a chart is reloaded (<b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>).</p>
+
+    <p>To see what memory Sierra Chart is using, start the Windows Task Manager. Go to the <b>Processes</b> tab. Select <b class="menu_item">View &gt;&gt; Select Columns</b> on the menu.</p>
+
+    <p>Make sure the <b>Memory - Working Set</b> column is enabled. Press <b>OK</b>.</p>
+
+    <p>Locate the <b>SierraChart.exe</b> process in the list and look at the <b>Working Set(Memory)</b> column to see the memory use specifically for Sierra Chart.</p>
+
+    <p>If you notice your overall system memory use is high, this is from the operating system or other programs running on your system.</p>
+
+    <p>There are at least two possible explanations for increased memory use. The operating system may have cached the Intraday data read from Sierra Chart files. This is something Sierra Chart <em>has no control over</em>.</p>
+
+    <p>Another possibility is that anti-malware/antivirus software could be using excessive amounts of memory when it scans Sierra Chart data files. One way to isolate this as a problem is to restart your computer into Safe Mode with Networking Support to prevent this anti-malware/anti-virus software from loading and see if the excessive memory use goes away. If so, the problem is being caused by that software.</p>
+
+    <p>If there is a particular chart or charts within a Chartbook which are using a lot of memory, then first remove studies from those charts one by one to see if the memory use goes down significantly. Next, close those charts one by one and see if memory use goes significantly down. This will help you isolate where the problem is with high memory usage.</p>
+</section>
+
+<section class="h2">
+    <h2 id="LinkingScrollPosition">30.32 - Linking Scroll Position</h2>
+    <div class="member-link">[<a href="#LinkingScrollPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking">Chart Linking</a> feature and linking the Scroll Position, that when scrolling charts, Then this will increase CPU usage and possibly could cause sluggishness with scrolling the chart.</p>
+
+    <p>Therefore, if linking the Scroll Position for more than two charts, and scrolling a chart that uses linking is sluggish, then try disabling the <b>Scroll Position</b> Chart Linking option to see if that solves the problem.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="DottedOrDashedLines2PixelsinWidth">30.33 - Dotted or Dashed Lines >= 2 Pixels in Width</h2>
+    <div class="member-link">[<a href="#DottedOrDashedLines2PixelsinWidth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For any line drawn in Sierra Chart whether Study Subgraph lines, Order lines, Chart Drawing lines, or Grid lines, if the line width is greater than or equal to 2 pixels and they have a Line Style of any of the following:</p>
+
+    <ul>
+        <li><b>Dash</b></li>
+        <li><b>Dot</b></li>
+        <li><b>Dash-Dot</b></li>
+        <li><b>Dash-Dot-Dot</b></li>
+    </ul>
+
+    <p>Then these are drawn with what is called a <em>geometric pen</em>. This is an operating system drawing object.</p>
+
+    <p>Lines drawn with a geometric pen uses more CPU usage. For example, if a chart has a horizontal Grid using a line width of 2 pixels or more, a Line Style of <b>Dot</b>, and there are a lot of horizontal lines on the chart from the Grid, then as you scroll the chart, you will have a noticeable sluggishness which is caused by the high CPU usage from the geometric pen.</p>
+
+    <p>Therefore, the solution to this is to set the Line Style to <b>Solid</b> for efficiency.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="TPOProfileChartLetterBlockPriceIncrement">30.34 - TPO Profile Chart Letter/Block Price Increment / Volume by Price Ticks Per Volume Bar</h2>
+    <div class="member-link">[<a href="#TPOProfileChartLetterBlockPriceIncrement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If there are a large range of prices displayed in the current view of a TPO Profile chart, it is possible that there are a large number of letters/ blocks displayed for TPO Profile.</p>
+
+    <p>When the chart is scrolled or when the chart is updated, the drawing of these TPO Profiles will be slow if there are a very large number of letters/blocks currently displayed.</p>
+
+    <p>There are two solutions to this problem.</p>
+
+    <p>The first solution is to increase the <b>Letter/Block Price Increment in Ticks</b> Input setting with the TPO Profile Chart study to a higher number. This may be especially important with Forex charts, which use a small Tick Size to begin with.</p>
+
+    <p>Increase the <b>Letter/Block Price Increment in Ticks</b> 1 at a time until you get a good balance between detail and minimum of CPU load.</p>
+
+    <p>The second solution is to set the <b> Sub Period Price Display Style </b> Input setting to <b>Horizontal Bars</b>. This will significantly reduce CPU usage of the TPO Profiles and allows you to continue to use a more detailed <b>Letter/Block Price Increment in Ticks</b> setting of 1 or 2.</p>
+
+    <p>In the case of when using the <a href="index29a2.html?page=doc/StudiesReference.php&amp;ID=141&amp;Name=Volume_by_Price">Volume by Price</a> study, there can be the same kind of problem where there are too many volume bars per Volume Profile causing a performance issue. In this case, increase the <a href="index29a2.html?page=doc/StudiesReference.php&amp;ID=141&amp;Name=Volume_by_Price#Input_TicksperVolumeBar">Ticks Per Volume Bar</a> Input setting.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="VolumeByPriceStudyConfigurations">30.35 - Volume by Price Study Configurations</h2>
+    <div class="member-link">[<a href="#VolumeByPriceStudyConfigurations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are certain <b>Volume by Price</b> study configurations which can cause high CPU usage and make the overall performance of Sierra Chart sluggish or cause momentary freezing.</p>
+    
+    <p>The type of Volume Profiles which can cause high CPU usage would be long-term single profiles which are calculated relative to the last Date-Time in the chart. An example would be a 3 months or greater Volume Profile with a <b>Volume Graph Period Type</b> of <b>One Period at End of Fixed Time Length</b>.</p>
+
+    <p>The solution to this is to change the <b>Volume Graph Period Type</b> to <b>From Start Date-Time to End</b> and specify a <b>Start Date</b> and <b>Start Time</b> for the Volume Profile.  This makes it efficiently calculated.</p>
+    
+    <p> The  <a href = "index29a2.html?page=doc/StudiesReference.php&amp;ID=141&amp;Name=Volume_by_Price#Input_TicksperVolumeBar">Ticks per Volume Bar</a>   Input setting with the <b> Volume by Price</b> study could be set too low  and cause an excessive number of price levels to be drawn on the chart which will make the chart drawing performance very  slow.  The degree of the slow performance depends upon the number of price levels, or volume bars, which are actually  drawn on the visible area of the chart.  To solve this problem if it exists, increase the  <b>Ticks per Volume Bar</b>  Input setting  with the Volume by Price study.</p>   
+    
+
+    <p>For further information, refer to <a href="indexf05a.html?page=doc/StudiesReference.php&amp;ID=141#Settings">Volume by Price Settings</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChartDataFileErrorOutOfRangeValue">30.36 - Chart Data File Error/Out of Range Value</h2>
+    <div class="member-link">[<a href="#ChartDataFileErrorOutOfRangeValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A Historical Daily or Intraday chart data file that contains 80 data error or out of range value, can cause a long time to load chart data, excessive memory use and/or a long time to calculate studies. All of this can cause Sierra Chart to freeze for a period of time.</p>
+
+    <p>This is generally true when the Volume at Price data is being maintained for the chart. This is the case when using any of the following studies:</p>
+
+    <ul>
+        <li>Volume by Price</li>
+        <li>Volume Value Area Lines</li>
+        <li>Numbers Bars</li>
+        <li>Numbers Bars Calculated Values</li>
+        <li>TPO Profile Chart</li>
+        <li>TPO Value Area Lines</li>
+    </ul>
+
+    <p>Or any other study that requires the Volume at Price data.</p>
+
+    <p>The solution to this in the case of a Historical Daily chart is to fully re-download the data in the chart by selecting <b Class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. Although this assumes that the server has the correct data.</p>
+
+    <p>Assuming the server has the correct data, a comprehensive solution to a data error in an Intraday chart data file is to delete the Intraday chart data file following the <a href="index7b4b.html?page=doc/IntradayDataEditor.html#DeletingDataFile" target="_blank" rel="noopener noreferrer">Deleting Intraday Chart Data</a> file instructions.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DeterminingCPULoadfromSierraChart">30.37 - Determining CPU Load from Sierra Chart</h2>
+    <div class="member-link">[<a href="#DeterminingCPULoadfromSierraChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section describes how to determine what the load Sierra Chart is placing on your system CPU and if the maximum available CPU time used by the Sierra Chart primary thread of execution, has been reached.</p>
+
+    <p>Sierra Chart does use multiple threads, but the additional threads are for loading Intraday data and for some other specialized purposes. However, most processing which is occurring during real-time updating is on the primary thread.</p>
+
+    <p>Go to the <b>Performance</b> tab of the Windows operating system Task Manager. Look at the <b>CPU Usage History</b>.</p>
+
+    <p>Make a note of how many windows there are showing CPU usage history. Refer to the image below.</p>
+
+    <p>Usually you will see anywhere from 2 to 8 windows. Each of these represents a CPU core. Divide 100 by the number of cores there are. This is going to be the maximum percentage a thread of a process can use. Make a note of this calculated percentage for the next step.</p>
+
+    <p>Look at the <b>Processes</b> tab of Windows Task Manager to determine the CPU load from the SierraChart.exe process. The CPU usage will be displayed in the <b>CPU</b> column which shows CPU usage by the process as a percentage.</p>
+
+    <p>If you see the SierraChart.exe process at or close to the percentage you made a note of previously, then Sierra Chart is under a very heavy processing load and Sierra Chart may not be processing real-time data fast enough. This can contribute to a data feed lag. If you notice the CPU usage is low, then the issue is not due to too much of a CPU load.</p>
+
+    <p>If it appears as though lagging or other slow performance issues is because your computer is not running Sierra Chart fast enough, then the next step is to review all of the solutions listed on this page</p>
+
+    <div style="text-align: center;"><a href="../images/taskmanagercpucores.png" rel="lightbox"><img src="../images/taskmanagercpucores.png" class="screenshot" loading="lazy" width="425"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="LongTimeToDownloadHistoricalChartData">Long Time to Download Historical Chart Data</h2>
+    <div class="member-link">[<a href="#LongTimeToDownloadHistoricalChartData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If it is taking a long time for the historical chart data to downloaded for a particular chart, then there can be more than one reason for this.</p>
+
+    <p>If you notice that Sierra Chart is in a frozen state and can not cannot be interacted with at times, then the issue is due to one of the other subtopics on this page. Refer to the list in the <a href="#Introduction">Introduction</a> section.</p>
+
+    <p>Otherwise, this could be caused by a network connectivity problem. In this particular case, refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#ErrorDownloadingDataSCHistoricalDataServer" target="_blank" rel="noopener noreferrer">Error when Downloading Historical Intraday Data from the Sierra Chart Historical Data Server</a>. The solution could be to use <em>Port 80</em> as explained.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AverageTimeToOpenChartbooks">Average Time to Open Chartbooks</h2>
+    <div class="member-link">[<a href="#AverageTimeToOpenChartbooks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The amount of time for a Chartbook to open depends upon how many charts are in it, the number of days being loaded in Intraday charts in the Chartbook, and the calculation time for studies.</p>
+
+    <p>A reasonably efficient Chartbook should open in less than 5 seconds. If a Chartbook is taking 30 seconds or longer to open, then this is considered a <em>very long time</em> and not acceptable under usual conditions.</p>
+
+    <p>The first thing to do is to refer to the following subsections on this page improve performance.</p>
+
+    <ul>
+        <li><a href="#TooMuchDataToLoadOrLoaded">30.1 - Too Much Data Loaded</a></li>
+        <li><a href="#InefficientAdvancedCustomStudies">30.4 - Inefficient Advanced Custom Studies</a></li>
+        <li><a href="#AntivirusAntiMalwareSoftware">30.8 - Antivirus/Anti-Malware Software</a></li>
+    </ul>
+
+    <p>The next step is updating of your computer hardware. Your system should have a Solid State Drive, a 6 core CPU at a minimum, and a fast CPU clock speed.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="DialogWindowsDoNotDisplay">30.40 - Dialog Windows Do Not Display</h2>
+    <div class="member-link">[<a href="#DialogWindowsDoNotDisplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A dialog window is a window which contains various controls primarily to set global or chart specific settings. An example of a dialog window is the <b>Chart Settings</b> window opened with <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. Another example is the <b class="menu_item">Global Settings &gt;&gt; General Settings</b> window.</p>
+
+    <p>When opening a dialog window in Sierra Chart, if it does not appear, then there can be different reasons for this. The first thing to do is to press the <b>Escape (Esc)</b> key on your keyboard to cancel the dialog operation so that you can interact with Sierra Chart.</p>
+
+    <p>The primary reason for this problem is the operating system level resources to create a dialog window are insufficient. This is an operating system level problem. It would help to close programs on your system. Also try reducing the number of open charts within Sierra Chart in particular detached charts which can be reattached to the main window. This can be done by going to the detached chart and selecting <b class="menu_item">Window &gt;&gt; Detach/Attach Window</b>.</p>
+
+    <p>This problem could also be because your computer or Sierra Chart is under a very heavy load, and prevents the dialog window from becoming visible. One thing you can do that should immediately reduce the CPU load is disconnect from the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b>. Also, increase the <a href="#ChartUpdateInterval">Chart Update Interval</a>.</p>
+
+    <p>As a last resort you may need to restart your computer to overcome this issue with dialog windows not appearing.</p>
+
+    <p>Once again, this is a Windows operating system level problem and <em>not</em> some kind of problem within Sierra Chart itself.</p>
+
+    <p>In regards to the above, what we have found resolves the issue is force the immediate display of the dialog when it is opened. In the latest versions of Sierra Chart, this has been implemented for most dialogs but this causes the dialog to appear at the top left of the parent window rather than centered. If you continue to have this problem of the dialog windows not appearing, then let Sierra Chart know what particular dialog you are having a problem with and we will implement this workaround by forcing the immediate display of it.</p>
+
+    <p>Gradually the dialog windows in Sierra Chart will be replaced with a common resizable window to view and adjust settings. This is expected to be completed by June 2020. These new windows will not use the Windows operating system dialog functionality, and will be fully created by Sierra Chart and will work around this kind of issue.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SlowReplayDueToBackTestModes">30.41 - Slow Replay Due To Back Test Modes</h2>
+    <div class="member-link">[<a href="#SlowReplayDueToBackTestModes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When replaying a chart or charts, and the <a href="index9600.html?page=doc/ReplayChart.html#ReplayMode" target="_blank" rel="noopener noreferrer">Replay Mode</a> on the replay control panel opened with <b class="menu_item">Chart &gt;&gt; Replay Chart &gt;&gt; Replay Chart (Control panel)</b> is <em>not</em> set to <b>Standard Replay</b>, there will be a significant number of additional calculations which are performed during the chart replay which will increase CPU usage and and cause the user interface to become less responsive.</p>
+
+    <p>If you are not performing any type of back testing of an automated trading system, then set the <a href="index9600.html?page=doc/ReplayChart.html#ReplayMode" target="_blank" rel="noopener noreferrer">Replay Mode</a> to <b>Standard Replay</b>.</p>
+
+    <p>You need to stop the chart replay first and start it again for any changes to the <b>Replay Mode </b> to go into effect.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="DetachedCharts">30.42 - Detached Charts</h2>
+    <div class="member-link">[<a href="#DetachedCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>We have observed that detached charts consume more operating system User objects and increase CPU usage. The reason for this would be strictly due to the operating system and is not related to Sierra Chart.</p>
+
+    <p>It is therefore recommended to keep charts attached and if you want to separate charts from the main window to instead use multiple instances of Sierra Chart. Refer to <a href="index9bbd.html?page=doc/NewInstance.php">Using DTC Server for Data and Trading in Another Sierra Chart Instance (New Instances)</a> for instructions.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="BidAndAskDepthBarsStudy">30.43 - Bid and Ask Depth Bars Study</h2>
+    <div class="member-link">[<a href="#BidAndAskDepthBarsStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Bid and Ask Depth Bars</b> study potentially can use a lot of CPU time if there are many market depth levels it needs to process, like greater than 100. For instructions to reduce CPU usage for that study, refer to <a href="indexb203.html?page=doc/StudiesReference.php&amp;ID=213&amp;Name=Bid_Ask_Depth_Bars#ImprovingPerformanceOfThisStudy">Improving Performance of this Study</a>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="PerformanceDifferencesBetweenVersionsOfSierraChart">30.44 - Performance Differences Between Versions of Sierra Chart</h2>
+    <div class="member-link">[<a href="#PerformanceDifferencesBetweenVersionsOfSierraChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you seem to notice reduced performance in one version of Sierra Chart compared to another version, then understand that there can be many reasons for this.</p>
+
+    <p>First understand, reporting this to Sierra Chart support, in general is not helpful because we are not in a position to know what the cause is from. It would take an immense amount of analysis for us to really start to analyze this based upon what you are doing with Sierra Chart and your Sierra Chart configuration including its charts and studies and so many other things. This is simply something <em>we will not do</em>. So in general when we get these reports, they are almost never analyzed and are referred to this help topic.</p>
+
+    <p>If we are aware of a change in the program which may have some improvement in capabilities, but be more processing for that particular function, we will suggest that might be the cause. Although a change like this is  very rarely the case.</p>
+
+    <p>In general newer versions of Sierra Chart deliver higher performance as compared to older versions because there are continuous performance enhancements that are made throughout the program. Therefore, a report of lower performance is completely contrary to what we know to be true. So that is why when someone mentions a performance issue in a newer version, we know that it must be something specific to their system or configuration and something unusual going on. </p>
+
+    <p>Now if you notice a performance issue after updating from a version 2 or more years ago, then yes it is possible there could be something that is less efficient perhaps may be related to formula processing due to more functionality available with that but this has been optimized as well.</p>
+
+    <p>You may be mistaken to believe the problem is with a newer Sierra Chart version, when the problem can be with your system itself. The capabilities of your computer system, and the current <em>state</em> of the system, can make Sierra Chart perform poorly. A possible solution is a restart of your system. We have heard this can resolve performance issues.</p>
+
+    <p>The particular configuration that you are using in Sierra Chart, related to the charts and studies and various other functionalities of the software, and the data loaded in the charts, could be on the margin of the capabilities of your system, and due to a small change in the structure of a new version of Sierra Chart, then makes the performance issue noticeable.</p>
+    
+    <p>The more likely explanation for a performance issue allegedly related to a new version, is that over time there is an accumulation of data within your installation of Sierra Chart. There is more market data as time goes by,  and there is more  Trade Activity data. </p>
+
+    <p>Also, there are times when the market is more  volatile and  has a much wider range of prices as compared to previously.  A wider range of prices absolutely does create more processing within Sierra Chart due to volume at price data processing.  </p>
+
+    <p>And users will attribute  version upgrades over time, with lower performance when in fact, the problem has to do with an increased amount of data that you have and the content of that data, creating lower performance as compared to previously. </p>
+
+    <p>Refer to the <a href="#Introduction">other items on this page</a> to improve performance of Sierra Chart. The problem could also be what is explained in <a href="#AntivirusAntiMalwareSoftware">30.8 - Antivirus/Anti-Malware Software</a>.
+    <p>
+
+    <p>It is important to also understand Sierra Chart offers a broad amount of functionality and very advanced functionality. We offer Sierra Chart at very low prices. When you start doing a lot of things with the program, and creating a lot of charts and working with various studies in different configurations, you cannot expect us to be burdened with what you have done with Sierra Chart when you have a problem. This is for you to resolve. Not us.
+    <p>
+
+    <p>This is why we have this page here to give you guidance on things to check. So it is a faulty analysis to think it is our responsibility to help you at no cost. We will not do that. You need to help yourself and we give you the information you need to help yourself through this page and the other documentation on this website.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DetailedContinuousFuturesContractLogging">30.45 - Detailed Continuous Futures Contract Logging</h2>
+    <div class="member-link">[<a href="#DetailedContinuousFuturesContractLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When the <a href="index899f.html?page=doc/GeneralSettings.html#DetailedContinuousFuturesContractLogging">Detailed Continuous Futures Contract Logging</a> option is enabled, then this causes an excessive amount of messages to be added to the Message Log.</p>
+
+    <p>Disable this option to reduce CPU usage related to these messages, during the loading of a Continuous Futures Contract chart.</p>
+</section>
+
+<section class="h2">
+    <h2 id="MarketDepthCombineIncrementInTicks">30.46 - Market Depth Combine Increment in Ticks</h2>
+    <div class="member-link">[<a href="#MarketDepthCombineIncrementInTicks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using a <a href="index4cf4.html?page=doc/ChartSettings.html#MarketDepthCombineIncrementInTicks" target="_blank" rel="noopener noreferrer">Market Depth Combine Increment in Ticks</a> in the <b class="menu_item">Chart &gt;&gt; Chart Settings</b> of 1 or greater, this can increase CPU load when there are a large number of market depth levels for the symbol, like over 100.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="UseSubInstancesToDistributeProcessingLoad">30.47 - Use Sub Instances to Distribute Processing Load</h2>
+    <div class="member-link">[<a href="#UseSubInstancesToDistributeProcessingLoad">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have charts open especially ones that present a high graphics and/or calculation load, then you should run those on a sub instance of Sierra Chart to minimize the load on the main Sierra Chart instance which may be used for trading or may be causing Sierra Chart to be less responsive.</p>
+
+    <p>Use as many sub instances you need to distribute the load based upon the complexity of your chart setup.</p>
+
+    <p>For complete documentation, refer to <a href="index9bbd.html?page=doc/NewInstance.php">Using DTC Server for Data and Trading in Another Sierra Chart Instance (New Instances)</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="BasicStepsToResolvePerformanceIssueInSierraChart">30.48 - Basic Steps to Resolve Performance Issue in Sierra Chart</h2>
+    <div class="member-link">[<a href="#BasicStepsToResolvePerformanceIssueInSierraChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are the first items to go through, to resolve a performance issue you are having in Sierra Chart where the user interface is frozen at times or less responsive.</p>
+
+    <p>We need to make it clear, that Sierra Chart is a very powerful program that provides a lot of functionality and capabilities. Many of our users have many tens of or ~100 charts and a lot of complexity with those charts with the <a href="#">Chart Drawings</a> and <a href="#">Studies</a> on them. </p>
+
+    <p>The prices for Sierra Chart are kept very low. When a user has a performance issue in Sierra Chart, it is your responsibility to review the information on this page, and implement the recommendations and resolve this problem on your own.
+    </p>
+
+    <p>We cannot be exposed to all of the complex set ups you have done over time and only you fully understand, and resolve this for you during a remote assistance session. We do not have the time, the inclination, or the resources for this and more importantly this is not included in the Sierra Chart prices. And besides this takes away time from our software development.</p>
+
+    <p>When the markets are more volatile, and there is a wider price range in a day, some studies can have longer calculation and drawing times. Although this depends upon the Input settings of the study. Studies that use the Volume at Price data will take longer to calculate and draw. This is one reason why you can notice a performance issue with increased market activity.
+    </p>
+
+    <p>This would be resolved by reducing the number of days loaded in the chart, increasing the <a href="index4cf4.html?page=doc/ChartSettings.html#TickSize">Tick Size</a> of the chart, increasing the Tick Size related study Input like the <a href="index29a2.html?page=doc/StudiesReference.php&amp;ID=141&amp;Name=Volume_by_Price#Input_TicksperVolumeBar">Ticks per Volume Bar</a> (Volume by Price study), using sub instances, increasing the Chart Update Interval, and obtaining faster computer hardware.</p>
+
+    <ol>
+        <li>First if Sierra Chart is in a frozen state for an extended time when opening your Chartbooks or upon connection to the data feed, then restart Sierra Chart, and disable <b> Open Files on Startup</b> on the Login window. <em>Do not use your existing Chartbooks</em>. For more details, refer to <a href="#WhatToDoIfSCIsFrozenForExtendedTimeDueToHighCPUUsageCausedOpenedChartbook">30.16 - What to do if Sierra Chart is in a frozen state for an extended time due to extended high CPU usage caused by an automatically or manually opened Chartbook</a>.</li>
+
+        <li>Run Sierra Chart in Safe Mode. This is a mandatory step. Refer to the <a href="index878d.html?page=doc/LoginInstructions.php#UsingSafeMode">Using Safe Mode</a> instructions.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b> to disconnect from the data feed and make it easier to perform the following steps if you already have a significant performance issue. This is to eliminate the charts from updating and should have an immediate performance benefit while disconnected.</li>
+        
+        <li>Increase the global <b>Chart Update Interval</b> setting to 1000 ms. If charts have a nonzero Chart Update Interval less than this value, then set those to 0. For complete documentation, refer to <a href="#ChartUpdateInterval">30.5 - Chart Update Interval</a>.</li>
+       
+       <li>Use multiple instances of Sierra Chart to distribute processing load. Refer to <a href="#UseSubInstancesToDistributeProcessingLoad">30.47 - Use Sub Instances to Distribute Processing Load</a>. <br> <br> Also refer to <a href="indexf915.html?page=doc/Trading.html#SierraChartConfigurationForMostLowResponseTimeTrading">Sierra Chart Configuration for Most Low Response Time Trading</a>.</li>
+
+        <li>Check study calculation times for <em>each</em> chart. Refer to <a href="#InefficientAdvancedCustomStudies">30.4 - Inefficient Study Configurations or Advanced Custom Studies</a>. <br> <br> The basic solution is going to be adjusting study Inputs appropriately which may reduce calculation time based upon the particular study and also reducing the <b>Days to Load </b> setting in the   <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.  </li>
+        
+         <li>In the case of studies that use Volume at Price data (<b> Volume by Price, TPO Profile Chart, Volume Value Area Lines, TPO Value Area Lines, Volume Weighted Average Price</b>), to reduce calculation time it is recommended to increase the <a href="index4cf4.html?page=doc/ChartSettings.html#TickSize" Target="_blank" rel="noopener noreferrer">Tick Size</a> setting of the chart. For example if it is .25, then increase it to 1. Even if you do not want to do this, do it anyway to see if it makes a performance improvement. 
+         <br> <br> 
+         <em>Alternatively, each individual study in most cases will have an equivalent setting. For example, with the <b>Volume by Price</b> study you would want to increase the <b>Ticks per Volume Bar</b> Input to 4</em>.
+          <br> <br>
+         For comprehensive information on this subject, refer to <a href="#ChartTickSizeAndVolumeAtPriceProcessing">30.23 - Chart Tick Size and Volume at Price Processing</a>.
+        </li>
+
+        <li>Increase <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChangingBarSpacing">chart bar spacing</a> to reduce graphics load.</li>
+
+        <li>Use <a href="index5795.html?page=doc/GraphicsSettings.html#UseOpenGLForChartGraphics">OpenGL</a>. If you have any issues with using OpenGL, then disable it and restart Sierra Chart.</li>
+
+        <li> Increase the <b>Intraday Data Storage Time Unit</b> to 1 Second. For complete documentation, refer to <a href="#IntradayDataStorageTimeUnit_HistoricalDataRecordTimeFrame">30.12 - Intraday Data Storage Time Unit. Historical Data Record Time Frame.</a>. Be sure to re-download the data in the chart to store data at the larger unit which is more efficient. This will decrease Intraday chart data loading times.</li>
+
+        <li>Install Sierra Chart on a dedicated solid-state drive. This is really important. Refer to <a href="#SolidStateDrives">30.29 - Solid State Drives</a>.</li>
+
+        <li> There are other detailed items on this page covering specific subtopics to help improve Sierra Chart performance and reduce CPU usage. Refer to the <a href="#Introduction">Introduction</a> section for the list of all of these.</li>
+
+        <li>Use the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a> for the most efficiently delivered and processed market data.</li>
+    </ol>
+
+    <video controls src="https://videos.sierrachart.com/Improving_SierraChart_Performance.webm" width="600" height="400"> Sorry, your browser does not support embedded videos.</video>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="StudiesRecalculatingAtEarlierIndexAndStudyDependencies">30.49 - Studies Recalculating at Earlier Index and Study Dependencies</h2>
+    <div class="member-link">[<a href="#StudiesRecalculatingAtEarlierIndexAndStudyDependencies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are some studies like the <b>Zig Zag</b> and <b>High Low For Time Period</b> studies which recalculate themselves at an earlier index as compared to the last bar updated in the chart during normal chart updating. Studies which are based upon or dependent some way upon the studies which are calculated that an earlier than normal index, will also calculate themselves at an earlier index.</p>
+
+    <p>Examples of dependent studies which could take more than an insignificant amount of calculation time would be the <b>Spreadsheet Study</b>, or the <b>Color Bar Based on Alert Condition</b> study. Although even these studies are generally efficient.</p>
+
+    <p>Depending upon the overall study configuration (the studies being used and their dependency upon each other), there can be an increase in calculation time.</p>
+
+    <p>To reduce calculation time it will help to reduce the <a href="index2192.html?page=doc/SpreadsheetStudyInputs.html#NumberofRows">Number of Rows</a> Input with the Spreadsheet Study and also reduce <a href="index130f.html?page=doc/StudiesReference.php&amp;ID=245&amp;Name=Color_Bar_Based_on_Alert_Condition#Inputs_NumberOfBarsToCalculate">Number of Bars to Calculate</a> with the <b>Color Bar Based on Alert Condition</b> study.</p>
+</section>
+
+<section class="h2">
+    <h2 id="VeryLargeAndOrLargeNumberOfTradeActivityFiles">30.51 - Very Large and/or Large Number of Trade Activity Files</h2>
+    <div class="member-link">[<a href="#VeryLargeAndOrLargeNumberOfTradeActivityFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p><a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity</a> data is stored in files contained within the <b>/TradeActivityLogs</b> subfolder in the Sierra Chart installation folder. Data is organized by Date and Trade Account. There are separate files for simulated and non-simulated trade activity.</p>
+
+    <p>If these files which are being queried are excessively large (in excess of 100 MB for a single file) or there are an excessive number of files, then depending upon the settings in a chart related to trade activity data, or the settings at the top of the Trade Activity Log, both of which query this data, these queries can take a long time, consume a lot of RAM memory on your system, and can affect the performance of Sierra Chart.</p>
+
+    <p>If there is a large OrderFillsToSend.data file, in the <b>/TradeActivityLogs</b> subfolder, then delete it. This will cause excessive memory usage and high CPU usage when starting and exiting Sierra Chart if it is a large file.</p>
+
+    <p> For example, when you start Sierra Chart and you do not open Chartbooks, if you see excessive memory usage and high CPU usage, this can be caused by a trade activity query being performed which is reading a large amount of data into memory based upon the Trade Activity Log settings. </p>
+
+    <p>Delete any unnecessary files in the <b>/TradeActivityLogs</b> subfolder. Also check the <b>/Backups</b> subfolder and remove <b>TradeActivityLog_</b> files from that folder as well. </p>
+
+    <p> For more information, refer to <a href="index509f.html?page=doc/TradeActivityLog.php#TradeActivityNotDisplayingOrClearing_ImprovingTradeActivityQueryPerformance">Trade Activity Not Displaying or Clearing (Improving Trade Activity Query Performance)</a>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="RecentBidAskVolume_CurrentTradedBidAskTotalVolume">30.52 - Recent Bid/Ask Volume | Current Traded Bid/Ask/Total Volume</h2>
+    <div class="member-link">[<a href="#RecentBidAskVolume_CurrentTradedBidAskTotalVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> When using the Recent Bid/Ask Volume or Current Traded Bid/Ask/Total Volume <a href="#">market data columns</a> on a Chart/Trade DOM over time the number of price levels that data exists for these increases.</p>
+
+    <p> This potentially may be a performance issue if Sierra Chart has been running for many days, or if there has been a lot of market volatility.</p>
+
+    <p> To reset the size of these containers back to zero, to improve performance, assuming there is a performance issue, use the commands <a href="index96f7.html?page=doc/TradeMenu.html#ClearRecentBidAskVolume-AllSymbols">Clear Recent Bid/Ask Volume - All Symbols</a> and <a href="index96f7.html?page=doc/TradeMenu.html#ClearCurrentTradedBidAskVolume-AllSymbols">Clear Current Traded Bid/Ask Volume - All Symbols</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="CausesOfHighMemoryUsage">30.53 - Causes of High Memory Usage</h2>
+    <div class="member-link">[<a href="#CausesOfHighMemoryUsage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Below are links to the sections on this page for the different causes of high memory usage by the Sierra Chart process. Section 30.31 applies not to Sierra Chart specifically, but to the operating system.</p>
+
+    <ol>
+        <li><a href="#TooMuchDataToLoadOrLoaded">30.1 - Too Much Data Loaded</a></li>
+        <li><a href="#ShortBarTimeFramesPeriods_IncludeColumnsWithNoData">30.10 - Short Bar Time Frames/Periods. Include Columns with No Data.</a></li>
+        <li><a href="#ChartTickSizeAndVolumeAtPriceProcessing">30.23 - Chart Tick Size and Volume at Price Processing</a></li>
+        <li><a href="#ExcessiveMemoryUseCausedByTimeAndSalesRecordsSetting">30.25 - Excessive Memory Use Caused By Time And Sales Records Setting</a></li>
+        <li><a href="#SystemMemoryNotReleasing">30.31 - System Memory Not Releasing</a></li>
+        <li><a href="#VeryLargeAndOrLargeNumberOfTradeActivityFiles">30.51 - Very Large and/or Large Number of Trade Activity Files</a></li>
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="ImprovingChartDataLoadingAndHistoricalDataDownloadingTimes">30.54 - Improving Chart Data Loading and Historical Data Downloading Times</h2>
+    <div class="member-link">[<a href="#ImprovingChartDataLoadingAndHistoricalDataDownloadingTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+      <p> Below are links to the sections on this page  and elsewhere for the different  causes and solutions related to long time to load chart data in the charts and  long time to download historical chart data.</p>
+
+
+    <ol>
+        <li><a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#ImprovingHistoricalIntradayDataDownloadingPerformance">Improving Historical Intraday Data Downloading Performance</a></li>
+       
+       <li><a href="#ChartTickSizeAndVolumeAtPriceProcessing">30.23 - Chart Tick Size and Volume at Price Processing</a></li>
+        
+        <li><a href="#TooMuchDataToLoadOrLoaded">30.1 - Too Much Data to Load or Loaded</a></li>
+        
+        <li><a href="#AntivirusAntiMalwareSoftware">30.8 - Antivirus/Anti-Malware Software</a></li>
+        
+        <li><a href="#SolidStateDrives">30.29 - Solid State Drives</a></li>
+       
+    </ol>
+
+
+</section>
+
+<hr><p>*Last modified Monday, 17th April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails30.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:23 GMT -->
+</html>  

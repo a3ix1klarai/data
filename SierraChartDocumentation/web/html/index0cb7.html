@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ImportExport.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105663') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ImportExport.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Exporting and Importing Intraday Data Files -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index0cb7.html?page=doc/ImportExport.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ManagingData">(Table of Contents) Managing Symbol Data</a> &gt;&gt; <a  href="index0cb7.html?page=doc/ImportExport.html">Exporting and Importing Intraday Data Files</a></h4> </div>     <h1 class="PageName">Exporting and Importing Intraday Data Files</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#ExportAlternatives">Alternative Ways to Export Data</a></li>
+    <li><a href="#ExportData">Export and Edit</a></li>
+    <li><a href="#ImportLoadIntradayData">Import and Load</a></li>
+    <li><a href="#FormatOfExportedData">Format of Exported Data</a></li>
+    <li><a href="#Notes">Notes</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class="GeneralBackgroundHighlightLight">If you are using anti-malware/antivirus software, then be sure to  <em>disable</em> the scanning of files with the following extensions: <b>.itxt , .txt , .scid</b>. Otherwise exporting and importing data will be very slow.</p>
+
+    <p>The exporting and importing of Intraday data can be used for two purposes. For advanced editing of Intraday data and for importing of data from other sources. If you want to replay charts using Intraday data from other sources, you will first need to Import that data into the Sierra Chart  <a href="index4e87.html?page=doc/IntradayDataFileFormat.html" >Intraday Data File Format</a>.</p>
+
+
+    <p>For Historical charts (Daily, Weekly, Monthly, Quarterly, Yearly bar time frames), the data is read and written by Sierra Chart in a Text/CSV format.  Therefore, there is no need to export or import this data since it is already in a text format.   </p>
+
+    <p>For more information to work with Historical Daily data,  refer to the <a href="indexbbda.html?page=doc/TextCSVDataFormat.html">Text/CSV Data Format</a> page.</p>
+
+    <p>Intraday Data Files can be exported to a Text/CSV (comma separated values) format. This is useful for correcting errors in the chart by deleting or correcting the lines of data that contain errors. It is also possible to directly edit the data in the original Intraday data file by selecting <b class="menu_item">Edit &gt;&gt; Edit/Download Data - Intraday</b> on the menu. However, by exporting the data you have the ability to see all of the data in a plain text format at once for more advanced editing. This also gives you the ability to copy and paste data between files as well. </p>
+
+    <p> When you export the data, Sierra Chart will convert the Intraday data file into a text file of extension <b>.itxt</b> and it will be opened in a text editor. Changes can be made directly to the  text file and then imported back into Sierra Chart, which will convert it back into the standard Sierra Chart Intraday data file format with file extension <b>scid</b>.</p>
+
+    <p>If you have Text/CSV data from other sources, then Sierra Chart can directly read this data. Although it is best to import it so you can replay the data.</p>
+
+    <p>Note: The  Date and Time for each record in an exported file is always in GMT/UTC time, no matter what the Time Zone setting in Sierra Chart is.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ExportAlternatives">Alternative Ways to Export Data</h2>
+    <div class="member-link">[<a href="#ExportAlternatives">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are two alternatives to export data.</p>
+    <ol>
+        <li>Use the <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s182">Write Bar Data to File</a> study. This will export all of the chart data in the timeframe that the bars are currently set to, to a text file. However, the very last bar will not be written since the study does not consider the last bar as a complete bar  and an incomplete bar will not be written to the output data file. If a chart is set to 5 minutes per bar, then each record in the text file will be 5 minutes. This study gives you the option to write the Date-Time   using the Time Zone setting  in Sierra Chart or in GMT/UTC time.</li>
+
+        <li>The other alternative is to use the <a href="indexbc7b.html?page=doc/UsingTheSpreadsheetStudy.php">Spreadsheet Study</a>.  When you apply the  <b>Spreadsheet Study</b> to a chart, all of the chart data  and study data as it exists on the chart, is outputted to a Sierra Chart Spreadsheet.  You can then use that data for various purposes.  You can easily copy it and paste it to a text file.  Or just save it as a text file through <b class = "menu_item">File &gt;&gt; Save As</b>.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ExportData" >Export and Edit</h2>
+    <div class="member-link">[<a href="#ExportData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To export an Intraday data file to a text file, follow the steps below.</p>
+
+    <p> The exported data will be all of the data that is in the Intraday data file and will not be exactly equivalent to the bars currently displayed in the chart. If you want to  export the data exactly as it appears in the chart, then use the <a href="indexa20c.html?page=doc/EditMenu.html#ExportBarDatatoText">Edit &gt;&gt; Export Bar Data to Text File</a>.</p>
+
+    <p>The timeframe of the data exported depends upon the particular Data/Trading service being used, the historical data provided by that service, the associated historical data settings, and the   <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit</a> setting. The data records  will not necessarily all be a consistent timeframe and can vary from 1 trade to 1 minute per record line. This is going to be especially true when using Interactive Brokers or DTN IQ Feed.</p>
+
+    <ol>
+        <li>Open an Intraday chart  or go to an existing Intraday chart.</li>
+
+        <li> Select <b class="menu_item">Edit &gt;&gt; Export and Edit Intraday Data</b> on the menu. Sierra Chart needs to be <em>disconnected</em> (<b Class = "menu_item">File &gt;&gt; Disconnect</b>) from the feed in order to export an Intraday data file. You can also use the <b class="menu_item">Edit &gt;&gt; Export Intraday Data to Text File</b>, to just export the file to a .txt file and not automatically open the file in a text editor. </li>
+
+        <li>You will be prompted for a filename for the text file to export it to, choose a filename or accept the default. Press the <b>Save</b> button to accept your selection.</li>
+
+        <li> The data will be exported to the text file and it will be in a comma separated value format. Sierra Chart will automatically open the file with the <b>Daily Data Editor</b> specified in the  <b class="menu_item">Global Settings &gt;&gt; General Settings</b> window.  The default editor is the text editor supplied with Sierra Chart.</li>
+
+        <li>When you are finished editing the file, if you want to edit the file, Save the file and follow the  <b>Import and Load</b> instructions to import and load the data into the chart.</li>
+
+        <li>For an understanding of the exported data, refer to <a href = "#FormatOfExportedData">Format of Exported Data</a>.</li>
+
+        <li> In the case of Continuous Futures Contract charts, only the data for the current symbol of the chart will be exported.  Not the prior contract months. If you want the prior contract months, you need to use the <a href="indexa20c.html?page=doc/EditMenu.html#ExportBarDatatoText">Export Bar Data to Text File</a> command instead.  However, that will not export the underlying data, only the bar data. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ImportLoadIntradayData">Import and Load</h2>
+    <div class="member-link">[<a href="#ImportLoadIntradayData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To import an Intraday data text file, follow the steps below.</p>
+    <ol>
+        <li>Sierra Chart needs to be disconnected from the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> in order to import an Intraday data file. </li>
+
+        <li> To be able to import an Intraday chart data file in a text format, it must be located in the Data Files Folder.  The path to the Data Files Folder can be determined through <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Data Files Folder</b>. So be sure the file to import is located in that folder. It must be. </li>
+
+        <li>The data file to be imported needs to be in the <a href="indexbbda.html?page=doc/TextCSVDataFormat.html">Text/CSV Data Format</a>. The data will already be in the correct format if the data was exported from Sierra Chart. Refer to the <a href="indexbbda.html?page=doc/TextCSVDataFormat.html">Text/CSV Data Format</a> page for the details.</li>
+
+        <li>Select <b class="menu_item">Edit &gt;&gt; Import and Load Intraday Data</b> on the menu. </li>
+
+        <li>There will be a prompt for an Intraday data text file to import. By default, the file name is based upon the same symbol as the active chart. </li>
+
+        <li>After you choose the file you want to import, press the <b>Open</b> button to open the file.</li>
+
+        <li> The next prompt is for the <b>Import Settings</b>. Select the <b>Line Format</b>. Normally you should use <b>Auto-Detect</b>. If you know the specific format of the data being imported, you can select it. In the case of CQG time and sales data you need to expressly select <b>CQG Time and Sales  Data</b>.</li>
+
+        <li> Select the appropriate <b>File Handling</b> option. In most cases you will choose the option to Overwrite the existing file.</li>
+
+        <li>Sierra Chart will import the Intraday data text file into a standard Intraday data file  format with the file extension <b>.scid</b> with the same symbol as the original Intraday data text file.</li>
+
+        <li>After a successful import, Sierra Chart will either reload the currently opened chart if it is the same symbol as the imported Intraday file, or open the imported data file in a new chart window.</li>
+
+        <li>If you are importing data with timestamps other than in GMT/UTC, then you must adjust the timestamps of the data after you do the import by using the <a href="indexaed4.html?page=doc/AdjustingData.html" Target="_blank" rel="noopener noreferrer">Adjust Data</a> feature. You will need to perform a <b>Time Adjustment </b> on the data. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="FormatOfExportedData">Format of Exported Data</h2>
+    <div class="member-link">[<a href="#FormatOfExportedData">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+        <p>The format of the exported data is as follows: <b>Date, Time, Open, High, Low, Last, Volume, NumberOfTrades, BidVolume, AskVolume</b>.</p>
+        
+        <p>In the case of when a data record consists of 1 tick/trade or Bid/Ask update records recorded with  <b>-BID_ASK_TRADE_SYNC</b>,  the <b>NumberOfTrades</b>   field will be set to 1 in this case, the Open  field is equal to the last trade price, the High field is equal to the Ask price, the Low  field is equal to the Bid price, and the  Last field is equal to the last trade price. The  Volume field is equal to the volume of the trade. </p>
+
+        <p> The time zone of the Date and Time values in the exported data are in UTC (Universal Coordinated Time). The millisecond portion of the time acts as a counter when there are multiple trades within the same second in the case of when there is  tick by tick (trade by trade) data being exported. </p>
+</section>
+
+<section class="h2">
+    <h2 id="Notes">Notes</h2>
+    <div class="member-link">[<a href="#Notes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Intraday data text files have the extension <b>.itxt</b> or <b>.txt</b>. The formatting of the file is straight-forward and very easy to edit. All fields can either be separated by commas or tabs. By default they are separated by commas. The first line always contains the header which explains all of the fields:</p>
+
+    <p class="GeneralBackgroundHighlightLight"><b>Date, Time, Open, High, Low, Last, Volume, Number of Trades, BidVolume, AskVolume</b></p>
+
+    <p>The Date is formatted as <b> YYYY/MM/DD</b>. The Time is formated as hh:mm:ss. All other fields are standard floating-point or integer numbers. If you are importing data from a source other than data exported by Sierra Chart, then there are various Date, Time and record formats that are supported.  For complete information, refer to the <a href="indexbbda.html?page=doc/TextCSVDataFormat.html">Text/CSV Data Format</a> page.</p>
+
+    <p>The Date and Time for each record in an exported Intraday data text file is always in GMT/UTC time, no matter what the Time Zone setting in Sierra Chart is. </p>
+</section>
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ImportExport.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:52 GMT -->
+</html>  

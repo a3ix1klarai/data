@@ -1,0 +1,1808 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSILProgrammingConcepts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1687168786') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACSILProgrammingConcepts.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>ACSIL Programming Concepts -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexd011.html?page=doc/ACSILProgrammingConcepts.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="indexd011.html?page=doc/ACSILProgrammingConcepts.html">ACSIL Programming Concepts</a></h4> </div>     <h1 class="PageName">ACSIL Programming Concepts</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#UniqueStudyInstanceIdentifiers" >Unique Study Instance Identifiers</a> </li>
+    <li><a href="#GlobalVariables">Global Variables</a></li>
+    <li><a href="#SystemsAndAlerts" >System Studies</a></li>
+    <li><a href="#WorkingWithTextStrings" >Working with SCString, Text Strings and Setting ACSIL Structure Member Name Strings</a>
+		<ul>
+		    <li><a href="#SCStringMemberFunctions">SCString Methods</a></li>
+		    <li><a href="#SCStringExamples">SCString Examples</a></li>
+		</ul>
+	</li>
+    <li><a href="#DynamicGraphNames">Dynamic Graph Names</a></li>
+    <li><a href="#UsingStudyData">Using or Referencing Study/Indicator Data in an ACSIL Function</a></li>
+    <li><a href="#ReferencingDataFromSpreadsheet">Referencing Data from a Sheet within a Spreadsheet</a></li>
+    <li><a href="#DirectProgrammaticInteractionWithSpreadsheetSheets">Direct Programmatic Interaction with Spreadsheet Sheets</a></li>
+    <li><a href="#DLLCalling">Making Function Calls to External DLLs</a></li>
+    <li><a href="#PassingACSILMembers">Passing ACSIL Interface Members Structure To Secondary Function</a></li>
+    <li><a href="#DynamicMemoryAllocations">Dynamic Memory Allocations Within Study Instance</a>
+		<ul>
+			<li><a href="#GettingAndSettingPersistentData">Alternative Method: Getting and Setting Persistent Data</a></li>
+			<li><a href="#AllocatingMemoryForClasses">Allocating Memory for Classes</a></li>
+		</ul>
+	</li>
+    <li><a href="#PriceLevelsSample">Study and Related Functions for Requesting Remote Data for Price Levels</a></li>
+    <li><a href="#OneTimeCalculations">One Time Calculations That Do Not Run During Study Updating</a></li>
+    <li><a href="#OneTimeProcessingperBar">One Time Processing per Bar in the Chart</a></li>
+    <li><a href="#AccessingMilliseconds">Accessing Milliseconds</a></li>
+    <li><a href="#CustomSubgraphColoring">Custom Subgraph Coloring</a></li>
+    <li><a href="#LimitingStudyAccess">Limiting Study Access to Particular Chartbook and Symbol</a></li>
+    <li><a href="#FindingStartOfDayIndex">Finding Chart Bar Data Array Index for Start of Day</a></li>
+    <li><a href="#CustomFreeFormDrawing">Custom Free Form Drawing into Chart Window Using GDI</a></li>
+    <li><a href="#ACSILScaleVariables">Scale Related ACSIL Variables</a></li>
+    <li><a href="#AccessingVolumePriceDataPerBar">Accessing Volume at Price  Data Per Bar</a></li>
+    <li><a href="#NotPerformingCalcDuringDataDownloadOrFullRecalc">Not Performing Calculation/Processing during Historical Data Downloading or Full Recalculation</a></li>
+    <li><a href="#NotAllowingStudySubgraphSettingsChanges">Not Allowing Changes to Study Subgraph Settings</a></li>
+    <li><a href="#ConvertingBetweenTimeZones">Converting Date-Time in One Time Zone to The User Set Time Zone</a></li>
+    <li><a href="#SkippingWithASubgraphDrawStyle">Skipping Bars/Columns with a Subgraph Draw Style</a></li>
+    <li><a href="#DetectingNewBarsAddedToChart" >Detecting New Bars Added to Chart</a></li>
+    <li><a href="#ActionWhenCertainTimeIsEncounteredInMostRecentBar" >Performing Action When Certain Time is Encountered in Most Recent Chart Bar</a></li>
+    <li><a href="#AccessingCurrentSymbolDataForOtherSymbols">Accessing Current Symbol Data for Other Symbols</a></li>
+    <li><a href="#ACSILChartDrawingsAndHidingAStudy">ACSIL Chart Drawings and Hiding a Study</a></li>
+    <li><a href="#GettingIndexOfStartOfTradingDay">Getting Index of  Start of Trading Day in Intraday Chart</a></li>
+    <li><a href="#AccessingDataFromAnotherChartAtSecondToLastIndex">Accessing Data from Another Chart at Second to Last Index</a></li>
+
+    <li><a href="#DisplayingCustomValuesInMarketDataColumnsOnTheChartTradeDOM">Displaying Custom Values in the Market Data Columns on the Chart / Trade DOM</a></li>
+    <li><a href="#DeterminingNewBarsWhenChartIsUpdated">Determining New Bars When Chart is Updated</a></li>
+     <li><a href="#UseOfDialogWindowsInAdvancedCustomStudies">Use of Dialog Windows in  Advanced Custom Studies</a></li>
+     
+     <li><a href="#FillingAnAreaBetweenTwoPriceLevels">Filling an Area Between Two Price Levels</a></li>
+     <li><a href="#DebugLogging">Debug Logging</a></li>
+     <li><a href="#UniquelyIdentifyingAnInstanceOfAStudy">Uniquely Identifying an Instance of a Study</a></li>
+     <li><a href="#DeterminingIfLastChartBarIsClosed">Determining if  Last Chart Bar is Closed</a></li>
+     <li><a href="#DrawingStudyInTwoDifferentChartRegions">Drawing Study in Two Different Chart Regions</a></li>
+     <li><a href="#CombiningIntradayChartFileRecordsIntoOriginalSummaryTrade">Combining Intraday Chart File Records into Original Summary Trade</a></li>
+     
+     <li><a href="#ProgrammaticallyAccessingHistoricalAndCurrentMarketDepthData">Programmatically Accessing Historical and Current Market Depth Data</a></li>
+     
+     <li><a href="#StudyInitializationUnitialization">Study Initialization/Unitialization</a></li>
+     <li><a href="#FloatingPointValueError">Floating Point Value Error</a></li>
+     <li><a href="#ACSILFileFunctions">ACSIL File Functions</a></li>
+     <li><a href="#KeyboardInteractionWithACSILStudies">Keyboard Interaction with ACSIL Studies</a></li>
+     
+</ul>
+
+<hr>
+
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page documents various programming concepts for <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php" target="_blank" rel="noopener noreferrer">ACSIL</a> (Advanced Custom Study Interface and Language).</p>
+</section>
+
+<section class="h2">
+    <h2 id="UniqueStudyInstanceIdentifiers">Unique Study Instance Identifiers</h2>
+    <div class="member-link">[<a href="#UniqueStudyInstanceIdentifiers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Each study has a unique instance identifier. Refer to the image below. Many  <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html">ACSIL Functions</a> require this identifier. </p>
+    
+     <p>   This identifier can be accessed through ACSIL with the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scStudyGraphInstanceID"  target="_blank" rel="noopener noreferrer">sc.StudyGraphInstanceID</a> variable.   This identifier is for the instance of the study that is accessing this value directly.</p>
+    
+    <div style="text-align: center;"><a href="../images/studyuniqueidentifier.png" rel="lightbox"><img src="../images/studyuniqueidentifier.png" alt="" width="500" class="screenshot" loading="lazy"></a></div>
+   
+    
+    <p> The proper way to obtain this unique study instance identifier for a particular study, from another study is through the <a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html#scInputSetStudyID">sc.Input[].SetStudyID()</a> and <a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html#scInputGetStudyID">sc.Input[].GetStudyID()</a> Input functions or other Input functions which create a study Input and allow getting of a study identifier.  <b>sc.Input[].SetStudyID()</b> creates a study Input with a list of studies on a chart and allow selecting one of them.</p>
+    
+     <p> Also refer to <a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html#scInputSetChartStudyValues">sc.Input[].SetChartStudyValues()</a>, <a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html#scInputGetChartNumber">sc.Input[].GetChartNumber()</a> and  <a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html#scInputGetStudyID">sc.Input[].GetStudyID()</a> Input functions.</p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="GlobalVariables">Global Variables</h2>
+    <div class="member-link">[<a href="#GlobalVariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In C++ it is possible to define global variables which are accessible from any of the study functions in your source code cpp file.  </p>
+    
+    
+    <p>Global variables should not be confused  with the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">Persistent  Variable Functions</a>  which can be used to get and set persistent variables for an individual study or other studies or studies on other charts.</p>
+
+    <p> There are generally 2 reasons why global variables would be used. 1. To share data between multiple study functions. 2. To maintain data between  calls to your study function.   </p>
+
+    <p>It is essential to understand, that when a DLL is released like when it is built, or when using <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL &gt;&gt; Build &gt;&gt;  Release All DLLs and  Deny Load</b>, then what you will find is that the global variables get reset. </p> 
+
+    <p>Global variables need to be at the top of your source code file and outside of your study function. Refer to the code example below.</p>
+
+    <p> Keep in mind that when a variable is global, there is only a single instance of it per DLL file.  Therefore, multiple instances of a particular study or multiple study functions, are going to be sharing the very same instance of a global variable in the DLL it is defined within.  </p>
+
+    <p>If you require basic variable types which are specific to each individual study instance, then you can store persistent data  by using the functions to <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">get and set persistent data</a>.</p>
+
+    <p>If you require nonbasic variable types which are specific to each individual study instance and remain persistent between calls to a study function, then refer to <a href="#DynamicMemoryAllocations">Dynamic Memory Allocations Within Study Instance</a>.</p>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+#include "SierraChart.h"
+SCDLLName("StudiesFileName")
+
+//This is a global integer variable
+int g_GlobalIntegerVariable;
+
+SCSFExport scsf_StudyFunction(SCStudyInterfaceRef sc)
+{
+    if (sc.SetDefaults)
+    {
+     
+    }
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SystemsAndAlerts">System Studies</h2>
+    <div class="member-link">[<a href="#SystemsAndAlerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>You are able to create, using the <b>Advanced Custom Study Interface and Language</b>, a System study. A System study is one in which gives you graphical, text and/or audible indication of buy and sell signals. This differs from an <A href="index2bf5.html?page=doc/ACSILTrading.html">Automated Trading</a> study  which can also submit simulated or live orders.</p>
+
+    <p>The custom study interface is the same whether you create an indicator type Study or a System study. In the case of a <b>Study</b> you will put your formula results into a <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData">sc.Subgraph[].Data</a> array or arrays that are graphed on the chart.</p>
+
+    <p>In the case of a <b>System </b> study you will fill the <b>sc.Subgraph[].Data</b> arrays with values indicating where you want to buy or sell at and use these together with the appropriate <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphDrawStyle">sc.Subgraph[].DrawStyle</a> to indicate buy and sell conditions. For example, in the case of a System, you could set the <b>sc.Subgraph[].Data</b> array element for the bar you want to give a buy signal at, to the price at which you will buy. And set the <b> sc.Subgraph[].DrawStyle</b> to <b>DRAWSTYLE_ARROW_UP</b>. If your study  is displayed in Chart Region 1 ( <b>sc.GraphRegion = 0;</b>), then the Up Arrow will be shown at the price level you set the corresponding  <b>sc.Subgraph[].Data</b> array element to.</p>
+
+    <p>If you require an audible or text indication of a buy or sell condition, then specify an Alert Condition Formula with your custom system study. For more information, refer to <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Alerts and Scanning</a>. Or, you can  add an alert message and play a sound directly from the study function using <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scSetAlert">sc.SetAlert</a>.</P>
+
+    <p>An example study function that acts as a System can be found in <b>Systems.cpp</b> inside the <b>/ACS_Source</b> folder inside of the folder that Sierra Chart is installed to.</p>
+</section>
+
+<section class="h2">
+    <h2 id="WorkingWithTextStrings">Working with SCString, Text Strings and Setting ACSIL Structure Member Name Strings</h2>
+    <div class="member-link">[<a href="#WorkingWithTextStrings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Some members of the Advanced Custom Study Interface (<b>sc</b> structure passed to your study function) use strings (a series of text characters).   In most cases these are implemented as an <b>SCString</b> type.  For functions that receive  a text string, these may just require a const character pointer (*) only or they may use an SCString type for the text string parameter.</p>
+
+    <p>To set or modify these SCStrings or names which use an SCString, to build your own formatted string, to compare strings, or to directly access the contents of an <b>SCString</b>  when you need to access the const character pointer (*), refer to the information below.</p>
+
+    <p>There is no need to have an understanding  of the internal implementation details of the SCString class.</p>
+
+    <section class="h3">
+        <h3 id="SCStringMemberFunctions">SCString Methods</h3>
+        <div class="member-link">[<a href="#SCStringMemberFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4>SCString::Clear()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">void Clear();</p>
+
+            <p>The <b>Clear()</b> function clears the data of an SCString object.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::Format()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">SCString& <b>Format</b>(const char* <b>String</b>, ...);</p>
+
+            <p>The <b>Format()</b> function overwrites the contents of the SCString object according to the given parameters. This function works the same as the C++ Standard Library <b>printf()</b> function.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::AppendFormat()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">SCString& <b>AppendFormat</b>(const char* <b>String</b>, ...);</p>
+
+            <p>The <b>AppendFormat()</b> function appends the given parameters to the end of the SCString object. This function works the same as the C++ Standard Library <b>printf()</b> function.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::Compare()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">int <b>Compare</b>(const char* <b>StringToCompare</b>, int <b>NumChars</b> = 0) const;</p>
+
+            <p>The <b>Compare</b> function makes a comparison between the SCString object and <b>StringToCompare</b> and returns 0 if they are the same. An optional NumChars can be supplied which will compare only the first NumChars between the strings, otherwise the entire string is compared.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::CompareNoCase()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">int <b>CompareNoCase</b>(const char* <b>StringToCompare</b>, int <b>NumChars</b> = 0) const;</p>
+            <p class="ACSILFunctionHighlighting">int <b>CompareNoCase</b>(const SCString& <b>StringToCompare</b>, int <b>NumChars</b> = 0) const;</p>
+
+            <p>The <b>CompareNoCase()</b> function works the same as the <b>Compare()</b> function, except that character case is ignored in the comparison.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::IsModified()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">int IsModified() const;</p>
+
+            <p>The <b>IsModified()</b> function returns 1 if the SCString object has been modified or 0 if it has not been modified.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::IsEmpty()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">int <b>IsEmpty</b>() const;</p>
+
+            <p>The <b>IsEmpty()</b> function returns a value of 1 if the SCString object is an empty string, otherwise it returns a value of 0.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::GetChars()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">const char* <b>GetChars</b>() const;</p>
+
+            <p>The <b>GetChars()</b> function returns the string contained in the SCString object.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::GetLength()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">int <b>GetLength</b>() const;</p>
+
+            <p>The <b>GetLength()</b> function returns the number of characters that make up the SCString object.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::IndexOf()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">int <b>IndexOf</b>(char <b>Delimiter</b>, int <b>StartIndex</b> = 0) const;</p>
+
+            <p>The <b>IndexOf()</b> function returns the position of the first occurrence of the <b>Delimeter</b> character within the SCString object. The optional <b>StartIndex</b> defines the starting location of the search in terms of position within the SCString object starting at 0.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::GetSubString()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">SCString <b>GetSubString</b>(int <b>SubstringLength</b>, int <b>StartIndex</b> = 0) const;</p>
+
+            <p>The <b>GetSubString()</b> function returns the substring of the SCString object that starts at the <b>StartIndex</b> and is <b>SubStringLength</b> number of characters long.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::ParseLines()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">void <b>ParseLines</b>(std::vector&lt;SCString&gt; &amp;<b>Lines</b>);</p>
+
+            <p>The <b>ParseLines</b> function parses the SCSTring object looking for \n (newline) characters and placing each string prefacing the \n into the <b>Lines</b> vector.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::ParseLineItemsAsFloats()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">void <b>ParseLineItemsAsFloats</b>(std::vector&lt;float&gt; &amp;<b>FloatValues</b>);</p>
+
+            <p>The <b>ParseLineItemsAsFloats()</b> function parses the SCString object looking for \n (newline) characters and placing each floating point value prefacing the \n into the <b>FloatValues</b> vector.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::Tokenize()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">int <b>Tokenize</b>(const char* <b>Delim</b>, std::vector&lt;char*&gt;&amp; <b>Tokens</b>);</p>
+
+            <p>The <b>Tokenize()</b> function parses the SCString object looking for the <b>Delim</b> character and placing each string prefacing the <b>Delim</b> into the <b>Tokens</b> vector.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::Append()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">SCString&amp; <b>Append</b>(const SCString&amp; <b>Rhs</b>);</p>
+
+            <p>The <b>Append()</b> function appends the contents of the <b>Rhs</b> string to the end of the SCString object.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::Left()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">SCString <b>Left</b>(int <b>Count</b>) const;</p>
+
+            <p>The <b>Left()</b> function returns the substring from the SCString object that is the number of characters defined by <b>Count</b> starting from the left side (beginning) of the SCString object when <b>Count</b> is positive.  </p>
+            
+            
+            <p>If <b>Count</b> is negative, then the substring starts at the left side (beginning) of the SCString object, but has <b>Count</b> number of characters removed from the right side (end) of the SCString object. If <b>Count</b> is negative and would result in the return of no data, then a NULL string is returned.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::Right()</h4>
+
+            <p><b>Type</b>: Function</p>
+
+            <p class="ACSILFunctionHighlighting">SCString <b>Right</b>(int <b>Count</b>) const;</p>
+
+            <p>The <b>Right()</b> function returns the substring from the SCString object that is the number of characters defined by <b>Count</b> starting from the right side (end) of the SCString object when <b>Count</b> is positive. If <b>Count</b> is negative, then the substring starts at the right side (end) of the SCString object, but has <b>Count</b> number of characters removed from the left side (beginning) of the SCString object. If <b>Count</b> is negative and would result in the return of no data, then a NULL string is returned.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::operator ==</h4>
+
+            <p><b>Type</b>: Operator</p>
+
+            <p class="ACSILFunctionHighlighting"><b>==</b></p>
+
+            <p>The <b>==</b> operator performs a comparison between the SCString object on the left-hand side and another SCString object or a Character String on the right-hand side. Returns True if the strings are the same, otherwise returns False.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::operator !=</h4>
+
+            <p><b>Type</b>: Operator</p>
+
+            <p class="ACSILFunctionHighlighting"><b>!=</b></p>
+
+            <p>The <b>!=</b> operator performs a comparison between the SCString object on the left-hand side and another SCString object or a Character String on the right-hand side. Returns True if the strings are not the same, otherwise returns False.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::operator &lt;</h4>
+
+            <p><b>Type</b>: Operator</p>
+
+            <p class="ACSILFunctionHighlighting"><b>&lt;</b></p>
+
+            <p>The <b>&lt;</b> operator performs a comparison between the SCString object on the left-hand side and another SCString object or a Character String on the right-hand side. Returns True if the first character that does not match is a lower value in the left-hand side than in the right-hand side, otherwise returns False.</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::operator =</h4>
+
+            <p><b>Type</b>: Operator</p>
+
+            <p class="ACSILFunctionHighlighting"><b>=</b></p>
+
+            <p>The <b>=</b> operator replaces the contents of the SCString on the left-hand side with the SCSTring or Character string on the right-hand side. This also sets the SCString as having been modified (m_IsModified is set to a value of 1).</p>
+        </section>
+
+        <section class="h4">
+            <h4>SCString::operator +=</h4>
+
+            <p><b>Type</b>: Operator</p>
+
+            <p class="ACSILFunctionHighlighting"><b>+=</b></p>
+
+            <p>The <b>+=</b> operator appends the contents of the right-hand side to the SCString on the left-hand side.</p>
+        </section>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="SCStringExamples">SCString Examples</h3>
+        <div class="member-link">[<a href="#SCStringExamples">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4>Setting a SCString Name To A Constant String</h4>
+
+            <section class="h5">
+                <h5>Code Example</h5>
+                <pre class="Code FullLineHeight">
+sc.GraphName = "My Study Graph";
+                </pre>
+            </section>
+        </section>
+
+
+        <section class="h4">
+            <h4 id="FormattedTextString">Creating Strings that Consist of Numbers and Text</h4>
+            <div class="member-link">[<a href="#FormattedTextString">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You are able  to build text strings that contain numbers and other strings by using the <b>Format()</b> and <b>AppendFormat()</b> member   functions of the <b>SCString</b> class.  </p>
+
+            <p>The <b>Format()</b> function assigns the formatted string to the <b>SCString</b> object, overwriting any existing string contents. The <b>AppendFormat()</b> function adds the formatted string to the end of any existing string contents currently in the <b>SCString</b> object. </p>
+
+            <p> The parameters of the <b>Format()</b> and <b>AppendFormat()</b> functions work exactly like the C++ standard library <b>printf()</b> function. For reference on the <b>printf()</b> function,  refer to the <a href="http://www.cplusplus.com/reference/cstdio/printf/" target="_blank" rel="noopener noreferrer">the printf reference</a>.</p>
+
+            <section class="h5">        
+                <h5>Date Text String Example</h5>
+
+                <p>This creates a text string with a date without any spaces.</p>
+                <pre class="Code FullLineHeight">
+SCString DateText;
+int  Year, Month, Day;
+sc.BaseDateTimeIn[sc.Index].GetDateYMD(Year,Month,Day);
+DateText.Format("%d%02d%02d", Year,Month,Day);
+                </pre>
+            </section>
+
+            <section class="h5">        
+                <h5>Formatting Value to Chart Value Format</h5>
+
+                <p>This creates a text string with the last trade price formatted according to the chart Value Format. This does   not use  <b>SCString::Format()</b>.</p>
+                <pre class="Code FullLineHeight">
+SCString FormattedValue;
+sc.FormatGraphValue(sc.BaseData[SC_CLOSE][sc.Index], sc.ValueFormat);
+                </pre>
+            </section>
+
+            <section class="h5">
+                <h5>sc.GraphName String Code Example</h5>
+
+                <p> sc.GraphName will be set to the string created by the Format function.</p>
+                <pre class="Code FullLineHeight">
+int ExampleNumber = 5;
+
+sc.GraphName.Format("Example %d", ExampleNumber); 
+                </pre>
+
+                <pre class="Code FullLineHeight">
+SCString TestString;
+float Value = 4.5;
+TestString.Format("%s %.2f", "Value is:", Value);
+                </pre>
+            </section>
+
+            <section class="h5">
+                <h5>SCString within SCString Code Example</h5>
+
+                <p>You will notice in the example below that we use the <b>GetChars()</b> function on the <b>SCString </b> to be able to access the internal C++ character pointer which is necessary when using this class with the SCString <b>Format()</b> and <b>AppendFormat()</b> functions.  </p>
+
+                <p>If we do not do this, it can lead to what is known as a CPU exception that you will see displayed in the Sierra Chart Message Log and additionally you will not get a properly formatted string.</p>
+
+                <pre class="Code FullLineHeight">
+SCString BarLabelText;            
+BarLabelText.Format("HL %s (%s)", ReversalPrice.GetChars(), LengthStr.GetChars()); 
+                </pre>
+            </section>
+
+            <section class="h5">
+                <h5>Building a Character String for the sc.AddMessageToLog() or sc.AddAlertLine() Functions</h5>
+
+                <p>If you want to add messages to the log using the <b><A href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scAddMessageToLog" >sc.AddMessageToLog()</A></b> or <b><A href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scAddAlertLine" >sc.AddAlertLine()</A></b> functions, and have the messages contain variables, use a <b>SCString</b> and the <b>Format()</b> function.</p>
+
+                <pre class="Code FullLineHeight">
+int MyInt = 50;
+
+float MyFloat = 2.5f;
+SCString Buffer;
+Buffer.Format("My integer is %d. My float is: %f", MyInt, MyFloat);
+
+sc.AddMessageToLog(Buffer,0); 
+                </pre>
+            </section>
+        </section>        
+
+        <section class="h4">
+            <h4>Using a Formated String With The Text Tool</h4>
+
+            <p>If you want to use the  <a href="index1397.html?page=doc/ACSILDrawingTools.html">sc.UseTool</a> function to display text that contains variables as text, use the <b>Format()</b> and <b>AppendFormat()</b> member functions.</p>
+
+            <p>The <b>Format()</b> function assigns the formatted string to the <b>SCString</b> object, overwriting any existing string contents, and the <b>AppendFormat()</b> function adds the formatted string to the end of any existing string contents currently in the <b>SCString</b> object.  </p>
+
+            <p>The parameters of the <b>Format()</b> and <b>AppendFormat()</b> functions work exactly like the C++ standard library <b>printf()</b> function. For reference on the <b>printf()</b> function,  refer to <a href="http://www.cplusplus.com/reference/cstdio/printf/" target=_blank>this page</a>.</p>
+
+            <section class="h5">
+                <h5>Code Example</h5>
+                <pre class="Code FullLineHeight">
+s_UseTool Tool;
+Tool.Text.Format("High Value: %.3f",sc.BaseDataIn[SC_HIGH][123]);
+                </pre>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="HowToCompareStrings">How To Compare Strings</h4>
+            <div class="member-link">[<a href="#HowToCompareStrings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You can compare a SCString to another string using the <b>SCString CompareNoCase(const char* <b>String</b>, int <b>NumChars</b>)</b> or <b>SCString CompareNoCase(SCString <b>String</b>, int <b>NumChars</b>)</b> functions.  </p>
+
+            <p>These functions compare <b>String</b> to the string in the <b>SCString</b> these functions are called from, using a case-insensitive comparison up to the first <b>NumChars</b> characters of the two strings. </p>
+
+            <p>If <b>NumChars</b> is left out, then the function compares all the characters of the two strings. </p>
+
+            <p>The function returns 0 if both strings are equal up to the given length, an integer &lt; 0 if <b>String</b> is lexically less than the string in <b>SCString</b>, and an integer &gt; 0 if <b>String</b> is lexically greater than the string in <b>SCString</b>.</p>
+
+            <section class="h5">
+                <h5>Code Example</h5>
+                <pre class="Code FullLineHeight">
+int Result;
+Result = sc.Symbol.CompareNoCase("ABC");
+
+SCString SymbolToCompare("ABC");
+Result = sc.Symbol.CompareNoCase(SymbolToCompare); 
+                </pre>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h3 id="DirectlyAccessingSCString">Directly Accessing a SCString</h3>
+            <div class="member-link">[<a href="#DirectlyAccessingSCString">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You can use the <b>GetChars</b> function to directly access a SCString. This function returns a pointer to a C++ <b>char</b> type.</p>
+
+            <section class="h5">        
+                <h5>Code Example</h5>
+
+                <pre class="Code FullLineHeight">
+const char* p_Symbol;
+p_Symbol = sc.Symbol.GetChars(); 
+                </pre>
+            </section>
+
+            <section class="h5">        
+                <h5>Assigning to C++ string Code Example</h5>
+
+                <pre class="Code FullLineHeight">
+std::string SymbolCopy;
+SymbolCopy = sc.Symbol.GetChars(); 
+                </pre>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="SCStringPlusEqualOperator">SCString += operator (Text String Concatenation)</h4>
+            <div class="member-link">[<a href="#SCStringPlusEqualOperator">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You can use the SCString += operator to concatenate multiple text strings into a larger text string. Refer to the code example below.</p>
+
+            <section class="h5">
+                <h5>Code Example</h5>
+                <pre class="Code FullLineHeight">
+SCString ExampleText;
+Text = "Dog";
+Text += "and Lion"; 
+                </pre>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="SCStringGetLength">SCString::GetLength()</h4>
+            <div class="member-link">[<a href="#SCStringGetLength">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>To get the length of a text string contained within a SCString object, call <b>GetLength</b> function on it. Refer to the example below.</p>
+
+            <section class="h5">
+                <h5>Code Example</h5>
+                <pre class="Code FullLineHeight">
+SCString TextString;
+TextString = "Hello";
+int Length = TextString.GetLength(); // will be set to 5
+                </pre>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="SCString_GetSubString">SCString::GetSubString()</h4>
+            <div class="member-link">[<a href="#SCString_GetSubString">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>To get a text string within an existing SCString, use the  <b>GetSubString(int SubstringLength, int StartIndex) </b> function.  </p>
+
+            <p>This function returns the string  of the length specified by the <b>SubstringLength</b> parameter starting at the <b>StartIndex</b> parameter. If SubstringLength is longer than the number of characters available beginning with StartIndex, then it is reduced as is required.</p>
+
+            <p>If StartIndex is equal to or beyond the length of the SCString, then an empty string is returned.</p>
+
+            <p>The returned  SCString is a copy of the substring within the SCString.</p>
+
+            <section class="h5">
+                <h5>Code Example</h5>
+                <pre class="Code FullLineHeight">
+SCString TextString = "Hello, this is a test.";
+SCString PartialTextString = TextString.GetSubString(5, 0); // This will return "Hello"
+                </pre>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="FunctionsThatUseConstantCharacterPointerOrSCStringParameters">Functions that use Constant Character Pointer  or SCString Parameters</h4>
+            <div class="member-link">[<a href="#FunctionsThatUseConstantCharacterPointerOrSCStringParameters">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>To pass a text string parameter to a function that uses a constant character pointer or a SCString, refer to the examples below.</p>
+
+            <section class="h5">
+                <h5>Code Example</h5>
+                <pre class="Code FullLineHeight">
+s_SCBasicSymbolData BasicSymbolData;            
+sc.GetBasicSymbolData("ABCD", BasicSymbolData, true);//function uses constant character pointer
+
+SCString Symbol;
+sc.GetBasicSymbolData(Symbol.GetChars(), BasicSymbolData, true);//function uses constant character pointer
+
+SCString MessageText;
+MessageText = "Hello. This is a test.";
+sc.AddAlertLineWithDateTime(MessageText.GetChars(), 1, sc.BaseDateTimeIn[sc.Index] );//function uses constant character pointer
+
+void sc.AddMessageToLog(MessageText, 1);//function supports both SCString and constant character pointer.
+                
+std::string MessageText2;
+MessageText2 = "Hello. This is a test.";
+void sc.AddMessageToLog(MessageText2.c_str(), 1);//function supports both SCString and constant character pointer.            </pre>
+            </section>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DynamicGraphNames">Dynamic Graph Names</h2>
+    <div class="member-link">[<a href="#DynamicGraphNames">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Suppose you want to change the name of your study or the name of a study Subgraph in your study to match an Input value. Setting the name inside of the code block for setting the study defaults will not work because the code inside of that code block only gets executed once. </p>
+
+    <p>For a dynamic name, you will need to add some code outside of the code block for setting the study defaults. Look at the example below to see how this is done.</p>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+SCSFExport scsf_DynamicNameExample(SCStudyInterfaceRef sc)
+{
+
+    // Set configuration variables
+    if (sc.SetDefaults)
+    {
+        sc.Subgraph[0].Name = "Subgraph";
+
+        sc.Input[0].Name = "Value";
+        sc.Input[0].SetFloat(1.5f);
+
+        return;
+    }
+
+    // Set the subgraph name to include the Value input
+    // This must be outside the above if (sc.SetDefaults) code
+    // block so that it gets executed every time
+    sc.Subgraph[0].Name.Format("Value %f Subgraph", sc.Input[0].GetFloat());
+
+    sc.GraphName.Format("%s - Close = %f",sc.Symbol.GetChars(),sc.BaseDataIn[SC_LAST][sc.ArraySize-1]);
+
+    // Do data processing
+
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="UsingStudyData">Using or Referencing Study/Indicator Data in an ACSIL Function</h2>
+    <div class="member-link">[<a href="#UsingStudyData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In your custom study function you may need to work with the results of other studies/indicators, like a Moving  Average or some other study. There are several methods to accomplish this.</p>
+
+    <ul>
+        <li>Use one of the  Intermediate Study Calculation Functions like <b>sc.SimpleMovAvg</b>. Refer to  <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html" target="_blank" rel="noopener noreferrer">ACSIL Interface Members - Functions</a> page for complete documentation for all of the available functions.  This is going to be the cleanest and most organized way to do it as long as there is an Intermediate Study Calculation Function available for the particular study or indicator that you want calculated and to use the data of. 
+        <br> <br>
+        The results of the study calculations do not have to be outputted to study Subgraph arrays which are graphed on the chart. Or if they are, those Subgraphs  can have their <b>Draw Style</b> set to <b>Ignore</b> so they are not visible.</li>
+
+        <li>Add the study to the chart and then get the Study Subgraph  data by using the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyArrayUsingID" target="_blank" rel="noopener noreferrer">sc.GetStudyArrayUsingID</a> function.  Use this method when there is no Intermediate Study Calculation Function available for the particular study or indicator that you want to calculate and use the data of.   This is going to be the case when you are using studies developed by outside   developers or are using Advanced Custom Studies that do not have an Intermediate Study Calculation Function.
+            <br>
+            <br>
+            Once the study is added to the chart it can be hidden by enabling the <b>Hide Study </b> setting in the   <b>Study Settings</b> window for the study.
+            <br>
+            <br>
+            You may also want to use this method, if the study that you want to  calculate and get the data of, is <em>already on the chart</em>.</li>
+
+        <li>Somewhat related to this is the ability to access the additional arrays, sc.Subgraph[].Arrays[][], from other studies on the chart. This can be done with the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyExtraArrayFromChartUsingID" target="_blank" rel="noopener noreferrer">sc.GetStudyExtraArrayFromChartUsingID()</a> function.</li>
+
+        <li>To access a persistent variable set in one study, from another study. The functions for setting persistent variables are <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt" target="_blank" rel="noopener noreferrer">sc.GetPersistent*</a>. 
+            <br> <br>
+            The functions for getting the persistent variables in another study are <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentIntFromChartStudy" target="_blank" rel="noopener noreferrer">scGetPersistent*FromChartStudy</a>.  </li>
+
+        <li>It is also supported to reference studies like a  <a href="index315b.html?page=doc/StudiesReference.php&amp;ID=245#Color_Bar_Based_on_Alert_Condition" target="_blank" rel="noopener noreferrer">Color Bar Based on Alert Condition</a> study. This study colors bars. Where it colors bars, the Subgraph element  at the bar index that is colored, is set to a nonzero value (usually 1.0).  It is supported to get the Subgraph array from that study by using the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyArrayUsingID" target="_blank" rel="noopener noreferrer">sc.GetStudyArrayUsingID</a>  function as explained above.</li>
+        
+        <li> To get study arrays on other charts in the Chartbook, refer to <a href="indexa852.html?page=doc/ACSILRefOtherTimeFrames.php#DirectReferencing" target="_blank" rel="noopener noreferrer">Referencing Data from Other Time Frames By Direct Referencing of the Other Timeframe</a>.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="ReferencingDataFromSpreadsheet">Referencing Data from a Sheet within a Spreadsheet</h2>
+    <div class="member-link">[<a href="#ReferencingDataFromSpreadsheet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php" >Spreadsheet Study</a> on a chart, the main price graph data and study data is outputted to a Sheet within a Spreadsheet window. There are also up to 60 Formula Columns on the Sheet which can contain formulas and display the results those formulas. </p>
+
+    <p>An Advanced Custom Study is able to access the formula results from those 60 formula columns at any row. </p>
+
+    <p> Each Sheet Formula Column corresponds to a Study Subgraph in the <b>Spreadsheet Study</b>. You are able to access  the data from the Spreadsheet Study by using the <a href="#UsingStudyData">Using Study/Indicator Data in an ACSIL Function</a>  methods.</p>
+
+    <p>The <b>Spreadsheet Study</b> is just like any other study on the chart and can have its data accessed by an Advanced Custom Study. In the Spreadsheet Sheet used by the  <b>Spreadsheet Study</b>, Column <b> K</b> is accessible with the <b>sc.Subgraph[0].Data</b> Subgraph array,  Column <b>M</b> is accessible with the <b>sc.Subgraph[1].Data</b> Subgraph array, and so on.</p> 
+
+    <p> However, there is a special consideration involving <a href="index9099.html?page=doc/ChartStudies.html#StudyCalculationPrecedence">Calculation Precedence</a>.</p>
+
+    <p> It is necessary to set <b>sc.CalculationPrecedence = VERY_LOW_PREC_LEVEL</b> in the  <b>sc.SetDefaults</b> code block in the study function referencing the Spreadsheet Study. It is also necessary to place the instance of the study referencing the Spreadsheet Study at the end of the list of studies in the <b Class = "menu_item">Analysis &gt;&gt; Studies</b> <b>&gt;&gt; Studies to Graph</b> list.</p>
+</section>
+
+    
+<section class="h2">
+    <h2 id="DirectProgrammaticInteractionWithSpreadsheetSheets">Direct Programmatic Interaction with Spreadsheet Sheets</h2>
+    <div class="member-link">[<a href="#DirectProgrammaticInteractionWithSpreadsheetSheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> It is supported to directly get and set cell data from/to Sierra Chart Spreadsheets Sheets using ACSIL.  Refer to the following functions.</p>
+
+    <ul>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetSheetCellAsDouble">sc.GetSheetCellAsDouble()</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scSetSheetCellAsDouble">sc.SetSheetCellAsDouble()</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetSheetCellAsString">sc.GetSheetCellAsString()</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scSetSheetCellAsString">sc.SetSheetCellAsString()</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetSpreadsheetSheetHandleByName">sc.GetSpreadsheetSheetHandleByName()</a></li>
+    </ul>
+    
+      <p> For a code example, refer to the  <b>/ACS_Source/ACSILSpreadsheetInteraction.cpp</b> source code file in the Sierra Chart installation folder. </p>
+</section>
+
+<section class="h2">
+    <h2 id="DLLCalling">Making Function Calls to External DLLs</h2>
+    <div class="member-link">[<a href="#DLLCalling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>You are able to call DLL functions in an external DLL file from an Advanced Custom study. The functions you will use to accomplish this are the Windows functions <b>LoadLibrary</b> and <b>GetProcAddress</b>. This is discussed on the <a href="https://msdn.microsoft.com/en-us/library/ms686944(VS.85).aspx" target="_blank" rel="noopener noreferrer">Using Run-Time Dynamic Linking</a> page on the  MSDN website.</p>
+
+    <p>The recommended method with handling the loading of the library is to define a global HMODULE variable at the top of your source code file outside of a  study function. If it defined is outside of a study function, it will be global. HMODULE is the type returned by LoadLibrary().</p>
+    
+    <p>In your study function, if this variable is 0 or NULL, then make a call to LoadLibrary() and then set the HMODULE global variable with the handle. Otherwise, the library is already loaded and you can use the global  HMODULE variable when you call <b>GetProcAddress()</b>.   There is no need to free the library because that will be done when Sierra Chart is exited.</p>
+    
+    
+    <p> The DLL can be put either into the Sierra Chart main installation folder or into the <b>Data</b> subfolder assuming that is set as the current   <a href="index899f.html?page=doc/GeneralSettings.html#DataFilesFolder" >Data Files Folder</a>.   In either of these cases, when calling  <b>LoadLibrary  </b> there is no  need to specify the path, only the file name.  </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="PassingACSILMembers">Passing ACSIL Interface Members Structure To Secondary Function</h2>
+    <div class="member-link">[<a href="#PassingACSILMembers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is possible to call a secondary function from your primary study function and have it be able to access all of the ACSIL  <b>sc</b> interface members.  To do this you just need to pass the <b> sc </b> object by reference as demonstrated in the code below.</p>
+    
+    <p> For additional information, refer to  <a href = "index72d7.html?page=doc/cpp_Functions.php">C++ Functions</a>.</p>
+    
+    
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+/*==========================================================================*/
+void PassingSCStrutureExampleFunction(SCStudyInterfaceRef sc)
+{
+	//The "sc" structure can be used anywhere within this function.
+}
+
+/*============================================================================
+"An example of calling a function that receives the Sierra Chart ACSIL structure (sc)."
+----------------------------------------------------------------------------*/
+SCSFExport scsf_PassingSCStrutureExample(SCStudyInterfaceRef sc)
+{
+	if (sc.SetDefaults)
+	{
+		// Set the configuration and defaults
+		
+		sc.GraphName = "Passing sc Structure Example Function";
+		
+		sc.StudyDescription = "An example of calling a function that receives the Sierra Chart ACSIL structure (sc).";
+
+		
+		return;
+	}
+	
+	// Do data processing
+
+	// The definition of the function called below must be above this function.a
+	PassingSCStrutureExampleFunction(sc);
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DynamicMemoryAllocations">Dynamic Memory Allocations Within Study Instance</h2>
+    <div class="member-link">[<a href="#DynamicMemoryAllocations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Within an instance of an Advanced Custom Study, it is possible to dynamically allocate memory which remains persistent between study function calls. The code example below demonstrates this.  </p>
+
+    <p>The code allocates the memory when it sees that the allocation does not exist and releases the memory when the study instance is removed from the chart or the Chartbook is closed.</p>
+
+    <p>When Sierra Chart is browsing through all of the studies in the DLL file in order to provide a listing of them, it needs to call the study function with  <b>sc.SetDefaults</b> set to 1 but the study function should not be doing any data processing or memory allocations because Sierra Chart only needs to get the <b>sc.GraphName</b>. For this reason,   the allocation of memory must never be done in the <b>sc.SetDefaults</b> code block.</p>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+
+SCSFExport scsf_DynamicMemoryAllocationExample(SCStudyInterfaceRef sc)
+{
+	if (sc.SetDefaults)
+	{
+		// Set the configuration and defaults
+
+		sc.GraphName = "Dynamic Memory Allocation Example";
+
+		sc.AutoLoop = 1;
+
+		return;
+	}
+
+
+	// Do data processing
+	double * p_DoubleArray = (double*)sc.GetPersistentPointer(1);
+
+	if(sc.LastCallToFunction)
+	{
+		if(p_DoubleArray != NULL)
+		{
+			sc.FreeMemory( p_DoubleArray);
+			sc.SetPersistentPointer(1, NULL);
+		}
+
+		return;
+	}
+
+	if(p_DoubleArray == NULL)
+	{
+		//Allocate an array of 1024 doubles.
+		p_DoubleArray = (double *) sc.AllocateMemory( 1024 * sizeof(double) );
+
+		if(p_DoubleArray != NULL)
+			sc.SetPersistentPointer(1, p_DoubleArray);
+		else
+			return;
+	}
+
+	//assign value to one of the elements
+	p_DoubleArray[0] = 100;
+
+	return;
+}
+        </pre>
+    </section>
+
+    <section class="h3">
+        <h3 id="GettingAndSettingPersistentData">Alternative Method: Getting and Setting Persistent Data</h3>
+        <div class="member-link">[<a href="#GettingAndSettingPersistentData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>As an alternative to dynamic memory allocations, there is also the ability to store persistent data of various <em>simple types</em> by using the functions to <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">get and set persistent data</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AllocatingMemoryForClasses">Allocating Memory for Classes</h3>
+        <div class="member-link">[<a href="#AllocatingMemoryForClasses">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When allocating memory for class types which use constructors  and destructors, it is necessary to use the C++ functions <b> new </b> and <b>delete </b> instead of the <b>sc.AllocateMemory</b> and <b>sc.FreeMemory</b> functions. Refer to the code example below.</p>
+
+        <p> When using <b>new</b> and <b>delete</b> in the study function it is necessary to   understand that   when a DLL is  rebuilt, or when using <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL &gt;&gt; Build &gt;&gt;  Release All DLLs and  Deny Load</b>, an exception will later occur when using delete due to the memory address not being valid any longer. </p>
+        
+        <p> Therefore, first before releasing the DLL, the memory must get released by the study function and the pointers set to null before the DLL is unloaded. Otherwise, there are going to be exceptions if that memory is used again because the operating system will have released the memory when the DLL is unloaded. </p>
+
+        <p> For an example of a dynamically allocated <a href="http://www.cplusplus.com/reference/vector/vector/" Target="_blank" rel="noopener noreferrer">STL vector</a>, refer to the function <b>TradingLevelsStudyCore </b> in the <b>/ACS_Source/RequestValuesFromServerAndDraw.cpp</b> file in the Sierra Chart installation folder. </p>
+
+        <section class="h4">
+            <h4>Code Example</h4>
+            <pre class="Code FullLineHeight">
+if (sc.SetDefaults)
+{
+    // Set the configuration and defaults
+
+    sc.GraphName = "Dynamic Memory Allocation Example (new/delete)";
+
+    sc.AutoLoop = 1;
+
+    return;
+}
+
+//Example class
+class ClassA
+{
+public:
+    int IntegerVariable;
+};
+
+// Do data processing
+ ClassA * p_ClassA = (ClassA *)sc.GetPersistentPointer(1);
+
+if(sc.LastCallToFunction)
+{
+    if(p_ClassA != NULL)
+    {
+        delete p_ClassA;
+        sc.SetPersistentPointer(1, NULL);
+    }
+
+    return;
+}
+
+if(p_ClassA == NULL)
+{
+    //Allocate one instance of the class
+    p_ClassA = (ClassA *) new ClassA;
+
+    if(p_ClassA != NULL)
+        sc.SetPersistentPointer(1, p_ClassA);
+    else
+        return;
+}
+
+int IntegerVariable = p_ClassA->IntegerVariable;
+
+return;
+            </pre>
+        </section>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="PriceLevelsSample">Study and Related Functions for Requesting Remote Data for Price Levels</h2>
+    <div class="member-link">[<a href="#PriceLevelsSample">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For a working code example to request price levels from a remote server and display them on a chart, refer to the <b>scsf_TradingLevelsStudy()</b> function in the <b>/ACS_Source/RequestValuesFromServerAndDraw.cpp</b> file. This is only available with version 1227 and higher.</p>
+
+    <p>The  study function is designed to work with data on the server in the following format:</p>
+
+    <p>2014/01/01, 1, 2, 3, 4, 5, 6, 7, 8<br>
+        2014/01/02, 1, 2, 3, 4, 5, 6, 7, 8</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="OneTimeCalculations">One Time Calculations That Do Not Run During Study Updating</h2>
+    <div class="member-link">[<a href="#OneTimeCalculations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If there are calculations or other program statements you want to run only once in a study function and not every time the study is updated, then check  <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIndex"  target="_blank" rel="noopener noreferrer">sc.Index</a> == 0.  Refer to code below.  With this check, any code within the "if" block will only run when the study is fully recalculated.  This code applies when using  <a href="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html#AutomaticLoopingIterating" target="_blank" rel="noopener noreferrer">Automatic Looping</a> only. </p>
+
+    <p>A full recalculation occurs under various conditions, like when a study is added to the chart,  or when a Chartbook is opened.  During normal study updating, the code will not run unless the chart only has 1 bar/column.</p>
+    <pre class="Code FullLineHeight">
+if(sc.Index == 0)
+{
+    //Code to run only on study full recalculation
+}
+    </pre>
+
+</section>
+
+<section class="h2">
+    <h2 id="OneTimeProcessingperBar">One Time Processing per Bar in the Chart</h2>
+    <div class="member-link">[<a href="#OneTimeProcessingperBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <pre class="Code FullLineHeight">
+//This demonstrates a simple method to prevent processing on a bar more than once. 
+//All bars in the chart other than the last one are only going to have processing for them in a study function, done only once. 
+//However, the last bar in the chart could be multiple times during real-time updating and during a chart replay.
+
+int &amp;LastBarIndexProcessed = sc.GetPersistentInt(1);
+
+if (sc.Index == 0)
+    LastBarIndexProcessed = -1;
+
+if(sc.Index == LastBarIndexProcessed)
+    return;
+
+LastBarIndexProcessed = sc.Index;
+    </pre>
+
+</section>
+
+<section class="h2">
+    <h2 id="AccessingMilliseconds">Accessing Milliseconds</h2>
+    <div class="member-link">[<a href="#AccessingMilliseconds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The internal value held within a <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime  variable</a> may contain a millisecond value. For example, when a chart is set to 1 tick per bar or when the chart bars are not based upon a fixed amount of time, like when they are based upon a Number of Trades or Volume, the starting time of the bar may contain milliseconds.</p>
+
+    <p>Therefore, the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDateTimeIn">sc.BaseDateTimeIn[]</a> array Date-Time values can contain milliseconds. </p> 
+
+    <p>Use the <b>SCDateTime::GetMilliSecond()</b>  and <b>SCDateTime::GetDateTimeYMDHMS_MS</b> functions to get the milliseconds.</p>
+</section>
+
+<section class="h2">
+    <h2 id="CustomSubgraphColoring">Custom Subgraph Coloring</h2>
+    <div class="member-link">[<a href="#CustomSubgraphColoring">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>ACSIL supports custom coloring study Subgraphs at each chart column/bar.  This is accomplished by setting a custom RGB value through the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphDataColor">sc.Subgraph[].DataColor[]</a> array.</p>
+
+    <p> Generally it is a good idea to make the colors selectable through the Study Settings for the study. Each study Subgraph supports 2 color settings. There is the default Primary color button and the optional Secondary color button. To enable the Secondary color button, use <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphSecondaryColorUsed">sc.Subgraph[].SecondaryColorUsed</a>. These color buttons for each study Subgraph set the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphPrimaryColor">sc.Subgraph[].PrimaryColor</a> and <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphSecondaryColor">sc.Subgraph[].SecondaryColor</a> RGB values. These RGB color values  can be directly used when setting the  <b>sc.Subgraph[].DataColor[]</b> array.</p>
+</section>			
+
+<section class="h2">
+    <h2 id="LimitingStudyAccess">Limiting Study Access to Particular Chartbook and Symbol</h2>
+    <div class="member-link">[<a href="#LimitingStudyAccess">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A study function can be programmed to prevent  it from being used on a Chartbook other than the one specified. Or, from being used on a Symbol other than the one specified. Below are code examples of how this can be accomplished.</p>
+
+    <pre class="Code FullLineHeight">
+//This is an example to prevent a study from being used on a Chartbook other than the one specified
+if(sc.ChartbookName != "Chartbook50")
+    return;
+
+//This is an example to prevent a study from being used on a symbol other than the one specified
+if(sc.Symbol != "ABCD")
+    return;	
+    </pre>
+</section>			
+
+<section class="h2">
+    <h2 id="FindingStartOfDayIndex">Finding Chart Bar Data Array Index for Start of Day</h2>
+    <div class="member-link">[<a href="#FindingStartOfDayIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following code will determine the index into the sc.BaseData[][] and sc.Subgraph[].Data[] arrays which is the start of the day based on the Session Times set for an Intraday chart, for the current bar index being processed.</p>
+
+    <pre class="Code FullLineHeight">
+// Bar index of beginning of trading day for bar at current index. This depends upon auto looping being true. 
+SCDateTime DayStartDateTime =sc.GetTradingDayStartDateTimeOfBar(sc.BaseDateTimeIn[sc.Index]); 
+int StartOfDayIndex= sc.GetContainingIndexForSCDateTime(sc.ChartNumber, DayStartDateTime);
+    </pre>
+</section>				
+
+<section class="h2">
+    <h2 id="CustomFreeFormDrawing">Custom Free Form Drawing into Chart Window Using GDI (Graphics Device Interface)</h2>
+    <div class="member-link">[<a href="#CustomFreeFormDrawing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Through the Windows GDI, Graphics Device Interface, it is possible to draw  freely into a chart window.</p>
+
+    <p>For a code example  demonstrating how this is done, refer to the <b>/ACS_Source/GDIExample.cpp</b> file in the folder where Sierra Chart is installed to on your system.</p>
+
+    <p> <a href="https://msdn.microsoft.com/en-nz/library/windows/desktop/dd145203(v=vs.85).aspx" target="_blank" rel="noopener noreferrer">Windows GDI documentation</a>.
+
+    <p> When using this feature, you need to define a drawing function which does the drawing using the Windows GDI. This drawing function is called when Sierra Chart draws on the chart, the study which has specified that drawing function. This will only occur after there has been a call to the main "scsf_" study function. </p>
+
+    <p>The drawing function that you define has complete access to the ACSIL  <b>sc.</b> structure.  However, any changes to the variable members of that structure will have no effect. The function also receives the window handle and the  GDI device context handle.</p>
+    
+    
+    <p> When Sierra Chart is set to use OpenGL and is using OpenGL, the GDI drawing function is not called in this case since it is not compatible with OpenGL. </p>
+</section>				
+
+<section class="h2">
+    <h2 id="ACSILScaleVariables">Scale Related ACSIL Variables</h2>
+    <div class="member-link">[<a href="#ACSILScaleVariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The scale for a study graph and also for the base graph in the chart can be controlled with various ACSIL variables. They are listed below. </p>
+    <ul>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scAutoScalePaddingPercentage">sc.AutoScalePaddingPercentage</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseGraphScaleConstRange ">sc.BaseGraphScaleConstRange</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseGraphScaleIncrement">sc.BaseGraphScaleIncrement</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseGraphScaleRangeType">sc.BaseGraphScaleRangeType</a></li>
+
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scScaleConstRange">sc.ScaleConstRange</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scScaleIncrement">sc.ScaleIncrement</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scScaleRangeBottom">sc.ScaleRangeBottom</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scScaleRangeTop">sc.ScaleRangeTop</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scScaleRangeType">sc.ScaleRangeType</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scScaleType">sc.ScaleType</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scScaleValueOffset">sc.ScaleValueOffset</a></li>
+
+    </ul>
+</section>				
+
+<section class="h2">
+    <h2 id="AccessingVolumePriceDataPerBar">Accessing Volume at Price  Data Per Bar</h2>
+    <div class="member-link">[<a href="#AccessingVolumePriceDataPerBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Studies like Numbers Bars and Volume by Price use the Volume at Price data available for each chart bar. To programmatically access this data in your own studies, it is necessary to use the  <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study/System Interface and Language (ACSIL)</a>.</p>
+
+    <p>In the ACSIL study function, it is necessary to use the  interface structure member <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scVolumeAtPriceForBars">sc.VolumeAtPriceForBars</a> to access the volume at price data per bar.</p>
+</section>				
+
+<section class="h2">
+    <h2 id="NotPerformingCalcDuringDataDownloadOrFullRecalc">Not Performing Calculation/Processing during Historical Data Downloading or Full Recalculation</h2>
+    <div class="member-link">[<a href="#NotPerformingCalcDuringDataDownloadOrFullRecalc">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To not perform any processing or calculations in an ACSIL custom study, include the following line before the code that does the processing or calculations. However, this needs  to be after the  <b>sc.SetDefaults</b> code block.
+    </p>
+
+    <pre class="Code FullLineHeight">
+if (sc.IsFullRecalculation || sc.DownloadingHistoricalData)
+    return;
+    </pre>
+
+    <p>For more information, refer to <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIsFullRecalculation">sc.IsFullRecalculation</a>  and <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scDownloadingHistoricalData">sc.DownloadingHistoricalData</a>.</p>
+    
+    <p> Also refer to <a href="#DetectingNewBarsAddedToChart" >Detecting New Bars Added to Chart</a>. </p>
+
+</section>				
+
+<section class="h2">
+    <h2 id="NotAllowingStudySubgraphSettingsChanges">Not Allowing Changes to Study Subgraph Settings</h2>
+    <div class="member-link">[<a href="#NotAllowingStudySubgraphSettingsChanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To not allow any changes to Study Subgraph settings through the <b>Subgraphs</b> tab of the Study Settings window for an ACSIL study, simply set those particular settings on the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData">sc.Subgraph[]</a> object <em>outside of and after</em> the <b>sc.SetDefaults()</b> code block in the study function.</p>
+
+    <p>Not all of the  <b>sc.Subgraph[]</b>  default settings which are normally in the <b>sc.SetDefaults()</b> code block, need to be  outside of and after this code block. Only the ones you do not want to be changed by the user interface. </p>
+</section>
+
+<section class="h2">
+    <h2 id="ConvertingBetweenTimeZones">Converting Date-Time in One Time Zone to The User Set Time Zone</h2>
+    <div class="member-link">[<a href="#ConvertingBetweenTimeZones">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>There are cases where an Advanced Custom Study may work with a particular Time in one time zone  and need to convert it to the Time Zone set by the user in their copy of Sierra Chart.  It is necessary for this Time to convert also have a Date so it is possible to apply the Daylight Savings time rules. So it is possible to convert a complete SC DateTime value.</p>
+
+    <p>The ACSIL function to convert a Date-Time in one time zone to the Time Zone that the user has set in their copy of Sierra Chart is <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scConvertToSCTimeZone">sc.ConvertToSCTimeZone()</a>.</p>
+</section>   
+
+<section class="h2">
+    <h2 id="SkippingWithASubgraphDrawStyle">Skipping Bars/Columns with a Subgraph Draw Style</h2>
+    <div class="member-link">[<a href="#ConvertingBetweenTimeZones">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> To draw a Study Subgraph where there are some bars/columns where there is no drawing of the particular Draw Style the Study Subgraph uses, requires that a Draw Style be used which supports interruption  like one of the following: </p>
+
+    <ul>
+        <li>DRAWSTYLE_BAR</li>
+        <li>DRAWSTYLE_POINT</li>
+        <li>DRAWSTYLE_DASH</li>
+        <li>DRAWSTYLE_SQUARE</li>
+        <li>DRAWSTYLE_STAR</li>
+        <li>DRAWSTYLE_PLUS</li>
+        <li>DRAWSTYLE_ARROW_UP</li>
+        <li>DRAWSTYLE_ARROW_DOWN</li>
+        <li>DRAWSTYLE_ARROW_LEFT</li>
+        <li>DRAWSTYLE_ARROW_RIGHT</li>
+        <li>DRAWSTYLE_COLOR_BAR</li>
+        <li>DRAWSTYLE_BOX_TOP</li>
+        <li>DRAWSTYLE_BOX_BOTTOM</li>
+        <li>DRAWSTYLE_COLOR_BAR_HOLLOW</li>
+        <li>DRAWSTYLE_COLOR_BAR_CANDLE_FILL</li>
+        <li>DRAWSTYLE_BAR_TOP</li>
+        <li>DRAWSTYLE_BAR_BOTTOM</li>
+        <li>DRAWSTYLE_LINE_SKIP_ZEROS</li>
+    </ul>
+
+    <p>And it is necessary to set <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphDrawZeros" >sc.Subgraph[].DrawZeros</a> = 0 for the Subgraph. Where you do not want to have the Draw Style drawn, simply set the   <b>sc.Subgraph[].Data[]</b> element at that index to 0.</p>
+
+    <p>Refer to the code example below.</p>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+FirstSubgraph.Name = "First Subgraph";
+FirstSubgraph.DrawStyle = DRAWSTYLE_LINE_SKIP_ZEROS;
+FirstSubgraph.DrawZeros = 0;
+FirstSubgraph.PrimaryColor = RGB(0,255,0);
+        </pre>
+    </section>    
+</section>   
+
+<section class="h2">
+    <h2 id="DetectingNewBarsAddedToChart">Detecting New Bars Added to Chart</h2>
+    <div class="member-link">[<a href="#DetectingNewBarsAddedToChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+int&amp; PriorArraySize = sc.GetPersistentInt(1);
+
+if (sc.Index == 0)
+{
+    PriorArraySize = sc.ArraySize;
+}
+
+// If there are new bars added
+if (PriorArraySize &lt; sc.ArraySize)
+{
+    // put processing here that is required for when new bars are added to the chart
+}
+
+PriorArraySize = sc.ArraySize;
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ActionWhenCertainTimeIsEncounteredInMostRecentBar">Performing Action When Certain Time is Encountered in Most Recent Chart Bar</h2>
+    <div class="member-link">[<a href="#ActionWhenCertainTimeIsEncounteredInMostRecentBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p> The below example code demonstrates performing an action when a certain time is encountered in the most recent chart bar. It uses the <b>sc.IsDateTimeContainedInBarIndex </b> function. </p>
+
+    <p>The complete example can be found  in the  <b>scsf_ActionWhenTimeEncountered</b> function in the /ACS_Source/studies5.cpp file in the folder Sierra Chart is installed to. </p>
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+SCDateTime TimeToCheckFor;
+
+//The first step is to get the current date.
+int CurrentDate = sc.BaseDateTimeIn[sc.ArraySize - 1].GetDate();
+
+//Apply the time. For this example we will use 12 PM
+TimeToCheckFor.SetDate(CurrentDate);
+TimeToCheckFor.SetTimeHMS(12, 0, 0);
+
+// TimeToCheckFor is contained within the current bar.
+if (sc.IsDateTimeContainedInBarIndex(TimeToCheckFor, sc.Index))
+{
+    //perform the action here
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="AccessingCurrentSymbolDataForOtherSymbols">Accessing Current Symbol Data for Other Symbols</h2>
+    <div class="member-link">[<a href="#AccessingCurrentSymbolDataForOtherSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To access current quote and real-time data for other symbols compared to the symbol of the chart a study instance is applied to, then the following functions can be used for this. This data includes the data that   is displayed in <b>Window &gt;&gt; Current Quote Window</b> and market depth data. This includes the daily open, high, low, last, volume,  and current Bid and Ask values.  And various other market data fields.</p>
+
+    <ul>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetTimeAndSalesForSymbol">sc.GetTimeAndSalesForSymbol()</a></li>
+        
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetSymbolDataValue">sc.GetSymbolDataValue()</a>: This function also supports subscribing to real-time data for the symbol. This is so you do not need to have charts open for each symbol.</li>
+    </ul>
+
+    <p>These functions are not for historical data access. They are intended for  accessing the current quote and real-time data for other symbols. They allow for very efficient access to data in the case where you want to access data for a very large number of symbols.</p>
+
+    <p>You may also want to use <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scUpdateAlways" >sc.UpdateAlways</a> to cause your study function to be continuously called to allow it to access the data at regular intervals.</p>
+
+    <p> If you want to use this capability to monitor the real-time data for a large number of symbols, then you will need to be using a data feed which is capable of providing data for a large number of symbols simultaneously. The <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> are capable of this, although a customized quotation may be necessary if more than 500 symbols are needed.</p>
+
+    <p>For a quotation, contact Sierra Chart Support on the <a href="https://www.sierrachart.com/SupportBoard.php">Support Board</a>. Also, when tracking a large number of symbols with the Sierra Chart Data Feeds we recommend using <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#LowBandwidthOption" target="_blank" rel="noopener noreferrer">Low Bandwidth Mode</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ACSILChartDrawingsAndHidingAStudy">ACSIL Chart Drawings and Hiding a Study</h2>
+    <div class="member-link">[<a href="#ACSILChartDrawingsAndHidingAStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When a study is hidden through the <a href="index9099.html?page=doc/ChartStudies.html">Study Settings</a> for the study,  <a href="index1397.html?page=doc/ACSILDrawingTools.html">Chart Drawings</a> added by the custom study will still be visible.</p>
+
+    <p> If you do not want the Chart Drawings visible in this case, then it is necessary to check the value of the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scHideStudy">sc.HideStudy</a> variable and only draw the  Chart Drawings if it is set to 0.</p>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+if (!sc.HideStudy)
+{
+    //Add Chart Drawings here
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="GettingIndexOfStartOfTradingDay">Getting Index of  Start of Trading Day in Intraday Chart</h2>
+    <div class="member-link">[<a href="#GettingIndexOfStartOfTradingDay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following code example demonstrates how to get the bar index in the chart the study function is applied to, which corresponds to the start  of the trading day in an Intraday chart. The start of the day is based upon the <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a>.</p>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+//Get index of start of trading day based upon Date-Time at current index. This code assumes automatic looping.
+SCDateTime StartDateTime = sc.GetTradingDayStartDateTimeOfBar(sc.BaseDateTimeIn[sc.Index]);
+int StartBarIndex = sc.GetContainingIndexForSCDateTime(sc.ChartNumber, StartDateTime);
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="AccessingDataFromAnotherChartAtSecondToLastIndex">Accessing Data from Another Chart at Second to Last Index</h2>
+    <div class="member-link">[<a href="#AccessingDataFromAnotherChartAtSecondToLastIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The following code example demonstrates how to get the last/closed price array of the main price graph from another chart and access the second to last element  in that array. The second to last element in a graph array can be considered the last completed bar.</p>
+
+    <p>For further information, refer to  <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetChartArray" Target="_blank" rel="noopener noreferrer">sc.GetChartArray</a>. </p>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+SCFloatArray LastPriceArray;
+sc.GetChartArray(1, SC_LAST, LastPriceArray);
+if (LastPriceArray.GetArraySize() >= 2)
+{
+        //This will get the second to last price value
+        float Value = LastPriceArray[LastPriceArray.GetArraySize() - 2];
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DisplayingCustomValuesInMarketDataColumnsOnTheChartTradeDOM">Displaying Custom Values in the Market Data Columns on the Chart / Trade DOM</h2>
+    <div class="member-link">[<a href="#DisplayingCustomValuesInMarketDataColumnsOnTheChartTradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>   The following functionality only works with version 1602 and higher. </p>
+
+
+    <p>It is supported through the use of study Subgraphs in ACSIL to display  custom values in the market data columns area of the Chart/Trade DOM. This method uses study Subgraphs, so it has a limit of 60  values at a time.</p>
+
+    <p>The following are the basic steps to accomplish this:</p>
+
+    <ol>
+        <li>Through the user interface, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart/Trade DOM Columns</b>.</li>
+
+        <li>Add the <b>Label Column</b>.</li>
+        <li>  In the ACSIL  study Function,  set <b>sc.GraphRegion = 0; </b> in the   <b>sc.Defaults </b>  code block.</li>
+
+        <li>For every value you want to display in the <b>Label Column</b> on the Chart/Trade DOM, it is necessary to use a separate study <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html" target="_blank" rel="noopener noreferrer">Subgraph</a>. In the ACSIL study function, set the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphDrawStyle" target="_blank" rel="noopener noreferrer">sc.Subgraph[].DrawStyle</a> for each of the Subgraphs that will display values, to <b>DRAWSTYLE_SUBGRAPH_NAME_AND_VALUE_LABELS_ONLY</b>, in the   <b>sc.Defaults </b>  code block.</li>
+
+        <li>Set the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphLineLabel" target="_blank" rel="noopener noreferrer">sc.Subgraph[].LineLabel</a> variable to the following constants combined with the bitwise or operator as follows: <b>LL_DISPLAY_VALUE</b> | <b>LL_VALUE_ALIGN_DOM_LABELS_COLUMN | LL_DISPLAY_CUSTOM_VALUE_AT_Y</b>, in the   <b>sc.Defaults </b>  code block.</li>
+
+        <li>Fill in the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData" target="_blank" rel="noopener noreferrer">sc.Subgraph[].Data</a>[sc.ArraySize -1] array element to the value you want to display.</li>
+
+        <li>Set the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphArrays" target="_blank" rel="noopener noreferrer">sc.Subgraph[].Arrays[0]</a>[sc.ArraySize -1] extra array element to the vertical axis value where you want the value set in the sc.Subgraph[].Data[] array, to be displayed at.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="DeterminingNewBarsWhenChartIsUpdated">Determining New Bars When Chart is Updated</h2>
+    <div class="member-link">[<a href="#DeterminingNewBarsWhenChartIsUpdated">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3>Code Example</h3>
+        <pre class="Code FullLineHeight">
+// This code relies on manual looping and assumes that on the chart update there
+// is not more than one new bar added. If there is more than one bar, then it 
+// indicates that new bars have been added when BarHasClosedOnThisUpdate is true.
+// Closed bar is at index sc.ArraySize - 2.
+
+bool BarHasClosedOnThisUpdate = false;
+
+if (sc.UpdateStartIndex != 0 &amp;&amp; sc.UpdateStartIndex &lt; sc.ArraySize - 1)
+    BarHasClosedOnThisUpdate = true;
+
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="UseOfDialogWindowsInAdvancedCustomStudies">Use of Dialog Windows in  Advanced Custom Studies</h2>
+    <div class="member-link">[<a href="#UseOfDialogWindowsInAdvancedCustomStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>A custom study creation of windows and dialog windows through the operating system API functions can be done.  In the case of dialog boxes on the Windows operating system, refer to <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms632588(v=vs.85).aspx" target="_blank" rel="noopener noreferrer">Dialog Boxes</a>.</p>
+
+    <p>Any programming help in this area is not within the scope of this documentation. It is up to you and your abilities to do that type of development if you require. It is possible but outside the scope of any documentation provided here.</p>
+    
+    <p>An Advanced Custom Study within Sierra Chart, creating what is known as a "modal" dialog window  must  <em>never</em> be done and is not supported. These types of windows require the user to press a button to save the settings and close the dialog window before processing continues after the creation of this type of window. This will  cause serious malfunctioning in Sierra Chart when that dialog type window is displayed from an Advanced Custom Study.</p>
+    
+    <p> What will happen is that once that window is displayed, there will be a call back into the study function over and over again until there is a stack overflow. Sierra Chart will then abnormally shutdown at some point.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="FillingAnAreaBetweenTwoPriceLevels">Filling an Area Between Two Price Levels</h2>
+    <div class="member-link">[<a href="#FillingAnAreaBetweenTwoPriceLevels">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+   <p>To fill in area on a chart  between two price levels, first understand that this is done with two Subgraphs using the <b>Fill Top</b> and  <b>Fill Bottom</b> Draw Styles. There are also transparent versions of these draw styles. For further details, refer to <a href = "index9099.html?page=doc/ChartStudies.html#FillingArea">Filling the Area Between Two Study Subgraphs within Same Study</a> and <a href = "index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphDrawStyle">sc.Subgraph[].DrawStyle</a>. </p>
+   
+    <p>To set the transparency level for the transparent Draw Styles,  use <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scTransparencyLevel">sc.TransparencyLevel</a>.</p>
+   
+    <p> If you would like this fill area to extend beyond the last bar in the chart, then you would use this Subgraph member  <a href = "index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scExtendedArrayElementsToGraph">sc.Subgraph[].ExtendedArrayElementsToGraph</a>  for the two Subgraphs. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="DebugLogging">Debug Logging</h2>
+    <div class="member-link">[<a href="#DebugLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>This section provides code examples showing how to add logging to your custom study to log numeric values and text strings in order to understand the functioning of your code  during its execution.  </p>
+    
+    <section class="h4">
+        <h4>Code Example</h4>
+        <pre class="Code FullLineHeight">
+// Debug Logging examples:
+// This is for efficiency so the logging occurs only on the most recent chart bar
+if (sc.Index == sc.ArraySize - 1)
+{
+    SCString DebugMessage;
+
+    // Log an integer value
+    int  IntegerValue = 101;		
+    DebugMessage.Format("IntegerValue=%d", IntegerValue);
+    sc.AddMessageToLog(DebugMessage, 0);
+
+    // Log a subgraph value
+    DebugMessage.Format("SubgraphValue=%f",  sc.Subgraph[0].Data[sc.Index]);
+    sc.AddMessageToLog(DebugMessage, 0);
+
+    // Log a Date-Time value
+    SCString DateTimeString = sc.FormatDateTime(sc.BaseDateTimeIn[sc.Index]);
+    DebugMessage.Format("DateTime=%s", DateTimeString.GetChars());
+    sc.AddMessageToLog(DebugMessage, 0);
+}
+        </pre>
+    </section>
+    
+    <p> If you would like this fill area to extend beyond the last bar in the chart, then you would use this Subgraph member  <a href = "index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scExtendedArrayElementsToGraph">sc.Subgraph[].ExtendedArrayElementsToGraph</a>  for the two Subgraphs. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="UniquelyIdentifyingAnInstanceOfAStudy">Uniquely Identifying an Instance of a Study</h2>
+    <div class="member-link">[<a href="#UniquelyIdentifyingAnInstanceOfAStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>To be able to programmatically uniquely identify an instance of a study, requires using the following  ACSIL variables:</p>
+    
+    <ul>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scChartNumber">sc.ChartNumber</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scChartbookName">sc.ChartbookName</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scStudyGraphInstanceID">sc.StudyGraphInstanceID</a></li>
+    </ul>
+    
+</section>
+
+<section class="h2">
+    <h2 id="DeterminingIfLastChartBarIsClosed">Determining if  Last Chart Bar is Closed</h2>
+    <div class="member-link">[<a href="#DeterminingIfLastChartBarIsClosed">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>   When trying to determine if the last chart bar is closed, it is not possible to use the function <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBarHasClosedStatus">sc.GetBarHasClosedStatus()</a>.</p>
+
+
+    <p>  The first step is to determine the  starting Date-time with the <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDateTimeIn">sc.BaseDateTimeIn</a> array of the last bar in the chart. </p>
+
+    <p> You then have to determine what the time period of the chart bar is. To help with this, use the function     <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBarPeriodParameters">sc.GetBarPeriodParameters</a>. </p>
+
+
+    <p>  Using the bar period parameters, you can calculate the time period of the chart bar as an <a href = "indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> value.  </p>
+
+    <p>  Add this time period of the chart bar to the starting   Date-Time of the chart bar. </p>
+
+    <p>  If the current  Date-Time obtained from the <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetCurrentDateTime">sc.GetCurrentDateTime</a> function is exceeding  the Date-Time calculated in the prior step, then the chart bar has closed.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="DrawingStudyInTwoDifferentChartRegions">Drawing Study in Two Different Chart Regions</h2>
+    <div class="member-link">[<a href="#DrawingStudyInTwoDifferentChartRegions">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> A study cannot draw itself in more than one <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scGraphRegion">Chart Region</a>. </p>
+    
+    <p>   However, there is a technique  which can be used to cause data from one study to be displayed in another Chart Region from where it is located. </p>
+
+   <p>To do this, you need to use the  <a href = "indexb2f0.html?page=doc/StudiesReference.php&amp;ID=413&amp;Name=Study_Subgraph_Reference">Study Subgraph Reference</a>  study to reference a particular study Subgraph  that you want to display in another Chart Region. Set the <b>Study Subgraph Reference</b> study to display in the  <a href = "index9099.html?page=doc/ChartStudies.html#ChartRegion">Chart Region</a> that you want. </p>
+
+    <p>Change the   <a href = "index9099.html?page=doc/ChartStudies.html#DrawStyle">Draw Style</a> of the  <b>Study Subgraph Reference</b> study Subgraph  to what you require.</p>
+   
+   <p>The study Subgraph in the  <em>source</em> study  usually should not be drawn in that study   and should have its  <a href = "index9099.html?page=doc/ChartStudies.html#DrawStyle">Draw Style</a> set to <b>Ignore</b>. If the values of the source study Subgraph which is being referenced  by the <b>Study Subgraph Reference</b> study are out of range  compared to the Chart Region it is displayed in, then its  Draw Style must be set to  <b>Ignore</b>.</p>
+
+
+</section>
+
+
+<section class="h2">
+    <h2 id="CombiningIntradayChartFileRecordsIntoOriginalSummaryTrade">Combining Intraday Chart File Records into Original Summary Trade</h2>
+    <div class="member-link">[<a href="#CombiningIntradayChartFileRecordsIntoOriginalSummaryTrade">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>To programmatically perform the same  function that the <a href = "index4cf4.html?page=doc/ChartSettings.html#CombineTradesIntoOriginalSummaryTrade">Combining Intraday Chart File Records into Original Summary Trade</a> Chart Setting performs,  follow the instructions below. </p>
+    
+    <p>It is first necessary to access the individual trades and that can be done with the  <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetTimeAndSales">sc.GetTimeAndSales</a> function or the <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scReadIntradayFileRecordForBarIndexAndSubIndex">sc.ReadIntradayFileRecordForBarIndexAndSubIndex</a> function.</p>
+     
+    
+    <p> With either of these methods, it is then possible to determine with each trade, whether  it was part of a larger summary trade. If it is, then it would be identified as the  first sub trade of an unbundled trade. Or the last trade of an unbundled trade.     Between these two identifiers, those trades are part of the larger summary trade as well.  So the summary trade begins with the trade   identified as the first sub trade of unbundled trade, and then ends with the trade identified as the last trade of an unbundled trade. By combining the volumes of all of these trades together, you then have a summary trade at that price and the total volume.</p>
+    
+    
+    <p> In the case of an Intraday file record, it is the Open field which indicates through a special value whether it is the first trade or last trade of an unbundled trade or not. Refer to <a href = "index4e87.html?page=doc/IntradayDataFileFormat.html#s_IntradayRecord"> Intraday Record Open</a>. </p>
+
+    <p>In the case of a Time and Sales record,  it is the s_TimeSales::UnbundledTradeIndicator structure member which indicates if a trade is the first or last trade of an unbundled trade or not.  It can have one of the following values: UNBUNDLED_TRADE_NONE = 0, FIRST_SUB_TRADE_OF_UNBUNDLED_TRADE = 1,
+	LAST_SUB_TRADE_OF_UNBUNDLED_TRADE = 2.</p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="ProgrammaticallyAccessingHistoricalAndCurrentMarketDepthData">Programmatically Accessing Historical and Current Market Depth Data</h2>
+    <div class="member-link">[<a href="#ProgrammaticallyAccessingHistoricalAndCurrentMarketDepthData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Use the following functions to access the current market depth data.  This also includes the current market depth data  during a chart replay.</p>
+    
+    <ul>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetAskMarketDepthEntryAtLevel">s_sc.GetAskMarketDepthEntryAtLevel</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetAskMarketDepthEntryAtLevelForSymbol">s_sc.GetAskMarketDepthEntryAtLevelForSymbol</a> (todo)</li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetAskMarketDepthNumberOfLevels">s_sc.GetAskMarketDepthNumberOfLevels</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetAskMarketDepthNumberOfLevelsForSymbol">s_sc.GetAskMarketDepthNumberOfLevelsForSymbol</a> (todo)</li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetAskMarketDepthStackPullValueAtPrice">s_sc.GetAskMarketDepthStackPullValueAtPrice</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBasicSymbolDataWithDepthSupport">s_sc.GetBasicSymbolDataWithDepthSupport</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBidMarketDepthEntryAtLevel">s_sc.GetBidMarketDepthEntryAtLevel</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBidMarketDepthEntryAtLevelForSymbol">s_sc.GetBidMarketDepthEntryAtLevelForSymbol</a> (todo)</li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBidMarketDepthNumberOfLevels">s_sc.GetBidMarketDepthNumberOfLevels</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBidMarketDepthNumberOfLevelsForSymbol">s_sc.GetBidMarketDepthNumberOfLevelsForSymbol</a> (todo)</li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBidMarketDepthStackPullValueAtPrice">s_sc.GetBidMarketDepthStackPullValueAtPrice</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetMaximumMarketDepthLevels">s_sc.GetMaximumMarketDepthLevels</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scMaintainHistoricalMarketDepthData">s_sc.MaintainHistoricalMarketDepthData</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scUsesMarketDepthData">s_sc.UsesMarketDepthData</a></li>
+        <li><a href="index85d3.html?page=doc/MarketDepthDataFileFormat.html">Market Depth Data File Format</a></li>
+    </ul>
+    
+    
+    <p> To access historical market depth data in the chart, refer to <a href = "index0078.html?page=doc/c_ACSILDepthBars.php">ACSIL Interface Members - Historical Market Depth Data (c_ACSILDepthBars)</a>.
+</section>
+
+<section class="h2">
+    <h2 id="ChartDrawingRelativePositioning">Chart Drawing Relative Positioning</h2>
+    <div class="member-link">[<a href="#ChartDrawingRelativePositioning">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>The coordinate system of a chart is based upon Date-Times along the horizontal axis, and  price graph or study graph values on the vertical axis. So these are considered  <em>absolute</em> type of coordinates since they are referring to very specific points in the larger  chart which is not visible. </p> 
+     
+     <p>   <a href = "index1397.html?page=doc/ACSILDrawingTools.html">Chart Drawings   in ACSIL</a> can use relative positioning which  are relative to the bottom left of the chart.  The following are the maximum values.  The minimum values are 0.  </p>
+    
+    
+
+    <p>const double CHART_DRAWING_MAX_HORIZONTAL_AXIS_RELATIVE_POSITION = 150.0</p>
+    
+    <p>const double CHART_DRAWING_MAX_VERTICAL_AXIS_RELATIVE_POSITION = 100.0</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="StudyInitializationUnitialization">Study Initialization/Unitialization</h2>
+    <div class="member-link">[<a href="#StudyInitializationUnitialization">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>Below is a code example to perform  a one time initialization when the study function is first run when the study instance is added to the chart or when the Chartbook is opened which contains the study instance.  </p>
+     
+     <p> An un-initialization  is also performed  when the study is removed from the chart  or the Chartbook is closed. </p>
+    
+    
+
+
+
+        <section class="h4">
+            <h4>Code Example</h4>
+            <pre class="Code FullLineHeight">
+
+SCSFExport scsf_OneTimeInitializationExample(SCStudyInterfaceRef sc)
+{
+
+	if (sc.SetDefaults)
+	{
+		// Set the configuration and defaults
+
+		sc.GraphName = "One Time Initialization Example";
+
+		sc.AutoLoop = 0;
+
+		return;
+	}
+
+	int& r_IsInitialized = sc.GetPersistentInt(1);
+
+	if (!r_IsInitialized)
+	{
+		//Perform initialization here
+
+		r_IsInitialized = 1;
+	}
+
+	if (sc.LastCallToFunction)
+	{
+		if (r_IsInitialized)
+		{
+			//Perform uninitialization here
+
+			r_IsInitialized = 0;
+		}
+
+		return;
+	}
+
+
+	//Do standard processing here
+
+
+}
+
+            </pre>
+        </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="FloatingPointValueError">Floating Point Value Error</h2>
+    <div class="member-link">[<a href="#FloatingPointValueError">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>It is well understood that floating-point numbers, numbers that contain a decimal point (noninteger values), cannot be represented perfectly in computers when stored as a floating-point number.  Refer to <a href="https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems" target="_blank" rel="noopener noreferrer">Floating-point Accuracy Problems on Wikipedia</a>.</p>
+     
+     <p> In ACSIL when you are working with floating-point values,  the values can be imperfect.</p>
+     
+     <p>For example, the value 1.234 could possibly be stored as 1.233999999 (Or equivalent). </p>
+     
+      <p>  When you want to perform comparisons  consisting of floating-point values, use the <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scFormattedEvaluate">sc.FormattedEvaluate</a> function.</p>
+     
+
+</section>
+
+<section class="h2">
+    <h2 id="ACSILFileFunctions">ACSIL File Functions</h2>
+    <div class="member-link">[<a href="#ACSILFileFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>ACSIL has a full  file system support.</p>
+
+
+    <p> The available functions are:   <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scOpenFile">sc.OpenFile</a>, <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scCloseFile">sc.CloseFile</a>, <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scReadFile">sc.ReadFile</a>, <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scWriteFile">sc.WriteFile</a>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="KeyboardInteractionWithACSILStudies">Keyboard Interaction with ACSIL Studies</h2>
+    <div class="member-link">[<a href="#KeyboardInteractionWithACSILStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>ACSIL supports receiving keyboard key events if these events have been requested by the ACSIL study. For complete details, refer to: </p>
+
+    <ul>
+      <li> <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scReceiveKeyboardKeyEvents">sc.ReceiveKeyboardKeyEvents</a>  </li>
+      
+      <li> <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scKeyboardKeyEventCode">sc.KeyboardKeyEventCode</a>  </li>
+    </ul>
+
+</section>
+
+
+
+<hr><p>*Last modified Monday, 19th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSILProgrammingConcepts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+</html>  

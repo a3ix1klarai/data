@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails38.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105651') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails38.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 38: Incorrect Date and/or Time Display, Missing Data, Chart Not Updating -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index3e87.html?page=doc/helpdetails38.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="index3e87.html?page=doc/helpdetails38.html">Help topic 38: Incorrect Date and/or Time Display, Missing Data, Chart Not Updating</a></h4> </div>     <h1 class="PageName">Incorrect Date and/or Time Display, Missing Historical Intraday Data, Chart Not Updating</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#DateTimeIssuesAndSettingsToCheck">Date-Time Issues and Settings to Check</a></li>
+    <li><a href="#SettingComputerSystemDateTimeAndTimeZone">Setting Computer System Date-Time and Time Zone</a></li>
+    <li><a href="#MainWindowTitleBarDateAndTime">Main Window Title Bar Date and Time</a></li>
+    <li><a href="#UsingLocalSystemClockForTimestamping">Using Local System Clock for Timestamping</a></li>
+</ul>
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page explains setting the Date and Time related settings in Sierra Chart and on your computer system. It explains correcting your computers clock and setting it accurately.</p>
+
+    <p>An incorrect  Date-Time setting on your computer and/or an incorrect time zone setting on your computer or within Sierra Chart, can cause missing historical Intraday data in a chart or prevent an Intraday chart from updating.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DateTimeIssuesAndSettingsToCheck">Date-Time Issues and Settings to Check</h2>
+    <div class="member-link">[<a href="#DateTimeIssuesAndSettingsToCheck">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li>If the times displayed in Charts and Quote Lines on a Spreadsheet or Quote Board are incorrect or not what you require, then the <b>Time Zone</b> setting in Sierra Chart may be incorrect. Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu.
+            <br> <br>
+            Set the <b>Time Zone</b> control to the time zone you want times displayed in.  For complete details and instructions to use the <b>Time Zone</b> control, refer to the <a href="index219e.html?page=doc/TimeZone.html" target="_blank" rel="noopener noreferrer">Time Zone documentation</a> page.
+             <br> <br>
+            The time zone can be set differently for individual charts.  Refer to <a href = "index219e.html?page=doc/TimeZone.html#DifferentTimeZoneForCharts">Using Different Time Zone in Individual Charts</a>.
+            </li>
+
+
+        <li>With some Data and Trading services, time stamping of real-time data and the timestamp that is needed for historical data requests is based upon  your computer's clock.
+            <br> <br>
+
+            In these cases, it is critical that both your computer's Date-Time and <em>Time  Zone</em>   are set correctly.  Follow the instructions in the <a href="#SettingComputerSystemDateTimeAndTimeZone">Setting Computer System Date-Time and Time Zone</a> section  to correct these.
+            <br> <br>
+
+            After setting the Date-Time on your computer,   you will need to re-download the Intraday data in Intraday charts which have incorrect timestamps,  by going to each Intraday chart and selecting <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b>. You only need to use this command <em>once</em> on an Intraday chart for each symbol.   You do not need to do it twice for the same symbol.</li>
+
+        <li>Check the  <a href="#UsingLocalSystemClockForTimestamping" >Timestamp Using Local Computer Clock</a> setting, if available. </li>
+
+        <li class="GeneralBackgroundHighlightLight">Make certain that   the Time Zone setting in Windows   is correct. Refer to the  <a href="#SettingComputerSystemDateTimeAndTimeZone">Setting Computer System Date-Time and Time Zone</a>   section for instructions.</li>
+
+
+        <li>An incorrect Sierra Chart Time Zone setting can also cause data to appear to be <em>missing</em> from the chart. It can also cause a chart <em>to not update</em>. More information about these issues can be found in <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#h7.4" target="_blank" rel="noopener noreferrer">Incorrect Computer Date/Time Settings</a> and <a href="index581c.html?page=doc/helpdetails3.html#h3.3" target="_blank" rel="noopener noreferrer">help topic 3.3</a> respectively.</li>
+
+        <li>When connecting to a Data or Trading service that uses the <em>FIX protocol</em>, generally if your computers clock is off by more than 30 seconds, the connection will not succeed. 
+            <br>
+            <br>
+            Therefore, you need to make sure that your computer's clock is set reasonably accurately when the <em>FIX protocol</em> is used.  Refer to the  <a href="#SettingComputerSystemDateTimeAndTimeZone">Setting Computer System Date-Time and Time Zone</a>   section for instructions. </li>
+
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="SettingComputerSystemDateTimeAndTimeZone">Setting Computer System Date-Time and Time Zone</h2>
+    <div class="member-link">[<a href="#SettingComputerSystemDateTimeAndTimeZone">Link</a>] - [<a href="#top">Top</a>]</div>   
+    
+    <p>It is essential when using Sierra Chart that your computers clock is set accurately. 
+     For instructions, refer to  <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#SetSystemDateTimeFromServer" target="_blank" rel="noopener noreferrer">Set System Date-Time from Server</a>. Those instructions also explain what to do if you encounter  an error when setting  the computer's Date-Time.</p>
+    
+    <p>The  Time Zone setting in Windows must also be correct. For example, if your computers clock is set to US Eastern time, then  the  Time Zone  setting in Windows needs to be US Eastern.  Otherwise, data  could be time stamped incorrectly and this    could also cause data to be missing from the charts. To change  the Time Zone in Windows, go to the <b>Date and Time</b>  program in <b>Windows Control Panel</b>. For further details, refer to <a href="https://www.tenforums.com/tutorials/6401-change-time-zone-windows-10-a.html"   target="_blank" rel="noopener noreferrer">How to Change the Time Zone in Windows 10 (https://www.tenforums.com)</a>.</p>
+
+    <p>When setting the Time Zone in Windows make certain that the <b>Automatically adjust clock for daylight savings time changes</b> option is enabled if it is available for  the time zone you will be using. After enabling this option and applying it, verify that the clock setting is still correct. And  if it  is not correct, correct it.</p>
+    
+    <p>After making changes to your computers Date and Time, you should definitely <a href="index1230.html?page=doc/helpdetails2.html#h2.1.2" target="_blank" rel="noopener noreferrer">Delete and Re-download</a> the data in your Intraday charts where there is incorrect Date-Time values or missing data. This only needs to be done  <em>once per symbol</em>.</p>
+    
+</section>
+
+<section class="h2">
+    <h2 id="MainWindowTitleBarDateAndTime">Main Window Title Bar Date and Time</h2>
+    <div class="member-link">[<a href="#MainWindowTitleBarDateAndTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Date and Time on the main Sierra Chart window is derived from your local computer clock. It is adjusted by the  <a Href="index219e.html?page=doc/TimeZone.html"  target="_blank" rel="noopener noreferrer">Time Zone</a> setting in Sierra Chart.</p>
+
+    <p> Therefore, if it is not accurate  it means your computer's clock  is not set accurately or the time zone setting on the computer is not correct.</p>
+
+    <div style="text-align: center;"><a href="../images/mainwindowdatetime.png" rel="lightbox"><img src="../images/mainwindowdatetime.png" class="screenshot" loading="lazy" width="700" alt=""></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="UsingLocalSystemClockForTimestamping">Using Local System Clock for Timestamping</h2>
+    <div class="member-link">[<a href="#UsingLocalSystemClockForTimestamping">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. You <em>may</em> see an option named <b>Timestamp Using Local Computer Clock</b> in the Service Settings on the left. If you set this option to No/False, then the timestamp provided by the Data or Trading service will be used for real-time received data. </p>
+           
+   <p>If this option does not exist for the particular Data or Trading service you are using, then the time stamping will be done using  the external service unless you are  using the Interactive Brokers Trading service.  </p>
+           
+   <p> If  <b>Timestamp Using Local Computer Clock</b>  is set to Yes/True, then  your computer systems clock will be used  for time stamping real-time received data.   Although the local computer date-time  is first converted to UTC for time stamping. </p>
+
+
+   <p>Whether using the external service or the local computer clock, one is not necessarily better than the other. If you maintain a very accurate computer clock which is periodically synchronized to an accurate timeserver, then typically it is <em>better to use your local computer clock</em> for timestamp stability and to avoid out of order timestamps.  </p>
+   
+   <p>After changing this setting, you may want to <a href="index1230.html?page=doc/helpdetails2.html#IntradayCharts_DeletingAndRedownloadingData" target="_blank" rel="noopener noreferrer">Re-download the Intraday data</a> in the Intraday charts. This only needs to be done once per symbol.</p>
+    
+</section>
+
+
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails38.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:34 GMT -->
+</html>  

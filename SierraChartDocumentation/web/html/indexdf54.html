@@ -1,0 +1,1300 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/WorkingWithSpreadsheets.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:53:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105655') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/WorkingWithSpreadsheets.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Working with Spreadsheets -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexdf54.html?page=doc/WorkingWithSpreadsheets.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#UsingSpreadsheets">(Table of Contents) Spreadsheets</a> &gt;&gt; <a  href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php">Working with Spreadsheets</a></h4> </div>     <h1 class="PageName">Working with Spreadsheets</h1>
+<div class="h2">
+    <h2>Related Documentation</h2>
+
+    <ul>
+        <li><a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php">Overview of Spreadsheet Studies</a></li>
+        <li><a href="indexbc7b.html?page=doc/UsingTheSpreadsheetStudy.php">Using Spreadsheet Studies</a></li>
+        <li><a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet Systems, Alerts and Automated Trading</a></li>
+        <li><a href="index2192.html?page=doc/SpreadsheetStudyInputs.html">Spreadsheet Study Inputs</a></li>
+        <li><a href="index41e0.html?page=doc/Spreadsheets_ReferencingOtherChartsInFormulas.php">Referencing Other Charts in Spreadsheet Study Formulas</a></li>
+        <li><a href="index0c2c.html?page=doc/SpreadsheetStudiesSpecialTasks.php">Spreadsheet Studies Special Tasks</a></li>
+        <li><a href="index56f7.html?page=doc/Sharing_Spreadsheet_Study.html">Sharing Your Spreadsheet Study With Another User</a></li>
+        <li><b>Working with Spreadsheets</b></li>
+        <li><a href="index8e89.html?page=doc/SpreadsheetFunctions.html">Spreadsheet Functions</a></li>
+        <li><a href="index7f0c.html?page=doc/SpreadsheetExampleFormulasAndUsage.php">Spreadsheet Example Formulas and Usage</a></li>
+    </ul>
+
+</div>
+
+<hr>
+
+<div class="h2">
+    <h2>On This Page</h2>
+
+    <ul>
+        <li><a href="#Introduction">Introduction</a></li>       
+        <li><a href="#NewSpreadsheets">Difference Between New and Old Spreadsheets</a></li>
+        <li><a href="#SheetsandSpreadsheets">Difference Between Sheets and Spreadsheets</a></li>
+        <li><a href="#SpreadsheetMenuCommands">Spreadsheet Menu Commands</a></li>
+        <li><a href="#CreatingandOpeningSpreadsheets">Creating and Opening Spreadsheets</a></li>
+        <li><a href="#SpreadsheetCells">Spreadsheet Cells</a></li>
+        <li><a href="#ActivatingandViewingSpreadsheets">Activating and Viewing (Selecting) Sheets within a Spreadsheet</a></li>
+        <li><a href="#EnteringData">Entering Data</a></li>
+        <li><a href="#Filling">Filling Cells</a></li>
+        <li><a href="#Undo">Undo</a></li>
+        <li><a href="#Formulas">Formulas</a></li>
+        <li><a href="#ViewingFormulaExpressionTree">Viewing Formula Expression Tree</a></li>        
+        <li><a href="#Operators">Operators</a>
+            <ul>
+                <li><a href="#UnaryOperators">Unary Operators</a>
+					<ul>
+					    <li><a href="#UnaryNegation">Unary Negation (-)</a></li>
+					    <li><a href="#UnaryLogicalInversion">Unary Logical Inversion (Not) (!)</a></li>
+					</ul>
+				</li>
+                <li><a href="#ArithmeticOperators">Arithmetic Operators</a>
+					<ul>
+					    <li><a href="#Addition">Addition (+)</a></li>
+					    <li><a href="#Subtraction">Subtraction (-)</a></li>
+					    <li><a href="#Multiplication">Multiplication (*)</a></li>
+					    <li><a href="#Division">Division (/)</a></li>
+					    <li><a href="#Exponentiation">Exponentiation (^)</a></li>
+					</ul>
+				</li>
+                <li><a href="#ComparisonOperators">Comparison Operators</a></li>
+                <li><a href="#ChainedOperators">Chained Operators</a></li>
+            </ul>
+        </li>
+        <li><a href="#UserDefinedNames">User Defined Names</a>
+            <ul>
+                <li><a href="#NamedConstants">Named Constants</a>
+					<ul>
+					    <li><a href="#NamedConstants_Months">Months</a></li>
+					    <li><a href="#NamedConstants_DaysoFTheWeek">Days of the Week</a></li>
+					    <li><a href="#NamedConstants_MathConstants">Math Constants</a></li>
+					    <li><a href="#NamedConstants_NoValueConstant">No Value Constant</a></li>
+					</ul>
+				</li>
+            </ul>
+        </li>
+        <li><a href="#TrueAndFalseValues">True and False Values</a></li>
+        <li><a href="#Delimiters">Decimal and Function Delimiters</a></li>
+        <li><a href="#CellandRangeSelection">Cell and Range Selection</a></li>
+        <li><a href="#CellFormatting">Cell Formatting</a></li>
+        <li><a href="#ColorSettings">Color Settings</a></li>
+        <li><a href="#CellandRangeReferences">Cell and Range References</a>
+            <ul>
+                <li><a href="#CellandRangeReferencesGeneral">General</a></li>
+                <li><a href="#RelativeAbsoluteReferences">Relative and Absolute References</a></li>
+                <li><a href="#ReferencesOtherSheets" >References to Other Sheets within a Spreadsheet</a></li>
+                <li><a href="#ReferencesToOtherSpreadsheetsWindows" >References to Other Spreadsheets Windows</a></li>
+                <li><a href="#ReferencesStudySubgraphColumnsSpreadsheetStudy" >References to Study Subgraph Columns when using the Spreadsheet Study</a></li>
+            </ul>
+        </li>
+        <li><a href="#InsertingAndDeletingRowsAndColumns">Inserting and Deleting Rows and Columns</a>
+			<ul>
+                <li><a href="#DoNotUpdateReferences" >Do Not Update References</a></li>
+                <li><a href="#UpdateReferencesToMatchMovedCells" >Update References To Match Moved Cells</a></li>
+			</ul>
+		</li>
+        <li><a href="#KeyboardCommands">Keyboard Commands</a></li>
+        <li><a href="#SpreadsheetErrorCodes">Spreadsheet Error Codes</a>
+            <ul>
+                <li><a href="#NULLError">#NULL!</a></li>
+                <li><a href="#DIVError">#DIV/0!</a></li>
+                <li><a href="#VALUEError">#VALUE!</a></li>
+                <li><a href="#REFError">#REF!</a></li>
+                <li><a href="#CREFError">#CREF!</a></li>
+                <li><a href="#NAMEError">#NAME?</a></li>
+                <li><a href="#NUMError">#NUM!</a></li>
+                <li><a href="#NAError">#N/A</a></li>
+                <li><a href="#SYNTAXError">#SYNTAX!</a></li>
+                <li><a href="#ARGSError">#ARGS!</a></li>
+            </ul>
+        </li>
+        <li><a href="#RenameaSheet">Rename a Sheet</a></li>
+        <li><a href="#FloatingPointValues">Floating-Point Values and Comparisons When Using the Spreadsheet Study</a></li>
+        <li><a href="#AccessingABackupSpreadsheetFile">Accessing a Backup Spreadsheet File</a></li>
+        <li><a href="#SavingASheetInTextFormat">Saving a Sheet in Text Format</a></li>
+        <li><a href="#DifferentMethodsToGetDataIntoAndOutOfSpreadsheets">Different Methods to Get Data Into and Out of Spreadsheets</a></li>
+    </ul>
+</div>
+<hr>
+
+
+<div class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart has very advanced built-in Spreadsheets.  Sierra Chart spreadsheets are Excel  compatible in the sense that they use the same formula format and support most of the same functions. </p>
+
+     <p>Spreadsheets are used to create custom Studies, Trading Systems and advanced Alerts by using one of the available <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php">Spreadsheet Studies</a>. </p>
+
+     <p>Spreadsheets can also  be used to contain detailed continuously updating quotes for a powerful Quote Board. For more information on continuously updating quotes, refer to the <a href="index1eaf.html?page=doc/GettingQuotes.html">Getting Quotes</a> documentation page.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="NewSpreadsheets">Difference Between New and Old Spreadsheets</h2>
+    <div class="member-link">[<a href="#NewSpreadsheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Newer versions of Sierra Chart use what are called <b>New Spreadsheets</b> and replace the previous <b>Old Spreadsheets</b> in older versions.  New Spreadsheets is a completely new Spreadsheet component developed by Sierra Chart.  You can tell if you are using <em>New Spreadsheets</em> by the appearance of the Spreadsheet by looking at the top of the Spreadsheet window.  Here is an example:</p>
+
+    <div style="text-align: center;"><a href="../images/newspreadsheets.png" rel="lightbox"><img src="../images/newspreadsheets.png" alt="" class="screenshot" loading="lazy" width="400"></a></div>
+
+    <p>The top of the <b class="menu_item">Window &gt;&gt; Message Log</b> also will indicate whether you are using New Spreadsheets or Old Spreadsheets.  At the present time almost all users are using New Spreadsheets.</p>
+
+    <p>All of the Spreadsheet documentation on this website applies to New Spreadsheets only.  </p>
+
+    <p>The following are the limitations, advantages and differences when using New Spreadsheets compared with Old Spreadsheets:</p>
+
+    <ul>
+        <li>
+            <p>New Spreadsheets do not support all of the functions that are available in Old Spreadsheets.  For example functions that are not relevant like loan related functions are not supported.  All of the most relevant core and basic Spreadsheet functions are supported.  The following functions are not supported: COUNTIF, AVERAGEIF, MAXIF, MINIF, SUMIF.  For an alternative to these functions, refer to <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#UsingTheEquivalentOf_COUNTIF_AVERAGEIF_MAXIF_MINIF_SUMIF">Using the Equivalent of COUNTIF, AVERAGEIF, MAXIF, MINIF, SUMIF</a>.  For a list of the Spreadsheet functions supported in New Spreadsheets, refer to <a href="index8e89.html?page=doc/SpreadsheetFunctions.html">Spreadsheet Functions</a>.</p>
+        </li>
+
+        <li>
+            <p>New Spreadsheets do not support the user interface which is known as Range Explorer and Workbook Explorer.</p>
+        </li>
+
+
+        <li>
+            <p>New Spreadsheets do not support referencing data across Spreadsheets by specifying the name of the Spreadsheet in a cell reference.  It is only possible to make references to other Sheets  within the same Spreadsheet.  There are ways of designing your use of Spreadsheets, so this is not required.  Refer to this <a href="https://www.sierrachart.com/SupportBoard.php?ThreadID=1433">discussion thread for alternatives</a>.  The main solution is to use the <b>Chart Data Output Sheet Number</b> Spreadsheet Study Input to control what Sheet within the Spreadsheet the data is outputted to and is used by the Spreadsheet study.</p>
+        </li>
+
+        <li>
+            <p>New Spreadsheets have multiple window views into the same Spreadsheet Sheet.  This is accessed through <b class="menu_item">Spreadsheet &gt;&gt; New View</b>.</p>
+        </li>
+
+        <li>
+            <p>In New Spreadsheets, when Sheets are added or removed, existing sheets still maintain their reference to the same chart when using the Spreadsheet study.</p>
+        </li>
+
+        <li>
+            <p>New Spreadsheets have a new referencing method for chart data and studies which automatically adjust to studies being reordered.  This prevents having to change formulas when studies are inserted or reordered.  This is explained in <a href="https://www.sierrachart.com/Videos/New Spreadsheets.wmv">this video</a>.</p>
+
+            <p>Note: This video mentions an issue related to a blank column between the spreadsheet formulas and the first study.  This issue has since been resolved so that there is no blank column by default.  A blank column may still be included by setting the Spreadsheet study input <b>Blank Columns Before First Study</b> to 1.</p>
+        </li>
+
+        <li>
+            <p>Refer to <a href="https://www.sierrachart.com/Videos/EnteringDataOnSpreadsheets.wmv">this video</a> demonstrating how to enter data and formulas with New Spreadsheets.</p>
+        </li>
+
+        <li>
+            <p>The Spreadsheet Studies for New Spreadsheets support outputting Volume at Price data.  All of the Spreadsheet studies have an <b>Output Volume at Price Data</b> study input which can be set to Yes.  When this is set to Yes, the Volume at Price data will be outputted beginning at column <b>BA</b>.</p>
+        </li>
+
+        <li>
+            <p>The limitations which exist in New Spreadsheets, exist because of the very high degree of complexity to implement them and to support them.  Spreadsheets are complicated enough without adding unnecessary complexity.  We have a responsibility to ensure the Spreadsheets are fast, are reliable and can be properly maintained and supported.  So these limitations are likely to always be limitations but they really are not limitations because the core spreadsheet functionality is provided and it executes very fast and accurately.</p>
+        </li>
+    </ul>
+</div>
+
+
+<div class="h2">
+    <h2 id="SheetsandSpreadsheets">Difference Between Sheets and Spreadsheets</h2>
+    <div class="member-link">[<a href="#SheetsandSpreadsheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A spreadsheet window contains one or more <em>Sheets</em>.  Each of these Sheets is a Spreadsheet itself and can refer to other Sheets within the overall Spreadsheet window.</p>
+
+    <p>A Spreadsheet is a single window in Sierra Chart that can be saved to a file and opened.  They are separate from <a href="index7674.html?page=doc/Chartbooks.html" >Chartbooks</a> which are collections of chart windows.</p> 
+
+    <p>The individual Sheets in a Spreadsheet can be selected from the drop-down list menu at the top left of the Spreadsheet window. Refer to the image below.</p>
+
+
+    <div style="text-align: center;"><a href="../images/spreadsheetsheetselectionlistbox.png" rel="lightbox"><img src="../images/spreadsheetsheetselectionlistbox.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+
+    <div class="h3">
+        <h3 id="UsingKeyboardToAccessSheets">Using Keyboard to Access Sheets</h3>
+
+        <p>When the list box of Sheets at the top left has the focus, you can use the Up and Down arrow keys on your keyboard to cycle through the Sheets. When each Sheet is selected in the list, it will immediately become active. This allows you to quickly cycle through the Sheets to view each one with the up and down arrow keys.</p>
+    </div>
+</div>
+
+
+<div class="h2">
+    <h2 id="SpreadsheetMenuCommands">Spreadsheet Menu Commands</h2>
+    <div class="member-link">[<a href="#SpreadsheetMenuCommands">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Sierra Chart menus contains commands for Spreadsheets.  Documentation for these menu commands can be found on the <a href="index8793.html?page=doc/FileMenu.html">File Menu</a> and <a href="indexbe1b.html?page=doc/SpreadsheetMenu.html">Spreadsheet Menu</a> documentation pages.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="CreatingandOpeningSpreadsheets">Creating and Opening Spreadsheets</h2>
+    <div class="member-link">[<a href="#CreatingandOpeningSpreadsheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To create a new Spreadsheet, select <b class="menu_item">File &gt;&gt; New Spreadsheet</b> on the menu.</p>
+
+    <p>To open an existing Spreadsheet: Select <b class="menu_item">File &gt;&gt; Open Spreadsheet</b> on the menu.  The <b>Open Spreadsheet</b> window will display.  Select a Spreadsheet file  in the list.  Press the <b>Open</b> button.   </p>
+
+    <p>The <b>File Type</b> drop down list box in the <b>Open Spreadsheet</b> window lists the different types of Spreadsheet files you can open.  Select the type of file you want to open from the list if you want to open a type other than the default.  For example, you can open a text file where the values are separated by a comma or tab character.</p>
+
+    <p>New and existing Spreadsheet windows for <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php" >Spreadsheet Studies</a> applied to a chart, are automatically created or opened by the <b>Spreadsheet Study</b>, <b>Spreadsheet System/Alert</b> and <b>Spreadsheet System for Trading</b> studies.</p>
+
+    <p> When opening a <a href="index7674.html?page=doc/Chartbooks.html" >Chartbook</a> that contains charts that use one of the Spreadsheet Studies,  the very first Spreadsheet Study that is opening the Spreadsheet file will set the active Sheet to the Sheet it is outputting data to.   Any other Spreadsheet Studies which reference the same Spreadsheet file, will not change the active Sheet in that Spreadsheet window.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="SpreadsheetCells">Spreadsheet Cells</h2>
+    <div class="member-link">[<a href="#SpreadsheetCells">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Spreadsheets contain rows and columns of cells.  Spreadsheet cells can contain formulas, numbers, dates, times, text, logical values (TRUE, FALSE), or error values.</p>
+
+    <p>The active cell is the one where the Spreadsheet highlight box is located.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="ActivatingandViewingSpreadsheets">Activating and Viewing (Selecting) Sheets within a Spreadsheet</h2>
+    <div class="member-link">[<a href="#ActivatingandViewingSpreadsheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A Sierra Chart Spreadsheet window contains one or more Sheets.  At the top left of the Spreadsheet window, there is a list box which contains all of the Sheets within the Spreadsheet window. Select the particular Sheet you want to display from that list.</p>
+    
+    <div style="text-align: center;"><a href="../images/spreadsheetsheetselectionlistbox.png" rel="lightbox"><img src="../images/spreadsheetsheetselectionlistbox.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <p>If the Spreadsheet is already visible, then it can be made active, if it is not already, by left clicking with your Pointer anywhere on the Spreadsheet window.</p>
+
+</div>
+
+
+<div class="h2">
+    <h2 id="EnteringData">Entering Data</h2>
+    <div class="member-link">[<a href="#EnteringData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To select a cell, first activate the Spreadsheet if it is not already active, by left clicking anywhere on it with your Pointer.</p>
+
+    <p>Use the keyboard arrow keys to move to a cell or select a cell by pointing to it with your Pointer and left click it with your Pointer.</p>
+
+    <p>To enter data on a cell in a Spreadsheet in the version of Sierra Chart with New Spreadsheets, you first need to left click 2 times with your Pointer in the cell to open the edit box for the cell.  Enter the data.  Press the <b>OK</b> button to save it into the cell.  Refer to the image below.</p>
+
+    <p>Unlike when entering data into Formulas and Functions, dates, times, and text should not be enclosed quotation marks when entered directly into cells.</p>
+
+    <div style="text-align: center;"><a href="../images/editingspreadsheetcell.png" rel="lightbox"><img src="../images/editingspreadsheetcell.png" alt="" class="screenshot" loading="lazy" width="400"></a></div>
+    
+   <p> To expand the cell editing window, press the <b>>></b> button.  You can invoke this button, through the keyboard.  Press TAB followed by SPACE. In the compact edit window, the focus is by default on the edit control. By pressing TAB, that moves the focus to the expand (>>) button. And by pressing SPACE when the focus is on the expand button will click that button and expand the edit window.  </p>
+</div>
+
+
+<section class="h2">
+    <h2 id="Filling">Filling Cells with Value or Formula</h2>
+    <div class="member-link">[<a href="#Filling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have a value or formula in a cell and you want to fill other cells with this same data, then perform the following steps:
+    <ol>
+        <li> Select the cell or cells that you wish to copy from.  Copy the values or formulas by selecting <b class="menu_item">Spreadsheet &gt;&gt; Copy Value</b> or  <b class="menu_item">Spreadsheet &gt;&gt; Copy Formula</b> respectively.</li>
+
+        <li>Select the range of cells that you want to be filled in with the contents of the originally selected cell or cells.</li>
+
+        <li> Perform a paste operation by selecting <b class="menu_item">Spreadsheet &gt;&gt; Paste</b>.  If you are copying a formula, then the cell references will be automatically adjusted unless they are absolute references. </li>
+
+        <li>It is also possible to use the <b class="menu_item">Spreadsheet &gt;&gt; Copy Down</b> and <b class="menu_item">Spreadsheet &gt;&gt; Copy Right</b> commands to fill cells.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="Undo">Undo</h2>
+    <div class="member-link">[<a href="#Undo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Selecting <b class="menu_item">Spreadsheet &gt;&gt; Undo</b> will reverse the last performed action on the spreadsheet. It will only undo one single action, it does not store multiple actions to undo.</p>
+
+    <p>If the last edit was performed on a different sheet than the one that is currently displayed, the system will display the sheet with the last edit and perform the undo action.</p>
+
+    <p>The following are the only items that can be undone. Anything not listed here is not available through the Undo function.</p>
+
+    <ul>
+        <li>Edits made in a cell</li>
+
+        <li>Edits made to a cell's comment</li>
+
+        <li>Edits made to both a cell and its comment through the expanded edit window</li>
+
+        <li>The last Undo action (a Redo action)</li>
+    </ul>
+</section>
+
+
+<div class="h2">
+    <h2 id="Formulas">Formulas</h2>
+    <div class="member-link">[<a href="#Formulas">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Formulas can be entered into Spreadsheet cells to perform calculations on data.</p>
+
+    <p>A formula starts with an equals sign (=) and can contain <a href="index8e89.html?page=doc/SpreadsheetFunctions.html">Spreadsheet Functions</a>, numbers,  <a href="#NamedConstants" >Named Constants</a>, cell references, text strings (text needs to be in quotation marks), logical values (TRUE, FALSE), and <a href="#Operators">Operators</a>. </p>
+
+    <p>Most formulas that can be used in Excel can be used in Sierra Chart Spreadsheets.</p>
+
+    <p>When entering numbers and formulas, keep in mind to use the proper delimiters in your numbers and formulas, according to your Region Setting.  For more information, see the <a href="#Delimiters">Decimal and Function Delimiters</a> section.</p>
+
+    <div class="h3">
+        <div class="h4">
+            <h4>Examples:</h4>
+            <p><span class="SpreadsheetFormula">= A2 + 10</span> &mdash; If A2 has the value 5, then this formula returns 15.</p>
+            <p><span class="SpreadsheetFormula">= SUM( B2:B10 )</span> &mdash; This formula uses the SUM function.  The sum of cells B2 through B10 is returned.</p>
+            <p><span class="SpreadsheetFormula">= C10</span> &mdash; Returns the value in cell C10.</p>
+        </div>
+    </div>
+
+    <p>Dates and/or Times when entered into cells are stored as <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#SerialDateTimeValues">Serial DateTime Values</a>,  which are numeric values.  Arithmetic can be used on these numeric values.</p>
+
+    <p>  When a Sheet cell contains a formula, at the top right of the cell there is a red indicator indicating this. Refer to the image below.</p>
+
+    <div style="text-align: center;"><a href="../images/spreadsheetformulaindicator.png" rel="lightbox"><img src="../images/spreadsheetformulaindicator.png" alt="" class="screenshot" loading="lazy" width="230"></a></div>
+
+</div>
+
+<div class="h2">
+    <h2 id="ViewingFormulaExpressionTree">Viewing Formula Expression Tree</h2>
+    <div class="member-link">[<a href="#ViewingFormulaExpressionTree">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    
+    <p>It is supported to see the formula expression tree  for a selected formula.  The formula expression tree displays the result of each subexpression.  This is very useful to debug a formula that is giving an error.  </p>
+
+    <p> This feature is accessed by selecting a cell and then pressing the <b>Details</b> button at the top right of the Spreadsheet.  Refer to image below.  </p>
+
+
+    <p> Double-clicking or pressing the Enter/Return key on an item in the formula expression tree list that is either a reference or returns a reference will immediately jump to the referenced cell.</p>
+
+    <div style="text-align: center;"><a href="../images/spreadsheetformulaexpressiontree.png" rel="lightbox"><img src="../images/spreadsheetformulaexpressiontree.png" alt="" class="screenshot" loading="lazy" width="700" ></a></div>
+
+    <p>When using the <b>AND</b> function, the formula expression tree may show <b>(not evaluated)</b> for one or more of the expressions. This is normal and is due to the underlying need of the AND function to have all expressions be true in order for the AND function to be true. Therefore, if the first expression returns false, no further processing is required and additional expressions are not evaluated.</p>
+</div>
+
+<div class="h2">
+    <h2 id="Operators">Operators</h2>
+    <div class="member-link">[<a href="#Operators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div class="h3">
+        <h3 id="UnaryOperators">Unary Operators</h3>
+        <div class="member-link">[<a href="#UnaryOperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div class="h4">
+			<h4 id="UnaryNegation">Unary Negation (-)</h4>
+			<div class="member-link">[<a href="#UnaryNegation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= <b>-</b> A1</span></p>
+
+            <p>The result of this operator is the negative of the value of the given operand.  For example, if the value is 2, the result will be -2; if the value is -2, the result will be 2.  This operator only works on numeric value types.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="UnaryLogicalInversion">Unary Logical Inversion (Not) (!)</h4>
+			<div class="member-link">[<a href="#UnaryLogicalInversion">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= <b>!</b> A1</span></p>
+
+            <p>The result of this operator is the logical inverse of the value of the given operand.  If the value is TRUE, the result will be FALSE; if the value is FALSE, the result will be TRUE.  This operator only works on logical (boolean) value types.</p>
+        </div>
+
+        <p>If the value type of the operand is not compatible with the operator, such as trying to negate a string, or trying to 'not' a number, the operation will result in a #VALUE! error.</p>
+
+        <p>If the value of the operand is an error value, that error value will be passed through as the result of the operation.</p>
+
+        <p>If the operand has no value, then the result of the operation will also be no value.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="ArithmeticOperators">Arithmetic Operators</h3>
+        <div class="member-link">[<a href="#ArithmeticOperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div class="h4">
+			<h4 id="Addition">Addition (+)</h4>
+			<div class="member-link">[<a href="#Addition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>+</b> B1</span></p>
+
+            <p>The result of this operator is the value of the second operand (B1) added to the value of the first operand (A1).  This works with text values by concatenating the values together.  This operator also behaves as an OR operator for logical (boolean) values.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="Subtraction">Subtraction (-)</h4>
+			<div class="member-link">[<a href="#Subtraction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>-</b> B1</span></p>
+
+            <p>The result of this operator is the value of the second operand (B1) subtracted from the value of the first operand (A1).  This operator also behaves as an XOR operator for logical (boolean) values.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="Multiplication">Multiplication (*)</h4>
+			<div class="member-link">[<a href="#Multiplication">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>*</b> B1</span></p>
+
+            <p>The result of this operator is the value of the first operand (A1) multiplied by the value of the second operand (B1).  This operator also behaves as an AND operator for logical (boolean) values.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="Division">Division (/)</h4>
+			<div class="member-link">[<a href="#Division">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>/</b> B1</span></p>
+
+            <p>The result of this operator is the value of the first operand (A1) divided by the value of the second operand (B1).  If the value of the second operand is 0, the result is a #DIV/0! error.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="Exponentiation">Exponentiation (^)</h4>
+			<div class="member-link">[<a href="#Exponentiation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>^</b> B1</span></p>
+
+            <p>The result of this operator is the value of the first operand (A1) raised to the power of the value of the second operand (B1).  0^0 will give a result of 1.  0 raised to a negative number will result in a #DIV/0! error, because it is equivalent to dividing by zero.  A negative number raised to a number that is not whole will result in a #NUM! error, because imaginary numbers are not supported.  This operator also behaves as an AND operator for logical (boolean) values.</p>
+        </div>
+
+        <p>If the types of the values of the operands are not compatible with the operator, such as trying to divide logical (boolean) values, or if the types of the values are not compatible with each other, such as trying to add a number to a text value, the operation will result in a #VALUE! error.</p>
+
+        <p>If the value of either operand is an error value, that error value will be passed through as the result of the operation.  If both operands are errors, the error value from the first operand will be passed through as the result.</p>
+
+        <p>If both operands are non-values (referencing an empty cell), the result of the operation will also be an empty value (no value).</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="ComparisonOperators">Comparison Operators</h3>
+        <div class="member-link">[<a href="#ComparisonOperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div class="h4">
+			<h4 id="Less">Less (&lt;)</h4>
+			<div class="member-link">[<a href="#Less">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>&lt;</b> B1</span></p>
+
+            <p>The result of this operator will be TRUE if and only if the value of the first operand (A1) is less than the value of the second operand (B1).  If the first value is not less than the second value, the result will be FALSE.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="LessOrEqual">Less or Equal (&lt;=)</h4>
+			<div class="member-link">[<a href="#LessOrEqual">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>&lt;=</b> B1</span></p>
+
+            <p>The result of this operator will be TRUE if and only if the value of the first operand (A1) is either less than or equal to the value of the second operand (B1).  If the first value is not less than or equal to the second value, the result will be FALSE.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="Equal">Equal (=)</h4>
+			<div class="member-link">[<a href="#Equal">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>=</b> B1</span></p>
+
+            <p>The result of this operator will be TRUE if and only if the value of the first operand (A1) is equal to the value of the second operand (B1).  If the first value is not equal to the second value, the result will be FALSE.  Unlike most operators, if either operand is an error value, these values will be compared the same as any other value type.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="GreaterOrEqual">Greater or Equal (&gt;=)</h4>
+			<div class="member-link">[<a href="#GreaterOrEqual">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">=A1 <b>&gt;=</b> B1</span></p>
+
+            <p>The result of this operator will be TRUE if and only if the value of the first operand (A1) is either greater than or equal to the value of the second operand (B1).  If the first value is not greater than or equal to the second value, the result will be FALSE.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="Greater">Greater (&gt;)</h4>
+			<div class="member-link">[<a href="#Greater">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>&gt;</b> B1</span></p>
+
+            <p>The result of this operator will be TRUE if and only if the value of the first operand (A1) is greater than the value of the second operand (B1).  If the first value is not greater than second value, the result will be FALSE.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="NotEqual">Not Equal (&lt;&gt;)</h4>
+			<div class="member-link">[<a href="#NotEqual">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Example: <span class="SpreadsheetFormula">= A1 <b>&lt;&gt;</b> B1</span></p>
+
+            <p>The result of this operator will be TRUE if and only if the value of the first operand (A1) is not equal to the value of the second operand (B1).  If this is not the case, the result will be FALSE.  Unlike most operators, if either operand is an error value, these values will be compared the same as any other value type.</p>
+        </div>
+
+        <p>If neither operand has a value (references an empty cell), the operands are considered equal.</p>
+
+        <p>If the types of the values of the operands are not compatible with each other, such as trying to compare a number to a text value, the operation will result in a #VALUE! error.</p>
+
+        <p>Aside from the equal (=) and not equal (&lt;&gt;) operators, if the value of either operand is an error value, that error value will be passed through as the result of the operation.  If both operands are errors, the error value from the first operand will be passed through as the result.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="ChainedOperators">Chained Operators</h3>
+        <div class="member-link">[<a href="#ChainedOperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Multiple comparison operators that share operands can be chained together.  For example, the formula <span class="SpreadsheetFormula">= A1 = B1 = 0</span> will return TRUE if and only if the values of both A1 and B1 are equal to 0.  This gives the same result as the formula <span class="SpreadsheetFormula">= AND( A1 = 0, B1 = 0 )</span>.  Another example is the formula <span class="SpreadsheetFormula">= A1 &lt; A2 &lt; A3 &lt; A4</span>, which returns true if and only if the values of A1 through A4 are ascending and not equal.  This gives the same result as the formula <span class="SpreadsheetFormula">= AND( A1 &lt; A2, A2 &lt; A3, A3 &lt; A4 )</span>.</p>
+    </div>
+
+    <p>Use parentheses, ( ), around expressions to change order of precedence.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="UserDefinedNames">User Defined Names</h2>
+    <div class="member-link">[<a href="#UserDefinedNames">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The new spreadsheets do not support custom names defined by the user.  However, various predefined names can be used within spreadsheet formulas.</p>
+
+    <div class="h3">
+        <h3 id="NamedConstants">Named Constants</h3>
+        <div class="member-link">[<a href="#NamedConstants">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following names are already defined and set to the values listed.</p>
+
+        <div class="h4">
+			<h4 id="NamedConstants_Months">Months</h4>
+			<div class="member-link">[<a href="#NamedConstants_Months">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <div>
+                <table class="doc">
+                    <tr><th>Name</th><th>Value</th></tr>
+                    <tr><td>JANUARY</td><td>1</td></tr>
+                    <tr><td>FEBRUARY</td><td>2</td></tr>
+                    <tr><td>MARCH</td><td>3</td></tr>
+                    <tr><td>APRIL</td><td>4</td></tr>
+                    <tr><td>MAY</td><td>5</td></tr>
+                    <tr><td>JUNE</td><td>6</td></tr>
+                    <tr><td>JULY</td><td>7</td></tr>
+                    <tr><td>AUGUST</td><td>8</td></tr>
+                    <tr><td>SEPTEMBER</td><td>9</td></tr>
+                    <tr><td>OCTOBER</td><td>10</td></tr>
+                    <tr><td>NOVEMBER</td><td>11</td></tr>
+                    <tr><td>DECEMBER</td><td>12</td></tr>
+                </table>
+            </div>
+
+            <p>These are useful with the DATE function.  For example: <span class="SpreadsheetFormula">= DATE( 2001, <b>JANUARY</b>, 1 )</span> results in the date value for January 1st, 2001.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="NamedConstants_DaysoFTheWeek">Days of the Week</h4>
+			<div class="member-link">[<a href="#NamedConstants_DaysoFTheWeek">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <div>
+                <table class="doc">
+                    <tr><th>Name</th><th>Value</th></tr>
+                    <tr><td>SUNDAY</td><td>1</td></tr>
+                    <tr><td>MONDAY</td><td>2</td></tr>
+                    <tr><td>TUESDAY</td><td>3</td></tr>
+                    <tr><td>WEDNESDAY</td><td>4</td></tr>
+                    <tr><td>THURSDAY</td><td>5</td></tr>
+                    <tr><td>FRIDAY</td><td>6</td></tr>
+                    <tr><td>SATURDAY</td><td>7</td></tr>
+                </table>
+            </div>
+
+            <p>These are useful with the WEEKDAY function.  For example: <span class="SpreadsheetFormula">= WEEKDAY( A1 ) = <b>FRIDAY</b></span> results in TRUE if the date value in cell A1 is a Friday.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="NamedConstants_MathConstants">Math Constants</h4>
+			<div class="member-link">[<a href="#NamedConstants_MathConstants">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <div>
+                <table class="doc">
+                    <tr><th>Name</th><th>Value</th></tr>
+                    <tr><td>E</td><td>2.71828182845904523536</td></tr>
+                    <tr><td>PI</td><td>3.14159265358979323846</td></tr>
+                </table>
+            </div>
+
+            <p>These are useful with the various mathematics related functions.  For example: <span class="SpreadsheetFormula">= LN( <b>E</b> )</span> results in 1.0.</p>
+        </div>
+
+        <div class="h4">
+			<h4 id="NamedConstants_NoValueConstant">No Value Constant</h4>
+			<div class="member-link">[<a href="#NamedConstants_NoValueConstant">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Spreadsheets support the <b>NOVALUE</b> constant. Unlike "", <b>NOVALUE</b> is equivalent to an empty cell.</p>
+
+            <p>Example: <b>=IF(E3 &gt; 100, E3, NOVALUE)</b>. </p>
+        </div>
+    </div>
+</div>
+
+<div class="h2">
+    <h2 id="TrueAndFalseValues">True and False Values</h2>
+    <div class="member-link">[<a href="#TrueAndFalseValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>In Sierra Chart Spreadsheets, True is represented by 1  and False is represented by 0. So a formula that returns TRUE will display 1 in a cell and a formula that returns FALSE will display 0.</p>
+
+    <p>It is possible to format a cell to display TRUE when it contains 1.0 and FALSE when it contains 0.0. This can be done by selecting the cell or a range of cells and selecting <b Class = "menu_item">Spreadsheet &gt;&gt; Number Format</b>  and choosing the  <b>TRUE/FALSE</b> Number Format.</p>
+</div>
+
+<div class="h2">
+    <h2 id="Delimiters">Decimal and Function Delimiters</h2>
+    <div class="member-link">[<a href="#Delimiters">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The delimiters for decimal numbers and function parameters can be changed to suit different region preferences.  Two options are available:</p>
+
+    <ul>
+        <li>Use full stop (.) decimal delimiter, and comma (,) function delimiter.</li>
+        <li>Use comma (,) decimal delimiter, and semicolon (;) function delimiter.</li>
+    </ul>
+
+    <p>This setting for decimal and function delimiters is found in the <b>Spreadsheet Settings</b> window, which can be accessed from the menu item <b class="menu_item">Global Settings &gt;&gt; Spreadsheet Settings</b>.</p>
+
+    <p>The decimal delimiter is the character that is used for the decimal point in decimal numbers.  A number using a full stop (.) decimal delimiter would look like <span class="SpreadsheetFormula">1.25</span>, while the same number using a comma (,) decimal delimiter would look like <span class="SpreadsheetFormula">1,25</span>.</p>
+
+    <p>The function parameter delimiter is the character that is used to separate parameters in formula functions.  An example of the SUM function using a comma (,) parameter delimiter would look like <span class="SpreadsheetFormula">=SUM( A1, B2, C3 )</span>, while the same function using a semicolon (;) parameter delimiter would look like <span class="SpreadsheetFormula">=SUM( A1; B2; C3 )</span>.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="CellandRangeSelection">Cell and Range Selection</h2>
+    <div class="member-link">[<a href="#CellandRangeSelection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Click and hold your left Pointer button and drag through a range of cells to select them.  Or press the SHIFT key and use the keyboard navigation keys to select a range of cells.</p>
+
+    <p>A single cell is also considered a range or a selection.  It is range or selection of just one cell.</p>
+
+    <p>To select an entire column or row, left click with your Pointer the column or row header of a Sheet.  Headers are along the top and left of the Spreadsheet.  If you left click and drag with your Pointer across the headers you can select multiple columns or rows.</p>
+
+    <p>The active cell has a thick border around it. Other selected cells are shaded.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="CellFormatting">Cell Formatting</h2>
+    <div class="member-link">[<a href="#CellFormatting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Each cell can be individually set to display numeric values using a specific value format, as well as using specific text and background colors. </p>
+
+    <p> The value format for the currently selected cell or range of cells can be set through the menu item <b class="menu_item">Spreadsheet &gt;&gt; Number Format</b>.  </p>
+
+    <p>Likewise, the text and background colors for the currently selected cell or range of cells can be set through the menu item <b class="menu_item">Spreadsheet &gt;&gt; Cell Properties</b>.</p>
+
+    <p>The font, font style, and font size used for the text in cells cannot be changed for individual cells, but can be set for all spreadsheets through the menu item <b class="menu_item">Spreadsheet &gt;&gt; Change Font</b>.</p>
+</div>
+
+<section class="h2">
+    <h2 id="ColorSettings">Color Settings</h2>
+    <div class="member-link">[<a href="#ColorSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> There are various color settings available for Spreadsheets. They are set through  <b Class = "menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Colors and Widths</b>. Refer to the image below. </p>
+
+    <div style="text-align: center;"><a href="../images/spreadsheetcolorssettings.png" rel="lightbox"><img src="../images/spreadsheetcolorssettings.png" alt="" width="550"  class="screenshot" loading="lazy"></a></div>
+
+</section>
+
+<div class="h2">
+    <h2 id="CellandRangeReferences">Cell and Range References</h2>
+    <div class="member-link">[<a href="#CellandRangeReferences">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div class="h3">
+        <h3 id="CellandRangeReferencesGeneral">General</h3>
+        <div class="member-link">[<a href="#CellandRangeReferencesGeneral">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A reference refers to the contents of a cell or a range of cells.  References are used in formulas.  The reference specifies a cell by referring to the row and column position of the cell.  The reference uses the row and column headings in the Spreadsheet.  Example: A1 refers to the cell at column A and row 1.  To reference a range of cells, use a colon (:) between the cell reference at the top left of the range and the cell reference at the bottom right of the range.</p>
+
+        <div class="h4">
+            <h4>Basic Reference Examples:</h4>
+
+            <p><span class="SpreadsheetFormula">B1</span> refers to cell at column B and row 1.</p>
+
+            <p><span class="SpreadsheetFormula">A1:B4</span> refers to the range that includes all cells in columns A and B of rows 1, 2, 3, and 4.</p>
+
+            <p><span class="SpreadsheetFormula">A1:A10</span> refers to the range that includes all cells in column A of rows 1 to 10.</p>
+        </div>
+    </div>
+
+    <div class="h3">
+        <h3 id="RelativeAbsoluteReferences">Relative and Absolute References</h3>
+        <div class="member-link">[<a href="#RelativeAbsoluteReferences">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There are relative and absolute cell references.  Relative references refer to a cell using offsets that the cell being referenced is to the cell that contains the reference.</p>
+
+        <p>When a cell containing a Relative reference is copied, the reference is adjusted to refer to a new cells with the same offsets that the original cell had to the cells it was referencing.</p>
+
+        <p>Absolute references refer to a cell at an exact location.  When a cell containing an Absolute reference is copied, the reference will not change.  Absolute references are specified with a dollar sign ($) in front of the row and/or column that is to be absolute.</p>
+
+        <p>References can be part absolute and part relative.</p>
+
+        <div class="h4">
+            <h4>Relative and Absolute Reference Examples:</h4>
+
+            <p><span class="SpreadsheetFormula">B1</span> Relative reference to cell B1.  It if is in cell A1 and copied to A2, then it will refer to B2 since the reference refers to one cell to the right in the same row.</p>
+
+            <p><span class="SpreadsheetFormula">$C$4</span> Absolute reference cell C4.</p>
+
+            <p><span class="SpreadsheetFormula">$D1</span> Absolute column reference and relative row reference to cell D1.</p>
+
+            <p><span class="SpreadsheetFormula">A$2</span> Relative column reference and absolute row reference to cell A2.</p>
+            
+            <p><span class="SpreadsheetFormula">ID1.SG1@$3</span>Relative column reference and absolute row reference to Study Subgraph. For additional information, refer to <a href="#ReferencesStudySubgraphColumnsSpreadsheetStudy" >References to Study Subgraph Columns when using the Spreadsheet Study</a></p>
+            
+        </div>
+    </div>
+
+    <div class="h3">
+        <h3 id="ReferencesOtherSheets">References to Other Sheets within a Spreadsheet</h3>
+        <div class="member-link">[<a href="#ReferencesOtherSheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Sierra Chart Spreadsheets support references to cells in other Sheets within the  <em>same Spreadsheet window</em>.  To reference cells in a particular Sheet in the same Spreadsheet, use the following format. Remember that references are used in formulas, and formulas begin with an equals sign (=).</p>
+
+        <p>Format: <span class="SpreadsheetFormula">'SheetName'!CellReference</span></p>
+
+        <p>If the Sheet Name does not contain any spaces the single quotes can be omitted.</p>
+
+        <div class="h4">
+            <h4>Examples:</h4>
+
+            <p><span class="SpreadsheetFormula">= Sheet1!A1</span></p>
+
+            <p><span class="SpreadsheetFormula">='First Sheet'!A1</span></p>
+        </div>
+    </div>
+
+    <section class="h3">
+        <h3 id="ReferencesToOtherSpreadsheetsWindows">References to Other Spreadsheets Windows</h3>
+        <div class="member-link">[<a href="#ReferencesToOtherSpreadsheetsWindows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>References between Sheets among different Spreadsheet windows <em>is not supported</em>. A  Spreadsheet window is a separate distinct window opened through <b class = "menu_item">File &gt;&gt; Open Spreadsheet</b> or automatically opened by a <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php" target="_blank" rel="noopener noreferrer">Spreadsheet Study</a>.</p>
+        
+        <p>However, follow the instructions below to use multiple Spreadsheet studies which output to the same named  Spreadsheet and supports sharing/referencing of data between the Sheets within the Spreadsheet window/collection.</p>
+         
+        <ol>
+             <li>For each chart that you want to have chart data and study data outputted to a Sheet in a Spreadsheet,  <a href="#" >add</a> one of the  <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php" target="_blank" rel="noopener noreferrer">Spreadsheet Studies</a> to the chart.</li>
+             
+             <li> For each instance of the Spreadsheet  study being used, make sure the <a href="index9099.html?page=doc/ChartStudies.html#SpreadsheetName" target="_blank" rel="noopener noreferrer">Spreadsheet Name</a> setting in the <b>Study Settings</b> window set to the  <em>same name</em>.</li>
+             
+             <li> Make sure that each chart is outputting data to a different Sheet within the same Spreadsheet. This is done through the  <a href="index2192.html?page=doc/SpreadsheetStudyInputs.html#ChartDataOutputSheetNumber" target="_blank" rel="noopener noreferrer">Chart Data Output Sheet Number</a> or <a href="index2192.html?page=doc/SpreadsheetStudyInputs.html#ChartDataOutputSheetName" target="_blank" rel="noopener noreferrer" >Chart Data Open Sheet Name</a> Inputs. Normally this will be the case. However, if you are using the same named Spreadsheet among different Chartbooks, then you have to be careful about this and make sure that each chart is outputted to a different Sheet.</li>
+
+             <li> Now that the chart data and study data is being outputted to the different Sheets within the same Spreadsheet, you can then use <a href="#ReferencesOtherSheets" >cell references</a> to reference the data between the  Sheets.</li>
+             <li> If there are two Sheets you want to be able to view at the same time in the same Spreadsheet window, this is accomplished by going to the Spreadsheet window and selecting <b class = "menu_item">Spreadsheet &gt;&gt; New View</b>. This other view can be set to display a different Sheet. 
+             <br> <br>
+             You also have the ability through <b class = "menu_item">Window &gt;&gt; Detach/Attach Window</b> to detach it from the main Sierra Chart window.</li>
+        </ol>        
+    </section>
+
+    <div class="h3">
+        <h3 id="ReferencesStudySubgraphColumnsSpreadsheetStudy">References to Study Subgraph Columns when using the Spreadsheet Study</h3>
+        <div class="member-link">[<a href="#ReferencesStudySubgraphColumnsSpreadsheetStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is supported to reference Study Subgraph columns when using the  <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php" >Spreadsheet Study</a> using a format which constantly refers to a specific Study Subgraph on the chart even if studies are reordered on the Spreadsheet Sheet, or if other studies that are not being referenced are no longer being outputted to the Spreadsheet Sheet.</p>
+
+
+        <p> This referencing method is also valid when referencing the chart bar  data from the main price graph which is outputted to columns <b>A</b> through <b>G</b> on the Sheet.</p>
+
+        <p>The cell reference format is <span class="SpreadsheetFormula"><b>[Study ID].[Subgraph number]@[Row number]</b></span>.</p>
+
+        <p> The Study ID number is displayed after the study in the  <b Class = "menu_item">Analysis &gt;&gt; Studies &gt;&gt; Studies to Graph</b> list. The Subgraph number (<b>SG#</b>) is displayed on the <b>Subgraphs</b> tab of the <b>Study Settings</b> window after each Subgraph name.</p>
+
+        <p>The  Study ID and  Subgraph number  which are separated by a period are displayed at row 2 in the Study Subgraph or main price graph Column on the Sheet in the Spreadsheet window. Refer to the image below.</p>
+
+        <p>Example: <span class="SpreadsheetFormula"><b>ID1.SG1@3</b></span>.</p>
+
+        <p>For example, in the image below instead of using AA3 to reference the value of the Moving Average Subgraph at row 3, the new direct Study Subgraph reference method is used instead.</p>
+
+        <div style="text-align: center;"><a href="../images/spreadsheetstudystudysubgraphreferencemethod.png" rel="lightbox"><img src="../images/spreadsheetstudystudysubgraphreferencemethod.png" alt="" class="screenshot" loading="lazy" width="400"  ></a></div>
+        
+        <p>Example to create range when using direct Study Subgraph cell references: <span class="SpreadsheetFormula">=SUM(ID1.SG1@3:ID1.SG1@100)</span>. </p>
+        
+        <p> Related to this, it is also supported to update Sheet cell references when inserting and deleting rows and columns. Refer to <a href = "#InsertingAndDeletingRowsAndColumns">Inserting and Deleting Rows and Columns</a>. The setting is <b Class = "menu_item">Global Settings &gt;&gt; Spreadsheet Settings</b> <b>&gt;&gt; Reference Modification When Inserting and Deleting Rows or Columns</b>. </p>
+
+        
+        <div class="h4">
+            <h4 id="ProgrammaticallyCreatingStudySubgraphColumnsReferences">Programmatically Creating Study Subgraph Columns References</h4>
+            <div class="member-link">[<a href="#ProgrammaticallyCreatingStudySubgraphColumnsReferences">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>These study subgraph column references can be used with the <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#INDEX_Function"><b>INDEX</b></a> and <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#OFFSET_Function"><b>OFFSET</b></a> formula functions to access specific cells or ranges of cells within those columns.  
+            
+            <p>For example, the first cell in the column can be accessed using either <span class="SpreadsheetFormula">INDEX(ID1.SG1:ID1.SG1, 3)</span> or <span class="SpreadsheetFormula">OFFSET(ID1.SG1@3, 0, 0)</span>.  Both of these are still equivalent to <b>ID1.SG1@3</b>, but more advanced formulas&mdash;including references to other cell values&mdash;can be used with these formula functions.</p>
+            
+            <p>For example, the <b>Number of Rows</b> value in cell <b>J30</b> can be used to get the last value in the column using either <span class="SpreadsheetFormula">INDEX(ID1.SG1:ID1.SG1, 3 + $J$30 - 1)</span> or <span class="SpreadsheetFormula">OFFSET(ID1.SG1@3, $J$30 - 1, 0)</span>.</p> 
+            
+            <p>The <b>OFFSET</b> formula function can additionally be used to get ranges of values, such as <span class="SpreadsheetFormula">OFFSET(ID1.SG1@3, 0, 0, 10, 1)</span> will return a range of the top 10 rows in the column.</p>
+            
+            <p>The <b>INDEX</b> formula function can be used to get individual cells within a range of columns, such as <span class="SpreadsheetFormula">INDEX(ID1.SG1:ID1.SG3, 3, 2)</span> to get the first value (in row 3) in the 2nd column.</p>
+            
+        </div>
+    </div>
+</div>
+
+<section class="h2">
+    <h2 id="InsertingAndDeletingRowsAndColumns">Inserting and Deleting Rows and Columns</h2>
+    <div class="member-link">[<a href="#InsertingAndDeletingRowsAndColumns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To insert or delete rows or columns within a Sheet, refer to the documentation for the following Spreadsheet menu commands:</p>
+    <ul>
+        <li><a href="indexbe1b.html?page=doc/SpreadsheetMenu.html#InsertRow">Spreadsheet &gt;&gt; Insert Row</a></li>
+        <li><a href="indexbe1b.html?page=doc/SpreadsheetMenu.html#InsertColumn">Spreadsheet &gt;&gt; Insert Column</a></li>
+        <li><a href="indexbe1b.html?page=doc/SpreadsheetMenu.html#DeleteRow">Spreadsheet &gt;&gt; Delete Row</a></li>
+        <li><a href="indexbe1b.html?page=doc/SpreadsheetMenu.html#DeleteColumn">Spreadsheet &gt;&gt; Delete Column</a></li>
+    </ul>
+
+    <p>References within existing formulas can be updated when inserting or deleting rows or columns. The setting that controls this is <b Class = "menu_item">Global Settings &gt;&gt; Spreadsheet Settings</b> <b>&gt;&gt; Reference Modification When Inserting and Deleting Rows or Columns</b>. </p>
+
+    <p>The documentation for this setting is as follows:</p>
+
+    <section class="h3">
+		<h3 id="DoNotUpdateReferences">Do Not Update References</h3>
+		<div class="member-link">[<a href="#DoNotUpdateReferences">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>References in formulas will continue referencing the same literal cell address, even if the referenced cell was moved or deleted as a result of the insert or delete operation.</p>
+
+        <section class="h4">
+            <h4>Example</h4>
+            <p><b>A1:=A3</b></p>
+            <p>The following is the result of an operation to insert a row at row 2.</p>
+            <p><b>A1:=A3</b></p>
+        </section>
+    </section>
+
+    <section class="h3">
+		<h3 id="UpdateReferencesToMatchMovedCells">Update References To Match Moved Cells</h3>
+		<div class="member-link">[<a href="#UpdateReferencesToMatchMovedCells">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>References in formulas will be updated so that they refer to the new location of cells that were moved as a result of the insert or delete operations. If a referenced cell is deleted, the referenced will change to a #REF! error.</p>
+
+        <section class="h4">
+            <h4>Example</h4>
+            <p><b>A1:=A3</b></p>
+            <p>The following is the result of an operation to insert a row at row 2.</p>
+            <p><b>A1:=A4</b></p>
+        </section>
+    </section>
+</section>
+
+<div class="h2">
+    <h2 id="KeyboardCommands">Keyboard Commands</h2>
+    <div class="member-link">[<a href="#KeyboardCommands">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div class="h3">
+        <h3 id="KeyboardArrowKeys">Arrow Keys</h3>
+		<div class="member-link">[<a href="#KeyboardArrowKeys">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Up</b>, <b>Down</b>, <b>Left</b>, and <b>Right</b> arrow keys move the active cell selection one cell up, down, left, and right.</p>
+
+        <p>Holding down the <b>Ctrl</b> key while using the arrow keys will cause the active cell selection to skip to the edge of a block of cells.  If the current active cell selection is within a block of non-empty cells, the active cell selection will jump to the edge of the block.  If the current active cell selection is already on the edge of a block, where the next cell is empty, or on an empty cell, the active cell selection will jump to the next non-empty cell.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="HomeEnd">Home/End</h3>
+		<div class="member-link">[<a href="#HomeEnd">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Home</b> key moves the active cell selection to the first column of the active row, and the <b>End</b> key moves it to the last non-empty cell in the active row.</p>
+
+        <p>If the <b>Ctrl</b> key is held down, the <b>Home</b> and <b>End</b> keys instead move to the first and last cells of the current active column.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="PageUpPageDown">Page Up/Page Down</h3>
+		<div class="member-link">[<a href="#PageUpPageDown">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Moves the active cell selection up/down by the number of rows currently visible in the sheet.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="ShiftSelection">Shift (Selection)</h3>
+		<div class="member-link">[<a href="#ShiftSelection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Holding down the <b>Shift</b> key while changing the active cell selection, either with the keyboard or with other selection methods, will enable selecting a range of cells.  The first selected cell will remain selected as one corner of the selected range, and the new active cell selection will be the other corner of the selected range.  Selecting a range of cells allows actions that use the current selection to work on multiple cells at once.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="EnterReturn">Enter/Return</h3>
+		<div class="member-link">[<a href="#EnterReturn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the active cell for editing.  If a range of cells is selected, only the active cell is edited, and the selection will remain unchanged.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="DeleteBackspace">Delete/Backspace</h3>
+		<div class="member-link">[<a href="#DeleteBackspace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Clears the values of the selected cells.  Any formatting on the selected cells is left untouched.</p>
+    </div>
+</div>
+
+
+<div class="h2">
+    <h2 id="SpreadsheetErrorCodes">Spreadsheet Errors</h2>
+    <div class="member-link">[<a href="#SpreadsheetErrorCodes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Below are complete descriptions for each of the error values which may be returned by a formula in a Sheet cell.</p>
+    
+    <p> A formula which references  another cell and where that cell is returning one of the following error values, will cause the formula to return that same error value. Therefore, an error value will propagate  through to the final destination formula that references other cells.</p>
+    
+    <p> To know which particular reference in a formula is generating an error, use the <a href="#ViewingFormulaExpressionTree">Formula Expression Tree</a> for the cell.</p>
+
+    <div class="h3">
+        <h3 id="NULLError">#NULL!</h3>
+
+        <p>This is not used, but it is recognized as an error.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="DIVError">#DIV/0!</h3>
+
+        <p>An operation or formula attempted to divide a number by zero.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="VALUEError">#VALUE!</h3>
+
+        <p>The type of a value given is not compatible with the operation.  There are a few different ways this could happen:</p>
+
+        <ul>
+            <li>A value is not the correct type for a unary operator.  Example: <span class="SpreadsheetFormula">= ! 7</span>. In this particular case, the value after the ! must be a TRUE/FALSE type of value.</li>
+
+            <li>The types of the values around a binary operator are not compatible with the operator.  Example: <span class="SpreadsheetFormula">= "Apple" &gt;= 10</span>.  A comparison between a text or a non-numeric value to a numeric value is not considered valid and will produce this error.  Check your formulas carefully to see exactly what they are doing.</li>
+
+            <li>The type of a value given as as argument to a function is not supported by that function.  Example: <span class="SpreadsheetFormula">= COS( TRUE )</span>.</li>
+
+            <li>A formula resulted in a cell range reference rather than a single value.</li>
+
+            <li>The <b>AND()</b> and <b>OR()</b> functions require boolean (TRUE/FALSE) expressions. For example, this Simple Alert formula will give a <b>#VALUE!</b> error: <span class="SpreadsheetFormula">=OR(SG1, SG2)</span>. This formula will not give an error: <span class="SpreadsheetFormula">=OR(SG1 &lt;&gt; 0,SG2 &lt;&gt; 0)</span>.</li>
+
+            <li>When using the cell referencing method for Spreadsheet Studies to reference the main price graph  or studies on the Sheet, as documented in the <a href="#ReferencesStudySubgraphColumnsSpreadsheetStudy" >References to Study Subgraph Columns when using the Spreadsheet Study</a> section and you need to refer to an individual cell, then <b>ID1.SG1 </b> is not valid. This refers to an entire column. You must use  <b>ID1.SG1@3 </b>. The row number 3 can be changed to what you require.</li>
+        </ul>
+    </div>
+
+    <div class="h3">
+        <h3 id="REFError">#REF!</h3>
+
+        <p>Unable to get the value for a cell reference.  This could happen for the following reasons:</p>
+
+        <ul>
+            <li>A formula containing a relative reference was copied and pasted to a new location where the relative reference now refers to a cell that is beyond the edge of the sheet.  The pasted formula will be modified so that the invalid reference is replaced with #REF!.</li>
+
+            <li>A cell was deleted (by deleting the row or column) that was referenced by a formula in another cell.  Any formulas with references to cells that were deleted will be modified so that those references are replaced with #REF!.</li>
+
+            <li>For any reason that a function is unable to select a cell within a certain range that it is supposed to access for its return value.</li>
+        </ul>
+    </div>
+
+    <div class="h3">
+        <h3 id="CREFError">#CREF!</h3>
+
+        <p>Unable to complete calculation due to a reliance on a circular reference.  A circular reference is what happens when a cell references another cell that references back to the first cell.</p>
+
+        <p> A cell that references itself is <em>not considered</em> a circular reference. </p>
+    </div>
+
+    <div class="h3">
+        <h3 id="NAMEError">#NAME?</h3>
+
+        <p>A formula will return a #NAME? error when there is text encountered which does not make  <a href="#CellandRangeReferences" >reference</a> to a cell, a reference to range of cells, a known function or a known constant. Check the formula carefully. </p>
+
+        <p>For example, referencing a cell just by its column letter will give you this error.</p>
+
+        <p>Referring to a study ID# which is not being outputted when using the Spreadsheet Study will also give this error.</p>
+    </div> 
+
+    <div class="h3">
+        <h3 id="NUMError">#NUM!</h3>
+
+        <p>A numeric operation results in a number that is not real, or is undefined, such as <span class="SpreadsheetFormula">= SQRT( -1 )</span>. Or a given number is outside of a valid range for a function, such as <span class="SpreadsheetFormula">= TIME(12, 61, 0)</span>.</p>
+    </div> 
+
+    <div class="h3">
+        <h3 id="NAError">#N/A</h3>
+
+        <p>Indicates that a value is not available.  This is mostly for functions that attempt to find a value, but do not find it.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="SYNTAXError">#SYNTAX!</h3>
+
+        <p>The formula could not be completely parsed or evaluated because part of the syntax is invalid.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="ARGSError">#ARGS!</h3>
+
+        <p>A function was given too few arguments, or too many arguments.</p>
+    </div>    
+</div>
+
+
+<div class="h2">
+    <h2 id="RenameaSheet">Rename a Sheet</h2>
+    <div class="member-link">[<a href="#RenameaSheet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To rename a sheet, use the menu command <b class="menu_item">Spreadsheet &gt;&gt; Rename Sheet</b>.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="FloatingPointValues">Floating-Point Values and Comparisons When Using the Spreadsheet Study</h2>
+    <div class="member-link">[<a href="#FloatingPointValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is well understood that floating-point numbers, numbers that contain a decimal point (noninteger values), cannot be represented perfectly in computers when stored as a floating-point number.  Refer to <a href="https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems" target="_blank" rel="noopener noreferrer">Floating-point Accuracy Problems on Wikipedia</a>.</p>
+
+    <p>Values outputted to a Spreadsheet when using the Spreadsheet Study, are not 100% precise.  This is especially true with currencies.</p>
+
+    <p>For example the value 1.234 could possibly be displayed as 1.233999999 (Or equivalent).  Even when changing the number format with <b class="menu_item">Spreadsheet &gt;&gt; Number Format</b>, internally the number is not exact.</p>
+
+    <p>One problem which arises with this is doing simple comparisons involving the equal operator.  For example, if you try to compare 1.233999999 to 1.234, by using something like <span class="SpreadsheetFormula">= E3 = 1.234</span>, you will not get TRUE.</p>
+
+    <p>The solution to this is to calculate the difference between the values, take the absolute value and if the result is less than the tick size, then there is a match.</p>
+
+    <p>Here is an example formula for this: <span class="SpreadsheetFormula">= ABS( E3 - 1.234 ) &lt; $J$21 * 0.5</span>.  $J$21 is the Tick Size for the symbol of the chart.</p>
+    
+    
+    <p> If you want to do the opposite and see if two values are not equal to each other,   then the solution is the opposite by seeing if the difference is greater than half the tick size.  For example, if you want to compare E3 and E4 to see if they are not equal, use a formula like this: <span class="SpreadsheetFormula">= ABS( E3 - E4 ) &gt; $J$21 * 0.5</span>.  $J$21 is the Tick Size for the symbol of the chart.</p>
+</div>
+
+
+<section class="h2">
+    <h2 id="AccessingABackupSpreadsheetFile">Accessing a Backup Spreadsheet File</h2>
+    <div class="member-link">[<a href="#AccessingABackupSpreadsheetFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart saves copies of the  Spreadsheet files for the last 30 days. Every time a  Spreadsheet  file is saved a copy of it is saved in the <b>Backups</b> subfolder.  There is a separate backup Spreadsheet file for each day of the month.</p>
+
+    <p>These files are located in the <b>Backups</b> subfolder  in the folder that Sierra Chart is installed to on your system. Typically this will be <em>C:\SierraChart\Backups</em>. </p>
+
+    <p>The File format is  <b>[Day of month].[Spreadsheet Filename].scss</b>. Example:  <b>1.Spreadsheet1.scss</b> </p>
+
+
+    <p>To access a backup Spreadsheet file, follow the steps given below:</p>
+    <ol>
+    
+        <li> It is first important to close the existing instance of the   Spreadsheet file that you want to restore a backup of.  Since Spreadsheets are referenced  by the Spreadsheet studies, it is necessary to first close all open Chartbooks with  <b class = "menu_item">File &gt;&gt; Close All Chartbooks</b>  so the current  Spreadsheet that you want to replace does not automatically  reopen during this procedure. </li>
+        
+        <li>See if the Spreadsheet is open by locating it through the <b class = "menu_item">CW</b>  menu and select it. Close it by selecting <b class = "menu_item">File &gt;&gt; Close Active Window</b>.</li>
+        
+    
+        <li>Select <b class="menu_item">File &gt;&gt; Open Spreadsheet</b> on the Sierra Chart menu.</li>
+
+        <li>In the <b>Open Spreadsheet</b> window,  press the  <b>Folder</b> button.</li>
+
+        <li>In the list of folders, navigate to the <b>Backups </b> folder  within the folder that Sierra Chart  is installed to.  In the list of folders, that should be just above the  <b>Data</b> folder.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li>You will now see all of the backup Spreadsheets  listed in the file list.</li>
+
+        <li>Locate the particular backup Spreadsheet file that you want and select it.</li>
+
+        <li>Press the  <b>Open</b> button.</li>
+
+        <li>After the backup Spreadsheet file has been opened, select <b class="menu_item">File &gt;&gt;Save As</b> to save it with any name that you want. You can save it as the original name and overwrite the original Spreadsheet. This is an important step to follow to ensure the backup  Spreadsheet is saved in the main Data Files Folder and is the restored copy of the  Spreadsheet file.</li>
+        
+        <li>Reopen your chartbooks through  <b class = "menu_item">File  &gt;&gt; Open Chartbook</b>.</li>
+
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SavingASheetInTextFormat">Saving a Sheet in Text Format</h2>
+    <div class="member-link">[<a href="#SavingASheetInTextFormat">Link</a>] - [<a href="#top">top</a>]</div>
+    
+    <p>An individual Sheet within a Spreadsheet window can be saved  in a plain text format  where the cells are separated by a tab and the rows are separated by newline  characters.</p>
+    
+      <ol>
+    
+        <li> Make sure the Spreadsheet window is open and active. </li>
+        <li> Select the particular sheet you want to save as a text file. Refer to <a href = "#ActivatingandViewingSpreadsheets">Activating and Viewing (Selecting) Sheets within a Spreadsheet</a>. </li>
+        
+        <li>  Select <b class="menu_item">File &gt;&gt; Save As</b>. </li>
+        <li>  In the <b>File Type</b> list box select <b> Text Files</b>. </li>
+        <li>  In the <b>File Name</b> box, type a name to save the file as.  You do not need to type the file extension. </li>
+        <li>  Press the  <b>Save</b> button. The file will then be saved to the folder shown at the top of the  <b>Save Spreadsheet As</b> window.  You can also change the   folder to save the file by first pressing the  <b>Folder</b> button and changing the folder before saving the file.</li>
+    </ol>
+</section>
+
+
+
+<section class="h2">
+    <h2 id="DifferentMethodsToGetDataIntoAndOutOfSpreadsheets">Different Methods to Get Data Into and Out of Spreadsheets</h2>
+    <div class="member-link">[<a href="#DifferentMethodsToGetDataIntoAndOutOfSpreadsheets">Link</a>] - [<a href="#top">top</a>]</div>
+    
+    <p>The following is a list of all of the different methods for getting data  into Sheets of Sierra Chart Spreadsheets and out of Spreadsheets.</p>
+    
+    <ol>
+        <li> Use one of the  <a href = "index3372.html?page=doc/OverviewOfSpreadsheetStudies.php">Spreadsheet Studies</a> to get  Chart and Study data into a spreadsheet and also to get  the results from Sheet formula columns displayed in a chart.</li>
+        
+        <li>Automatic saving of Sheet  used by Spreadsheet Study to tab delimited text file: <a href = "index2192.html?page=doc/SpreadsheetStudyInputs.html#PeriodicallySaveSheetAsTextInMinutes">Periodically Save Sheet as Text  in Minutes</a> Spreadsheet Study Input. </li>
+        
+        <li>  <a href = "indexbe1b.html?page=doc/SpreadsheetMenu.html#CopyValue">Spreadsheet Copy</a> and  <a href = "indexbe1b.html?page=doc/SpreadsheetMenu.html#Paste">Paste</a> functionality. </li>
+         
+        <li>  <a href = "#SavingASheetInTextFormat">Saving a Sheet in Text Format</a></li>
+         
+        <li>For programmatic interaction, refer to  <a href = "indexd011.html?page=doc/ACSILProgrammingConcepts.html#DirectProgrammaticInteractionWithSpreadsheetSheets">Direct Programmatic Interaction with Spreadsheet Sheets</a>.</li>
+         
+    </ol>
+</section>
+
+
+Making Backups of Changing State of Spreadsheet
+
+
+ Using Save As is not going to work properly when using the Spreadsheet Study with a Spreadsheet. The automatic closing does make sense because in this case the spreadsheet object is being managed by the Spreadsheet Study and if it has a name which is no longer being referenced by a Spreadsheet Study then it automatically closes since that Spreadsheet was automatically opened by the Spreadsheet Study.
+
+You really just need to make backups of the different states of your spreadsheet files through the Windows Explorer. 
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/WorkingWithSpreadsheets.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:53:52 GMT -->
+</html>  

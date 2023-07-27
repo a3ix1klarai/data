@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails65.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105646') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails65.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 65: Pivot Points are not Accurate or are Different -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index7fef.html?page=doc/helpdetails65.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="index7fef.html?page=doc/helpdetails65.html">Help topic 65: Pivot Points are not Accurate or are Different</a></h4> </div>     <h1 class="PageName">Pivot Points are not Accurate or are Different</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#ReferencingHistoricalDailyChart">Referencing Historical Daily Chart</a></li>
+    <li><a href="#DifferentSessionTimes">Different Session Times</a></li>
+    <li><a href="#DifferentSettlementClosePrice">Different Settlement/Close Price</a></li>
+    <li><a href="#MissingData">Missing Data</a></li>
+    <li><a href="#InsufficientDataLoadedInChart">Insufficient Data Loaded in Chart</a></li>
+    <li><a href="#WrongFormulaTypeInputSetting">Wrong Formula Type Input Setting</a></li>
+    <li><a href="#HeikenAshiStudy">Heiken Ashi Study</a></li>
+    <li><a href="#PivotPointsAccuracyWithVariableTimeframeBarTypes">Pivot Points Accuracy with Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</a></li>
+    <li><a href="#ManualCalculationForVerificationOfDataAndFormulas">Manual Calculation for Verification of Data and Formulas</a></li>
+</ul>	
+
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> This help topic discusses the reasons why the Daily Pivot Point values are different compared to another source or between users. Solutions are provided.  </p>
+
+
+    <p>This help topic primarily applies to Daily Pivot Points.  The <a href="#PivotPointsAccuracyWithVariableTimeframeBarTypes">Pivot Points Accuracy with Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</a>  section applies both to the <b>Pivot Points - Daily</b> and <b>Pivot Points - Variable Period</b> studies.</p>
+
+    <p>When you require accurate Daily Pivot Points,  use the <a href="index1319.html?page=doc/PivotPoints.html#PivotPoints_Daily" target="_blank" rel="noopener noreferrer">Pivot Points-Daily</a> study and have it   <a href = "#ReferencingHistoricalDailyChart">Reference a  Historical Daily chart</a> that has true  Historical Daily data using Daily  Open, High, Low, Close values from the exchange the symbol trades on.  </p>
+
+    <p>If you are someone who is looking for 100% accurate Pivot Point values, then the only choice is to have the <b>Pivot Points-Daily </b> study refer to a Historical Daily chart with exchange data, as explained above.   The reason for this is an Intraday chart  will not necessarily have the exact Open, High, Low, Close values for a day for various reasons and the fact that the official Settlement Close of the day is not the final trade of the day. </p>
+
+    <p>Even when you are referencing a Historical Daily chart, you could still have differences with Pivot Points and the remaining sections in this help topic provide relevant information about this whether or not a Historical Daily chart is being used.</p>
+    
+</section>
+
+<section class="h2">
+    <h2 id="ReferencingHistoricalDailyChart">Referencing Historical Daily Chart</h2>
+    <div class="member-link">[<a href="#ReferencingHistoricalDailyChart">Link</a>] - [<a href="#top">Top</a>]</div>   
+
+     <p> The below instructions apply  to the <a href="index1319.html?page=doc/PivotPoints.html#PivotPoints_Daily" target="_blank" rel="noopener noreferrer">Pivot Points -  Daily</a> study  and explain having it reference a dedicated  <a href = "index03a9.html?page=doc/GettingStarted.php#OpenChart" Target="_blank" rel="noopener noreferrer">Historical Daily Chart</a> for accurate Daily  Open, High, Low, Close values  for the highest degree of accuracy. </p>
+     
+     <ol>
+
+        <li>Open a Historical Daily Chart through <b>File &gt;&gt; Find Symbol &gt;&gt; Open Historical Chart</b>  for the same symbol as the chart containing the  <b>Pivot Points -  Daily</b>  study.  </li>
+        
+        <li>  Open the <a href = "index9099.html?page=doc/ChartStudies.html#TechnicalStudySettingsWindow"  target="_blank" rel="noopener noreferrer">Study Settings</a> window for the <b>Pivot Points -  Daily</b>  study. </li>
+
+        <li> On the   <b>Settings and Inputs</b> tab,  set the <b>Reference Daily Chart for Data</b> study Input  to <b> Yes</b>. </li>
+
+        <li> Set the<b>Daily Chart Number</b> Input,  to the  <a href = "index69b6.html?page=doc/WorkingWithCharts.html#ChartNumbers" target="_blank" rel="noopener noreferrer">Chart Number</a> of the Historical Daily chart  you have opened above.</p>   
+        
+        <li> Press <b>OK</b> to close the <b>Study Settings</b> window. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="DifferentSessionTimes">Different Session Times</h2>
+    <div class="member-link">[<a href="#DifferentSessionTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Session Times refers to the starting and ending times for a trading day. These Session Times can include just the day session or the full 24 hour session.  The actual starting time is also relevant as well. In electronic futures markets, trading is 24 hours typically. Pivot Points lines can be based upon just the day only session or the full 24 hour session. </p>
+
+    <p>If you do not have exactly corresponding Session Times settings in <b>Chart &gt;&gt; Chart Settings &gt;&gt; Session Times</b> which are used by the <b>Pivot Points</b> study in Sierra Chart, compared with your other source you are comparing to, then the values are not going to match.  If your source uses a full <em>24-hour</em> session, then you need to be certain that your Session Times cover the full 24 hours and the <b>Start Time</b> in Chart Settings is at the beginning of the evening session in the prior day.  If your source uses the <em>Day</em> session only for the Pivot Points, then you need to be certain to set your Session Times in Chart Settings to only include the Day trading session.</p>
+    
+    
+    <p> When an Intraday chart is being  referenced,  and not a Historical Daily chart, the necessary High, Low, Close, Open values for the Pivot Point lines calculations are determined according to the Session Times that the chart is set to. The highest high and  lowest low in the prior trading day from the session Start Time to the session End Time are used. The close in the prior trading day just at the session End Time is used. The open is determined from the next day at the session Start Time. Remember that when using reversed Session Times, that the start time is  considered in the prior day.   Look at the Intraday chart to determine what these values are for a particular day that you have a question about the Pivot Point lines for.</p>
+
+    <p>In the <b>Pivots Points-Daily</b> study, if <b>Reference Daily Chart for Data</b> is set to  No, then you must set the <b>Start Time</b> and <b>End Time</b> in <b>Chart &gt;&gt; Chart Settings</b> to correspond to the same Session Times used by the source you are comparing your Pivot Points to. For more information,  refer to the <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a> section on the Chart Settings page.</p>
+
+    <p>If the <b>Pivot Points-Daily</b> study is referring to a Historical Daily chart   because you have set the <b>Reference Daily Chart for Data</b> input to  Yes, then you need to be certain that the Historical Daily chart you are referring to has same Session Times as the  source you are comparing your Pivot Points lines to.  </p>
+
+    <p> In most cases the Historical Daily bars cover the full 24 hour session and are not changeable.  This is the case with the data from the <b>Sierra Chart Historical Data Service </b>.  If the Pivot Points you are comparing to are based upon the Day session only  and you are referring to a separate Daily bar chart, then it is necessary to create that chart from Intraday data using an Intraday chart.  For additional information about this,  refer to the <a href="index1319.html?page=doc/PivotPoints.html#s87">Pivot Points-Daily</a> documentation.</p>
+
+</section>
+
+<section class="h2">
+    <h2 ID="DifferentSettlementClosePrice">Different Settlement/Close Price</h2>
+    <div class="member-link">[<a href="#DifferentSettlementClosePrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Another potential issue which is going to cause a slight or significant difference with <b>Pivot Point</b> values is the Settlement price. If you have set the input <b>Reference Daily Chart for Data</b> to   <b>No</b>, then you potentially will run into a problem where you are not going to get an accurate   Settlement price because the final trade of the day is not the same thing as the official   Settlement price. </p>
+
+    <p> Therefore, your only solution is to refer to a Historical Daily chart built from Historical Daily data from the Data or Trading service you are using.  </p>
+
+
+    <p>For instructions to reference a Historical Daily chart, refer to the <a href="index1319.html?page=doc/PivotPoints.html#s87">Pivot Points-Daily</a> documentation. 
+
+    <p> To have Historical Daily chart data, you may need to be on Sierra Chart   <a href="indexa1cf.html?page=doc/Packages.php" >Service Package</a> 3 or higher to have access to the  <b>Sierra Chart Historical Data Service  </b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="MissingData">Missing Data</h2>
+    <div class="member-link">[<a href="#MissingData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Another possibility that can affect Pivot Points values compared to another source, is missing historical Intraday data in the Intraday chart that contains the <b>Pivot Points - Daily</b> study.</p>
+
+    <p> For additional information, refer to <a href="index2d36.html?page=doc/ChartDataFiles.html#LocatingMissingData" >Locating Missing Data in Charts</a>. </p>
+
+    <p>If data is missing from the Intraday chart, perform a delete and re-download operation by following the instructions in the <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#RetryDownloadDataInChart">Retrying Downloading of Intraday Data</a> section to download the missing data.</p>
+</section>
+
+<section class="h2">
+    <h2 id="InsufficientDataLoadedInChart">Insufficient Data Loaded in Chart</h2>
+    <div class="member-link">[<a href="#InsufficientDataLoadedInChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the Pivot Point formula choice uses a calculation that references the prior period, then there must be enough data loaded into chart to cover both the current period and the previous period. Otherwise, the calculations will only use the amount of data available and will therefore change the results when more or less data is loaded for the chart.</p>
+
+    <p>This is particularly important when using the <b>Pivot Points - Variable Period</b> study  and using longer timeframes. For example, if the <b>Time Period Type</b> is set to <b>Months</b> with a <b>Time Period Length</b> of <b>2</b>, then there needs to be <b>4 months</b> of data loaded into the chart for the Pivot Points calculation to be accurate.</p>
+    
+     <p> To load more days of data into the chart, refer to <a href =  "index4cf4.html?page=doc/ChartSettings.html#DaysToLoad">Days to Load</a> Chart Setting. </p>
+</section>
+
+<section class="h2">
+    <h2 id="WrongFormulaTypeInputSetting">Wrong Formula Type Input Setting</h2>
+    <div class="member-link">[<a href="#WrongFormulaTypeInputSetting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the <b>Formula Type</b> Input setting you are using in Sierra Chart is different than the source you are comparing to, then values of your Pivot Point lines will not match. Make certain you have the proper Formula Type Input setting. For the list of available formula types see this <a href="index1319.html?page=doc/PivotPoints.html#PivotFormulaType">section</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="HeikenAshiStudy">Heiken Ashi Study</h2>
+    <div class="member-link">[<a href="#HeikenAshiStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Due to the nature of how the Heiken Ashi study modifies price bars, if you are using this study and have it set to Display as Main Price Graph, then this will affect the value of Pivot Point Lines. As you change the timeframe per bar, it will cause the value of the lines to be different.</p>
+</section>
+
+<section class="h2">
+    <h2 id="PivotPointsAccuracyWithVariableTimeframeBarTypes">Pivot Points Accuracy with Volume, Number of Trades, Range, Reversal, Renko, Delta Volume, Price Changes Bars</h2>
+    <div class="member-link">[<a href="#PivotPointsAccuracyWithVariableTimeframeBarTypes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section applies to both <b>Pivot Points - Daily</b>  and <b>Pivot Points - Variable Period</b> studies. </p>
+
+    <p>In an Intraday chart when the chart bars  are based on <b>Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</b> and the <b>Reference Daily Chart For Data</b> Input is set to   <b> No</b> for the <b> Pivot Points - Daily  </b> study, then select <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> on the menu. </p>
+
+    <p>Make sure <b>New Bar at Session Start</b> is enabled. This will ensure that the first bar of the trading day will start exactly at the trading day Start Time.</p>
+
+    <p>The reason why this setting is important is because  the bars in these charts do not have exact starting times. Therefore, they will affect the accuracy of Pivot Point lines compared to another source,  compared to fixed time bars,  or compared to a different <b>Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</b>  setting.</p> 
+    
+    <p>Another solution to the problem  is to have the <b>Pivot Points - Daily</b> study <a href="#ReferencingHistoricalDailyChart">Reference a Historical Daily Chart</a>. </p>
+
+    <p>When the <b>Pivot Points - Variable Period</b> study is used on <b>Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</b>, and it has a  <b>Time Period Type</b> setting of <b>Minutes</b>, then there is less accuracy with the calculations. The starting bar for the time period being referenced likely will contain earlier data than the Pivot Points study would be expecting. The ending bar for the time period being referenced likely will contain later data than the Pivot Points study would be expecting.  There is no solution to this other than to use fixed time bars.</p>
+
+    <p>When the <b>Pivot Points - Variable Period</b> study  has a  <b>Time Period Type</b> setting of <b>Minutes</b> and the chart bars are based upon a fixed amount of time, then it is imperative the chart bars timeframe evenly divides into the <b>Time Period Length</b> setting.   For example, if the time period for the Pivot Points study is 60 minutes, then the chart bars could be 1 minute, 5 minute or 10 minute or any other timeframe which evenly divides into 60 minutes. </p>
+</section>
+
+<section class="h2">
+    <h2 id="ManualCalculationForVerificationOfDataAndFormulas">Manual Calculation for Verification of Data and Formulas</h2>
+    <div class="member-link">[<a href="#ManualCalculationForVerificationOfDataAndFormulas">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>If you are still not getting  the result that you are looking for with the Pivot Points study, it is necessary to carefully examine the data in the chart to determine  the yesterday's High, Low,   Close  and current days Open values. Make sure the Intraday Chart Session times are set correctly and determine these values from the Intraday chart data, if you are referencing the Intraday chart. For complete details, refer to <a href="#DifferentSessionTimes">Different Session Times</a>.</p>
+     
+     <p> The purpose of the above, is for you to understand how these values are determined, and to verify they are correct and see if there is any missing data in the chart. </p>
+     
+     <p> Now that you have those values, it is necessary to follow the <a href="index1319.html?page=doc/PivotPoints.html#PivotFormulaType" Target="_blank" rel="noopener noreferrer">documented formula</a>  and manually calculate the pivot point values. </p>
+     
+      <p>The purpose of the prior step is for you to validate and understand the formulas. If you require a different formula, let Sierra Chart support know. </p>
+     
+       <p>Before contacting Sierra Chart support, make sure you fully understand how the calculations are done and you have manually gone through them and then if you have some kind of issue or question, you need to express clearly the basis of this  issue or question. Otherwise, Sierra Chart Support will not be able to help you.</p>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails65.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:49 GMT -->
+</html>  

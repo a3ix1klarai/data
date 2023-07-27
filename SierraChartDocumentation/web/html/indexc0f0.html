@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudyPriceOverlayStudy.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105657') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/StudyPriceOverlayStudy.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>How to Overlay a Study or Main Price Graph From One Chart Onto Another Chart with a Different Timeframe per Bar or Symbol (Study/Price Overlay Study) -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexc0f0.html?page=doc/StudyPriceOverlayStudy.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#StudiesIndicators">(Table of Contents) Studies and Indicators</a> &gt;&gt; <a  href="indexc0f0.html?page=doc/StudyPriceOverlayStudy.php">How to Overlay a Study or Main Price Graph From One Chart Onto Another Chart with a Different Timeframe per Bar or Symbol (Study/Price Overlay Study)</a></h4> </div>     <h1 class="PageName">Study/Price Overlay Study</h1>
+
+<ul>
+    <li><a href="#UsingTheStudyPriceOverlayStudy">Using the Study/Price Overlay Study</a>
+
+    <li><a href="#StudyPriceOverlay">Study/Price Overlay Study</a>
+        <ul>
+            <li><a href="#SkippedAndChangingValuesInDestinationChart">Skipped and Changing Values in Destination Chart</a></li>
+            <li><a href="#AligningDataFromSourceChartToDestinationChart">Aligning Data from Source Chart to Latest Corresponding Bar in Destination Chart</a></li>
+            <li><a href="#IncludingLatestBarFromSourceChartInDestinationChart">Including the Latest Bar from Source Chart in Destination Chart Which Does not Have Corresponding Bar Yet</a></li>
+            <li><a href="#Inputs">Study Inputs</a>
+				<ul>
+					<li><a href="#StudyToOverlay">Study to Overlay</a></li>
+					<li><a href="#MatchSourceBarsToDestinationBars">Match Source Bars to Destination Bars</a></li>
+					<li><a href="#DataCopyMode">Data Copy Mode</a></li>
+					<li><a href="#BarTimeMatchingMethod">Bar Time Matching Method</a></li>
+					<li><a href="#CopySourceDataToLatestCorrespondingDestinationBar">Copy Source Data to Latest Corresponding Destination Bar</a></li>
+					<li><a href="#FillBlanksWithLastValue">Fill Blanks with Last Value</a></li>
+					<li><a href="#Multiplier">Multiplier</a></li>
+					<li><a href="#DrawZeros">Draw Zeros</a></li>
+					<li><a href="#FullSynchronizationOfSourceChartToDestination">Full Synchronization of Source Chart to Destination</a></li>
+					<li><a href="#UseSubgraphNameValueRelatedDisplaySettingsFromSourceStudy">Use Subgraph Name/Value Related  Display Settings from Source Study</a></li>
+					<li><a href="#UseColorsFromSourceStudy">Use Colors from Source Study</a></li>
+					<li><a href="#UseStylesAndWidthsFromSourceStudy">Use Styles and Widths from Source Study</a></li>
+					<li><a href="#AlwaysUseShortNamesFromSourceStudy">Always Use Short Names from Source Study</a></li>
+					<li><a href="#UseMulticolumnRectangleStyleForPriceBars">Use Multicolumn Rectangle Style for Price Bars</a></li>
+					<li><a href="#CopyExtensionLinesFromSourceStudy">Copy Extension Lines from Source Study</a></li>
+				</ul>
+			</li>
+            <li><a href="#StudyUpdatingAndTimingOfCalculationsBetweenSourceAndDestinationCharts" >Study/Price Overlay Study Updating and Timing of Calculations Between Source and Destination Charts</a> </li>
+        </ul>
+    </li>
+    <li><a href="#OverlayResultsFromColorBarBasedAlertCondition">Overlaying Results from Color Bar/Background Based on Alert Condition Study</a></li>
+    <li><a href="#OverlayingStudyPriceInChartRegionContainingGraph">Overlaying Study/Price Overlay Study in Chart Region Containing Another Graph</a></li>
+    <li><a href="#OverlayingAStudyOnAnotherChartThatUsesDifferentSessionTimes">Overlaying a Study on Another Chart that Uses  Different Session Times</a></li>
+    <li><a href="#ControlledOrderChartUpdating">Controlled Order Chart Updating</a></li>
+    <li><a href="#InconsistentDependentResultsBetweenFullCalcAndRealTimeUpdating">Inconsistent Dependent Results Between Full Calculation and Real-Time Updating</a></li>
+    <li><a href="#DataChangingAtChartBarsEarlierThanBeingReferencedInSourceChart">Data Changing at Chart Bars Earlier Than Being Referenced in Source Chart</a></li>
+	<li><a href="#ResolvingIssueWhereSubgraphsFromSourceChartAreNotVisible">Resolving Issue Where Subgraphs from Source Chart Are Not Visible</a></li>
+    
+    
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="UsingTheStudyPriceOverlayStudy">Using the Study/Price Overlay Study</h2>
+    <div class="member-link">[<a href="#UsingTheStudyPriceOverlayStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page documents the <b>Study/Price Overlay</b> study. Follow the instructions below to overlay a  study or main price graph from one chart onto another chart with a different Bar Period, Session Times or Symbol as compared to the original source chart.</p>
+
+    <p>If you need to overlay the main price graph from another chart that has the same chart Bar Period which is based on a fixed amount of time (Example: 5 Minutes per bar and not <b>Number of Trades </b>), and the same Session Times as the chart you are overlaying to, then it is best to use the <a href="index64c3.html?page=doc/StudiesReference.php&amp;ID=100#Overlay_-_Bar">Overlay (Bar)</a> study. It is more efficient.</p>
+
+    <p>However, if the source chart bars that you want to  overlay on a destination chart, has periods of time where there is no trading compared to the destination chart, then you should use the <b>Study/Price Overlay</b> study instead to avoid duplicate bars from appearing.</p>
+
+    <p>Each bar/column in the destination chart, will only match with one bar/column in the source chart. Multiple destination columns cannot match with the same source chart column unless the <b>Fill Blanks with Last Value</b> Input is set to <b>Yes</b>. In this case the source column mapped to a particular destination column will repeat until the next destination chart column matches with a different source chart column. </p>
+
+    <p> The <a href = "index29a2.html?page=doc/StudiesReference.php&amp;ID=141&amp;Name=Volume_by_Price">Volume by Price</a> and the  <a href = "index0cc3.html?page=doc/StudiesReference.php&amp;ID=375#Market_Depth_Historical_Graph">Market Depth Historical Graph</a> studies <em>cannot</em> be overlaid to another chart. Chart Drawings  like text  drawings added by a study also cannot be overlaid to another chart.</p>
+
+    <ol>
+
+        <li>Open or go to the source chart that will be overlaid on another chart. This can be either a Historical or Intraday chart of any Bar Period or Symbol. To open a chart, select <b Class = "menu_item">File &gt;&gt; Find Symbol</b>. Existing charts can be accessed through the  <b Class = "menu_item">CW</b> menu.</li>
+
+        <li>Add the study you want on the source chart, such as a <b>Moving Average - Simple</b>. This is only an example study. You can use any study that you require.</li>
+
+        <li>Open or go to the chart where you want to overlay the study from the source chart. This chart can be any Bar Period or Symbol. This is known as the destination chart. It would make sense for it to be of a different Bar Period or Symbol compared to the source chart. For example, the source chart could be a 1 hour Bar Period  and the destination chart could be a 1 minute Bar Period.</li>
+
+        <li>Select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu. Add the <b>Study/Price Overlay</b> study to this second chart.
+
+            <div style="text-align: center;"><a href="../images/chartstudieswindow_studypriceoverlay.png" rel="lightbox"><img src="../images/chartstudieswindow_studypriceoverlay.png" alt="" class="screenshot" loading="lazy" width="520" ></a></div>
+            <br>
+            For complete instructions, refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a> section.
+        </li>
+
+        <li>Press the <b>Settings</b> button to open the <b>Study Settings </b> window. Set the inputs as explained below:<br>
+            <ul>
+                <li><b>Study to Overlay</b>: This Input is for selecting the specific study overlay from another chart within the same Chartbook.  The other chart <em>must</em> be within the same Chartbook.
+                    <br> <br>
+                    From the list of charts with this Input, select the chart that you want to overlay a study from. The next step is to select the specific study from the list of studies with this Input. The study must be on the chart that was selected  from the list of charts. If it is not, you will not see it listed.</li>
+
+                <li><b>Match Source Bars to Destination Bars</b>: Set this to <b> Yes</b>. Setting this to Yes will make the Study Subgraph values for a particular chart column on the source chart match up with the corresponding Date-Time on the destination chart.</li>
+
+                <li><b>Fill Blanks With Last Value</b>: Set this to <b>Yes</b>. This will make sure the values will display up to and including the last bar on the destination chart.</li>
+
+                <li><b>Chart Region</b>: If you have set <b>Study to Overlay</b> to the &lt;Main Price Graph&gt;, then you may want to set the <b>Chart Region</b> setting to 1 if you need the main price graph you are overlaying from the source chart, on the main price graph of the destination chart.  
+                <br> <br>
+                In this case, you may need to also press the <b>Scale</b> button and set the scale to <b>Independent</b> if the prices are different between the source and destination chart bars which would be the case if they are for different symbols.</li>
+
+            </ul>
+
+        </li>
+        <li> Press <b>OK</b> to close the Study Settings window. <li>
+        <li> Press <b>OK</b> to close the Chart Studies window. <li>
+        <li>Next time you open the Chart Studies window, you will see that the  <b>Study/Price Overlay</b> study has its name changed to match the name of the chart (including chart number)  or the name of the study it is overlaying. </li>
+
+        <li>For complete information about the  <b>Study/Price Overlay</b> study, refer to <a href="#StudyPriceOverlay">Study/Price Overlay</a>  section on this page.</li>
+    </ol>
+
+    <p>The following studies cannot be overlaid from one chart to another with the <b>Study/Price Overlay</b> study:</p>
+
+    <ul>
+        <li><b>Volume by Price</b></li>
+        <li><b>TPO Profile Chart</b></li>
+        <li><b>Numbers Bars</b></li>
+        <li><b>Countdown Timer</b></li>
+        <li><b>Market Depth Historical Graph</b></li>
+        <li>(studies which display text only)</li>
+    </ul>
+</section>
+
+
+<section class="h2">
+    <h2 id="StudyPriceOverlay">Study/Price Overlay Study</h2>
+    <div class="member-link">[<a href="#StudyPriceOverlay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section contains the detailed documentation for the <b>Study/Price Overlay</b> study.</p>
+
+    <p>The <b>Study/Price Overlay </b> study overlays a study or price graph from another chart onto a chart. Multiple <b> Study/Price Overlay </b> studies can be added to a chart to overlay more than one study or price graph on a chart.</p>
+
+    <p>The purpose of this study is to overlay a study or price graph from another chart with a different time period per bar, different Session Times, or a different symbol.</p>
+
+    <p>There are 2 charts involved with this study.  They are called the <em>Source</em> chart and the <em>Destination</em> chart.  The study is applied to the Destination chart and obtains data from the specified Source chart using the <b> Study to Overlay </b> Input.</p>
+
+    <p>The study uses the timestamps of the chart bars to determine what specific bar/column of the study or price data from the Source chart to overlay on the corresponding bar/column on the Destination chart. Each Destination chart column covers a specific time range.</p>
+
+    <p>The latest or earliest bar/column from the Source chart, depending upon the  <b>Data Copy Mode</b> input, within or nearest the Destination chart bar time range is overlaid on the Destination chart.</p>
+
+    <p>For example, if on the Destination chart there is a chart bar with the time range of 10:00:00 through 10:04:59, then the study or price data from the Source chart with a time of 10:04:59, or nearest to it, but not greater, is then used on the Destination chart if the Data Copy Mode is set to <b>Use Latest Value from Corresponding Timeframe</b>.
+
+    <p>If the Data Copy Mode is set to <b>Use Earliest Value from Corresponding Timeframe</b>, then the study or price data from the Source chart with a time of 10:00:00 is then used on the corresponding bar on Destination chart.</p>
+
+    <p>In the case where there are repeating timestamps in the Source Chart, the study or price data from the rightmost chart column with the same timestamp will be overlaid in the Destination chart.  In the case where the Destination chart has repeating timestamps, the overlaid study or price data from the corresponding Source chart column will repeat at each Destination chart column that has the same timestamp when <b>Fill Blanks with Last Value</b> is set to Yes.</p>
+
+    <p><b> Using with Volume by Price study</b>: It is not supported to overlay the Volume Profiles from the   <a href="indexf05a.html?page=doc/StudiesReference.php&amp;ID=141#Volume_by_Price">Volume by Price</a> study by using the <b>Study/Price Overlay</b> study. The  Volume Profiles will not be displayed on the destination chart. Only the Point of Control, Value Area High and Low, and Volume Weighted Average Price lines will be.</p> 
+
+    <section class="h3">
+        <h3 id="SkippedAndChangingValuesInDestinationChart">Skipped and Changing Values in Destination Chart</h3>
+        <div class="member-link">[<a href="#SkippedAndChangingValuesInDestinationChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The chart that contains the <b>Study/Price Overlay</b> study is the Destination chart.</p>
+
+        <p>The study Subgraphs  which are being overlaid from the Source chart at each Destination chart bar/column,  may not contain values if there are not chart bars with a corresponding  Date-Time in the Source chart which match with every Destination chart bar Date-Time.</p>  
+
+        <p>An example of this problem is overlaying a study from a 5 minute per bar chart, to a 1 minute per bar chart. To solve this problem, set the <b>Fill Blanks with Last Value</b> Input to <b>Yes</b>.</p>
+
+        <p>Additionally, the Subgraph values of the <b>Study/Price Overlay</b> study for each of the bars in the Destination chart, starting from the last bar in the Destination chart, which map to the last bar in the Source chart based upon the Date-Time of the chart bars, will change in value as the Subgraph values  at the last bar in the Source chart are changing.  This is normal.  This can have a complex side effect when using the Study/Price Overlay study  in other calculations. So it is something to be aware of.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AligningDataFromSourceChartToDestinationChart">Aligning Data from Source Chart to Latest Corresponding Bar in Destination Chart</h3>
+        <div class="member-link">[<a href="#AligningDataFromSourceChartToDestinationChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To align data for the bar/columns of the Source chart to the latest corresponding  bar/columns in the  Destination chart, set <b>Copy Source Data to Latest Corresponding Destination Bar </b> to <b>Yes</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="IncludingLatestBarFromSourceChartInDestinationChart">Including the Latest Bar from Source Chart in Destination Chart Which Does not Have Corresponding Bar Yet</h3>
+        <div class="member-link">[<a href="#IncludingLatestBarFromSourceChartInDestinationChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If at the last bar/column in the Source chart, the Date-Time of that bar does not have a corresponding Date-Time in the Destination chart, then the study data from the Source chart at the last bar/column  will not be drawn in the Destination chart.</p>
+
+        <p>This is regardless of how the <b>Data Copy Mode</b>  or the <b>Bar Time Matching Method</b> <b> Study/Price Overlay</b> Inputs are set to.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="Inputs">Study Inputs</h3>
+        <div class="member-link">[<a href="#Inputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4 id="StudyToOverlay">Study to Overlay</h4>
+            <div class="member-link">[<a href="#StudyToOverlay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input specifies the Source study to overlay from another chart within the same Chartbook. From the list of charts with this Input, select the chart that you want to overlay a study from.</p>
+
+            <p>The next step is to select the specific study from the list of studies listed using this Input.</p>
+
+            <p>If you want to overlay the <b>&lt;Main Price Graph&gt;</b> from another chart that has the same Bar Period as the Destination chart you are overlaying to, then normally it will be best to use the <a href="index64c3.html?page=doc/StudiesReference.php&amp;ID=100#Overlay_-_Bar">Overlay (Bar)</a> study instead.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MatchSourceBarsToDestinationBars">Match Source Bars to Destination Bars</h4>
+            <div class="member-link">[<a href="#MatchSourceBarsToDestinationBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>In almost all cases the <b>Match Source Bars to Destination Bars </b> input needs to be set to <b>Yes</b> to match the study or price graph  data from the chart referred to by the <b>Study to Overlay</b> <em>Input</em> (source chart), to the corresponding column Date-Times on the chart the <b>Study/Price Overlay</b> study is applied to (destination chart).</p>
+
+            <p>When this input is set to  <b>Yes</b>, the following Inputs apply: </p>
+            <ul>
+                <li><b>Fill Blanks with Last Value</b> </li>
+                <li><b>Data Copy Mode</b> </li>
+                <li><b>Bar Time Matching Method</b> </li>
+                <li><b>Copy Source Data to Latest Corresponding Destination Bar</b> </li>
+
+            </ul>
+            <p>When this input is set to  <b>No</b>, then the above Inputs do <em>not</em> apply and the way that mapping of graph data for each bar/column in the source chart to destination chart works is as follows:</p>
+
+            <p>At the last bar/column in the destination chart, the graph data from the last bar/column in the source chart is overlaid onto the destination. At the column prior to last column in the destination chart, the graph data from the column prior to the last column in the source chart is overlaid onto the destination.  This continues until there are no more source graph columns to overlay or there are no more available destination columns available.</p>
+
+            <p> In other words, the source graph  is overlaid towards the end of the destination chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DataCopyMode">Data Copy Mode</h4>
+            <div class="member-link">[<a href="#DataCopyMode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You can choose to copy the data from the <em>earliest</em> bar/column in the corresponding timeframe in the source chart onto the destination chart. Or, you can copy the data from the <em>latest</em> bar/column in the corresponding timeframe in the source chart onto the destination chart.</p>
+
+            <p>When this is set to <b>Use Latest Value from Corresponding Timeframe</b>, then the very latest bar/column in the Source chart that corresponds  to a particular destination chart  bar/column will be copied.</p>
+
+            <p>When this is set to <b>Use Earliest Value from Corresponding Timeframe</b>, then the earliest bar/column in the Source chart that corresponds  to a particular destination chart  bar/column will be copied.</p>
+
+            <p>In the case where the destination chart bars are a non-fixed timeframe, which will be the case when bars are based upon <b>Volume, Number of Trades, Range, Reversal, Renko, Delta Volume, Price Changes, Point & Figure</b>, then you will want to choose <b>Use Earliest Value from Corresponding Timeframe</b>.  This is going to be necessary when performing back testing and the source chart is not being replayed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BarTimeMatchingMethod">Bar Time Matching Method</h4>
+            <div class="member-link">[<a href="#BarTimeMatchingMethod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This input can be set to either <b>Nearest Match</b> or <b>Containing Match</b>. The meaning of these settings is explained below.</p>
+
+            <p>When <b>Nearest Match</b> is used, then the data from the nearest matching bar/column Date-Time in the source chart compared to the destination chart bar/column Date-Time, is used. After this the <b>Data Copy Mode</b> Input setting is applied to determine the corresponding bar.</p>
+
+            <p>When <b>Containing Match</b> is used, then the data from the earliest bar/column Date-Time in the source chart that is equal to or greater than the destination bar/column Date-Time, is used on the destination chart, except if it exceeds the time range of that destination column. In which case the prior source chart column data is used. After this the <b>Data Copy Mode</b> Input setting is applied to determine the corresponding bar.</p>
+            
+             <p>  When overlaying a study from a Historical Daily chart to an Intraday chart, if a new day has begun in the  Historical Daily chart   which you can tell from the date at the top of the chart, then when using  <b>Containing Match</b>,  the data for the prior day in the  Historical Daily chart  which contains the Date-Time of the corresponding Intraday bar will be used instead of the most recent data.  Check the  <a href = "index219e.html?page=doc/TimeZone.html"> Time Zone</a> setting in the Historical Daily chart and make sure it matches the Intraday chart and as an alternative  <a href = "index4ec1.html?page=doc/SessionTimes.php#CreatingDailyBarsCustomSessionTimes">create Daily bars from Intraday data</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="CopySourceDataToLatestCorrespondingDestinationBar">Copy Source Data to Latest Corresponding Destination Bar</h4>
+            <div class="member-link">[<a href="#CopySourceDataToLatestCorrespondingDestinationBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This input setting is <em>ignored</em> if <b> Fill Blanks with Last Value</b> is set to <b>Yes</b>. When this input is set to <b>Yes</b>, then when there is more than one  bar/column in the destination chart which corresponds to a source chart bar/column based on Date-Times, then the  source chart Subgraph data is copied to the latest  Date-Time corresponding destination chart bar/column.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="FillBlanksWithLastValue">Fill Blanks with Last Value</h4>
+            <div class="member-link">[<a href="#FillBlanksWithLastValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When you are overlaying a study or price graph from a chart that has a higher time period per bar compared with the chart this study is applied to, then you will have chart bar columns in the study with zero values because there is no corresponding data. In the destination chart, when a chart  column  maps to the same source chart column as the destination chart column before it, the source chart data is not repeated if this Input is set to <b> No</b>. These zero values or blanks can be filled in with the study value just before the zero/blank chart column by setting this Input to <b> Yes</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="Multiplier">Multiplier</h4>
+            <div class="member-link">[<a href="#Multiplier">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The values of this study are multiplied by this number. By setting this to -1, you can invert a study.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DrawZeros">Draw Zeros</h4>
+            <div class="member-link">[<a href="#DrawZeros">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, then zero values from the source study  <em>are drawn</em> along the study Subgraphs.  Otherwise, if it is set to <b>No</b>, then zero values <em>are not drawn</em> along the study Subgraphs.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="FullSynchronizationOfSourceChartToDestination">Full Synchronization of Source Chart to Destination</h4>
+            <div class="member-link">[<a href="#FullSynchronizationOfSourceChartToDestination">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Normally this Input should be set to <b>No</b>. This is going to be the usual operating mode in almost all cases. </p>
+
+            <p>When this input is set to  <b>Yes</b>, the relevant chart data related <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> of the source chart will be set to be the same as the  destination chart.  </p>
+
+            <p>This is not usually what should happen and is the reason why this Input should be set to <b>No</b> unless there is a specialized reason why this is necessary.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UseSubgraphNameValueRelatedDisplaySettingsFromSourceStudy">Use Subgraph Name/Value Related  Display Settings from Source Study</h4>
+            <div class="member-link">[<a href="#UseSubgraphNameValueRelatedDisplaySettingsFromSourceStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b> Yes</b>, then the <a href="index9099.html?page=doc/ChartStudies.html#NameValueLabels">Subgraph Name and Value  Labels</a>, <a href="index9099.html?page=doc/ChartStudies.html#DisplayNameAndValueInChartValuesWindow">Display Name and Value in Chart Values Windows</a>, <a href="index9099.html?page=doc/ChartStudies.html#DisplayNameAndValueInRegionDataLine">Display Name and Value in Region Data Line</a>   settings from the source study  are applied  to the instance of the <b> Study/Price Overlay</b> study which is overlaying that source study. 
+            <br><br>
+            Therefore,   changes  to these particular settings must be made on the source study. When this Input is set to <b> No</b>,  then it is possible  to change these settings  for all of the Subgraphs directly within the instance of the <b> Study/Price Overlay</b> study which is overlaying the source study.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UseColorsFromSourceStudy">Use Colors from Source Study</h4>
+            <div class="member-link">[<a href="#UseColorsFromSourceStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>If this Input is set to <b>Yes</b>, the default, then the color settings from the source study set with the <b>Study to Overlay</b> Input are used to color the study on the chart the  <b>Study/Price Overlay</b> study applied to.</p> 
+            
+            <p>If the source study is using <a href = "index9099.html?page=doc/ChartStudies.html#AutoColoring">Auto Coloring</a>, then  the colors as they exist at the chart bars in the source chart and are copied to the destination chart as set by the  Auto Coloring function, are used. </p>
+
+            <p>If this Input is set to <b>No</b>, then you are able to change the color settings on the <b>Subgraphs</b> tab of the <b>Study/Price Overlay</b> study to control the colors of the overlaid study Subgraphs.</p>
+
+            <p>There is one condition where setting this Input to <b>No</b>, will still use the colors for a study Subgraph from the source study. This will happen if the source study individually colors the Subgraph elements by using the ACSIL <b>sc.Subgraph[].DataColor </b> array on the study Subgraph.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseStylesAndWidthsFromSourceStudy">Use Styles and Widths from Source Study</h4>
+            <div class="member-link">[<a href="#UseStylesAndWidthsFromSourceStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b> Yes</b>, then the  Draw Style and Width  for all the Subgraphs from the source study are applied  to the instance of the <b> Study/Price Overlay</b> study which is overlaying that source study. Therefore,   changes  to these particular settings must be made on the source study. When this input is set to <b> No</b>,  then it is possible to change the  Draw Style and Width  for all the Subgraphs directly within the instance of the <b> Study/Price Overlay</b> study which is overlaying the source study.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AlwaysUseShortNamesFromSourceStudy">Always Use Short Names from Source Study</h4>
+            <div class="member-link">[<a href="#AlwaysUseShortNamesFromSourceStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b> Yes</b>, then the  Short Name, if set, for all the Subgraphs from the source study are applied  to the instance of the <b> Study/Price Overlay</b> study which is overlaying that source study. </p>
+
+            <p>Therefore,  changes to the Short Name must be made on the source study.</p>
+
+            <p>When this input is set to <b> No</b>,  then it is possible to change the  Short Name  for all of the Subgraphs directly within the instance of the <b> Study/Price Overlay</b> study which is overlaying the source study.</p>
+        </section>
+
+
+        <section class="h4">
+            <h4 id="UseMulticolumnRectangleStyleForPriceBars">Use Multicolumn Rectangle Style for Price Bars</h4>
+            <div class="member-link">[<a href="#UseMulticolumnRectangleStyleForPriceBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> In the case where the Main Price Graph is being overlaid  from a source chart  with higher timeframe per bars onto a destination chart with shorter time frame per bars, then setting <b>Use Multicolumn Rectangle Style for Price Bars </b> to <b>Yes</b> will then draw the higher timeframe bars as a rectangle spanning the corresponding bars on the destination chart.  </p>
+
+            <p>The exact corresponding bars which the rectangle spans depends upon the setting of the <b>Data Copy Mode</b> and the <b>Bar Time Matching Method</b> Inputs.
+
+            <p> When setting this input the Yes,  you will also need to set the <b>Chart Region</b> study setting to 1.</p>
+
+            <p> You will also want to enable the <b>Draw Study Underneath Main Price Graph</b> study  setting to cause the rectangles to be drawn underneath the chart bars. </p>
+            
+            <div style="text-align: center;"><a href="../images/studypriceoverlay_multicolumnrectangledrawstyle.png" rel="lightbox"><img src="../images/studypriceoverlay_multicolumnrectangledrawstyle.png" alt="" class="screenshot" loading="lazy" width="500" ></a></div>
+            
+            
+        </section>
+
+        <!-- section class="h4">
+            <h4>Always Set Last Study Column with Source Chart Value</h4>
+            <p>When this input setting is set to <b> Yes </b>, then the very last destination chart study bar/column in the chart, is always set with the  corresponding Subgraph data from the source chart. In other words the source chart Subgraph data is carried forward to the very last bar always.  This option is only useful when <b>Fill Blanks with Last Value </b> is set to No.</p>
+        </section -->
+        
+        <section class="h4">
+            <h4 id="CopyExtensionLinesFromSourceStudy">Copy Extension Lines from Source Study</h4>
+            <div class="member-link">[<a href="#CopyExtensionLinesFromSourceStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, then standard implemented extension lines from the source study will be copied to the destination chart. </p>
+            
+             <p>An example of an extension line would be for example extension lines drawn by the  <b>Numbers Bars </b> study.  Certain types of extension lines are not copyable. For example, extension lines from the  <b>Volume by Price</b>  or <b>TPO Profile Chart</b> studies cannot be copied.</p>
+        </section>
+    </section>
+ 
+    <section class="h3">
+        <h3 id="StudyUpdatingAndTimingOfCalculationsBetweenSourceAndDestinationCharts"> Study/Price Overlay Study Updating and Timing of Calculations Between Source and Destination Charts</h3>
+        <div class="member-link">[<a href="#StudyUpdatingAndTimingOfCalculationsBetweenSourceAndDestinationCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+                 <p> The <b>Study/Price Overlay</b> study overlays the study Subgraphs from a <em>source</em> chart study, to a  <em>destination</em> chart where the <b>Study/Price Overlay</b> study is added. </p> 
+                 
+                 <p>Each chart is  updated and calculated independently from each other. If both the source and destination charts, are the same symbol, the exact moment in time in which they are calculated, will differ slightly. </p>
+                 
+                 <p> When the symbol of the charts trades, and the destination chart is <em>first  calculated before the source chart</em>, then the destination chart is going to get the study data from the source chart,  but this study Subgraph data will not be up-to-date with the latest trade because the source chart has not yet been calculated.  </p>
+                 
+                 <p>When the source chart is calculated after the destination chart which has been calculated, it tags the destination chart to calculate itself again. At that time, the destination chart will get the current study data from the source chart again which now will be up-to-date because it includes any changes resulting from the most recent trade. All of this process is fully automatic. However, it is important to understand the timing of this in case there any subtle issues which arise out of this based upon any custom ACSIL or Spreadsheet programming you are doing.</p>
+
+    </section>   
+                
+                 
+</section>
+
+<section class="h2">
+    <h2 id="OverlayResultsFromColorBarBasedAlertCondition">Overlaying Results from Color Bar/Background Based on Alert Condition Study</h2>
+    <div class="member-link">[<a href="#OverlayResultsFromColorBarBasedAlertCondition">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When you want to overlay the results of the <b>Color Bar Based on Alert Condition</b> or the <b>Color Background Based on Alert Condition</b> study from a source chart to a destination chart with a different timeframe per bar, it is necessary to instead use the <a href="index2fb9.html?page=doc/StudiesReference.php&amp;ID=149&amp;Name=Study_Overlay_-_OHLC_-_Open_High_Low_Close" target="_blank" rel="noopener noreferrer">Study Overlay-OHLC Study</a> to accomplish this and not the  <b>Study/Price Overlay</b> study.</p>
+    
+    <p>Otherwise, there is the likely possibility based upon the differing time frames of the source and destination chart bars,  that signals from some source chart bars have no corresponding destination chart bar and those signals will not get overlaid to the destination chart.</p>    
+
+
+</section>
+
+
+<section class="h2">
+    <h2 id="OverlayingStudyPriceInChartRegionContainingGraph">Overlaying Study/Price Overlay Study in Chart Region Containing Another Graph</h2>
+    <div class="member-link">[<a href="#OverlayingStudyPriceInChartRegionContainingGraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Follow the instructions below to properly  scale the <b>Study/Price Overlay</b> study  graph in a  Chart Region which contains another graph which uses a different scale.</p>
+
+    <ol>
+        <li>Set the <b>Study/Price Overlay</b> study to be displayed in the <a href="index9099.html?page=doc/ChartStudies.html#ChartRegion"  target="_blank" rel="noopener noreferrer">Chart Region</a> where you  require it.</li>
+
+        <li>Open the <a href="index981f.html?page=doc/Scaling.html#ScaleWindowStudy" target="_blank" rel="noopener noreferrer">Scale Settings</a> window for the <b>Study/Price Overlay</b> study.</li>
+
+        <li> Set the  <b>Scale Range </b> to <b>Independent </b>.</li>
+
+        <li>Press <b>OK</b> to close the <b>Scale Settings</b> window. Press  <b>OK</b> to close the Chart Studies window.</li>
+
+        <li>Enable the <b>Use Left Side Scale </b> option in <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Scale</b> for the chart. For further information, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#UseLeftSideScale" >Use Left Side Scale</a>.</li>
+
+        <li>Press  <b>OK</b> to close the <b>Chart Settings</b> window.</li>
+
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="OverlayingAStudyOnAnotherChartThatUsesDifferentSessionTimes">Overlaying a Study on Another Chart that Uses Different Session Times</h2>
+    <div class="member-link">[<a href="#OverlayingAStudyOnAnotherChartThatUsesDifferentSessionTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you want to overlay a study on a chart, from another chart that has different session times, follow these steps below. For example, you could have a study on an Intraday chart based upon a full 24 hour session and then overlay that on an Intraday chart that only displays the Day session, or vice versa.</p>
+    
+    <p>  If you want a study based upon  a particular session time range in the chart and do not need to see trading outside of those session times, then just simply adjust  the <a href="index4ec1.html?page=doc/SessionTimes.php" >Session Times</a> to that particular time range. There is no need to follow the instructions below.</p>
+
+
+    <ol>
+        <li>Setup the source chart with the  <b>Session Times</b>  that you require, in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. This is the chart that will contain the study that you will overlay on the destination chart.</li>
+
+        <li> <a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Add the study</a> or studies to the source chart and configure it.</li>
+
+        <li>Setup the destination chart as you require. Including setting the  <b>Session Times</b> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</li>
+
+        <li>Add the <b>Study/Price Overlay</b> study to the destination chart. Configure it to overlay the study on the source chart, following the <a href="#UsingTheStudyPriceOverlayStudy">Using the Study/Price Overlay Study</a> instructions.</li>
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="ControlledOrderChartUpdating">Controlled Order Chart Updating</h2>
+    <div class="member-link">[<a href="#ControlledOrderChartUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the <b>Study/Price Overlay</b> study and overlaying charts or studies from other charts to a destination chart, you may want to have the charts updated in an order according to dependency if you have a requirement for this. This should only be done if you know that you require it. <em>Otherwise, do not do this because it can make Sierra Chart less responsive</em>.</p>
+
+    <p>For further information, refer to  <a href="index899f.html?page=doc/GeneralSettings.html#UseControledOrderChartUpdating">Use Controlled Order Chart Updating</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="InconsistentDependentResultsBetweenFullCalcAndRealTimeUpdating">Inconsistent Dependent Results Between Full Calculation and Real-Time Updating</h2>
+    <div class="member-link">[<a href="#InconsistentDependentResultsBetweenFullCalcAndRealTimeUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When the main price graph or a study is overlaid to a destination chart, and this overlay is referenced by another study (dependent study), it is essential that the dependent study is  <em>calculated after</em> the <b>Study/Price Overlay</b> study is calculated. Otherwise, the dependent study is going to be referencing old data or no data at all. </p>
+    
+    <p>This creates a problem where not only is the dependent study referencing old data, but there is going to be a difference in the results of the dependent study between when a chart is fully recalculated  and when there is real-time updating. During a full recalculation, like during a chart reload (<b class = "menu_item">Chart &gt;&gt;  Reload and Recalculate / Recalculate</b>), the dependent study normally is going to be referencing arrays with zero values if it is calculated before the <b>Study/Price Overlay</b> study.</p>
+    
+    <p>To solve this problem requires changing the calculation order. Refer to  <a href="index9099.html?page=doc/ChartStudies.html#StudyCalculationPrecedence" Target="_blank" rel="noopener noreferrer">Study Calculation Precedence And Related Issues</a> for instructions. </p>
+    
+
+</section>
+
+<section class="h2">
+    <h2 id="DataChangingAtChartBarsEarlierThanBeingReferencedInSourceChart">Data Changing at Chart Bars Earlier Than Being Referenced in Source Chart</h2>
+    <div class="member-link">[<a href="#DataChangingAtChartBarsEarlierThanBeingReferencedInSourceChart">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>A problem that can be experienced with the <b>Study/Price Overlay</b> study relates to when it is referencing a study in the source chart that changes its values at chart bars earlier than the last bar in the chart, or earlier than the prior last bar and any new bars added to the chart, during normal chart updating. 
+
+    <p>What happens in this particular case  is that the changes in the source study at chart bars earlier than the last bar  or earlier than the prior last bar and any new bars added to the chart, are not reflected by the  <b>Study/Price Overlay</b> study on the destination chart. </p>
+
+    <p>A good example  of a study that changes its values  at chart bars earlier than the last bar in the chart is the <b>Zig Zag</b>. There are other studies as well that do this. For example, the <a href="index1fd3.html?page=doc/ArithmeticStudies.php" target="_blank" rel="noopener noreferrer">Arithmetic studies</a> could do this.</p>
+
+    <p>In the case of the  Zig Zag study and some other Sierra Chart studies (Zig Zag Cumulative Volume, Daily OHLC, Weekly OHLC, Depth of Market Data, Swing High and Low, High/Low for Time Period, Initial Balance, all of the Arithmetic studies) there is automatic management of this kind of issue so it causes no problem with the output of the <b>Study/Price Overlay</b> study because  the  <b>Study/Price Overlay</b> study automatically references data as early as is necessary from the  source chart study based upon what chart bar the data changed at in the  source chart study.</p>
+    
+    <p>However, this can be a problem with other studies where there is not this special management. If you are certain you are encountering this problem and the  <b>Study/Price Overlay</b>  is referencing a built-in study that is changing at earlier chart bars, then let  <a href="https://www.sierrachart.com/SupportBoard.php">Sierra Chart Support</a> know about this to see if we can implement special management for that particular study.</p>
+    
+     <p>If you have developed your own custom study,  and it changes its data at chart bars earlier than the last bar in the chart,  at times when there is not a full recalculation, then  for the Study/Price Overlay study to be aware of those changes use the   <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scEarliestUpdateSubgraphDataArrayIndex">sc.EarliestUpdateSubgraphDataArrayIndex</a> variable.  </p>
+</section>
+
+
+<section class="h2">
+	<h2 id="ResolvingIssueWhereSubgraphsFromSourceChartAreNotVisible">Resolving Issue Where Subgraphs from Source Chart Are Not Visible</h2>
+    <div class="member-link">[<a href="#ResolvingIssueWhereSubgraphsFromSourceChartAreNotVisible">Link</a>] - [<a href="#top">Top</a>]</div>
+
+	<p>Follow the below procedure to solve a problem where the Subgraph lines from the source study do not display on the destination chart where the Study/Price  Overlay study  is added.</p>
+	
+	
+	<ol>
+		<li>Verify there are nonzero values  using the <a href="indexb844.html?page=doc/Tools.html#ChartValues" Target="_blank" rel="noopener noreferrer">Chart Values Tool</a>  for the Study Subgraphs of the  <b>Study/Price    Overlay </b> study  and to see what the values are.   If the values are outside the range of visible  prices in the chart, increase the range of prices with  <a href="index981f.html?page=doc/Scaling.html#InteractiveScalingExpandCompress" target="_blank" rel="noopener noreferrer">Interactive Scale Range</a>.</li>
+		
+		<li>Set   <a href="#FillBlanksWithLastValue">Fill Blanks with Last Value</a>  Input to <b>Yes</b>.</li>
+		
+		<li>Check the Study Subgraph <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle" target="_blank" rel="noopener noreferrer">Draw Styles</a> in the source study. Make sure they are not <b>Hidden  </b> or  <b>Ignore</b>. 
+		
+		<br> <br>
+		You may want to set <a href="#UseStylesAndWidthsFromSourceStudy">Use Styles and Widths from Source Study</a> to No, and set the Draw Styles directly on the  <b>Study/Price Overlay  </b> study on the  <a href="index9099.html?page=doc/ChartStudies.html#SubgraphsTab"  target="_blank" rel="noopener noreferrer">Subgraphs</a> tab.</li>
+		
+		<li>Check the  <a href="index981f.html?page=doc/Scaling.html#ScaleWindowStudy" target="_blank" rel="noopener noreferrer">Scale Range</a>   setting on the study. Normally it should be <b>Automatic</b>.</li>
+		
+		<li>Check the <a href="index981f.html?page=doc/Scaling.html#ScaleWindowMainPriceGraph" target="_blank" rel="noopener noreferrer">Scale Range for the main price graph</a>. Normally it should be <b>Automatic</b>.</li>
+		
+	</ol>
+   
+   
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudyPriceOverlayStudy.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:35 GMT -->
+</html>  

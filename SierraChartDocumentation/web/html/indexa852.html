@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSILRefOtherTimeFrames.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105673') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACSILRefOtherTimeFrames.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Referencing Other Time Frames and Symbols When Using the ACSIL -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexa852.html?page=doc/ACSILRefOtherTimeFrames.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="indexa852.html?page=doc/ACSILRefOtherTimeFrames.php">Referencing Other Time Frames and Symbols When Using the ACSIL</a></h4> </div>     <h1 class="PageName">Referencing Other Time Frames  and Symbols When Using the ACSIL</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#OverlayStudy">Referencing Data from Other Time Frames by Using the Overlay Study</a></li>
+    <li><a href="#DirectReferencing">Referencing Data from Other Time Frames By Direct Referencing of the Other Timeframe</a>
+		<ul>
+			<li><a href="#DirectReferencing_Example">Example</a></li>
+		</ul>
+	</li>
+    <li><a href="#ReferencingDataFromDifferentSymbols">Referencing Data from Different Symbols</a></li>
+    <li><a href="#ProgrammaticallyOpeningCharts">Programmatically Opening Charts</a></li>
+    <li><a href="#AccessingCorrectArrayIndexes">Accessing Correct Array Indexes in Other Chart Arrays</a></li>
+    <li><a href="#ControlledOrderChartUpdating">Controlled Order Chart Updating</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the  <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study Interface and Language (ACSIL)</a> and you want to reference bar data, custom or built-in  studies data from charts with a different timeframe per bar, different Session Times, or a different Symbol, then this is possible using several different methods. </p> 
+
+    <p>For example, you may want to access chart data  from a chart with a timeframe of 5 minutes per bar or study data from the same chart and use that within a 1 minute per bar chart.</p>
+
+    <p>All of this information applies whether you are creating a study that displays values through line graphs or a trading system study that generates order signals and displays Buy/Sell arrow signals on the chart.</p>
+
+    <p>First, it must be understood that it is necessary in Sierra Chart to have the charts open for each other chart you want to work with when you want to reference data in a different timeframe  per bar as compared to the chart you are referencing the data from.</p>
+
+    <p>For example, if you have a 1 minute per bar chart and you want to access the price bar data or study data from a 5 minute per bar chart, then you need to have the 1 minute chart open and the 5 minute chart open.  </p>
+
+    <p>The advantage of this, is that you clearly see the data loaded, can verify that it is correct and can actually see the data you are working with and have a better understanding of it. All of these charts can be contained in the same chartbook and saved, so the setup can be immediately opened from the <b class="menu_item">File</b> menu with one step.</p>
+
+    <p>To simplify the process of accessing data from other charts, you are able to <a href="#ProgrammaticallyOpeningCharts">Programmatically Opening Charts</a>.</p>
+
+    <p>It is supported to reference data in a study function between different chart types.  For example, if your study is applied to an Intraday chart, you can easily reference data from a Historical Daily chart.  Or the other way around.  There are no restrictions.</p>
+
+    <p>Another use of the methods described here is to access data from different symbols rather than different time frames per bar. So the methods documented on this page also apply to accessing data from charts with  <em>different symbols</em>.  However, if you want to just access data for a different symbol but  for the same timeframe per bar, refer to <a href="#ReferencingDataFromDifferentSymbols">Referencing Data from Different Symbols</a>.</p>
+
+    <p>When using the <b>Study/Price Overlay</b> study or the ACSIL functions  for referencing data from other charts in a Chartbook as documented on this page, this establishes an internal reference between these charts. </p>
+
+    <p> With this internal reference, when data changes in the source chart, the destination chart where the data is copied to, is notified of this change and the destination chart is updated and has access to the changes. This all happens automatically.</p>
+
+    <p> The different methods to accomplish all of the above are explained in the sections below, along with the different ways that each method can be used.</p>
+</section>
+
+<section class="h2">
+    <h2 id="OverlayStudy">Referencing Data from Other Time Frames by Using the Overlay Study</h2>
+    <div class="member-link">[<a href="#OverlayStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The simplest and easiest method to reference data from other time frames per bar, whether this is main price graph bar data or study data, is to overlay that data on the destination chart by using the   <b>Study/Price Overlay</b> study.</p>
+
+    <p>The destination chart will be the chart where your custom study is applied to. You can then directly access the data from the <b>Study/Price Overlay</b> study from within the code in your custom study. </p>
+
+    <p>For complete documentation for the   <b>Study/Price Overlay</b> study, refer to <a href="indexc0f0.html?page=doc/StudyPriceOverlayStudy.php"  target="_blank" rel="noopener noreferrer">Study/Price Overlay Study</a>.</p>
+
+    <p>Use the <b>Study/Price Overlay</b> study on the destination chart to reference the source chart data. Once you get the study configured as you require, then the data can be referenced from that study as explained below. If you cannot accomplish what you want with the overlay study, then what you require is not supported.</p>
+
+    <p>Once you have overlaid the studies on the destination chart, they can be hidden by enabling the <b>Hide Study</b> setting in the <b>Study Settings</b> window for the study. In this way they will not interfere with the view if you do not need to see them.</p>
+
+    <p>You are able to add multiple instances of the <b>Study/Price Overlay</b> study in order to overlay multiple price graphs and studies from other charts.</p>
+
+    <p>Once you have all of the chart bars and/or studies overlayed on the destination chart, then the next step is to reference the data in your custom study. Below is a code example which demonstrates this. The primary function that is used is <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyArrayUsingID" target="_blank" rel="noopener noreferrer">sc.GetStudyArrayUsingID</a>. This code below can be found in <b>studies7.cpp</b> in the ACS_Source folder in the Sierra Chart program folder.</p>
+
+    <section class="h4">
+		<h4>Example</h4>
+        <pre class="Code FullLineHeight">
+SCSFExport scsf_ReferenceStudyData(SCStudyInterfaceRef sc)
+{
+    SCSubgraphRef Average = sc.Subgraph[0];
+    SCInputRef Study1 = sc.Input[0];
+    SCInputRef Study1Subgraph = sc.Input[1];
+
+
+
+    if (sc.SetDefaults)
+    {
+        sc.GraphName = "Reference Study Data";
+        sc.StudyDescription = "This study function is an example of referencing data from other studies on the chart.";		
+        sc.AutoLoop = 1;
+
+        // We must use a low precedence level to ensure
+        // the other studies are already calculated first.
+        sc.CalculationPrecedence = LOW_PREC_LEVEL;
+
+
+        Average.Name = "Average";
+        Average.DrawStyle = DRAWSTYLE_LINE;
+        Study1.Name = "Input Study 1";
+        Study1.SetStudyID(0);
+        Study1Subgraph.Name = "Study 1 Subgraph";
+        Study1Subgraph.SetSubgraphIndex(0);
+
+        return;
+    }
+
+    // Get the Subgraph specified with the Study 1
+    // Subgraph input from the study specified with
+    // the Input Study 1 input.
+    SCFloatArray Study1Array;
+
+    sc.GetStudyArrayUsingID(Study1.GetStudyID(),Study1Subgraph.GetSubgraphIndex(),Study1Array);
+
+    // We are getting the value of the study Subgraph
+    // at sc.Index. For example, this could be
+    // a moving average value if the study we got in
+    // the prior step is a moving average.
+    float RefStudyCurrentValue = Study1Array[sc.Index];
+
+    // Here we will add 10 to this value and compute 
+    // an average of it. Since the moving average
+    // function we will be calling requires an input
+    // array, we will use one of the internal arrays
+    // on a Subgraph to hold this intermediate 
+    // calculation. This internal array could be 
+    // thought of as a Spreadsheet column where you 
+    // are performing intermediate calculations.
+
+    sc.Subgraph[0].Arrays[9][sc.Index] = RefStudyCurrentValue + 10;
+
+    sc.SimpleMovAvg(sc.Subgraph[0].Arrays[9],sc.Subgraph[0],15);
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DirectReferencing">Referencing Data from Other Time Frames By Direct Referencing of the Other Timeframe</h2>
+    <div class="member-link">[<a href="#DirectReferencing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you need to reference bar data (<em>Base Data</em>) or study data from another chart with a different timeframe per bar, different Session Times, or a different Symbol, then this is possible by directly accessing the <b>sc.Subgraph[].Data</b> arrays of the other chart. </p>
+
+    <p>A Subgraph is an array of data for an individual line within a study or an array that contains the Open, High, Low, or Close values of the main price graph bars.</p>
+
+    <p>For example,  if you have a trading system study on chart #1 and you want to access a particular study with results needed for your trading system from chart #2, which has different  Chart Settings, then you would make a function call to get the <b>sc.Subgraph[].Data</b> arrays for the study from chart #2.  </p>
+
+    <p>The two functions usually used  for this purpose are <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetChartBaseData">sc.GetChartBaseData</a> and <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyArraysFromChartUsingID">sc.GetStudyArraysFromChartUsingID</a>.</p>
+
+    <p> For example, if you need to get the results of a Moving Average on a different timeframe, then that Moving Average must be on the other timeframe chart and you will need to make a function call to get the <b>sc.Subgraph[].Data</b> array that contains the  Moving Average data.</p>
+
+    <p>This study on the other timeframe does not have to be visible. In the <b>Study Settings</b> window for the study, the <b>Hide Study</b> option can be enabled.  Or, if your study function is referencing data from a custom study that you created, then that study that you created can use <b>sc.Subgraph[].Data</b> arrays that have no <b>sc.Subgraph[].Name</b> set. In which case those particular study Subgraph arrays will not even be visible on the source chart.</p>
+
+    <p>Below is a code example which demonstrates getting both the  Base Data arrays and the study arrays  from another chart. In the case of a study, this can be any study on another chart.</p>
+
+    <p>The code also demonstrates different methods of finding the corresponding index between the arrays for the two charts. For additional information about this, refer to <a href="#AccessingCorrectArrayIndexes">Accessing Correct Array Indexes in Other Chart Arrays</a>. </p>
+
+    <p>Finding the corresponding  array index is an <em>essential step</em> when working with arrays from another chart. </p>
+
+    <p> The code uses a <a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html" >Study Input</a> to specify the  <b>Chart Number</b> and <b>Study ID</b>.</p>
+
+    <p>The code below can be found in the <b>/ACS_Source/studies8.cpp</b> file in the Sierra Chart program folder.</p>
+
+    <p> It must also be made clear that it is not possible to get the the chart Base Data arrays from another chart, use intermediate study calculation functions like <b> sc.SimpleMovAvg</b>  in the destination study function and pass one of those Base Data arrays from another chart, and calculate a moving average. </p>
+
+    <p>The general reason this does not work reliably is because the source and destination charts have different array sizes. In other words, they contain a different number of chart bars. The indexing  in the arrays do not correspond directly to each other.</p>
+
+    <section class="h4">
+	<h4 id="DirectReferencing_Example">Example</h4>
+    <div class="member-link">[<a href="#DirectReferencing_Example">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+    <pre class="Code FullLineHeight">
+SCSFExport scsf_ReferenceDataFromAnotherChart(SCStudyInterfaceRef sc)
+{
+    SCInputRef ChartStudy = sc.Input[0];
+
+    if (sc.SetDefaults)
+    {
+        sc.GraphName = "Reference Data";
+        sc.StudyDescription = "This is an example of referencing data from another chart.";
+        sc.AutoLoop = 1;
+
+        ChartStudy.Name = "Study Reference";
+        ChartStudy.SetChartStudyValues(1, 1);
+
+        return;
+    }
+
+    // The following code is for getting the High array
+    // and corresponding index from another chart.
+
+    // Define a graph data object to get all of the base graph data from the specified chart
+    SCGraphData BaseGraphData;
+
+    // Get the base graph data from the specified chart
+    sc.GetChartBaseData(ChartStudy.GetChartNumber(), BaseGraphData);
+
+    // Define a reference to the High array
+    SCFloatArrayRef HighArray = BaseGraphData[SC_HIGH];
+
+    // Array is empty. Nothing to do.
+    if(HighArray.GetArraySize() == 0)
+        return;
+
+
+    // Get the index in the specified chart that is 
+    // nearest to current index.
+    int RefChartIndex = sc.GetNearestMatchForDateTimeIndex(ChartStudy.GetChartNumber(), sc.Index);
+
+    float NearestRefChartHigh = HighArray[RefChartIndex];
+
+    // Get the index in the specified chart that contains
+    // the DateTime of the bar at the current index.
+    RefChartIndex = sc.GetContainingIndexForDateTimeIndex(ChartStudy.GetChartNumber(), sc.Index);
+
+    float ContainingRefChartHigh = HighArray[RefChartIndex];
+
+    // Get the index in the specified chart that exactly
+    // matches the DateTime of the current index.
+    RefChartIndex = sc.GetExactMatchForSCDateTime(ChartStudy.GetChartNumber(), sc.BaseDateTimeIn[sc.Index]);
+
+    if(RefChartIndex != -1)
+    {
+        float ExactMatchRefChartHigh = HighArray[RefChartIndex];
+    }
+
+    // The following code is for getting a study Subgraph array
+    // and corresponding index from another chart. 
+    // For example, this could be a moving average study Subgraph.
+
+    // Define a graph data object to get all of the study data
+    SCGraphData StudyData;
+
+    // Get the study data from the specified chart
+    sc.GetStudyArraysFromChartUsingID(ChartStudy.GetChartNumber(), ChartStudy.GetStudyID(), StudyData);
+
+    // Define a reference to the first Subgraph array
+    SCFloatArrayRef SubgraphArray = StudyData[0];
+
+    // Array is empty. Nothing to do.
+    if(SubgraphArray.GetArraySize() == 0)
+        return;
+
+
+    // Get the index in the specified chart that is nearest
+    // to current index.
+    RefChartIndex = sc.GetNearestMatchForDateTimeIndex(ChartStudy.GetChartNumber(), sc.Index);
+
+    float NearestSubgraphValue = SubgraphArray[RefChartIndex];
+
+    // Get the index in the specified chart that contains 
+    // the DateTime of the bar at the current index.
+    RefChartIndex = sc.GetContainingIndexForDateTimeIndex(ChartStudy.GetChartNumber(), sc.Index);
+
+    float ContainingSubgraphValue = SubgraphArray[RefChartIndex];
+
+    // Get the index in the specified chart that exactly
+    // matches the DateTime of the current index.
+    RefChartIndex = sc.GetExactMatchForSCDateTime(ChartStudy.GetChartNumber(), sc.BaseDateTimeIn[sc.Index]);
+
+    if(RefChartIndex != -1)//-1 means that there was not an exact match and therefore we do not have a valid index to work with
+    {
+        float ExactMatchSubgraphValue = SubgraphArray[RefChartIndex];
+    }
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ReferencingDataFromDifferentSymbols">Referencing Data from Different Symbols</h2>
+    <div class="member-link">[<a href="#ReferencingDataFromDifferentSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  When needing to reference data for a different symbol than the chart which needs to reference the  different symbol, it is recommended to use the  <a href = "index7014.html?page=doc/StudiesReference.php&amp;ID=400&amp;Name=Add_Additional_Symbol">Add Additional Symbol</a> study instead of the other methods documented on this page.   </p>
+    
+    <p>This method should only be used when you need  to get data for a different symbol which has the same chart bar timeframe as the same chart the   <b>Add Additional Symbol</b> study is applied to.</p>
+    
+
+    <p>To access the data from this study, refer to <a href = "indexd011.html?page=doc/ACSILProgrammingConcepts.html#UsingStudyData">Using or Referencing Study/Indicator Data in an ACSIL Function</a>. </p>
+    
+    
+</section>
+
+<section class="h2">
+    <h2 id="ProgrammaticallyOpeningCharts">Programmatically Opening Charts</h2>
+    <div class="member-link">[<a href="#ProgrammaticallyOpeningCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you are making references to other charts in your ACSIL study, you may want to automatically open those charts, so there is no need to manually open them.  </p> 
+    
+    <p>This allows your study to be fully self-contained and does all that it needs to do, to reference the necessary data.  You are able to open charts programmatically by using the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scOpenChartOrGetChartReference">sc.OpenChartOrGetChartReference</a> function.  </p>
+    
+    <p>When a chart is programmatically opened it can also be hidden. This minimizes system resources. This can be done either programmatically or manually. In the case of manually, refer to <a href = "indexc5fd.html?page=doc/WindowMenu.html#HideWindow">Window &gt;&gt; Hide Window</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id= "AccessingCorrectArrayIndexes">Accessing Correct Array Indexes in Other Chart Arrays</h2>
+    <div class="member-link">[<a href="#AccessingCorrectArrayIndexes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When accessing main price graph and study arrays from other charts, it must be understood that the sizes of those arrays ( the number of elements in them ) are going to be different than the size of the arrays in the destination chart which contains the study function where you are calling the functions requesting these arrays.</p>
+
+    <p>The two functions to get data from another chart usually you should be using are:</p>
+
+    <ul>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetChartBaseData">sc.GetChartBaseData</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetStudyArraysFromChartUsingID">sc.GetStudyArraysFromChartUsingID</a></li>
+    </ul>
+
+    <p>Use the <b>GetArraySize() </b> member function on the SCFloatArray class to get the size of an array.</p>
+
+    <p> For example, if you want to get the last element of an array from another chart use the following code:</p>
+
+    <section class="h4">
+		<h4>Example</h4>
+        <pre class="Code FullLineHeight">
+SCGraphData BaseData; 
+sc.GetChartBaseData(1, BaseData); 
+int LastElementIndex = BaseData[SC_HIGH].GetArraySize() -1;
+float HighValue = BaseData[SC_HIGH][LastElementIndex];
+        </pre>
+    </section>
+
+    <p> Use the following functions to find the corresponding array index in an array from another chart which corresponds to the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn" >sc.BaseData[][]</a> and <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData" >sc.Subgraph[].Data[]</a> array indexes in the chart you are using the array from another chart in:</p>
+
+    <ul>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetContainingIndexForDateTimeIndex">sc.GetContainingIndexForDateTimeIndex</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetContainingIndexForSCDateTime">sc.GetContainingIndexForSCDateTime</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetExactMatchForSCDateTime">sc.GetExactMatchForSCDateTime</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetNearestMatchForDateTimeIndex">sc.GetNearestMatchForDateTimeIndex</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetNearestMatchForSCDateTime">sc.GetNearestMatchForSCDateTime</a></li>
+    </ul>
+
+</section>
+
+<section class="h2">
+    <h2 id="ControlledOrderChartUpdating">Controlled Order Chart Updating</h2>
+    <div class="member-link">[<a href="#ControlledOrderChartUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When referencing data from other charts in an ACSIL study function, you may want to have the charts updated in an order according to dependency if you have a requirement for this. In other words, the charts being referenced will be calculated before the chart referencing them. This should only be done if you know that you require it. <em>Otherwise, do not do this because it can make Sierra Chart less responsive</em>.</p>
+
+    <p>For further information, refer to  <a href="index899f.html?page=doc/GeneralSettings.html#UseControledOrderChartUpdating">Use Controlled Order Chart Updating</a>.</p> 
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSILRefOtherTimeFrames.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+</html>  

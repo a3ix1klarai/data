@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1669080735') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Authentication and Connection Monitoring Messages -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index7c96.html?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ExternalInterfaces.DTCProtocol">(Table of Contents) Data and Trading Communications (DTC) Protocol</a> &gt;&gt; <a  href="indexe379.html?page=doc/DTCMessageDocumentation.php">DTC Messages and Procedures</a> &gt;&gt; <a  href="index7c96.html?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php">Authentication and Connection Monitoring Messages</a></h4> </div>     <h1 class="PageName">Authentication and Connection Monitoring Messages</h1>
+
+<ul>
+    <li><a href="#Messages-ENCODING_REQUEST">ENCODING_REQUEST</a></li>
+    <li><a href="#Messages-ENCODING_RESPONSE">ENCODING_RESPONSE</a></li>
+    <li><a href="#Messages-LOGON_REQUEST">LOGON_REQUEST</a></li>
+    <li><a href="#Messages-LOGON_RESPONSE">LOGON_RESPONSE</a></li>
+    <li><a href="#Messages-LOGOFF">LOGOFF</a></li>
+    <li><a href="#Messages-HEARTBEAT">HEARTBEAT</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+        <h3 id="Messages-ENCODING_REQUEST">ENCODING_REQUEST [s_EncodingRequest structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-ENCODING_REQUEST">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>  <b>Requirements</b>: Not required for Servers. Required for Clients if the Client needs to discover the encoding  the Server uses.</p>
+
+        <p>The  <a href="#Messages-ENCODING_REQUEST">ENCODING_REQUEST</a> message is a message requesting to change the DTC encoding for messages.</p>
+
+        <p> For the procedure to work with this message, refer to <a href="http://dtcprotocol.org/index.php?page=doc/DTCMessageDocumentation.php#EncodingRequest" >Encoding Request Sequence</a>.</p>
+        
+        <p>Hexadecimal representation for encoding request message using binary encoding  which is requesting protocol buffer encoding: 0x10000600 0x08000000 0x04000000 0x44544300.</p>
+        
+        <p>Hexadecimal representation for encoding request message using binary encoding  which is requesting JSON encoding: 0x10000600 0x08000000 0x02000000 0x44544300.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+
+                    <p>To determine the field number for JSON, refer to this message type constant in the <a href="http://dtcprotocol.org/DTC_Files/DTCProtocol.h" >DTCProtocol.h</a> file.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>ProtocolVersion</b></td>
+                <td>
+                    <p>The protocol version supported by the Client.  Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#EncodingEnum">[EncodingEnum]</a> <b>Encoding</b></td>
+                <td>
+                    <p>The DTC message encoding the Client is requesting the Server to use.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ProtocolType</b></td>
+                <td>
+                    <p>The  <b>ProtocolType</b> field needs to be set to the text string "DTC".  </p> 
+
+                    <p>This field is automatically set with the binary encoding data structures.</p>
+
+                    <p> This field is used  for the Server to know that it is communicating with a DTC compliant Client.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-ENCODING_RESPONSE">ENCODING_RESPONSE [s_EncodingResponse structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-ENCODING_RESPONSE">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p><b>Requirements</b>: Required for Servers. Required for Clients if the Client needs to discover the encoding the Server uses.</p>
+
+        <p>The <a href="#Messages-ENCODING_RESPONSE">ENCODING_RESPONSE</a> is a message from the Server to the Client, telling the Client what message encoding it must use to communicate with the Server.</p>
+
+        <p>For the procedure to work with this message, refer to <a href="http://dtcprotocol.org/index.php?page=doc/DTCMessageDocumentation.php#EncodingRequest" >Encoding Request Sequence</a>.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+
+                    <p>To determine the field number for JSON, refer to this message type constant in the <a href="http://dtcprotocol.org/DTC_Files/DTCProtocol.h" >DTCProtocol.h</a> file.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>ProtocolVersion</b></td>
+                <td>
+                    <p>This field is automatically set by the constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#EncodingEnum">[EncodingEnum]</a> <b>Encoding</b></td>
+                <td>
+                    <p>The DTC message encoding to be used.</p>
+
+                    <p>This value may be different from the requested DTC encoding if the Server does not support the requested encoding from the Client.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ProtocolType</b></td>
+                <td>
+                    <p>The <b>ProtocolType</b> field needs to be set to the text string "DTC".</p> 
+
+                    <p>This field is automatically set with the binary encoding data structures.</p>
+
+                    <p>This field is used  for the Client to know that it is communicating with a DTC compliant Server.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="h3">
+        <h3 id="Messages-LOGON_REQUEST">LOGON_REQUEST [s_LogonRequest structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-LOGON_REQUEST">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The  <a href="#Messages-LOGON_REQUEST">LOGON_REQUEST</a> message is sent from the Client to the Server requesting to logon to the Server.</p>
+
+        <p> This is the very first message the Client sends to the Server before being allowed to send any other message other than the <a href="#Messages-ENCODING_REQUEST">ENCODING_REQUEST</a>. </p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+
+                    <p>To determine the field number for JSON, refer to this message type constant in the <a href="http://dtcprotocol.org/DTC_Files/DTCProtocol.h" >DTCProtocol.h</a> file.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>ProtocolVersion</b></td>
+                <td>
+                    <p>The protocol version supported by the Client.  Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Username</b></td>
+                <td>
+                    <p>Optional username for the server to authenticate the Client.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Password</b></td>
+                <td>
+                    <p>Optional password for the server to authenticate the Client.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>GeneralTextData</b></td>
+                <td>    
+                    <p>Optional general-purpose text string. For example, this could be used to pass a license key that the Server may require.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>Integer_1</b></td>
+                <td>    
+                    <p>Optional. General-purpose integer.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>Integer_2</b></td>
+                <td>    
+                    <p>Optional. General-purpose integer.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>HeartbeatIntervalInSeconds</b></td>
+                <td>    
+                    <p>The interval in seconds that each side,  the Client and the Server, needs to use to send <a href="#Messages-HEARTBEAT">HEARTBEAT</a> messages to the other side.</p>
+
+                    <p> This should be a value from anywhere from 5 to 60 seconds. </p>
+
+                    <p> This field is required. </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>TradeAccount</b></td>
+                <td>    
+                    <p> This is an optional field and this should only be set to a Trade  Account identifier if that is required to logon by the Server.  this would only be implemented in rare cases.  Usually this would be the case if the logon is bound to a particular Trade Account and not changeable after the log in.
+
+
+                    <p> The server is still required to implement the <a href = "indexd23b.html?page=doc/DTCMessages_AccountListMessages.php#Messages-TRADE_ACCOUNTS_REQUEST">TRADE_ACCOUNTS_REQUEST</a>  and <a href = "indexd23b.html?page=doc/DTCMessages_AccountListMessages.php#Messages-TRADE_ACCOUNT_RESPONSE">TRADE_ACCOUNT_RESPONSE</a>messages.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>HardwareIdentifier</b></td>
+                <td>    
+                    <p>Optional: This is the computer hardware identifier. The intention of this is that this will be implemented by the Client program developer on a case-by-case basis for specific Data/Trading service providers. It will be a reasonable implementation to uniquely identify a system and will not be publicly disclosed. It will never contain personally identifiable information.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientName</b></td>
+                <td>    
+                    <p>The Client name. This is a free-form text string.</p>
+                </td>
+            </tr>            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>MarketDataTransmissionInterval</b></td>
+                <td>    
+                    <p>  This is an optional field to be used by the Server which specifies in milliseconds, the delay with transmitting market data to the Client. </p>
+
+                     <p> For reasons of efficiency, the server may buffer data over this timeframe, and send data after this time frame expires.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-LOGON_RESPONSE">LOGON_RESPONSE [s_LogonResponse structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-LOGON_RESPONSE">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is a response message indicating either success or an error logging on to the Server.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+
+                    <p>To determine the field number for JSON, refer to this message type constant in the <a href="http://dtcprotocol.org/DTC_Files/DTCProtocol.h" >DTCProtocol.h</a> file.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>ProtocolVersion</b></td>
+                <td>
+                    <p>This is automatically set by the constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#LogonStatusEnum">[LogonStatusEnum]</a> <b>Result</b></td>
+                <td>
+                    <p>This can be set to one of the following constants:  </p>
+                    <ul>
+                        <li><b>LOGON_SUCCESS</b></li>
+                        <li><b>LOGON_ERROR</b></li>
+                        <li><b>LOGON_ERROR_NO_RECONNECT</b></li>
+                        <li><b>LOGON_RECONNECT_NEW_ADDRESS</b></li>
+                    </ul>
+                    <p><b>LOGON_ERROR_NO_RECONNECT</b> means that there has been an error logging on and the Client should not try to reconnect.</p>
+
+                    <p>The Server can set this field to  <b>LOGON_RECONNECT_NEW_ADDRESS</b>  to  instruct the Client to reconnect to the Server at a different address.  The new address is specified through the <b>ReconnectAddress</b>  field. This supports dynamic connections to a server farm.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ResultText</b></td>
+                <td>
+                    <p>Optional freeform text to provide information related to a successful or unsuccessful logon.  The Client will display this text to the user.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ReconnectAddress</b></td>
+                <td>
+                    <p>Server address/IP number and optional port number to reconnect to. Format: [Server Address:Port Number]. Only used if Result is set to <b>LOGON_RECONNECT_NEW_ADDRESS</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>Integer_1</b></td>
+                <td>
+                    <p>Optional. General-purpose integer for the Server to communicate to the Client  an integer value on logon.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ServerName</b></td>
+                <td>
+                    <p>Optional free-form text for the Server to fill out.</p>
+
+                    <p>It is recommended that the Server fill this in with descriptive text identifying itself to the Client.</p>
+
+                    <p>The length of this text string is 60 characters when fixed length strings are used.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>MarketDepthUpdatesBestBidAndAsk</b></td>
+                <td>
+                    <p>Set this to 1 to indicate that the Server will only be sending market depth updates and not best bid and ask updates. The Client will use depth at level 1 to update the best bid and ask prices.</p>
+
+                    <p>Some Clients will maintain separate best bid and ask prices from market depth data.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>TradingIsSupported</b></td>
+                <td>
+                    <p>Set this to 1 to indicate the Server supports trading. Otherwise, the Client will not send through any trading messages.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>OCOOrdersSupported</b></td>
+                <td>
+                    <p>Set this to 1 to indicate the Server supports OCO orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>OrderCancelReplaceSupported</b></td>
+                <td>
+                    <p>Set this to 0 if Server does not support the <a href="index2c13.html?page=doc/DTCMessages_OrderEntryModificationMessages.php#Messages-CANCEL_REPLACE_ORDER">CANCEL_REPLACE_ORDER</a> message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>SymbolExchangeDelimiter</b></td>
+                <td>
+                    <p> Some Clients will usually consider the Symbol and Exchange fields as a single text string. If the Server will be using the Exchange field in  DTC messages that have a Symbol and Exchange fields, it must specify the SymbolExchangeDelimiter field to provide a standard delimiter for the Client to use to combine the Symbol and the Exchange  into a single text string.</p>
+
+                    <p> It is recommended to use a "-" or ".". Examples of how the Client will then combine the Symbol and exchange.</p>
+
+                    <ul>
+                        <li>Symbol-Exchange</li>
+                        <li>Symbol.Exchange</li>
+                    </ul>
+
+
+                    <p>If this field is unset, then this is an indication to the Client that the <b>Exchange</b> field in DTC Protocol messages are not used.</p>
+
+                    <p>Even if the symbols supported by a Server have an Exchange text string, does not mean the Server has to use the <b>Exchange</b> field in DTC messages.  The Server can combine the Symbol and the Exchange in Security Definition responses into the <b>Symbol</b> field only.</p>
+
+                    <p> When a Client sees that the SymbolExchangeDelimiter field is set,  then it can use this delimiter to combine the Symbol and Exchange into a single text string. When the Client is setting the Symbol and Exchange in DTC messages, it needs to separate out the Symbol and Exchange from the larger text string and set those fields separately.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>SecurityDefinitionsSupported</b></td>
+                <td>
+                    <p>Set to 1 if the Server  supports Security Definition messages.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>HistoricalPriceDataSupported</b></td>
+                <td>
+                    <p>Set this to 1 if the Server supports the <a href="indexaf3f.html?page=doc/DTCMessages_HistoricalPriceDataMessages.php#Messages-HISTORICAL_PRICE_DATA_REQUEST">HISTORICAL_PRICE_DATA_REQUEST</a> message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>ResubscribeWhenMarketDataFeedAvailable</b></td>
+                <td>
+                    <p>Set this to 1, so that when the Client receives a <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DATA_FEED_STATUS">MARKET_DATA_FEED_STATUS</a> indicating the market data feed is restored, it will resubscribe to market data and market depth for all of the symbols it was previously tracking.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>MarketDepthIsSupported</b></td>
+                <td>
+                    <p>Set this to 1, if the Server supports the <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message.</p>
+
+                    <p> The default is 0. </p>
+                </td>
+            </tr>       
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>OneHistoricalPriceDataRequestPerConnection</b></td>
+                <td>
+                    <p>The server can optionally set the <b>OneHistoricalPriceDataRequestPerConnection</b> field to 1 in the <a href="#Messages-LOGON_RESPONSE">LOGON_RESPONSE</a>  message to indicate that it only will accept one historical price data request per network connection.</p>
+
+                    <p>After the first request is served or rejected, the network connection will be gracefully closed at the appropriate time by the Server. This method simplifies the serving of historical price data on the Server side and the implementation on the Client side when data compression is used.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>BracketOrdersSupported</b></td>
+                <td>
+                    <p>Set this to 1 to indicate the Server supports bracket orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>UseIntegerPriceOrderMessages</b> </td>
+                <td>
+                    <p> With the integer trading messages discontinued  as of August 2020, this field is no longer relevant.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>UsesMultiplePositionsPerSymbolAndTradeAccount</b></td>
+                <td>
+                    <p>If the Server can report more than one Trade Position for a specific Symbol and Trade Account, then it needs to set <b>UsesMultiplePositionsPerSymbolAndTradeAccount</b> to 1.</p>
+
+                    <p>When the server has set to 1, it must always set  <b>PositionIdentifier</b> in the <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-POSITION_UPDATE" > POSITION_UPDATE</a> message to the identifier of the Trade Position. </p>
+
+                    <p>When the Client checks that this is set to 1, then it knows that it can expect  there potentially can be more than one Trade Position for a specific Symbol and Trade Account being  reported by the <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-POSITION_UPDATE" > POSITION_UPDATE</a>  messages. The Client can then handle this appropriately.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>MarketDataSupported</b></td>
+                <td>
+                    <p>Set this to 1, if the Server supports the <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message.</p>
+
+                    <p> The default is 1. </p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-LOGOFF">LOGOFF [s_Logoff structure] Server  &gt;&gt; Client and Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-LOGOFF">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>A <b>LOGOFF</b>  is a message which can be sent either by the Client or the Server to the other side. It indicates that the Client or the Server is logging off and going to be closing the connection.</p>
+
+        <p>When one side  receives this message, it should expect the connection will be closed. It should not be expected that any messages will follow the <b>LOGOFF</b> message, and it should close the network connection and consider it finished. The side receiving this message can send a <b>LOGOFF</b>  message to the other side before closing the connection.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+
+                    <p>To determine the field number for JSON, refer to this message type constant in the <a href="http://dtcprotocol.org/DTC_Files/DTCProtocol.h" >DTCProtocol.h</a> file.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Reason</b></td>
+                <td>
+                    <p><b>Reason</b>  is a character string indicating the reason for the log off from either the Client or the Server.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>DoNotReconnect</b></td>
+                <td>
+                    <p>When <b>DoNotReconnect</b> is set to a 1, this indicates to the other side that a reconnect to the opposite side should not occur automatically.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-HEARTBEAT">HEARTBEAT [s_Heartbeat structure] Server  &gt;&gt; Client and Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-HEARTBEAT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Both the Client and the Server need to send to the other side a heartbeat at the interval specified by the <b>HeartbeatIntervalInSeconds</b> member in the  <a href="#Messages-LOGON_REQUEST">LOGON_REQUEST</a>.</p>
+
+        <p>There are no required member fields to set in this message. The purpose of the <b>HEARTBEAT</b> message is so that the Client or the Server can determine whether the other side is still connected.
+
+        <p>It is recommended that if there is a loss of <b>HEARTBEAT</b> messages from the other side, for twice the amount of the  <b>HeartbeatIntervalInSeconds</b>  time that it is safe to assume that the other side is no longer present and the network socket should be then gracefully closed.</p>
+
+        <p>The Server may choose to send a heartbeat message every second to the Client. In this particular case, it is recommended the Client use a minimum time of about 5 to 10 seconds without a heartbeat to determine the loss of the connection rather than the standard of twice the amount of the heartbeat time interval.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+
+                    <p>To determine the field number for JSON, refer to this message type constant in the <a href="http://dtcprotocol.org/DTC_Files/DTCProtocol.h" >DTCProtocol.h</a> file.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>NumDroppedMessages</b> (Optional)</td>
+                <td>
+                    <p>The server can optionally set this to indicate the number of messages that were not sent through to the Client because of a buffer overflow on the server side because the Client was not processing the data fast enough or some other network issue.</p>
+
+
+                    <p>The Server should only drop high-frequency market data messages.  In no case should a server ever drop trading related messages.</p>
+                </td>
+            </tr>            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>CurrentDateTime</b> (Optional)</td>
+                <td>
+                    <p>This Date-Time value can be optionally set by the Client/Server when sending this message. </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</section>
+
+<hr><p>*Last modified Tuesday, 22nd November, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:54 GMT -->
+</html>  

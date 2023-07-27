@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DelayedExchangeDataFeed.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1683883977') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DelayedExchangeDataFeed.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Delayed Exchange Data Feed -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a></h4> </div>     <h1 class="PageName">Delayed Exchange Data Feed</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#SetupInstructions">Setup Instructions</a></li>
+    <li><a href="#UsingDelayedDataToEvaluatePerformance">Using Delayed Data to Evaluate Performance</a></li>
+    <li><a href="#ExplanationOfBehaviorDelayedDataFeed">Explanation of Behavior Delayed Data Feed</a></li>
+    <li><a href="#UsingDelayedExchangeDataFeedWithExternalTradingServices">Using Delayed Exchange Data Feed with External Trading Services</a></li>
+</ul>
+
+<hr style="clear: both;">
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Sierra Chart Delayed Exchange Data Feed offers delayed, streaming data  for the following exchanges:</p>
+    
+    <ul>
+        <li>CME  (delayed 10 minutes and 10 seconds)</li>
+        <li>CBOT (delayed 10 minutes and 10 seconds)</li>
+        <li>COMEX (delayed 10 minutes and 10 seconds)</li>
+        <li>NYMEX (delayed 10 minutes and 10 seconds)</li>
+        <li>EUREX (delayed 15 minutes) </li>
+        <li>CFE (CBOE futures) (delayed 10 minutes) </li>
+        <li>NYSE (US Equities) (delayed 15 minutes)  </li>
+        <li>AMEX / NYSE ARCA (US Equities) (delayed 15 minutes)</li>
+        <li>NASDAQ (delayed 15 minutes) </li>
+        <li>NASDAQ Global Indexes (delayed 5 minutes) </li>
+        <li>NASDAQ TotalView (excluding market depth as required by the exchange) (delayed 15 minutes) </li>
+    </ul>
+
+    <p>The data includes <a href = "index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow">Market Depth</a> data and    <a href = "index288e.html?page=doc/MarketByOrder.php">Market by Order</a> data where supported.</p>
+
+    <p> When using this data feed the data will be constantly streaming, but the data is not the Real-Time data, but is delayed according to the delays given above. For example, if the current local time is 14:32:30, then this data feed will not be displaying any market data later than 14:22:20 in the case of a delay of 10 minutes and 10 seconds.</p>
+
+    <p class="GeneralBackgroundHighlight">Since this is delayed data, there are no exchange fees and no need to have a live, funded futures trading account in order to take advantage of the real-time nonprofessional exchange fees  for the CME Group (CME/CBOT/NYMEX/COMEX).</p>
+
+    <p>This data feed is also used by the <a href="index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Futures Trading Service</a>, which provides a realistic simulation environment that can be used to practice trade, test and modify trading algorithms and techniques without having to pay for a Real-Time data feed, or having a trading account. The <b>Simulated Futures Trading
+    Service</b> also supports the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> for real-time data.</p>
+    
+     <p> You can also use the <b>Delayed Exchange Data Feed</b> with   <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a> for simulated trading. </p>
+     
+    <p> For real-time data follow the instructions on the  <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> page. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SetupInstructions">Setup Instructions</h2>
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following instructions are to be used to access the Delayed Exchange Data feed.</p>
+
+ 
+        <ol>
+
+            <li>The delayed data is accessible with the following Services in Sierra Chart:
+                <ul>
+                    <li>SC Data - All Services</li>
+                    <li>Trading Evaluator - Delayed</li>
+                    <li>Teton * Futures Order Routing</li>
+                    <li>Other supported Trading services (US equities only)</li>
+                </ul>
+            </li>
+           
+           <li>  If you are using another  supported Data or Trading  service other than the ones listed above  and you want to use the  <b>Delayed Exchange Data Feed</b> at the same time as another service, then in this case what you need to do is install another installation of Sierra Chart following the instructions  on the <a href="index6ebd.html?page=doc/MultipleServices.html" target="_blank" rel="noopener noreferrer">Multiple Services</a>   page. </li>
+
+            <li>Within the Sierra Chart software, select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. Select one of the services listed at the first step.</li>
+
+            <li>To ensure you receive the delayed data when using <b>SC Data - All Services</b> you will need  to set <b>Allow Support for Sierra Chart Data Feeds</b> to <b> No</b> on the  <b>Common Settings</b> tab (refer to image below).</li>
+
+            <li>Press OK.
+
+                <div style="text-align: center;"><a href="../images/datatradeservicesettings_disableallowsupportforsierrachartdatafeeds.png" rel="lightbox"><img src="../images/datatradeservicesettings_disableallowsupportforsierrachartdatafeeds.png" alt="" width="450" class="screenshot" loading="lazy"></a></div>
+            </li>
+            
+            <li>  <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettings"  target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>. </li>
+
+            <li>Within Sierra Chart select <b class="menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+            <li>On the <b>Find Symbol</b> window, select a symbol from any of the following sub-categories:
+                <ul>
+                    <li><b>Futures - CME</b></li>
+                    <li><b>Futures - CBOT</b></li>
+                    <li><b>Futures - COMEX</b></li>
+                    <li><b>Futures - NYMEX</b></li>
+                    <li><b>Futures - EUREX</b></li>
+                    <li><b>Futures - CFE</b></li>
+                    <li><b>Stocks - NASDAQ</b></li>
+                </ul>
+            </li>
+            <li>To open a chart, press <b>Open Historical Chart</b> or <b>Open Intraday Chart</b>.</li>
+
+            <li>Press the <b>Close</b> button to close the <b>Find Symbol</b> window.</li>
+
+            <li>In the case of when you have <em>existing</em> Chartbooks that you want to receive delayed data for, open those Chartbooks through <b class="menu_item">File &gt;&gt; Open Chartbook</b>. 
+            <br><br>
+            After the Chartbooks are open, select <b class="menu_item">Edit &gt;&gt; Translate Symbols to Current Service</b>.</li>
+        </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingDelayedDataToEvaluatePerformance">Using Delayed Data to Evaluate Performance</h2>
+    <div class="member-link">[<a href="#UsingDelayedDataToEvaluatePerformance">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are costly and complicated restrictions with real time futures data from exchanges in particular the CME / CBOT / NYMEX / COMEX.</p>
+
+    <p>It is much easier to access streaming delayed data which has no restrictions and is included with the Sierra Chart Service Packages which trial users have access to. This data is delayed 10 minutes and 10 seconds for all exchanges other than EUREX which is delayed by 15 minutes.</p>
+
+    <p>The delayed data feed delivers identical performance to the real-time data feed. All of the functionality in Sierra Chart will continue to work the same as compared to when you are using a real-time data feed. The speed and performance of the data feed is the same other than it being delayed.</p>
+    
+     <p>  However, the real-time data feed, Denali Exchange Data Feed, is capable of updates up to 5 times faster, if configured, but this is at a multiple millisecond level, which in most cases would go unnoticed. </p>
+
+    <p>The features in Sierra Chart which require a streaming data feed like market depth features, and the <a href="indexbec8.html?page=doc/StudiesReference.php&amp;ID=375&amp;Name=Market_Depth_Historical_Graph">Market Depth Historical Graph</a> will work with the delayed data feed.</p>
+
+    <p>When the market is active, you will see the same performance of the data feed as you would with the real-time data feed. You can determine if there are any lagging problem and <a href="index0054.html?page=doc/helpdetails4.html#SierraChartExchangeDataFeeds">manage this</a>.</p>
+
+    <p> To get an idea of how fast this data feed updates, you can reduce the <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval">Chart Update Interval</a> for a particular chart or Trading DOM. For test purposes you could set this at 150 ms.</p>
+
+    <p>You can use this data feed as long as you want without being restricted to a time limit that the exchanges will impose for real-time data at no cost, if you do not have a funded trading account or pay the higher exchange fees. This time limit can be as little as 1 day, due to how exchange fees are implemented, and up to to 30 days.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="ExplanationOfBehaviorDelayedDataFeed">Explanation of Behavior Delayed Data Feed</h2>
+    <div class="member-link">[<a href="#ExplanationOfBehaviorDelayedDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>When first accessing the data from the <b>Delayed Exchange Data Feed</b> for a symbol that has not been subscribed before by any other user since the beginning of the week or since the last server restart (it is unusual for there to be a restart during the week), there will be a 10 to 15 minute wait depending upon the delay for the exchange) before the data starts streaming. </p>
+
+    <p>It is not expected that this will be the case in most cases, because in most cases you would be looking at symbols that have already been used by other users. </p>
+
+    <p> This condition occurs because it is necessary to give the server 10-15 minutes of time to delay the data. The reason for this behavior is the efficient design of the Sierra Chart market data infrastructure where only the data that has been subscribed to by users, is transmitted among processes and over the network. This design maintains high-performance and low latency.</p>
+
+    <p> Whenever Sierra Chart updates the server software for the Delayed Exchange Data Feed, then you will be transferred to another server. When transferred to that other server, the above information applies. </p>
+
+    <p> If you were to reconnect Sierra Chart to the data feed you may go to the server which has the new updated server process. There will be a 10-15 minute delay before this server process will be able to provide data after subscribing to a particular symbol since it has been restarted. </p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="UsingDelayedExchangeDataFeedWithExternalTradingServices">Using Delayed Exchange Data Feed with External Trading Services</h2>
+    <div class="member-link">[<a href="#UsingDelayedExchangeDataFeedWithExternalTradingServices">Link</a>] - [<a href="#top">Top</a>]</div>
+
+      <p>It needs to be understood that the Delayed Exchange Data Feed is only accessible  when the  <a href = "index2c7f.html?page=doc/DataSourceSettings.php#CurrentSelectedService">Current Selected Service</a> in Sierra Chart is set to one of the following:  </p>
+      
+            <ul>
+                <li>SC Data - All Services</li>
+                <li>Trading Evaluator - Delayed</li>
+                <li>Teton * Futures Order Routing</li>
+                <li>Other supported Trading services (US equities only)</li>
+            </ul>
+            
+      <p> Therefore, to receive  delayed data for the exchanges provided by the Delayed Exchange Data Feed requires that you set the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#CurrentSelectedService">Current Selected Service</a> in Sierra Chart one of the above.</p>
+      
+      <p>  Another possibility is to install  <a href = "index6ebd.html?page=doc/MultipleServices.html">another installation</a> of Sierra Chart. And set the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#CurrentSelectedService">Current Selected Service</a> in that installation to use  <b>SC Data - All  Services</b>.</p>
+            
+      <p>  An exception to what is described in the above paragraphs is NASDAQ   delayed data which also provides data for NYSE and AMEX   stocks.  The delayed data for NASDAQ is accessible with all of the supported Trading services.    The symbols for NASDAQ end with -NQTV.  For more information, refer to <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php#NasdaqDataFeedNotes">NASDAQ Data Feed Notes</a>. </p>
+      
+       <p> When you are using the  <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali  Exchange Data Feed</a>, this does not impact the ability to receive  delayed data  for  exchanges that you did not activate real-time data for through the Denali  Exchange Data Feed. And it is still possible to receive delayed data for those symbols you did activate real-time data for.  This can be done by disabling the   <a href = "index2c7f.html?page=doc/DataSourceSettings.php#AllowSupportSierraChartDataFeeds">Allow Support for Sierra Chart Data Feeds</a> setting.</p>
+
+
+</section>
+
+<hr><p>*Last modified Friday, 12th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DelayedExchangeDataFeed.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:56 GMT -->
+</html>  

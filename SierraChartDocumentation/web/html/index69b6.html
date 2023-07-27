@@ -1,0 +1,1353 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/WorkingWithCharts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:30:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1681974052') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/WorkingWithCharts.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Working With Charts -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index69b6.html?page=doc/WorkingWithCharts.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index69b6.html?page=doc/WorkingWithCharts.html">Working With Charts</a></h4> </div>     <h1 class="PageName">Working With Charts</h1>
+<hr>
+<ul>
+    <li><a href="#ChartbooksAndOpeningAChart">Chartbooks and Opening a Chart</a></li>
+    <li><a href="#ChartNumbers" >Chart Numbers</a></li>
+    <li><a href="#TemplatesDuplicating">Templates and Duplicating Charts</a></li>
+    <li><a href="#SetPriceDisplayFormat">Setting the Price Display Format</a></li>
+    <li><a href="#ChartScale">Chart Values Scale</a></li>
+    <li><a href="#LeftSideScale">Left Side Scale</a></li>
+    <li><a href="#InteractiveScaling" >Interactive Scaling:  Compress/Expand Vertical Scale, Move Chart Up and Down</a></li>
+    <li><a href="#ChartWindowandRegions">Chart Window and Regions</a>
+        <ul>     
+            <li><a href="#AdjustingTheHeightOfChartRegionsByUsingTheValuesScale">Adjusting the Height of Chart Regions By Using the Values Scale</a></li>
+            <li><a href="#AdjustingChartRegionHeight">Adjusting the Height of Chart Regions By Using the Adjust Regions Tool</a></li>
+            <li><a href="#DisplayingPriceGraphBelowChartRegion1">Displaying the Main Price Graph Below Chart Region 1</a></li>
+            <li><a href="#TradingDOMChartRegions">Trading DOM Chart Regions</a></li>           
+            
+        </ul>
+    </li> 
+    
+    <li><a href="#TimeScale">Time Scale</a>
+        <ul>
+            <li><a href="#DeterminingMostRecentTradeTimeOfLastBar">Determining Most Recent Trade Time of Last Bar</a></li>
+        </ul>
+    </li>
+    <li><a href="#RegionDataLine">Region Data Line / Chart Header</a>
+		<ul>
+		    <li><a href="#HidingRegionDataLineAtTopOfChart">Hiding Region Data Line at Top of Chart and Other Chart Regions</a></li>           
+		    <li><a href="#RegionDataLineDescriptions">Chart Header Field Descriptions</a></li>           
+		    <li><a href="#ChartHeaderTextColors">Chart Header Text Colors</a></li>  
+		</ul>
+	</li>
+    <li><a href="#ChartTitleBar">Chart Title Bar</a></li>
+    <li><a href="#ChartSettingsIndicatorsAtLowerRight">Chart Settings Indicators at Lower Right of Chart</a>
+		<ul>
+		    <li><a href="#ColorIndicatingWhetherScrolledToEndOfChartOrNot">Color Indicating Whether Scrolled to the End of the Chart Or Not</a></li>  
+		</ul>	
+	</li>
+    <li><a href="#SymbolIndicators">Symbol Indicators</a></li>
+    <li><a href="#BarCountdownTimer">Bar Countdown Timer</a></li>
+    <li><a href="#ChartColorsandFonts">Chart Colors and Fonts</a></li>
+    <li><a href="#ViewingChartsinMultipleMonitors">Viewing Charts in Multiple Monitors</a></li>
+    <li><a href="#ScrollingTheChart">Scrolling the Chart and Right Side Fill Space</a>
+        <ul>
+            <li><a href="#FillSpace">Right Side Fill Space</a></li>
+            <li><a href="#LockingFillSpace">Locking the Right Side Fill Space</a></li>
+            <li><a href="#ChartDrawingsAndStudiesRightSideFillSpace">Chart Drawings and Studies in the Right Side Fill Space</a></li>
+            <li><a href="#RemovingRightSideFillSpace">Removing Right Side Fill Space</a></li>
+            <li><a href="#StudySubgraphsInRightSideFillSpace" >Study Subgraphs in Right Side Fill Space</a></li>
+        </ul>
+    </li>
+    <li><a href="#AutomaticScrolling">Automatic Scrolling  as New Bars are Added</a></li>
+    <li><a href="#ChartLinking">Chart Linking</a>
+		<ul>
+		    <li><a href="#ChartLinkingThroughChartSettings">Chart Linking through Chart Settings</a></li>
+		    <li><a href="#ChartLinkingThroughMenu">Chart Linking through the Menu</a></li>
+		    <li><a href="#ChartLinkingThroughControlBarButtons">Chart Linking through Control Bar Buttons</a></li>
+		    <li><a href="#ChartLinkingThroughLinkNumberFieldOnRegionDataLine">Chart Linking through Link Number Field on Region Data Line</a></li>
+		</ul>
+	</li>
+    <li><a href="#ChangingTheChartBarsPeriod">Changing the Chart Bars Timeframe</a></li>
+    <li><a href="#ChangingBarSpacing">Changing Bar Spacing</a></li>
+    <li><a href="#ZoomInOut">Zooming In and Out</a>
+		<ul>
+		    <li><a href="#ZoomingIn">Zooming In</a>
+				<ul>
+				    <li><a href="#IncreasingBarSpacing">Increasing Bar Spacing</a></li>
+				    <li><a href="#ZoomInTool">Zoom In Tool</a></li>
+				    <li><a href="#InteractiveScaleRange">Interactive Scale Range</a></li>
+				</ul>
+			</li>
+		    <li><a href="#ZoomingOut">Zooming Out</a></li>
+		</ul>
+	</li>
+    <li><a href="#SelectingCharts">Selecting Charts or Navigating Among Charts</a></li>
+    <li><a href="#WorkingWithTabs">Working with Tabs</a>
+		<ul>
+		    <li><a href="#ReorderingChartbookTabs">Reordering the Chartbook Tabs</a></li>
+		    <li><a href="#ReorderingChartTabs">Reordering the Chart (MDI) Tabs</a></li>
+		    <li><a href="#ChangingTabNames">Changing Tab Names/Shortening Tab Names</a></li>
+		    <li><a href="#TabColoring">Tab Coloring</a></li>
+		</ul>
+	</li>
+    <li><a href="#CreatingAnInsetChart">Creating an Inset Chart</a></li>
+    <li><a href="#ChartDataFiles">Chart Data Files</a></li>
+    <li><a href="#Tools">Using Chart Drawing Tools</a></li>
+    <li><a href="#DisplayingCurrentPriceLine">Displaying Current Price Line</a></li>    
+    <li><a href="#OverlayingMultipleSymbols">Overlaying Multiple Symbols in a Single Chart Window</a></li>
+    <li><a href="#ChartProblems">Resolving Chart Issues</a></li>
+    <li><a href="#ChartsUnexpectedlyScrollBack">Charts Unexpectedly Scroll Back and Change Fill Space Amount</a></li>
+    <li><a href="#ZoomingByDecreasingTimePeriod">Zooming into Bar by Decreasing Time Period per Bar</a></li>
+    <li><a href="#HidingMainPriceGraph" >Hiding Main Price Graph</a></li>
+    <li><a href="#OutOfMemoryCondition">Out of Memory Condition</a></li>
+    <li><a href="#ResolvingDifferencesChartBarsBetweenCharts">Resolving Differences of Chart Bars Between Charts</a></li>
+    <li><a href="#ErrorCreatingChartWindows">Error Creating Chart Windows  and Trade Windows</a></li>
+    <li><a href="#StoppingChartDataLoadingCalculations">Stopping Chart Data Loading/Calculations</a></li>
+</ul>
+
+<hr>
+
+<div class="h2">
+    <h2 id="ChartbooksAndOpeningAChart" >Chartbooks and Opening a Chart</h2>
+    <div class="member-link">[<a href="#ChartbooksAndOpeningAChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For instructions to open a Historical or an Intraday chart, refer to <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart"  target="_blank" rel="noopener noreferrer">Open Chart</a> on the Getting Started page, or refer to<a href = "index7674.html?page=doc/Chartbooks.html#AddChart" Target="_blank" rel="noopener noreferrer">To Add a New Chart To a Chartbook</a> on the Chartbook page.</p>
+    
+     <p> Charts are contained within Chartbooks. For complete information to work with Chartbooks including adding and removing charts, refer to <a href = "index7674.html?page=doc/Chartbooks.html" target="_blank" rel="noopener noreferrer">Chartbooks</a>. </p>
+
+    <p>The following sections on this page have information for working with charts.</p>
+
+</div>
+
+
+<div class="h2">
+    <h2 id="ChartNumbers" >Chart Numbers</h2>
+    <div class="member-link">[<a href="#ChartNumbers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Each chart has a unique number to identify itself within the Chartbook where it is located.</p>
+
+    <p>When a new chart is opened or a chart is duplicated, the next lowest available number is used to identify the chart.</p>
+
+    <p>It is not possible to change the chart number.</p>
+    
+    <p> The  chart number is used with  <a href = "index2db8.html?page=doc/StudiesReference_CommonStudyInputs.php#ChartNumber">Study Inputs</a> which select a particular Chart. </p>
+
+    <p>The following images shows the chart number:</p>
+   
+   <div style="text-align: center;"><a href="../images/chartnumber.png" rel="lightbox"><img src="../images/chartnumber.png" alt="" class="screenshot" loading="lazy" width="350" ></a></div>
+   
+   <div style="text-align: center;"><a href="../images/chartidentifyingnumber.png" rel="lightbox"><img src="../images/chartidentifyingnumber.png" alt="" class="screenshot" loading="lazy" width="650" ></a></div>
+</div>
+
+<div class="h2">
+    <h2 id="TemplatesDuplicating">Templates and Duplicating Charts</h2>
+    <div class="member-link">[<a href="#TemplatesDuplicating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Any existing chart or Trade DOM window in a Chartbook can serve as a template for creating a new chart that is exactly like it. This is done by <em>duplicating</em> the chart. For complete instructions, refer to <a href="indexda8e.html?page=doc/UsingChartTemplates.php" >Using Chart Templates</a>.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="SetPriceDisplayFormat">Setting the Price Display Format</h2>
+    <div class="member-link">[<a href="#SetPriceDisplayFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>Typically the <b>Price Display Format</b> for a symbol will be set automatically for you. This is managed through <b class="menu_item">Global Settings &gt;&gt;  Symbol Settings </b>. If you need to change the <b>Price Display Format</b>, refer to <a href="indexa315.html?page=doc/helpdetails32.html#MainPriceGraph">Help Topic 32</a>.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="ChartScale" >Chart Values Scale</h2>
+    <div class="member-link">[<a href="#ChartScale">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>The standard scale for the chart is displayed on the right side of the chart. To make changes to the Chart Values scale, right click over the scale numbers and select <a href="index981f.html?page=doc/Scaling.html#ScaleWindow">Scale  Settings</a>. All of the Scale settings are set in the displayed window.</p>
+
+    <p>The <b>Scale Increment</b> value sets the spacing between scale numbers on the right side of the chart. For the numbers to be set automatically, leave <b>Scale Increment</b> at 0.</p>
+
+    <p>To display a scale on the left side of a chart, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Scale</b> and enable <b>Use Left Side Scale</b>.</p>
+    
+    <p> The width of the right side price scale is not directly adjustable.  However, the  maximum width of the displayed studies scale numbers,   can  optionally be individually set to be used within the width calculation.    To do this, open the  <a href = "index981f.html?page=doc/Scaling.html#ScaleWindowStudy">Scale Settings</a>  for a study and enable or disable   <b>Include in Scale Width calculation</b>. </p>
+
+</div>
+
+<div class="h2">
+    <h2 id="LeftSideScale">Left Side Scale</h2>
+    <div class="member-link">[<a href="#LeftSideScale">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To display a Values scale on the left side of the chart, enable <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Scale &gt;&gt; Use Left Side Scale</b>. This is useful when you have graphs displayed in a chart region that use different scaling. The left side scale will display the scale for the secondary graphs. For additional details, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#UseLeftSideScale">Use Left Side Scale</a> in the Chart Settings documentation.</p>
+
+
+    <div style="text-align: center;"><a href="../images/leftsidescale.png" rel="lightbox"><img src="../images/leftsidescale.png" class="screenshot" loading="lazy" alt="" width="400"></a></div>
+
+</div>
+
+<div class="h2">
+    <h2 id="InteractiveScaling" >Interactive Scaling:  Compress/Expand Vertical Scale, Move Chart Up and Down</h2>
+    <div class="member-link">[<a href="#InteractiveScaling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>By using the Interactive Scaling functionality you can compress and expand the vertical scale to create space above and below a Chart Region or expand the graphs in the Chart Region to make them larger.  You can also move the chart up and down interactively in the main chart region or in any chart region. For complete documentation, refer to the <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling">Interactive Scaling</a> page.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="ChartWindowandRegions" >Chart Window and Regions</h2>
+    <div class="member-link">[<a href="#ChartWindowandRegions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The chart window contains many adjustable regions. The number of regions displayed depends on the chart regions the studies on a chart are set to be drawn in. </p>
+
+    <p> Each region contains one or more graphs. A graph would be a price graph or a study graph. The top line of a region shows the values for the last column of the graphs in the region.</p>
+
+    <div class="h3">
+        <h3 id="AdjustingTheHeightOfChartRegionsByUsingTheValuesScale">Adjusting the Height of Chart Regions By Using the Values Scale</h3>
+        
+        <div class="member-link">[<a href="#AdjustingTheHeightOfChartRegionsByUsingTheValuesScale">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>You are able to adjust the height of the regions in the chart by hovering your Pointer over the boundary between the regions in the Values Scale on the right side of the chart. </p>
+
+        <p>Refer to the attached image below. As you hover over the boundary between chart regions you will see a horizontal line displayed. Click and drag with your Pointer device to adjust to the new height and release.</p>
+
+        <p> This feature is not supported when a Drawing Tool is active. To ensure a drawing tool is not active select <b Class = "menu_item">Tools &gt;&gt; Pointer</b> on the menu.</p>
+
+        <div style="text-align: center;"><a href="../images/adjustingregionsinvaluesscale.png" rel="lightbox"><img src="../images/adjustingregionsinvaluesscale.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+    </div>
+
+    <div class="h3">
+        <h3 id="AdjustingChartRegionHeight" >Adjusting the Height of Chart Regions By Using the Adjust Regions Tool</h3>
+        <div class="member-link">[<a href="#AdjustingChartRegionHeight">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>To adjust the height of the chart regions, select <b class="menu_item">Tools &gt;&gt; Adjust Regions</b> on the menu. Move your Pointer over the boundary of two regions on the chart, left click with your pointing device and drag to adjust the height. For complete instructions, refer to the <a href="indexb844.html?page=doc/Tools.html#AdjustRegions">Adjusting Regions</a> section on the  <b>Tools</b> documentation page.</p>
+
+    </div>
+    
+    <div class="h3">
+        <h3 id="DisplayingPriceGraphBelowChartRegion1">Displaying the Main Price Graph Below Chart Region 1</h3>
+        <div class="member-link">[<a href="#DisplayingPriceGraphBelowChartRegion1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is supported to display the main price graph of the chart below Chart Region 1 where it is displayed in by default.</p>
+
+        <p>Follow the instructions below to do this.</p>
+
+        <ol>
+            <li>Go to the chart.</li>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</li>
+            <li>Select the <b>Regions</b> tab.</li>
+            <li>Set the <b>Chart Region</b> setting  to a number of other than 1.</li>
+            <li>Press <b>OK</b>.</li>
+            <li>Select <b class="menu_item">Analysis  &gt;&gt; Studies</b>.</li>
+            <li>Open the Study Settings window for each study on the chart and set them to the specific <b>Chart Regions</b> where you want them to display in.</li>
+            <li>Note that Chart Trading functionality cannot function properly in any Chart Region other than 1.</li>
+        </ol>
+    </div>   
+
+    <div class="h3">
+        <h3 id="TradingDOMChartRegions">Trading DOM Chart Regions</h3>
+        <div class="member-link">[<a href="#TradingDOMChartRegions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> A  <a href = "index3c50.html?page=doc/ChartTrading.html#TradeDOM">Trading DOM</a> is   <em>not</em> designed to support more than one Chart Region.  </p>
+
+        <p> If you  <a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">add a study</a> which uses another Chart Region other than the main price graph region, the height of that Chart Region cannot be adjusted. </p>
+    </div>
+</div>
+
+<div class="h2">
+    <h2 id="TimeScale">Time Scale</h2>
+    <div class="member-link">[<a href="#TimeScale">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Time Scale along the bottom of the chart displays labels for the Year, Month, Day of Month, Day Name, or Time for the chart columns/bars. As many labels  that can fit with a reasonable space between them, will be displayed.</p>
+
+    <p>  The Date and Time labels displayed always correspond to the starting time  of the chart column/bars for which they are for. The starting time of the chart bars is aligned to the <b>Start Time</b> setting in the  <a href="index4ec1.html?page=doc/SessionTimes.php" >Session Times</a> for the chart.  </p>
+    
+    <p> In the case of Intraday charts, the displayed starting Date-Time will be the starting time of the bar and this can be in the prior day in the case of bars with a time length of 1 day per bar or higher, if the trading day starts in the prior day. For more information, refer to <a href = "index4ec1.html?page=doc/SessionTimes.php#WhyReverseSessionTimes">Why Reverse Session Times</a>. </p>
+
+    <p>Therefore, by adjusting the  <b>Session Times &gt;&gt; Start Time</b> in <b class ="menu_item">Chart &gt;&gt; Chart Settings</b>, you can control the starting times of the bars and the corresponding  Time Scale labels.</p>
+
+    <p> To see more Date and Time labels displayed, you need to increase the spacing between the chart bars and/or reduce the Chart Text Font Size. To adjust the chart bar spacing, refer to <a href="#ChangingBarSpacing">Changing Bar Spacing</a>. </p>
+
+    <p> To reduce the Chart Text Font Size, select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> on the menu. Reduce the <b>Fonts &gt;&gt; Chart Text</b>  size using the controls in the displayed window.</p>
+
+    <p>To hide the Time Scale, set the following option to No:  <b class ="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Scale &gt;&gt; Hide Time Scale</b>. </p>
+
+    <p>The scale is built from left to right. Therefore, the Date or Time label on the Time Scale for the rightmost column/bar  in the chart will not be displayed if there is not enough room. </p>
+
+    <p>To see the Date or Time label for the rightmost column/bar, then look along the top line of the chart and view the Date or Time for the last displayed bar. If that is not visible, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Header</b> and <b>Add</b> or <b>Move Up</b> the <b>Date</b> and <b>Time</b> fields into view.</p>
+
+
+    <p>There are several options in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> affecting the Time Scale.  They are as follows:</p>
+    <ul>
+        <li><a href = "index4cf4.html?page=doc/ChartSettings.html#DisplayDayOfWeek">Display Day Of Week With Dates On Intraday Chart Time Scale</a></li>
+        <li><a href = "index4cf4.html?page=doc/ChartSettings.html#HighlightTimescaleDatesMonthsandYears">Highlight Timescale Dates, Months and Years</a></li>
+        <li><a href = "index4cf4.html?page=doc/ChartSettings.html#HideTimeScale">Hide Time Scale</a></li>
+        <li><a href = "index4cf4.html?page=doc/ChartSettings.html#NumberOfForwardColumns">Number of Forward Columns</a></li>
+    </ul>
+
+
+    <p>The <a href="indexfd56.html?page=doc/ChartMenu.html#VerticalGrid" >Vertical Grid</a>  for a chart is independent from the Time Scale.</p>
+    
+    <p> Date-Times are set for chart columns  <em>after</em> the  last bar in the chart. The number of columns after the end of the chart  which will have a Date-Time  is controlled by the <a href = "index4cf4.html?page=doc/ChartSettings.html#NumberOfForwardColumns">Number of Forward Columns</a> Chart setting. </p>
+    
+    <p>In the case of Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars,  these Date-Times after the last bar in the chart are estimated and are based upon the average time frame of the chart bars in the chart. Use the  <a href="indexb844.html?page=doc/Tools.html#ChartValues">Chart Values</a> tool to view the Date-Times  for the columns after the last bar in the chart. </p>
+    
+    <section class="h3">
+       <h3 id="DeterminingMostRecentTradeTimeOfLastBar">Determining Most Recent Trade Time of Last Bar</h3>
+        <div class="member-link">[<a href="#DeterminingMostRecentTradeTimeOfLastBar">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>To determine the most recent time  of the last trade or quote update in the last bar in the chart, it is necessary to  scroll to the end of the chart by selecting <b class = "menu_item">Chart &gt;&gt;  Goto End of  Chart</b>.  Look at the  <b>Time  </b> field on the <a href="#RegionDataLine">Chart Header</a>.  That will show the most recent trade time.  The  <b>Time  </b> field will need to be added if it is not already there.</p>
+
+        <p> You can also look at the <b class="menu_item">Window &gt;&gt; Current Quote Window</b> if connected to the data feed and the symbol is receiving streaming delayed or real-time data.  Look at the Date and Time at the top of that window. It represents the most recent received trade time.</p>
+    </section>
+</div>
+
+<section class="h2">
+    <h2 id="RegionDataLine">Region Data Line / Chart Header</h2>
+    <div class="member-link">[<a href="#RegionDataLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The top data line on a chart is called the <em>Region Data Line</em>.</p>
+
+    <p>The Region Data Line can be customized by selecting <b class="menu_item">Global Settings &gt;&gt; Customize Chart Header</b> on the menu. You can <b>Add</b>, <b>Remove</b>, and <b>Move Up/Down</b> the displayed fields.</p>
+
+    <div style="text-align: center;"><a href="../images/chartregiondataline.png" rel="lightbox"><img src="../images/chartregiondataline.png" alt="" class="screenshot" loading="lazy"></a> </div>
+
+    <p>For studies on the chart, the particular fields of data displayed in the Region Data Lines can be  controlled. Refer to  <a href="indexf116.html?page=doc/helpdetails67.html" target="_blank" rel="noopener noreferrer">Help topic 67: Hiding Study and Main Price Graph Names and Values from the Values Windows and Region Data Line</a>. </p>
+
+    <p>If you do not want to display the Input settings from studies in the Region Data Lines, then enable <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Hide Study Inputs on Charts</b>.</p>
+
+    <p>The <b class="menu_item">Window &gt;&gt; Current Quote Window</b> is another way to view the Daily quote data for the symbol of the active chart.</p>
+
+    <p> When an Alert Condition Formula defined in <b class = "menu_item" >Chart &gt;&gt; Chart Settings &gt;&gt; Alerts</b> is TRUE, then the Symbol on the Region Data Line at the top of the chart will be highlighted in red (the default). Refer to the image below.</p>
+
+    <div style="text-align: center;"><a href="../images/simplealerttrueexample.png" rel="lightbox"><img alt="SimpleAlertTrueExample" src="../images/simplealerttrueexample.png" class="screenshot" loading="lazy"></a></div>
+
+
+    <section class="h3">
+        <h3 id="HidingRegionDataLineAtTopOfChart">Hiding Region Data Line at Top of Chart and Other Chart Regions</h3>
+        <div class="member-link">[<a href="#HidingRegionDataLineAtTopOfChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Region Data line can be hidden by following the instructions below. </p>
+        <ol>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Regions</b>.</li>
+
+            <li>Select <b>Region Number 1</b> or whatever the Chart Region number is that you want to hide the Region Data Line for.</li>
+
+            <li>Set the <b>Value</b> to <b>Hidden</b> for that Region Number.</li>
+
+            <li>Press <b>OK</b>.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="RegionDataLineDescriptions">Chart Header Field Descriptions</h3>
+        <div class="member-link">[<a href="#RegionDataLineDescriptions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Below are a description of the available fields which can be displayed in the Chart Header line. These are configured through  <b class="menu_item">Global Settings &gt;&gt;Customize Chart Header</b>.</p>
+
+        <ul>
+            <li><b>T:</b> This value on the top line of Intraday charts shows the number of trades that occurred for the last displayed bar. Depending upon  the Data or Trading service you are using, this data may only be stored in real-time while connected to the data feed. If it is only available in real-time, then the historical data downloaded in the chart will not show the number of trades per bar.</li>
+
+            <li><b>A:</b> This is the current Ask price. This is the same no matter where the chart is scrolled to.</li>
+            
+            <li><b>B:</b> this is the current Bid price. This is the same no matter where the chart is scrolled to.</li>
+           
+            <li><b>[Bid Size] x [Ask Size]:</b> This is the  quantity of the orders at the  current best Bid price and orders at the  current best Ask price.</li>
+            
+            <li><b>AB Diff:</b> This is the difference between the current Ask price and the current Bid price. This value will only be valid when connected to the data feed or during a chart replay.</li>
+             
+            <li><b>V:</b> This is the volume for the last displayed bar.</li>
+
+            <li><b>DV:</b> This is the total daily volume for the current trading day.</li>
+
+            <li><b>BV:</b> This is the Bid Volume for the last displayed bar. Bid Volume is the volume traded at the Bid price or lower.</li>
+
+            <li><b>AV:</b> This is the Ask Volume for the last displayed bar. Ask Volume is the volume traded at the Ask price or higher.</li>
+
+            <li><b>OI:</b> This value is open interest for the last displayed bar for Historical charts.</li>
+
+            <li><b>(YYYY-MM-DD) :</b> This is the date of the last displayed bar.
+
+
+                <div style="text-align: center;"><a href="../images/datetimechartheaderfields.png" rel="lightbox"><img alt="" src="../images/datetimechartheaderfields.png" class="screenshot" loading="lazy"></a></div>
+            </li>
+
+            <li><b>(HH:MM:SS) :</b> When the last bar in a chart is displayed, the time shown on the top line of the chart is the <em>last trade time </em> of the bar down to the second. If a bar other than the last bar is displayed at the right side of the chart, then the time shown on the top line of the chart is the  <em>starting</em> time of the bar.
+                <br> <br>
+
+                This time is based upon that <a href="index219e.html?page=doc/TimeZone.html" >Time Zone</a> setting in Sierra Chart.</li>
+
+            <li>The Last (<b>C:</b>), High (<b>H:</b>), Low (<b>L:</b>), Open (<b>O:</b>) values are for the entire time period of the right most bar in the chart.</li>
+
+            <li><b>Chg</b>: This is the price change which is the difference between the rightmost displayed bar and the bar immediately before it. In the case of an Intraday chart or when the timeframe in a Historical chart is greater than 1 day, this is <em>not</em> the Daily Price Change. </li>
+
+            <li><b>Chg% </b>(Percent Change): This is the price change as a percentage which is the difference between the rightmost displayed bar and the bar immediately before it. </li>
+
+            <li><b>DChg</b>: This is the Daily Price Change. The Daily Price Change is based on the data provided by the Data or Trading service you are using Sierra Chart with. The Daily  Price Change (<b>DChg:</b>) is calculated as the difference between the last trade price for the symbol and the prior day's closing/settlement price. If the prior day's closing/settlement price is incorrect or unavailable, then the Daily Price Change will be incorrect or be 0. You can see these values in <b Class = "menu_item">Window &gt;&gt; Current Quote Window</b>.
+                <br> <br>
+                This value is in no way affected by the Session Times in the  <a href="index4404.html?page=doc/GlobalSymbolSettings.php" >Global Symbol Settings</a> or in the chart itself.
+                <br> <br>
+                
+                  The underlying variables used in the calculation are accessible through ACSIL with the  <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSymbolData">sc.SymbolData</a> member.
+                </li>
+
+            <li><b>DChg%</b>: This is the Daily Price Change (<b>DChg</b>) calculated as a percentage. </li>
+
+            <li><b>[description]</b>: This displays the descriptive text for the symbol. This will be the name of a company in the case of a stock, or in the case of a futures contract the name of the futures contract.  This description originates from the <a href="index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a> but can change to a different description when connected to the data feed if the data feed provides a description for the symbol in the security definition data requested by Sierra Chart.</li>
+            
+            <li ID = "DataDelayHeaderField"><b>DD</b>(<a href="#DataDelayHeaderField">Link</a>)  (Data Delay): This calculates and displays the difference between the current time and the time of the Last Trade Price  or the Last Bid / Ask Update time, whichever one is more recent. This is used to determine how much of a delay there is.   If there is a delay of more than 1 minute "(delayed)" is displayed as well.
+            <br><br>
+            It is normal for this to show a delay at times of several seconds or even potentially of a minute or more during the time the market is open because there may not be trading always continuously occurring.
+             <br> <br>
+            When the market is closed,  the delay time that it shows will continue to get larger and larger as time goes by. However, once it exceeds 12 hours it no longer displays.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartHeaderTextColors">Chart Header Text Colors</h3>
+        <div class="member-link">[<a href="#ChartHeaderTextColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>On the Chart Header the colors of the <b>Net Change Up</b>, <b>Net Change Down</b> and <b>Alert Condition Highlight</b> can be modified within the Graphics Settings. For more information, refer to <a href="index5795.html?page=doc/GraphicsSettings.html#ColorsDrawWidths">Colors and Widths</a> on the Graphics Settings webpage.</p>
+
+        <p>Additionally, any of the displayed Chart Header Text can be set to display as <b>Reverse Color</b>. When displayed in this manner, the text color is used as a highlight around the text itself and the text color is then changed to match the background color of the chart. In order to use <b>Reverse Color</b>, open the <b class="menu_item">Global Settings &gt;&gt; Customize Chart Header</b> page, select the desired header field in the <b>Selected Header Fields</b> box on the right, and then select the <b>Reverse Color</b> button. The Header Field will now show the text <b>(RC)</b> before the field name indicating that it will be displayed as Reverse Color.</p>
+    </section>
+</section>
+
+<div class="h2">
+    <h2 id="ChartTitleBar">Chart Title Bar</h2>
+    <div class="member-link">[<a href="#ChartTitleBar">Link</a>] - [<a href="#top">Top</a>]</div> 
+    
+    <p> Below is an example of the data fields displayed  on the title bar of a chart. When a chart is detached or it is in a Restored state, the title bar is clearly visible. </p>
+    
+    <p>When a chart is maximized and part of the main Sierra Chart window, the fields can be seen along the main window of Sierra Chart.</p>
+    
+     <p>When a chart is set to a nonzero   <a href="#ChartLinking">Link Number</a>  the link number is displayed on the title bar as is shown below.  </p>
+     
+     <p>A custom name   can also be displayed on the title bar and this is set through   <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b> &gt;&gt; Display &gt;&gt; Title  Bar Name </b>. </p>
+    
+    <div style="text-align: center;"><a href="../images/charttitlebar.png" rel="lightbox"><img alt="" src="../images/charttitlebar.png" class="screenshot" loading="lazy"></a></div>
+    
+    <p>The title bar of a chart can be  hidden by removing the checkmark from <b Class = "menu_item">Chart &gt;&gt; Show Title Bar</b>.   Make sure that menu item has a checkmark to see the title bar of a chart. It is enabled by default.</p>
+</div>
+
+<div class="h2">
+    <h2  id="ChartSettingsIndicatorsAtLowerRight">Chart Settings Indicators at Lower Right of Chart</h2>
+    <div class="member-link">[<a href="#ChartSettingsIndicatorsAtLowerRight">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>At the lower right corner of the chart window, you will see various text indicators indicating certain Chart Settings.  They are described below.</p>
+
+    <div style="text-align: center;"><a href="../images/chartsettingsindicators.png" rel="lightbox"><img alt="" src="../images/chartsettingsindicators.png" class="screenshot" loading="lazy"></a></div>
+
+    <ul>
+        <li><b>[number]</b>: This is the bar spacing in pixels. </li>
+        <li><b>Log</b>: This means the chart is using logarithmic scaling. </li>
+        <li><b>L</b>: This means <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b> is enabled.</li>
+        <li><b>E</b>:This means that <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Use Evening Session Times</b> is enabled. </li>
+    </ul>
+    <section class="h3">
+		<h3 id="ColorIndicatingWhetherScrolledToEndOfChartOrNot">Color Indicating Whether Scrolled to the End of the Chart Or Not</h3>
+        <div class="member-link">[<a href="#ColorIndicatingWhetherScrolledToEndOfChartOrNot">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Chart Settings Indicator at the lower right corner of the chart is colored to indicate if the chart is scrolled to the end or not. </p>
+
+        <p>If it is <em>colored in green</em> (default color), then this is an indication that you are scrolled to the very end of the chart. This means that you will see real-time updating of the chart when connected to the data feed( <b class = "menu_item">File &gt;&gt; Connect to Data Feed</b>). If it is <em>colored in red</em> (default color), then this is an indication that you are  scrolled to a location other than at the end of the chart. To quickly jump to the end of the chart, press the <b> End </b> key on the keyboard.</p>
+
+        <div style="text-align: center;">
+            <a href="../images/workingwithcharts_img1.png" rel="lightbox"><img src="../images/workingwithcharts_img1.png" class="screenshot" loading="lazy" alt="" ></a>
+            <a href="../images/workingwithcharts_img2.png" rel="lightbox"><img src="../images/workingwithcharts_img2.png" class="screenshot" loading="lazy" alt="" ></a>
+        </div>
+
+        <p>The default green and red colors can be changed by changing the   <b>Scroll End Color</b> and <b>Scroll Not End Color</b> color settings in the <a href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> window.</p>
+    </section>
+
+</div>
+
+<div class="h2">
+    <h2 id="SymbolIndicators">Symbol Indicators</h2>
+    <div class="member-link">[<a href="#SymbolIndicators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>After the symbol displayed on a chart or the chart's title bar, there are potential indicators that can be displayed: [M], [C], [CV], [CB], [CBV].</p>
+    
+   <p>For information about [M], refer to <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices"> Integration with Trading Services</a>.</p> 
+   
+   <p>For information about [C], [CV], [CB], [CBV], refer to <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html#TextIndicatorDescriptionTable"> Text Indicator Description Table</a>.</p> 
+
+</div>
+
+<div class="h2">
+    <h2 id="BarCountdownTimer" >Bar Countdown Timer</h2>
+    <div class="member-link">[<a href="#BarCountdownTimer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To display the bar countdown timer select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Header</b> on the menu. Add the field named <b>Bar Countdown</b>. It can be moved up or down as you require.</p>
+
+    <p> Once the <b>Bar Countdown</b> field  is added, the countdown timer will be displayed on the <a href="#RegionDataLine" >Region Data Line</a> at the top of the chart.</p>
+
+    <p>The remaining time only changes when there is trading activity. If there is no trading activity, the remaining time will  <em>not</em> change.  Markets do not trade second to second. They only trade when there is trading activity. Therefore, you cannot expect that the countdown timer will decrement every second because it will not always do this.</p>
+
+    <p>For a more advanced countdown timer use the <a href="index296a.html?page=doc/StudiesReference.php&amp;ID=201#Countdown_Timer">Countdown Timer</a> study which can be added through <b class="menu_item">Analysis &gt;&gt; Studies</b>. The countdown timer can be moved anywhere on the chart.</p>
+</div>
+
+<div class="h2">
+    <h2 id="ChartColorsandFonts" >Chart Colors&nbsp;and Fonts</h2>
+    <div class="member-link">[<a href="#ChartColorsandFonts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To adjust chart colors and the chart font, select <b class="menu_item">Chart &gt;&gt; Graphics Settings</b> on the menu.  </p>
+
+    <p>Refer to the <a href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> documentation page for complete instructions.</p>
+
+    <p>To adjust the colors of studies, refer to the <a href="index9099.html?page=doc/ChartStudies.html">Chart Studies</a> documentation page.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="ViewingChartsinMultipleMonitors">Viewing Charts in Multiple Monitors</h2>
+    <div class="member-link">[<a href="#ViewingChartsinMultipleMonitors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are 2 methods for viewing charts on multiple monitors.</p>
+
+    <p>One method is to detach a chart from the main Sierra Chart program window so it becomes a floating independent window. For instructions, refer to <a href="index2414.html?page=doc/DetachingandAttachingChartWindows.html" >Detaching and Attaching Chart Windows</a>.</p>
+
+    <p>The second method is to expand the main Sierra Chart window across multiple monitors. To do this, left click with your pointing device over the very top left of the main Sierra Chart window (this is where the globe is)  and select <b>Restore</b> to put the main window in a resizable state. </p>
+
+    <p>Restore will be grayed out if the window is already in a resizable state. </p>
+
+    <p>By grabbing the title bar and edges of the main Sierra Chart window, adjust the position and size of the window to fully cover the monitors you want to view the charts on. </p>
+
+    <p>Open all the charts you want to view on your monitors, if they are not already open. Multiple charts can be opened at the same time in Sierra Chart.</p>
+
+    <p>Select <b class="menu_item">Window &gt;&gt; Cascade</b> so all of the charts are in a resizable state. </p>
+
+    <p>Adjust the position and size of your charts so they are positioned on the monitors where you want them. </p>
+
+    <p>With Sierra Chart spread across more than one monitor, you will be able to move charts anywhere within the Sierra Chart desktop. Select <b class="menu_item">File &gt;&gt; Save</b> on the menu to save the charts as a Chartbook so the chart window positions are saved.</p>
+</div>
+
+<div class="h2">
+    <h2 id="ScrollingTheChart">Scrolling The Chart and Right Side Fill Space</h2>
+    <div class="member-link">[<a href="#ScrollingTheChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To view different sections of the loaded chart data, drag the box within the <b>scroll bar</b> at the bottom of the chart window (see image below).</p>
+
+    <p>This lets you scroll the chart horizontally along the time axis. Clicking once on either arrow of the scroll bar will scroll the chart by one graph column. </p>
+
+    <p>Left clicking in the scroll bar itself away from the scroll box will scroll the chart by just less than an entire window of graph columns. It is supported to scroll by  more or less than one window of graph columns at a time. This is accomplished by changing the <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Scroll Multiplier</b>. The default is <em>1.0</em>. Use a smaller value to scroll by a smaller amount. Use a larger value to scroll by a larger amount.</p>
+
+    <p>When you left click in the scrollbar area away from the scroll box and the scroll box jumps either to the far left or far right, then there are two things you can do. Increase the number of days of data loaded in the chart through the <a href="index4cf4.html?page=doc/ChartSettings.html#DaysToLoad" target="_blank" rel="noopener noreferrer">Days to Load</a> Chart Setting. Or, increase the chart <a href="#ChangingBarSpacing">Bar Spacing</a>.</p>
+
+    <p>If it is not possible to scroll the chart either to the left or to the right, this could be caused by having all the available chart bars currently displayed in the window. When this occurs, there is nothing to scroll, therefore the scroll box will not be displayed and selecting the arrows of the scroll bar or clicking in the scroll bar will not change the positions of the bars. To overcome this there are two things that can be done. Increase the number of days of data loaded in the chart through the <a href="index4cf4.html?page=doc/ChartSettings.html#DaysToLoad" target="_blank" rel="noopener noreferrer">Days to Load</a> Chart Setting. Or, increase the chart <a href="#ChangingBarSpacing">Bar Spacing</a> until there is data that is outside of the view of the window.</p>
+
+    <p>The Left and Right arrow keys on your keyboard or the scroll wheel on your pointing device can also be used to scroll the chart.  The scroll wheel can perform 2 functions. It can scroll the chart, change the bar spacing or be set to do nothing. Refer to the <a href="index899f.html?page=doc/GeneralSettings.html#ScrollWheelSetting">Scroll Wheel Setting</a> documentation in the <b>General Settings</b> page.</p>
+
+    <div style="text-align: center;"><a href="../images/chartscrollbar.png" rel="lightbox"><img src="../images/chartscrollbar.png" class="screenshot" loading="lazy" alt="ChartScrollbar"></a></div>
+
+    <p>The <b class="menu_item">Chart</b> menu contains the <b>Page Scroll Left</b> and <b>Page Scroll Right</b> commands which can have keyboard shortcuts assigned to them to scroll the chart by an entire page of bars. For more information, refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Customize Keyboard Shortcuts</a>.</p>
+
+    <p>It is possible to adjust the <a href="index899f.html?page=doc/GeneralSettings.html#ScrollMultiplier">Scroll Multiplier</a> in <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; GUI</b> to adjust the amount the chart is scrolled by when scrolling by one full page either with the scrollbar or by keyboard.</p>
+
+    <p><b>Hand Tool</b>: Another method by which the chart can be scrolled horizontally is by using the <b class="menu_item">Tools &gt;&gt; Hand</b> tool. Refer to <a href="indexb844.html?page=doc/Tools.html#Hand">Hand Tool</a> for complete documentation.</p>
+
+    <p>The <a href="#ChartSettingsIndicatorsAtLowerRight">Chart Settings Indicators</a> at the lower right corner of the chart are colored to indicate if the chart is scrolled to the end or not. </p>
+
+    <div class="h3">
+        <h3 id="FillSpace">Right Side Fill Space</h3>
+        <div class="member-link">[<a href="#FillSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is possible to scroll beyond the last bar loaded in the chart to create blank space on the right side of the chart. This is known as the <b> Right Side Fill Space</b>.</p>
+        
+        <p>As new bars are added to the chart whether the chart is visible or not, the blank space will fill in. If  <b Class = "menu_item">Global Settings &gt;&gt; General Settings </b> <b> &gt;&gt; Charts &gt;&gt; Allow New Data In Unlocked Fill Space</b> is set to <b>No</b>, then the blank space will not automatically fill in as new bars are added to the chart.</p>
+        
+        <p>This fill space can also be locked (explained below).</p>
+
+        <p>The Right Side Fill Space is also useful for displaying study values for studies that support this, displaying study Subgraphs that forward project, and drawing Chart Drawings into the future using the <a href="indexb844.html?page=doc/Tools.html">Drawing Tools</a>.</p>
+
+        <p>To scroll past the last bar loaded in the chart, do one of the following:</p>
+        <ol>
+            <li>  Go to the chart and disable <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b> if it is enabled. </li>
+            <li>Press the right arrow button on the scrollbar at the bottom of the chart.</li>
+            <li>Press and hold the Right Arrow key on your keyboard.</li>
+            <li>Use the <b class="menu_item">Tools &gt;&gt; Hand</b> tool and drag the chart towards the left.</li>
+        </ol>
+
+        <div style="text-align: center;"><a href="../images/rightsidefillspace.png" rel="lightbox"><img src="../images/rightsidefillspace.png" class="screenshot" loading="lazy" alt="" width="400"></a></div>
+
+        <p>To remove the space on the right side of the chart, unlock the fill space if it is locked by removing the checkmark from <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b>. Select <b class="menu_item">Chart &gt;&gt; Go to End of Chart</b>.</p>
+
+        <p>To reduce the amount of fill space on the right side of chart, press the left arrow button on the scrollbar at the bottom of the chart.</p>
+    </div>
+
+    <section class="h3">
+        <h3 id="LockingFillSpace">Locking the Right Side Fill Space</h3>
+        <div class="member-link">[<a href="#LockingFillSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When the <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b> option is enabled, the fill space on the right side of the chart will not change due to any new data or scrolling. This option can also be found in the <b class="menu_item">Chart &gt;&gt; Chart Settings</b> window.</p>
+        
+        <p>When the fill space is unlocked, set it to the amount of space that you require. For instructions, refer to <a href="#FillSpace">Right Side Fill Space</a>. When that is done, lock it by enabling <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b>.</p>
+
+        <p>The amount of fill space on the right side and locking of the fill space can also be programmatically controlled from chart studies. Therefore, if you are using a special study that controls the fill space, although highly unlikely, then you may not be able to set the fill space to the way you want and it will get reverted back to what the study sets. However, the study may have settings to adjust the amount of fill space on the right side of the chart.</p>
+
+        <p>When <b>Lock Fill Space</b> option is not enabled, you can modify the amount of fill space and the fill space will be filled in  as new bars are added to the chart. </p>
+
+        <p>You can temporarily toggle this option by holding down the <b>Ctrl</b>  key on the keyboard. So if the  <b>Lock Fill Space </b> option is on, you can hold down the <b>Ctrl</b> key to modify the fill space, and if the  <b>Lock Fill Space </b> option is off, you can hold down the <b>Ctrl</b> key to temporarily lock the fill space. You can easily enable or disable this option by using the <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b> menu command.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDrawingsAndStudiesRightSideFillSpace">Chart Drawings and Studies in the Right Side Fill Space</h3>
+        <div class="member-link">[<a href="#ChartDrawingsAndStudiesRightSideFillSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The right side fill space can be used for Chart Drawings and some Studies are capable of drawing into this space as well. This is also known as the forward projection area.</p>
+
+        <p>For example, the <a href="indexa26f.html?page=doc/StudiesReference.php&amp;ID=181#Time_Line">Time Line</a> study  can be set to be drawn in the forward projection area as well as where there are existing chart bars.</p>
+
+        <p>Chart Drawing tools can be drawn in the <a href="indexb844.html?page=doc/Tools.html#ForwardProjections">Forward Projection Area</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="RemovingRightSideFillSpace">Removing Right Side Fill Space</h3>
+        <div class="member-link">[<a href="#RemovingRightSideFillSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to remove the fill space on the right side of the chart. However, based upon the amount of loaded data in the chart, there may still be space on the right side of the chart even after following the below instructions.</p>
+
+        <ol>
+            <li> Set <b Class = "menu_item">Global Settings &gt;&gt; Graphics Settings</b> &gt;&gt; <b> Default Right Side Fill Space </b> to 0. Press  <b>OK</b>.</li>
+            
+            <li>Go to the chart and remove the checkmark from <b Class = "menu_item">Chart &gt;&gt; Lock Fill Space</b>.</li>
+            
+            
+            <li>Select <b Class = "menu_item">Chart &gt;&gt;  Go to End of Chart </b>.</li>
+            
+            <li>The right side fill space should now be  removed and the last bar should be at the right side of the chart, assuming there is enough data loaded in the chart.</li>
+        </ol>
+    </section>
+    <section class="h3">
+        <h3 id="StudySubgraphsInRightSideFillSpace">Study Subgraphs in Right Side Fill Space</h3>
+        <div class="member-link">[<a href="#StudySubgraphsInRightSideFillSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A Study can be set to display its Subgraphs  in the right side fill space of the chart by setting the Subgraph  <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle" >Draw Style</a> to <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle_LineAtLastBarToEdge" >Line at Last Bar to Edge</a>. </p>
+        
+      <p> An Advanced Custom Study  can also draw  its Study Subgraphs into this right side fill space by using <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scExtendedArrayElementsToGraph" >sc.Subgraph[].ExtendedArrayElementsToGraph</a>. </p>
+    </section>
+
+</div>
+
+<section class="h2">
+    <h2 id="AutomaticScrolling">Automatic Scrolling  as New Bars are Added</h2>
+    <div class="member-link">[<a href="#AutomaticScrolling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When the last bar in the chart is visible, then as new bars are added to the chart during chart updating, the chart will automatically scroll and display those new bars.</p>
+
+    <p>To see if the chart is scrolled to the end  and the last bar is visible in the chart, refer to the <a href="#ScrollingTheChart">Scrolling the Chart</a>  section which describes the colored box at the lower right of the chart indicating whether the chart is scrolled to the end or not. By default this will be green when the last bar is visible.</p>
+
+    <p>To make sure you are scrolled to the end of the chart, select <b class="menu_item">Chart &gt;&gt; Goto End of Chart </b>.</p>
+
+    <p> There are two things to be conscious of which could inadvertently scroll the chart back from the end and prevent the last bar from being displayed. One of them is bumping the scroll wheel on your pointing device. This will scroll the chart if <b>Scroll Wheel Scrolls Chart</b> is selected in <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Scroll &gt;&gt; Scroll Wheel(List)</b>. You may want to set this to <b> No Scroll Wheel Support</b>. </p>
+
+    <p>The chart could be inadvertently scrolled back when using <b class="menu_item">Tools &gt;&gt; Synchronize Charts</b>.</p>
+
+    <p> Make sure to disable <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Linking &gt;&gt; Chart Linking &gt;&gt; Scroll Position</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChartLinking"><span id="LinkNumber"></span>Chart Linking</h2>
+    <div class="member-link">[<a href="#ChartLinking">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Two or more charts and Trade DOMs within a Chartbook can be linked together.</p>
+
+    <p>Any of the following can be linked, so that when you make a change to any of these in one chart, the other charts will be updated to match.</p>
+
+    <ul>
+        <li><b>Symbol</b>. Refer to <a href="indexa1a5.html?page=doc/SwitchingSymbols.html" >Changing Symbol of Chart</a>.</li>
+
+        <li><b>Bar Period</b>. Refer to <a href="index5017.html?page=doc/ChangingPeriodOfBars.php" >Changing Chart Bars Period</a>.</li>
+
+        <li><b>Scroll Position</b></li>
+
+        <li><b>Session Times</b></li>
+
+        <li><b>Studies</b></li>
+
+        <li><b>Days to Load</b></li>
+
+        <li><b>Bar Spacing</b></li>
+
+        <li><b>Trade Window</b></li>
+
+        <li><b>Vertical Scale</b> </li>
+    </ul>
+
+    <p>For complete details for these Chart Linking options, refer to the <a href="index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Chart Linking</a> section on the Chart Settings page.</p>
+
+    <p>The Link Number is displayed on the title bar of the chart window and on the Region Data Line at the top of the chart. Example: <b class="GeneralBackgroundHighlight">L5</b> indicating Link number 5.</p>
+
+    <div style="text-align: center;"><a href="../images/linknumber.png" rel="lightbox"><img src="../images/linknumber.png" class="screenshot" loading="lazy" alt="LinkNumber" width="400"></a></div>
+
+    <p>There are several methods to establish Chart Linking and they are documented below.</p>
+
+    <section class="h3">
+		<h3 id="ChartLinkingThroughChartSettings">Chart Linking through Chart Settings</h3>
+        <div class="member-link">[<a href="#ChartLinkingThroughChartSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Chart Linking can be set through the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Linking</b> window. Refer to the <a href="index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Chart Linking</a> section on the Chart Settings page.</p>
+
+        <p>This is the method to use in the case of setting the Chart Linking settings for a <em>Trade DOM</em>.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="ChartLinkingThroughMenu">Chart Linking through the Menu</h3>
+        <div class="member-link">[<a href="#ChartLinkingThroughMenu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Chart Linking can be set through the <b class="menu_item">Chart &gt;&gt; Linking &gt;&gt; Number</b> and <b class="menu_item">Chart &gt;&gt; Linking &gt;&gt; Type</b> menus for the active chart. It is necessary to set charts you want to link together to the same Link Number and then use the <b class="menu_item">Type</b> submenu to specify the type of linking.</p>
+    </section>
+
+    <section class="h3">
+		<h3 id="ChartLinkingThroughControlBarButtons">Chart Linking through Control Bar Buttons</h3>
+        <div class="member-link">[<a href="#ChartLinkingThroughControlBarButtons">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Control Bar buttons can be added to set the <b>Link Number</b> and the chart linking <b>Type</b>. To add these Control Bar buttons, follow these instructions:</p>
+
+        <ol>
+            <li> Select <b class="menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar 1-8</b> on the menu.</li>
+
+            <li>In the displayed window, in the <b>Available Control Bar Commands</b>, select the <b>Chart Linking</b> list and add the buttons that you require to the Control Bar.</li>
+
+            <li>For more information, refer to <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Control Bars in the Global Settings Menu</a> documentation.</li>
+
+            <li>Once these buttons are on the Control Bar, when you press them, they will set the chart Link Number or the chart linking Type for the active chart.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+		<h3 id="ChartLinkingThroughLinkNumberFieldOnRegionDataLine">Chart Linking through Link Number Field on Region Data Line</h3>
+        <div class="member-link">[<a href="#ChartLinkingThroughLinkNumberFieldOnRegionDataLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>On the top Region Data Line of a chart it is possible to add a field that when clicked on with the left pointer button, a Chart Link window will display. To add this field, select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Header</b> on the menu. In the list of the <b>Available Header Fields</b>, Add the <b>Link Number</b> field if it is not already added. Press OK.</p>
+
+        <p>Left click on the link number <b>(L:#)</b> on the Region Data Line at the top of a chart or click on <b>NoLink </b> if there is no link number set, to display the Chart Link window to set the Link Number and linking Type.</p>
+
+        <div style="text-align: center;"><a href="../images/chartlinknumberfield.png" rel="lightbox"><img src="../images/chartlinknumberfield.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+        <div style="text-align: center;"><a href="../images/chartlinkwindow.png" rel="lightbox"><img src="../images/chartlinkwindow.png" class="screenshot" loading="lazy" alt=""></a></div>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ChangingTheChartBarsPeriod">Changing the Chart Bars Timeframe</h2>
+    <div class="member-link">[<a href="#ChangingTheChartBarsPeriod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Changing the timeframe per chart bar is done by selecting <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu. For the documentation, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#TimePeriodPerBar">Chart Settings</a>.</p>
+
+    <p>To <em>quickly change the timeframe per chart bar</em>, refer to the <a href="index5017.html?page=doc/ChangingPeriodOfBars.php">Changing the Period of the Chart Bars</a> documentation page.</p>
+
+    <p>It is also supported to quickly change the timeframe per chart bar through standard and custom Control Bar buttons. The Control Bar is the series of buttons you see below the main window menu, this is the default location. For instructions to customize the Control Bar, refer to the <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Customize Control Bar</a> section on the <b>Global Settings Menu</b> page.</p>
+
+    <p>Note: The Low and High for a bar in a chart is the Low and High for the entire time period of the bar. For example, a 10 minute Intraday bar that covers the time period 9:40 to 9:49, will show the Low and High for that time period.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChangingBarSpacing">Changing Bar Spacing</h2>
+    <div class="member-link">[<a href="#ChangingBarSpacing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are several ways to change spacing between the bars or columns in a chart. All of the available methods are explained below.</p>
+    
+    <p>These methods also apply to <a href="indexf7ef.html?page=doc/StudiesReference/TimePriceOpportunityCharts.html">TPO Profile Charts</a>.</p>
+
+    <ol>
+        <li>Use the <b>Up</b> and <b>Down</b> arrow keys on your keyboard to increase or decrease the chart bar spacing by 1 graphics pixel at a time, respectively.</li>
+
+        <li>Use the <b>Page Up</b> and <b>Page Down</b> keys on your keyboard to increase or decrease the chart bar spacing by a larger amount than 1 pixel, respectively.</li>
+
+        <li>Use the <img src="../images/barspacingcontrolbarbuttons.png" alt=""> Control Bar buttons to increase and decrease bar spacing by 1 pixel or a larger amount. For more information about the Control Bars, refer to <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Customize Control Bars</a>.</li>
+
+        <li>Use the scroll  wheel on your pointing device. The setting which enables this is <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; GUI</b>. Refer to the image below. Depending upon which option you select you may need to press and hold the <b>Shift</b> key on your keyboard before scrolling up or down to increase or decrease the bar spacing.
+            <div style="text-align: center;"><a href="../images/scrollwheeloptions.png" rel="lightbox"><img src="../images/scrollwheeloptions.png" class="screenshot" loading="lazy" alt="" width="450"></a> </div>
+        </li>
+
+        <li>Change the bar spacing in the chart by dragging the time scale at the bottom of the chart using your pointing device. To do this, left click and drag left or right along the time scale at the bottom of the chart. This will increase or decrease the spacing.
+            <div style="text-align: center;"><a href="../images/timescale.png" rel="lightbox"><img src="../images/timescale.png" class="screenshot" loading="lazy" alt="" width="450"></a></div>
+        </li>
+    </ol>
+
+    <p>If after reducing the bar spacing zero (0) pixels, you still are not able to view the time range that you require, the next step is to increase the timeframe per chart bar. Refer to <a href="index5017.html?page=doc/ChangingPeriodOfBars.php" target="_blank" rel="noopener noreferrer">Changing Time Period of Chart Bars</a> for instructions.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ZoomInOut">Zooming In and Out</h2>
+    <div class="member-link">[<a href="#ZoomInOut">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+		<h3 id="ZoomingIn">Zooming In</h3>
+        <div class="member-link">[<a href="#ZoomingIn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+			<h4 id="IncreasingBarSpacing">Increasing Bar Spacing</h4>
+			<div class="member-link">[<a href="#IncreasingBarSpacing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><a href="#ChangingBarSpacing">Increasing bar spacing</a> on a chart is a method by which you can expand horizontally or zoom-in an area on the chart.</p>
+            
+            <p>To zoom-in to an area of the chart: Move the chart scrollbar at the bottom of the chart so that the last bar of the area you want to zoom-in to is at the <em>end of the chart window</em>. The reason this is important is because as the chart bar spacing is increased,  the last displayed chart bar will continue to be in view and the bars on the left side of the chart will move off the chart towards the left. Increase the chart bar spacing to zoom-in.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="ZoomInTool">Zoom In Tool</h4>
+			<div class="member-link">[<a href="#ZoomInTool">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Another method by which you can zoom into an area on the chart is to use the <b>Zoom In</b> tool. Follow the instructions below to use this tool. </p>
+            <ol>
+                <li>Select <b class="menu_item">Tools &gt;&gt; Zoom In</b> on the menu. For other methods to select this tool, refer to <a href="indexb844.html?page=doc/Tools.html#SelectingTools" target="_blank" rel="noopener noreferrer">Selecting Drawing Tools</a>.</li>
+
+                <li>Left click with your pointing device at the top left of the area you want to zoom in to, move your Pointer and left click again at the lower right of the area you want to zoom into.</li>
+
+                <li>When you left click the second time, the chart will display the area from the top left to the lower right positions that you selected. This <b>Zoom In</b> Tool automatically places the main price graph of the chart to a <b>User Defined</b> Scale Range to display the upper and lower price boundaries selected. The prior Scale Range type is remembered.</li>
+
+                <li>After you are done viewing the zoomed in area, select <b class="menu_item">Tools &gt;&gt; Cancel Zoom In</b> to restore to prior view and restore the Scale Range to the remembered setting.</li>
+            </ol>
+
+            <p>The color of the Zoom In Tool is set by the value of the <a href="index5795.html?page=doc/GraphicsSettings.html#ChartText" target="_blank" rel="noopener noreferrer">Chart Text</a> setting on the <b>Graphics Settings</b> window.</p>
+        </section>
+
+        <section class="h4">
+			<h4 id="InteractiveScaleRange">Interactive Scale Range</h4>
+			<div class="member-link">[<a href="#InteractiveScaleRange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Another method by which you can zoom into an area on the chart is to use the <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scale Range</a> feature and expand the scale vertically. This supports vertical zooming in. </p>
+        </section>
+    </section>
+
+    <section class="h3">
+		<h3 id="ZoomingOut">Zooming Out</h3>
+        <div class="member-link">[<a href="#ZoomingOut">Link</a>] - [<a href="#top">Top</a>]</div>
+		
+        <p><a href="#ChangingBarSpacing">Decreasing bar spacing</a> on a chart is a method by which you can compress horizontally or zoom-out an area on the chart. To zoom-out an area of the chart: Move the chart scrollbar at the bottom of the chart so that the last bar of the area you want to zoom-out is at the end of the chart window. Decrease the bar spacing.</p>
+
+        <p>Another method by which you can zoom-out an area on the chart is to use the <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling">Interactive Scale Range</a> feature and compress the scale vertically. This supports vertical zooming out.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SelectingCharts">Selecting Charts or Navigating Among Charts</h2>
+    <div class="member-link">[<a href="#SelectingCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are various methods to switch among the chart windows that are currently open within the active Chartbook. These methods are documented below.</p>
+    <ul>
+        <li>Using the MDI (multiple document interface) window tabs at the top or bottom of the main Sierra Chart window. If the MDI Window tabs are not enabled, then enable them in the <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Windows</b> tab.
+            <div style="text-align: center;"><a href="../images/mdiwindowtabs.png" rel="lightbox"><img src="../images/mdiwindowtabs.png" alt=""  class="screenshot" loading="lazy"></a></div>
+            <br>
+            <br>
+
+            For additional information, refer to <a href="index899f.html?page=doc/GeneralSettings.html#Tab_Windows">General Settings &gt;&gt; Windows </a> 
+        </li>
+
+        <li>Selecting a Chart or Spreadsheet window from the <b class="menu_item">CW</b> menu.</li>
+
+        <li>Selecting a chart from the <b class="menu_item">Window &gt;&gt; Windows and Chartbooks</b> list.</li>
+
+        <li>Arranging windows with the <b class="menu_item">Tile</b> commands on the <b class="menu_item">Window</b> menu and then clicking on a chart window with your Pointer.</li>
+
+        <li>Using the <b class="menu_item">Window &gt;&gt; Previous Chart</b> (F4 Key) and <b class="menu_item">Window &gt;&gt; Next Chart</b> (F9 Key) commands.</li>
+
+        <li><a href="index2414.html?page=doc/DetachingandAttachingChartWindows.html">Detaching</a> a chart and selecting it from the  Windows taskbar.</li>
+
+        <li>Within the main Sierra Chart window, select <b class="menu_item">Window &gt;&gt; Restore</b>. Once a window is in a restored state, its position can be adjusted by left clicking and dragging the title bar of the window. The size of the window can be adjusted by left clicking and dragging any edge of the window.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="WorkingWithTabs">Working with Tabs</h2>
+    <div class="member-link">[<a href="#WorkingWithTabs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Double-clicking with your Pointer on an MDI tab, will maximize or restore the chart or Spreadsheet window associated with that tab.</p>
+
+    <section class="h3">
+        <h3 id="ReorderingChartbookTabs">Reordering the Chartbook Tabs</h3>
+        <div class="member-link">[<a href="#ReorderingChartbookTabs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Chartbook tabs can be reordered through dragging and dropping.</p>
+
+        <p>To reorder the Chartbook tabs by dragging, simply click and drag a tab to its new location.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReorderingChartTabs">Reordering the Chart (MDI) Tabs</h3>
+        <div class="member-link">[<a href="#ReorderingChartTabs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To reorder the Chart tabs through the <b>Windows and Chartbooks</b> window, select <b class="menu_item">Window &gt;&gt; Windows and Chartbooks</b>. Use the <b>Move Up</b> and <b>Move Down</b> to change the order of the windows, which affects the order of the tabs for the windows.</p>
+
+        <p>To reorder the Chart tabs by dragging, simply click and drag a tab to its new location. See image for further clarification.</p>
+
+        <p>The Spreadsheet windows, will always be on the right side of the MDI tabs bar. It is not possible to reorder those Spreadsheet tabs. It is not possible to move Chart window tabs between Spreadsheet window tabs or after them.</p>
+        <div style="text-align: center;"><a href="../images/reorderingtabs.png" rel="lightbox"><img src="../images/reorderingtabs.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangingTabNames">Changing Tab Names/Shortening Tab Names</h3>
+        <div class="member-link">[<a href="#ChangingTabNames">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To modify the name (description) you see on a chart window tab, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Advanced Settings 2</b>.</p>
+
+        <p>Specify a <b>Title Bar Name</b>. You can also set a shorter name in the <b>Title Bar Name</b> box to shorten the name (description) of the tab.</p>
+
+        <p>Enable the <b>Use Title Bar Name As Tab Label</b> option.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="TabColoring">Tab Coloring</h3>
+        <div class="member-link">[<a href="#TabColoring">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Chart and Spreadsheet and Chartbook tab coloring is controlled by the following color settings in the <a href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> window.</p>
+        <ul>
+            <li>Chart Tab Color</li>
+
+            <li>Chart Tab Text Color</li>
+
+            <li>Chart Selected Tab Color</li>
+
+            <li>Chart Selected Tab Border Color</li>
+
+            <li>Chart Selected Tab Text Color</li>
+
+            <li>Chartbook Selected Tab Color</li>
+
+            <li>Chartbook Selected Tab Text Color</li>
+
+            <li>Chartbook Tab Color</li>
+
+            <li>Chartbook Tab Text Color</li>
+        </ul>
+        
+        <p>Additionally, it is also possible to color the Chart tabs according to the color assigned to a particular Chart Link number. For further details, refer to <a href="#ColorChartTabsWithChartLinkNumberColor">Color Chart Tabs with Chart Link Number Color</a>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="CreatingAnInsetChart">Creating an Inset Chart</h2>
+    <div class="member-link">[<a href="#CreatingAnInsetChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is possible to create a chart that can be displayed in the corner of a monitor to enable quick viewing of a particular symbol. This can be viewed as an <b>Inset</b> chart, even though it actually will be separate from the main instance. Use the following instructions to create this kind of chart:</p>
+
+    <ul>
+        <li>Open the chart with the desired symbol as normal and have this chart as the active chart.</li>
+
+        <li>Select <b class="menu_item">Window &gt;&gt; Detach/Attach Window</b> to detach this chart from the main Sierra Chart program.</li>
+
+        <li>Resize the detached chart to the desired size and place it in the desired placement on the monitor.</li>
+
+        <li>On this detached chart select <b class="menu_item">Window &gt;&gt; Always on Top</b>. This will keep this detached window in view when working with other charts within the same Chartbook.</li>
+    </ul>
+
+    <p>The following instructions are for additional changes that can be made to the <b>Inset</b> window based on personal display preferences:</p>
+    
+    <ul>
+        <li>To keep this inset window visible even when changing between Chartbooks: on the <b>Inset</b> window select <b class="menu_item">Window &gt;&gt; Window Always Visible</b>.</li>
+
+        <li>To remove the display of the Title Bar: on the <b>Inset</b> window select <b class="menu_item">Chart &gt;&gt; Show Title Bar</b> to remove the check next to this feature.</li>
+
+        <li>To remove the display of the scrollbar: on the <b>Inset</b> window select <b class="menu_item">Chart &gt;&gt; Show Scrollbar</b> to remove the check next to this feature.</li>
+
+        <li>To remove the display of the menu bar: on the <b>Inset</b> window select <b class="menu_item">Chart &gt;&gt; Show Menu</b> to remove the check next to this feature. To access the menu when it is not displayed, refer to the documentation for <a href="indexfd56.html?page=doc/ChartMenu.html#ShowMenu">Show Menu</a>.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="ChartDataFiles">Chart Data Files</h2>
+    <div class="member-link">[<a href="#ChartDataFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For detailed information about chart data files, refer to the <a href="index2d36.html?page=doc/ChartDataFiles.html">Chart Data Files</a> documentation page.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Tools">Using Chart Tools</h2>
+    <div class="member-link">[<a href="#Tools">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart provides a large set of professional drawing tools to draw various types of objects and lines on charts to perform analysis. To use a chart drawing tool, select <b>Tools</b> on the menu and select a tool from the menu. Refer to the <a href="indexb844.html?page=doc/Tools.html">Chart Drawing Tools</a> documentation page for complete instructions for all of the available Tools and to learn about configuring tools.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DisplayingCurrentPriceLine">Displaying Current Price Line</h2>
+    <div class="member-link">[<a href="#DisplayingCurrentPriceLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To display a line on a chart, at the price level of the current price, that displays across the entire visible chart, use the  <a href="indexc697.html?page=doc/StudiesReference.php&amp;ID=123&amp;Name=Current_Price_Line">Current Price Line</a> study.</p>
+
+    <div style="text-align: center;"><a href="../images/currentpriceline.png" rel="lightbox"><img src="../images/currentpriceline.png" alt="Current Price Line" class="screenshot" loading="lazy" width="500"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="OverlayingMultipleSymbols">Overlaying Multiple Symbols in a Single Chart Window</h2>
+    <div class="member-link">[<a href="#OverlayingMultipleSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart supports overlaying graphs for multiple symbols, within a single chart.</p>
+    
+    <p>There are two ways this can be done. They are both documented below.</p>
+     
+    <p>The first method is by using the <a href="index7014.html?page=doc/StudiesReference.php&amp;ID=400&amp;Name=Add_Additional_Symbol" target="_blank" rel="noopener noreferrer" >Add Additional Symbol</a> study  and requires no additional charts. To add this study to the chart, refer to For further details, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Adding/Modifying Studies</a>.</p>
+     
+    <p>The second method is to use the <b>Overlay (Bar)</b> study and is documented below.</p>
+
+    <ol>
+        <li>Open a chart for each of the symbols that you want to view. Open the charts through <b class="menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+        <li>Go to one of the charts where you want to contain graphs for all of the symbols.</li>
+
+        <li>Select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu.</li>
+
+        <li>Add either the <b>Overlay (Bar)</b> or the <b>Overlay (Single Line)</b> study to the chart. For further details, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" >Adding/Modifying Studies</a>. </li>
+
+        <li>Open the <b>Study Settings</b> window for the added study by selecting the study in the <b>Studies to Graph</b> list and pressing the <b>Settings</b> button on the Chart Studies window.</li>
+
+        <li>Select the <b>Settings and Inputs </b> tab, set the <b>Chart Number to Overlay</b> input,  to the particular chart that you want to overlay the main price graph of, on the destination chart.</li>
+
+        <li>Set the <b>Chart Region</b> setting to the particular Chart Region where you want to the overlay graph to be displayed.</li>
+
+        <li>Select the <b>Subgraphs </b> tab and change the <a href="index9099.html?page=doc/ChartStudies.html#GraphDrawType" >Graph Draw Type</a> setting and the Subgraph related settings to what you require.</li>
+
+        <li>Repeat the prior five steps for each symbol that you want to overlay a graph of on the chart.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ChartProblems">Resolving Chart Issues</h2>
+    <div class="member-link">[<a href="#ChartProblems">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have data errors in a chart or a chart is not updating when it should be, then refer to the <a href="indexef11.html?page=doc/help.php">Help Topics</a> page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChartsUnexpectedlyScrollBack">Charts Unexpectedly Scroll Back and Change Fill Space Amount</h2>
+    <div class="member-link">[<a href="#ChartsUnexpectedlyScrollBack">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the <a href="indexb844.html?page=doc/Tools.html#ChartValues" >Chart Values</a>  tool on a chart, you then switch to another chart and you find that the chart you  switched to has scrolled back from the end and the fill space on the right side of the chart also may have changed, then this is the result of using the <b class = "menu_item">Tools &gt;&gt;  Synchronize Charts</b> feature.</p>
+
+    <p>You will need to uncheck the <b class = "menu_item">Tools &gt;&gt;  Synchronize Charts</b> option to prevent this.</p>
+    
+    <p>Another potential reason why a chart could unexpectedly scroll, is if you have set the <a href = "index899f.html?page=doc/GeneralSettings.html#ScrollWheelSetting">Scroll Wheel Setting</a>  to scroll the chart. The scrolling could possibly happen if your scroll wheel is inadvertently giving signals.</p>
+    
+     <p> To go back to the end of the chart, go to the chart and make sure it is active and select  <b class="menu_item">Chart &gt;&gt; Go to End of Chart</b>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="ZoomingByDecreasingTimePeriod">Zooming into Bar by Decreasing Time Period per Bar</h2>
+    <div class="member-link">[<a href="#ZoomingByDecreasingTimePeriod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to zoom into a bar by decreasing the time period / timeframe per bar in the chart.</p>
+
+    <ol>
+        <li>Scroll the chart  to 1 bar after the last bar you want to zoom into, by using the scroll bar at the bottom of the chart.</li>
+
+        <li>Decrease the timeframe  per bar in the chart to 1 Minute or whatever detail that you require. Refer to <a href="index5017.html?page=doc/ChangingPeriodOfBars.php">Changing Chart Bars Period</a>.</li>
+
+        <li>The bars displayed, will be bars which are contained in the bar that you wanted to zoom in to.</li>
+
+        <li>Increase or decrease the <a href="#ChangingBarSpacing">Bar Spacing</a> as required.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="HidingMainPriceGraph">Hiding Main Price Graph</h2>
+    <div class="member-link">[<a href="#HidingMainPriceGraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to hide the main price graph.</p>
+
+    <ol>
+        <li>Select <b Class = "menu_item">Chart &gt;&gt; Graph Draw  Types &gt;&gt; Blank</b>. This can also be set through <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Graph Draw Type</b>.</li>
+
+        <li>Reduce the height of Chart Region 1  to a minimum by using the Adjust Regions function. Assuming there are other Chart Regions being used which contain studies. For instructions, refer to <a href="#ChartWindowandRegions">Chart Window and Regions</a>.</li>
+
+        <li> Select  <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Advanced Settings 2</b>. Set the <b>Region Data Lines &gt;&gt; Region Number &gt;&gt; Region 1 &gt;&gt;  State</b> to <b> Hidden </b>.</li>
+
+        <li>Press OK.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="OutOfMemoryCondition">Out of Memory Condition</h2>
+    <div class="member-link">[<a href="#OutOfMemoryCondition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A message like the following:</p>
+
+    <div class="MessageLog">GER30 1 Min #1 | Moving Average - Simple | Encountered an out of memory condition when calling study function.</div> 
+
+    <p>Means that the memory available to Sierra Chart from the operating system, has run out.  When this condition occurs the chart will go  <em>completely blank</em>.  A similar error can occur in relation to the chart   <em>itself and not to a particular study</em>.  </p>
+
+    <p>The first step is to reduce the amount of memory used by Sierra Chart if possible.  The next step is to  run the 64-bit version of Sierra Chart.</p>
+
+    <p>Go to each of your  charts in each open Chartbook and select <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. Set the <b>Days to Load</b> setting to 10 days or less. This should at least bring the problem under control for the time  being for you. You may have to set <b>Days to Load</b> to an even smaller value  if there are a large number of bars per day in the chart.</p>
+
+    <p>Generally the cause of this condition is loading too many days of data in a chart and having a very short timeframe per bar.</p>
+
+    <p> Another setting to check is <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Number of Stored Time and Sales Records</b>. This should not be higher than 10000 to 15000 usually. Otherwise, using too high of a setting will use a lot of memory.</p>
+
+    <p>Another good solution to the problem is to reduce the number of charts you have open in an instance of Sierra Chart and use additional instances of Sierra Chart  through the  <b Class = "menu_item">File &gt;&gt; New Instance</b> feature. Refer to the <a href="index9bbd.html?page=doc/NewInstance.php#UsingDTCServerForDataAndTradingInAnotherSCInstance" target="_blank" rel="noopener noreferrer">Using DTC Server for Data and Trading in Another Sierra Chart Instance</a> page for instructions.</p>
+    
+     
+    <p>If a chart is completely blank due to an out of memory condition and more memory is later available, you can try reloading  the chart with <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>.</p> 
+     
+    <p>Finally, computers these days running the Windows operating system really should have 16 GB of memory minimum.  This is what we recommend.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ResolvingDifferencesChartBarsBetweenCharts">Resolving Differences of Chart Bars Between Charts</h2>
+    <div class="member-link">[<a href="#ResolvingDifferencesChartBarsBetweenCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to resolve differences between chart bars on two different charts.  </p>
+    
+    <p>These charts can be within the same installation of Sierra Chart or different installations of Sierra Chart. </p>
+    
+    <p>If this issue involves differences  with studies between charts, then refer to <a href = "index9099.html?page=doc/ChartStudies.html#ResolvingStudyDifferences">Resolving Study Differences</a> instead. </p>
+
+    <ol>
+        <li>One way to ensure consistency between chart bars between  two different charts  of the same symbol in the same installation of Sierra Chart, is to  <a href = "indexfd56.html?page=doc/ChartMenu.html#DuplicateChart">duplicate</a> one of the charts.   After duplicating one of the charts, reload the data  in the original  chart with  <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>.  Both the original chart and the duplicated chart will now be identical.
+          <br> <br>
+         At least in most cases. But there could be a difference  if basic  symbol settings like the  <b>Tick Size</b> has changed in the duplicated chart.  Since it will be   set back to its default value in the duplicated chart.
+         <br> <br>
+         The information below has more detailed information.
+        </li>
+        
+        <li>Ensure there is complete and consistent data for the charts.
+
+        If you are comparing charts between different  instances of Sierra Chart, check the  <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" >Intraday Data Storage Time Unit</a> setting. It needs to be set the same between instances.
+         <br> <br>
+        Re-download the data  by going to the chart and selecting  <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>.    If the charts are within the same instance of Sierra Chart, this only needs to be done for one of the charts.
+         <br> <br>
+        If the charts are in different instances of Sierra Chart, then this procedure needs to be followed for each instance.
+        <br> <br>
+        If you are using sub instances (<b class="menu_item">File &gt;&gt; New Instance</b>), perform this procedure first in the  main/server instance of Sierra Chart and then in the sub instance.</li>
+        
+        <li>The next step in order to make sure that you remove any data that has been loaded in the chart earlier than the <b> Days to Load</b>  setting  in  <b class="menu_item">Chart &gt;&gt; Chart Settings</b>, which occurs over time, is to select  <b class="menu_item">Chart &gt;&gt; Reload and  Recalculate</b> for each of the charts being compared.
+         <br> <br>
+          This step will make a difference  if the first Date-Time in the chart is different between the two charts you are comparing.   You can see what this is by going to each chart and selecting   <b class="menu_item">Chart &gt;&gt; Goto Beginning of Chart</b>  and looking at the Date-Time of the first bar.
+        </li>
+
+        
+        <li>Go to one of the charts you are comparing, and examine <em>all</em> of the settings in <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> and compare them to the <b>Chart Settings</b>   to the other chart being compared to see where the difference  is with these settings.
+        <br> <br>
+          The settings on the following tabs can change chart bars: <b> Symbol, Data Limiting, Bar Period, Session  Times, Chart Data</b>
+        <br> <br>
+        Also the following settings will cause differences and need to be the same between the charts:
+
+            <ul>
+                <li><a href = "index4cf4.html?page=doc/ChartSettings.html#DaysToLoad">Days to Load</a></li>
+
+                <li><a href = "index4cf4.html?page=doc/ChartSettings.html#NewBarSessionStart">New Bar at Session Start</a></li>
+
+                <li><a href = "index4cf4.html?page=doc/ChartSettings.html#CombineTradesIntoOriginalSummaryTrade">Combine Trades into Original Summary Trade</a></li>
+            </ul>        
+        </li>
+        
+        <li>In the two charts being compared which have different chart bars compared to each other, select <b class="menu_item">Chart &gt;&gt; Go to Beginning of Chart</b> and ensure  the Date-Time of the first bar in the chart, matches between the charts you are comparing. This may not always be necessary but could be necessary.   
+        <br> <br>
+        If they do not match between the charts being compared, then ensure the  <b class="menu_item">Chart &gt;&gt; Chart Settings</b> <b> &gt;&gt;  <a href = "index4cf4.html?page=doc/ChartSettings.html#DaysToLoad">Use Number of  Days to Load &gt;&gt; Days to Load</a></b> matches between the charts  and reload each chart  by going to the chart and selecting  <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>.
+        <br> <br>
+        Select <b class="menu_item">Chart &gt;&gt; Go to End of Chart</b>  to go to the end of the chart.
+        </li>
+        
+        <li> The difference  could also be with the configuration of studies in <b Class = "menu_item">Analysis &gt;&gt; Studies</b>.  Check the <a href = "index9099.html?page=doc/ChartStudies.html#SettingsandInputsTab">Inputs</a> settings for each study and make sure they match between the charts. </li>
+        
+        <li> Make sure  the <a href = "index899f.html?page=doc/GeneralSettings.html#UseMondayAsStartOfWeekInsteadOfSunday">Use Monday as Start of Week instead of Sunday</a> setting is set the same between each Sierra Chart installation  when comparing charts between installations. After changing this setting you will need to reload the charts with  <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>.</li>
+        
+        <li> If the charts are within different instances of Sierra Chart, then  follow the  <a href = "index7674.html?page=doc/Chartbooks.html#SharingChartWithAnotherUser">Sharing a Chart with Another User</a>  procedure to save that single chart  as a Chartbook and share it with the other instance of Sierra Chart and open that Chartbook. The charts should be identical because the settings now are guaranteed to be the same.
+        <br><br>
+         If there is a difference, then this would mean there is a difference in the underlying data between the charts if the charts are within different instances. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ErrorCreatingChartWindows">Error Creating Chart Windows and Trade Windows</h2>
+    <div class="member-link">[<a href="#ErrorCreatingChartWindows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you receive messages like the following in the <b class = "menu_item">Window &gt;&gt; Message Log</b> when opening a Chartbook or creating a new chart or opening a Trade Window, then this means you are running out of resources in your Windows operating system for the creation of   chart windows.</p>
+
+    <div class="MessageLog">c_Chart::CreateDetachableWindow: Error creating the MDI child window.</div>
+    <div class="MessageLog">Chart ([symbol]) | Error creating the Trade Window.</div>
+    
+    <p>The first solution to this problem is to enable  <a href="index899f.html?page=doc/GeneralSettings.html#DestroyChartWindowsWhenHidden" >Destroy Chart Windows When Hidden</a>   and then close all of the Chartbooks with  <b class="menu_item">File &gt;&gt; Close All Chartbooks</b> and reopen them.</p>
+     
+    <p>The next solution is going to be to use  <a href = "index9bbd.html?page=doc/NewInstance.php">sub instances</a> of Sierra Chart to distribute your Chartbooks among multiple instances of Sierra Chart.</p>
+
+    <p>Sierra Chart places no restrictions on the number of Chart or Trade windows you can have and are open simultaneously. It is the operating system running into  a problem if you encounter  these errors.  We must make this clear, this is a Windows operating system limitation and problem.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="StoppingChartDataLoadingCalculations">Stopping Chart Data Loading/Calculations</h2>
+    
+    <div class="member-link">[<a href="#StoppingChartDataLoadingCalculations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you look at the chart, that is loading you can left click where it says "Click to cancel" to stop the loading process. </p>
+
+    <p>If that does not work and the entire program is in a frozen state, the frozen state must be relating to study calculations being performed, which can be due to a large number of bars in the chart which can be the case, if a very short timeframe has been set for each bar. In this   Case you need to wait until the study calculations complete.  For more information, refer to <a href = "index4f96.html?page=doc/helpdetails30.html">High CPU Usage/Long Time to Load Chart Data</a>.</p>
+</section>
+
+
+
+<hr><p>*Last modified Thursday, 20th April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/WorkingWithCharts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:30:37 GMT -->
+</html>  

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_ExampleTradingSystems.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105672') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACSIL_ExampleTradingSystems.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Example ACSIL Trading Systems -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index8bb0.html?page=doc/ACSIL_ExampleTradingSystems.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index8bb0.html?page=doc/ACSIL_ExampleTradingSystems.html">Example ACSIL Trading Systems</a></h4> </div>     <h1 class="PageName">Example ACSIL Trading Systems</h1>
+
+<hr>
+<ul>
+	<li><a href="#Introduction">Introduction</a></li>
+	<li><a href="#E1">Introduction</a></li>
+</ul>
+
+<hr>
+<section class="h2">
+    <h2  id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page lists example ACSIL (Advanced Custom Study Interface and Language) trading systems. For additional information, refer to <a href="index2bf5.html?page=doc/ACSILTrading.html">Automated Trading From an Advanced Custom Study</a>.</p>
+
+    <p>There are also many example trading systems in the <b>/ACS_Source/TradingSystem.cpp </b> file in the folder where Sierra Chart is installed to on your system.</p>
+</section>
+
+<section class="h2">
+    <h2 id="E1">Trading Example 1</h2>
+    <div class="member-link">[<a href="#E1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <section class="h4">
+            <h4>Example</h4>
+            <pre class="Code FullLineHeight">
+#include "sierrachart.h"
+
+SCDLLName("SCTradingExample1")
+
+/*
+Overview
+--------
+An example of a trading system that enters a new position or 
+reverses an existing one on the crossover of two study Subgraphs. 
+
+When line1 crosses line2 from below the system will go long. 
+
+When line1 crosses line2 from above, the system will go short.
+
+Comments
+--------
+* Let the user of this trading system study select the two study 
+Subgraph lines to monitor for a crossover. This is accomplished using 
+sc.Input[].SetStudySubgraphValues. In the Study Settings the user is 
+provided with list boxes to select the study and subgraph. 
+
+* The example uses the Auto Trade Management reversal functionality by 
+setting sc.SupportReversals to 1. This means that we simply call 
+sc.BuyEntry for a long and sc.SellEntry for a short with the number of 
+contracts we want to long/short. In the example the number of contracts 
+is 1. 
+
+  So:
+  ** If we are flat, we will enter 1 contract long/short. 
+  ** If we are currently short, Sierra Chart will reverse the position
+     for us and we will be 1 long.
+  ** If we are currently long, Sierra Chart will reverse the Position
+     for us and we will be 1 short.
+
+* For the simplicity of the example, the study process events on the
+  close of the bar.
+
+* To keep the example simple, the study uses market order types to enter the Position.
+
+* Note that if the system enters a Position, and the user manually
+  closes the Position, the system will remain flat until the next
+  crossover at which point a new Position will be established.
+
+*/
+
+
+SCSFExport scsf_SC_TradingCrossOverExample(SCStudyInterfaceRef sc)
+{
+
+	SCInputRef Input_Subgraph1Reference = sc.Input[0];
+	SCInputRef Input_Subgraph2Reference = sc.Input[1];
+
+	SCSubgraphRef Subgraph_BuyEntry = sc.Subgraph[0];
+	SCSubgraphRef Subgraph_SellEntry = sc.Subgraph[1];
+
+	if (sc.SetDefaults)
+	{
+
+		// Set the configuration and defaults
+
+		sc.GraphName = "Trading CrossOver Example";
+
+		sc.StudyDescription = "An example of a trading system that enters a new position or \
+                               reverses an existing one on the crossover of two study Subgraphs. \
+                               When Subgraph1Reference crosses Subgraph2Reference from below, the system will look to be long. \
+                               When Subgraph1Reference crosses Subgraph2Reference from above, the system will look to be short.";
+
+		sc.AutoLoop = 1;  // true
+		sc.GraphRegion = 0;
+		sc.CalculationPrecedence = LOW_PREC_LEVEL;
+
+		Input_Subgraph1Reference.Name = "Line1";
+		Input_Subgraph1Reference.SetStudySubgraphValues(1, 0);
+
+		Input_Subgraph2Reference.Name = "Line2";
+		Input_Subgraph2Reference.SetStudySubgraphValues(1, 0);
+
+		Subgraph_BuyEntry.Name = "Bullish";
+		Subgraph_BuyEntry.DrawStyle = DRAWSTYLE_POINT_ON_HIGH;
+		Subgraph_BuyEntry.LineWidth = 3;
+
+		Subgraph_SellEntry.Name = "Bearish";
+		Subgraph_SellEntry.DrawStyle = DRAWSTYLE_POINT_ON_LOW;
+		Subgraph_SellEntry.LineWidth = 3;
+
+		sc.AllowMultipleEntriesInSameDirection = false;
+		sc.MaximumPositionAllowed = 5;
+		sc.SupportReversals = true;
+
+		// This is false by default. Orders will go to the simulation system always.
+		sc.SendOrdersToTradeService = false;
+
+		sc.AllowOppositeEntryWithOpposingPositionOrOrders = false;
+		sc.SupportAttachedOrdersForTrading = false;
+
+		sc.CancelAllOrdersOnEntriesAndReversals = true;
+		sc.AllowEntryWithWorkingOrders = false;
+		sc.CancelAllWorkingOrdersOnExit = true;
+		sc.AllowOnlyOneTradePerBar = true;
+
+		sc.MaintainTradeStatisticsAndTradesData = true;
+
+		return;
+	}
+
+	// only process at the close of the bar; if it has not closed don't do anything
+	if (sc.GetBarHasClosedStatus() == BHCS_BAR_HAS_NOT_CLOSED)
+	{
+		return;
+	}
+
+
+	// using the Input_Subgraph1Reference and Input_Subgraph2Reference input variables, 
+	// retrieve the subgraph arrays into Subgraph1Reference, Subgraph2Reference arrays respectively
+	SCFloatArray Subgraph1Reference;
+	sc.GetStudyArrayUsingID(Input_Subgraph1Reference.GetStudyID(), Input_Subgraph1Reference.GetSubgraphIndex(), Subgraph1Reference);
+
+	SCFloatArray Subgraph2Reference;
+	sc.GetStudyArrayUsingID(Input_Subgraph2Reference.GetStudyID(), Input_Subgraph2Reference.GetSubgraphIndex(), Subgraph2Reference);
+
+	// code below is where we check for crossovers and take action accordingly
+
+	if (sc.CrossOver(Subgraph1Reference, Subgraph2Reference) == CROSS_FROM_BOTTOM)
+	{
+		// mark the crossover on the chart
+		Subgraph_BuyEntry[sc.Index] = sc.Low[sc.Index];
+
+		// Create a market order and enter long.
+		s_SCNewOrder NewOrder;
+		NewOrder.OrderQuantity = 1;
+		NewOrder.OrderType = SCT_ORDERTYPE_MARKET;
+		NewOrder.TimeInForce = SCT_TIF_GOOD_TILL_CANCELED;
+
+		sc.BuyEntry(NewOrder);
+	}
+
+	if (sc.CrossOver(Subgraph1Reference, Subgraph2Reference) == CROSS_FROM_TOP)
+	{
+		// mark the crossover on the chart
+		Subgraph_SellEntry[sc.Index] = sc.High[sc.Index];
+
+		// create a market order and enter short
+		s_SCNewOrder NewOrder;
+		NewOrder.OrderQuantity = 1;
+		NewOrder.OrderType = SCT_ORDERTYPE_MARKET;
+		NewOrder.TimeInForce = SCT_TIF_GOOD_TILL_CANCELED;
+
+		sc.SellEntry(NewOrder);
+	}
+}
+            </pre>
+        </section>
+    </section>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_ExampleTradingSystems.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+</html>  

@@ -1,0 +1,1791 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChartTrading.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:49:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1685458402') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ChartTrading.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Chart Trading and the Chart DOM -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index3c50.html?page=doc/ChartTrading.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index3c50.html?page=doc/ChartTrading.html">Chart Trading and the Chart DOM</a></h4> </div>     <h1 class="PageName">Chart Trading and the Chart DOM </h1>
+<!--Chart Settings menu items updated -->
+<ul>
+    <li><a href="#ChartTrading">Chart Trading</a><br>
+        <ul>
+            <li><a href="#EnteringOrdersFromTheChart">Entering Orders from the Chart</a>
+				<ul>
+					<li><a href="#StopLimitOrders">Stop-Limit Orders</a></li>
+					<li><a href="#EnteringOCOOrders">Entering OCO Orders Which Use 2 Prices</a></li>
+					<li><a href="#EnteringAnOCOAutoSetOrder">Entering an OCO Auto-Set Order</a></li>
+					<li><a href="#UsingTheChartDOM_Introduction">Using the Chart DOM</a></li>
+				</ul>
+			</li>
+            <li><a href="#AttachingTradeWindow">Attaching Trade Window to Chart</a></li>
+            <li><a href="#ViewingOrdersOnTheChart">Viewing Orders and Trade Position on the Chart / Trade DOM</a>
+				<ul>
+					<li><a href="#ViewingOrdersOnTheChart_Configuration">Enabling Display of Orders and Trade Position, and Configuration of Orders and Trade Position Display</a></li>
+					<li><a href="#ViewingSimulatedAndNonSimulatedOrdersAndPosition">Viewing Simulated and Non-Simulated Working Orders and Trade Position</a></li>
+					<li><a href="#ViewingOrdersOnTheChart_OutsideVisibleRange">Viewing Working Orders Outside the Visible Price Range</a></li>
+					<li><a href="#ViewingOrdersOnTheChart_PositionLine">Trade Position Line</a></li>
+					<li><a href="#ViewingOrdersOnTheChart_WorkingOrderLines">Working Order Lines</a></li>
+					<li><a href="#ViewingOrdersOnTheChart_Size_Positioning">Size and Positioning of Working Orders Lines, Position Line, and Order Fills Displayed On Chart</a></li>
+				</ul>
+			</li>
+            <li><a href="#ChangeLocationOfOrdersAndPositionLinesOnChart">Change Location of Orders and Position Lines on Chart</a></li>
+            <li><a href="#ModifyingOrdersOnTheChart">Modifying and Canceling Orders on the Chart</a></li>
+            <li><a href="#MovingOrdersUsingChartTradingShortcutMenu">Moving Orders Using Chart Trading Shortcut Menu</a></li>
+        </ul>
+    </li>
+    <li><a href="#ChangingOrderQuantity">Changing Order Quantity</a>
+		<ul>
+			<li><a href="#ChangingOrderQuantityOnTheChart">Changing Order Quantity on the Chart</a></li>
+			<li><a href="#ChangingOrderQuantityOnTradingDOM">Changing Order Quantity on the Trading DOM</a></li>
+			<li><a href="#ChangingOrderQuantityOnTradeWindow">Changing Order Quantity on the Trade Window</a></li>
+		</ul>
+	</li>
+    <li><a href="#ModifyingOrCancelingOrdersthatAreNotVisibleOnTheChartTradeDOM">Modifying or Canceling Orders that Are Not Visible on The Chart/Trade DOM</a></li>
+    <li><a href="#ModifyingOrdersToAPriceLevelThatIsNotVisibleOnTheChartTradeDOM">Modifying Orders To a Price Level That Is Not Visible on The Chart/Trade DOM</a>
+		<ul>
+			<li><a href="#ModifyOrder">Modify Order</a></li>
+			<li><a href="#CancelOrder">Cancel Order</a></li>
+		</ul>
+	</li>
+    <li><a href="#SeparatingGroupsOfOrdersIntoSeparateCharts">Separating Groups of Orders into Separate Charts or Trade DOMs</a></li>
+    <li><a href="#EnablingDisablingAutomaticallyRejectingOrdersWhichWillFillImmediatelyOrBeRejected">Enabling/Disabling Automatically Rejecting Orders which will Fill Immediately or be Rejected</a></li>
+    <li><a href="#ChartDOMPositionPLColumn">Chart DOM Position Profit and Loss Column</a></li>
+    <li><a href="#ViewingOpenDailyClosedPL">Viewing Open, Daily, and Cumulative Closed Profit/Loss</a>
+        <ul>
+            <li><a href="#OpenPositionProfitLoss">Open Position Profit/Loss</a></li>
+            <li><a href="#DailyProfitLoss">Daily Profit/Loss</a></li>
+            <li><a href="#NetProfitLoss">Net Profit/Loss</a></li>
+            <li><a href="#ClosedProfitLoss">Closed Profit/Loss</a></li>
+            <li><a href="#CentrallyViewingPL">Centrally Viewing Daily and Cumulative Closed Profit/Loss</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#TradeDOM">Trade DOM</a>
+        <ul>
+            <li><a href="#TradeDOMEnteringOrders">Entering Orders on the Trade DOM</a></li>
+            <li><a href="#TradeDOMModifyingCanceling">Modifying or Canceling Orders</a></li>
+            <li><a href="#SettingUpdateInterval">Setting Update Interval</a></li>
+            <li><a href="#TradingDOM_DisplayingMarketDepthData">Displaying Market Depth Data</a></li>
+            <li><a href="#CustomizeChartDOMColumns">Customizing Trade DOM and Chart DOM Columns</a>
+				<ul>
+					<li><a href="#BidAndAskSizeQuantityColumns">Bid and Ask Size/Quantity Columns</a></li>
+				</ul>
+			</li>
+            <li><a href="#TradeDOMAndChartDOMFontAndColors">Trade DOM and Chart DOM  Font and Colors</a></li>
+            <li><a href="#CompactOrderLines">Using Compact Working Order Lines</a></li>
+            <li><a href="#CenteringPrice">Re-Centering the Current Price</a></li>
+            <li><a href="#DetachingTradeWindow">Detaching Trade Window</a></li>
+            <li><a href="#AttachingTWToRightSide">Attaching Trade Window to Right Side</a></li>
+            <li><a href="#TradeDOMLeftAligning">Left Aligning Order and Position Lines</a></li>
+            <li><a href="#SavingTradeDOM">Saving Trade DOM Configuration</a></li>
+            <li><a href="#AlwaysonTop">Always on Top</a></li>
+            <li><a href="#TradeDOMVolumeProfile">Daily Volume Profile (Volume by Price) on Trade DOM</a></li>
+            <li><a href="#AddingStudiesTradeDOM">Adding Studies on a Trade DOM</a></li>
+            <li><a href="#AddingCustomTextToATradeDOM">Adding Custom Text to a Trade DOM</a></li>
+            <li><a href="#BlankTradingDOM">Blank Trading DOM</a></li>
+            <li><a href="#ImprovingPerformanceTradingDOM">Improving Performance of Trading DOM</a></li>
+        </ul>
+    </li>
+    <li><a href="#UsingTheChartDOMOrderEntryLadder">Using the Chart DOM  / Order Entry Ladder</a>
+        <ul>
+            <li><a href="#ScalingtheChartDOM">Scaling the Chart DOM</a></li>
+            <li><a href="#ChartDOMWidth">Setting Chart DOM Order Column Width</a></li>
+            <li><a href="#OrderTypeInTradeModeBox" >Displaying Order Type  in Trade Mode Box</a></li>
+            <li><a href="#DoubleClickOperationsInOrderEntryColumns" >Double Click Operations in Order Entry Columns</a></li>
+            <li><a href="#PracticingWithChartDOM" >Practicing with Chart DOM</a></li>
+            <li><a href="#HavingHorizontalLineAcrossChartAtHighlightedLevelOnChart" >Having Horizontal Line Across Chart at  Highlighted Level on Chart</a></li>
+            
+            <li><a href="#ImprovingPerformanceOfChartTradeDOM" >Improving Performance of Chart / Trade DOM</a></li>
+            
+        </ul>
+    </li>
+	<li><a href="#CustomizingGraphics">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a></li>
+	
+    <li><a href="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php" target="_blank" rel="noopener noreferrer">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a> (Opens a new page)</li>
+
+    <li><a href="#DisplayingOrderFills">Displaying Order Fills on the Chart</a>
+        <ul>		
+            <li><a href="#ChartOrderFillsDoNotDisplay">Chart Order Fills Do Not Display</a></li>
+            <li><a href="#OrderFillsOnChart_AccurateEntryExitState_FillMatching_PositionQuantities">Accurate Entry/Exit State, Fill Matching and Position Quantities</a></li>
+            
+            <li><a href="#DisplayingOrderFillArrowsOnly">Displaying Order Fill Arrows Only</a></li>
+           
+           <li><a href="#OrderFillsOnContinuousFuturesContractCharts">Order Fills on Continuous Futures Contract Charts</a></li>
+            
+            <li><a href="#MisalignedOrderFillMarkers">Misaligned Order Fill Markers on Charts</a></li>
+            <li><a href="#OrderFillConnectingLinesDoNotDisplay">Resolving Problem Where Order Fill Entry/Exit Connecting Lines Do Not Display</a></li>
+            <li><a href="#DisplayingOrderFillTextTagOrNotes">Displaying Order Fill Text Tag or Notes</a></li>
+            <li><a href="#DelayWithDisplayingOrderFills_NoFillsDisplayed">Delay with Displaying Order Fills / No Fills Displayed</a></li>
+            <li><a href="#ChartOrderFills_AutomaticallyScrollingChartToOrderFills">Automatically Scrolling Chart to Order Fills</a></li>
+        </ul>
+    </li>
+    <li><a href="#DisplayingOrdersPositionFillsOtherChart">Displaying Orders, Position, and Order Fills on Other Charts</a></li>
+
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="ChartTrading">Chart Trading<a id="HowtoPlaceAnOrderFromtheChart"></a></h2> 
+    <div class="member-link">[<a href="#HowtoPlaceAnOrderFromtheChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To enable Chart Trading, go to the chart you want to trade from and make sure there is a checkmark by <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> on the menu.  Chart Trade Mode is specific to each individual chart you have in your Chartbooks. Therefore, some charts can be activated for chart trading and others not.</p>
+
+    <p>You can enter trade orders, view orders and modify orders directly on a chart. Below are all of the sections which explain these various tasks.</p>
+
+    <section class="h3">
+        <h3 id="EnteringOrdersFromTheChart">Entering Orders From the Chart</h3> 
+        <div class="member-link">[<a href="#EnteringOrdersFromTheChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/charttradingexample.png" rel="lightbox"><img src="../images/charttradingexample.png" alt="Chart Trading Example" class="WideFloatRight"></a>
+
+        <ol>
+            <li> Make sure there is  <em>no checkmark</em> by  <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> if you want the orders to be sent to the external Trading service. If you want the orders to be  <em>simulated</em> within Sierra Chart, then make sure there  <em>is a checkmark</em> by that menu command.</li>
+
+            <li>To enter orders from a chart you first need to enable <b>Chart Trade Mode</b>. To do this make sure there is a checkmark by <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> on the menu.</li>
+
+            <li><b>Chart Trade Mode</b> is specific to each individual chart. They all have their own independent setting. You can tell when <b>Chart Trade Mode</b> for a chart is enabled by looking at the top left of the chart.
+                <br><br>
+                You will see the <b>Trade Mode Box (Trade:)</b>  which indicates the order quantity and the order price for new orders. The order price displayed in the Trade Mode Box is determined by the price level that you are pointing to with your Pointer.  Refer to the image to the right for the <b>Trade Mode Box</b>.  </li>
+
+            <li>The color of the chart Trade Mode Box at the top left is set through <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>.  The background color is controlled with the color setting for <b>Chart Trade Mode Box </b>(for non-simulated trade mode) and <b> Chart Trade Mode Box - Simulation</b> (for trade simulation mode).  The foreground color is set with the <b>Chart Text </b>  color setting.
+
+            <li>To change the <b>Order Quantity</b> for a new order, simply click on the Trade Mode Box  at the top left of the chart (refer to image), type in the desired order quantity or use the  <b>+</b> and <b>-</b> buttons.  Press <b>OK</b> to accept. 
+                <br> <br>
+                The trade quantity can also be set through the Trade Window for the chart using the <b>Quantity</b> box or any of the quantity buttons.  For details, refer to <a href="index9473.html?page=doc/TradeWindow.html#Quantity" target="_blank" rel="noopener noreferrer">Order Quantity</a>. To open the Trade Window, refer to <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Opening Trade Window</a>.</li>
+
+            <li>Open the Trade Window by selecting <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> or <b class="menu_item">Trade &gt;&gt; Attach Trade Window to Chart</b> on the menu.  Select the <b> Main </b> tab and set the <b>Time in Force (TIF)</b> to what you require. On the <b> Targets </b> tab, Attached Orders have their own <b>Time in Force (TIF)</b> setting that needs to be set if you are using Attached Orders.</li>
+
+            <li>Select the  <b>Targets (Attached Orders)</b> tab if you want to use Attached Orders (Targets and Stops).  Configure the Attached Orders as required by following the instructions on the <a href="index0ef8.html?page=doc/AttachedOrders.html" target="_blank" rel="noopener noreferrer">Attached Orders</a> documentation page. If you need to use Attached Orders with the order you will be submitting from the chart, then make sure <b>Use Attached Orders</b> is enabled on the <b> Main/C </b>  tab of the Trade Window. </li>
+
+            <li>The  price you see displayed in the <b>Trade Mode Box</b> at the top left  is set by where your mouse pointer is currently pointing to on the chart. As you move the mouse pointer up and down, you will see the price change accordingly in the Trade Mode Box. Refer to the image on the right. </li>
+
+            <li> Make certain the order types and order commands that you wish to use are added to the Chart Trading Menu. To do this, select <b class="menu_item"> Global Settings &gt;&gt; Customize Chart Trade Menu</b>.  <b> Add</b> all of the order types that you want to use. </li>
+
+            <li> <b>Single Price Orders and Market Orders</b>: To enter an order from the chart, move your mouse pointer to the price level that you want the order price to be at, unless it is a   <b>Market order</b>. <em>Right click</em> with your mouse pointer at that price level to display the <b>Chart Trade Menu</b> and select from the displayed menu the type of order you want to be entered.  You will get an order confirmation window, if enabled. Press <b>Yes</b> to confirm or <b>No</b> to reject the order entry. To disable confirmations press the <b> Menu (M)</b> button on the Trade Window and disable the confirmation options that you do not want.</li> 
+        </ol>
+
+        <section class="h4">
+            <h4 id="StopLimitOrders">Stop-Limit Orders</h4>
+            <div class="member-link">[<a href="#StopLimitOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Move your mouse pointer to the price level where you want the  <b>Stop</b> order. Right-click on the chart and select either <b>Buy Stop-Limit</b> or <b>Sell Stop-Limit</b>.  The Limit price is automatically set and will be the number of ticks away from the Stop price as specified on the <b>Set</b> tab on the <b>Trade Window</b> ( <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b>) for the chart in the  <b>Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</b> box.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="EnteringOCOOrders">Entering OCO Orders Which Use 2 Prices</h4>
+            <div class="member-link">[<a href="#EnteringOCOOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>There are several OCO (Order cancels Order) <a href="index783f.html?page=doc/OrderTypes.html">Order Types</a> that you can enter which use 2 prices. These orders consist of two individual orders in an OCO group. When one of these orders fills or is canceled, the other one will be automatically canceled. They are as follows:</p>
+
+            <ul>
+                <li><b>OCO Buy Limit Sell Limit</b></li>
+                <li><b>OCO Buy Stop Sell Stop</b></li>
+                <li><b>OCO Buy Stop-Limit  Sell Stop-Limit</b></li>
+                <li><b>Buy OCO Limit and Stop</b> (does not support Attached Orders)</li>
+                <li><b>Sell OCO Limit and Stop</b> (does not support Attached Orders)</li>
+                <li><b>Buy OCO Limit and Stop-Limit</b> (does not support Attached Orders)</li>
+                <li><b>Sell OCO Limit and Stop-Limit</b> (does not support Attached Orders)</li>
+            </ul>
+
+            <p>You first need to make certain that these order types are added to the Chart Trading Menu. To do this, select <b class="menu_item"> Global Settings &gt;&gt; Customize Chart Trade Menu</b>.  <b> Add</b> all of the order types that you want to use.</p>
+
+            <p>To have Attached Orders attached to each of these orders in the OCO group, then enable  <b>Use Attached Orders</b> on the Trade Window for the chart or Trade DOM.   For complete instructions for Attached Orders, refer to <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a>. Not all  OCO Order Types support  Attached Orders as noted above.</p>
+
+            <ol>
+                <li>Right-click on the chart or Trade DOM at the level you want to set the first price. In the case of the Trade DOM, refer to <a href="#TradeDOMEnteringOrders">Entering Orders on the Trade DOM</a> for instructions on where to click.</li>
+
+                <li>Select one of the above OCO order types from the menu. For example, if you selected  <b>Buy OCO Limit and Stop</b>, then the price level where you right clicked at  to display the chart trading menu, will have set the <b>Limit</b> price.</li>
+
+                <li>Move  your mouse pointer to the price level where you want to set the second price  for the OCO order and <em>left click</em>.</li>
+
+                <li><em>You can cancel the order input procedure with a second right click at any time</em>. Or when you get an order confirmation, if enabled, you can press <b>No</b> to not accept the order.</li>
+            </ol>
+        </section>
+
+        <section class="h4">
+            <h4 id="EnteringAnOCOAutoSetOrder">Entering an OCO Auto-Set Order</h4>
+            <div class="member-link">[<a href="#EnteringAnOCOAutoSetOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>There are several OCO (Order cancels Order) <a href="index783f.html?page=doc/OrderTypes.html">Order Types</a> that you can enter which use a single center price. These orders consist of two individual orders in an OCO group. When one of these orders fills or is canceled, the other one will be automatically canceled.  The order prices are set from the single price you select on the chart.  The order types are as follows:</p>
+            <ul>
+                <li><b>OCO Buy Limit Sell Limit (Auto-Set)</b></li>
+                <li><b>OCO Buy Stop Sell Stop (Auto-Set)</b></li>
+                <li><b>OCO Buy Stop-Limit  Sell Stop-Limit (Auto-Set)</b></li>
+            </ul>
+            <ol>
+                <li>You first need to make certain that these order types are added to the Chart Trading Menu. To do this, select <b class="menu_item"> Global Settings &gt;&gt; Customize Chart Trade Menu</b>.  <b> Add</b> all of the order types that you want to use.</li>
+
+                <li>Right-click on the chart at the center price for the 2 orders. The 2 orders in these OCO order group types are each offset from the center price by the <b class="menu_item"> Auto-Set Prices Offset for OCO Buy Sell Orders</b> setting on the <b>Set</b> tab on the <b>Trade Window</b> for the chart. Select one of the above OCO order types. You will get an order confirmation, if confirmations are enabled. </li>
+
+                <li> <b>Attached Orders (Target and Stops)</b>: When entering an order from the chart, Attached Orders will be attached to that order if  <b>Use Attached Orders</b> is enabled on the <b> Main/C </b> of the Trade Window and there are Attached Orders defined.  If there are two orders being entered as part of an OCO group, then each of those orders will have Attached Orders attached to them.  For more information, refer to <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a>.</li>
+            </ol>
+        </section>
+
+        <section class="h4">
+            <h4 id="UsingTheChartDOM_Introduction">Using the Chart DOM</h4>
+            <div class="member-link">[<a href="#UsingTheChartDOM_Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> It is supported to enter orders on the right side of the chart  through a price ladder type of interface. This is called the Chart DOM. For instructions to use this, refer to <a href="#UsingTheChartDOMOrderEntryLadder">Using the Chart DOM  / Order Entry Ladder</a>. </p>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachingTradeWindow">Attaching Trade Window to Chart</h3> 
+        <div class="member-link">[<a href="#AttachingTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Trade Window which is used for basic order entry, contains Attached Order settings and other trading related settings, can be attached to a chart. Refer to the image below.</p>
+
+        <p>To attach the trade window, go to a chart or Trade DOM and select <b  class = "menu_item">Trade &gt;&gt; Attach Trade Window to Chart</b>.</p>
+
+        <p>By default the Trade Window is attached to the left side of the chart. To attach it to the <em> right </em> side, enable <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt; Attach Trade Window to Right Side</b>. </p>
+
+        <div style="text-align: center;"><a href="../images/tradewindowattachedtochart.png" rel="lightbox"><img src="../images/tradewindowattachedtochart.png" class="screenshot" loading="lazy" width="250" alt=""></a> </div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ViewingOrdersOnTheChart">Viewing Orders and Trade Position on the Chart / Trade DOM</h3> 
+        <div class="member-link">[<a href="#ViewingOrdersOnTheChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div style="text-align: center;"><a href="../images/charttrading_img2.png" rel="lightbox"><img src="../images/charttrading_img2.png" alt="" width="550"  class="screenshot" loading="lazy"></a></div>
+
+        <section class="h4">
+            <h4 id="ViewingOrdersOnTheChart_Configuration">Enabling Display of Orders and Trade Position, and Configuration of Orders and Trade Position Display</h4>
+            <div class="member-link">[<a href="#ViewingOrdersOnTheChart_Configuration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ol>
+                <li>To view Working Orders and the current Trade Position for the Symbol and Trade Account of the Chart or Trade DOM, there needs to be a checkmark by  <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>, <b class="menu_item">Trade &gt;&gt; Trading Chart DOM On</b>, or <b Class = "menu_item">Trade &gt;&gt; Show Orders and Position</b> for the active Chart or Trade DOM. </li>
+
+                <li>If it is not necessary to trade from the chart, then it is only necessary that  <b class="menu_item">Trade &gt;&gt; Show Orders and Position</b> be checked. </li>
+
+                <li class ="GeneralBackgroundHighlightLight">To see the orders that have originated from another chart or Trade DOM, make sure that <b class = "menu_item">Trade &gt;&gt; Only Orders from Chart</b> is <em>unchecked</em>. 
+                    <br> <br>
+                    Make sure the correct <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Trade Account is selected</a> on the Trade Window  for the chart, that you want to view the Orders and Position for. To make sure you are setting the Trade Account on the correct Trade Window, refer to  <a href = "index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Opening Trade Window for Chart</a>.
+                    <br> <br>
+                    The symbol of the chart or  Trade DOM needs to be set to the exact same symbol as the symbol of the chart or Trade DOM the orders were entered from. Refer to <a href = "indexa1a5.html?page=doc/SwitchingSymbols.html">Changing the Symbol of a Chart</a> for instructions to change the symbol if necessary.
+                    <br> <br>
+                    All of this is <em>essential</em>.</li>
+
+                <li>All of these options are specific to each individual Chart/Trade DOM window and apply to the active Chart/Trade DOM window. </li>
+
+                <li>When an order is in a Working state  it will be displayed on the chart. This means the order <b>Status</b> is one of the following: <b>Pending Open, Open, Child-Client, Child-Server, Pending Modify, Pending Cancel</b>. 
+                    <br> <br>
+                    Only those orders which are at a price which are within the visible range of prices on the chart, will actually be viewable.  You can use the  <a href="index981f.html?page=doc/Scaling.html#ScaleRange" target="_blank" rel="noopener noreferrer">Interactive Scale Range</a> feature to expand and compress the price scale.  
+                    <br> <br>
+                    The order price is determined from the   <b>Price1</b> field  for the order in the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>.</li>
+
+                <li> If the order is a pending child order, then to make sure it is displayed, press the  <b class="menu_item">M / Menu</b> button on the <a href = "index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Trade Window</a> for the chart  and make sure there is  <em>no</em> checkmark by <b class="menu_item">Settings &gt;&gt; Hide Pending Attached Orders</b>. </li>     
+
+                <li>The information that is displayed on the Orders and Position lines on the chart can be customized. To customize them, select <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> on the menu. The settings are located within the <b>Working Orders </b> and  <b>Position </b> frames on the Chart Trade   Settings window. 
+                    <br> <br>
+
+                    For more information, refer to the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings" target="_blank" rel="noopener noreferrer">Chart Trade Settings</a> documentation. 
+
+                    <div style="text-align: center;"><a href="../images/charttradesettings-workingorders.png" rel="lightbox"><img src="../images/charttradesettings-workingorders.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+                </li>
+
+                <li> To change Color, Line Style, and Width settings of the Orders and Position lines, refer to  the <a href="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php" target="_blank" rel="noopener noreferrer">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a> documentation.</li>
+            </ol>
+
+        </section>
+
+        <section class="h4">
+            <h4 id="ViewingSimulatedAndNonSimulatedOrdersAndPosition">Viewing Simulated and Non-Simulated Working Orders and Trade Position</h4>
+            <div class="member-link">[<a href="#ViewingSimulatedAndNonSimulatedOrdersAndPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+
+            <p> First follow the instructions in the <a href="#ViewingOrdersOnTheChart_Configuration" >Enabling Display of Orders and Trade Position, and Configuration</a> section. </p>
+
+
+            <p> Make sure the correct <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Trade Account is selected</a> on the Trade Window for the chart that you want to view the  working Orders and Trade Position for.</p>
+
+            <p>To view <em>non-simulated</em> working Orders and the current Trade Position from your Trading service on the chart for the Symbol and Trade Account  the chart is set to, make sure there is <em>no check mark</em> by <b class="menu_item">Trade &gt;&gt; Trade Simulation On</b> on the menu. And make sure Sierra Chart is connected to the trade server by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. This command also means connecting to the trade server as well. </p>
+
+            <p> To view <em>simulated</em> Orders and the associated Trade Position which has been entered from Sierra Chart, make sure there is a check mark by <b class="menu_item">Trade &gt;&gt; Trade Simulation On</b>.</p>
+            
+            <p> To view either <em>simulated or non-simulated</em> Orders and the associated Trade Position   from the main instance of Sierra Chart when using a   <a href = "index9bbd.html?page=doc/NewInstance.php#InstructionsForSharingDataUsingSubInstances">sub instance</a>, <b class="menu_item">Trade &gt;&gt; Trade Simulation On</b> must be unchecked or disabled in the sub instance.</p>
+
+            <p>To view all working  Orders for the Symbol and Trade Account of the active chart, make certain there is <em>no check mark</em> by <b class="menu_item">Trade &gt;&gt; Only Orders from Chart</b>. This command is specific to each individual chart. </p>
+
+            <p>To view working Orders and Trade Position that were submitted only from the active chart, go to that chart and make certain there is a checkmark by <b class="menu_item">Trade &gt;&gt; Only Orders from Chart</b>. This command is specific to each individual chart.</p>
+
+        </section>
+
+        <section class="h4">
+            <h4 id="ViewingOrdersOnTheChart_OutsideVisibleRange">Viewing Working Orders Outside the Visible Price Range</h4>
+            <div class="member-link">[<a href="#ViewingOrdersOnTheChart_OutsideVisibleRange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You may have working orders including Attached Orders which are outside of the visible price range. </p>
+
+            <p>The easiest way to bring them into view is to compress the vertical scale by using <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scale Range</a>.   </p>
+
+            <p>To use this, right-click on Values Scale on the right side of the chart and select <b>Interactive Scale Range</b>, and then click and drag the right side Values Scale to compress the scale until the orders come into view.</p> 
+            
+            <p> The price at which an order is displayed at on the chart is determined from the   <b>Price1</b> field  for the order in the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>.</p>
+
+        </section>
+
+        <section class="h4">
+            <h4 id="ViewingOrdersOnTheChart_PositionLine">Trade Position Line</h4>
+            <div class="member-link">[<a href="#ViewingOrdersOnTheChart_PositionLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The current Trade Position for the symbol will be displayed on the chart as a line if a position exists for the symbol. Refer to the image above.  The format of the position line text is <b class="menu_item">P/L: [quantity]@[price] | [open profit/loss]</b> and is displayed on the left side of the position line, unless <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt; Align Trade Drawings to Right Side</b> is enabled.   </p>
+
+            <p>It will be displayed on the right side if <b> Align Trade Drawings to Right Side</b> is enabled.</p>
+
+            <p>There are various display formats for the Profit/Loss value for the Position line.  To change the format, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>. Set the <b>Profit/Loss Format</b> to what you require. For more information, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#ProfitLossFormat">Profit/Loss Format</a> on the Chart Settings page.</p>
+
+        </section>
+
+        <section class="h4">
+            <h4 id="ViewingOrdersOnTheChart_WorkingOrderLines">Working Order Lines</h4>
+            <div class="member-link">[<a href="#ViewingOrdersOnTheChart_WorkingOrderLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When there is a working order for a symbol, it is displayed on the chart as a line at the price level on the chart that matches the order price. For example, a Limit order will be displayed at the Limit price and a Stop order will be displayed at the Stop price. Along each working order line there are clickable buttons to  cancel (X) the order and change the order quantity. Along the working order line, there is text information about the order. The text information is explained below.</p>
+
+            <ul>
+                <li><b>Buy or Sell</b>: <b>B</b> is displayed for Buy orders and <b>S</b> is displayed for Sell orders.</li>
+
+                <li><b>Order Type</b>: An abbreviated description of the order type of the order. </li>
+
+                <li><b>(Price)</b>: In the case of <b> Stop-Limit </b> orders, the price you see displayed after the Order Type in parentheses is the Limit price. The CME exchange will convert Stop orders to Stop-Limit orders and set the Limit price a certain distance from the Stop price.  So sometimes you will see Stop orders display this price in parentheses.</li>
+
+                <li><b>Break Even Trigger Price</b>: In the case of a <b>Break Even Trigger</b> and the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings_DisplayAdditionalOrderInformation" target="_blank" rel="noopener noreferrer">Display Additional Order Information</a> option is checked on, this displays the price associated with the Break Even Trigger. This is preceded by the notation <b>BETrig:</b>.</li> 
+
+                <li><b>Trailing Trigger Price</b>: In the case of  a <b>Trailing Trigger</b> and the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings_DisplayAdditionalOrderInformation" target="_blank" rel="noopener noreferrer">Display Additional Order Information</a> option is checked on, this displays the price associated with the Trailing Triggger. This is preceded by the notation <b>TrailTrig:</b>.</li>
+
+                <li><b>Estimated Position in Queue</b>: In the case of a <b>Limit</b> order and <a href = "index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings_DisplayDetailedOrderInformation" target="_blank" rel="noopener noreferrer">Display Detailed Order Information</a> and <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings_DisplayEstimatedPosition" target="_blank" rel="noopener noreferrer">Display Estimated Position</a> and <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings_EnableEstimatedPositionInQueueTracking" target="_blank" rel="noopener noreferrer">Estimated Position in Queue Tracking</a> settings are enabled, this displays the estimated position in the size/quantity on the bid side or ask side depending upon whether the order is a buy order or a sell order respectively. 
+                <br><br>
+                As this number approaches <b>0</b>, the Limit Order becomes closer to being filled. This is preceded by the notation <b>EP:</b>
+                    <br>
+                    <div style="text-align: center;"><a href="../images/orderline-estimatedpositioninqueue.png" rel="lightbox"><img src="../images/orderline-estimatedpositioninqueue.png" alt="" class="screenshot" loading="lazy"></a></div>
+                    
+               <br><br>
+                  When the order is based upon the  <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> for the chart and <a href = "index4cf4.html?page=doc/ChartSettings.html#UseAsTradeOnlySymbol">Use As Trade Only Symbol</a> is enabled, then  it may not be possible for the estimated position to be determined since there may not be  Market Depth  data available for the symbol. And if there is Market Depth data available for the symbol through another chart being opened for the Trade symbol, the problem is that the estimated position is not going to make sense relative to the Market Depth data you are seeing in the chart.   Since that Market Depth data  is for the main symbol of the chart.
+                </li>
+
+
+                <li><b>Order Status</b>: The current status of the order. This matches the Status of the order on the <b class = "menu_item"> Trade &gt;&gt; Orders and Positions   &gt;&gt; Orders</b> window tab.</li>
+
+                <li><b>Filled Quantity</b>: The filled quantity represents the quantity of the order that has already been filled.</li>
+
+                <li><b>Price</b>: The price number that is displayed is  the price of the order. This number is formatted to the <b>Price Display Format</b> set  in <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b> on the menu.</li>
+
+                <li><b>Total Quantity</b>: When there are multiple orders at the same price, the total quantity is displayed in the text information for the order. After <b>TQ:</b> is the total quantity.</li>
+            </ul>
+
+            <p>For example, a  Limit order with a price of 100 is displayed  as: <b class = "GeneralBackgroundHighlightLight">B|Lmt|Open|0 100.0</b>. This is a <b>Buy Limit</b> order. The current order status is <b>Open</b>. Zero shares/contracts have filled. The Limit Price is <b>100.0</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ViewingOrdersOnTheChart_Size_Positioning">Size and Positioning of Working Orders Lines, Position Line, and Order Fills Displayed On Chart</h4>
+            <div class="member-link">[<a href="#ViewingOrdersOnTheChart_Size_Positioning">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Below are various  settings which affect size and positioning of trade related objects on the chart.</p>
+            <ul>
+                <li>To align the Order lines and the Position line to the right side of the chart beside the Values  Scale, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> and enable <b>Align Trade Drawings Text to Right</b>. 
+                    <br> <br>
+                    After doing this you will want to add some fill space to the right side of the chart by scrolling past the rightmost bar in the chart  using the scrollbar at the bottom of the chart. After you add some fill space, enable <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b>.  You will first need to unlock the fill space first before scrolling if it is locked.
+                    <br> <br>
+                    Uncheck <b>Align Trade Drawings Text to Right</b> if you do not want the Order lines and the Position line aligned to the right side of the chart.
+                </li>
+
+                <li>To align just the close (X) button of Open Order lines to the right side of the chart beside the Values Scale, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> and enable <b>Align Order Cancel Button (X) to Right</b>.</li>
+
+                <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> and set the <b> Trade Drawings Left Align % </b> to the percentage that the trade drawings should be aligned from  the right side of the chart.  100% means they are aligned all the way to the far left of the chart.  This setting only applies when <b>Align Trade Drawings Text to Right</b> is disabled.</li>
+
+                <li>Reduce or increase the <b>Chart Text Font</b> size in <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b>.</li>
+
+                <li>For Working orders, you can disable a setting to reduce the amount of text information displayed along the line. Select <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> on the menu. Uncheck <b>Working Orders &gt;&gt; Display Detailed Order Information</b>.</li>
+
+                <li>For Order Fills, select <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> and reduce or increase the <b > Order Fills  &gt;&gt; Text Size</b>. There are also various other options for Order Fills.  To hide the Order Fill text, uncheck <b> Order Fills  &gt;&gt; Display Fill Text</b>.</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangeLocationOfOrdersAndPositionLinesOnChart">Change Location of Orders and Position Lines on Chart</h3>
+        <div class="member-link">[<a href="#ChangeLocationOfOrdersAndPositionLinesOnChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>By default, the Position and Orders lines are displayed on the left side of a chart. To change the location of this information, follow the instructions below.</p>
+
+        <ul>
+            <li>To align the text of Working Order lines and the Position line to the right side of the chart as shown in the image below:
+                <ol>
+                    <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Trading</b>.</li>
+
+                    <li>Enable the <b>Align Trade Drawings Text to Right Side</b> option.</li>
+
+                    <li>Press <b>OK</b>.</li>
+
+                    <li>After you do this you may want to create some space on the right side of the chart for the text.  Refer to the <a href="index69b6.html?page=doc/WorkingWithCharts.html#FillSpace">Right Side Fill Space</a> section about this.</li>
+                </ol>
+
+                <div style="text-align: center;"><a href="../images/aligningordersandpositionlinestorightsideofchart.png" rel="lightbox"><img src="../images/aligningordersandpositionlinestorightsideofchart.png"  class="screenshot" loading="lazy" alt=""></a></div>
+            </li>
+
+            <li>To align just the Cancel Button (X) of Working Order Lines to the right side of the chart:
+                <ol>
+                    <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>.</li>
+
+                    <li>Enable the <b>Align Order Cancel Button (X) to Right</b> option.</li>
+
+                    <li>Press <b>OK</b>.</li>
+
+                    <li>After you do this you may want to create some space on the right side of the chart for the text.  Refer to the <a href="index69b6.html?page=doc/WorkingWithCharts.html#FillSpace">Right Side Fill Space</a> section about this.</li>
+                </ol>
+
+                <div style="text-align: center;"><a href="../images/charttrading_alignorderscancelbuttontoright.png" rel="lightbox"><img src="../images/charttrading_alignorderscancelbuttontoright.png"  class="screenshot" loading="lazy" alt="" width="500"></a></div>
+            </li>
+
+            <li>To place the Position and Working Order Lines to some other location on the chart:
+                <ol>
+                    <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>.</li>
+
+                    <li>Set the <b>Trade Drawings Left Align %</b> to the percentage that the trade drawings should be aligned from the right side of the chart. 100% means they are aligned all the way to the far left of the chart and 0% means they are aligned all the way to the far right of the chart. This setting only applies when <b>Align Trade Drawings Text to Right</b> is disabled.</li>
+
+                    <li>Press <b>OK</b>.</li>
+                </ol>
+
+                <div style="text-align: center;"><a href="../images/charttrading_alignordersandpositiontootherlocation.png" rel="lightbox"><img src="../images/charttrading_alignordersandpositiontootherlocation.png"  class="screenshot" loading="lazy" alt="" width="500"></a></div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="ModifyingOrdersOnTheChart">Modifying and Canceling Orders on the Chart</h3> 
+        <div class="member-link">[<a href="#ModifyingOrdersOnTheChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ul>
+            <li><a href="../images/modifyorderlineexample.png" rel="lightbox"><img src="../images/modifyorderlineexample.png" class="WideFloatRight" alt=""></a><b>
+
+                    Modifying the Order Quantity</b>: To modify the Order Quantity, press the Quantity Number button displayed on the order line as shown in the image. 
+                <br> <br>
+                If there are multiple orders at the same price level, then you will be given a menu  listing all of the orders when you click on the Quantity Number button to let you select an order to modify. 
+                <br> <br>
+                A box will display allowing you to enter the new quantity. Enter the quantity or use the <b>+</b> and  <b>-</b> buttons to change the quantity. Press <b>OK</b> to accept.  
+                <br> <br>
+                You will receive a confirmation to confirm modifying the order quantity.  This can be disabled through the <b>Menu/M</b>  button on the Trade Window.</li>
+
+            <li><b>Canceling an Order</b>: Press the <b>X</b> button on the order line as shown in the image. If there are multiple orders at the same price level, then you will be given a menu listing all of the orders when you click on the <b>X</b> button to let you select an order to cancel. There is also the choice to   <b>Cancel All </b> of the orders at that price level. You will receive a confirmation to confirm cancellation of the order or orders.  This confirmation can be disabled through the <b>Menu/M</b>  button on the Trade Window.</li>
+
+            <li><b>Changing the Price of an Order</b>: Left click and drag the order line as shown in the image to change its price. You are able to click and drag anywhere along the order line to modify the order except for the quantity and "X" buttons. 
+             <br> <br>
+             By default, when you left click you have to hold that state, and then drag the order and then  release the left click button.  This behavior is changeable.  Refer to <a href = "index4451.html?page=doc/GlobalTradeSettings.html#UseClickReleaseClickAdjust">Working Orders >> Use Click, Release, Click Method to Adjust Orders</a>.
+            
+                <br> <br>
+                You will receive a confirmation to change the price of the order.  This can be disabled through the <b>Menu</b> or <b>M</b> buttons on the Trade Window. In the case of Attached Orders that use the <b>All Groups OCO Group</b>, when you modify the price of one of these orders, the others in the same group will be modified as well.
+                <br>    
+                <div style="text-align: center;"><a href="../images/modifyordertradedom.png" rel="lightbox"><img src="../images/modifyordertradedom.png" alt="" class="screenshot" loading="lazy"></a></div>
+                <br> <br>
+                If after  modifying the price of an order, you notice that the order line jumps back to the original price, then this indicates that the order modification was rejected.  The reason it is rejected will be given in <b class = "menu_item">Trade &gt;&gt; Trade Service Log</b>  at the end of the log.
+                <br><br>
+                If an order modification is not completed, then no change to the order has occurred, in which case the order's position in the queue with the trading service does not change. For example, if an order has been moved up using click and drag, but then moved back to the original price before letting up on the left-click button, then the original order is still in place as it was prior to any movement.
+            </li>
+
+            <li><b>Precision Price Modification of an Order</b>: If you wish to make a small adjustment to an order in Tick increments and find it difficult to move to the exact price you want when interactively dragging the order line on a chart, then click on the order quantity.  This will give you a box to modify the price.  See image below.  Press OK to complete the order modification.
+                <br>
+                <div style="text-align: center;"><a href="../images/modifypricequantity.png" rel="lightbox"><img src="../images/modifypricequantity.png" alt="" class="screenshot" loading="lazy"></a></div>
+                <br>
+                Another method to precision modify an order from a chart is to select <b class = "menu_item"> File &gt;&gt; Open Trading DOM </b>.  The symbol of the chart should already be preset in the <b> Selected Symbol</b> box.  Press <b> Open Trading DOM</b> to open a Trading DOM. 
+                <br> <br>
+                On a Trading DOM window, the price scale is in 1 Tick increments.  You can then click and drag the order very easily to the exact price that you want.  If you cannot see the order, then refer to the <a href="#ModifyingOrCancelingOrdersthatAreNotVisibleOnTheChartTradeDOM">Modifying or Canceling Orders that are Not Visible on the Chart/Trade DOM</a> section.
+            </li>
+
+            <li>When modifying the price of an existing trailing Stop order, you can choose to have the trailing Stop offset modified to match  the distance  between the price of the order and the current price, or  the distance  between the price of the order and the parent order price the Stop order is a Pending  Child order. For further details, refer to  <a href="index4451.html?page=doc/GlobalTradeSettings.html#AdjustTrailOffset" >Adjust Trail Offset When Modifying Trail Order</a>.
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="MovingOrdersUsingChartTradingShortcutMenu">Moving Orders Using the Chart Trading Shortcut Menu</h3>
+        <div class="member-link">[<a href="#MovingOrdersUsingChartTradingShortcutMenu">Link</a>]- [<a href="#top">Top</a>]</div>
+
+        <p>The following sections describe  chart trading menu commands for moving one or more Target or Stop  <a href="index0ef8.html?page=doc/AttachedOrders.html" Target="_blank" rel="noopener noreferrer">Attached Orders</a> on  a particular Chart to a specific price level using the Chart Trading Shortcut Menu.</p>
+
+        <p>This only applies to Attached Orders   which are displayed on the chart.   It also includes  Attached Orders, that are on the chart but not currently visible because they are at price levels which are not visible in the current price range.</p>
+
+        <p>In order for these  menu commands to be available, they must first be added to the Chart Trade Shortcut Menu. This is done by using the <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeChartTradeMenu" target="_blank" rel="noopener noreferrer">Customize Chart Trade Menu</a> and adding these specific items, described below, to the list.</p>
+
+        <p>In order to use these  particular menu commands, simply right-click with your  Pointer on the  price level at which to move the  orders to and select the appropriate  menu command.</p>
+
+        <div style="text-align: center;"><a href="../images/charttradeshortcut-movetoprice.png" rel="lightbox"><img src="../images/charttradeshortcut-movetoprice.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+        <section class="h4">
+            <h4 id="MoveTargetsToPrice">Move Targets To Price</h4>
+            <div class="member-link">[<a href="#MoveTargetsToPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option on the Chart Trade Shortcut will move all open Targets to the price at which the  Pointer was positioned when this option is selected.</p>
+
+            <p>If more than one order is moved, the total quantity  (TQ:) shown in the Working Order Line after the move will be the sum of the moved orders.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MoveAttachedStopsToPrice">Move Attached Stops to Price</h4>
+            <div class="member-link">[<a href="#MoveAttachedStopsToPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting this option on the Chart Trade Shortcut will move all  Stop Attached Orders  to the price at which the  Pointer was positioned when this option is selected. </p>
+
+            <p>If more than one order is moved, the total quantity (TQ:)  shown in the Working Order Line after the move will be the sum of the moved orders.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2"> 
+    <h2  id="ChangingOrderQuantity">Changing Order Quantity</h2>
+    <div class="member-link">[<a href="#ChangingOrderQuantity">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are various methods available to change the quantity that will be associated with an order. The following gives an overview of each of these methods.</p>
+
+    <section class="h3">
+        <h3 id="ChangingOrderQuantityOnTheChart">Changing Order Quantity on the Chart</h3>
+        <div class="member-link">[<a href="#ChangingOrderQuantityOnTheChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When the option <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> the trading information is displayed in the upper left corner of the chart window. In order to change the quantity from the chart, click your pointer on the top line of the shaded area where the quantity is displayed. The image below shows where to click and the Change Quantity window that displays. Enter a new value or use the +/- buttons to change the current value to the desired quantity. Select <b>OK</b> to accept the new quantity or <b>Cancel</b> to keep the previous entered quantity.<p>
+
+        <div style="text-align: center;"><a href="../images/changechartquantity.png" rel="lightbox"><img src="../images/changechartquantity.png" class="screenshot" loading="lazy" width="200" alt=""></a> </div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangingOrderQuantityOnTradingDOM">Changing Order Quantity on the Trading DOM</h3>
+        <div class="member-link">[<a href="#ChangingOrderQuantityOnTradingDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The order quantity can be changed in various ways on the <b>Trading DOM</b> window. In order to display the <b>Trading DOM</b> window for the active chart symbol, select <b class="menu_item">File &gt;&gt; Open Trading DOM for Chart</b>. To change the quantity use one of the following options. The image below shows the locations of these options.</p>
+        <div style="text-align: center;"><a href="../images/changetradingdomquantity.png" rel="lightbox"><img src="../images/changetradingdomquantity.png" class="screenshot" loading="lazy" width="200" alt=""></a></div>
+        <ul>
+            <li>Left Click with your pointer in the top line of the shaded area in the DOM where it displays the quantity.</li>
+            <li>On the <b>Main</b> tab of the <b>Trading DOM</b> page the buttons numbered 1-6 allow you to quickly change the quantity to a value between 1 and 6.</li>
+            <li>Enter a value in the <b>Quantity</b> list box.</li>
+            <li>Select the arrow on the <b>Quantity</b> list box to show a list of numbers based on the currently entered value for the Quantity, and select a quantity.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangingOrderQuantityOnTradeWindow">Changing Order Quantity on the Trade Window</h3>
+        <div class="member-link">[<a href="#ChangingOrderQuantityOnTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Chart Trading Window is the same as the Trading DOM window, except it does not contain the Depth of Market chart. Therefore changing the quantity on this window is the same as for the Trading DOM. The image below shows the locations of where the quantity can be changed on this window.
+        <div style="text-align: center;"><a href="../images/changecharttradewindowquantity.png" rel="lightbox"><img src="../images/changecharttradewindowquantity.png" class="screenshot" loading="lazy" width="200" alt=""></a></div>
+        <ul>
+            <li>On the <b>Main</b> tab of the <b>Chart Trade</b> page the buttons numbered 1-6 allow you to quickly change the quantity to a value between 1 and 6.</li>
+            <li>Enter a value in the <b>Quantity</b> list box.</li>
+            <li>Select the arrow on the <b>Quantity</b> list box to show a list of numbers based on the currently entered value for the Quantity, and select a quantity.</li>
+        </ul>
+    </section>
+</section>
+
+<section class="h2" >
+    <h2 id="ModifyingOrCancelingOrdersthatAreNotVisibleOnTheChartTradeDOM">Modifying or Canceling Orders that Are Not Visible on The Chart/Trade DOM</h2>
+    <div class="member-link">[<a href="#ModifyingOrCancelingOrdersthatAreNotVisibleOnTheChartTradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <h2 id="ModifyingOrdersToAPriceLevelThatIsNotVisibleOnTheChartTradeDOM">Modifying Orders To a Price Level That Is Not Visible on The Chart/Trade DOM</h2>
+    <div class="member-link">[<a href="#ModifyingOrdersToAPriceLevelThatIsNotVisibleOnTheChartTradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+		<h3 id="ModifyOrder">Modify Order</h3>
+        <div class="member-link">[<a href="#ModifyOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To modify the price of an order that is not visible, or to modify an order to a price level that is not currently visible, follow these instructions:</p>
+
+        <ol>
+            <li>Go to the chart or Trade DOM and make certain that there is a checkmark by <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>.</li>
+
+            <li>Right-click on the Values Scale on the right side of the chart or Trade DOM. Select <b>Interactive Scale Range</b>.  For more details about this, refer to <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scaling</a>.</li>
+
+            <li>Drag the Values Scale on the right side, up to compress it. The order will then come into view.  Or you will then be able to see the price level you want to modify the order to. Modify the order as explained in the <a href="#ModifyingOrdersOnTheChart">Modifying and Canceling Orders on the Chart</a> section.</li>
+
+            <li>Alternatively, you can right-click on Values Scale on the right side of the chart and select <b>Interactive Scale Move</b>, and then click and drag the right side Values Scale to move the chart up or down until the order comes into view.  Or until you see the price level you want to modify the order to.  For more details about this, refer to <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scaling</a>.</li>
+
+            <li>Another method to modify  an order that is not visible is to select the order through <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> and click on the  <b class="menu_item">[Modify]</b> menu command. You will then be able to modify price or quantity of the order.</li>
+
+            <li>Another method to modify  an order to a price level that is not visible, is to click on the quantity number on the order line. A small window will display that allows you to modify the order price.  Press <b> OK </b> to perform the order modification.
+
+                <div style="text-align: center;"><a href="../images/modifypricequantity.png" rel="lightbox"><img src="../images/modifypricequantity.png" alt="" class="screenshot" loading="lazy"></a></div>
+            </li>
+        </ol>
+
+    </section>
+
+    <section class="h3">
+		<h3 id="CancelOrder">Cancel Order</h3>
+        <div class="member-link">[<a href="#CancelOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To cancel an order that is not visible on a Chart/Trade DOM, follow these instructions:</p>
+
+        <ol>
+            <li>Go to the chart or Trade DOM and make certain that there is a checkmark by <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>.</li>
+
+            <li>Right-click on the Values Scale on the right side of the chart or Trade DOM. Select <b>Interactive Scale Range</b>.  For more details about this, refer to <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scaling</a>.</li>
+
+            <li>Drag the Values Scale on the right side, up to compress it. The order will then come into view. Cancel the order as explained in the <a href="#ModifyingOrdersOnTheChart">Modifying and Canceling Orders on the Chart</a> section.</li>
+
+            <li>Alternatively, you can right-click on Values Scale on the right side of the chart and select <b>Interactive Scale Move</b>, and then click and drag the right side Values Scale to move the scale up or down until the order comes into view.   For more details about this, refer to <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scaling</a>.</li>
+
+            <li>Another technique to cancel an order is to select <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>.  Find the order in the list, select it and click <b>[Cancel]</b> at the top of the Orders window.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="SeparatingGroupsOfOrdersIntoSeparateCharts">Separating Groups of Orders into Separate Charts or Trade  DOMs</h2> 
+    <div class="member-link">[<a href="#SeparatingGroupsOfOrdersIntoSeparateCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> When there are multiple  parent orders each with their own Attached Orders on the same Chart or Trade DOM, this can get confusing. </p>
+
+    <p>The first solution is to use the Order Association Lines which draws a line connecting each of the child orders to the parent order  and connecting each of the OCO orders together  so you know how they are associated with each other. For instructions, refer to <a href="index4451.html?page=doc/GlobalTradeSettings.html#DrawOrderAssociationLines">Draw Order Association Lines</a>. The Color, Line Style and Width can be set for these lines.</p>
+
+    <p> The next solution is to use separate Charts or Trade DOMs  set to the same Symbol and Trade Account. Each one will have its own set of orders. They will only contain the orders that were directly entered from them. Therefore, eliminating any confusion.</p>
+
+    <p>To do this, follow these instructions:</p>
+
+    <ol >
+        <li>Go to the Chart or Trade DOM which you are using for order entry and use the  <a href="indexfd56.html?page=doc/ChartMenu.html#DuplicateChart">Chart &gt;&gt; Duplicate Chart</a> command to create a duplicate of it.</li>
+
+        <li>On the duplicate chart, enable <b Class = "menu_item">Trade &gt;&gt; Only Orders from Chart</b>. You will know this is enabled when you see a checkmark by it. Do this for other Charts  and Trade DOMs as well where you want this feature.</li>
+
+        <li>Any orders  you enter on these charts will only be displayed on the chart that they were entered from.</li>
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2  id="EnablingDisablingAutomaticallyRejectingOrdersWhichWillFillImmediatelyOrBeRejected">Enabling/Disabling Automatically Rejecting Orders which will Fill Immediately or be Rejected</h2> 
+    <div class="member-link">[<a href="#EnablingDisablingAutomaticallyRejectingOrdersWhichWillFillImmediatelyOrBeRejected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p> There are two options which can be enabled which will cause  orders entered from a chart to be rejected  before being sent to the external trading service or being processed by Trade Simulation Mode, if they will immediately fill based on their Side,  Price and  Order Type, relative to the current trade price. </p> 
+
+    <p>  These options also affect orders which are submitted through  <a href = "index9473.html?page=doc/TradeWindow.html#KeyboardShortcuts">trading keyboard shortcuts</a>.</p>
+
+    <p>When an order is rejected messages like the following will be added to the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b>: </p>
+
+    <div class="MessageLog">
+        Trade Order Error - Buy Stop must be at or above last trade price:
+        <br>Trade Order Error - Sell Stop must be at or below last trade price: 
+        <br>Trade Order Error - Trigger must be above last trade price:
+        <br>Trade Order Error - Trigger must be below last trade price: 
+        <br>Trade Order Error - Buy Limit must be below or equal to last trade price: 
+        <br>Trade Order Error - Sell Limit must be above or equal to last trade price:
+    </div>
+
+    <p>  The options are as follows.  Enable or disable them as you require.</p>
+
+    <ul>
+        <li><a href="index4451.html?page=doc/GlobalTradeSettings.html#RejectStopOrdersThatImmediatelyFill">Reject Stop Orders That Immediately Fill</a></li>
+        <li><a href="index4451.html?page=doc/GlobalTradeSettings.html#RejectChartTradeOrdersThatWillImmediatelyFill">Reject Chart Trade Orders That Will Immediately Fill</a></li>
+    </ul>
+
+
+
+</section>
+
+<section class="h2">
+    <h2  id="ChartDOMPositionPLColumn">Chart DOM Position Profit and Loss Column</h2> 
+    <div class="member-link">[<a href="#ChartDOMPositionPLColumn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>On a <b>Chart DOM</b> and on a <b> Trade DOM</b> window, a Profit and Loss column can be added which indicates what the profit or loss will be at each price level based upon the current trade Position. This is calculated based on the Position Average Price. To add this column, select <b class="menu_item">Trade &gt;&gt; Customize Chart/Trade DOM Columns</b>.  <b>Add</b> the <b>Profit &amp; Loss</b> column.  Use the <b> Move Up</b> and <b>Move Down</b> buttons to position it where you require on the Chart DOM or Trade DOM.</p>
+
+    <p>There are various formats for the Profit/Loss values. These include <b>Currency Value</b>, <b>Points</b>, <b>Ticks</b> and various  and combinations of them. Left click on the <b>P&amp;L</b> label at the very top of the column to iterate through the various formats.  Refer to image below. Refer to <a href="index4cf4.html?page=doc/ChartSettings.html#ProfitLossFormat">Profit/Loss Format</a>  for descriptions of each of the available formats.</p>
+
+    <div style="text-align: center;"><a href="../images/tradingdom_profitloss.png" rel="lightbox"><img src="../images/tradingdom_profitloss.png" class="screenshot" loading="lazy" alt="" width="310"></a></div>
+
+
+    <p>To set the Profit/Loss format for the Trade Window (see image below), select  <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Trading</b>.  Set the <b>Profit/Loss Format</b> to the format you require or to <b>Do Not Display</b>. Refer to <a href="index4cf4.html?page=doc/ChartSettings.html#ProfitLossFormat">Profit/Loss Format</a> for descriptions of each of the available formats.</p>
+
+
+    <div style="text-align: center;">><a href="../images/tradewindowprofitloss.png" rel="lightbox"><img src="../images/tradewindowprofitloss.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+</section>
+
+<section class="h2">
+    <h2  id="ViewingOpenDailyClosedPL">Viewing Open, Daily, and Cumulative Closed Profit/Loss</h2> 
+    <div class="member-link">[<a href="#ViewingOpenDailyClosedPL">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;">
+        <a href="../images/chartpldata2.png" rel="lightbox"><img src="../images/chartpldata2.png" width="600" alt=""></a>
+    </div>
+
+
+    <section class="h3">
+        <h3 id="OpenPositionProfitLoss">Open Position Profit/Loss</h3>
+        <div class="member-link">[<a href="#OpenPositionProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Profit/Loss for the currently  open Trade Position for a symbol can be viewed the following ways:</p>
+
+        <ul>
+
+            <li>The Open Position Profit/Loss can be viewed on the Position line on a chart when in Chart Trade Mode. Refer to <a href="#ViewingOrdersOnTheChart">Viewing Orders and Trade Position on the Chart</a>.</li>
+
+            <li>The Open Position Profit/Loss can be displayed anywhere on the chart with the <b>Trading: Profit/Loss Text </b> study. Refer to the documentation for the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradingPLText">Trading: Profit/Loss Text</a> study.</li>
+
+
+            <li>The Open Position Profit/Loss is displayed on the <b>Main</b> and <b>C</b> tabs of the Trade Window.    To open the Trade Window if it is not already open, go to the chart or Trade DOM and select <b class = "menu_item">Trade &gt;&gt; Open Trade Window for Chart</b>. Refer to the image below.
+
+                <div style="text-align: center;"><a href="../images/tradewindowopenprofitloss.png" rel="lightbox"><img src="../images/tradewindowopenprofitloss.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+                <br><br>
+                For further details, refer to <a href="index9473.html?page=doc/TradeWindow.html#OpenProfitLoss">Open Profit/Loss.</a>.
+
+            </li>
+
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="DailyProfitLoss">Daily Profit/Loss</h3>
+        <div class="member-link">[<a href="#DailyProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>On a Trade DOM and when a chart is in <b> Chart Trade Mode</b>,  you will see at the top left where the Trade Mode Box is located, the Daily Profit/Loss.  This value is also displayed on the <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" >Trade Window</a> for the chart/Trade DOM. Daily Profit/Loss is abbreviated <b>DPL</b>.</p>  
+
+        <p>The <b>DPL</b> value indicates the cumulative Profit/Loss of the closed Trades since midnight (default reset time).  </p>
+
+        <p>The <b>Fill to Fill</b> <a href="index509f.html?page=doc/TradeActivityLog.php#OrderFillMatchingMethods">Order Fill Matching Method</a> is used when determining a closed Trade.</p>
+        
+        <p>  For information about how Daily Profit/Loss is calculated, refer to <a href = "index1a23.html?page=doc/DailyProfitLossValue.html">Help with Daily Profit/Loss</a>.   It can also optionally include commissions. For more information about commissions, refer to <a href = "index4cf4.html?page=doc/ChartSettings.html#UseSymbolCommissionSettingInTradeListAndStatisticsCalculations"></a>. </p>
+
+        <p>This <b>DPL</b> value  is considered a Daily Trade Statistic  which resets daily. For complete details, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingDailyTradeStatisticsResetTime">Understanding Daily Trade Statistics Reset Time</a>.</p>
+
+        <p>When Sierra Chart is in Trade Simulation Mode (<b class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is checked), this is the Daily Profit/Loss for simulated trades.  Otherwise, the <b>DPL</b> is for non-simulated trades.</p>
+
+        <p>You are able to hide the <b>DPL</b> display from the chart.  To do this, select <b class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> and disable <b>Display Daily Profit/Loss On Chart / Trade  DOM</b>. </p>
+
+
+        <p>There are various Profit/Loss formats that can be used and these are set by selecting <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>. The <b>Profit/Loss Format</b> setting controls the format. For complete documentation for this setting, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#ProfitLossFormat">Profit/Loss Format</a> on the <b>Chart Settings</b> page. </p>
+
+        <p>The Daily Profit/Loss can also be displayed anywhere on the chart by using the  <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradeDataStudies">Trading: Profit/Loss Text</a> study.    Add this study to the chart through <b class = "menu_item">Analysis &gt;&gt; Studies </b> and set the study  <b>Input</b> settings as required.</p>
+
+
+        <p>The <b>DPL</b> (Daily Profit/Loss) value is directly calculated from the order fills data in the <b class = "menu_item">Trade &gt;&gt; Trade Activity Log</b>.</p>
+
+        <p class="GeneralBackgroundHighlightLight">If there are inaccuracies with the <b> Daily Profit/Loss</b> value,  then there can be several causes. There could be  missing order  fills or the starting Date-Time of the first fill loaded in the chart is not aligned with the start of a new Trade Position. For complete details, refer to <a href="index1a23.html?page=doc/DailyProfitLossValue.html" target="_blank" rel="noopener noreferrer">Help With Daily Profit/Loss Value</a>.</p>
+
+
+    </section>
+
+    <section class="h3">
+        <h3 id="NetProfitLoss">Net Profit/Loss</h3>
+        <div class="member-link">[<a href="#NetProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Open Position Profit/Loss and the Daily Profit/Loss can be added together and displayed as one.  When they are added and combined into one, this is known as the  <b>Net Profit/Loss</b>.  </p>
+
+        <p>This <b>Net Profit/Loss</b> can be displayed in place of the Daily Profit/Loss (<b>DPL</b>) on the chart or Trade  DOM and on the Trade Window for the chart or Trade DOM.  </p>
+
+        <p>  To enable the <b>Net Profit/Loss </b>, select <b class = "menu_item">Trade  &gt;&gt; Chart Trade Settings </b> and enable <b>Include Open P/L in Chart/Trade DOM P/L Display</b>.</p>
+
+        <p>When the Open Position Profit/Loss is added to the Daily Profit/Loss to calculate the Net Profit/Loss, then the Open Position Profit/Loss value that is used is calculated  from the  order fills in the <b  class = "menu_item">Trade &gt;&gt; Trade Activity Log</b>. Those order fills are iterated through to determine what the Open Position Quantity and  Position Average Price  is. Using this  order fill calculated Position Average Price, the Open  Position Profit/Loss is calculated as explained in the <a href = "index9473.html?page=doc/TradeWindow.html#OpenProfitLoss">Open Profit/Loss</a>  section.</p>
+
+
+        <p> The <a href = "index9473.html?page=doc/TradeWindow.html#OpenProfitLoss">Open Profit/Loss</a> you see on the Trade window is not directly used because that can have different  <a href = "index7cfb.html?page=doc/TradeStatusWindows.html#HowAveragePriceForPositionsIsCalculatedAndUsed">calculation methods</a> rather than a standard     <a href = "index509f.html?page=doc/TradeActivityLog.php#OrderFillMatchingMethods">First In First Out matching method</a>.</p>
+
+        <p><em>If there are inaccurate or incomplete fills, then this will affect the Net Profit/Loss calculation and make it incorrect</em>. For complete details about how the calculations work, refer to <a href="index7cfb.html?page=doc/TradeStatusWindows.html#NetPLCalculation">Net Profit/Loss Calculation</a>. </p>
+
+        <p>If the Net Profit/Loss is incorrect, then  refer to <a href = "index1a23.html?page=doc/DailyProfitLossValue.html">Help with Daily Profit/Loss</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ClosedProfitLoss">Closed Profit/Loss</h3>
+        <div class="member-link">[<a href="#ClosedProfitLoss">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is supported to display the Cumulative Closed Profit/Loss value, which indicates the cumulative profit/loss from all of the trades made that Sierra Chart has order fill data for in the  <b class = "menu_item">Trade &gt;&gt; Trade Activity Log </b>, by using the  <b>Trading: Profit/Loss Text</b> study. </p>
+
+        <p> When  <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt; Order Fills Start Date-Time</b> has the Date box set, then order fills are only loaded into the chart from the specified Date-Time. Therefore, the  <b>Cumulative Closed Profit/Loss</b> will be based upon those order fills which are loaded into the chart from that Date-Time.</p>
+
+        <p>Add the <b>Trading: Profit/Loss Text</b> study to the chart through <b class = "menu_item">Analysis &gt;&gt; Studies</b> and set the study  <b>Input</b> settings as required.</p>
+
+
+        <p>For complete detailed information about the <b>Trading: Profit/Loss Text</b> study, refer to the documentation for the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradingPLText">Trading: Profit/Loss Text</a> study.</p>
+
+        <section class="h4">
+            <h4>Viewing Closed Profit Loss through the Trade Activity Log</h4>
+            <p>You are able to view the Cumulative Closed Profit/Loss for any period of time through the  <b>Trades </b> tab of the  <b class = "menu_item">Trade &gt;&gt; Trade Activity Log</b>. Refer to the <a href="index509f.html?page=doc/TradeActivityLog.php#TradesTab">Trades tab</a> documentation. On the <b>Trades</b> tab you will want to refer to <b>Cumulative Profit/Loss </b> column. </p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="CentrallyViewingPL">Centrally Viewing Daily and Cumulative Closed Profit/Loss</h3>
+        <div class="member-link">[<a href="#CentrallyViewingPL">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To view in one location all of the <b>Open Profit/Loss</b>, <b>Daily Profit/Loss</b>, <b>Cumulative Closed Profit/Loss</b> values and other trading related statistics for all of the charts and Trade DOM windows that are currently open in Sierra Chart, select <b class = "menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Stats for Charts</b> from the menu.  </p>
+
+        <p>On the   <b>Trade Stats for Charts</b> tab, you will a row for each chart or Trade DOM that is maintaining a  Trades list from the order fills in the Trade Activity Log. </p>
+
+        <p>Trade DOMs and charts that are in Chart Trade Mode or require the order fill Trades list for other reasons, do maintain an internal Trades list from the order fills.</p>
+
+        <p>For complete details, refer to  <a href="index509f.html?page=doc/TradeActivityLog.php#ChartTradeStatsTab">Trade Stats for Charts Tab</a>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="TradeDOM">Trade DOM</h2> 
+    <div class="member-link">[<a href="#TradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/tradingdom_1.png" rel="lightbox"><img src="../images/tradingdom_1.png" class="MediumFloatRight" alt=""></a>
+
+    <p>Sierra Chart offers a traditional Trade DOM window. To open a Trade DOM, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. Select a symbol from the lists or type in a symbol in the <b>Selected Symbol </b> box, and press  the <b>Open Trading DOM</b> button.  </p>
+    
+    <p>Alternatively, you can select <b class="menu_item">File &gt;&gt; Open Trading DOM for Chart</b> on the menu. In this case a Trade DOM will be opened for the active chart quickly.  </p>
+    
+    <p> You can open as many Trading DOMs as you require. They will be part of the active  <a href = "index7674.html?page=doc/Chartbooks.html">Chartbook</a>. </p>
+
+    <p>The Trade DOM window is based upon the Sierra Chart chart object and is streamlined and optimized for  trading purposes.  Therefore, the trading functionality is exactly the same as what you have in a regular chart when using chart trading and the Chart DOM, except there is no chart, studies or chart drawings.  The  price scaling on a Trade DOM window is specifically optimized for trading purposes.</p>
+
+    <p>By default the price ladder is set so that every price tick is displayed. You can also  set it this way at any time by right clicking on the column of numbers and selecting  <b>Auto Scale the Chart DOM</b>. 
+
+    <p>The <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scaling</a> features are supported on the price scale (price ladder). This allows you to move the prices <em>up and down</em>, or <em>compress or expand</em> the prices.   For a video presentation, refer to <a href="index07ae.html?page=doc/ScalingTheChartDOM.html#Move">Scaling The Chart DOM</a>.</p>
+
+
+    <section class="h3">
+        <h3 id="TradeDOMEnteringOrders">Entering Orders on the Trade DOM</h3>
+        <div class="member-link">[<a href="#TradeDOMEnteringOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>To enter orders on the Trade DOM, refer to the <a href="#UsingTheChartDOMOrderEntryLadder">Using the Chart DOM / Order Entry Ladder</a> section on this page. The order entry method  is 100% identical to the Chart DOM on a chart.</p>
+
+
+
+        <p>A Trade DOM window also supports submitting orders using the same menu-based order entry method that is supported with <a href="#ChartTrading">Chart Trading</a>.  You would want to use this method to submit OCO type orders and any other order type that you cannot submit through the standard Buy/Sell columns, like a Trailing Stop order. To display the Chart Trade menu, you need to right-click on the Trade DOM in the area where the orders are displayed.</p>
+
+        <div style="text-align: center;"><a href="../images/tradedom_charttrademenu.png" rel="lightbox"><img src="../images/tradedom_charttrademenu.png" class="screenshot" loading="lazy" alt="" width="400"></a></div>
+
+    </section>
+
+    <section class="h3">
+        <h3 id = "TradeDOMModifyingCanceling">Modifying or Canceling Orders</h3>
+        <div class="member-link">[<a href="#TradeDOMModifyingCanceling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To <b>Modify</b> or <b>Cancel</b> orders on the Trade DOM, refer to the <a href="#ModifyingOrdersOnTheChart">Modifying and Canceling Orders on the Chart</a> section on this page. The method is the same.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingUpdateInterval">Setting Update Interval</h3>
+        <div class="member-link">[<a href="#SettingUpdateInterval">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The update interval of a Trading DOM can be set. For example, it can be reduced in order to increase the speed of updating. To adjust this, it is best to adjust this individually for each Trading DOM rather than globally.  This setting is controlled through the <a href="index899f.html?page=doc/GeneralSettings.html#ChartUpdateInterval" Target="_blank" rel="noopener noreferrer">Chart Update Interval</a> setting.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="TradingDOM_DisplayingMarketDepthData">Displaying Market Depth Data</h3>
+        <div class="member-link">[<a href="#TradingDOM_DisplayingMarketDepthData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Market Depth can be optionally displayed on the Trade DOM.  Market Depth indicates the volume/quantity of orders at each price level for the prices nearest the current price.  For full details about market depth data, refer to <a href = "index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow">Open Market Depth Window</a>.</p>
+
+        <p> To add the Market Depth data columns to the Trade DOM, if not already displayed,  refer to the <a href = "#CustomizeChartDOMColumns">Customizing Trade DOM and Chart DOM Columns</a> section.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="CustomizeChartDOMColumns">Customizing Trade DOM and Chart DOM Columns</h3> 
+        <div class="member-link">[<a href="#CustomizeChartDOMColumns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>All of the columns on the Trade DOM and the Chart DOM can be customized.  To display the Trade DOM or Chart DOM if it is not already enabled, go to the Trade DOM or Chart you want it enabled on and make sure there is a checkmark by <b Class = "menu_item">Trade &gt;&gt; Trading Chart DOM On</b> on the menu.</p>
+
+        <p>What specific columns are displayed, the alignment of text within those columns and the order of columns is all customizable.</p>
+
+        <p> These columns include Buy and Sell columns, Bid and Ask size/quantity data columns and various other market data columns.</p>
+
+        <p>To customize the columns for the active Chart or Trade DOM, select <b class = "menu_item">Trade &gt;&gt; Customize Chart/Trade DOM Columns</b>. Since version 1516, the column customization applies to the active Chart or Trade DOM. They are no longer global. They need to be set individually for each Chart and Trade DOM as needed. </p>
+
+        <p  class = "GeneralBackgroundHighlightLight">To add the Bid Size/Quantity and Ask Size/Quantity market depth data into the same columns as the Buy and Sell order columns respectively, use the following two Chart/Trade DOM columns:</p>
+        <ul>
+            <li><b>Bid Size/Buy Column</b></li>
+            <li><b>Ask Size/Sell Column</b></li>
+        </ul>
+        
+         <p> Or add the <b>Combined Bid/Ask Size </b> column. <p>
+
+        <p> For a complete description of each of the columns, refer to  <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeDOMColumnDescriptions"  target="_blank" rel="noopener noreferrer">Chart/Trade DOM Column Descriptions</a>.</p>
+
+        <p> For the <b>Bid Size</b> and <b>Ask Size</b> columns, there will not be more than one size/quantity row for the Bid and Ask sides, unless <a href="index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow" Target="_blank" rel="noopener noreferrer">market depth</a> data is provided for the symbol from the particular Data or Trading service being used.</p>
+
+        <p>When using the symbols from the <a href="indexc82f.html?page=doc/SCRealTimeFOREX.php">Sierra Chart Real-time and Historical Forex/CFD Data Service</a>, there is only one level of market depth data with quantities of 1. In the case of CME futures market symbols, it is necessary that your market data has activated on it the CME exchanges that provide market depth data, in order to see more than one level of market depth data. The CME does <em>charge extra for market depth data</em>, so your account may not have market depth data on it.</p>
+
+        <div style="text-align: center;"><a href="../images/customizecharttradedomcolumns-window.png" rel="lightbox"><img src="../images/customizecharttradedomcolumns-window.png" class="screenshot" loading="lazy" alt="" width="500"></a></div>
+
+        <p>Use the <b>-&gt;</b> and <b>&lt;-</b> to add and remove columns.  Use the <b>Move Up</b> and <b>Move Down</b> buttons to adjust the order of the columns. See <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeDOMColumnWidthsAndHeaders" Target="_blank" rel="noopener noreferrer">Chart/Trade DOM Column Widths and Headers</a> for additional information on changing column positions and headings.</p>
+
+        <p> Press the <b>OK</b> button to save the changes. </p>
+
+
+        <p> To control the number of market depth levels displayed on the Chart DOM use the setting  <b class="menu_item">Chart &gt;&gt;  Chart Settings &gt;&gt; Market Depth</b> <b> &gt;&gt;  Maximum Market Depth Levels</b>. </p>
+
+        <section class="h4">
+            <h4 id="BidAndAskSizeQuantityColumns">Bid and Ask Size/Quantity Columns</h4>
+            <div class="member-link">[<a href="#BidAndAskSizeQuantityColumns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The following Bid Size/Quantity or Ask Size/Quantity columns can be added. These  including combining the <b>Bid Size</b> in the Buy column and the <b>Ask Size</b> in the Sell column.</p>
+
+            <ul>
+                <li><b>Combined Bid/Ask Size</b></li>
+                <li><b>Bid Size</b></li>
+                <li><b>Ask Size</b></li>
+                <li><b>Bid Size/Buy Column</b></li>
+                <li><b>Ask Size/Sell Column</b></li>
+            </ul>
+
+            <p>For the <b>Bid Size</b> and <b>Ask Size</b> columns, the number of levels displayed is controlled by the    <a href = "index4cf4.html?page=doc/ChartSettings.html#MaximumMarketDepthLevels">Chart &gt;&gt;  Chart Settings &gt;&gt;  Market Depth &gt;&gt;  Maximum Market Depth Levels</a> setting.</p>
+
+        </section>
+    </section>
+    <section class="h3">
+        <h3 id="TradeDOMAndChartDOMFontAndColors">Trade DOM and Chart DOM  Font and Colors</h3> 
+        <div class="member-link">[<a href="#TradeDOMAndChartDOMFontAndColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To control the font size of the market depth quantities/sizes on the  Chart/Trade  DOM columns, set the   <b>DOM Quantities/Sizes</b>   <a href = "index5795.html?page=doc/GraphicsSettings.html#FontsAndText">Font</a> setting in the  <a href = "index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> window. </p>
+
+
+        <p>To control the colors, refer to <a href = "index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a>. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="CompactOrderLines">Using Compact Working Order Lines</h3> 
+        <div class="member-link">[<a href="#CompactOrderLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The working order lines lines on a Trade DOM can be set to display less detail so they are more compact and take less horizontal width.  This allows you to resize the Trade DOM window and reduce its overall width and still be able to see the order lines. To reduce the amount of detail on order lines, uncheck the following option <b class="menu_item"> Global Settings &gt;&gt;Chart Trade Settings &gt;&gt; Working Orders &gt;&gt; Display Detailed Order Information</b>. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="CenteringPrice">Re-Centering the Current Price</h3> 
+        <div class="member-link">[<a href="#CenteringPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> By default, the price ladder does not automatically re-center.  The current price will always remain in view, however as it approaches the upper or lower bound of the window, you will need to drag it towards the center to keep it into the center. You can automatically center the price by double-clicking the price ladder as shown in the image.</p>
+
+        <p>Or you can right-click on the price ladder and select <b>Scale Range: Constant Range AutoCenter</b>. To open the complete set of Scale settings, right-click on the price ladder and select <b>Scale </b>.  </p>
+
+        <div style="text-align:center;"><a href="../images/tradingdomcentering.png" rel="lightbox"><img class="screenshot" loading="lazy" src="../images/tradingdomcentering.png" width="350" alt=""></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="DetachingTradeWindow">Detaching Trade Window</h3> 
+        <div class="member-link">[<a href="#DetachingTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> The Trade Window for a Trade DOM or chart can be detached, so as to take less space. To do this, press the <b class="menu_item">Menu / M</b> button on the Trade Window and select <b class="menu_item">Attach Trade Window to Chart Window</b> to remove the checkmark. Refer to the image below.</p>
+
+        <div style="text-align:center;"><a href="../images/tradedomwithfloattradewindow.png" rel="lightbox"><img width="650" src="../images/tradedomwithfloattradewindow.png" alt=""></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachingTWToRightSide">Attaching Trade Window to Right Side</h3> 
+        <div class="member-link">[<a href="#AttachingTWToRightSide">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> The Trade Window for a Trade DOM or chart is used for basic order entry and it contains <b>Attached Order</b> configurations and other settings.  </p>
+
+        <p>The Trade Window    can be attached to either the left or the right side of the Trade DOM.  To do this, refer to the <a href="#AttachingTradeWindow">Attaching Trade Window to Charts</a> section.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMLeftAligning">Left Aligning Order and Position Lines</h3> 
+        <div class="member-link">[<a href="#TradeDOMLeftAligning">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>By default in a Trade DOM window,  Order and Position lines are aligned to the right, beside the order entry column and price ladder. This can be changed by selecting   <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Trading</b> and unchecking the following options: <b>Align Trade Drawings Text to Right</b> and <b>Align Order Cancel(X) Button to Right</b>. </p>
+
+        <p>The benefit of left alignment will only be noticeable when you are using a wider Trade DOM window. Left alignment may be useful if you have applied the  <b>Volume by Price </b> study to the Trade DOM.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SavingTradeDOM">Saving Trade DOM Configuration</h3> 
+		<div class="member-link">[<a href="#SavingTradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Trade DOM window is a chart object like an ordinary chart, but it is specialized for the purpose of trading.  It is contained within a chartbook like other charts.  Therefore to save a Trade DOM you need to save the active chartbook by selecting <b class="menu_item">File &gt;&gt; Save</b>. This will save it as part of the active chartbook. For complete information, refer to <a href = "index7674.html?page=doc/Chartbooks.html">Chartbooks</a>.</p>
+    </section>
+
+    <section class="h3">
+        <!-- REVIEW COMPLETE BEGIN -->
+        <h3 id="AlwaysonTop">Always on Top</h3> 
+        <div class="member-link">[<a href="#AlwaysonTop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To make the Trade DOM always display on top of other windows on your system desktop, select <b class="menu_item">Window &gt;&gt; Always on Top</b> directly on the Trade DOM menu.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeDOMVolumeProfile">Daily Volume Profile  (Volume by Price) on Trade DOM</h3> 
+        <div class="member-link">[<a href="#TradeDOMVolumeProfile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Sierra Chart Trade DOM supports the <b>Volume by Price</b> study, so that you can have a view of the volume at each price level on the Trade DOM.  To use the Volume by Price study, follow the steps below.</p>
+
+        <a href="../images/tradedomvolumeprofile.png" rel="lightbox"><img src="../images/tradedomvolumeprofile.png" class="WideFloatRight" alt=""></a>
+
+        <ol>
+            <li>  For the greatest Volume at Price accuracy, you need to set Sierra Chart to a tick by tick data configuration.  Refer to  <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php" Target="_blank" rel="noopener noreferrer">Tick By Tick Data Configuration</a>. This step only needs to be done once.</li>
+
+            <li>Go to your Trade DOM window.</li>
+
+            <li>Select <b class="menu_item">Chart &gt;&gt; Studies</b> on the menu.</li>
+
+            <li>In the <b>Studies Available</b> list, locate the <b>Volume by Price</b> study.</li>
+
+            <li>Press the <b>Add</b> button.</li>
+
+            <li>Press the <b>Settings</b> button.</li>
+            <li>Select the   <b>Inputs and Settings</b> tab if it is not already selected.	</li>
+            <li>Set the following inputs:
+                <ul>
+                    <li><b>Ticks per Volume Bar</b> to 1.</li>
+
+                    <li><b>Volume Graph Period Type</b> to <b>From Session Start Time to End</b>.</li>
+
+                    <li><b>Maximum Volume Bar Width Type</b> to <b>Window Width</b>.</li>
+
+                    <li><b>Display Volume  in Bars</b> to <b>Total Volume</b>.</li>
+                    <li>To align the Volume Bars to the right side beside the trading columns on the right side of the Trade  DOM, set the   <b>Right Align Volume Bars</b> input to <b>Yes</b>.</li>
+                    <li>Set any other Study inputs as you require.</li>
+                </ul>
+            </li>
+
+            <li>Press <b>OK</b>.  Press <b>OK</b>.</li>
+
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Session Times</b>. Set the <b>Intraday Chart Session Times &gt;&gt; Session Start Time</b> and <b>End Time</b> to what you require or according to the exchange session times.  Keep in mind these are relative to the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Time Zone</b> setting you have in Sierra Chart.</li>
+
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="AddingStudiesTradeDOM">Adding Studies on a Trade DOM</h3> 
+        <div class="member-link">[<a href="#AddingStudiesTradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to add studies to a Trade DOM.</p>
+
+        <p>As an alternative to adding studies to a Trade DOM, you can consider using a normal chart which easily supports studies and use the  <a href="#UsingTheChartDOMOrderEntryLadder">Chart DOM</a> feature to trade from the chart.</p>
+        
+         <p> Sierra Chart support does not provide any help for using studies on a Trade DOM.  The problem is you have no idea what data the study is based upon and therefore how it is functioning without seeing the chart bars.</p>
+         
+        <ol>
+            <li> Select <b class="menu_item">Chart &gt;&gt; Studies</b> from the Trade DOM menu.</li>
+
+            <li> A smaller set of studies is available from the list. Add the studies that you require following the instructions in the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" >Adding/Modifying Chart Studies</a> documentation.</li>
+
+
+            <li> To add chart studies to the Trade DOM which are not listed and also custom studies, press the <b>Add Custom Study</b>  button on the <b>Chart Studies</b> window. Select the study from the available studies and press the <b>Add</b> button.  Therefore, any study can be added to a Trading DOM.</li>
+
+            <li> It is possible to use the <a href="indexc0f0.html?page=doc/StudyPriceOverlayStudy.php">Study/Price Overlay study</a> to reference studies from other charts and add them to a  Trade DOM. When using the Study/Price Overlay Study, it is necessary to set the <b>Fill Blanks with Last Value </b> input to Yes. And it is necessary to set the <b> Chart Region</b> for the Study/Price Overlay study to 1.</li>  
+
+
+            <li>Since you have now placed studies on the Trade DOM, it becomes necessary to adjust the Chart Settings for the underlying chart bar data. To do this, modify the settings through the <b class="menu_item">Chart &gt;&gt; Chart Settings&gt;&gt; Bar Period</b> window. For example, you will need to adjust  the chart bar time period.  For additional information, refer to  <a href="index4cf4.html?page=doc/ChartSettings.html" >Chart Settings</a>. </li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="AddingCustomTextToATradeDOM">Adding Custom Text to a Trade DOM</h3> 
+        <div class="member-link">[<a href="#AddingCustomTextToATradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To add text on a Trade DOM at a particular price level, follow the instructions below.</p>
+
+        <ol>
+            <li> Add the <b>Line</b> study to the Trade DOM by following the instructions in the  <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying  Studies</a> section. On the Trade DOM this is added through  <b Class = "menu_item">Chart &gt;&gt; Studies</b>.</li>
+
+            <li> Open the Study Settings window for the  <b>Line</b> study.</li>
+
+            <li>On the <b>Settings and Inputs</b> tab, set the <b>Value</b> Input to the price level where you want to place the text.</li>
+            <li>Set the  <b>Chart Region</b> setting to 1.</li>
+
+
+            <li>Select the  <b>Subgraphs</b> tab.</li>
+            <li>In the  <b>Short Name</b> edit box for the Subgraph, enter the custom text that you want.</li>
+            <li>Enable the <b> Name Label </b> option.</li>
+            <li>Set the <b>Horizontal Align</b> setting for the Name Label as required.</li>
+            <li>Press <b>OK</b> to close the <b>Study Settings</b> window.</li>
+            <li>Press <b>OK</b>.</li>
+        </ol>
+
+
+    </section>
+
+    <section class="h3">
+        <h3 id="BlankTradingDOM">Blank Trading DOM</h3>
+        <div class="member-link">[<a href="#BlankTradingDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If there is a case where a  <a href = "#TradeDOM">Trading DOM</a> is blank, then make sure the symbol is valid in <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;  Symbol &gt;&gt; Symbol</b>  for the Trading DOM. </p>
+
+         <p>An easy way to update futures contracts symbols  being used if they are for a different  supported Data/Trading as compared to the current selected service,  is to select  <b class="menu_item">Edit &gt;&gt; Translate Symbols to Current Service</b> when the Chartbook is open.</p>
+
+        <p>In <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times</b>, make sure the <b>Intraday Chart Session Times &gt;&gt; Session Start Time</b> and <b>Session End Time</b> cover the full 24 hour range. For example, set them to <em>00:00:00</em> and  <em>23:59:59</em> respectively.</p>
+        
+         <p>Make sure Sierra Chart is connected to the data feed by selecting  <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.  If this command is disabled, it means Sierra Chart is already connected. </p>
+         
+        <p>Reset the  Chart/Trade DOM scale. Refer to <a href = "index07ae.html?page=doc/ScalingTheChartDOM.html#AutoScale">Auto Scale the Chart DOM</a>.</p>
+
+    </section>
+    
+    <section class="h3">
+        <h3 id="ImprovingPerformanceTradingDOM">Improving Performance of Trading DOM</h3>
+        <div class="member-link">[<a href="#ImprovingPerformanceTradingDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+         <p> Refer to <a href="#ImprovingPerformanceOfChartTradeDOM" >Improving Performance of Chart / Trade DOM</a>.</p>
+
+    </section>    
+</section>
+
+<section class="h2">
+    <h2  id="UsingTheChartDOMOrderEntryLadder">Using the Chart DOM  / Order Entry Ladder</h2> 
+    <div class="member-link">[<a href="#UsingTheChartDOMOrderEntryLadder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section documents how to use the Chart DOM and Trade DOM trading interfaces. Whether you are using the Chart DOM  or Trade DOM,  they have the same interface. The Chart DOM / Trade DOM is for entering trade orders (Simulated or Live) in the same way as a traditional trading DOM.  This is also known as an Order Entry Ladder. The image below is a basic overview of what you can do.</p>
+
+    <div style="text-align: center;"><a href="../images/tradingchartdom.png" rel="lightbox"><img src="../images/tradingchartdom.png" width="800"  class="screenshot" loading="lazy" alt=""></a></div>
+
+
+    <br><br>
+    <ol>
+
+        <li> <b class="menu_item">Trade &gt;&gt; Trading Chart DOM On</b> on the menu needs to be  <em>checked</em> to enable the  Chart DOM  order entry interface.
+            <br> <br>
+            When you enable  <b>Trading Chart DOM On</b>, the <b>Chart Trade Mode On</b> and <b>Show Orders and Position</b> options will also be enabled automatically.  When <b>Trading Chart DOM On</b>  is enabled, this well display the   <b>Buy</b> and <b>Sell</b> order entry columns on the right side of the chart which are used for trade order entry.  Refer to the image above. 
+            <br> <br>
+            In the case of the Trade DOM, <b>Trading Chart DOM On</b> is enabled and stays on.</li>
+
+        <li>To display the Depth of Market sizes/quantities on the Chart DOM / Trade DOM, you will need to add the <b>Bid Size</b> and <b>Ask Size</b> columns if they are not already added. To add these columns, select <b class="menu_item">Trade &gt;&gt; Customize Chart/Trade DOM Columns</b>. 
+            <br> <br>
+            Add those columns through the <b>Customize Chart/Trade DOM Columns </b> window. It is also supported to display the Depth of Market sizes/quantities within the Chart DOM Buy and Sell columns directly, by adding the <b>Bid Size/Buy Column</b>  and the  <b>Ask Size/Sell Column</b> DOM columns. 
+            <br> <br>
+            If the Depth of Market sizes/quantities overlap on the Chart DOM, then you will want to consider using the   <a href="index96f7.html?page=doc/TradeMenu.html#DrawDOMGraph" target="_blank" rel="noopener noreferrer">DOM Graph</a> as an alternative.</li>
+
+        <li>When using the Chart DOM you may want to change the scale of the chart. For instructions to do this, refer to <a href="#ScalingtheChartDOM">Scaling the Chart DOM</a> section.</li>
+
+
+
+        <li>When using the Chart DOM, new orders entered use the <b>Quantity</b>, <b>Time in Force</b>, and <b>Attached Orders</b> settings from the associated Trade Window for the chart.  Select <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> to open the Trade Window for the chart.  For complete details, refer to <a href = "index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Opening Trade Window</a>.
+            <br> <br>
+            Any Attached Orders that are defined and enabled on the Trade Window <b> Targets </b> tab, will be used. The Attached Orders need to be enabled by checking <b> Use Attached Orders </b> on the Trade Window. For more information about Attached Orders, refer to the <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a> page. If you do not want to use Attached Orders uncheck <b> Use Attached Orders </b> on the Trade Window.</li>
+
+
+
+        <li> The Chart Trade Mode box at the top left of the chart / Trade DOM displays the quantity for new orders and the price your mouse pointer is pointing to, on the chart and Chart DOM. To change the Order Quantity for a new order, simply click on the Chart Trade Mode box, type in the desired Order Quantity,  or use the + and - buttons, and press <b> OK</b> to accept.  Refer to <a href="#UsingTheChartDOMOrderEntryLadder">instructional image</a>.</li>
+        <!-- REVIEW COMPLETE END -->
+
+        <li>Orders are entered through the Chart DOM with left and right clicks of your Pointer buttons,  in the <b> Buy</b> and <b>Sell</b> columns on the right side of the chart or Trade  DOM window (refer to <a href="#UsingTheChartDOMOrderEntryLadder">instructional image</a>).
+            <br>
+            <br>
+            The Order Type and whether the order is a Buy or Sell is determined by the settings in <b class="menu_item">Global Settings &gt;&gt; Chart DOM Settings</b> on the menu. Refer to the images below. 
+            <br> <br>
+            For more information for the  <b>Chart DOM Settings</b> window, refer to the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartDOMSettings">Chart DOM Settings</a> documentation.  The <b>Order Type</b> setting on the Trade Window for the chart is <em>ignored</em> when using the Chart DOM / Trade DOM. 
+            <br>
+            <br>
+            <em>The default order types are <b>Limit</b> and <b>Stop </b> orders.</em>
+            <br>
+            <br>
+
+            When using <b>Stop-Limit</b> orders instead of Stop orders, the Limit price is automatically set and will be the number of ticks away from the Stop price as specified on the <b>Set</b> tab on the <b>Trade Window</b> for the chart ( <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> &gt;&gt; Set) in the  <b>Stop-Limit Order Limit Offset &gt;&gt; Primary Orders</b> box.
+
+            <div style="text-align: center;">
+                <a href="../images/chartdomsettings_ordertypes.png" rel="lightbox"><img src="../images/chartdomsettings_ordertypes.png" alt="" class="screenshot" loading="lazy"></a>
+
+            </div>
+
+            <!-- Reviewed Begin -->
+            <br>
+            <br>
+            The following list describes the <em>default actions</em> of the Chart DOM / Trade DOM:
+            <ul>
+                <li>To enter a <b>Buy Limit</b>: <b>Left</b> click on the Buy column at  the level of the limit price that you want.
+                    <br>
+                    <br>
+
+                    Initially you will get a confirmation, press <b>Yes</b> to confirm.  The confirmation can be disabled on the <b>Trade  Window</b> by selecting <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart &gt;&gt; Menu (M) &gt;&gt; Confirmations &gt;&gt; Confirm New Orders</b>. The new order will be displayed on the chart.</li>
+
+                <li>To enter a <b>Buy Stop</b>: <b>Right</b> click on the Buy column at the level of the stop price that you want. 
+                    <br>
+                    <br>
+                    Initially you will get a confirmation, press <b>Yes</b> to confirm.  The confirmation can be disabled on the <b>Trade  Window</b> by selecting <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart &gt;&gt; Menu (M) &gt;&gt; Confirmations &gt;&gt; Confirm New Orders</b>. The new order will be displayed on the chart.
+
+                    <br>
+                    <br>
+                    If you have enabled <b class="menu_item">Menu (M) &gt;&gt; Orders &gt;&gt; Use Stop-Limit Orders on Chart DOM</b> on the Trade Window, then Stop-Limit orders will be submitted instead. </li>
+
+                <li>To enter a <b>Sell Limit</b>: <b>Left</b> click on the Sell column at the level of the limit price that you want.
+                    <br>
+                    <br>
+                    Initially you will get a confirmation, press <b>Yes</b> to confirm.  The confirmation can be disabled on the <b>Trade  Window</b> by selecting <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart &gt;&gt; Menu (M) &gt;&gt; Confirmations &gt;&gt; Confirm New Orders</b>. The new order will be displayed on the chart.</li>
+
+                <li>To enter a <b>Sell Stop</b>: <b>Right</b> click on the Sell column at the level of the stop price that you want. 
+                    <br>
+                    <br>
+                    Initially you will get a confirmation, press <b>Yes</b> to confirm.  The confirmation can be disabled on the <b>Trade  Window</b> by selecting <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart &gt;&gt;  Menu (M) &gt;&gt; Confirmations &gt;&gt; Confirm New Orders</b>. The new order will be displayed on the chart. 
+                    <br>
+                    <br>
+
+                    If you have enabled <b class="menu_item">Menu (M) &gt;&gt; Orders &gt;&gt; Use Stop-Limit Orders on Chart DOM</b> on the Trade Window, then Stop-Limit orders will be submitted instead.</li>
+
+
+            </ul>
+        </li>
+
+        <li>The price levels in the Buy and Sell columns on the Chart DOM will display the quantity of the respective <b>Open</b> Buy and Sell orders at that price level, or the market depth sizes/quantities depending upon the Chart DOM column configuration in <b class="menu_item">Trade &gt;&gt; Customize Chart/Trade DOM Columns</b>.   Your working order quantities will be displayed if the columns are not also used to display the market depth Bid size and  Ask size data.</li>
+
+    </ol>
+    <!-- Reviewed End -->
+
+    <!-- Reviewed Begin -->
+
+    <section class="h3">
+        <h3 id="ScalingtheChartDOM">Scaling the Chart DOM</h3> 
+        <div class="member-link">[<a href="#ScalingtheChartDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The most rapid way to automatically scale the Chart DOM is by right clicking along the column of values displayed on the right side of the chart or Trade DOM and select <b>Auto Scale the Chart DOM</b>. This will set the <b>Scale Range</b> to the <b>Constant Range</b> type without auto-centering and set the scale increment to the <b>Tick Size</b>.  </p>
+
+        <p>If you wish to make further adjustments, these are explained in the next paragraphs.</p>
+
+        <p>If the Chart DOM prices or depth of market volumes, are too close together or too far apart, then you have the ability to compress or expand the chart scaling by using the <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scale Range</a> feature. Basically this is accomplished by right clicking over the scale numbers on the right side of the chart and making sure <b>Interactive Scale Range</b> is selected and then dragging along the column of numbers on the right side of the chart to expand or compress the scale.</p>
+
+        <p>If the Chart DOM prices and depth of market volumes are not fully into view as you require, then you have the ability to move the chart up and down by using the <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" target="_blank" rel="noopener noreferrer">Interactive Scale Move</a> feature.</p>
+
+        <p>After adjusting the scaling for the Chart DOM, you may find that the chart bars are not fully into view. In this case you may want to use a <a href="#TradeDOM">Trade DOM</a>. </p>
+
+        <p>To keep the last trade price always centered on the Chart DOM or Trade DOM right-click on the Values Scale column on the right side of the chart, and select <b>Scale Range: Constant Range Auto Center</b>.</p>
+
+        <p>For a short video presentation on Chart DOM scaling, refer to <a href="index07ae.html?page=doc/ScalingTheChartDOM.html#Move">Scaling The Chart DOM</a>.</p>
+    </section>
+
+    <section class="h3">    
+        <h3 id="ChartDOMWidth">Setting Chart DOM Order Column Width</h3> 
+        <div class="member-link">[<a href="#ChartDOMWidth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>See section <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeDOMColumnWidthsAndHeaders" Target="_blank" rel="noopener noreferrer">Chart/Trade DOM Column Widths and Headers</a> for information on changing the Chart DOM Column Widths.</p>
+    </section>
+
+    <!-- Reviewed End -->
+    <section class="h3">
+        <h3  id="OrderTypeInTradeModeBox">Displaying Order Type  in Trade Mode Box</h3> 
+        <div class="member-link">[<a href="#OrderTypeInTradeModeBox">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When using the Chart DOM / Order Entry Ladder either on a chart or on a Trade DOM, it is supported to display the order type that will be submitted, either a Limit or Stop type, when left clicking  at a price level in one of the Buy/Sell order entry columns.</p>
+
+        <p>To enable this feature, select <b Class="menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> formatting and enable the <b>Show Limit/Stop in Trade Mode Box </b> option.</p>
+
+        <p> Refer to the image below for an example of this. </p>
+
+        <div style="text-align: center;"><a href="../images/ordertypeincharttrademodebox.png" rel="lightbox"><img src="../images/ordertypeincharttrademodebox.png" alt="" class="screenshot" loading="lazy" ></a></div>
+    </section>
+    
+    <section class="h3">
+        <h3 id="DoubleClickOperationsInOrderEntryColumns">Double Click Operations in Order Entry Columns</h3> 
+        <div class="member-link">[<a href="#DoubleClickOperationsInOrderEntryColumns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When left clicking rapidly in the Buy or Sell order entry columns on the   <a href = "#UsingTheChartDOMOrderEntryLadder">Chart DOM</a>,  2 left clicks will be interpreted by your operating system as a double-click in most cases resulting only in a single order entry in this case.  </p>
+
+        <p>You are able to change the double-click delay through the operating system control panel but this will affect the entire system. </p>
+
+        <p>If you want to enter two orders rapidly, the proper procedure is that you need  to double the <a href = "index9473.html?page=doc/TradeWindow.html#Quantity">Order Quantity</a>  on the Trade Window and then just enter a single order. </p>
+
+    </section>    
+    
+    <section class="h3">
+        <h3 id="PracticingWithChartDOM">Practicing with Chart DOM</h3> 
+        <div class="member-link">[<a href="#PracticingWithChartDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> There are two good ways to practice with the  <a href="#UsingTheChartDOMOrderEntryLadder">Chart DOM</a>.</p>
+
+        <p> The first method is to use the  <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Trading Service</a> which  uses the   <a href = "indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> if you are not subscribing to  and entitled to receive Real-time data.</p>
+
+        <p> Another method is to use the <a href = "index765f.html?page=doc/SierraChartHistoricalData.php">Sierra Chart Historical Data Service</a> for Intraday chart data and then <a href = "index9600.html?page=doc/ReplayChart.html">replay</a> those charts.</p>
+
+    </section>    
+    
+    <section class="h3">
+        <h3 id="HavingHorizontalLineAcrossChartAtHighlightedLevelOnChart">Having Horizontal Line Across Chart at  Highlighted Level on Chart</h3> 
+        <div class="member-link">[<a href="#HavingHorizontalLineAcrossChartAtHighlightedLevelOnChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When using the  <a href="#UsingTheChartDOMOrderEntryLadder">Chart DOM</a> and highlighting the price levels in the Buy and Sell columns on the right side of the chart with your Pointer, you may want to have a horizontal line across the chart at the same time indicating the price level.</p>
+
+        <p>  This can be accomplished simply by using and activating the <a href = "indexb844.html?page=doc/Tools.html#ChartValues">Chart Values Tool</a>  while using the Chart DOM.</p>
+        
+        <p> The  Chart Values Tool also supports  the  <a href = "indexb844.html?page=doc/Tools.html#GlobalCursor">Global Cursor</a> mode where it will be active on all charts at the same time. </p>
+
+
+    </section>
+    
+    <section class="h3">
+        <h3 id="ImprovingPerformanceOfChartTradeDOM">Improving Performance Of Chart / Trade DOM</h3> 
+        <div class="member-link">[<a href="#ImprovingPerformanceOfChartTradeDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you are looking for very fast updates on the  Chart DOM or Trade DOM, follow the instructions below.</p>
+        <ol>
+            <li> Update to Sierra Chart version 2353 or higher.   Refer to <a href = "indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate">Fast Update</a>.  This is absolutely essential to be running this version or higher. There have been significant performance improvements with the Chart/Trade DOM market data columns.</li>
+            
+            <li> Use the <b>Denali Exchange Data Feed</b> for the exchanges you require data for.   For full documentation  and instructions, refer to <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>. This is very important to be able to control the update speed.  We will not provide any help if you are using another data feed.  This data feed is also very efficiently processed on a background thread using binary encoded data.  This is a huge performance improvement compared to other external data feeds.</li> 
+            <li>   Reduce the number of charts or Trading DOMs in total to  <em>no more than 4</em> for the particular Sierra Chart instance  being used.  Other charts and complex charts   need to be moved to <a href = "index9bbd.html?page=doc/NewInstance.php">sub instances</a>. This is absolutely essential.  It is simply not possible to have too many charts within an instance  of Sierra Chart and expect  very fast updates within charts or Trading DOMs. Depending upon what your expectations are, you may only want to have 2 Trading DOMs  or charts  in total  within a single instance.
+             <br> <br>
+            Additionally  the charts that you have open in an instance using a Chart DOM or Trade DOM must be very simple  and contain no studies or just one or two very basic studies. The reason we say this, is some users are expecting extremely fast updates.  And we have to give you all of the information to achieve this.  We do not know what your expectations are.  If you are looking for  extremely fast updates do  <em>not use any charts</em> within an instance where you have a Trade DOM.
+            </li> 
+            
+             <li>  When using the  <b>Recent Bid/Ask Volume</b> or  <b>Current Traded Bid/Ask/Total Volume</b> <a href="#">market data columns</a> on a Chart/Trade DOM over time the number of price levels that data exists for these increases.           
+             
+             <br> <br>
+             This potentially may be a performance issue if Sierra Chart has been running for many days, or if there has been a lot of market volatility.
+             <br> <br>
+             
+            To reset the size of these containers back to zero, to improve performance, if these containers have become too large, use the commands <a href="index96f7.html?page=doc/TradeMenu.html#ClearRecentBidAskVolume-AllSymbols">Trade &gt;&gt; Clear Recent Bid/Ask Volume - All Symbols</a> and <a href="index96f7.html?page=doc/TradeMenu.html#ClearCurrentTradedBidAskVolume-AllSymbols">Trade &gt;&gt; Clear Current Traded Bid/Ask Volume - All Symbols</a>.</li>
+            
+            <li>  Adjust the <a href = "index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval">Chart Update Interval</a> setting for the chart or Trade DOM to between 40 to 100.</li>
+            
+            <li>  Adjust the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#RemoteBufferDelaySendTimeInMilliseconds">Remote Buffer Delay Send Time In Milliseconds</a> setting in  <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings</b> to between 40 to 100.   <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">Reconnect</a> the data feed after changing this setting. 
+            <br> <br>
+            It is very important to be aware that the lower this setting is set to,  the increased chance of packet loss which has the effect of significantly increasing  of the time delay receiving data.   This happens because of packet retransmission.  Using  too low of a value can also cause the data feed to stop due to packet loss.</li> 
+            
+            <li>  Adjust the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#MaxDepthLevels">Max Depth Levels</a> setting in  <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings</b>  to the number of market depth levels that you require.  It is important to reduce this to the minimum possible.  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">Reconnect</a> the data feed after changing this setting. This setting does not work with any data feed other than Sierra Chart provided data feeds.</li> 
+        </ol>
+
+
+    </section>
+</section>
+
+
+
+<section class="h2">
+    <h2 id="CustomizingGraphics">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</h2> 
+    <div class="member-link">[<a href="#CustomizingGraphics">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The section has been moved to the <a href="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a> page.</p>
+
+</section>
+
+<!-- Reviewed -->
+
+<section class="h2">
+    <h2  id="DisplayingOrderFills">Displaying Order Fills on the Chart</h2> 
+    <div class="member-link">[<a href="#DisplayingOrderFills">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/filledorderdrawings.png" rel="lightbox"><img src="../images/filledorderdrawings.png" class="WideFloatRight" alt=""></a>
+
+    <p>When a   <a href = "indexf915.html?page=doc/Trading.html#Terminology">Trade Order</a> fills, the order fills can be displayed on the corresponding chart at the  Date-Time of the order fill. </p>
+
+
+    <p>A single order can have multiple fills. Each fill will be displayed separately.  Also an exit order fill could be split into smaller quantities, in order to match with the quantity of an entry fill.  </p>
+
+    <p>There are various formatting options for the order fills.  </p>
+
+    <p>To display order fills, follow these instructions:</p>
+    <ol>
+
+        <li>Enable <b class="menu_item">Trade &gt;&gt; Show Order Fills</b> on the menu. To prevent the displaying of order fills on the chart, disable <b class="menu_item">Trade &gt;&gt; Show Order Fills</b>. This option is specific to each individual chart.   This command applies to the active chart.</li>
+
+        <li>When the <b class = "menu_item">Trade &gt;&gt; Only Orders from Chart</b> option is checked, then only order fills that are for orders which originated from the chart will be displayed on the chart. So check or uncheck that as you require. This option is specific to each individual chart.   This option applies to the active chart. </li>
+
+        <li>To display non-simulated order fills, for orders that have been submitted to the connected Trading service, make sure there is  <em>no checkmark</em> by  <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>.</li>
+
+        <li> To display simulated order fills, for orders that have been submitted when in Trade Simulation Mode, there needs to be a checkmark by <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>.  Therefore, enable this menu option if you want to see order fills which are for orders submitted in Trade Simulation Mode.</li>
+
+        <li> It is necessary to select the correct  Trade Account that the orders are from, on the Trade Window, to see the order fills from that particular account. To do this, open the Trade Window if it is not already open, by selecting  <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b>.
+            <br><br>
+            On the  Trade Window, in the list of Trade Accounts, select the particular  Trade Account the orders are from to see order fills for those orders.  For instructions  and an image, refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.</li>
+
+        <li> The chart will only display order fills for orders which match  the  <a href = "index4cf4.html?page=doc/ChartSettings.html#Symbol">Symbol</a> of the chart. However, if the <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> is set for the chart,  then only those order fills matching the   <b>Trade and Current Quote Symbol</b> will be displayed on the chart. 
+            <br><br>
+            And as explained above,  only the fills that match the Trade Account  of the chart will be displayed. <em>So the fill has to match both the  Symbol and Trade Account of the chart</em>.</li>
+
+
+        <li>To see the order fills on a chart, there needs to be order fills present for the Symbol and Trade Account  of the chart, in the  <b class="menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Activity</b> tab. 
+            <br><br>
+            To see what order fills are available in the Trade Activity Log, make sure you select <b>Fills</b>  at the top of the Trade Activity Log window. For complete instructions, refer to the <a href="index509f.html?page=doc/TradeActivityLog.php" target="_blank" rel="noopener noreferrer">Trade Activity Log</a> documentation.</li>
+
+
+        <li>The setting <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>    <b>&gt;&gt;</b> <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a>  will set the chart to load only the order fills from the specified Date-Time. We recommend setting this date-time. However, refer to  <a href="#OrderFillsOnChart_AccurateEntryExitState_FillMatching_PositionQuantities">Accurate Entry/Exit State, Fill Matching and Position Quantities</a>.</li>
+
+        <li>The setting <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;  Trading</b>  <b>&gt;&gt;</b>  <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadOrderFillsForCurrentDayOnly">Load Order Fills for Current Day Only</a>  will load order fills for the current day only based on the Chart  <a href = "index4ec1.html?page=doc/SessionTimes.php#SessionTimes">Session Times</a>.  Uncheck this if you want to see order fills for more than the current day. 
+                <br> <br>
+                However, this will also affect the Daily Profit/Loss calculation causing it to potentially be inaccurate and will affect the Position Quantity for simulated trading.
+                <br> <br>
+                We recommend  <em>disabling</em> this option as it also  overrides the <b>Order Fills Start Date-Time</b> setting.
+        </li>
+
+        <li> The above two  described settings <em>must be set correctly</em> because they affect the order fill markers on the chart and whether they are an  <em>Entry or Exit</em>.   It also affects the displayed Position Quantity with order fills. For complete  details, refer to <a href="#OrderFillsOnChart_AccurateEntryExitState_FillMatching_PositionQuantities">Accurate Entry/Exit State, Fill Matching and Position Quantities</a>. </li>
+
+
+        <li>To change the settings that affect the display of order fills, select <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings">Global Settings &gt;&gt; Chart Trade Settings</a> on the menu.  
+            <br><br>
+            The settings are in the <b>Order Fills</b> frame.
+            <div style="text-align: center;"><a href="../images/globalorderfillssettings.png" rel="lightbox"><img src="../images/globalorderfillssettings.png" class="screenshot" loading="lazy" width="500" alt=""></a> </div>
+        </li>
+
+        <li>To change the colors of order fills, and the colors, width and line style of connecting lines, refer to the <a href="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a> page. The relevant color settings begin with <b>Chart Trading Order Fills</b>.
+            <div style="text-align: center;"><a href="../images/charttradingorderfillscolorsettings.png" rel="lightbox"><img src="../images/charttradingorderfillscolorsettings.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+
+            <br>
+            <br>
+            The text color of order fill drawings is set with the  <b>Chart Trading Order Line Text Color</b> color setting.
+        </li>
+        
+        <li>The   font, font size, and other font appearance settings, for order fills is controlled through the <b>Chart Order Fills</b> font in the <a href = "index5795.html?page=doc/GraphicsSettings.html#FontsAndText">Graphics Settings &gt;&gt; Font</a> tab of the Graphics Settings window.</li>
+    </ol>    
+
+    <section class="h3">
+        <h3 id="ChartOrderFillsDoNotDisplay">Chart Order Fills Do Not Display</h3>
+        <div class="member-link">[<a href="#ChartOrderFillsDoNotDisplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>  If after following the   <a href = "#DisplayingOrderFills">Displaying Order Fills on the Chart</a> instructions  and the order fills are still not displayed on the chart, then follow the below instructions. </p>
+        
+        <ol>
+         <li> There can be a delay with the display of order fills due to the time it takes to make a Trade Activity query for the order fill data. Refer to <a href = "#DelayWithDisplayingOrderFills_NoFillsDisplayed">Delay with Displaying Order Fills / No Fills Displayed</a>. </li>
+        
+        <li> Disable the <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadOrderFillsForCurrentDayOnly">Load Order Fills for Current Day Only</a> option in   <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>.</li>
+        
+        <li> Disable the <a href = "index4cf4.html?page=doc/ChartSettings.html#FilterInitialFillsWhichArePartOfExistingPosition">Filter Initial Fills Which are Part of Existing Position</a> option in   <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Trading</b>.</li>
+
+
+        <li> Set the   <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a> setting in <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> to where you want to start loading Order Fills from.</li>
+        
+        <li>  If you have set the  <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> setting for the chart, then the order fills will be loaded for  <em>this</em> Trade symbol and not the main symbol of the chart.
+         <br> <br>
+        It is possible that this symbol uses a different  Price Multiplier as compared to the main symbol of the chart.  If it does use a different Price Multiplier, then it is necessary to set its own multiplier through the <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbolPriceMultiplier">Trade and Current Quote Symbol Price Multiplier</a> setting.
+        </li>
+        </ol>
+    </section>
+    
+    <section class="h3">
+        <h3 id="OrderFillsOnChart_AccurateEntryExitState_FillMatching_PositionQuantities">Accurate Entry/Exit State, Fill Matching and Position Quantities</h3>
+        <div class="member-link">[<a href="#OrderFillsOnChart_AccurateEntryExitState_FillMatching_PositionQuantities">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>This section relates to order  fills displayed on the chart. For more information, refer to <a href="#DisplayingOrderFills">Displaying Order Fills on the Chart</a>.</p>
+
+        <p>It is essential to understand that the very first order fill which is loaded into a chart is always considered an <em>opening fill</em> and establishes the reported Position starting from a  Quantity of 0, and the subsequent order fills are considered opening or closing fills based on their Side and the existing Position Quantity. </p> 
+
+        <p>So if the first fill loaded in the chart is a Buy order fill with a quantity of 2, then that fill establishes a  Position  of quantity 2, completely  irrespective  of what the actual Position Quantity was just after that fill executed.</p>
+
+        <p>This is very important because it affects the order fill  markers on the chart and whether they are an  <em>Entry or Exit</em>.   It also affects the displayed Position Quantity with order fills.  </p>
+
+        <p> For information how order fills are matched and how the  Position Quantity is determined, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatsOpenQuantityFieldCalculation" target="_blank" rel="noopener noreferrer">Trade Statistics Open Quantity Field Calculation</a>. </p>
+
+        <p> There are three settings for controlling the starting Date-Time of  order fills loaded into the chart which is necessary to control the first order fill. The first fill needs  to be the opening fill of the start of a new  Trade Position.  These settings are in  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>. They are  <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime" >Order  Fills Start Date-Time</a>, <a href = "index4cf4.html?page=doc/ChartSettings.html#LoadOrderFillsForCurrentDayOnly">Load Order Fills for Current Day Only</a>, and <a href = "index4cf4.html?page=doc/ChartSettings.html#FilterInitialFillsWhichArePartOfExistingPosition">Filter Initial Fills Which Are Part of Existing Position</a>.  </p>
+
+        <p>The Position Quantity reported with the displayed order fill is the   <em>calculated  Position Quantity</em> based upon the first loaded order fill in the chart and does not necessarily represent the actual Position Quantity for the Symbol and Trade Account at that time. For more information, refer to  <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatsOpenQuantityFieldCalculation" target="_blank" rel="noopener noreferrer">Trade Statistics Open Quantity Field Calculation</a>.</p>
+
+        <p>If there is even a single missing order fill since the first fill loaded in the chart, then the open/close state of an order fill will not be interpreted correctly,  the Entry/Exit state of the  order fill will be  incorrect, and the Position Quantity displayed with the fills will be incorrect. To see what order fills are available for a particular Symbol and Trade Account, refer to   <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Viewing Historical Trade Activity</a>.</p>
+        
+        <p>To retrieve missing order fills, if possible, refer to the <a href = "index509f.html?page=doc/TradeActivityLog.php#AutomaticallyInsertingMissingOrderFills">Automatically Inserting Missing Order Fills</a> instructions. </p>
+
+        <p>If there are still missing order fills which you cannot retrieve, this can be  corrected by adjusting the  <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a> in the  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> to a point in time where subsequent to that point, there are no missing fills and at a point in time where the Trade Position was flat for the Symbol and Trade account of the chart. </p> 
+        
+        <p>You may have to really limit the order fills loaded into the chart by enabling  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt; Load Order Fills for Current Day Only</b>.  In this case, the start of the trading day is according to the Chart  <a href = "index4ec1.html?page=doc/SessionTimes.php" target="_blank" rel="noopener noreferrer">Session  Times</a>. </p>
+
+        <p>When <b>Load Order Fills for Current Day Only</b> is enabled,  the processing of the order fills will always consider the trading as if it was flat for the Symbol and Trade Account from the start of the day. </p> 
+
+        <p>The  <a href = "index4cf4.html?page=doc/ChartSettings.html#UseLastInFirstOutFillMatching">Use Last In First Out</a> Chart Setting  affects the connecting lines, if set to be displayed, of order fills displayed on the chart. </p>
+
+        <p>  When using  <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a>, the first fill loaded into a chart will always be the order fill that starts a new  Trade Position.  Any prior order fills  which are available will automatically get filtered out.   Additionally, for the supported Trading services which will give an accurate order fill display and connecting  lines, refer to <a href = "index1a23.html?page=doc/DailyProfitLossValue.html#ConsistentlyAccurateDailyProfitLossValue">Consistently Accurate Daily Profit/Loss Value</a>.</p>
+        
+        <p> Also refer to: </p>
+         <ul>
+          <li><a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingAndSettingTheStartDateTimeForATradesList">Understanding and Setting the Start Date-Time for a Trades List</a> </li>
+          
+          <li><a href = "index509f.html?page=doc/TradeActivityLog.php#AutomaticallyInsertingMissingOrderFills">Automatically Inserting Missing Order Fills</a> </li>
+         </ul>
+         
+         <p> When comparing the Trades on a chart through the displaying of the order fills, to the   Trades on the  <a href = "index509f.html?page=doc/TradeActivityLog.php#TradesTab">Trades</a> tab Trade Activity Log, you need to make sure the Trade Activity Log is using  the same <a href = "index509f.html?page=doc/TradeActivityLog.php#UnderstandingAndSettingTheStartDateTimeForATradesList">Start Date-Time</a> for the order fills. And also make sure that the <a href = "index4cf4.html?page=doc/ChartSettings.html#UseLastInFirstOutFillMatching">Use Last In First Out Fill Matching</a> and  <a href = "index509f.html?page=doc/TradeActivityLog.php#MenuCommands">Edit &gt;&gt; Use Last In First Out Fill Matching</a> settings match between the  Chart Settings and the Trade Activity Log.</p>
+         
+
+    </section>
+
+    <section class="h3">
+        <h3 id="DisplayingOrderFillArrowsOnly">Displaying Order Fill Arrows Only</h3>
+        <div class="member-link">[<a href="#DisplayingOrderFillArrowsOnly">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li>Select <b class = "menu_item">Global Settings  &gt;&gt; Chart Trade Settings</b>  on the menu.</li>
+            <li>Uncheck <b>Order Fills &gt;&gt; Display Fill Text </b>.</li>
+        </ol>            
+    </section>
+
+    <section class="h3">
+        <h3 id="OrderFillsOnContinuousFuturesContractCharts">Order Fills on Continuous Futures Contract Charts</h3>
+        <div class="member-link">[<a href="#OrderFillsOnContinuousFuturesContractCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When performing trading, trading is always for a specific symbol. In the case of  <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html">Continuous Futures Contract</a> charts, there can be more than one symbol loaded into the chart for the historical data in the chart. </p>
+
+        <p>Order fills are only recorded for and only displayed for the <em>current symbol</em> of the chart set in  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol &gt;&gt; Symbol</b>.  And not the historical symbols loaded in the chart.</p>
+
+
+        <p> If you want to see order fills for a different symbol, then you need to set the chart to that specific symbol. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="MisalignedOrderFillMarkers">Misaligned Order Fill Markers on Charts</h3>
+        <div class="member-link">[<a href="#MisalignedOrderFillMarkers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> During simulated trading or non-simulated trading, the timestamp of the order fills which occur in real time are derived from your local computer clock. The necessary time zone adjustments are always made.  If your computer clock is   incorrectly set, then these timestamps will be off.</p>
+
+        <p> During a chart replay, the time stamping of order fills is according to the bar in the chart where they occurred at. There can never be a problem with the time stamping of an order fill during a chart replay.   Unless there is a problem with the chart bar timestamps themselves.</p>
+
+        <p>If you notice that an order fill marker is not aligned to the correct Date-Time in the chart, then this  could be because your computer's clock is not set accurately. In this case, refer to <a href="index3e87.html?page=doc/helpdetails38.html">help topic 38</a>. </p>
+
+        <p> Additionally, any order fills downloaded from the Trading server potentially could have an incorrect timestamp but this is something that we have not known to be a problem. </p>
+
+        <p>For existing order fills  in the Trade Activity Log, it is possible to correct the timestamp of them by editing the <b>DateTime</b> field for them. Locate the order fill by following the instructions for <a href="index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Viewing Historical Trade Activity</a>.</p>
+
+        <p>Select that order fill  which has an incorrect timestamp and select  <b Class = "menu_item">Edit &gt;&gt; Edit Trade Activity Entry</b>.  Correct the Date/Time field. When editing the Date/Time field, the time zone is always according to the Global <a href = "index219e.html?page=doc/TimeZone.html" Target="_blank" rel="noopener noreferrer">Time Zone</a> setting.  For additional details, refer to  <a href="index509f.html?page=doc/TradeActivityLog.php#MenuCommands" >Trade Activity Menu Commands</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OrderFillConnectingLinesDoNotDisplay">Resolving Problem Where Order Fill Entry/Exit Connecting Lines Do Not Display</h3>
+        <div class="member-link">[<a href="#OrderFillConnectingLinesDoNotDisplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> This section explains the steps you need to follow to resolve a problem where the order fill connecting lines do not display between the entry and exit order fill markers on a chart or the colors are not as expected according to the color settings. </p>
+
+        <ol>
+            <li>Make sure the option for Entry/Exit Connecting Lines is enabled. This option is in <b Class = "menu_item">Global Settings &gt;&gt; Chart Trade Settings</b>. Enable the option <b>Order Fills &gt;&gt; Display Entry/Exit Connecting Lines</b>.</li>
+
+            <li>If you do not see any order fills displayed, then obviously there are not going to be any connecting lines. Therefore, in that case you first need to follow the instructions to <a href=" #DisplayingOrderFills" >Display Order Fills</a>. </li>
+
+            <li>Make sure the colors of the Entry/Exit Connecting Lines are not the same as the <b>Chart Background</b> color and check the Line Width and Line Style for the connecting lines. 
+                <br> <br>
+                To change the colors of the connecting lines, refer to the <a href="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php"  Target="_blank" rel="noopener noreferrer">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a> page. 
+                <br> <br>
+                The particular graphics objects that need to be set are <b>Colors and Widths &gt;&gt; Chart Trading Order Fills Entry/Exit Connecting Lines Primary</b> and  <b>Colors and Widths &gt;&gt;  Chart Trading Order Fills Entry/Exit Connecting Lines Secondary</b>. 
+                <br> <br>
+                Refer to the <a href="index2d5c.html?page=doc/ChartTradingCustomizingGraphics.php" Target="_blank" rel="noopener noreferrer">Customizing Fonts, Colors, Line Styles, and Widths for Chart Trading, Chart DOM, and Trade DOM</a> documentation for an understanding about these two settings and under what conditions they are used. </li>
+
+            <li>Before a connecting line will be displayed between two order fills, it is necessary that there is both an Entry and an Exit order fill  which have been matched.</li>
+
+            <li> Order fills are matched  First In First Out and according to a Date-Time ascending order.</li>
+
+            <li>Select <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b>. The <b> Order Fills Start Date-Time </b>  needs to be set to the date that you want the orders fills displayed from.  Keep in mind this needs to be at a particular Date-Time where the order fills start a new position.  </li>
+
+            <li> Finally, if you do not understand all of the above information and information linked to and/or you are looking for more help with this, understand that Sierra Chart support does <em>not</em> provide any support for this problem due to the inherent complexities of this which are not within our control since in the case of live trading, there are various aspects of this that are not within Sierra Chart control. </li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="DisplayingOrderFillTextTagOrNotes">Displaying Order Fill Text Tag or Notes</h3>
+        <div class="member-link">[<a href="#DisplayingOrderFillTextTagOrNotes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When an order is submitted from Sierra Chart it can have a short text note or tag applied to it.  This is done through the  <a href = "index9473.html?page=doc/TradeWindow.html#TextTag">Text Tag</a> setting of the Trade Window.  </p>
+
+        <p> When the order  fills, this text tag is also  set on the order fill data as well held in the  <a href = "index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a>.  By enabling  <b class="menu_item">Global Settings &gt;&gt; Chart Trade Settings</b> <b> &gt;&gt;   Order Fills  &gt;&gt; Display Note, this text tag will be displayed with the order fill displayed on a chart.</b> </p>
+    </section>    
+
+
+    <section class="h3">
+        <h3 id="DelayWithDisplayingOrderFills_NoFillsDisplayed">Delay with Displaying Order Fills / No Fills Displayed</h3>
+        <div class="member-link">[<a href="#DelayWithDisplayingOrderFills_NoFillsDisplayed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When enabling   <b class="menu_item">Trade &gt;&gt; Show Order Fills</b>, there is a query made on a background thread for the order fills to display on the chart.  Until this query completes, the order fills will not be displayed on the chart.</p>
+
+        <p>This query normally will be completed in less than a second but it could take longer.   If there is a huge amount of trade activity which has to be processed, perhaps this could take an entire minute or longer.  A long query time is a very unusual case though and in that case you should delete old or excessive Trade Activity. Refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#ClearingTradeActivityData">Clearing Trade Activity Data</a>.</p>
+
+        <p>  There can also be multiple outstanding trade activity queries which need to be processed. Only one can be processed at a time and they are placed in a queue.  So  if there are several outstanding queries that still have to be done,  then doing something like enabling the display of order fills on the chart, will not result in the immediate display  of the fills. The queries ahead of the query needed for those fills  needs to complete and then the query for those fills needs to complete. You can see the status of the completed queries in the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b>.</p>
+
+        <p> For complete information, refer to  <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeActivityNotDisplayingOrClearing_ImprovingTradeActivityQueryPerformance">Trade Activity Not Displaying or Clearing (Improving Trade Activity Query Performance)</a>.</p>       
+        
+        
+       <p>If you still need further  help with the display of order fills,  then  follow through the below instructions.</p>
+       
+       <ol>
+            <li>See if the order fills exist in the  <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Trade Activity Log</a>.  If they do not exist there, then you will not see them on the chart.</li>
+            
+            <li> Look at the Symbol for the fill in the Trade Activity Log. For the fill to be displayed on the chart, the symbol of the fill must match exactly the <a href = "index4cf4.html?page=doc/ChartSettings.html#Symbol">Symbol</a> of the chart.  Or   it must match the <b>Trade and Current Quote Symbol</b> for the chart if using that symbol in the chart.</li>
+
+            <li>Look at the Trade Account for the fill in the Trade Activity Log. For the fill to be displayed on the chart, the Trade Account of the fill must match exactly the <a href = "index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Trade Account</a> of the chart. </li>
+           
+            <li>For further help, refer to <a href="#DisplayingOrderFills">Displaying Order Fills on the Chart</a>.</li>
+        </ol>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="ChartOrderFills_AutomaticallyScrollingChartToOrderFills">Automatically Scrolling Chart to Order Fills</h3>
+        <div class="member-link">[<a href="#ChartOrderFills_AutomaticallyScrollingChartToOrderFills">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> It is supported to automatically scroll the chart to the next or previous  order fill.  Refer to <a href = "index96f7.html?page=doc/TradeMenu.html#GotoNextChartFill">Goto Next Chart Fill</a> and <a href = "index96f7.html?page=doc/TradeMenu.html#GotoPreviousChartFill">Goto Previous Chart Fill</a>.</p>
+    </section>
+</section>
+
+
+<section class="h2">
+    <h2 id="DisplayingOrdersPositionFillsOtherChart">Displaying Orders, Position, and Order Fills on Other Charts</h2>
+    <div class="member-link">[<a href="#DisplayingOrdersPositionFillsOtherChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> To display the Orders, the Trade Position and the Order Fills that have originated from a particular chart or Trade DOM, on another chart, follow these instructions:</p>
+    <ol>
+        <li> Go to the other chart. </li>
+
+        <li> Make sure that other chart is set to the same symbol as the chart the orders originated from. This is critical. </li>
+
+        <li> Enable  <b class = "menu_item">Trade &gt;&gt;  Show Orders and Position</b>.</li>
+
+        <li>  Enable  <b class = "menu_item">Trade &gt;&gt;  Show Order Fills</b>. </li>
+
+        <li> Open the Trade Window for the chart by selecting   <b class = "menu_item">Trade &gt;&gt;  Open Trade Window for Chart</b>.</li>
+
+        <li> Select the same Trade Account on the Trade Window for the chart, as the one the orders originated from.   Refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" >Selecting Trade Account</a>.</li>
+
+
+    </ol>
+</section>
+
+
+<hr><p>*Last modified Tuesday, 30th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChartTrading.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:49:51 GMT -->
+</html>  

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:30:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1679987778') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails1.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Data/Trading Service Connection and Symbol Issues -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexf71c.html?page=doc/helpdetails1.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#GettingStarted">(Table of Contents) Getting Started</a> &gt;&gt; <a  href="indexf71c.html?page=doc/helpdetails1.html">Data/Trading Service Connection and Symbol Issues</a></h4> </div>     <h1 class="PageName">Data/Trading Service Connection and Symbol Issues</h1>
+
+<ul>
+    <li><a href="#DataOrTradingServiceSetupIssue">1.1. Data or Trading Service Setup Issue. Unable to Connect to Data or Trade Server.</a></li>
+    <li><a href="#NetworkCommunicationOrServerProblem">1.2. Network Communication or Server Problem</a>
+        <ul>
+            <li><a href="#LostConnectionsToServer">Lost Connections to Server</a></li>
+        </ul>
+    </li>
+    <li><a href="#Symbols">1.3. Symbols</a>
+		<ul>
+		    <li><a href="#SymbolNotAuthorizedServiceAccount">Symbol Not Authorized On Data/Trading Service Account</a></li>
+		</ul>
+	</li>
+    <li><a href="#IntradayChartNotUpdating">1.4. Intraday Chart Not Updating</a></li>
+    <li><a href="#ContactingSupportForConnectionHelp">1.5. Contacting Support for Connection Help</a></li>
+    <li><a href="#InternetPortsAndIPAddressesUsedBySierraChartDataServices">1.6. Internet Ports and IP Addresses used by Sierra Chart Data Services</a>
+		<ul>
+		    <li><a href="#InternetPorts">Internet Ports</a></li>
+		    <li><a href="#IPAddresses">IP Addresses</a></li>
+		</ul>
+	</li>
+    <li><a href="#UnableToConnectBecauseServerIsNotAvailableOverTheWeekend">1.7. Unable to Connect Because Server is Not Available over the Weekend</a></li>
+    <li><a href="#CheckingConnectionQualityToRemoteServerByUsingPing">1.8. Checking Connection Quality to Remote Server by Using Ping</a></li>
+</ul>
+
+<hr>
+<section class="h2">
+    <h2 id="DataOrTradingServiceSetupIssue">1.1. Data or Trading Service Setup Issue. Unable to Connect to Data or Trade Server.</h2>
+    <div class="member-link">[<a href="#DataOrTradingServiceSetupIssue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To get charts or quotes and for them to continuously update, Sierra Chart needs to be properly set up to use a particular Data or Trading service and be connected to that service.</p>
+
+    <p>In the case of some services like <b>SC Data - All Services</b>, there is no special set up required to receive historical data and real-time Forex and CFD data.</p>
+
+    <p><b class="menu_item">Select File &gt;&gt; Connect to Data Feed</b> on the menu to connect to the selected Data/Trade service. The selected service is set through <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service</b>.</p>
+
+    <p> After connecting to the Data/Trade server and the Message Log displays <b>Your current service package does not support this function</b>, then refer to <a href="index11eb.html?page=doc/helpdetails57.html#ServicePackageNotSupportFunction" target="_blank" rel="noopener noreferrer">help topic 57</a> for further instructions on what to do in this case.</p>
+
+    <p> If you are unable to make a connection to the Data/Trade server, the Sierra Chart Message Log will display a message indicating this error and the reason. To open the Message Log if it is not already visible, select <b class="menu_item">Window &gt;&gt; Message Log </b>. Refer to the image below of an example of the type of message you will see relating to an error connecting to the Data/Trade server.</p>
+
+    <div style="text-align: center;"><a href="../images/datatradeserviceconnectionerror.png" rel="lightbox"><img src="../images/datatradeserviceconnectionerror.png" alt="" width="550" class="screenshot" loading="lazy"></a></div>
+
+    <p>Depending upon the Data or Trading service you are using, the connection error reason may or may not be very descriptive. </p>
+
+    <p>If you have the <b>Reconnect on Failure</b> option enabled in the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> window, Sierra Chart will try to reconnect to the Data/Trade server if it was unable to. </p>
+
+    <p>To manually retry connecting to the Data/Trade server at any time, select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu. You can also stop connection attempts by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> on the menu. </p>
+
+    <p>If you are unable to connect to the Data/Trade server, then there could be a communication problem to the server, a problem with the server, or you may not be properly set up to use the Data or Trading service. For example, <em>you may not have an account with the Data or Trading service you are trying to use</em>. </p>
+
+    <p>Whatever the reason for the connection problem, you may not be able to get new charts or quotes and existing charts will not update.</p>
+
+
+    <p>In the case where you do not have an account with the particular Data or Trading service you are trying to use, select <b Class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. Set the <b>Service</b> to <b>SC Data-All Services</b> and then select <b Class="menu_item">File &gt;&gt; Connect to Data Feed</b>. To know what symbols real-time data can be received for with that service without using the <b>Sierra Chart Exchange Data Feed</b>, refer to <a href="index7904.html?page=doc/helpdetails59.php#WhatDataIsRealTime">What Data Is Real-Time</a>. </p>
+
+    <p>Go to the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data and Trading Services</a> page and follow the setup instructions for the Data or Trading service you want to use to get properly set up to use that service if you are unable to connect to the data/trade server due to a set up problem. </p>
+
+    <p>If you are unable to connect to the data/trade server due to a communication or server problem, refer to <a href="#NetworkCommunicationOrServerProblem">help topic 1.2</a>.</p>
+
+    <p>If you <em>are able to connect</em> to the data/trade server, however you are using an unknown or improperly formatted symbol, or you are connected to the wrong service, then you also will not get a chart, quote or updates. In this case, refer to <b><a href="#Symbols">help topic 1.3</a> </b> for further information about symbols.</p>
+
+    <p>Finally, the next step is to contact Sierra Chart support for help with connection problems. Refer to <a href="#ContactingSupportForConnectionHelp">Contacting Support for Connection Help</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="NetworkCommunicationOrServerProblem">1.2. Network Communication or Server Problem</h2>
+    <div class="member-link">[<a href="#NetworkCommunicationOrServerProblem">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have followed all the Setup Instructions to connect to the Data or Trading service you are using and Sierra Chart continues to report in the <b class="menu_item">Window &gt;&gt; Message Log</b> it cannot connect, it cannot Logon, there is a connection error, or there is a <em>Timeout</em> connecting to the Data or Trading server, then this can be caused by one of the reasons explained in the list below.</p>
+
+    <p>In addition to other error and connection related messages, you will see this common message in the Message Log which indicates a problem connecting: <em><b>Error connecting to Data or Trading service</b></em>. </p>
+
+    <p> Below are examples of some network connection error messages you may receive in the Message Log when connecting to the server or when the connection to the server is lost. </p>
+
+    <p> If the message you are receiving relates to a historical Intraday data download, then refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#ErrorDownloadingDataSCHistoricalDataServer">Error when Downloading Historical Intraday Data from the Sierra Chart Historical Data Server</a> instead. </p>
+
+
+    <div class="MessageLog">(Service Name/Socket Name) | Windows error code 10060: A connection attempt failed because the connected party did not properly respond after a period of time or established connection failed because connected host has failed to respond.</div>
+
+    <br><br>
+
+    <div class="MessageLog"> (Service Name/Socket Name) | Close event error. Windows error code 10053: An established connection was aborted by the software in your host machine.</div>
+
+    <br><br>
+
+    <div class="MessageLog"> (Service Name/Socket Name) | Socket send error. Windows error code 10054: An existing connection was forcibly closed by the remote host.</div>
+
+    <br><br>
+
+    <div class="MessageLog"> (Service Name/Socket Name) | Shutdown error. Windows error code 10054: An existing connection was forcibly closed by the remote host.</div>
+
+    <br><br>
+
+    <div class="MessageLog">(Service Name/Socket Name) | Socket gracefully closed by remote side.</div>
+
+    <br> <br>
+    <div class="MessageLog">(Service Name/Socket Name) | Connect event error. Windows error code 10013: An attempt was made to access a socket in a way forbidden by its access permissions.</div>
+    <br> <br>
+
+    <div class="MessageLog">(Service Name/Socket Name) | Connecting to the server ds7.sierracharts.com. Port 443 <br>
+        Error getting address info for ds7.sierracharts.com. Windows error code 11001: <b> No such host is known</b>.
+    </div>
+    <br> <br>
+    <div class="MessageLog"> (Service Name/Socket Name) | Using previously cached IP address because unable to resolve domain name.</div>
+    <br> <br>
+    <div class="MessageLog"> (Service Name/Socket Name) | Connect event error. Windows error code 10051: A socket operation was attempted to an unreachable network.</div>
+
+
+    <ol>
+
+
+        <li>A firewall on your computer is blocking Internet access from Sierra Chart. Usually the Windows firewall is not the source of a problem. Although, you could try temporarily disabling the Windows firewall just to be certain.
+            <br> <br>
+            <em>If you have updated Sierra Chart to a newer version, then some firewalls may block Internet access (this is a common issue with some firewalls)</em>. In this case, what you need to do is unblock Sierra Chart from the firewall connection rules list in that firewall program. If that does not help, uninstall your firewall and restart your computer.
+
+            Sierra Chart support cannot help with firewall problems. Sierra Chart needs to be provided full Internet access to establish connections to Data and Trading services.
+            <br>
+            <br>
+            What we recommend doing to rule out a firewall as the source of the problem is to restart your computer into <b>Windows Safe Mode with Network support</b>. This will not load any firewall software.
+            <br> <br>
+            If you need more help solving a firewall problem on your computer blocking Sierra Chart from connecting to the servers it needs to connect to, you will need to contact someone who can help you with this problem on your computer or hire a competent computer expert to help you with this. Sierra Chart support does not provide this service. Sierra Chart support can only tell you about what
+            <a href="#InternetPortsAndIPAddressesUsedBySierraChartDataServices">ports and addresses</a>, it needs to connect to. If a firewall is blocking the connection, the only other advice you will get from Sierra Chart support is to remove the firewall from your computer totally and completely and do not install it again for the very simple reason that we do not support other software on a user's computer, and we want to provide a fast resolution to the problem.
+        </li>
+
+        <li>If you are receiving HTTP errors in the <b class="menu_item">Window &gt;&gt; Message Log</b> like these: <b>HTTPSendRequest Failed</b> or <b> HTTP request ## returned the following error</b>, then refer to the <a href="index7b49.html?page=doc/HTTPCommunicationErrors.php">HTTP Communication Errors</a> page.</li>
+
+        <li>Your internal network is blocking connection on the ports required to connect to the Data and Trading servers. If you are on a work network, contact your network administrator to allow Sierra Chart access to the servers. You will need to contact the provider of the Data or Trading service you are using Sierra Chart with to find out the specific IP addresses and ports used. The Sierra Chart <b class="menu_item">Window &gt;&gt; Message Log</b> may display server addresses and ports used for the particular server or servers being connected to.
+        </li>
+
+        <li>The Domain Name Service on your computer or with your ISP is not functioning properly. The error message in the <b class="menu_item">Window &gt;&gt; Message Log</b> would contain the text: <b><em>No such host is known</em></b> or you may get a message similar to the following: <b> Windows error code 11002: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server.</b>
+            <br> <br>
+            In this case you may want to try restarting your computer or going to the command line and entering the following: <b><em>ipconfig /flushdns</em></b>.
+        </li>
+
+        <li>The Data or Trading server is temporarily unavailable. With some services, the Data or Trading server may be unavailable during end of day processing or during the weekend.</li>
+
+        <li> The Data or Trading server is temporarily unavailable. In this case contact your Data or Trading service to find out if this is the case.</li>
+
+        <li>There is a communication problem between Sierra Chart and the Data or Trading server due a general Internet issue that is outside of your computer or local network. In this case you may want to contact your ISP or wait for the problem to clear and be resolved. As the Internet has grown to be more and more reliable, this is less likely to be an issue. This was more of a potential problem in the past.</li>
+
+        <li>There is a communication problem between Sierra Chart and the Data or Trading server due to a network hardware or hardware configuration problem on your side. Try a different Internet connection as part of troubleshooting this problem. Also check all of your computer networking hardware. Try replacing any routers, switches and network adapters. And also try a different computer.</li>
+
+        <li>If you see a message like the following in the Message Log: <b>Socket error on address resolution: Windows error code 11004: The requested name is valid, but no data of the requested type was found. </b>, then this indicates your computer is not able to properly resolve server addresses. The recommendation in this case is to restart your computer, start Sierra Chart, and try connecting again with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.
+        </li>
+
+    </ol>
+
+    <section class="h3">
+        <h3 id="LostConnectionsToServer">Lost Connections to Server</h3>
+        <div class="member-link">[<a href="#LostConnectionsToServer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Another connectivity problem can be that the connection is successful to a Data or Trading server but you lose the connection often.</p>
+
+        <p>There can be various errors. Some of them would be: </p>
+
+        <div class="MessageLog"> (Service Name/Socket Name) | Close event error. Windows error code 10053: An established connection was aborted by the software in your host machine.</div>
+        <div class="MessageLog"> (Service Name/Socket Name) | There has been no activity on the network socket for 40 seconds. Will reconnect.</div>
+
+
+        <p> All of the reasons given in the parent section above can also be the cause of this condition including firewall/security software on your system. </p>
+
+
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Symbols">1.3. Symbols</h2>
+    <div class="member-link">[<a href="#Symbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/symbolunknown.png" rel="lightbox"><img src="../images/symbolunknown.png" class="WideFloatRight" alt="Symbol Unknown"></a>
+
+    <p>If you receive a <b>"Symbol Error: <i>[Symbol] </i> is unknown, unavailable, or improperly formatted"</b> message in the Sierra Chart <b class="menu_item">Window &gt;&gt; Message Log</b> for a symbol, or you see the message <em><b>Symbol is unknown</b></em> on the chart window, then you are using an unknown, unavailable on your Data or Trading service account, or improperly formatted symbol in a chart, Trade DOM, or Quote Board. </p>
+
+    <p> In some cases you will not receive this message even when you are still using an invalid symbol. If Sierra Chart support has told you are using an invalid symbol for the particular Data or Trading service being used, then you are even if you do not receive that message. </p>
+
+    <p> When using an invalid symbol, you will not get a chart, quote or real-time updates for that symbol. To open the Message Log to see this message, if the Message Log is not already open, select <b class="menu_item">Window &gt;&gt; Message Log</b> on the menu. If the Message Log window is not visible, select <b class="menu_item">Window &gt;&gt; Reset Windows</b> and open the Message Log again.</p>
+
+    <p>The message <em><b>Symbol is unknown</b></em> will be displayed on the chart window for an unknown, unavailable or improperly formatted symbol, for a period of 30 seconds. </p>
+
+    <p class="GeneralBackgroundHighlightLight">To find the available symbols for the <a href = "index2c7f.html?page=doc/DataSourceSettings.php#CurrentSelectedService">Current Selected  Data/Trading Service</a>  you are using, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. </p>
+
+    <p class="GeneralBackgroundHighlightLight">If that list is blank, <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a> to get the Symbol Settings for the currently selected Data/Trading service.</p>
+
+    <p>Each of the supported Data and Trading services has their own symbology. Therefore, a symbol for one particular service may not match with another service and will not provide historical and real-time data. This can be a problem when sharing a Chartbook because the Chartbook may use a symbol which is correct for one particular Data/Trading service but is not correct for the service being used by the user receiving the Chartbook. This can be solved by simply changing the symbol of existing charts which is explained further below.</p>
+
+    <p>The fastest solution to translate symbols in most common cases is to use the <b class="menu_item"><a href="indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService">Edit &gt;&gt; Translate Symbols to Current Service</a></b> command. If that resolves the issue with a chart being blank or not receiving current data, then stop here.</p>
+
+    <p> Not all symbols that are supported by the Data/Trading service you are using will be listed in the <b> Find Symbol </b> window. For example, stock symbols will not be listed and less common futures markets will not be listed.</p>
+
+    <p>In these cases, manually type the symbol into the <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Selected Symbol</b> box and press the appropriate <b>Open*</b> button depending upon what type of window you want to open. </p>
+
+    <p> To change the futures symbols of the charts in open Chartbooks and open Quote Boards automatically to the symbol format used by the current Data/Trading Service, select <b class="menu_item"><a href="indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService">Edit &gt;&gt; Translate Symbols to Current Service</a></b>. This is only going to work for the most common futures symbols. If this does not translate a particular futures symbol, let <a href="https://www.sierrachart.com/SupportBoard.php?ForumID=0">Sierra Chart Support</a> know the symbol and the particular Data/Trade Service you are using.</p>
+
+    <p> To change the symbol of an existing chart or Trade DOM to the correct symbol for the Data or Trading service you are using, go to the chart and select <b Class="menu_item">Chart &gt;&gt; Chart Settings</b>. Beside the <b>Symbol</b> box on the <b>Main Settings</b> tab, press the <b>Find</b> button, select the symbol from the list and press <b>OK</b> or enter the symbol in the <b>Symbol</b> box. For other methods and detailed instructions, refer to <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#ChangingChartSymbol" target="_blank" rel="noopener noreferrer">Changing the Symbol of a Chart or Trade DOM</a>.</p>
+
+
+    <p>One other possible reason for a symbol error message is because you are connected to the <em>wrong Data or Trading service</em>. For example, by default Sierra Chart is configured to work with the <b>Sierra Chart Real-Time and Historical Forex/CFD Data Service</b>, <b>Sierra Chart Market Statistics Data Feed</b>, <b>Cryptocurrencies Data Services</b>, <b>Delayed Exchange Data Feed</b>, <b>Denali Exchange Data Feed</b>, and the <b>Sierra Chart Historical Data Service</b>. The <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service</b> in Sierra Chart for these services combined is listed as <b>SC Data - All Services</b>. </p>
+
+    <p>If these are not the services you want to use or you do want to use these services and the current <b>Service</b> is set to <b>SC Data - All Services</b>, then you need to set Sierra Chart to work with the Data or Trading Service you want to use. </p>
+
+    <p> Go to the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services" target="_blank" rel="noopener noreferrer">Data and Trading Services</a> page and follow the setup instructions for the Data or Trading service you want to use to get properly set up to use that service. The Data or Trading service for Sierra Chart to use is set through the <b Class="menu_item">Global
+            Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service</b> setting.</p>
+
+    <section class="h3">
+        <h3 id="SymbolNotAuthorizedServiceAccount">Symbol Not Authorized On Data/Trading Service Account</h3>
+        <div class="member-link">[<a href="#SymbolNotAuthorizedServiceAccount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>One reason you receive a <b>Symbol is Unknown</b> message on the chart for a symbol is because the particular symbol is not authorized on the Data or Trading services account you are using Sierra Chart with. You will need to contact your Data or Trading service provider and tell them particular symbols you want to have authorized on your account.</p>
+
+        <p> This is especially true with CME (Chicago Mercantile Exchange) symbols because the CME has begun to charge exchange fees for their market data for all users, effective as of 2015-01-01. </p>
+
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="IntradayChartNotUpdating">1.4. Intraday Chart Not Updating</h2>
+    <div class="member-link">[<a href="#IntradayChartNotUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you are able to connect to the Data and/or Trade server and you are using the correct symbol, however an Intraday chart is blank or is not updating, then refer to <a href="index581c.html?page=doc/helpdetails3.html">help topic 3</a> for additional items to check.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ContactingSupportForConnectionHelp">1.5. Contacting Support for Connection Help</h2>
+    <div class="member-link">[<a href="#ContactingSupportForConnectionHelp">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have followed all the setup instructions to connect to the Data or Trading service you want to use and Sierra Chart continues to report it cannot connect or log on to the Data/Trade server, then you will need to contact Sierra Chart support for additional help. </p>
+
+    <p>To do this, follow the <a href="index6ebb.html?page=doc/PostingInformation.php#HowToPost" target="_blank" rel="noopener noreferrer">Support Board Posting Instructions</a>. </p>
+
+    <p>We will need to see a copy of the Message Log. To provide that, refer to the instructions to <a href="index6ebb.html?page=doc/PostingInformation.php#MessageLog" Target="_blank" rel="noopener noreferrer">post your Message Log</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="InternetPortsAndIPAddressesUsedBySierraChartDataServices">1.6. Internet Ports and IP Addresses used by Sierra Chart Data Services</h2>
+    <div class="member-link">[<a href="#InternetPortsAndIPAddressesUsedBySierraChartDataServices">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The information in this section refers to Sierra Chart provided Data and Trading services only. It does not apply to externally provided Data or Trading services. </p>
+
+    <p>The port numbers and IP addresses for <em>non</em> Sierra Chart services in most cases are displayed in the <b class="menu_item">Window &gt;&gt; Message Log</b> when Sierra Chart is connecting to those services, but not in all cases. </p>
+
+    <p>You will see messages similar to "<b>Connecting to (server address:port)</b>" in the Message Log. </p>
+
+    <section class="h3">
+        <h3 id="InternetPorts">Internet Ports</h3>
+        <div class="member-link">[<a href="#InternetPorts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For Sierra Chart provided real-time data services, the Internet ports are <b>443, 10048, 10047, 10045, 10060, 10043, 10042</b>. </p>
+
+        <p>There is also the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; SC Server Settings &gt;&gt; Always use Port 443 for Real-Time Data</b> setting. However, when using data compression, this port will not be used.</p>
+
+        <p>Depending upon the particular symbol, and the selected Data or Trading service, historical Daily data from Sierra Chart data servers will be downloaded on ports <b>80</b>, <b>10149</b>, <b>10150</b>, or <b>10159</b>.</p>
+
+        <p>For most of the supported Data and Trading services historical Intraday data is downloaded on port <b>10149</b> or <b>10150</b>. However, port 80 can also be used. More information about this can be found in the <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#ErrorDownloadingDataSCHistoricalDataServer">Error when Downloading Historical Intraday Data from the Sierra Chart Historical Data Server</a> section.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="IPAddresses">IP Addresses</h3>
+        <div class="member-link">[<a href="#IPAddresses">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When using the Sierra Chart provided data services and order routing services, the following are the server addresses. The IP addresses can be looked up from these domain names:</p>
+
+        <ul>
+            <li><b>ds1.sierracharts.com</b>: Sierra Chart Exchange Data Feed</li>
+            <li><b>ds3.sierracharts.com</b></li>
+            <li><b>ds4.sierracharts.com</b></li>
+            <li><b>ds5.sierracharts.com</b></li>
+            <li><b>ds7.sierracharts.com</b>: Sierra Chart Exchange Data Feed</li>
+            <li><b>ds8.sierracharts.com</b></li>
+            <li><b>ds10.sierracharts.com</b></li>
+            <li><b>ds11.sierracharts.com</b></li>
+            <li><b>ds12.sierracharts.com</b></li>
+            <li><b>ds14.sierracharts.com</b></li>
+            <li><b>ds21.sierracharts.com</b>: Denali Exchange Data Feed</li>
+            <li><b>ds22.sierracharts.com</b>: Denali Exchange Data Feed</li>
+            <li><b>ds23.sierracharts.com</b>: Denali Exchange Data Feed</li>
+            <li><b>ds24.sierracharts.com</b>: Denali Exchange Data Feed</li>
+            <li><b>ds25.sierracharts.com</b>: Denali Exchange Data Feed</li>
+            <li><b>futurestrading1.sierracharts.com</b>: SC Futures Order Routing Server 1</li>
+            <li><b>futurestrading2.sierracharts.com</b>: SC Futures Order Routing Server 2</li>
+            <li><b>futurestrading3.sierracharts.com</b>: SC Futures Order Routing Server 3</li>
+            <li><b>futurestrading4.sierracharts.com</b>: SC Futures Order Routing Server 4</li>
+            <li><b>futurestrading5.sierracharts.com</b>: SC Futures Order Routing Server 5</li>
+            <li><b>futurestrading6.sierracharts.com</b>: SC Futures Order Routing Server 6</li>
+                        
+            <li><b>futurestrading10.sierracharts.com</b>: SC Futures Order Routing Server 10</li>
+            <li><b>futurestrading11.sierracharts.com</b>: SC Futures Order Routing Server 11</li>
+            <li><b>futurestrading12.sierracharts.com</b>: SC Futures Order Routing Server 12</li>
+            <li><b>futurestrading13.sierracharts.com</b>: SC Futures Order Routing Server 13</li>
+            <li><b>futurestrading18.sierracharts.com</b>: SC Futures Order Routing Server 18</li>
+            
+            <li><b>futurestrading14.sierracharts.com</b>: SC Futures Order Routing Server 14</li>
+            <li><b>futurestrading15.sierracharts.com</b>: SC Futures Order Routing Server 15</li>
+            <li><b>futurestrading16.sierracharts.com</b>: SC Futures Order Routing Server 16</li>
+            <li><b>futurestrading17.sierracharts.com</b>: SC Futures Order Routing Server 17</li>
+            <li><b>futurestrading19.sierracharts.com</b>: SC Futures Order Routing Server 19</li>
+            <li><b>lmaxtrade2.sierracharts.com</b>: LMAX Trading </li>
+            <li><b>lmaxtrade3.sierracharts.com</b>: LMAX Trading </li>
+            <li><b>lmaxhd.sierracharts.com</b>: LMAX Trading </li>
+      
+        </ul>
+
+        <p>The IP address of <em>www.sierrachart.com</em> is used by Sierra Chart for services other than market data services.</p>
+
+        <p>The IP address of <em>ds01.ddfplus.com</em> is used by Sierra Chart for historical daily price data.</p>
+    </section>
+</section>
+
+
+<section class="h2">
+    <h2 id="UnableToConnectBecauseServerIsNotAvailableOverTheWeekend">1.7. Unable to Connect Because Server is Not Available over the Weekend</h2>
+    <div class="member-link">[<a href="#UnableToConnectBecauseServerIsNotAvailableOverTheWeekend">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Some of the supported Trading services do not make their market data and trading servers available over the weekend.</p>
+
+    <p>This is true of many of the supported external Trading service.</p>
+
+    <p> All of the Data services and order routing Trading services directly provided by Sierra Chart are available 24 hours a day 7 days a week without exception. So there is  <em>never a problem connecting to them on the weekend</em>. These services are expected to replace all other services in 2022. The services we are referring to are all of the Sierra Chart Data and Trading services with Sierra Chart in their name. Refer to the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Supported Data and Trading Services</a> list. </p>
+    
+    <p>This also includes  the Sierra Chart <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Futures Order Routing Service</a>  which we recommend users change to as soon as possible from services like  Transact, Gain Capital CTS, CQG, Rithmic, Interactive Brokers, and the older  SC/TT based order routing service, if it provides order routing for the exchanges that you require.</p>
+
+    <p>A weekend is defined as Friday evening, all day Saturday, and Sunday morning and afternoon. The weekend is considered to end on Sunday evening.</p>
+
+    <p>What this means is that Sierra Chart will not be able to connect to those  servers from external Trading services over the weekend if they do not allow it. You will see a message in the Sierra Chart Message Log indicating that it cannot connect to the server, usually because the server refused the connection.</p>
+
+    <p class="GeneralBackgroundHighlight">Do <em>not</em> contact Sierra Chart support about these kinds of connection problems over the weekend.   We do not need this unnecessary burden. We do not need to hear about connection problems to external services that we do not control and have no control over.  What you instead need to do is solve the problem yourself by changing to the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Futures Order Routing Service</a>!</p>
+</section>
+
+<section class="h2">
+    <h2 id="CheckingConnectionQualityToRemoteServerByUsingPing">1.8. Checking Connection Quality to Remote Server by Using Ping</h2>
+    <div class="member-link">[<a href="#CheckingConnectionQualityToRemoteServerByUsingPing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart supports numerous external Data and Trading services. In most cases it establishes a direct network connection to the remote server of those services. The server address name or IP address is shown in the Message Log (<b Class="menu_item">Window &gt;&gt; Message Log</b>) when the connection to the server is being established. Look in the Message Log to see the server address name. </p>
+
+    <p>An example: <em>SC Exchange Data | Connecting to the server <b>ds1.sierracharts.com</b>. Port 443</em>. In this line <b>ds1.sierracharts.com</b> is the server address name. </p>
+
+    <p>A useful way to check the quality of the connectivity between your computer and the server being connected to, is by using the network Ping command from the operating system command line. You will use the server address name with the Ping command.</p>
+
+    <p>Refer to <a href="https://www.wikihow.com/Ping-in-Windows-XP" target="_blank" rel="noopener noreferrer">this Internet article</a> for instructions to use Ping.</p>
+
+    <p>If you notice significant packet loss, then this indicates the connection quality to the remote server is not good.</p>
+</section>
+
+
+<hr><p>*Last modified Tuesday, 28th March, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:30:12 GMT -->
+</html>  

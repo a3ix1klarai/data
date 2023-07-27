@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails47.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105651') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails47.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 47: Number Of Trades, Volume or Range Bar Charts Do Not Match Setting or Are Not Accurate or Are Inconsistent -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index9bf5.html?page=doc/helpdetails47.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="index9bf5.html?page=doc/helpdetails47.html">Help topic 47: Number Of Trades, Volume or Range Bar Charts Do Not Match Setting or Are Not Accurate or Are Inconsistent</a></h4> </div>     <h1 class="PageName">Number Of Trades, Volume or Range Bar Charts Do Not Match Setting or Are Not Accurate or Are Inconsistent</h1>
+
+<ul>
+    <li><a href="#GeneralInformation">General Information and Related Settings</a></li>
+    <li><a href="#NumberofTradesorVolumeData">Effect of Missing Number of Trades or Volume Data</a>
+		<ul>
+		    <li><a href="#EliminatingTheRelianceOnDaysMinutesSeconds">Eliminating the Reliance on Days-Minutes-Seconds</a></li>
+		</ul>
+	</li>
+    <li><a href="#VariationBetweenNumberOfTrades">Variation Between Number Of Trades Bar Charts</a></li>
+    <li><a href="#LastBarInChartExceedingRange">Last Bar in Chart Exceeding Range</a></li>
+    <li><a href="#RepeatingBars">Repeating Bars with Number Of Trades or Volume Bars</a></li>
+    <li><a href="#RecommendedServices">Recommended Services</a></li>
+    <li><a href="#PriceDisplayFormat">How Price Display Format Affects Range Bar Charts</a></li>
+    <li><a href="#RangeBarOpenPrice">Why the Open Value of a Bar Can Be Within the Range of the Prior Bar for Range Charts</a></li>
+    <li><a href="#RangeBarsNotHaveSpecifiedRange">Range Bars Do Not Have Specified Range</a></li>
+
+    <li><a href="#PriceChangesBarsNotAccurate">Price Changes Bars Not Accurate</a></li>
+    <li><a href="#DifferencesDueToChartDuplication">Differences Due to Chart Duplication  or Reloading</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="GeneralInformation">General Information and Related Settings</h2>
+    <div class="member-link">[<a href="#GeneralInformation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart supports data from multiple Data and Trading services. The historical Intraday data and data quality from these services differs among them. The data from a service affects the accuracy of Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars in a chart.  </p>
+
+    <p>There are also some software settings that are necessary to ensure accurate Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars in a chart. </p>
+
+    <p>This help topic is about the accuracy and consistency of Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars in a chart  and when comparing them to other charts within the same instance of Sierra Chart, other instances of Sierra Chart, or different services.</p>
+
+    <p>This help topic is long, although it explains all of this.</p>
+
+    <p>For accurate charts of these types,  follow the instructions below:</p>
+
+    <ol>
+        <li>Select <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b>.</li>
+
+        <li>All of the settings in the <b>Intraday Chart Bar Period</b> frame need to be correct. If you are comparing to another chart of the same Symbol and also uses the same Bar Period Type (Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars), they need to match that other chart.</li>
+
+        <li>All of the settings in the <a href="index4ec1.html?page=doc/SessionTimes.php" target="_blank" rel="noopener noreferrer">Session Times</a> frame need to be correct. If you are comparing to another chart of the same Symbol and also uses the same Bar Period Type, they need to match that other chart.</li>
+
+        <li>Enable <b>New Bar at Session Start</b> on the <b> Main Settings </b> tab, unless based upon the Number of Trades, Volume Or Range setting,  there are bars in the chart which will exceed 1 day or you do not want to start a new bar at the beginning of each trading day. In either of these cases make sure  <b>New Bar at Session Start</b> is unchecked. The Session Start is <b>Session Times &gt;&gt; Start Time</b> or the  <b>Session Times &gt;&gt; Evening Start</b> if using the <b>Use Evening Session</b> option is enabled.
+
+            <div style="text-align: center;"><a href="../images/intradaychartsettings.png" rel="lightbox"><img src="../images/intradaychartsettings.png" alt="" width="300"  class="screenshot" loading="lazy"></a></div></li>
+
+        <li>Select the <b> Chart Data</b> tab.</li>
+
+        <li>Enable the <b>Split Data Records (Applies to NumberOfTrades, Volume, Range Bars)</b> option.</li>
+        
+        <li> Disable any  <a href = "index4cf4.html?page=doc/ChartSettings.html#VolumeFilter">Volume Filter</a> settings you may have set by setting the filtering settings to 0. </li>
+        
+        <li>  Set the <a href = "index4cf4.html?page=doc/ChartSettings.html#CombineTradesIntoOriginalSummaryTrade">Combine Trades into Original Summary Trade</a> setting  to No. Or unchecked.</li>
+
+
+        <li>Press <b>OK</b> to close the <b>Chart Settings </b> window.</li>
+
+        <li>The default <b>Intraday Data Storage Time Unit</b> that  Sierra Chart uses when collecting data in real-time and downloading historical Intraday data, is 1 second. This includes all trading for a 1 second period and is combined into a single data record in the chart data file.</li>
+
+        <li>To change this, select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings</b>  from the menu.</li>
+
+        <li>For Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars, you will need to set the <b>Intraday Data Storage Time Unit</b> to <b>1 Tick</b> for the greatest accuracy.
+
+            <div style="text-align: center;"><a href="../images/datatradeservicesettings1ticksetting.png" rel="lightbox"><img src="../images/datatradeservicesettings1ticksetting.png" alt="" width="550"  class="screenshot" loading="lazy"></a></div></li>
+
+        <li>Press <b>OK</b> to close the <b>Data/Trade Service Settings</b> window.</li>
+
+        <li>Re-download the data in the  Intraday chart data file for the symbol to ensure there are complete tick by tick data records, assuming the Data or Trading service you are using provides historical Tick data. The simplest way to re-download the data is to go to the Intraday chart and select <b class="menu_item">Edit &gt;&gt;  Delete All Data And Download</b> from the menu.  <em>This only needs to be done once for each symbol</em>.</li>
+
+        <li>For additional information about re-downloading the data in a Intraday chart data file, refer to the <a href="index7b4b.html?page=doc/IntradayDataEditor.html#DeleteAndRefreshData"  target="_blank" rel="noopener noreferrer">Re-Download Data</a> section.</li>
+
+        <li>To determine if there is tick by tick data in the Intraday chart data file, refer to <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php#VerifyingTickByTickData" Target="_blank" rel="noopener noreferrer">Verifying Tick By Tick Data</a>.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="NumberofTradesorVolumeData">Effect of Missing Number of Trades or Volume Data</h2>
+    <div class="member-link">[<a href="#NumberofTradesorVolumeData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/onedayperbar.png" rel="lightbox"><img src="../images/onedayperbar.png" alt="" class="UnScaledFloatRight"></a>
+
+    <p>Bars in a chart based upon a Number of Trades or Volume setting  which are built from data records that do not contain the <b>Number of Trades </b> (used by Number Of Trades bars) or <b>Volume</b> (used by Volume bar charts)  per record will be based upon the <b>Days - Minutes - Seconds</b>  per bar setting, even if you have a <b>Number of Trades</b> or <b>Volume Per Bar</b> setting greater than 0. </p>
+
+    <p>This is because it is not possible to build Number Of Trades or Volume bars from data where the number of trades or volume per record is not known. If there is a single data record for each individual trade, then the Number of Trades will be 1 and will be known.  </p>
+
+    <p>To see what data there is in the chart data file, select  <b class="menu_item">Edit &gt;&gt; Edit/Download Data - Intraday Chart</b>. Some Data and Trading services do not provide the Number of Trades per historical data record. Volume data may not be available with historical data records either for various reasons. Also, in the case of  Interactive Brokers, they may provide records with no Number of Trades or Volume data apparently at times when there is no trading.</p>
+
+    <p>The recommended solution to this is to refer to the instructions in the <b>Eliminating the Reliance on Days-Minutes-Seconds</b> section below. </p>
+
+    <p>The above described issue  will not happen if the Number of Trades  or Volume per historical record is known.</p>
+
+    <section class="h3">
+		<h3 id="EliminatingTheRelianceOnDaysMinutesSeconds">Eliminating the Reliance on Days-Minutes-Seconds</h3>
+		<div class="member-link">[<a href="#EliminatingTheRelianceOnDaysMinutesSeconds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To eliminate above described issue completely and only advance to a new bar when the number of  Trades or Volume per bar per bar has been met, even with data records of zero number of Trades or Volume, then set the <b>Days-Minutes-Seconds</b> setting to <b>2-0-0</b> by following the steps below. In many cases this is the best thing to do in case you do have unexpected data records without Number of Trades or Volume data.</p>
+
+        <ol>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu.</li>
+
+            <li>Set the <b>Intraday Bar Period &gt;&gt; Bar Period Type</b> to <b>Days-Mins-Secs </b> and specify a value of 2-0-0 (which means 2 days).</li>
+
+            <li>Set the <b> Bar Period Type</b> back to <b>Volume Per Bar</b> or <b>Number of Trades per Bar</b> and specify the corresponding value in the edit box below.</li>
+
+            <li>Press <b>OK</b>.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="VariationBetweenNumberOfTrades">Variation Between Number Of Trades Bar Charts</h2>
+    <div class="member-link">[<a href="#VariationBetweenNumberOfTrades">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> <b>Number of Trades</b> bars are based upon the historical and real-time trades received from the data or trading service you are using. If the data or trading service does not deliver every trade or the trade data varies compared to another service or another connection to the same service, then when you compare a Number of Trades bar chart with identical settings to another Number of Trades bar chart sourced from a different service or a different connection to the same service, they probably will not exactly look the same.  </p>
+
+    <p>This is an inherent issue with Number of Trades bars in general. If you are trying to get two Number of Trades bar charts to match with a friend and the service you are both using does not consistently deliver trades across different connections, then it is an impossible task to get them to match.  It becomes even more difficult if you are using different Data or Trading services.</p>
+</section>
+
+<section class="h2">
+    <h2 id="LastBarInChartExceedingRange">Last Bar in Chart Exceeding Range</h2>
+    <div class="member-link">[<a href="#LastBarInChartExceedingRange">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+   <p> Number of Trades, Volume, Range, or Renko  chart bars can split the underlying data records  in an Intraday data file when those data records are greater than 1 Tick  or in the case of Volume bars, when the volume exceeds the specified volume per bar. </p>
+   
+    
+    <p> When the <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b><b> &gt;&gt; Intraday Data Storage Time Unit</b> is not set to <b>1 Tick</b>  and is a greater amount of time, then this splitting cannot occur until that data record is complete. For example  if the <b>Intraday Data Storage Time Unit</b> is set to 1   Minute, then the splitting cannot occur until that one minute data record is complete. </p>
+    
+    <p> Therefore in this particular case, an issue you will notice during real time chart updating and during a replay is that the current bar in the chart  can exceed the specified  number of trades, volume, or price range in the case of Range and Renko bars until the current data record from  the Intraday data file is complete and there is a new data record being read.  At that time the splitting of the data record will occur and the last chart bar will be  adjusted according to  the chart bar settings and a new bar will be added to the chart.  </p>
+    
+    <p> To set the <b>Intraday Data Storage Time Unit</b> to <b>1 Tick</b>, refer to <a href = "index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick Data Configuration</a>.</p>
+    
+
+    <p> Additionally, for 100% accurate Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars, it is necessary for the <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b><b> &gt;&gt; Intraday Data Storage Time Unit</b> to be set to  <b>1 Tick</b>. This is in addition to also having having 1 Tick  historical data records as well.  </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="RepeatingBars">Repeating Bars with Number of Trades or Volume Bars</h2>
+    <div class="member-link">[<a href="#RepeatingBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When the underlying data records in a data file are not a single tick and you are using <b>Number of Trades</b> or <b>Volume</b> bars, then one issue you may notice is that the bars in the chart repeat and be the same at various locations. This is due to the record splitting that occurs to make each bar a certain  <b>Number of Trades</b> or <b>Volume</b>.</p>
+
+    <p>You may also notice repeating bars with Volume based bars even with tick by tick data if you have a low Volume setting per bar or there is a very large volume for an individual trade.  This is because if a single trade data record has a volume that exceeds the Volume setting for the bars, you will see it be split and repeat. </p>
+    
+    <p>Refer to the images below for examples.</p>
+
+    <p>In addition to doing what is recommended in the <a href="#GeneralInformation">General Information and Related Settings</a> section on this page, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Chart Data</b>. Disable the <b> Split Data Records</b> option to prevent these repeating bars.</p>
+    
+    <p> It is necessary in this case that Sierra Chart is set to a <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php" Target="_blank" rel="noopener noreferrer">Tick By Tick Data Configuration</a>. </p>
+
+    <div style="text-align: center;">
+        <a href="../images/numberoftradesvolumebarsrepeating.png" rel="lightbox"><img src="../images/numberoftradesvolumebarsrepeating.png" alt=""  class="screenshot" loading="lazy" width="450"></a>
+        <a href="../images/volumebarsplitting.png" rel="lightbox"><img src="../images/volumebarsplitting.png" alt=""  class="screenshot" loading="lazy" width="450"></a>
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="RecommendedServices">Recommended Services</h2>
+    <div class="member-link">[<a href="#RecommendedServices">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For the most accurate Number of Trades, Volume and Range bar charts, you will need to use one of the Sierra Chart  provided  <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php" >Data Services</a>.</p>
+
+    <p> It is important to understand that Number of Trades, Volume and  Range bars are  very sensitive to the underlying data you are using.  And the problem you may experience with them is not due to a problem with Sierra Chart, <em>rather the underlying data from the Data or Trading service you are using</em>.</p>
+
+    <p>Another issue is that exchanges may bundle many trades into one.  Therefore, Number of Trades bars are not necessarily representative of the actual volume of trading activity.  Generally this is true.  Although, it is not 100% precise.</p>
+</section>
+
+<section class="h2">
+    <h2 id="PriceDisplayFormat">How Price Display Format Affects Range Bar Charts</h2>
+    <div class="member-link">[<a href="#PriceDisplayFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Accurate construction of range bars depends upon the Price Display Format in the Chart settings window for the chart. The price display format needs to be set so that all decimal places of the underlying data in the chart are displayed.  Here are three screenshots of the same chart, EURJPY with a range bar setting of 0.1, but three different price display formats:</p>
+
+    <ul>
+        <li><a href="../images/rangebar_pricedisplay2decimals.png" rel="lightbox">With a price display format of 0.01</a>.</li>
+        <li><a href="../images/rangebar_pricedisplay3decimals.png" rel="lightbox">With a price display format of 0.001</a>.</li>
+        <li><a href="../images/rangebar_pricedisplay4decimals.png" rel="lightbox">With a price display format of 0.0001</a>.</li>
+    </ul>
+
+    <p>The Range Check study at the bottom of these charts shows the actual range of the bars (High - Low).  As you can see, the range is not very accurate when using a Price Display Format  of 0.01, much more accurate when using the price display format of 0.001, and precise when using the price display format of 0.0001.</p>  
+
+    <p>The reason for this has to do with the price increment of the underlying data.  The symbol EURJPY for this data feed uses 3 decimal places (0.001).  When using a price display format less precise than this (such as 0.01), that extra precision will not be available to be used for the range bar calculations.</p>  
+
+    <p>However, the prices for the symbol EURJPY for this data feed are implicitly the bid/ask average, which means there could be prices in the chart half way between a minimum price increment.  Because of this extra half-increment, an extra decimal place for a total of four decimal places (0.0001) is needed for real precise range bar calculations.  Any more decimal places are unnecessary.</p>
+</section>
+
+<section class="h2">
+    <h2 id="RangeBarOpenPrice">Why the Open Value of a Bar Can Be Within the Range of the Prior Bar for Range Charts</h2>
+    <div class="member-link">[<a href="#RangeBarOpenPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are 3 reasons why the opening value of a range bar may be within the range of the prior bar. Normally with range bar charts this will not be the case because the specified range has to be exceeded before beginning a new bar. Therefore the open value will be outside the range of the prior range bar.</p>
+
+    <ol>
+        <li>In <b class="menu_item">Chart &gt;&gt; Chart Settings</b> you have the <b> Intraday Bar Period &gt;&gt; Bar Period Type </b> set to <b>Range per Bar - New Bar on Range Met</b> enabled. You will need to use   <b>Range per Bar - Standard </b> instead. With <b>Range per Bar - New Bar on Range Met</b>, a new range bar will start as soon as the specified bar range has been met even if trading continues within the range. </li>
+
+        <li>A new trading session has begun and you have <b>New Bar at Session Start</b> enabled in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.  This will cause the current range bar to be stopped and the new one will begin. This is something to be aware of.</li>
+
+        <li>You do not have tick by tick data in your data file. To get tick by tick data, follow the instructions in the <a href="#GeneralInformation">General Information and Related Settings</a> section on this page. However, rather than setting the <b>Intraday Data Storage Time Unit</b> at 1 Tick as explained, consider using 1 Second because using 1 Tick will increase the time to load chart data, increase the data file size and overall increase CPU usage.
+        
+        Therefore, you have to consider whether a small slight inaccuracy which generally is of little significance, is worth the overhead of working with 1 Tick data.  It may not be worth the overhead.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="RangeBarsNotHaveSpecifiedRange">Range Bars Do Not Have Specified Range</h2>
+    <div class="member-link">[<a href="#RangeBarsNotHaveSpecifiedRange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Bar Period Type</b>  in a chart is set to <b>Range Per Bar*</b>, and the chart bars do not have the specified range, it can be for one of the following reasons. </p>
+
+    <p>For example, if the range setting is 1.0 as an actual price and the chart bars have a lower range than this.</p>
+
+    <ol>
+        <li><b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Graph Draw Type</b> is set to <b>Candlestick Body Only</b>. Change it to <b>OHLC Bars</b> or <b>Candlestick Bars</b>.</li>
+
+        <li><b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; New Bar at Session Start</b> is enabled.  This will cause the bar prior to the first bar of the trading day to possibly have a shorter range than the specified range. This option must be <em>disabled</em>.</li>
+
+        <li><b class="menu_item">Chart &gt;&gt; Chart Settings</b> <b>&gt;&gt; Chart Data &gt;&gt; Split Data Records</b> is  disabled. This needs to be enabled for Range bars when the underlying data records in the chart data file have a timeframe greater than 1 Tick. When this option is not enabled and the underlying data records have a timeframe greater than 1 Tick, then Range bars can have a larger range than is specified.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="PriceChangesBarsNotAccurate">Price Changes Bars Not Accurate</h2>
+    <div class="member-link">[<a href="#PriceChangesBarsNotAccurate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If Price Changes Bars are not accurate and include more price changes than the setting,  this can be due to the Historical Intraday chart data records not being 1 Tick each.</p>
+
+    <p>In this particular case, refer to the instructions in the <a href="#GeneralInformation">General Information and Related Settings</a> section. </p>
+
+    <div style="text-align: center;">
+        <a href="../images/pricechangebars.png" rel="lightbox"><img src="../images/pricechangebars.png" alt=""  class="screenshot" loading="lazy" width="600"></a>
+    </div>
+</section>
+
+
+<section class="h2">
+    <h2 id="DifferencesDueToChartDuplication">Differences Due to Chart Duplication or Chart Reloading</h2>
+    <div class="member-link">[<a href="#DifferencesDueToChartDuplication">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> For a chart that uses Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars,  when it is  duplicated or reloaded,  the number of days loaded in that duplicated chart will then match  the <b>Days to Load for Intraday/Historical Chart Data Type</b> setting in <b class="menu_item">Chart &gt;&gt;  Chart Settings &gt;&gt; Data Limiting</b>. </p>
+    
+    <p>The original chart can have more data  loaded in the chart because as it updates in real time over time, additional bars are added to the chart which can cause  the data loaded to exceed the <b>Days to Load</b> setting.</p>
+    
+    <p> In this particular case when  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times &gt;&gt; New Bar at Session Start</b> is not enabled, then this will result in the Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars  in the duplicated chart looking different compared to the original chart. </p>
+    
+    <p>To make the charts look the same after duplication, go to the original chart and select  <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>.   You will also need to do this on the duplicated chart, if it was not recently duplicated. </p>
+     
+     <p>To ensure the Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars remain the same, when reloading the chart for whatever reason, first make sure that  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times &gt;&gt; New Bar at Session Start</b> is set to  <em>Yes</em>.    </p>
+     
+     <p>  Optional: Set  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Data Limiting &gt;&gt; Load Data Limiting Method</b> to  <b>Use Date Range</b>. Set  <b>Date Range From</b> to the first date you want loaded in the chart. The chart bars will then remain consistent after the chart is reloaded.</p>
+
+</section>
+
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails47.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:43 GMT -->
+</html>  

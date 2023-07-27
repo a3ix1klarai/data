@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StepByStepACSILDebugging.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105658') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/StepByStepACSILDebugging.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Step-By-Step ACSIL Debugging -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index7cb8.html?page=doc/StepByStepACSILDebugging.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index7cb8.html?page=doc/StepByStepACSILDebugging.php">Step-By-Step ACSIL Debugging</a></h4> </div>     <h1 class="PageName">Step-By-Step ACSIL Debugging</h1>
+
+<ul>
+    <li><a href="#Overview">Overview</a></li>
+    <li><a href="#EnablingDebugging">Enabling Debugging</a></li>
+    <li><a href="#SteppingThroughCode">Basic command for stepping through your code</a></li>
+    <li><a href="#ViewingValues">Viewing Values</a></li>
+    <li><a href="#BreakpointWithCondition">Breakpoint With Condition</a></li>
+    <li><a href="#CannotAccessGUIWhileSteppingThrough">Cannot Access Application Gui While Stepping Through</a></li>
+    <li><a href="#GettingCodeToRun">Getting Your Code to Run</a></li>
+
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Overview">Overview</h2>
+    <div class="member-link">[<a href="#Overview">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Step-by-step debugging is possible Using the Microsoft Visual C++ Development Environment.</p>
+
+    <p>In order to perform debugging using this environment, your custom studies DLL file must be built with Visual C++. Follow the instructions described in the <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php#StepByStepInstructions" target="_blank" rel="noopener noreferrer">ACSIL Step By Step Instructions To Create an Advanced Custom Study Function</a> section to build the DLL using Sierra Chart.</p> 
+
+</section>
+
+<section class="h2">
+    <h2 id="EnablingDebugging">Enabling Debugging</h2>
+    <div class="member-link">[<a href="#EnablingDebugging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li> The custom studies DLL file <em>must be built</em>  as a <b>Debug</b> build with Visual C++ using Sierra Chart in order to debug the source code.  </li>
+
+        <li>Follow the instructions described in the <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php#CompileACSILSourceCode" target="_blank" rel="noopener noreferrer">ACSIL Step By Step Instructions To Create an Advanced Custom Study Function</a> section to build the DLL. Note that the custom study dll  must be built using the  command <b class="menu_item">Build &gt;&gt;  Build With Visual C++ - Debug</b> as explained in the <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php#BuildingLocallyToDebug" target="_blank" rel="noopener noreferrer">Building Locally To Debug</a>
+            <div style="text-align: center;"><a href="../images/buildacsdll.png" rel="lightbox"><img src="../images/buildacsdll.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li>Open Microsoft Visual Studio, select <b class="menu_item">File &gt;&gt; Open &gt;&gt; File</b>. Select the cpp file of the study from the <b>/ACS_Source</b> folder  in the Sierra Chart installation folder. In our example, it is <b>ExampleCustomStudies.cpp</b>
+            <div style="text-align: center;"><a href="../images/visualstudiostartfileopenwithredhighlight.png" rel="lightbox"><img src="../images/visualstudiostartfileopenwithredhighlight.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>		
+        </li>
+
+        <li>Start Sierra Chart.</li>
+        <li> To make debugging easier at least at first,  disconnect Sierra Chart from the data  feed (<b class="menu_item">File &gt;&gt; Disconnect</b>).</li>
+        <li> Open a chart. </li>
+        <li>   <a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Add</a>  the custom study  that you wish to debug to the chart. </li> 
+
+
+        <li>With Visual Studio, <em>attach</em> to the Sierra Chart process. To do this,  from the Visual Studio's main menu, select <b class="menu_item">Debug &gt;&gt; Attach to Process</b>.
+            <div style="text-align: center;"><a href="../images/attachmenu.png" rel="lightbox"><img src="../images/attachmenu.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li>In the <b>Attach to Process</b> dialog, <b>Attach to</b> must be set to <b>native</b>.
+            <div style="text-align: center;"><a href="../images/selectnative.png" rel="lightbox"><img src="../images/selectnative.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li>From the list of <b>Available Processes</b>  in the  <b>Attach to Process</b> window of Visual C++, select the SierraChart.exe (32-bit)   or SierraChart_64.exe (64-bit) process and press the <b>Attach</b> button. 
+        
+            <div style="text-align: center;"><a href="../images/selectscprocess.png" rel="lightbox"><img src="../images/selectscprocess.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li>In order to step through the code, we will set a break point. A breakpoint tells visual studio to stop program execution at a specific line of code. In order to set a breakpoint, click in the gutter which is found to the left of the source code area (see image below).
+            <div style="text-align: center;"><a href="../images/setbreakpoint.png" rel="lightbox"><img src="../images/setbreakpoint.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li>In Sierra Chart, refresh the chart by selecting <b class="menu_item">Chart &gt;&gt; Recalculate</b>. This will cause Sierra Chart to recalculate all studies, which in turn will call the study function and halt at our breakpoint.
+            <div style="text-align: center;"><a href="../images/programhalted.png" rel="lightbox"><img src="../images/programhalted.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SteppingThroughCode">Basic command for stepping through your code</h2>
+    <div class="member-link">[<a href="#SteppingThroughCode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Once Sierra Chart program execution is halted by a breakpoint there are 3 basic commands to continue execution from this point.</p>
+
+    <ul>
+        <li><b>Step Over</b>: can be accessed from the debug menu in visual studio or by pressing f10 on the keyboard. This command executes the current line at which the debugger is currently on and will move to the next line. <em>If the current line is a function call, the function will be evaluated but the debugger will not drop in to the function code (that is why it is called <b>Step Over</b>).</em></li>
+
+        <li><b>Step Into</b>: can be accessed from the debug menu in visual studio or by pressing f11 on the keyboard. This command executes the current line at which the debugger is currently on and will move to the next line. <em>If the current line is a function call, the debugger will drop in to the function code (that is why it is called <b>Step Into</b>).</em></li>
+
+        <li><b>Start Debugging</b>: can be accessed from the debug menu in visual studio or by pressing f5 on the keyboard. When the debugger has halted at some line, executing this command will cause the debugger to continue execution and will halt at the next breakpoint it encounters.</li>
+    </ul>
+
+    <div style="text-align: center;"><a href="../images/steppingthroughcode.png" rel="lightbox"><img src="../images/steppingthroughcode.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="ViewingValues">Viewing Values</h2>
+    <div class="member-link">[<a href="#ViewingValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is common to need to see the values of the variables in your study function. Once the program is halted in visual studio, there are 2 basic ways to do this:</p>
+
+    <ul>
+        <li>Hover over - hovering over a variable with the mouse will show the that variables values.
+            <div style="text-align: center;"><a href="../images/hoverover.png" rel="lightbox"><img src="../images/hoverover.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li>Locals, Autos and Watch views - each one provides a bit of a different functionality and will be more useful than the other depending on your needs.
+
+            <div style="text-align: center;"><a href="../images/watchwindow.png" rel="lightbox"><img src="../images/watchwindow.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+
+            <div style="text-align: center;"><a href="../images/locals.png" rel="lightbox"><img src="../images/locals.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+
+            <div style="text-align: center;"><a href="../images/autos.png" rel="lightbox"><img src="../images/autos.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+    </ul>
+
+</section>
+
+<section class="h2">
+    <h2 id="BreakpointWithCondition">Breakpoint With Condition</h2>
+    <div class="member-link">[<a href="#BreakpointWithCondition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When debugging code, either during a Backtest, Replay or by Recalculating, it is often the case where you need to debug a specific bar in the chart. Say that bar is bar number 5,000 in the chart. How can you stop on that bar specifically? One way to do this is to set a break point  and watch sc.Index. When you reach 5,000, you know you have your bar. But that can take quite a while. A more efficient way to do this is by using a conditional breakpoint.</p>
+
+    <p>In Visual Studio, do the following:</p>
+
+    <ul>
+        <li>On the line you wish to halt execution, set a breakpoint.</li>
+
+        <li>Right click the breakpoint which brings up a small menu - select <b>Condition...</b>.
+            <div style="text-align: center;"><a href="../images/breakpointmenu.png" rel="lightbox"><img src="../images/breakpointmenu.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li>In the condition menu, type sc.Index == 5000 (or any other condition for that matter).
+            <div style="text-align: center;"><a href="../images/breakpointcondition.png" rel="lightbox"><img src="../images/breakpointcondition.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+    </ul>
+
+</section>
+
+<section class="h2">
+    <h2 id="CannotAccessGUIWhileSteppingThrough">Cannot Access Application Gui While Stepping Through</h2>
+    <div class="member-link">[<a href="#CannotAccessGUIWhileSteppingThrough">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In general, Sierra Chart will continue to run normally and you can work with the application GUI while Visual Studio is attached.  That said, when you halt execution during with a break point and are stepping through the study function code, the application GUI will no longer be available. This is normal and expected behavior.</p>
+</section>
+
+<section class="h2">
+    <h2 id="GettingCodeToRun">Getting Your Code to Run</h2>
+    <div class="member-link">[<a href="#GettingCodeToRun">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Your study function does not run all the time.  Sierra Chart is responsible for calling your study function upon certain events. At this point your study function code is executed after which control is returned to Sierra Chart.</p>
+
+    <p>The conditions under which this occur are documented in the <a href = "indexcf5e.html?page=doc/ACS_ArraysAndLooping.html#WhenTheStudyFunctionIsCalled">When the Study Function is Called</a> section.</p>
+
+
+    <p>When you first attach to Sierra Chart process and set a break point, depending on what Sierra Chart is doing, you might not see execution stop at your break point. One way to determine that you have done everything correctly is to force Sierra Chart to call your study. The easiest way to do this is by recalculating by selecting <b class="menu_item">Chart &gt;&gt; Recalculate</b> on the Sierra Chart menu. </p>
+
+    <p>Make sure you put a breakpoint on a line in the code that is always reachable (not hidden in some <b>if</b> statement).</p>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StepByStepACSILDebugging.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:52:04 GMT -->
+</html>  

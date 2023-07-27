@@ -1,0 +1,1387 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/PivotPoints.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105662') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/PivotPoints.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Pivot Points Study -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index1319.html?page=doc/PivotPoints.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#StudiesIndicators">(Table of Contents) Studies and Indicators</a> &gt;&gt; <a  href="index1319.html?page=doc/PivotPoints.html">Pivot Points Study</a></h4> </div>     <h1 class="PageName">Pivot Points</h1>
+
+<ul>
+    <li><a href="#PivotPoints_Daily">Pivot Points - Daily</a>
+		<ul>
+		    <li><a href="#BasingPivotsOn24HourData">Basing Pivots on 24 Hour Data</a></li>
+		    <li><a href="#BasingPivotsOnTheDaySession">Basing Pivots on the Day Session</a></li>
+		    <li><a href="#PivotPointsDailyNotes">Notes</a></li>
+		    <li><a href="#PivotPointsDailyInputs">Pivot Points - Daily Inputs</a>
+				<ul>
+					<li><a href="#PivotFormulaType">Formula Type</a></li>
+					<li><a href="#NumberDaysToCalculate">Number of Days To Calculate</a></li>
+					<li><a href="#RoundToTickSize">Round to Tick Size</a></li>
+					<li><a href="#UseSaturdayData">Use Saturday Data</a></li>
+					<li><a href="#PPDailyChartNumber">Daily Chart Number</a></li>
+					<li><a href="#ReferenceDailyChartForData">Reference Daily Chart For Data</a></li>
+					<li><a href="#VariablePeriod_ForwardProjectPivotPointLines">Forward Project Pivot Point Lines</a></li>
+					<li><a href="#UseUserEnteredOHLCValues">Use User Entered OHLC Values</a></li>
+					<li><a href="#UserEnteredOpenValue">User Entered Open Value</a></li>
+					<li><a href="#UserEnteredHighValue">User Entered High Value</a></li>
+					<li><a href="#UserEnteredLowValue">User Entered Low Value</a></li>
+					<li><a href="#UserEnteredCloseValue">User Entered Close Value</a></li>
+					<li><a href="#UseDaySessionOnly">Use Day Session Only</a></li>
+					<li><a href="#UseDailyChartForSettlementOnly">Use Daily Chart For Settlement Only</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+    <li><a href="#PivotPoints_VariablePeriod">Pivot Points - Variable Period</a>
+		<ul>
+		    <li><a href="#MissingPivotPointLines">Missing Pivot Point Lines</a></li>
+		    <li><a href="#VariablePeriodInputs">Inputs</a>
+				<ul>
+					<li><a href="#VariablePeriod_TimePeriodType">Time Period Type</a></li>
+					<li><a href="#VariablePeriod_TimePeriodLength">Time Period Length</a></li>
+					<li><a href="#VariablePeriod_FormulaType">Formula Type</a></li>
+					<li><a href="#VariablePeriod_MinimumRequiredTimePeriodAsPercent">Minimum Required Time Period as %</a></li>
+					<li><a href="#VariablePeriod_RoundToTickSize">Round to Tick Size</a></li>
+					<li><a href="#VariablePeriod_DisplayDebuggingOutput">Display Debugging Output (slows study calculations)</a></li>
+					<li><a href="#VariablePeriod_NumberOfDaysToCalculate">Number Of Days To Calculate</a></li>
+					<li><a href="#VariablePeriod_AutoSkipPeriodOfNoTrading">Auto Skip Period of No Trading</a></li>
+					<li><a href="#VariablePeriod_NumberOfForwardProjectBars">Number of Forward Project Bars</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+    <li><a href="#PPFormulas">Formula Type</a>
+		<ul>
+			<li><a href="#Formula_0">Formula Type 0</a></li>
+			<li><a href="#Formula_1">Formula Type 1</a></li>
+			<li><a href="#Formula_2">Formula Type 2</a></li>
+			<li><a href="#Formula_3">Formula Type 3</a></li>
+			<li><a href="#Formula_4">Formula Type 4</a></li>
+			<li><a href="#Formula_5">Formula Type 5 (Camarilla Pivot Points)</a></li>
+			<li><a href="#Formula_6">Formula Type 6 (Tom DeMark "Pivot Points")</a></li>
+			<li><a href="#Formula_7">Formula Type 7 (Frank Dilernia Pivots)</a></li>
+			<li><a href="#Formula_8">Formula Type 8 (Shadow Trader Pivots)</a></li>
+			<li><a href="#Formula_9">Formula Type 9</a></li>
+			<li><a href="#Formula_10">Formula Type 10</a></li>
+			<li><a href="#Formula_11">Formula Type 11</a></li>
+			<li><a href="#Formula_12">Formula Type 12</a></li>
+			<li><a href="#Formula_13">Formula Type 13</a></li>
+			<li><a href="#Formula_14">Formula Type 14</a></li>
+			<li><a href="#Formula_15">Formula Type 15 (Fibonacci Zone Pivots)</a></li>
+			<li><a href="#Formula_16">Formula Type 16 (The Central Pivot Range Formula)</a></li>
+			<li><a href="#Formula_17">Formula Type 17</a></li>
+			<li><a href="#Formula_18">Formula Type 18</a></li>
+			<li><a href="#Formula_19">Formula Type 19</a></li>
+			<li><a href="#Formula_20">Formula Type 20 (ACD method)</a></li>
+			<li><a href="#Formula_21">Formula Type 21</a></li>
+			<li><a href="#Formula_22">Formula Type 22</a></li>
+			<li><a href="#Formula_23">Formula Type 23</a></li>
+			<li><a href="#Formula_24">Formula Type 24 (Advanced Camarilla Pivot Points Calculation)</a></li>
+			<li><a href="#Formula_25">Formula Type 25</a></li>
+			<li><a href="#Formula_26">Formula Type 26</a></li>
+			<li><a href="#Formula_27">Formula Type 27</a></li>
+			<li><a href="#Formula_28">Formula Type 28</a></li>
+		</ul>
+	</li>
+    <li><a href="#PivotPointsScaling">Pivot Points Scaling</a></li>
+    <li><a href="#PivotPointsAndHolidayTrading">Pivot Points and Holiday Trading</a></li>    
+    <li><a href="#ForwardProjecting">Forward Projecting Pivot Point Lines</a></li>
+    <li><a href="#PivotPointsNotVisible">Pivot Points Not Visible</a></li>
+    <li><a href="#HidingDisplayingLevels">Hiding and Displaying the Pivot Point, Support and Resistance Levels</a></li>
+    <li><a href="index7fef.html?page=doc/helpdetails65.html">Pivot Points are Not Accurate or are Different</a> (Opens a new page)</li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="PivotPoints_Daily">Pivot Points - Daily</h2>
+    <div class="member-link">[<a href="#PivotPoints_Daily">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This study draws the Pivot Point and the Support and Resistance lines on an Intraday chart. It supports numerous Pivot Point formulas. This study should be applied to an Intraday chart. By default, the study uses the Intraday chart data to compute the lines from.</p>
+
+    <p>Alternatively, you can use a Daily chart to calculate the Pivot Point levels from by setting the <a href="#ReferenceDailyChartForData">Reference Daily Chart For Data</a> Input to Yes. The <a href="#PPDailyChartNumber">Daily Chart Number</a> Input described below explains how to reference a Daily chart for this and other purposes.</p>
+
+    <p>You can choose what lines you want to be visible on the chart by going to the <b>Study Settings</b> window for the study. Select the <b>Subgraphs</b> tab. Change the <b>Draw Style</b> to something other than <b>Do Not Draw/Hidden</b> for the lines you want to be displayed.</p>
+
+    <p>For help with Pivot Point Lines not being accurate or different compared to other instances of the study, other users or sources, refer to the <a href="index7fef.html?page=doc/helpdetails65.html">Pivot Points are Not Accurate or are Different</a> help topic.</p>
+
+    <section class="h3">
+        <h3 id="BasingPivotsOn24HourData">Basing Pivots on 24 Hour Data</h3>
+        <div class="member-link">[<a href="#BasingPivotsOn24HourData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you need to have the Pivot Point lines based on the full 24 hour prior trading session, where this includes the prior evening session and prior day session, rather than a 24 hour session based on the time range from 00:00 to 23:59, then it is necessary to set the  <b>Start Time</b> and <b>End Time</b> Session Times controls in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> to cover the full 24 hours and set the  <b>Start Time</b> to the  beginning of the evening session which is usually considered the start of the next day's session. Example: If the time zone setting in Sierra Chart is New York, then for the ES futures you would want to set the  <b>Start Time</b> to 16:15:00 and the <b>End Time</b> to 16:14:59. For more information about setting the Session Times for an Intraday chart, refer to <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a> on the Chart Settings page. </p>
+
+        <p>It is also possible, for accuracy, to reference a Historical Daily bar chart where the bars contain the full 24 hour session. For more information, refer to the <a href="#PPDailyChartNumber">Daily Chart Number</a> Input setting below.</p>
+
+        <p>If you have your chart configured to see the day session only and need your pivot lines based on the full 24-hour data, then you will need to set up a separate Daily bar chart in the same chartbook, that includes bars that cover the full 24 hours of trading, that this study will refer to. Refer to the <a href="#PPDailyChartNumber">Daily Chart Number</a> Input setting below for instructions.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="BasingPivotsOnTheDaySession">Basing Pivots on the Day Session</h3>
+        <div class="member-link">[<a href="#BasingPivotsOnTheDaySession">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you want your pivot lines based on Day session data only, then in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> set the Intraday Start Time and End Time to show only the day session. For more information about setting the session times for an Intraday chart see <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a>.</p>
+
+        <p>If you also need to see the Evening Session in your Intraday chart, then you will need to set up a separate Daily chart in the same chartbook, that includes bars that cover the day session only, that this study will refer to. See the <a href="#PPDailyChartNumber">Daily Chart Number</a> Input below for instructions.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="PivotPointsDailyNotes">Notes</h3>
+        <div class="member-link">[<a href="#PivotPointsDailyNotes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Pivot point lines are never based on weekend data (Saturday and Sunday). This data is ignored. For example, on Monday which also includes a Sunday evening session, the Pivot Point lines will be based on the Friday session. The weekend data is ignored.  However, Pivot Point lines will appear on weekend days.  Although, they will be based on the prior non-weekend data.</p>
+        
+        <p>  However, you need to understand that based on the session times Sunday evening data is still going to be used on a Tuesday because it is considered part of Monday's trading day. For more information, refer to <a href="index4ec1.html?page=doc/SessionTimes.php#UnderstandingTradingDayDatesBasedOnSessionTimes" >understanding Trading Day Dates Based on Session Times</a>. </p>
+        
+
+    </section>
+
+    <section class="h3">
+        <h3 id="PivotPointsDailyInputs">Pivot Points - Daily Inputs</h3>
+        <div class="member-link">[<a href="#PivotPointsDailyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+         <section class="h4">
+            <h4 id="PivotFormulaType">Formula Type</h4>
+            <div class="member-link">[<a href="#PivotFormulaType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input sets the <a href="#PPFormulas">Formula Types</a> to use. The default is 0. Formula type 0 is the most common formula type.</p>
+
+            <p>If you require a Pivot Point lines formula that is not listed here, then contact Sierra Chart support.  They are easy for us to add.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="NumberDaysToCalculate">Number of Days To Calculate</h4>
+            <div class="member-link">[<a href="#NumberDaysToCalculate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input controls the number of days you need to have the study  calculated across. If you only want to see the Pivot Points for 1 day, then set this Input to 1.</p>
+            
+            <p> As there are new bars added to the chart and a new trading day begins according to the chart Session Times settings,  then the Pivot Point lines for the prior calculated days will not automatically be removed. You need to manually clear those by selecting  <b class = "menu_item">Chart &gt;&gt; Recalculate</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="RoundToTickSize">Round to Tick Size</h4>
+            <div class="member-link">[<a href="#RoundToTickSize">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to Yes, the Pivot Point values are rounded off to the nearest tick. For this Input to work correctly, the Tick Size needs to be set correctly  in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> for the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseSaturdayData">Use Saturday Data</h4>
+            <div class="member-link">[<a href="#UseSaturdayData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, then Saturday trading data will be referenced on the following Sunday or Monday. Otherwise, Saturday data is ignored.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="PPDailyChartNumber">Daily Chart Number</h4>
+            <div class="member-link">[<a href="#PPDailyChartNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input <em>only applies</em> if <b>Reference Daily Chart For Data</b> is set to <b>Yes</b>. This Input needs to be set to the Historical Daily chart, in the same Chartbook, for the <em>same symbol</em>.</p>
+
+            <p>If you apply the Pivot Points study to an Intraday chart, then you will need to open a Historical Daily for the same symbol in the same Chartbook using <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; [select symbol] &gt;&gt; Open Historical Chart</b>, and set the <b>Daily Chart Number </b> Input with the Pivot Points study to the  Historical Daily Chart which has been opened.</p>
+
+            <p>A Daily chart is a chart where each bar covers one day. This bar could include just the day session data or both the day and evening sessions.</p>
+
+            <p>You would want to use a separate Historical Daily chart  if you want to base the Pivot Point lines on session times that are different from what you are loading into the Intraday chart.  For example, if you need to have the Pivot Point lines calculated from <b>Day Session</b> data only and the Intraday chart contains evening session data as well, then using a separate Historical Daily chart that includes only the Day Session is necessary. The Daily chart can be constructed from Daily data or Intraday data.  Historical Daily data may or may not contain evening session data. This depends upon the symbol and the Data/Trade Service you are using</p>
+
+            <p>If you want to construct a Historical Daily chart from Intraday data, then follow the <a href="index4ec1.html?page=doc/SessionTimes.php#CreatingDailyBarsCustomSessionTimes" >Creating Daily Bars with Custom Session Times</a> instructions.  After this, then reference this Intraday chart with the  <b>Daily Chart Number </b>  Input to calculate the Pivot Point Lines from.</p>
+
+            <p><b>Using Chart Linking to Maintain the Same Symbol Between the Pivot Points Chart and the Daily Chart Being Referenced</b>: If the Pivot Points study is referencing a Historical Daily chart for accurate Pivot Points, and you change the symbol of the chart containing the Pivot Points study, then you also will want the Daily chart to have its symbol changed to match. This can be automatically done using the <a href="index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Chart Linking</a> feature. You will need to setup the Chart Linking number and enable the <b>Link Symbol</b> option.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="ReferenceDailyChartForData">Reference Daily Chart For Data</h4>
+            <div class="member-link">[<a href="#ReferenceDailyChartForData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input specifies whether or not the study will use a Daily Chart to calculate Pivot Point lines from. If this is set to  <b> No</b>, the study will simply calculate the Pivot Point lines using the Intraday chart data. </p>
+            
+           <p> If it is set to Yes, then the  Pivot Point lines are based on a separate Historical Daily chart. Refer to the <a href="#PPDailyChartNumber">Daily Chart Number</a> Input for instructions.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_ForwardProjectPivotPointLines">Forward Project Pivot Point Lines</h4>
+            <div class="member-link">[<a href="#VariablePeriod_ForwardProjectPivotPointLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to  <b>Yes</b>, then the Pivot Point lines extend forward beyond the last bar in the chart for the number of bars specified with the <b>Number of Forward Project Bars </b> Input. To scroll past the last bar in the chart, refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart" >Right Side Fill Space</a>.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UseUserEnteredOHLCValues">Use User Entered OHLC Values</h4>
+            <div class="member-link">[<a href="#UseUserEnteredOHLCValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to Yes, then the Open, High, Low and Close values used to calculate the  Pivot Points lines for the latest trading day are manually entered through the <b>User Entered Open/High/Low/Close Value</b> Inputs.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UserEnteredOpenValue">User Entered Open Value</h4>
+            <div class="member-link">[<a href="#UserEnteredOpenValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> This input is only used when  <b>Use User Entered OHLC Values</b> is set to Yes.  In this case enter the open value for the prior trading day which will be used for the latest trading day Pivot Point lines calculations.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UserEnteredHighValue">User Entered High Value</h4>
+            <div class="member-link">[<a href="#UserEnteredHighValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> This input is only used when  <b>Use User Entered OHLC Values</b> is set to Yes.  In this case enter the high value for the prior trading day which will be used for the latest trading day Pivot Point lines calculations.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UserEnteredLowValue">User Entered Low Value</h4>
+            <div class="member-link">[<a href="#UserEnteredLowValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This input is only used when  <b>Use User Entered OHLC Values</b> is set to Yes.  In this case enter the low value for the prior trading day which will be used for the latest trading day Pivot Point lines calculations.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UserEnteredCloseValue">User Entered Close Value</h4>
+            <div class="member-link">[<a href="#UserEnteredCloseValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+             <p> This input is only used when  <b>Use User Entered OHLC Values</b> is set to Yes.  In this case enter the close value for the prior trading day which will be used for the latest trading day Pivot Point lines calculations.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UseDaySessionOnly">Use Day Session Only</h4>
+            <div class="member-link">[<a href="#UseDaySessionOnly">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to Yes, and you have defined and enabled 2 separate Session Times in <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times</b>, then the Pivot Point lines will be based upon the Day session only as specified by the  <b>Start Time</b> and the <b>End Time</b> in Chart Settings.  </p>
+            
+            <p>Refer to <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a> for more information about setting the Session Times. When you have set this Input to Yes, it is not necessary to use a separate Historical Daily chart to draw Pivot Point lines on a 24-hour chart, but base them on the day session data only in the chart.</p>
+        </section>
+		
+		<section class="h4">
+            <h4 id="UseDailyChartForSettlementOnly">Use Daily Chart For Settlement Only</h4>
+            <div class="member-link">[<a href="#UseDailyChartForSettlementOnly">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+			<p>In many Pivot Point Formula Types, the Prior Close appears as a variable. If instead the user wishes to use the CME Settlement Price, that can be accomplished with the help of this Input. First, open a chart to which the <b>Pivot Points - Daily</b> study is to be applied, and apply the study. Call this Chart #1. Then, open a second (Daily) chart for the same symbol. Call this Chart #2.</p>
+			
+			<p>Finally, apply the following Input Settings for the <b>Pivot Points - Daily</b> study on Chart #1.</p>
+			<ul>
+				<li><b>Daily Chart Number</b> = 2</li>
+				<li><b>Reference Daily Chart for Data</b> = Yes</li>
+				<li><b>Use Daily Chart For Settlement Only</b> = Yes</li>
+			</ul>
+        </section>
+
+    </section>
+</section>
+
+
+<section class="h2">
+    <h2 id="PivotPoints_VariablePeriod">Pivot Points - Variable Period</h2>
+    <div class="member-link">[<a href="#PivotPoints_VariablePeriod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Pivot Points - Variable Period</b> study calculates and displays the Pivot Point and the support and resistance lines on a chart for a variable period of time. It supports several Pivot Point formulas.   </p> 
+
+    <p>This Pivot Points study can be used to draw Pivot Point lines covering a time period anywhere from 1 minute to 1 year.  It can be used both on Intraday and Historical charts.  The calculations are derived from the data in the chart itself.</p>
+
+    <p>To do Weekly pivots, set the <b>Time Period Type</b> to <b>Weeks</b> and set the <b>Time Period Length</b> to <b>1</b>.</p>
+
+    <p>When the time period for the Pivot Lines is set to <b>Minutes</b> or <b>Days</b>, the time periods are always aligned to the <b>Start Time</b> set in <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Session Times</b>.</p>
+
+    <p>When back-referencing data for the Pivot Points, this study is able to skip periods of time where there is insufficient data to calculate Pivot Point lines from (like Saturdays, partial trading days and holidays in the case of a 1-Day period). This is a very useful feature. To use this feature, you need to set the <b>Auto Skip Period of No Trading</b> study Input to <b>Yes</b>. </p>
+
+    <p>For more information about automatically skipping periods, refer to the  study Input <b>Minimum Required Time Period as %</b>  below. If the <b>Minimum Required Time Period as %</b> is set too high it is possible that the Pivot Point lines <em>will not appear</em> or another effect is that the Pivot Point lines will  <em>not change</em> from the prior period and stay the same.</p>
+
+    <p>You may need to reduce the <b>Minimum Required Time Period as %</b>  study Input  in the case of <b>Volume, Number of Trades, Range, Reversal, Renko, Delta Volume, Price Changes</b> bars since those have a variable number of bars per period.  You may want to use 20% or lower to avoid skipping a period when the study is back-referencing data.</p>
+
+    <section class="h3">
+        <h3 id="MissingPivotPointLines">Missing Pivot Point Lines</h3>
+        <div class="member-link">[<a href="#MissingPivotPointLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> If there are missing the Pivot Point lines for a particular period in the chart and there is no data for the period of time the Pivot Point lines are referencing which will be immediately before the time where they are missing, then the cause is simply due to the prior data not being available.</p>
+
+        <p>The solution to this is to  set the <b>Auto Skip Period of No Trading</b> Input to <b>Yes</b>. And set <b>Minimum Required Time Period as %</b> Input appropriately. Usually 25. Refer to the documentation for both of these Inputs below. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="VariablePeriodInputs">Inputs</h3>
+        <div class="member-link">[<a href="#VariablePeriodInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_TimePeriodType">Time Period Type</h4>
+            <div class="member-link">[<a href="#VariablePeriod_TimePeriodType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Sets the type of time period for the Pivot Point lines. This Input works in conjunction with <b>Time Period Length</b>.</p>
+
+            <p>For Daily Pivot Point lines which are based upon a trading day, set this Input to <b>Days</b> (not minutes) and the <b>Time Period Length</b> Input to 1.</p>
+            
+            <p> Pivot Point lines are always based upon the prior period data and may also use the open of the current period.  Therefore, in the case of when the time period is 1 Day, then this means that the Pivot Point lines are referencing the prior days data. Likewise for Weekly and Monthly.</p>
+            
+            <p>A week is defined as Sunday through and including Saturday. A month  is defined as the first day of the month   through and including the last day of the month. </p>
+            
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_TimePeriodLength">Time Period Length</h4>
+            <div class="member-link">[<a href="#VariablePeriod_TimePeriodLength">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Sets the quantity to be used with <b>Time Period Type</b>. For example, for 1 hour Pivot Point lines set this to <b>60</b> and <b>Time Period Type</b> to <b>Minutes</b>.</p>
+
+            <p>For Daily Pivot Point Lines which are based upon a trading day, set this Input to 1 and the <b>Time Period Type</b> Input to <b>Days</b>. <em>In this case, do not use Minutes and specify the number of minutes in the trading day, this is incorrect.</em></p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_FormulaType">Formula Type</h4>
+            <div class="member-link">[<a href="#VariablePeriod_FormulaType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The Formula to use for the Support, Resistance and Pivot Point lines. Refer to the  <a href="#PPFormulas">Formulas Section</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_MinimumRequiredTimePeriodAsPercent">Minimum Required Time Period as %</h4>
+            <div class="member-link">[<a href="#VariablePeriod_MinimumRequiredTimePeriodAsPercent">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This study employs special logic when looking back at the previous period to calculate the Pivot Point lines from, to determine if there is sufficient data. If there is insufficient data, it looks back to the period before the first period it originally referenced.</p>
+
+            <p>This is very useful for holidays and Sunday trading. There is no need to remove data from periods where there is insufficient data. You can control the functioning of this period skipping feature with this Input. For example, if you want there to be at least 50% or more of the bars needed for a period that the Pivot Point lines are calculated from, then set this Input to 50.</p>
+            
+            <p>It is  also <em>necessary</em> to set the <b>Auto Skip Period of No Trading</b> study Input to <b>Yes</b> for <b>Minimum Required Time Period as %</b> to have an effect.</p>
+
+            <p>When this study determines the number of bars that are needed for a period, it does not consider the Session Times settings in <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b>.  For example, if you are just including the Day Session only in your chart, then there are going to be fewer bars available.  Therefore, you need to consider this when setting this percentage.  So if you have less than the full 24 hour Session of bars in the chart, then you will want to use a lower percentage to avoid skipping periods.</p>
+            
+            <p> It does not make sense to set this input to 100.  This will only likely trigger unnecessary skipping when you do not intend that.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_RoundToTickSize">Round to Tick Size</h4>
+            <div class="member-link">[<a href="#VariablePeriod_RoundToTickSize">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Set to Yes to round off the outputted values to the symbols Tick Size, set under <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_DisplayDebuggingOutput">Display Debugging Output (slows study calculations)</h4>
+            <div class="member-link">[<a href="#VariablePeriod_DisplayDebuggingOutput">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to Yes, detailed debugging information will be outputted to the Sierra Chart Message Log. The detailed debugging information includes the beginning and ending Date-Times of the periods in the chart being processed and the prior period being referenced in relation to those periods. This is very useful to understand how the study is actually working internally especially when you get a result that is not what you expect.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_NumberOfDaysToCalculate">Number Of Days To Calculate</h4>
+            <div class="member-link">[<a href="#VariablePeriod_NumberOfDaysToCalculate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input specifies the number of days to calculate Pivot Point lines across in the chart.  This is counting from the end of the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_AutoSkipPeriodOfNoTrading">Auto Skip Period of No Trading</h4>
+            <div class="member-link">[<a href="#VariablePeriod_AutoSkipPeriodOfNoTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Set this to  <b>Yes</b> to automatically skip periods of insufficient data in the chart. For more information about this, refer to the <b>Minimum Required Time Period as %</b> Input.</p>
+
+            <p>Set this to <b>No</b> to prevent automatic skipping of periods of insufficient data. When this is set to <b>No</b>, then this means when referencing the prior period in the chart, the prior period will be used even if there is insufficient data. Sometimes for proper functioning of the study, this needs to be set to <b>No</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="VariablePeriod_NumberOfForwardProjectBars">Number of Forward Project Bars</h4>
+            <div class="member-link">[<a href="#VariablePeriod_NumberOfForwardProjectBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input works  with the <b>Forward Project Pivot Point Lines</b> Input and specifies how many bars/columns beyond the last bar in the chart to forward project the Pivot Points lines across.</p>
+        </section>
+    </section>
+</section>
+
+
+<section class="h2">
+    <h2 id="PPFormulas">Formula Types</h2>
+    <div class="member-link">[<a href="#PPFormulas">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div class="h3">
+        <div class="h4">
+            <h4 id="Formula_0">Formula Type 0</h4>
+            <div class="member-link">[<a href="#Formula_0">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+                <li><b>Resistance Level 0.5 (R_5)</b> = (PivotPoint + Resistance Level 1) / 2</li>
+                <li><b>Resistance Level 1 (R1)</b> = (PivotPoint * 2) - Yesterday's Low</li>
+                <li><b>Resistance Level 1.5 (R1_5)</b> = (Resistance Level 1 + Resistance Level 2) / 2</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 2.5 (R2_5)</b> = (Resistance Level 2 + Resistance Level 3) / 2</li>
+                <li><b>Resistance Level 3 (R3) 3</b> = 2 * PivotPoint + (Yesterday's High - (2 * Yesterday's Low))</li>
+                <li><b>Resistance Level 3.5 (R3_5)</b> = (Resistance Level 3 + Resistance Level 4) / 2</li>
+                <li><b>Resistance Level 4 (R3) 4</b> = 3 * PivotPoint + (Yesterday's High - (3 * Yesterday's Low))</li>
+                <li><b>Support Level 0.5 (S_5)</b> = (PivotPoint + Support Level 1) / 2</li>
+                <li><b>Support Level 1 (S1)</b> = (PivotPoint * 2) - Yesterday's High</li>
+                <li><b>Support Level 1.5 (S1_5)</b> = (Support Level 1 + Support Level 2) / 2</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 2.5 (S2_5)</b> = (Support Level 2 + Support Level 3) / 2</li>
+                <li><b>Support Level 3 (S3)</b> = (2 * PivotPoint) - ((2 * Yesterday's High) - Yesterday's Low)</li>
+                <li><b>Support Level 3.5 (S3_5)</b> = (Support Level 3 + Support Level 4) / 2</li>
+                <li><b>Support Level 4 (S4)</b> = (3 * PivotPoint) - ((3 * Yesterday's High) - Yesterday's Low)</li>
+            </ul>
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_1">Formula Type 1</h4>
+            <div class="member-link">[<a href="#Formula_1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+                <li><b>Resistance Level 1 (R1)</b> = (PivotPoint * 2) - Yesterday's Low</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 3 (R3)</b> = Yesterday's High + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 4 (R4)</b> = PivotPoint + 3 * (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 1 (S1)</b> = (PivotPoint * 2) - Yesterday's High</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 3 (S3)</b> = (2 * PivotPoint) - Yesterday's High - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 4 (S4)</b> = PivotPoint - 3 * (Yesterday's High - Yesterday's Low)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_2">Formula Type 2</h4>
+            <div class="member-link">[<a href="#Formula_2">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Yesterday's High + Yesterday's Low + Yesterday's Close + Today's Open) / 4</li>
+                <li><b>Resistance Level 1 (R1)</b> = (PivotPoint * 2) - Yesterday's Low</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 3 (R3)</b> = 2 * PivotPoint + (Yesterday's High - (2 * Yesterday's Low))</li>
+                <li><b>Resistance Level 4 (R4)</b> = 3 * PivotPoint + (Yesterday's High - (3 * Yesterday's Low))</li>
+                <li><b>Support Level 1 (S1)</b> = (PivotPoint * 2) - Yesterday's High</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 3 (S3)</b> = (2 * PivotPoint) - ((2 * Yesterday's High) - Yesterday's Low)</li>
+                <li><b>Support Level 4 (S4)</b> = (3 * PivotPoint) - ((3 * Yesterday's High) - Yesterday's Low)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_3">Formula Type 3</h4>
+            <div class="member-link">[<a href="#Formula_3">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Yesterday's High + Yesterday's Low + Current Open + Current Open) / 4</li>
+                <li><b>Resistance Level 1 (R1)</b> = (PivotPoint * 2) - Yesterday's Low</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 3 (R3)</b> = 2 *PivotPoint + (Yesterday's High - (2 * Yesterday's Low))</li>
+                <li><b>Support Level 1 (S1)</b> = (PivotPoint * 2) - Yesterday's High</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 3 (S3)</b> = (2 * PivotPoint) - ((2 * Yesterday's High) - Yesterday's Low)</li>
+                <li><b>Support Level 4 (S4)</b> = (3 * PivotPoint) - ((3 * Yesterday's High) - Yesterday's Low)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_4">Formula Type 4</h4>
+            <div class="member-link">[<a href="#Formula_4">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+                <li><b>Resistance Level 1 (R1)</b> = (PivotPoint * 2) - Yesterday's Low</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 3 (R3)</b> = PivotPoint + 2 * (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 4 (R4)</b> = PivotPoint + 3 * (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 1 (S1)</b> = (PivotPoint * 2) - Yesterday's High</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 3 (S3)</b> = PivotPoint - 2 * (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 4 (S4)</b> = PivotPoint - 3 * (Yesterday's High - Yesterday's Low)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_5">Formula Type 5 (Camarilla Pivot Points)</h4>
+            <div class="member-link">[<a href="#Formula_5">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+                <li><b>Range</b> = Yesterday's High - Yesterday's Low</li>
+                <li><b>Resistance Level 0.5 (R_5)</b> = Yesterday's Close + Range * 1.1/18</li>
+                <li><b>Resistance Level 1 (R1)</b> = Yesterday's Close + Range * 1.1/12</li>
+                <li><b>Resistance Level 1.5 (R1_5)</b> = Yesterday's Close + Range * 1.1/9</li>
+                <li><b>Resistance Level 2 (R2)</b> = Yesterday's Close + Range * 1.1/6</li>
+                <li><b>Resistance Level 2.5 (R2_5)</b> = Yesterday's Close + Range * 1.1/5</li>
+                <li><b>Resistance Level 3 (R3)</b> = Yesterday's Close + Range * 1.1/4</li>
+                <li><b>Resistance Level 3.5 (R3_5)</b> = Yesterday's Close + Range * 1.1/3</li>
+                <li><b>Resistance Level 4 (R4)</b> = Yesterday's Close + Range * 1.1/2</li>
+                <li><b>Resistance Level 4.5 (R4_5)</b> = Yesterday's Close + Range * 1.1/1.33</li>
+                <li><b>Resistance Level 5 (R5)</b> = (Yesterday's High / Yesterday's Low) * Yesterday's Close</li>
+                <li><b>Support Level 0.5 (S_5)</b> = Yesterday's Close - Range * 1.1/18</li>
+                <li><b>Support Level 1 (S1)</b> = Yesterday's Close - Range * 1.1/12</li>
+                <li><b>Support Level 1.5 (S1_5)</b> = Yesterday's Close - Range * 1.1/9</li>
+                <li><b>Support Level 2 (S2)</b> = Yesterday's Close - Range * 1.1/6</li>
+                <li><b>Support Level 2.5 (S2_5)</b> = Yesterday's Close - Range * 1.1/5</li>
+                <li><b>Support Level 3 (S3)</b> = Yesterday's Close - Range * 1.1/4</li>
+                <li><b>Support Level 3.5 (S3_5)</b> = Yesterday's Close - Range * 1.1/3</li>
+                <li><b>Support Level 4 (S4)</b> = Yesterday's Close - Range * 1.1/2</li>
+                <li><b>Support Level 4.5 (S4_5)</b> = Yesterday's Close - Range * 1.1/1.33</li>
+                <li><b>Support Level 5 (S5)</b> = Yesterday's Close - (R5 - Yesterday's Close)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_6">Formula Type 6 (Tom DeMark "Pivot Points")</h4>
+            <div class="member-link">[<a href="#Formula_6">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li>If Yesterday's Close &lt; Yesterdays Open:  <b>X</b> = Yesterday's High + Yesterday's Low + Yesterday's Low + Yesterday's Close</li>
+                <li>If Yesterday's Close &gt; Yesterdays Open:  <b>X</b> = Yesterday's High + Yesterday's High + Yesterday's Low + Yesterday's Close</li>
+                <li>If Yesterday's Close = Yesterdays Open: <b>X</b> = Yesterday's High + Yesterday's Low + Yesterday's Close + Yesterday's Close</li>
+                <li><b>Pivot Point (PP)</b> = <b>X</b> / 4 </li>
+                <li><b>Resistance Level 1 (R1)</b> = <b>X</b> / 2 </li>
+                <li><b>Support Level 1 (S1)</b> = <b>X</b> / 2</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_7">Formula Type 7 (Frank Dilernia Pivots)</h4>
+            <div class="member-link">[<a href="#Formula_7">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3 </li>
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + (Yesterday's High - Yesterday's Low) / 2</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low) * 0.618</li>
+                <li><b>Resistance Level 3 (R3)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 1 (S1)</b> = PivotPoint - (Yesterday's High - Yesterday's Low) / 2</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low) * 0.618</li>
+                <li><b>Support Level 3 (S3)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_8">Formula Type 8 (Shadow Trader Pivots)</h4>
+            <div class="member-link">[<a href="#Formula_8">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3 </li>
+                <li><b>Resistance Level 1 (R1)</b> = 2 * PivotPoint - Yesterday's Low</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (R1 - S1)</li>
+                <li><b>Resistance Level 3 (R3)</b> = Yesterday's High + 2 * (PivotPoint - Yesterday's Low)</li>
+                <li><b>Support Level 1 (S1)</b> = 2 * PivotPoint - Yesterday's High</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (R1 - S1)</li>
+                <li><b>Support Level 3 (S3)</b> = Yesterday's Low - 2(Yesterday's High - PivotPoint)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_9">Formula Type 9</h4>
+            <div class="member-link">[<a href="#Formula_9">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3 </li>
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + SQRT(SQRT(PivotPoint))</li>
+                <li><b>Resistance Level 2 (R2)</b> = R1 + SQRT(SQRT(PivotPoint))</li>
+                <li><b>Resistance Level 3 (R3)</b> = R2 + SQRT(SQRT(PivotPoint))</li>
+                <li><b>Support Level 1 (S1)</b> = PivotPoint - SQRT(SQRT(PivotPoint))</li>
+                <li><b>Support Level 2 (S2)</b> = S1 - SQRT(SQRT(PivotPoint))</li>
+                <li><b>Support Level 3 (S3)</b> = S2 - SQRT(SQRT(PivotPoint))</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_10">Formula Type 10</h4>
+            <div class="member-link">[<a href="#Formula_10">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3 </li>
+                <li><b>Resistance Level 1 (R1)</b> = (2 * PivotPoint) - Yesterday's Low</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 3 (R3)</b> = R1 + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 4 (R4)</b> = R3 + (R2 - R1)</li>
+                <li><b>Support Level 1 (S1)</b> = (2 * PivotPoint) - Yesterday's High</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 3 (S3)</b> = S1 - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 4 (S4)</b> = S3 - (S2 - S1)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_11">Formula Type 11</h4>
+            <div class="member-link">[<a href="#Formula_11">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3 </li>
+                <li><b>Daily Range </b> =  (Yesterday's High - Yesterday's Low) </li>
+                <li><b>Resistance Level 0.5 (R_5)</b> = PivotPoint + 0.5*DailyRange</li>
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + 0.618*DailyRange</li>
+                <li><b>Resistance Level 1.5 (R1_5)</b> = PivotPoint + 1*DailyRange</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + 1.272*DailyRange</li>
+                <li><b>Resistance Level 2.5 (R2_5)</b> = PivotPoint + 1.618*DailyRange</li>
+                <li><b>Resistance Level 3 (R3)</b> = PivotPoint + 2*DailyRange</li>
+                <li><b>Resistance Level 4 (R4)</b> = PivotPoint + 2.618*DailyRange</li>
+                <li><b>Support Level 0.5 (S_5)</b> = PivotPoint - 0.5*DailyRange</li>
+                <li><b>Support Level 1 (S1)</b> = PivotPoint - 0.618*DailyRange</li>
+                <li><b>Support Level 1.5 (S1_5)</b> = PivotPoint - 1*DailyRange</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - 1.272*DailyRange</li>
+                <li><b>Support Level 2.5 (S2_5)</b> = PivotPoint - 1.618*DailyRange</li>
+                <li><b>Support Level 3 (S3)</b> = PivotPoint - 2*DailyRange</li>
+                <li><b>Support Level 4 (S4)</b> = PivotPoint - 2.618*DailyRange</li>	
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_12">Formula Type 12</h4>
+            <div class="member-link">[<a href="#Formula_12">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This formula type is not for Pivot Points.  Instead it draws the current days Open price as a line across the day. However, it is recommended to use the Daily OHLC study instead.</p>
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  NextOpen</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_13">Formula Type 13</h4>
+            <div class="member-link">[<a href="#Formula_13">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3 </li>
+                <li><b>Daily Range </b> =  (Yesterday's High - Yesterday's Low) </li>
+                <li><b>Resistance Level 0.5 (R_5)</b> = (R1 + PivotPoint)/2</li>
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + 0.382*DailyRange</li>
+                <li><b>Resistance Level 1.5 (R1_5)</b> = (R1 + R2)/2</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + 0.618*DailyRange</li>
+                <li><b>Resistance Level 2.5 (R2_5)</b> = (R3 + R2)/2</li>
+                <li><b>Resistance Level 3 (R3)</b> = PivotPoint +  1.0*DailyRange</li>
+                <li><b>Support Level 0.5 (S_5)</b> = (S1 + PivotPoint)/2</li>
+                <li><b>Support Level 1 (S1)</b> = PivotPoint - 0.382*DailyRange</li>
+                <li><b>Support Level 1.5 (S1_5)</b> = (S1 + S2)/2</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - 0.618*DailyRange</li>
+                <li><b>Support Level 2.5 (S2_5)</b> = (S3 + S2)/2</li>
+                <li><b>Support Level 3 (S3)</b> = PivotPoint - 1.0*DailyRange</li>
+
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_14">Formula Type 14</h4>
+            <div class="member-link">[<a href="#Formula_14">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+
+                <li><b>Resistance Level 1 (R1)</b> = 2 * PivotPoint - Yesterday's Low</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint - S1 + R1</li>
+                <li><b>Resistance Level 3 (R3)</b> = PivotPoint - S1 + R2</li>
+
+                <li><b>Support Level 1 (S1)</b> = 2 * PivotPoint - Yesterday's High</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (R1 - S1)</li>
+                <li><b>Support Level 3 (S3)</b> = PivotPoint  - (R2 - S1) </li>
+
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_15">Formula Type 15 (Fibonacci Zone Pivots)</h4>
+            <div class="member-link">[<a href="#Formula_15">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+
+                <li><b>Daily Range</b> =  (Yesterday's High - Yesterday's Low)</li>
+
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + DailyRange / 2</li>
+                <li><b>Resistance Level 1.5 (R1_5)</b> = PivotPoint + DailyRange * 0.618</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + DailyRange</li>
+                <li><b>Resistance Level 2.5 (R2_5)</b> = PivotPoint + DailyRange * 1.382</li>
+
+                <li><b>Support Level 1 (S1)</b> = PivotPoint - DailyRange / 2</li>
+                <li><b>Support Level 1.5 (S1_5)</b> = PivotPoint - DailyRange * 0.618</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - DailyRange</li>
+                <li><b>Support Level 2.5 (S2_5)</b> = PivotPoint - DailyRange * 1.382</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_16">Formula Type 16 (The Central Pivot Range Formula)</h4>
+            <div class="member-link">[<a href="#Formula_16">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+
+                <li><b>Resistance Level 1 (R1)</b> = (PivotPoint - S1) + PivotPoint</li>
+
+                <li><b>Support Level 1 (S1)</b> = (High + Low) / 2</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_17">Formula Type 17</h4>
+            <div class="member-link">[<a href="#Formula_17">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+
+                <li><b>Resistance Level 0.5 (R_5)</b> = (PivotPoint + R2) / 2 </li>
+                <li><b>Resistance Level 1 (R1)</b> = 2 * PivotPoint - Yesterday's Low</li>
+                <li><b>Resistance Level 1.5 (R1_5)</b> = (R_5 + R2) / 2</li>
+                <li><b>Resistance Level 2 (R2)</b> = PivotPoint + (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Resistance Level 2.5 (R2_5)</b> = (R2 + R3) / 2</li>
+                <li><b>Resistance Level 3 (R3)</b> = Yesterday's High + 2*(PivotPoint - Yesterday's Low)</li>
+
+                <li><b>Support Level 0.5 (S_5)</b> = (PivotPoint + S2) / 2</li>
+                <li><b>Support Level 1 (S1)</b> = 2 * PivotPoint - Yesterday's High</li>
+                <li><b>Support Level 1.5 (S1_5)</b> = (S_5 + S2) / 2</li>
+                <li><b>Support Level 2 (S2)</b> = PivotPoint - (Yesterday's High - Yesterday's Low)</li>
+                <li><b>Support Level 2.5 (S2_5)</b> = (S2 + S3) / 2</li>
+                <li><b>Support Level 3 (S3)</b> = Low - 2 * (Yesterday's High - PivotPoint)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_18">Formula Type 18</h4>
+            <div class="member-link">[<a href="#Formula_18">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + (Yesterday's High - Yesterday's Low) * 0.75</li>
+
+                <li><b>Support Level 1 (S1)</b> = PivotPoint -  (Yesterday's High - Yesterday's Low) * 0.75</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_19">Formula Type 19</h4>
+            <div class="member-link">[<a href="#Formula_19">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + 2 * Today's Open) / 4</li>
+
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + 2 * (Yesterday's High - Yesterday's Low)</li>
+
+                <li><b>Support Level 1 (S1)</b> = PivotPoint - 2 * (Yesterday's High - Yesterday's Low)</li>
+            </ul>
+
+        </div>
+
+        <div class="h4">
+            <h4 id="Formula_20">Formula Type 20 (ACD method)</h4>
+            <div class="member-link">[<a href="#Formula_20">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close) / 3</li>
+
+                <li><b>Resistance Level 1 (R1)</b> = PivotPoint + abs((Yesterday's High + Yesterday's Low)/2 - PivotPoint)</li>
+
+                <li><b>Support Level 1 (S1)</b> = PivotPoint - abs((Yesterday's High + Yesterday's Low)/2 - PivotPoint)</li>
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_21">Formula Type 21</h4>
+            <div class="member-link">[<a href="#Formula_21">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  Tomorrow's Open</li>
+
+                <li><b>Resistance Level 0.5 (R_5)</b> = PivotPoint + (High - Low)*0.382</li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = PivotPoint + (High - Low)*0.618</li>
+				
+				<li><b>Resistance Level 1.5 (R1_5)</b> = PivotPoint + (High - Low)*0.786</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = PivotPoint + (High - Low)*1.0</li>
+				
+				<li><b>Resistance Level 2.5 (R2_5)</b> = PivotPoint + (High - Low)*1.27</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = PivotPoint + (High - Low)*1.618</li>
+				
+				<li><b>Resistance Level 3.5 (R3_5)</b> = PivotPoint + (High - Low)*2.0</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = PivotPoint + (High - Low)*2.618</li>
+				
+				<li><b>Resistance Level 5 (R5)</b> = PivotPoint + (High - Low)*3.0</li>
+
+                <li><b>Support Level 0.5 (S_5)</b> = PivotPoint - (High - Low)*0.382</li>
+				
+				<li><b>Support Level 1 (S1)</b> = PivotPoint - (High - Low)*0.618</li>
+				
+				<li><b>Support Level 1.5 (S1_5)</b> = PivotPoint - (High - Low)*0.786</li>
+				
+				<li><b>Support Level 2 (S2)</b> = PivotPoint - (High - Low)*1.0</li>
+				
+				<li><b>Support Level 2.5 (S2_5)</b> = PivotPoint - (High - Low)*1.27</li>
+				
+				<li><b>Support Level 3 (S3)</b> = PivotPoint - (High - Low)*1.618</li>
+				
+				<li><b>Support Level 3.5 (S3_5)</b> = PivotPoint - (High - Low)*2.0</li>
+				
+				<li><b>Support Level 4 (S4)</b> = PivotPoint - (High - Low)*2.618</li>
+				
+				<li><b>Support Level 5 (S5)</b> = PivotPoint - (High - Low)*3.0</li>
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_22">Formula Type 22</h4>
+            <div class="member-link">[<a href="#Formula_22">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close)/3</li>
+				
+				<li><b>Upper Difference (UDIFF)</b> = Yesterday's High - Pivot Point</li>
+				
+				<li><b>Lower Difference (LDIFF)</b> = Pivot Point - Yesterday's Low</li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = PivotPoint + 0.382*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = PivotPoint + 0.618*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = PivotPoint + Lower Difference</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = PivotPoint + 1.272*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 5 (R5)</b> = PivotPoint + 1.382*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 6 (R6)</b> = PivotPoint + 1.618*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 7 (R7)</b> = PivotPoint + 2.0*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 8 (R8)</b> = PivotPoint + 2.272*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 9 (R9)</b> = PivotPoint + 2.382*(Lower Difference)</li>
+				
+				<li><b>Resistance Level 10 (R10)</b> = PivotPoint + 2.618*(Lower Difference)</li>
+				
+				<li><b>Support Level 1 (S1)</b> = PivotPoint - 0.382*(Upper Difference)</li>
+				
+				<li><b>Support Level 2 (S2)</b> = PivotPoint - 0.618*(Upper Difference)</li>
+				
+				<li><b>Support Level 3 (S3)</b> = PivotPoint - Upper Difference</li>
+				
+				<li><b>Support Level 4 (S4)</b> = PivotPoint - 1.272*(Upper Difference)</li>
+				
+				<li><b>Support Level 5 (S5)</b> = PivotPoint - 1.382*(Upper Difference)</li>
+				
+				<li><b>Support Level 6 (S6)</b> = PivotPoint - 1.618*(Upper Difference)</li>
+				
+				<li><b>Support Level 7 (S7)</b> = PivotPoint - 2.0*(Upper Difference)</li>
+				
+				<li><b>Support Level 8 (S8)</b> = PivotPoint - 2.272*(Upper Difference)</li>
+				
+				<li><b>Support Level 9 (S9)</b> = PivotPoint - 2.382*(Upper Difference)</li>
+				
+				<li><b>Support Level 10 (S10)</b> = PivotPoint - 2.618*(Upper Difference)</li>
+				
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_23">Formula Type 23</h4>
+            <div class="member-link">[<a href="#Formula_23">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> =  (Yesterday's High + Yesterday's Low + Yesterday's Close)/3</li>
+				
+				<li><b>Daily Range (DR)</b> = Yesterday's High - Yesterday's Low</li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = PivotPoint + 0.5*(Daily Range)</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = PivotPoint + 0.618*(Daily Range)</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = PivotPoint + Daily Range</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = PivotPoint + 1.382*(Daily Range)</li>
+				
+				<li><b>Resistance Level 5 (R5)</b> = PivotPoint + 1.618*(Daily Range)</li>
+				
+				<li><b>Resistance Level 6 (R6)</b> = PivotPoint + 2*(Daily Range)</li>
+				
+				<li><b>Resistance Level 7 (R7)</b> = PivotPoint + 2.618*(Daily Range)</li>
+				
+				<li><b>Support Level 1 (S1)</b> = PivotPoint - 0.5*(Daily Range)</li>
+				
+				<li><b>Support Level 2 (S2)</b> = PivotPoint - 0.618*(Daily Range)</li>
+				
+				<li><b>Support Level 3 (S3)</b> = PivotPoint - Daily Range</li>
+				
+				<li><b>Support Level 4 (S4)</b> = PivotPoint - 1.382*(Daily Range)</li>
+				
+				<li><b>Support Level 5 (S5)</b> = PivotPoint - 1.618*(Daily Range)</li>
+				
+				<li><b>Support Level 6 (S6)</b> = PivotPoint - 2*(Daily Range)</li>
+				
+				<li><b>Support Level 7 (R7)</b> = PivotPoint - 2.618*(Daily Range)</li>
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_24">Formula Type 24 (Advanced Camarilla Pivot Points Calculation)</h4>
+            <div class="member-link">[<a href="#Formula_24">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = Yesterday's Close</li>
+				
+				<li><b>Daily Range (DR)</b> = Yesterday's High - Yesterday's Low</li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = PivotPoint + 0.0916*(Daily Range)</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = PivotPoint + 0.183*(Daily Range)</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = PivotPoint + 0.275*(Daily Range)</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = PivotPoint + 0.555*(Daily Range)</li>
+				
+				<li><b>Resistance Level 5 (R5)</b> = PivotPoint + 0.8244*(Daily Range)</li>
+				
+				<li><b>Resistance Level 6 (R6)</b> = PivotPoint + 1.0076*(Daily Range)</li>
+				
+				<li><b>Support Level 1 (S1)</b> = PivotPoint - 0.0916*(Daily Range)</li>
+				
+				<li><b>Support Level 2 (S2)</b> = PivotPoint - 0.183*(Daily Range)</li>
+				
+				<li><b>Support Level 3 (S3)</b> = PivotPoint - 0.275*(Daily Range)</li>
+				
+				<li><b>Support Level 4 (S4)</b> = PivotPoint - 0.55*(Daily Range)</li>
+				
+				<li><b>Support Level 5 (S5)</b> = PivotPoint - 0.8244*(Daily Range)</li>
+				
+				<li><b>Support Level 6 (S6)</b> = PivotPoint - 1.0992*(Daily Range)</li>	
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_25">Formula Type 25</h4>
+            <div class="member-link">[<a href="#Formula_25">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Prior High + Prior Low + Prior Close)/3 </li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = PivotPoint + (Pivot Point - S1)</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = Prior High + (Prior High - Prior Low)*0.25</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = Prior High + (Prior High - Prior Low)*0.50</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = Prior High + (Prior High - Prior Low)*0.75</li>
+				
+				<li><b>Resistance Level 5 (R5)</b> = Prior High + (Prior High - Prior Low)</li>
+				
+				<li><b>Support Level 1 (S1)</b> = (Prior High + Prior Low)/2</li>
+				
+				<li><b>Support Level 2 (S2)</b> = Prior Low - (Prior High - Prior Low)*0.25</li>
+				
+				<li><b>Support Level 3 (S3)</b> = Prior Low - (Prior High - Prior Low)*0.50</li>
+				
+				<li><b>Support Level 4 (S4)</b> = Prior Low - (Prior High - Prior Low)*0.75</li>
+				
+				<li><b>Support Level 5 (S5)</b> = Prior Low - (Prior High - Prior Low)</li>
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_26">Formula Type 26</h4>
+            <div class="member-link">[<a href="#Formula_26">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Prior High + Prior Low + Prior Close)/3 </li>
+				
+				<li><b>Daily Range (DR)</b> = Yesterday's High - Yesterday's Low</li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = PivotPoint + 0.382*(Daily Range)</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = PivotPoint + 0.618*(Daily Range)</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = PivotPoint + 0.786*(Daily Range)</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = PivotPoint + 1.00*(Daily Range)</li>
+				
+				<li><b>Resistance Level 5 (R5)</b> = PivotPoint + 1.382*(Daily Range)</li>
+				
+				<li><b>Resistance Level 6 (R6)</b> = PivotPoint + 1.618*(Daily Range)</li>
+				
+				<li><b>Resistance Level 7 (R7)</b> = PivotPoint + 2.00*(Daily Range)</li>
+				
+				<li><b>Support Level 1 (S1)</b> = PivotPoint - 0.382*(Daily Range)</li>
+				
+				<li><b>Support Level 2 (S2)</b> = PivotPoint - 0.618*(Daily Range)</li>
+				
+				<li><b>Support Level 3 (S3)</b> = PivotPoint - 0.786*(Daily Range)</li>
+				
+				<li><b>Support Level 4 (S4)</b> = PivotPoint - 1.00*(Daily Range)</li>
+				
+				<li><b>Support Level 5 (S5)</b> = PivotPoint - 1.382*(Daily Range)</li>
+				
+				<li><b>Support Level 6 (S6)</b> = PivotPoint - 1.618*(Daily Range)</li>
+				
+				<li><b>Support Level 7 (S7)</b> = PivotPoint - 2.00*(Daily Range)</li>
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_27">Formula Type 27</h4>
+            <div class="member-link">[<a href="#Formula_27">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = Current Open</li>
+				
+				<li><b>Daily Range (DR)</b> = Prior High - Prior Low</li>
+				
+				<li><b>Resistance Level 0.5 (R_5)</b> = PivotPoint + 0.236*(Daily Range)</li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = PivotPoint + 0.382*(Daily Range)</li>
+				
+				<li><b>Resistance Level 1.5 (R1_5)</b> = PivotPoint + 0.5*(Daily Range)</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = PivotPoint + 0.618*(Daily Range)</li>
+				
+				<li><b>Resistance Level 2.5 (R2_5)</b> = PivotPoint + 0.786*(Daily Range)</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = PivotPoint + 1.00*(Daily Range)</li>
+				
+				<li><b>Resistance Level 3.5 (R3_5)</b> = PivotPoint + 1.27*(Daily Range)</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = PivotPoint + 1.618*(Daily Range)</li>
+				
+				<li><b>Resistance Level 5 (R5)</b> = PivotPoint + 2.00*(Daily Range)</li>
+				
+				<li><b>Resistance Level 6 (R6)</b> = PivotPoint + 2.618*(Daily Range)</li>
+				
+				<li><b>Resistance Level 7 (R7)</b> = PivotPoint + 3.00*(Daily Range)</li>
+				
+				<li><b>Support Level 0.5 (S_5)</b> = PivotPoint - 0.236*(Daily Range)</li>
+				
+				<li><b>Support Level 1 (S1)</b> = PivotPoint - 0.382*(Daily Range)</li>
+				
+				<li><b>Support Level 1.5 (S1_5)</b> = PivotPoint - 0.5*(Daily Range)</li>
+				
+				<li><b>Support Level 2 (S2)</b> = PivotPoint - 0.618*(Daily Range)</li>
+				
+				<li><b>Support Level 2.5 (S2_5)</b> = PivotPoint - 0.786*(Daily Range)</li>
+				
+				<li><b>Support Level 3 (S3)</b> = PivotPoint - 1.00*(Daily Range)</li>
+				
+				<li><b>Support Level 3.5 (S3_5)</b> = PivotPoint - 1.27*(Daily Range)</li>
+				
+				<li><b>Support Level 4 (S4)</b> = PivotPoint - 1.618*(Daily Range)</li>
+				
+				<li><b>Support Level 5 (S5)</b> = PivotPoint - 2.00*(Daily Range)</li>
+				
+				<li><b>Support Level 6 (S6)</b> = PivotPoint - 2.618*(Daily Range)</li>
+				
+				<li><b>Support Level 7 (S7)</b> = PivotPoint - 3.00*(Daily Range)</li>
+            </ul>
+        </div>
+		
+		<div class="h4">
+            <h4 id="Formula_28">Formula Type 28</h4>
+            <div class="member-link">[<a href="#Formula_28">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ul>
+                <li><b>Pivot Point (PP)</b> = (Prior High + Prior Low + Prior Close)/3 </li>
+				
+				<li><b>Daily Range (DR)</b> = Prior High - Prior Low</li>
+				
+				<li><b>d</b> = (Prior High + Prior Low)/2</li>
+				
+				<li><b>r</b> = PivotPoint - d</li>
+				
+				<li><b>Pivot Point High (PPHigh)</b> = PivotPoint + r</li>
+				
+				<li><b>Pivot Point Low (PPLow)</b> = PivotPoint - r</li>
+				
+				<li><b>Resistance Level 1 (R1)</b> = 2*PivotPoint - (Prior High)</li>
+				
+				<li><b>Support Level 1 (S1)</b> = 2*PivotPoint - (Prior Low)</li>
+				
+				<li><b>Resistance Level 2 (R2)</b> = 2*PivotPoint + (R1 - S1)</li>
+				
+				<li><b>Support Level 2 (S2)</b> = 2*PivotPoint - (R1 - S1)</li>
+				
+				<li><b>Resistance Level 3 (R3)</b> = R1 + Daily Range</li>
+				
+				<li><b>Support Level 3 (S3)</b> = S1 - Daily Range</li>
+				
+				<li><b>Resistance Level 4 (R4)</b> = R3 + (R2 - R1)</li>
+			
+				<li><b>Support Level 4 (S4)</b> = S3 - (S2 - S1)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="h2">
+    <h2 id="PivotPointsScaling">Pivot Points Scaling</h2>
+    <div class="member-link">[<a href="#PivotPointsScaling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The default Scale Range Type for each of the  <b>Pivot Points</b> studies is <b>Same As Region</b>. With this Scale Range Type, Pivot Point lines  <em>will only be visible and drawn if they fall within the range of the displayed prices</em>. So if they are outside of the range of display prices, you will not see them.  The reason for this is so that the Pivot Point lines will not compress the main price graph.</p>
+
+    <p>The Scale Range Type can be changed by pressing the <a href="index981f.html?page=doc/Scaling.html">Scale</a> button in the <b>Study Settings</b> window for these studies.</p>
+
+    <p>The Scale Range Type can be set to <b>Automatic</b> to make visible all of the Pivot Point lines.</p>
+
+    <p>You are able to compress or expand the  main price graph scale by using the <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling">Interactive Scale Range</a> feature to bring the Pivot Point Lines into view if you cannot see them with the current range of prices, or out of  view.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="PivotPointsAndHolidayTrading">Pivot Points and Holiday Trading</h2>
+    <div class="member-link">[<a href="#PivotPointsAndHolidayTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> During holidays, usually there is partial trading on the holiday trading day itself which may occur during the evening session which is considered part of the next trading day.</p>
+
+    <p> This can cause a problem with the Pivot Points studies where on the following trading day, a partial holiday trading day is being referenced. Whether or not this causes a problem depends upon the  <a href="index4ec1.html?page=doc/SessionTimes.php" >Session Times</a> settings.</p>
+
+    <p>The simple solution to this is to select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Chart Data</b>.</p>
+
+    <p>In the <b>Dates To Exclude</b> box, enter the date of the holiday.</p>
+
+    <p> For example  for the 2016 Easter holiday, the Friday before there was partial trading during the evening session. To remove this from the chart enter <b>2016-03-25</b>.</p>
+
+    <p>Another solution is to use the <a href="#s223" >Pivot Points - Variable Period</a> study and use the <b>Auto Skip Period of No Trading</b> and the <b>Minimum Required Time Period As %</b> study Inputs to skip over trading days in the chart which have an insufficient amount of trading activity.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ForwardProjecting">Forward Projecting Pivot Point Lines</h2>
+    <div class="member-link">[<a href="#ForwardProjecting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Pivot Point lines can be displayed for 10 bars into the future after the last bar in the chart. This allows you to forward project the lines and see what they are for the next period if you are already near the end of the current period. To do this follow these instructions:</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Analysis &gt;&gt; Studies</b> the menu.</li>
+        <li>Select the specific   <b>Pivot Points</b> study you want to add forward project support for, in the <b>Studies to Graph</b> list.</li>
+        <li>Press the <b>Settings</b> button.</li>
+        <li>Select the <b>Settings and Inputs</b> tab.</li>
+        <li>Set the <b>Forward Project Pivot Point Lines</b> Input to <b>Yes</b>.</li>
+        <li>Press OK. Press OK.</li>
+        <li>Scroll the chart to the very end.</li>
+        <li>Make sure there is no checkmark by <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b>.</li>
+        <li>Click on the right arrow on the scrollbar at the bottom of the chart to scroll past the end of the chart to create space for the forward projected lines.</li>
+        <li>Lock fill space by selecting <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b>.</li>
+    </ol>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="PivotPointsNotVisible">Pivot Points Not Visible</h2>
+    <div class="member-link">[<a href="#PivotPointsNotVisible">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section documents the reasons why you may not be able to see the Pivot Point lines.</p>
+
+    <p> The most common reason Pivot Point lines  are not visible is because the range of prices in the main price graph in the chart do not include any of the values of the Pivot Point lines themselves. To resolve this you will need to <em>compress</em> to scale. Refer to <a href="#PivotPointsScaling">Pivot Points Scaling</a>.</p>
+
+    <p>The Pivot  Point lines  may not be visible because there is a problem with the Date-Times in the underlying data. This is an unlikely problem. The general solution to this is to go to the chart and select <b>Edit &gt;&gt; Delete All Data and Download</b>.</p>
+
+    <p>The Pivot Point lines  may not be visible because of some problem with the current Input  Settings for the <b>Pivot Points-Daily</b> study. Make sure <b>Number of Days to Calculate </b> is set to at least to 1. <b>Reference Daily Chart for Data</b> normally should be set to <b>No</b>. <b>Use Manually Entered OHLC Values</b> needs to be set to <b>No</b> unless you are manually entering the values (which is not recommended). <b>Use Day Session Only</b> normally should be set to <b>No</b>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="HidingDisplayingLevels">Hiding and Displaying the Pivot Point, Support and Resistance Levels</h2>
+    <div class="member-link">[<a href="#HidingDisplayingLevels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>The Pivot Point, Support and Resistance lines that are drawn in the  Pivot Points study can be hidden or displayed.  By default, the less common levels are hidden. Follow these instructions to hide or make visible a specific level.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Analysis &gt;&gt; Studies</b> the menu.</li>
+
+        <li>Select the specific <b>Pivot Points</b> study you want to modify in the <b>Studies to Graph</b> list.</li>
+
+        <li>Press the <b>Settings</b> button.</li>
+
+        <li>Select the <b>Subgraphs</b> tab.</li>
+
+        <li>In the list of <b>Subgraphs</b>, select the specific Subgraph for the level that you want to hide or make visible.</li>
+
+        <li>To make the level visible, set the <b>Draw Style</b> to a setting other than <b>Do Not Draw/Hidden</b> or <b>Ignore</b>.</li>
+        <li>To hide the level, set the <b>Draw Style</b> to <b>Ignore</b>.</li>
+
+        <li>Press <b> OK </b> to close the <b>Study Settings</b> window. </li>
+
+        <li>Press <b> OK </b> to close the <b>Chart Studies</b> window.</li>
+    </ol>
+
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/PivotPoints.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:48:23 GMT -->
+</html>  

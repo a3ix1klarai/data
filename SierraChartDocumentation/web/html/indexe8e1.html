@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails43.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105651') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails43.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 43: Differences With Data and Chart Bars Between Services/Connections -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexe8e1.html?page=doc/helpdetails43.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="indexe8e1.html?page=doc/helpdetails43.html">Help topic 43: Differences With Data and Chart Bars Between Services/Connections</a></h4> </div>     <h1 class="PageName">Differences With Data and Chart Bars Between Services / Connections / Chart Types</h1>
+
+<section class="h2">
+    <p>If you notice a difference between data or chart bars in Sierra Chart compared with another Data or Trading service, or another copy of Sierra Chart connected to the same service, after re-downloading chart data,  or between Chart Data Types (Historical versus Intraday), then there are several possible explanations.</p>
+
+    <p>Differences could be because Sierra Chart is displaying more accurate data or bars, or the opposite.</p>
+
+    <p>The accuracy of the bars depends upon the quality of the Data or Trading service you are using Sierra Chart with, Sierra Chart settings, and/or your computer's clock setting (if the  Data or Trading service you are using requires it). </p>
+    
+    <p>All of this is explained here. If it is a matter of settings, then changing the settings will correct the issue. Typically, minor differences are very hard to resolve if at all.</p>
+
+    <ul>
+        <li><a href="#IncorrectClockSettingsOrDifferencesWithTimeStamping">43.1 - Incorrect Clock Settings  or Differences With Time Stamping</a></li>
+        <li><a href="#IncompleteDataFromTheDataFeed">43.2 - Incomplete Data From The Data Feed</a></li>
+        <li><a href="#HistoricalDataNotDetailedEnoughOrIntradayDataStorageTimeUnitTooLarge">43.3 - Historical Data Not Detailed Enough Or Intraday Data Storage Time Unit Too Large</a></li>
+        <li><a href="#DifferencesBetweenDownloadedHistoricalDataAndTtheRealTimeCollectedData">43.4 - Differences Between Downloaded Historical Data and the Real Time Collected Data</a></li>
+       
+        <li><a href="#DifferencesBetweenClosePricesOnHistoricalDailyChartsComparedToIntradayCharts">43.6 - Differences Between Close Prices on Historical Daily Charts Compared to Intraday Charts</a></li>
+        <li><a href="#ComparingDailyVolumeToIntradayChartBarVolume">43.7 - Comparing Daily Volume to Intraday Chart Bar Volume</a></li>
+        <li><a href="#ComparingIntradayChartBars">43.8 - Comparing Intraday Chart Bars</a></li>
+        <li><a href="#ChartBarTimestampingIsStartOfBar">43.9 - Chart Bar Time Stamping is Start of Bar</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2 id="IncorrectClockSettingsOrDifferencesWithTimeStamping">43.1 Incorrect Clock Settings or Differences With Time Stamping</h2>
+    <div class="member-link">[<a href="#IncorrectClockSettingsOrDifferencesWithTimeStamping">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Market data from some Data and Trading services Sierra Chart supports are time stamped using your local computer clock. Otherwise, the time stamping is from the data feed itself from the Data/Trading service.</p>
+    
+     <p>In some cases there is a Service specific setting which controls this. If there is one, it is  <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service Setting &gt;&gt; Timestamp Using Local Computer Clock</b>. This can be set to either True/Yes or False/No. It will be in the Service specific settings on the <b>Data/Trade Service Settings</b> window. Normally you will want to set this to False/No.</p>
+     
+     <p> In the case of Intraday charts, after changing <b>Timestamp Using Local Computer Clock</b>, re-download the data in the chart with  <b class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b>.</p>
+
+    <p>In the case of when the market data time stamping uses your local computer clock, and it is is not synchronized to the clock of the Data/Trading service you are comparing to, then a time-based bar chart may appear different compared to another service or when the historical data is <a href="index1230.html?page=doc/helpdetails2.html#h2.1.2" target="_blank" rel="noopener noreferrer">re-downloaded</a>.</p>
+
+    <p>It is a good idea to synchronize your clock to an atomic time server. Windows has built-in time synchronization to an atomic timeserver. This is configured through <b>Control Panel &gt;&gt; Date and Time &gt;&gt; Internet Time</b> in Windows. Although, the update frequency of this may not be fast enough. As an alternative you can enable <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#SetSystemDateTimeFromServer" >Global Settings &gt;&gt; Set System Date-Time from Server</a> from within Sierra Chart.</p>
+
+    <p>When you are comparing bars in a chart to a chart of the same symbol in another copy of Sierra Chart on another computer, both are connected to the same Data or Trading service, and the trade data is using the local computer clock for time stamping, then if the clocks between the two computers are not perfectly synchronized with each other,  there will be differences with the chart bars.</p>
+
+    <p>Small differences with the time stamping of trades, whether the trades are time stamped using the local computer clock or using the clock from the data feed or exchange, can cause slight differences in the appearance of chart bars.  For example, if a trade that occurs at the end of a 1 minute bar, has a timestamp which causes it to be included in the next bar, then this 1 minute bar and the next 1 minute bar can potentially appear a little different compared to a data feed that timestamped the trade so it was included on the first 1 minute bar.</p>
+</section>
+
+<section class="h2">
+    <h2 id="IncompleteDataFromTheDataFeed">43.2 Incomplete Data From The Data Feed</h2>
+    <div class="member-link">[<a href="#IncompleteDataFromTheDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Incomplete historical or real time data received from the Data or Trading service can cause differences with data or chart bars compared to another service or another copy of Sierra Chart using a different connection. Delays with the data received can also cause differences. There are many technical reasons for receiving incomplete data from the Data or Trading service. These include: The Data or Trading service you are using intentionally sending less data to minimize the bandwidth usage, or your Internet connection may not have enough bandwidth.</p>
+
+    <p>The solution to this is to use a different Data or Trading service or improve your Internet connection.</p>
+
+    <p>For a quality data feed which can be used with your current Trading service, or on its own, we recommend using one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a>.</p>
+
+    <p>For information about Internet connection related issues, refer to <a href="index0054.html?page=doc/helpdetails4.html">Help Topic #4.</a></p>
+
+    <p>If you have received incomplete real-time data from the Data or Trading service you are using, then to get complete data in your charts you will need to <a href="index1230.html?page=doc/helpdetails2.html#h2.1.2">Delete and Re-Download Data</a> the Intraday data in the chart.</p>
+
+    <p>Due to increased trading volumes, exchanges routinely bundle/rollup/combine trades together.  Therefore, one trade received may actually be many trades. This is something to consider when using chart bars which are based upon a <b>Number of Trades</b> per bar.</p>
+</section>
+
+<section class="h2">
+    <h2 id="HistoricalDataNotDetailedEnoughOrIntradayDataStorageTimeUnitTooLarge">43.3 Historical Data Not Detailed Enough Or Intraday Data Storage Time Unit Too Large</h2>
+    <div class="member-link">[<a href="#HistoricalDataNotDetailedEnoughOrIntradayDataStorageTimeUnitTooLarge">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you are using <b> Seconds, Number of Trades, Volume, Range, Reversal, Renko, Delta Volume</b> chart bars and the historical data records  are not 1 second or less and the <b>Intraday Data Storage Time Unit </b> is not set to <b>1 tick</b>, then the chart bars may look slightly different.  To improve the accuracy of these types of chart bars and for more details on the subject, refer to  <a href="index9bf5.html?page=doc/helpdetails47.html"> help topic 47</a>.</p>
+
+    <p>When you are using <b>Number of Trades, Volume, Range, Reversal, Renko, Delta Volume</b> chart bars, then incomplete data from the data feed as explained in <a href="#h43.2">Help Topic 43.2</a>, will also cause differences with the chart bars.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DifferencesBetweenDownloadedHistoricalDataAndTtheRealTimeCollectedData">43.4 Differences Between Downloaded Historical Data and the Real Time Collected Data</h2>
+    <div class="member-link">[<a href="#DifferencesBetweenDownloadedHistoricalDataAndTtheRealTimeCollectedData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you <a href="index7b4b.html?page=doc/IntradayDataEditor.html#DeleteAndRefreshData">Delete and Re-Download</a> the real time collected data in your charts and the historical downloaded data is different, then this would indicate the real time feed is not providing the exact same data.</p>
+
+    <p>If you see this problem, generally it is caused by the real time feed, providing less trade data. There are many technical reasons for this. These include: The data provider intentionally sending less data to minimize their bandwidth usage and/or to reduce time lags, or your Internet connection may not have enough bandwidth. Primarily it is the first reason, the data provider sending less data. The solution to this problem is to use a different Data or Trading service. For related information, refer to <a href="index0054.html?page=doc/helpdetails4.html">Help Topic #4</a>.</p>
+
+    <p>In no case does the <b>Intraday Data Storage Time Unit</b> set through <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> have any impact upon differences between downloaded historical data and the real-time collected data.  This setting should not be reduced to a shorter setting such as 1 tick unless you absolutely require that.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="DifferencesBetweenClosePricesOnHistoricalDailyChartsComparedToIntradayCharts">43.6 - Differences Between Close Prices on Historical Daily Charts Compared to Intraday Charts</h2>
+    <div class="member-link">[<a href="#DifferencesBetweenClosePricesOnHistoricalDailyChartsComparedToIntradayCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Usually there will be a difference between the  close price of a bar on a Historical Daily chart compared to the  close price of a bar at the corresponding time on an Intraday chart.</p>
+
+    <p>When the market is open for a symbol, the close/last trade price of the last bar in a Historical Daily chart should match the close/last price of the last bar in an Intraday chart of the same symbol, as long as the Session Times for the Intraday chart are set to display all 24 hours of trading. This particular section, describes comparing the close price of bars other than the last  bar in a chart.</p>
+
+    <p>There can be various reasons why you see a difference between the close price of a bar on a Historical Daily chart compared to the close price of a bar at the corresponding time on an Intraday chart.   These can include time stamping differences, the fact that the <em>Historical Daily charts use the official settlement price</em> and this usually is different compared to Intraday charts, and incomplete data transmission from the data server or not receiving all of the data, and not comparing the closing prices at the exact corresponding times between the two charts.</p>
+
+    <p>The primary reason you will see a significant difference between the close price on a Historical Daily chart compared to the close price of a bar at the corresponding time on an  Intraday chart,  is because the Historical Daily chart uses the <em>official settlement price</em>. The official settlement price from the exchange is calculated using a certain algorithm. This algorithm can be found in the futures contract specifications on exchange website. This official settlement price is not the same price as the last trade price at the end of the trading session.</p>
+
+    <p>In general the close prices will not exactly match between Historical Daily charts and Intraday charts.</p>
+
+    <p>It is not possible to adjust the <b>Session Times</b> in  <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> for Historical Daily charts.  They are not used because they are set by the exchange or data provider the data originates from.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ComparingDailyVolumeToIntradayChartBarVolume">43.7 - Comparing Daily Volume to Intraday Chart Bar Volume</h2>
+    <div class="member-link">[<a href="#ComparingDailyVolumeToIntradayChartBarVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Exchanges transmit the Daily Volume for symbols on the exchange  as the symbols trade throughout the day.   The Daily Volume number you see within Sierra Chart in the <b class = "menu_item">Window &gt;&gt; Current Quote Window</b> and after the prefix  <em> <b>DV:</b></em> on the Region Data  Line of a chart is from the exchange Daily Volume data.  </p>
+    
+    <p>The <b>Volume</b> field on a  <a href="index1eaf.html?page=doc/GettingQuotes.html" Target="_blank" rel="noopener noreferrer">Quote Board and a Quote Spreadsheet</a> also are from the exchange transmitted Daily Volume data.</p>
+
+    <p>The Daily Volume may include trades during the trading day like spread/strategy trades in the case of futures or special trades in the case of equities/stocks which are not included in Intraday charts.  There may be other types of trades which are not included within Intraday charts as well. This depends upon the particular Data or Trading service you are using.</p>
+
+    <p>Other than what is explained in the prior paragraph Sierra Chart support cannot answer questions about   what trade data is included within Intraday charts and what data is not included.  This is controlled by the data feed.  In the case of the Sierra Chart Exchange Data Feeds, the CME  trading data which is included in the charts, is provided direct from the CME incremental multicast feeds  <em>without any filtering</em>.</p>
+
+    <p>In the case of the <b>Sierra Chart Exchange Data Feed</b>, Sierra Chart does have specific filtering rules for certain types of special trades  in the case of US equities which are not added to Intraday chart data. Otherwise, these would cause out of range price values in the Intraday charts.</p>
+
+    <p>Since the Daily Volume number includes trades that are not included within Intraday charts,  <em>it is not a valid comparison</em> to look at the Daily Volume number and compare it to the sum of the Volume bars within an Intraday chart for the same period of time. The volume data in an Intraday chart is also used by the <a href="indexf05a.html?page=doc/StudiesReference.php&amp;ID=141#Volume_by_Price">Volume by Price</a> study if you are using that study.</p>
+
+    <p>When you look at the total Volume for a day in an Intraday chart, that is the  sum of the volumes for all of the individual trades recorded in the Intraday chart data.  Almost never will this precisely match the Daily Volume number reported from the exchange for the same symbol,  for the reasons indicated above.   The  Intraday chart volume will always be lower than the exchange reported Daily Volume.</p>
+
+    <p>Another reason that the Intraday bar volume may not match the total Daily volume is because you have enabled the  <a href="index4cf4.html?page=doc/ChartSettings.html#VolumeFilter">Volume Filtering</a> settings for the chart. Disable the Volume Filtering if you do not require it.</p>
+
+    <p>Additionally, as is explained in <a href="#h43.2">43.2 - Incomplete Data From The Data Feed</a>, another reason why adding up the volume for the trading day from an Intraday chart and comparing it to the exchange reported Daily Volume, is not valid because there could be incomplete data received from the data feed that you are using.</p>
+
+    <p>For example, the  EUREX has different data feeds. One of their data feeds provides every trade and another one does not. This definitely could be the reason for differences when looking at  EUREX Intraday volume.</p>
+
+    <section class="h3">
+        <h3>Must Compare Same Time Range</h3>
+
+        <p>When comparing the volume in an Intraday day chart for a one day period and comparing it to the Daily reported volume data in a Historical Daily chart,  you need to make sure that you are comparing to the same time range.</p>
+
+        <p>You need to consult with the exchange specifications for the symbol to know the starting time and stopping time of the trading day and make sure you are looking  at the volume data in the Intraday chart across that specific time range.   Refer to the exchange website for contract specifications  for the symbol.</p>
+        <p>When you have set the chart bars in an Intraday chart to  1  Day per bar, then make sure the  <a href="index4ec1.html?page=doc/SessionTimes.php#SessionTimes" target="_blank" rel="noopener noreferrer">Session Times</a> are set  to match the  correct starting and stopping time for the symbol.  For example, for the  CME  S&amp;P 500 ES futures, this will be  <b>Start Time</b>:  <em>18:00:00</em> and  <b>End Time</b>  <em>17:59:59</em>.
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ComparingIntradayChartBars">43.8 - Comparing Intraday Chart Bars</h2>
+    <div class="member-link">[<a href="#ComparingIntradayChartBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When comparing the Open, High, Low, Close values of chart bars in an  Intraday chart to another chart within Sierra Chart or to a chart for the same symbol in another program, it is necessary to make sure the chart Session Times are <em>exactly or effectively identical</em> and the timeframe of the bars between the charts are identical.  This is essential in order to properly make the comparison of the chart bars.</p>
+
+    <p>The starting time of the chart bars are aligned to the <b>Start Time</b> or the <b>Evening Start</b>  time setting in the  <a href="index4ec1.html?page=doc/SessionTimes.php" target="_blank" rel="noopener noreferrer">Session Times</a> for the chart.</p>
+
+    <p>Therefore, by adjusting the Session  Start Time, you can control the starting time of the chart bars. For more information, refer to  <a href="index4ec1.html?page=doc/SessionTimes.php#BarStartingTimes" target="_blank" rel="noopener noreferrer">Bar Starting Times</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChartBarTimestampingIsStartOfBar">Chart Bar Time Stamping is Start of Bar</h2>
+    <div class="member-link">[<a href="#ChartBarTimestampingIsStartOfBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For charts within Sierra Chart, the timestamp for a chart bar is always its starting time.   Potentially this can result in bars being different compared to chart bars in other programs which  use the ending time for the timestamp for a bar.</p>
+
+    <p>For additional information, refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html#TimeScale">Time Scale</a> on the Working with Charts page.</p>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails43.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:20 GMT -->
+</html>  

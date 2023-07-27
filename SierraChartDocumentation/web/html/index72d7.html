@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_Functions.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1546897603') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/cpp_Functions.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title> Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index72d7.html?page=doc/cpp_Functions.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a></h4> </div>     <h1 class="PageName">C++ Functions</h1>
+
+<div class="h2">
+
+    <h2>Related Documentation Pages</h2>
+    <ul>
+        <li><a href="index7b37.html?page=doc/cpp_VariablesDataTypes.php">C++ Variables and Data Types</a></li>
+        <li><a href="indexfcfe.html?page=doc/cpp_Constants.php">C++ Constants</a></li>
+        <li><a href="index2b23.html?page=doc/cpp_Operators.php">C++ Operators</a></li>
+        <li><a href="indexfe09.html?page=doc/cpp_ControlStructures.php">C++ Control Structures</a></li>
+        <li>C++ Functions</li>
+    </ul>
+</div>
+<hr>
+<div class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Scope">Scope of variables</a></li>
+        <li><a href="#Void">Functions with no type (Void)</a></li>
+        <li><a href="#ByReference">Arguments passed by value and by reference</a></li>
+        <li><a href="#DefaultValues">Default Values in Parameters</a></li>
+        <li><a href="#OverloadedFunctions">Overloaded Functions</a></li>
+        <li><a href="#InlineFunctions">Inline Functions</a></li>
+        <li><a href="#Recursivity">Recursivity</a></li>
+        <li><a href="#DeclaringFunctions">Declaring Functions</a></li>
+    </ul>
+</div>
+<hr>
+
+<br>
+<div style="text-align:right;">Published by <b>Juan Soulie</b></div>
+<br>
+<div class="h2">
+    <p>Using functions we can structure our programs in a more modular way, accessing all the potential that structured programming can offer to us in C++.</p>
+
+    <p>A function is a group of statements that is executed when it is called from some point of the program. The following is its format:</p>
+
+
+    <div class="CPP_Code">
+        <pre>type name<span class="operator"> (</span> parameter1<span class="operator">,</span> parameter2<span class="operator">, ...) {</span> statements<span class="operator"> }</span></pre></div>
+
+
+    <p>where:</p>
+
+    <ul>
+        <li><b>type</b> is the data type specifier of the data returned by the function.</li>
+        <li><b>name</b> is the identifier by which it will be possible to call the function.</li>
+        <li><b>parameters</b> (as many as needed): Each parameter consists of a data type specifier followed by an identifier, like any regular variable declaration (for example: <b>int x</b>) and which acts within the function as a regular local variable. They allow to pass arguments to the function when it is called. The different parameters are separated by commas.</li>
+        <li><b>statements</b> is the function's body. It is a block of statements surrounded by braces <b>{ }</b>.</li>
+    </ul>
+
+    <p>Here you have the first function example:</p>
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// function example
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+int</span> addition<span class="operator"> (</span><span class="type">int</span> a<span class="operator">,</span><span class="type"> int</span> b<span class="operator">)
+{</span><span class="type">
+  int</span> r<span class="operator">;</span>
+  r<span class="operator">=</span>a<span class="operator">+</span>b<span class="operator">;</span><span class="flow">
+  return</span><span class="operator"> (</span>r<span class="operator">);
+}</span><span class="type">
+
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> z<span class="operator">;</span>
+  z<span class="operator"> =</span> addition<span class="operator"> (</span><span class="int">5</span><span class="operator">,</span><span class="int">3</span><span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "The result is "</span><span class="operator"> &lt;&lt;</span> z<span class="operator">;</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+The result is 8
+*/</span></pre></div>
+
+    <p>In order to examine this code, first of all remember something said at the beginning of this tutorial: a C++ program always begins its execution by the <b>main</b> function. So we will begin there.</p>
+
+    <p>We can see how the <b>main</b> function begins by declaring the variable <b>z</b> of type <b>int</b>. Right after that, we see a call to a function called <b>addition</b>. Paying attention we will be able to see the similarity between the structure of the call to the function and the declaration of the function itself some code lines above:</p>
+
+    <p><img src="https://www.sierrachart.com/images/function_arguments.gif" alt=""></p>
+
+    <p>The parameters and arguments have a clear correspondence. Within the <b>main</b> function we called to <b>addition</b> passing two values: <b>5</b> and <b>3</b>, that correspond to the <b>int a</b> and <b>int b</b> parameters declared for function addition.</p>
+
+    <p>At the point at which the function is called from within <b>main</b>, the control is lost by <b>main</b> and passed to function <b>addition</b>. The value of both arguments passed in the call (<b>5</b> and <b>3</b>) are copied to the local variables <b>int a</b> and <b>int b</b> within the function.</p>
+
+    <p>Function <b>addition</b> declares another local variable (<b>int r</b>), and by means of the expression <b>r=a+b</b>, it assigns to <b>r</b> the result of <b>a</b> plus <b>b</b>. Because the actual parameters passed for <b>a</b> and <b>b</b> are <b>5</b> and <b>3</b> respectively, the result is <b>8</b>.</p>
+
+    <p>The following line of code:</p>
+
+
+    <div class="CPP_Code">
+        <pre><span class="flow">return</span><span class="operator"> (</span>r<span class="operator">);</span>
+        </pre></div>
+
+
+    <p>finalizes function <b>addition</b>, and returns the control back to the function that called it in the first place (in this case, <b>main</b>). At this moment the program follows its regular course from the same point at which it was interrupted by the call to <b>addition</b>. But additionally, because the <b>return</b> statement in function <b>addition</b> specified a value: the content of variable <b>r</b> (<b>return (r);</b>), which at that moment had a value of <b>8</b>. This value becomes the value of evaluating the function call.</p>
+
+    <p><img src="https://www.sierrachart.com/images/function_return_value.gif" alt=""></p>
+
+    <p>So being the value returned by a function the value given to the function call itself when it is evaluated, the variable <b>z</b> will be set to the value returned by <b>addition (5, 3)</b>, that is <b>8</b>. To explain it another way, you can imagine that the call to a function (<b>addition (5,3)</b>) is literally replaced by the value it returns (<b>8</b>).</p>
+
+    <p>The following line of code in main is:</p>
+
+
+    <div class="CPP_Code">
+        <pre>cout<span class="operator"> &lt;&lt;</span><span class="string"> "The result is "</span><span class="operator"> &lt;&lt;</span> z<span class="operator">;</span>
+        </pre></div>
+
+    <p>That, as you may already expect, produces the printing of the result on the screen.</p>
+
+    <div class="h3">
+        <h3 id="Scope">Scope of Variables</h3>
+        <div class="member-link">[<a href="#Scope">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The scope of variables declared within a function or any other inner block is only their own function or their own block and cannot be used outside of them. For example, in the previous example it would have been impossible to use the variables <b>a</b>, <b>b</b> or <b>r</b> directly in function <b>main</b> since they were variables local to function <b>addition</b>. Also, it would have been impossible to use the variable <b>z</b> directly within function <b>addition</b>, since this was a variable local to the function <b>main</b>.</p>
+
+        <p><img src="https://www.sierrachart.com/images/scope_of_variables.gif" alt=""></p>
+
+        <p>Therefore, the scope of local variables is limited to the same block level in which they are declared. Nevertheless, we also have the possibility to declare global variables; These are visible from any point of the code, inside and outside all functions. In order to declare global variables you simply have to declare the variable outside any function or block; that means, directly in the body of the program.</p>
+    </div>
+
+    <p>And here is another example about functions:</p>
+
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// function example
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+int</span> subtraction<span class="operator"> (</span><span class="type">int</span> a<span class="operator">,</span><span class="type"> int</span> b<span class="operator">)
+{</span><span class="type">
+  int</span> r<span class="operator">;</span>
+  r<span class="operator">=</span>a<span class="operator">-</span>b<span class="operator">;</span><span class="flow">
+  return</span><span class="operator"> (</span>r<span class="operator">);
+}</span><span class="type">
+
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> x<span class="operator">=</span><span class="int">5</span><span class="operator">,</span> y<span class="operator">=</span><span class="int">3</span><span class="operator">,</span> z<span class="operator">;</span>
+  z<span class="operator"> =</span> subtraction<span class="operator"> (</span><span class="int">7</span><span class="operator">,</span><span class="int">2</span><span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "The first result is "</span><span class="operator"> &lt;&lt;</span> z<span class="operator"> &lt;&lt;</span><span class="char"> '\n'</span><span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "The second result is "</span><span class="operator"> &lt;&lt;</span> subtraction<span class="operator"> (</span><span class="int">7</span><span class="operator">,</span><span class="int">2</span><span class="operator">) &lt;&lt;</span><span class="char"> '\n'</span><span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "The third result is "</span><span class="operator"> &lt;&lt;</span> subtraction<span class="operator"> (</span>x<span class="operator">,</span>y<span class="operator">) &lt;&lt;</span><span class="char"> '\n'</span><span class="operator">;</span>
+  z<span class="operator">=</span><span class="int"> 4</span><span class="operator"> +</span> subtraction<span class="operator"> (</span>x<span class="operator">,</span>y<span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "The fourth result is "</span><span class="operator"> &lt;&lt;</span> z<span class="operator"> &lt;&lt;</span><span class="char"> '\n'</span><span class="operator">;</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+The first result is 5
+The second result is 5
+The third result is 2
+The fourth result is 6
+*/</span></pre></div>
+
+
+
+    <p>In this case we have created a function called <b>subtraction</b>. The only thing that this function does is to subtract both passed parameters and to return the result.</p>
+
+    <p>Nevertheless, if we examine function <b>main</b> we will see that we have made several calls to function <b>subtraction</b>. We have used some different calling methods so that you see other ways or moments when a function can be called.</p>
+
+    <p>In order to fully understand these examples you must consider once again that a call to a function could be replaced by the value that the function call itself is going to return. For example, the first case (that you should already know because it is the same pattern that we have used in previous examples):</p>
+
+
+
+    <div class="CPP_Code">
+        <pre>z<span class="operator"> =</span> subtraction<span class="operator"> (</span><span class="int">7</span><span class="operator">,</span><span class="int">2</span><span class="operator">);</span>
+cout<span class="operator"> &lt;&lt;</span><span class="string"> "The first result is "</span><span class="operator"> &lt;&lt;</span> z<span class="operator">;</span>
+        </pre></div>
+
+
+    <p>If we replace the function call by the value it returns (i.e., <b>5</b>), we would have:</p>
+
+    <div class="CPP_Code">
+        <pre>z<span class="operator"> =</span><span class="int"> 5</span><span class="operator">;</span>
+cout<span class="operator"> &lt;&lt;</span><span class="string"> "The first result is "</span><span class="operator"> &lt;&lt;</span> z<span class="operator">;</span>
+        </pre></div>
+
+    <p>As well as:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre>cout<span class="operator"> &lt;&lt;</span><span class="string"> "The second result is "</span><span class="operator"> &lt;&lt;</span> subtraction<span class="operator"> (</span><span class="int">7</span><span class="operator">,</span><span class="int">2</span><span class="operator">);</span>
+        </pre></div>
+
+    <p>has the same result as the previous call, but in this case we made the call to <b>subtraction</b> directly as an insertion parameter for <b>cout</b>. Simply consider that the result is the same as if we had written:</p>
+
+
+    <div class="CPP_Code">
+        <pre>cout<span class="operator"> &lt;&lt;</span><span class="string"> "The second result is "</span><span class="operator"> &lt;&lt;</span><span class="int"> 5</span><span class="operator">;</span>
+        </pre></div>
+
+    <p>since <b>5</b> is the value returned by <b>subtraction (7,2)</b>.</p>
+
+    <p>In the case of:</p>
+
+
+    <div class="CPP_Code">
+        <pre>cout<span class="operator"> &lt;&lt;</span><span class="string"> "The third result is "</span><span class="operator"> &lt;&lt;</span> subtraction<span class="operator"> (</span>x<span class="operator">,</span>y<span class="operator">);</span></pre></div>
+
+
+
+    <p>The only new thing that we introduced is that the parameters of <b>subtraction</b> are variables instead of constants. That is perfectly valid. In this case the values passed to function <b>subtraction</b> are the values of <b>x</b> and <b>y</b>, that are <b>5</b> and <b>3</b> respectively, giving <b>2</b> as result.</p>
+
+    <p>The fourth case is more of the same. Simply note that instead of:</p>
+
+
+    <div class="CPP_Code">
+        <pre>z<span class="operator"> =</span><span class="int"> 4</span><span class="operator"> +</span> subtraction<span class="operator"> (</span>x<span class="operator">,</span>y<span class="operator">);</span></pre></div>
+
+
+    <p>we could have written:</p>
+
+
+    <div class="CPP_Code">
+        <pre>z<span class="operator"> =</span> subtraction<span class="operator"> (</span>x<span class="operator">,</span>y<span class="operator">) +</span><span class="int"> 4</span><span class="operator">;</span>
+        </pre></div>
+
+    <p>with exactly the same result. I have switched places so you can see that the semicolon sign (<b>;</b>) goes at the end of the whole statement. It does not necessarily have to go right after the function call. The explanation might be once again that you imagine that a function can be replaced by its returned value:</p>
+
+
+    <div class="CPP_Code">
+        <pre>z<span class="operator"> =</span><span class="int"> 4</span><span class="operator"> +</span><span class="int"> 2</span><span class="operator">;</span>
+z<span class="operator"> =</span><span class="int"> 2</span><span class="operator"> +</span><span class="int"> 4</span><span class="operator">;</span></pre></div>
+
+
+</div>
+
+<div class="h2">
+
+    <h2 id="Void">Functions with no type (Void)</h2>
+    <div class="member-link">[<a href="#Void">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you remember the syntax of a function declaration:</p>
+
+    <div class="CPP_Code">
+        <pre>type name<span class="operator"> (</span> argument1<span class="operator">,</span> argument2<span class="operator"> ...)</span> statement</pre></div>
+
+    <p>you will see that the declaration begins with a <b>type</b>, that is the type of the function itself (i.e., the type of the datum that will be returned by the function with the return statement). But what if we want to return no value?</p>
+
+    <p>Imagine that we want to make a function just to show a message on the screen. We do not need it to return any value. In this case we should use the <b>void</b> type specifier for the function. This is a special specifier that indicates absence of type.</p>
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// void function example
+</span><span class="pre">
+#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+void</span> printmessage<span class="operator"> ()
+{</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "I'm a function!"</span><span class="operator">;
+}</span><span class="type">
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span>
+  printmessage<span class="operator"> ();</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+I'm a function!
+*/</span></pre></div>
+
+    <p><b>void</b> can also be used in the function's parameter list to explicitly specify that we want the function to take no actual parameters when it is called. For example, function <b>printmessage</b> could have been declared as:</p>
+
+
+    <div class="CPP_Code">
+        <pre><span class="type">void</span> printmessage<span class="operator"> (</span><span class="type">void</span><span class="operator">)
+{</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "I'm a function!"</span><span class="operator">;
+}</span></pre></div>
+
+
+
+    <p>Although it is optional to specify <b>void</b> in the parameter list. In C++, a parameter list can simply be left blank if we want a function with no parameters.</p>
+
+    <p>What you must always remember is that the format for calling a function includes specifying its name and enclosing its parameters between parentheses. The non-existence of parameters does not exempt us from the obligation to write the parentheses. For that reason the call to <b>printmessage</b> is:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre>printmessage<span class="operator">();</span>
+        </pre></div>
+
+    <p>The parentheses clearly indicate that this is a call to a function and not the name of a variable or some other C++ statement. The following call would have been incorrect:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre>printmessage<span class="operator">;</span>
+        </pre></div>
+
+
+    <h2 id="ByReference">Arguments passed by value and by reference</h2>
+    <div class="member-link">[<a href="#ByReference">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Until now, in all the functions we have seen, the arguments passed to the functions have been passed <i>by value</i>. This means that when calling a function with parameters, what we have passed to the function were copies of their values but never the variables themselves. For example, suppose that we called our first function <b>addition</b> using the following code:</p>
+
+
+    <div class="CPP_Code">
+        <pre><span class="type">int</span> x<span class="operator">=</span><span class="int">5</span><span class="operator">,</span> y<span class="operator">=</span><span class="int">3</span><span class="operator">,</span> z<span class="operator">;</span>
+z<span class="operator"> =</span> addition<span class="operator"> (</span> x<span class="operator"> ,</span> y<span class="operator"> );</span></pre></div>
+
+    <p>What we did in this case was to call to function addition passing the values of <b>x</b> and <b>y</b>, i.e. <b>5</b> and <b>3</b> respectively, but not the variables <b>x</b> and <b>y</b> themselves.</p>
+
+    <p><img src="https://www.sierrachart.com/images/function_arguments.gif" alt=""></p>
+
+    <p>This way, when the function addition is called, the value of its local variables <b>a</b> and <b>b</b> become <b>5</b> and <b>3</b> respectively, but any modification to either <b>a</b> or <b>b</b> within the function addition will not have any effect in the values of <b>x</b> and <b>y</b> outside it, because variables <b>x</b> and <b>y</b> were not themselves passed to the function, but only copies of their values at the moment the function was called.</p>
+
+    <p>But there might be some cases where you need to manipulate from inside a function the value of an external variable. For that purpose we can use arguments passed by reference, as in the function duplicate of the following example:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// passing parameters by reference
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+void</span> duplicate<span class="operator"> (</span><span class="type">int</span><span class="operator">&amp;</span> a<span class="operator">,</span><span class="type"> int</span><span class="operator">&amp;</span> b<span class="operator">,</span><span class="type"> int</span><span class="operator">&amp;</span> c<span class="operator">)
+{</span>
+  a<span class="operator">*=</span><span class="int">2</span><span class="operator">;</span>
+  b<span class="operator">*=</span><span class="int">2</span><span class="operator">;</span>
+  c<span class="operator">*=</span><span class="int">2</span><span class="operator">;
+}</span><span class="type">
+
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> x<span class="operator">=</span><span class="int">1</span><span class="operator">,</span> y<span class="operator">=</span><span class="int">3</span><span class="operator">,</span> z<span class="operator">=</span><span class="int">7</span><span class="operator">;</span>
+  duplicate<span class="operator"> (</span>x<span class="operator">,</span> y<span class="operator">,</span> z<span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "x="</span><span class="operator"> &lt;&lt;</span> x<span class="operator"> &lt;&lt;</span><span class="string"> ", y="</span><span class="operator"> &lt;&lt;</span> y<span class="operator"> &lt;&lt;</span><span class="string"> ", z="</span><span class="operator"> &lt;&lt;</span> z<span class="operator">;</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+x=2, y=6, z=14
+*/</span></pre></div>
+
+
+    <p>The first thing that should call your attention is that in the declaration of <b>duplicate</b> the type of each parameter was followed by an ampersand sign (<b>&</b>). This ampersand is what specifies that their corresponding arguments are to be passed <i>by reference</i> instead of <i>by value</i>.</p>
+
+    <p>When a variable is passed by reference we are not passing a copy of its value, but we are somehow passing the variable itself to the function and any modification that we do to the local variables will have an effect in their counterpart variables passed as arguments in the call to the function.</p>
+
+    <p><img src="https://www.sierrachart.com/images/function_by_reference.gif" alt=""></p>
+
+    <p>To explain it in another way, we associate <b>a</b>, <b>b</b> and <b>c</b> with the arguments passed on the function call (<b>x</b>, <b>y</b> and <b>z</b>) and any change that we do on <b>a</b> within the function will affect the value of <b>x</b> outside it. Any change that we do on <b>b</b> will affect <b>y</b>, and the same with <b>c</b> and <b>z</b>.</p>
+
+    <p>That is why our program's output, that shows the values stored in <b>x</b>, <b>y</b> and <b>z</b> after the call to <b>duplicate</b>, shows the values of all the three variables of <b>main</b> doubled.</p>
+
+    <p>If when declaring the following function:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="type">void</span> duplicate<span class="operator"> (</span><span class="type">int</span><span class="operator">&amp;</span> a<span class="operator">,</span><span class="type"> int</span><span class="operator">&amp;</span> b<span class="operator">,</span><span class="type"> int</span><span class="operator">&amp;</span> c<span class="operator">)</span></pre></div>
+
+
+    <p>we had declared it this way:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="type">void</span> duplicate<span class="operator"> (</span><span class="type">int</span> a<span class="operator">,</span><span class="type"> int</span> b<span class="operator">,</span><span class="type"> int</span> c<span class="operator">)</span></pre></div>
+
+
+    <p>i.e., without the ampersand signs (<b>&amp;</b>), we would have not passed the variables by reference, but a copy of their values instead, and therefore, the output on screen of our program would have been the values of <b>x</b>, <b>y</b> and <b>z</b> without having been modified.</p>
+
+    <p>Passing by reference is also an effective way to allow a function to return more than one value. For example, here is a function that returns the previous and next numbers of the first parameter passed.</p>
+
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// more than one returning value
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+void</span> prevnext<span class="operator"> (</span><span class="type">int</span> x<span class="operator">,</span><span class="type"> int</span><span class="operator">&amp;</span> prev<span class="operator">,</span><span class="type"> int</span><span class="operator">&amp;</span> next<span class="operator">)
+{</span>
+  prev<span class="operator"> =</span> x<span class="operator">-</span><span class="int">1</span><span class="operator">;</span>
+  next<span class="operator"> =</span> x<span class="operator">+</span><span class="int">1</span><span class="operator">;
+}</span><span class="type">
+
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> x<span class="operator">=</span><span class="int">100</span><span class="operator">,</span> y<span class="operator">,</span> z<span class="operator">;</span>
+  prevnext<span class="operator"> (</span>x<span class="operator">,</span> y<span class="operator">,</span> z<span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "Previous="</span><span class="operator"> &lt;&lt;</span> y<span class="operator"> &lt;&lt;</span><span class="string"> ", Next="</span><span class="operator"> &lt;&lt;</span> z<span class="operator">;</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+Previous=99, Next=101
+*/</span></pre></div>
+
+
+</div>
+
+<div class="h2">
+
+    <h2 id="DefaultValues">Default Values in Parameters</h2>
+    <div class="member-link">[<a href="#DefaultValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When declaring a function we can specify a default value for each of the last parameters. This value will be used if the corresponding argument is left blank when calling to the function. To do that, we simply have to use the assignment operator and a value for the arguments in the function declaration. If a value for that parameter is not passed when the function is called, the default value is used, but if a value is specified this default value is ignored and the passed value is used instead. For example:</p>
+
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// default values in functions
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+int</span> divide<span class="operator"> (</span><span class="type">int</span> a<span class="operator">,</span><span class="type"> int</span> b<span class="operator">=</span><span class="int">2</span><span class="operator">)
+{</span><span class="type">
+  int</span> r<span class="operator">;</span>
+  r<span class="operator">=</span>a<span class="operator">/</span>b<span class="operator">;</span><span class="flow">
+  return</span><span class="operator"> (</span>r<span class="operator">);
+}</span><span class="type">
+
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span>
+  cout<span class="operator"> &lt;&lt;</span> divide<span class="operator"> (</span><span class="int">12</span><span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span> endl<span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> divide<span class="operator"> (</span><span class="int">20</span><span class="operator">,</span><span class="int">4</span><span class="operator">);</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+6
+5
+*/</span></pre></div>
+
+
+    <p>As we can see in the body of the program there are two calls to function <b>divide</b>. In the first one:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre>divide<span class="operator"> (</span><span class="int">12</span><span class="operator">)</span>
+        </pre></div>
+
+    <p>we have only specified one argument, but the function <b>divide</b> allows up to two. So the function <b>divide</b> has assumed that the second parameter is <b>2</b> since that is what we have specified to happen if this parameter was not passed (notice the function declaration, which finishes with <b>int b=2</b>, not just <b>int b</b>). Therefore the result of this function call is <b>6</b> (<b>12/2</b>).</p>
+
+    <p>In the second call:</p>
+
+    <div class="CPP_Code">
+        <pre>divide<span class="operator"> (</span><span class="int">20</span><span class="operator">,</span><span class="int">4</span><span class="operator">)</span>
+        </pre></div>
+
+    <p>there are two parameters, so the default value for <b>b</b> (<b>int b=2</b>) is ignored and <b>b</b> takes the value passed as argument, that is <b>4</b>, making the result returned equal to <b>5</b> (<b>20/4</b>).</p>
+
+</div>
+
+<div class="h2">
+
+    <h2 id="OverloadedFunctions">Overloaded Functions</h2>
+    <div class="member-link">[<a href="#OverloadedFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p>In C++ two different functions can have the same name if their parameter types or number are different. That means that you can give the same name to more than one function if they have either a different number of parameters or different types in their parameters. For example: </p>
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// overloaded function
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+int</span> operate<span class="operator"> (</span><span class="type">int</span> a<span class="operator">,</span><span class="type"> int</span> b<span class="operator">)
+{</span><span class="flow">
+  return</span><span class="operator"> (</span>a<span class="operator">*</span>b<span class="operator">);
+}</span><span class="type">
+
+
+float</span> operate<span class="operator"> (</span><span class="type">float</span> a<span class="operator">,</span><span class="type"> float</span> b<span class="operator">)
+{</span><span class="flow">
+  return</span><span class="operator"> (</span>a<span class="operator">/</span>b<span class="operator">);
+}</span><span class="type">
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> x<span class="operator">=</span><span class="int">5</span><span class="operator">,</span>y<span class="operator">=</span><span class="int">2</span><span class="operator">;</span><span class="type">
+  float</span> n<span class="operator">=</span><span class="float">5.0</span><span class="operator">,</span>m<span class="operator">=</span><span class="float">2.0</span><span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> operate<span class="operator"> (</span>x<span class="operator">,</span>y<span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "\n"</span><span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> operate<span class="operator"> (</span>n<span class="operator">,</span>m<span class="operator">);</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "\n"</span><span class="operator">;</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+10
+2.5
+*/</span></pre></div>
+
+
+
+    <p>In this case we have defined two functions with the same name, <b>operate</b>, but one of them accepts two parameters of type <b>int</b> and the other one accepts them of type <b>float</b>. The compiler knows which one to call in each case by examining the types passed as arguments when the function is called. If it is called with two ints as its arguments it calls to the function that has two <b>int</b> parameters in its prototype and if it is called with two floats it will call to the one which has two <b>float</b> parameters in its prototype.</p>
+
+    <p>In the first call to <b>operate</b> the two arguments passed are of type <b>int</b>, therefore, the function with the first prototype is called; This function returns the result of multiplying both parameters. While the second call passes two arguments of type <b>float</b>, so the function with the second prototype is called. This one has a different behavior: it divides one parameter by the other. So the behavior of a call to <b>operate</b> depends on the type of the arguments passed because the function has been <i>overloaded</i>.</p>
+
+    <p>Notice that a function cannot be overloaded only by its return type. At least one of its parameters must have a different type.</p>
+
+
+</div>
+
+<div class="h2">
+
+    <h2 id="InlineFunctions">Inline Functions</h2>
+    <div class="member-link">[<a href="#InlineFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>inline</b> specifier indicates the compiler that inline substitution is preferred to the usual function call mechanism for a specific function. This does not change the behavior of a function itself, but is used to suggest to the compiler that the code generated by the function body is inserted at each point the function is called, instead of being inserted only once and perform a regular call to it, which generally involves some additional overhead in running time.</p>
+
+    <p>The format for its declaration is:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="keyword">inline</span> type name<span class="operator"> (</span> arguments<span class="operator"> ... ) {</span> instructions<span class="operator"> ... }</span></pre></div>
+
+
+    <p>and the call is just like the call to any other function. You do not have to include the <b>inline</b> keyword when calling the function, only in its declaration.</p>
+
+    <p>Most compilers already optimize code to generate inline functions when it is more convenient. This specifier only indicates the compiler that inline is preferred for this function.</p>
+
+</div>
+
+<div class="h2">
+
+    <h2 id="Recursivity">Recursivity</h2>
+    <div class="member-link">[<a href="#Recursivity">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Recursivity is the property that functions have to be called by themselves. It is useful for many tasks, like sorting or calculate the factorial of numbers. For example, to obtain the factorial of a number (n!) the mathematical formula would be:</p>
+
+    <p><b>n! = n * (n-1) * (n-2) * (n-3) ... * 1</b></p>
+
+    <p>more concretely, 5! (factorial of 5) would be:</p>
+
+    <p><b>5! = 5 * 4 * 3 * 2 * 1 = 120</b></p>
+
+    <p>and a recursive function to calculate this in C++ could be:</p>
+
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// factorial calculator
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+long</span> factorial<span class="operator"> (</span><span class="type">long</span> a<span class="operator">)
+{</span><span class="flow">
+  if</span><span class="operator"> (</span>a<span class="operator"> &gt;</span><span class="int"> 1</span><span class="operator">)</span><span class="flow">
+   return</span><span class="operator"> (</span>a<span class="operator"> *</span> factorial<span class="operator"> (</span>a<span class="operator">-</span><span class="int">1</span><span class="operator">));</span><span class="flow">
+  else
+
+   return</span><span class="operator"> (</span><span class="int">1</span><span class="operator">);
+}</span><span class="type">
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  long</span> number<span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "Please type a number: "</span><span class="operator">;</span>
+  cin<span class="operator"> &gt;&gt;</span> number<span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> number<span class="operator"> &lt;&lt;</span><span class="string"> "! = "</span><span class="operator"> &lt;&lt;</span> factorial<span class="operator"> (</span>number<span class="operator">);</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+
+Please type a number: 9
+9! = 362880
+
+*/</span></pre></div>
+
+
+
+    <p>Notice how in function <b>factorial</b> we included a call to itself, but only if the argument passed was greater than 1, since otherwise the function would perform an infinite recursive loop in which once it arrived to <b>0</b> it would continue multiplying by all the negative numbers (probably provoking a stack overflow error on runtime).</p>
+
+    <p>This function has a limitation because of the data type we used in its design (<b>long</b>) for more simplicity. The results given will not be valid for values much greater than 10! or 15!, depending on the system you compile it.</p>
+
+
+</div>
+
+<div class="h2">
+
+
+    <h2 id="DeclaringFunctions">Declaring Functions</h2>
+    <div class="member-link">[<a href="#DeclaringFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Until now, we have defined all of the functions before the first appearance of calls to them in the source code. These calls were generally in function <b>main</b> which we have always left at the end of the source code. If you try to repeat some of the examples of functions described so far, but placing the function <b>main</b> before any of the other functions that were called from within it, you will most likely obtain compiling errors. The reason is that to be able to call a function it must have been declared in some earlier point of the code, like we have done in all our examples.</p>
+
+    <p>But there is an alternative way to avoid writing the whole code of a function before it can be used in main or in some other function. This can be achieved by declaring just a prototype of the function before it is used, instead of the entire definition. This declaration is shorter than the entire definition, but significant enough for the compiler to determine its return type and the types of its parameters.</p>
+
+    <p>Its form is:</p>
+
+
+    <div class="CPP_Code">
+        <pre>type name<span class="operator"> (</span> argument_type1<span class="operator">,</span> argument_type2<span class="operator">, ...);</span></pre></div>
+
+
+    <p>It is identical to a function definition, except that it does not include the body of the function itself (i.e., the function statements that in normal definitions are enclosed in braces <b>{ }</b>) and instead of that we end the prototype declaration with a mandatory semicolon (<b>;</b>).</p>
+
+    <p>The parameter enumeration does not need to include the identifiers, but only the type specifiers. The inclusion of a name for each parameter as in the function definition is optional in the prototype declaration. For example, we can declare a function called <b>protofunction</b> with two <b>int</b> parameters with any of the following declarations:</p>
+
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="type">int</span> protofunction<span class="operator"> (</span><span class="type">int</span> first<span class="operator">,</span><span class="type"> int</span> second<span class="operator">);</span><span class="type">
+int</span> protofunction<span class="operator"> (</span><span class="type">int</span><span class="operator">,</span><span class="type"> int</span><span class="operator">);</span></pre></div>
+
+
+
+    <p>Anyway, including a name for each variable makes the prototype more legible.</p>
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// declaring functions prototypes
+</span><span class="pre">#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+void</span> odd<span class="operator"> (</span><span class="type">int</span> a<span class="operator">);</span><span class="type">
+void</span> even<span class="operator"> (</span><span class="type">int</span> a<span class="operator">);</span><span class="type">
+
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> i<span class="operator">;</span><span class="flow">
+  do</span><span class="operator"> {</span>
+    cout<span class="operator"> &lt;&lt;</span><span class="string"> "Type a number (0 to exit): "</span><span class="operator">;</span>
+    cin<span class="operator"> &gt;&gt;</span> i<span class="operator">;</span>
+    odd<span class="operator"> (</span>i<span class="operator">);
+  }</span><span class="flow"> while</span><span class="operator"> (</span>i<span class="operator">!=</span><span class="int">0</span><span class="operator">);</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="type">
+
+
+void</span> odd<span class="operator"> (</span><span class="type">int</span> a<span class="operator">)
+{</span><span class="flow">
+  if</span><span class="operator"> ((</span>a<span class="operator">%</span><span class="int">2</span><span class="operator">)!=</span><span class="int">0</span><span class="operator">)</span> cout<span class="operator"> &lt;&lt;</span><span class="string"> "Number is odd.\n"</span><span class="operator">;</span><span class="flow">
+  else</span> even<span class="operator"> (</span>a<span class="operator">);
+}</span><span class="type">
+
+void</span> even<span class="operator"> (</span><span class="type">int</span> a<span class="operator">)
+{</span><span class="flow">
+  if</span><span class="operator"> ((</span>a<span class="operator">%</span><span class="int">2</span><span class="operator">)==</span><span class="int">0</span><span class="operator">)</span> cout<span class="operator"> &lt;&lt;</span><span class="string"> "Number is even.\n"</span><span class="operator">;</span><span class="flow">
+  else</span> odd<span class="operator"> (</span>a<span class="operator">);
+}</span><span class="comment">
+
+
+/* Output
+Type a number (0 to exit): 9
+Number is odd.
+Type a number (0 to exit): 6
+Number is even.
+Type a number (0 to exit): 1030
+Number is even.
+Type a number (0 to exit): 0
+Number is even.
+*/</span></pre></div>
+
+
+    <p>This example is indeed not an example of efficiency. I am sure that at this point you can already make a program with the same result, but using only half of the code lines that have been used in this example. Anyway this example illustrates how prototyping works. Moreover, in this concrete example the prototyping of at least one of the two functions is necessary in order to compile the code without errors.</p>
+
+    <p>The first things that we see are the declaration of functions <b>odd</b> and <b>even</b>:</p>
+
+
+
+    <div class="CPP_Code">
+        <pre><span class="type">
+void</span> odd<span class="operator"> (</span><span class="type">int</span> a<span class="operator">);</span><span class="type">
+void</span> even<span class="operator"> (</span><span class="type">int</span> a<span class="operator">);</span> 
+        </pre></div>
+
+    <p>This allows these functions to be used before they are defined, for example, in <b>main</b>, which now is located where some people find it to be a more logical place for the start of a program: the beginning of the source code.</p>
+
+    <p>Anyway, the reason why this program needs at least one of the functions to be declared before it is defined is because in <b>odd</b> there is a call to <b>even</b> and in <b>even</b> there is a call to <b>odd</b>. If none of the two functions had been previously declared, a compilation error would happen, since either <b>odd</b> would not be visible from <b>even</b> (because it has still not been declared), or <b>even</b> would not be visible from <b>odd</b> (for the same reason).</p>
+
+    <p>Having the prototype of all functions together in the same place within the source code is found practical by some programmers, and this can be easily achieved by declaring all functions prototypes at the beginning of a program.</p>
+
+</div>
+
+<hr><p>*Last modified Monday, 07th January, 2019.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_Functions.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+</html>  

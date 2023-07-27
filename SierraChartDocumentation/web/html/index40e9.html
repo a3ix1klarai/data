@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_Members_scSubgraph.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1687281159') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACSIL_Members_scSubgraph.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>ACSIL Interface Members - sc.Subgraph Array -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index6788.html?page=doc/ACSIL_Members.html">ACSIL Interface Members - Introduction</a> &gt;&gt; <a  href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html">ACSIL Interface Members - sc.Subgraph Array</a></h4> </div>     <h1 class="PageName">ACSIL Interface Members - sc.Subgraph Array</h1>
+<section class="h2">
+    <h2>Related Documentation</h2>
+    <ul>
+        <li><a href="index6788.html?page=doc/ACSIL_Members.html">ACSIL Interface Members - Introduction</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html">ACSIL Interface Members - Variables and Arrays</a></li>
+        <li><a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html">ACSIL Interface Members - sc.Input Array</a></li>
+        <li><b>ACSIL Interface Members - sc.Subgraph Array</b></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html">ACSIL Interface Members - Functions</a></li>
+    </ul>
+</section>
+<hr>
+
+<section class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#scSubgraph">sc.Subgraph[]</a></li>
+        <li><a href="#scSubgraphStructureMembers">sc.Subgraph[] Structure Members</a>
+            <ul>
+                <li><a href="#scSubgraphData">sc.Subgraph[].Data[] / sc.Subgraph[][]</a></li>
+                <li><a href="#scSubgraphGetArraySize">sc.Subgraph[].GetArraySize()</a></li>
+                <li><a href="#scSubgraphArrays">sc.Subgraph[].Arrays[][]</a></li>
+                <li><a href="#scSubgraphName">sc.Subgraph[].Name</a></li>
+                <li><a href="#scSubgraphPrimaryColor">sc.Subgraph[].PrimaryColor</a></li>
+                <li><a href="#scSubgraphSecondaryColor">sc.Subgraph[].SecondaryColor</a></li>
+                <li><a href="#scSubgraphSecondaryColorUsed">sc.Subgraph[].SecondaryColorUsed</a></li>
+
+                <li><a href="#scSubgraphDataColor">sc.Subgraph[].DataColor[]</a></li>
+                <li><a href="#scSubgraphDrawStyle">sc.Subgraph[].DrawStyle</a></li>
+                <li><a href="#scSubgraphLineStyle">sc.Subgraph[].LineStyle</a></li>
+                <li><a href="#scSubgraphLineWidth">sc.Subgraph[].LineWidth</a></li>
+                <li><a href="#scSubgraphLineLabel">sc.Subgraph[].LineLabel</a></li>
+                <li><a href="#scDisplayNameValueInWindowsFlags">sc.Subgraph[].DisplayNameValueInWindowsFlags</a></li>
+                <li><a href="#scSubgraphAutoColoring">sc.Subgraph[].AutoColoring</a></li>
+                <li><a href="#scSubgraphDrawZeros">sc.Subgraph[].DrawZeros</a></li>
+
+                <li><a href="#scSubgraphDisplacement">sc.Subgraph[].GraphicalDisplacement</a></li>
+                <li><a href="#scExtendedArrayElementsToGraph">sc.Subgraph[].ExtendedArrayElementsToGraph</a></li>
+                <li><a href="#scTextDrawStyleText">sc.Subgraph[].TextDrawStyleText</a></li>
+                <li><a href="#scSubgraphShortName">sc.Subgraph[].ShortName</a></li>
+                <li><a href="#scSubgraphIncludeInStudySummary">sc.Subgraph[].IncludeInStudySummary</a></li>
+                <li><a href="#scSubgraph_UseStudySummaryCellBackgroundColor">sc.Subgraph[].UseStudySummaryCellBackgroundColor</a></li>
+                <li><a href="#scSubgraph_StudySummaryCellBackgroundColor">sc.Subgraph[].StudySummaryCellBackgroundColor</a></li>
+                <li><a href="#scSubgraph_StudySummaryCellText">sc.Subgraph[].StudySummaryCellText</a></li>
+                <li><a href="#scSubgraph_UseLabelsColor">sc.Subgraph[].UseLabelsColor</a></li>
+                <li><a href="#scSubgraph_LabelsColor">sc.Subgraph[].LabelsColor</a></li>
+                <li><a href="#scSubgraph_DisplayNameValueInDataLine">sc.Subgraph[].DisplayNameValueInDataLine</a></li>
+            </ul>
+        </li>
+        <li><a href="#NumericInformationTableGraphDrawType">Numeric Information Table Graph Draw Type</a>
+			<ul>
+			    <li><a href="#s_NumericInformationGraphDrawTypeConfig">s_NumericInformationGraphDrawTypeConfig</a></li>
+			    <li><a href="#scSetNumericInformationGraphDrawTypeConfig">sc.SetNumericInformationGraphDrawTypeConfig()</a></li>
+			    <li><a href="#scSetNumericInformationDisplayOrderFromString">sc.SetNumericInformationDisplayOrderFromString()</a></li>
+			    <li><a href="#NumericInformationGraphExample">Numeric Information Graph Example</a></li>
+			</ul>
+		</li>
+    </ul>
+</section>
+<hr>
+
+<section class="h2">
+    <h2 id="scSubgraph">sc.Subgraph[]</h2>
+    <div class="member-link">[<a href="#scSubgraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p><b>Type</b>: Array of study Subgraph structures.</p>
+
+    <p><b>sc.Subgraph[]</b> is an array of the subgraphs available to the study. There is currently a maximum of <b>SC_SUBGRAPHS_AVAILABLE</b> (60) subgraphs available for your study to use. </p>
+
+    <p>Subgraphs have two purposes. The first is to display data which is part of the study onto the chart. The individual drawings in a study graph are considered Subgraphs. The second purpose is to hold data for background calculations or to hold data that needs to be maintained between function calls.  </p>
+
+    <p>If you are using the <a href="#scSubgraphData">sc.Subgraph[].Data[]</a> member array of a Subgraph for the second purpose, then do not name a Subgraph unless you want the data in the sc.Subgraph[].Data array to appear on the chart. By default, Subgraphs do not have names unless you set them. If you do want to make the background data visible for debugging purposes, then a Subgraph can have a name. However, in this case set its draw style to <b>DRAWSTYLE_IGNORE</b>. This is very useful for debugging. The data can be viewed in the <b class="menu_item">Window &gt;&gt; Chart Values Window</b>.</p>
+
+    <p>There are also the Extra Arrays to hold data for background calculations and hold data that needs to be maintained between function calls. Refer to the <a href="#scSubgraphArrays">Extra Arrays</a> member of this Subgraph structure.</p>
+
+    <section class="h3">
+        <h3>References</h3>
+
+        <p>A useful method to make it easier to work with a <b>sc.Subgraph[]</b> and the   <b>sc.Subgraph[].Data</b> array is to use a C++ reference. A reference is defined with <b>SCSubgraphRef</b>. <b>SCSubgraphRef</b> is a reference to the sc.Subgraph[] type. Below is an example of defining and using a reference.</p>
+
+        <section class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="comment">// Make a reference to the second Subgraph and call it PlotB
+</span>SCSubgraphRef PlotB<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">1</span><span class="operator">];</span><span class="comment">
+
+// Now the PlotB reference can be used in place of sc.Subgraph[1]
+
+// Set the value of the element in the Subgraph Data array the
+// current index to 10.
+
+// This is the same as sc.Subgraph[1][sc.Index] = 10.0f;
+</span>PlotB<span class="operator">[</span><span class="keyword">sc</span><span class="operator">.</span>Index<span class="operator">] =</span><span class="float"> 10.0f</span><span class="operator">;</span><span class="comment"> 
+
+// Calculate the simple moving average and store the result in
+// the Data array of PlotB (sc.Subgraph[1]).
+</span><span class="keyword">sc</span><span class="operator">.</span>SimpleMovAvg<span class="operator">(</span><span class="keyword">sc</span><span class="operator">.</span>BaseDataIn<span class="operator">[</span>SC_LAST<span class="operator">],</span> PlotB<span class="operator">,</span><span class="int"> 20</span><span class="operator">);</span></pre></div>
+
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="scSubgraphStructureMembers">sc.Subgraph[] Structure Members</h2>
+
+    <section class="h3">
+        <h3 id="scSubgraphData">sc.Subgraph[].Data[] / sc.Subgraph[][]</h3>
+        <div class="member-link">[<a href="#scSubgraphData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write. Array of float variables (SCFloatArray).<p>
+
+        <p><b>sc.Subgraph[].Data[]</b> is the array of values for the study Subgraph. This is where you will store the results of the study calculations, and this is the data that will be graphed on the chart if the sc.Subgraph has the <b>Name</b> member set and has a visible <b>DrawStyle</b>. </p>
+
+        <p>The size of this array is equal to <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scArraySize">sc.ArraySize</a></b>. If you have set <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIsCustomChart">sc.IsCustomChart</a></b>, the size of this array is equal to <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scOutArraySize">sc.OutArraySize</a></b>. </p>
+
+        <p> When a chart is reloaded,  when the study is first added to a chart, or when a Chartbook is opened and the study exists on one of the charts, then all of the <b>sc.Subgraph[].Data[]</b> array elements are initialized to 0. </p>
+
+        <p>If you are familiar with the Sierra Chart Spreadsheet Studies, it may help to think of this Subgraph Data array as a column of data in a Spreadsheet (formula columns K through Z). The Spreadsheet Studies uses these same Subgraph Data arrays to hold the results from the formula columns.</p>
+
+        <p>A shorthand method to access a Subgraph Data array element exists. Example: <b>sc.Subgraph[0][sc.Index]</b> is equivalent to <b>sc.Subgraph[0].Data[sc.Index]</b>. When passing a Subgraph Data array to an array based study function such as sc.Highest(), you do not need to use the second set of brackets. For example, use <b>sc.Subgraph[0]</b> or <b>sc.Subgraph[0].Data</b>.</p>
+
+        <p>For more information about the sc.Subgraph structure and the purpose of Subgraphs, refer to <a href="#scSubgraph">sc.Subgraph[]</a>.</p>
+
+        <p>For information about indexing and array sizes refer to <a href="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html#ArrayIndexing" Target="_blank" rel="noopener noreferrer">Array Indexing and Sizes</a>.</p>
+
+        <p>Whenever first accessing an element of the <b>sc.Subgraph[].Data</b> array at  sc.Subgraph[]  index 1 or higher, at that time causes an allocation of the memory required for that Data array.</p>    
+
+        <p>The use of the   <b> [] </b> operator on the  <b>Data </b> member (<b>sc.Subgraph[].Data[]</b>), returns a  <em>reference</em> to that particular element and you can both  <em>get and set</em> the element.  </p>    
+
+        <section class="h4"><h4>Example</h4>
+            <pre class="Code FullLineHeight">
+// Set the value of the element at the current index in the third Subgraph to 12.5
+sc.Subgraph[2][sc.Index] = 12.5f; 
+
+
+// Get the value of the element of the current index in the third Subgraph
+float SubgraphValue = sc.Subgraph[2][sc.Index];
+            </pre>
+
+        </section>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="comment">// Calculate the exponential moving average with a Length of 20 on the closing
+// prices from the chart and store the result in the second Subgraph (sc.Subgraph[1]).
+</span><span class="keyword">sc</span><span class="operator">.</span>ExponentialMovAvg<span class="operator">(</span><span class="keyword">sc</span><span class="operator">.</span>BaseDataIn<span class="operator">[</span>SC_LAST<span class="operator">],</span><span class="keyword"> sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">1</span><span class="operator">],</span><span class="int"> 20</span><span class="operator">);</span><span class="comment">
+
+// Calculate the simple moving average with a Length of 20 on the exponential
+// moving average that was calculated above. To do this, use the second
+// Subgraph (sc.Subgraph[1]) as the input for the simple moving average.
+// Store the result in the first Subgraph (sc.Subgraph[0]).
+</span><span class="keyword">sc</span><span class="operator">.</span>SimpleMovAvg<span class="operator">(</span><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">1</span><span class="operator">],</span><span class="keyword"> sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">],</span><span class="int"> 20</span><span class="operator">);</span></pre></div>
+
+        </section>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphGetArraySize">sc.Subgraph[].GetArraySize()</h3>
+        <div class="member-link">[<a href="#scSubgraphGetArraySize">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type:</b> Function.</p>
+
+        <p>The <b>sc.Subgraph[].GetArraySize()</b> function gets the number of <b>sc.Subgraph[].Data[]</b> arrays within the sc.Subgraph[].  Normally, this will return the maximum number of Subgraphs.  As of 2013-8 this is 60.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphArrays">sc.Subgraph[].Arrays[][]</h3>
+        <div class="member-link">[<a href="#scSubgraphArrays">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type:</b> Read/Write array of float arrays (SCFloatArray).</p>
+
+        <p><b>Arrays[Index1][Index2]</b>: This member is an array of arrays to be used for  storing background or intermediate calculations and to store data that needs to be held between function calls.  </p>
+
+        <p>As of 2016-02 there are 12 extra arrays  for each <b>sc.Subgraph[]</b>.</p>
+
+        <p>The arrays referred to by <b>sc.Subgraph[].Arrays[]</b> are of type SCFloatArray. The reference type to them is <b>SCFloatArrayRef</b>. </p>
+
+        <p> These extra array elements can be accessed by using <b>sc.Subgraph[].Arrays[Index1][Index2]</b>. Where <b>Index1</b> can be from 0 to (12 - 1) and represent these internal  Subgraph arrays. Where <b>Index2</b> is the same index value as used with the <b>sc.Subgraph[].Data[]</b> arrays  (This accesses the primary graphable Data array for the Subgraph).</p>
+
+        <p>Each of the sc.Subgraph[].Arrays[][] arrays has the same size as sc.Subgraph[].Data[]. A working example can be found in the <b>scsf_ExtraArraysExample</b> function in the <b>/ACS_Source/studies.cpp </b> file. </p>
+
+        <p>As with all arrays used in ACSIL, these are safe and using an index which is out of bounds does not cause any harm. It is simply adjusted to be within the bounds. For example, if Index2 is -1, it will be adjusted to 0.</p>
+
+        <p>Note: Some study functions that take arrays for input and output require a reference to a <b>sc.Subgraph</b> and not a reference to a <b>SCFloatArray</b> contained within a sc.Subgraph. An example is sc.MACD(). </p>
+
+        <p> These functions will use the extra arrays contained within the passed sc.Subgraph (<b>sc.Subgraph[].Arrays[]</b>). Usually they will use 2 or 3 extra arrays, but it could be up to 6 to 8 extra arrays. After passing a Subgraph to one of these functions, you do not want to use one of these extra arrays in the sc.Subgraph for another purpose by writing to it.</p>
+
+        <section class="h4">
+            <h4>References</h4>
+            <p>To do a reference to an Extra Array to make accessing it easier, define a reference like this:</p>
+
+        </section>
+
+        <section class="h4">
+            <h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>SCFloatArrayRef myArray<span class="operator"> =</span><span class="keyword"> sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>Arrays<span class="operator">[</span><span class="int">0</span><span class="operator">];</span>
+
+<span class="comment">// Set the array element at the current index to 10. This is just an example.</span>
+myArray<span class="operator">[</span><span class="keyword">sc</span><span class="operator">.</span>Index<span class="operator">] =</span><span class="int"> 10</span><span class="operator">;</span></pre></div>
+        </section>
+
+        <section class="h4">
+            <h4>Passing Extra Arrays to Functions</h4>
+
+            <p>To pass an Extra Array to a function you simply define the parameter type as   <b>SCFloatArrayRef</b>. Refer to the <b>scsf_PassingExtraArray</b> function in the /ACS_Source/studies.cpp file in the folder Sierra Chart is installed to.</p>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphName">sc.Subgraph[].Name</h3>
+        <div class="member-link">[<a href="#scSubgraphName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write string variable. </p>
+
+        <p>Initial value: "" (empty string)</p>
+
+        <p><b>sc.Subgraph[].Name</b> is the name of the Subgraph. If there is no name, the Subgraph will not be drawn, and it will not be displayed on the list of Subgraphs in the  <b>Subgraphs</b> tab on the Study Settings window. It is useful to use a  sc.Subgraph to store some background or intermediate calculation that should not be displayed. This is a good example of when you would want to leave the  <b>Name</b> blank, so that it will not be graphed on the chart.</p>
+        <section class="h4">
+            <h4>Example:</h4>
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Set the name of the first Subgraph</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>Name<span class="operator"> =</span><span class="string"> "First Subgraph"</span><span class="operator">;</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphPrimaryColor">sc.Subgraph[].PrimaryColor</h3>
+        <div class="member-link">[<a href="#scSubgraphPrimaryColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write color variable. </p>
+
+        <p><b>sc.Subgraph[].PrimaryColor</b> is the primary color for the Subgraph. This is the only color for the Subgraph if the secondary color is not used. For more information on colors,  refer to <a href="index1397.html?page=doc/ACSILDrawingTools.html#RGB">RGB Color Values</a>.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Set the primary color for the first Subgraph to red</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>PrimaryColor<span class="operator"> =</span> RGB<span class="operator">(</span><span class="int">255</span><span class="operator">,</span><span class="int">0</span><span class="operator">,</span><span class="int">0</span><span class="operator">);</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphSecondaryColor">sc.Subgraph[].SecondaryColor</h3>
+        <div class="member-link">[<a href="#scSubgraphSecondaryColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write color variable. </p>
+
+        <p><b>sc.Subgraph[].SecondaryColor</b> is the secondary color of the Subgraph. For more information on colors,  refer to <a href="index1397.html?page=doc/ACSILDrawingTools.html#RGB">RGB Color Values</a>. </p>
+
+        <section class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Set the secondary color for the first Subgraph to yellow</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SecondaryColor<span class="operator"> =</span> RGB<span class="operator">(</span><span class="int">255</span><span class="operator">,</span><span class="int">255</span><span class="operator">,</span><span class="int">0</span><span class="operator">);</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphSecondaryColorUsed">sc.Subgraph[].SecondaryColorUsed</h3>
+        <div class="member-link">[<a href="#scSubgraphSecondaryColorUsed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write variable. </p>
+
+        <p>Initial value: 0 (FALSE)</p>
+
+        <p><b>sc.Subgraph[].SecondaryColorUsed</b> can be a TRUE (1) or FALSE (0) value indicating that the secondary color of the Subgraph is used. When this is set to 1 (TRUE) the secondary color is made available for the Subgraph in the Subgraphs tab on the Technical Study Settings window. Setting this <em>does not</em> automatically color your Subgraph based on it's slope, however if the Auto-Coloring option is on for the Subgraph, then    this secondary color is used.</p>
+
+        <section class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Enable the secondary color for the first Subgraph</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>SecondaryColorUsed<span class="operator"> =</span><span class="int"> 1</span><span class="operator">;</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphDataColor">sc.Subgraph[].DataColor[]</h3>
+        <div class="member-link">[<a href="#scSubgraphDataColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write array of Integer color values.</p>
+
+        <p><b>sc.Subgraph[].DataColor[]</b> is an array of RGB (unsigned Integer) color values associated with each element of a sc.Subgraph[].Data[] array. </p>
+
+        <p>If you use this array, the sc.Subgraph[].Data elements will be drawn using the colors in this array rather than the primary color of the sc.Subgraph[]. </p>
+
+        <p> The DataColor array has the same number of elements as the sc.Subgraph[].Data array. The color in each element of this array will line up directly with the value in each element of the sc.Subgraph[].Data array.</p>
+
+        <p>The colors in this array are unset unless you set them. For more information on colors, refer to  <a href="index1397.html?page=doc/ACSILDrawingTools.html#RGB">RGB Color Values</a>.</p>
+
+        <p>For information about indexing and array sizes, refer to <a href="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html#ArrayIndexing" target="_blank" rel="noopener noreferrer">Array Indexing and Sizes</a>.</p>
+
+        <p>For a code example, refer to <b>scsf_SimpMovAvgColored</b> in studies.cpp inside the ACS_Source folder inside of the Sierra Chart installation folder.</p>
+
+        <section class="h4">
+            <h4>Colors for Price Bar Graph Draw Types</h4>
+
+            <p>In the case where you are using a sc.GraphDrawType other than GDT_CUSTOM, then the following details how the sc.Subgraph[].DataColor[] arrays affect the elements of each price bar Graph Draw Type.</p>
+
+            <ul>
+                <li><b>Candlesticks</b><br>
+                    <ul>
+                        <li>CandleUpOutlineColor = sc.Subgraph[SC_OPEN].DataColor[]</li>
+                        <li>CandleUpFillColor = sc.Subgraph[SC_HIGH].DataColor[]</li>
+                        <li>CandleDownOutlineColor = sc.Subgraph[SC_LOW].DataColor[]</li>
+                        <li>CandleDownFillColor = sc.Subgraph[SC_LAST].DataColor[]</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4>Using sc.Subgraph[].DataColor[]  Array for GDT_NUMERIC_INFORMATION sc.GraphDrawType</h4>
+
+            <p>The sc.Subgraph[].DataColor[] array  can be used to set the foreground and background colors of each element of a Subgraph displayed in a <b>GDT_NUMERIC_INFORMATION</b> table. <b>GDT_NUMERIC_INFORMATION</b> is set through <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scGraphDrawType">sc.GraphDrawType</a>. </p>
+
+            <p>  To be able to set the foreground and background color requires that these colors be combined into a single 4 byte color value by using the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scCombinedForegroundBackgroundColorRef">sc.CombinedForegroundBackgroundColorRef</a> function. </p>
+        </section>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="comment">// Set the color of the Data element at the current Index (sc.Index)
+// for the third Subgraph (Subgraph[2]) to Blue.
+</span><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">2</span><span class="operator">].</span>DataColor<span class="operator">[</span><span class="keyword">sc</span><span class="operator">.</span>Index<span class="operator">] =</span> RGB<span class="operator">(</span><span class="int">0</span><span class="operator">,</span><span class="int">0</span><span class="operator">,</span><span class="int">255</span><span class="operator">);</span><span class="comment">
+
+// Set the color of the Data element at the current Index (sc.Index)
+// for the third Subgraph (Subgraph[2]) to the Primary Color.
+</span><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">2</span><span class="operator">].</span>DataColor<span class="operator">[</span><span class="keyword">sc</span><span class="operator">.</span>Index<span class="operator">] =</span><span class="keyword"> sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">2</span><span class="operator">].</span>PrimaryColor<span class="operator">;</span><span class="comment">
+
+// Set the color of the Data element at the current Index (sc.Index)
+// for the third Subgraph (Subgraph[2]) to the Secondary Color.
+</span><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">2</span><span class="operator">].</span>DataColor<span class="operator">[</span><span class="keyword">sc</span><span class="operator">.</span>Index<span class="operator">] =</span><span class="keyword"> sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">2</span><span class="operator">].</span>SecondaryColor<span class="operator">;</span> </pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphDrawStyle">sc.Subgraph[].DrawStyle</h3>
+        <div class="member-link">[<a href="#scSubgraphDrawStyle">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Read/Write Integer</b> variable.</p>
+
+        <p>Initial value: <b>DRAWSTYLE_LINE</b> or <b>DRAWSTYLE_IGNORE</b></p>
+
+        <p><b>sc.Subgraph[].DrawStyle</b> is the Draw Style that is used to draw the Subgraph. These are relevant when  <b>sc.GraphDrawType</b> is set to <b>GDT_CUSTOM</b>. This is the default setting. The Draw Styles you can use are as follows:</p>
+
+        <ul>
+            <li><b>DRAWSTYLE_LINE</b></li>
+            <li><b>DRAWSTYLE_BAR</b></li>
+            <li><b>DRAWSTYLE_POINT</b></li>
+            <li><b>DRAWSTYLE_DASH</b></li>
+            <li><b>DRAWSTYLE_HIDDEN</b></li>
+            <li><b>DRAWSTYLE_IGNORE</b></li>
+            <li><b>DRAWSTYLE_STAIR_STEP</b></li>
+            <li><b>DRAWSTYLE_SQUARE</b></li>
+            <li><b>DRAWSTYLE_STAR</b></li>
+            <li><b>DRAWSTYLE_PLUS</b></li>
+            <li><b>DRAWSTYLE_ARROW_UP</b></li>
+            <li><b>DRAWSTYLE_ARROW_DOWN</b></li>
+            <li><b>DRAWSTYLE_ARROW_LEFT</b></li>
+            <li><b>DRAWSTYLE_ARROW_RIGHT</b></li>
+            <li><b>DRAWSTYLE_FILL_TOP</b></li>
+            <li><b>DRAWSTYLE_FILL_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_FILL_RECTANGLE_TOP</b></li>
+            <li><b>DRAWSTYLE_FILL_RECTANGLE_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_COLOR_BAR</b></li>
+            <li><b>DRAWSTYLE_BOX_TOP</b></li>
+            <li><b>DRAWSTYLE_BOX_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_COLOR_BAR_HOLLOW</b></li>
+            <li><b>DRAWSTYLE_COLOR_BAR_CANDLE_FILL</b></li>
+            <li><b>DRAWSTYLE_CUSTOM_TEXT</b> (This is for internal Sierra Chart use only. It is not an actual visible  Draw Style. It is used only to set the Color and Font height for text drawn on the chart.)</li>
+            <li><b>DRAWSTYLE_BAR_TOP</b></li>
+            <li><b>DRAWSTYLE_BAR_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_LINE_SKIP_ZEROS</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_FILL_TOP</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_FILL_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_TEXT</b> (Supports the use of the newline character, \n, in the text string) </li>
+            <li><b>DRAWSTYLE_POINT_ON_LOW</b></li>
+            <li><b>DRAWSTYLE_POINT_ON_HIGH</b></li>
+            <li><b>DRAWSTYLE_TRIANGLE_UP</b></li>
+            <li><b>DRAWSTYLE_TRIANGLE_DOWN</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_FILL_RECTANGLE_TOP</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_FILL_RECTANGLE_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_BACKGROUND</b> (example function: <b>scsf_BackgroundDrawStyleExample</b> in <b>studies8.cpp</b>)</li>
+            <li><b>DRAWSTYLE_DIAMOND</b> </li>
+            <li><b>DRAWSTYLE_LEFT_PRICE_BAR_DASH</b> </li>
+            <li><b>DRAWSTYLE_RIGHT_PRICE_BAR_DASH</b> </li>
+            <li><b>DRAWSTYLE_TRIANGLE_LEFT</b> </li>
+            <li><b>DRAWSTYLE_TRIANGLE_RIGHT</b> </li>
+            <li><b>DRAWSTYLE_TRIANGLE_RIGHT_OFFSET</b> </li>
+            <li><b>DRAWSTYLE_TRIANGLE_RIGHT_OFFSET_FOR_CANDLESTICK</b> </li>
+            <li><b>DRAWSTYLE_CANDLESTICK_BODY_OPEN</b> </li>
+            <li><b>DRAWSTYLE_CANDLESTICK_BODY_CLOSE</b> </li>
+            <li><b>DRAWSTYLE_FILL_TO_ZERO</b> </li>
+            <li><b>DRAWSTYLE_TRANSPARENT_FILL_TO_ZERO</b> </li>
+            <li><b>DRAWSTYLE_SQUARE_OFFSET_LEFT</b> </li>
+            <li><b>DRAWSTYLE_SQUARE_OFFSET_LEFT_FOR_CANDLESTICK</b> </li>
+            <li><b>DRAWSTYLE_VALUE_ON_HIGH</b> </li>
+            <li><b>DRAWSTYLE_VALUE_ON_LOW</b> </li>
+            <li><b>DRAWSTYLE_VALUE_OF_SUBGRAPH</b> </li>
+            <li><b>DRAWSTYLE_SUBGRAPH_NAME_AND_VALUE_LABELS_ONLY</b> </li>
+            <li><b>DRAWSTYLE_LINE_AT_LAST_BAR_TO_EDGE</b> </li>
+            <li><b>DRAWSTYLE_FILL_RECTANGLE_TO_ZERO</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_FILL_RECTANGLE_TO_ZERO</b></li>
+            <li><b>DRAWSTYLE_X</b> </li>
+            <li><b>DRAWSTYLE_CUSTOM_VALUE_AT_Y</b>: The sc.Subgraph[].Data[] array contains the custom value for a bar index. The Chart Region y-coordinate is controlled through the sc.Subgraph[].Arrays[0][] array. The y-coordinate is based on the study scale values.
+            <br><br>
+            When the Subgraph Secondary Color is used, then the background color is going to be the secondary color.</li>
+            <li><b>DRAWSTYLE_TRANSPARENT_BAR_TOP</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_BAR_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_LEFT_OFFSET_BOX_TOP</b></li>
+            <li><b>DRAWSTYLE_LEFT_OFFSET_BOX_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_RIGHT_OFFSET_BOX_TOP</b></li>
+            <li><b>DRAWSTYLE_RIGHT_OFFSET_BOX_BOTTOM</b></li>
+            <li><b>DRAWSTYLE_HORIZONTAL_PROFILE</b> </li>
+            <li><b>DRAWSTYLE_HORIZONTAL_PROFILE_HOLLOW</b> </li>
+            <li><b>DRAWSTYLE_SQUARE_OFFSET_RIGHT</b> </li>
+            <li><b>DRAWSTYLE_SQUARE_OFFSET_RIGHT_FOR_CANDLESTICK</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_CIRCLE</b> </li>
+            <li><b>DRAWSTYLE_CIRCLE_HOLLOW</b> </li>
+            <li><b>DRAWSTYLE_TRANSPARENT_CIRCLE_VARIABLE_SIZE</b> (The sc.Subgraph[].Data[]  array contains the Chart Region y- coordinate. The circle size in pixels is controlled through the sc.Subgraph[].Arrays[0][] array.)</li>
+            <li><b>DRAWSTYLE_CIRCLE_HOLLOW_VARIABLE_SIZE</b></li>
+            <li><b>DRAWSTYLE_POINT_VARIABLE_SIZE</b></li>
+            <li><b>DRAWSTYLE_LINE_EXTEND_TO_EDGE</b></li>
+            <li><b>DRAWSTYLE_BACKGROUND_TRANSPARENT</b></li>
+            <li><b>DRAWSTYLE_CUSTOM_VALUE_AT_Y_WITH_BORDER</b></li>
+            <li><b>DRAWSTYLE_LEFT_SIDE_TICK_SIZE_RECTANGLE</b></li>
+            <li><b>DRAWSTYLE_RIGHT_SIDE_TICK_SIZE_RECTANGLE</b></li>
+            <li><b>DRAWSTYLE_TRANSPARENT_TEXT</b> (Supports the use of the newline character, \n, in the text string)</li>
+            <li><b>DRAWSTYLE_TEXT_WITH_BACKGROUND</b> (Supports the use of the newline character, \n, in the text string)</li>
+        </ul>
+
+
+        <p>For descriptions and more information about each of the above Draw Styles, refer to  <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle">Draw Style</a> on the  <b>Chart Studies</b> documentation page. </p>
+
+        <p class="GeneralBackgroundHighlightLight">When using the Color Bar type of styles (DRAWSTYLE_COLOR_BAR,  DRAWSTYLE_COLOR_BAR_HOLLOW, DRAWSTYLE_COLOR_BAR_CANDLE_FILL), these will color the existing chart bars. Typically you will set the <b>sc.GraphRegion</b> to 0 when using these draw styles. To color a particular bar in the chart, you will set a <b>sc.Subgraph[].Data[] </b> array element to  any nonzero value to color the corresponding chart bar. The color that will be used will be the <b>sc.Subgraph [].PrimaryColor </b> unless you are using the <a href="#scSubgraphDataColor">sc.Subgraph[].DataColor</a> array. </p>
+
+        <p>For more information, refer to the <a href="index9099.html?page=doc/ChartStudies.html#ColorBar">Color Bar</a> style. For an example, see the scsf_ColorBarOpenClose in the studies.cpp file inside the /ACS_Source folder inside of the Sierra Chart installation folder.</p>
+
+        <p>When you use a <b>sc.GraphDrawType</b> setting value other than GDT_CUSTOM, then the sc.Subgraph[].DrawStyle variable is automatically set for each of the relevant sc.Subgraphs needed by the  <b>sc.GraphDrawType</b>. You cannot change them. Additionally, it is not possible when you are drawing a price bar type of graph (GraphDrawType not equal to GDT_CUSTOM), to also use standard study lines or other Draw Styles using the other available sc.Subgraphs which are not used by the <b>sc.GraphDrawType</b>. In this case you will need to use a separate study for those.</p>
+
+        <p>When you use <b>DRAWSTYLE_TEXT</b> this means the specified text is drawn at each bar/column in the chart at the value specified in the corresponding Subgraph Data element. The actual text is specifed with <b>sc.Subgraph[].TextDrawStyleText</b>. The font height is specified through <b>sc.Subgraph[].LineWidth</b>. If <b>sc.Subgraph[].DrawZeros</b> is 0, and the  sc.Subgraph Data element for a bar/column in the chart is set to zero, no text will be drawn.</p>
+
+        <p>The  <b>sc.Subgraph[].DrawStyle</b> for a study Subgraph sets the draw style for that entire Subgraph for every chart column the Subgraph is drawn in. Any changes to the Draw Style affect all chart column elements of the Subgraph when the chart is drawn. Therefore, it is not possible to use different Draw Styles for different elements of a single study Subgraph. If you want different Draw Styles, it is necessary to use  separate Subgraphs for each Draw Style that you want to use. </p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Set the draw style of the first Subgraph to the stair-step style</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>DrawStyle<span class="operator"> =</span> DRAWSTYLE_STAIR_STEP<span class="operator">;</span></pre></div>
+
+        </section>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphLineStyle">sc.Subgraph[].LineStyle</h3>
+        <div class="member-link">[<a href="#scSubgraphLineStyle">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write variable. </p>
+
+        <p>Initial value: <b>LINESTYLE_SOLID</b></p>
+
+        <p><b>sc.Subgraph[].LineStyle</b> is the style with which lines are drawn. This only applies to subgraphs where <b><a href="#scSubgraphDrawStyle">sc.Subgraph[].DrawStyle</a></b> is <b>DRAWSTYLE_LINE</b>, <b>DRAWSTYLE_BAR</b>, <b>DRAWSTYLE_DASH</b>, or <b>DRAWSTYLE_STAIR_STEP</b>. The line styles you can use are as follows:</p>
+
+        <ul>
+            <li><b>LINESTYLE_SOLID</b></li>
+            <li><b>LINESTYLE_DASH</b></li>
+            <li><b>LINESTYLE_DOT</b></li>
+            <li><b>LINESTYLE_DASHDOT</b></li>
+            <li><b>LINESTYLE_DASHDOTDOT</b></li>
+        </ul>
+
+        <p>Line styles only work when <b><a href="#scSubgraphLineWidth">sc.Subgraph[].LineWidth</a></b> is set to 0 or 1. If the line width is greater than 1, the line will appear solid.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Set the line style of the first Subgraph to the "dot" style</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>LineStyle<span class="operator"> =</span> LINESTYLE_DOT<span class="operator">;</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphLineWidth">sc.Subgraph[].LineWidth</h3>
+        <div class="member-link">[<a href="#scSubgraphLineWidth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write variable. </p>
+
+        <p>Initial value: 1</p>
+
+        <p><b>sc.Subgraph[].LineWidth</b> is the width in pixels for the Subgraph Draw Style. Not all the available Draw Styles will support a Line Width. When the Draw Style is set to DRAWSTYLE_TEXT, this controls the font height. In this case, setting this to 10 will mean a 10 point height.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Set the line width of the second Subgraph to 2 pixels</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">1</span><span class="operator">].</span>LineWidth<span class="operator"> =</span><span class="int"> 2</span><span class="operator">;</span></pre></div>
+
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphLineLabel">sc.Subgraph[].LineLabel</h3>
+        <div class="member-link">[<a href="#scSubgraphLineLabel">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write variable. </p>
+
+        <p>Initial value: <b>0</b></p>
+
+        <p><b>sc.Subgraph[].LineLabel</b> can be set to a set of flags to enable displaying and positioning of the Name and/or Value of the Subgraph. You can set this to a combination of the following flags:</p>
+
+        <ul>
+            <li><b>LL_DISPLAY_NAME</b></li>
+            <li><b>LL_NAME_ALIGN_CENTER</b></li>
+            <li><b>LL_NAME_ALIGN_FAR_RIGHT</b></li>
+            <li><b>LL_NAME_ALIGN_ABOVE</b></li>
+            <li><b>LL_NAME_ALIGN_BELOW</b></li>
+            <li><b>LL_NAME_ALIGN_LEFT</b></li>
+            <li><b>LL_NAME_ALIGN_RIGHT</b></li>
+            <li><b>LL_NAME_ALIGN_VALUES_SCALE</b></li>
+            <li><b>LL_NAME_ALIGN_LEFT_EDGE</b></li>
+            <li><b>LL_DISPLAY_VALUE</b></li>
+            <li><b>LL_VALUE_ALIGN_CENTER</b></li>
+            <li><b>LL_VALUE_ALIGN_FAR_RIGHT</b></li>
+            <li><b>LL_VALUE_ALIGN_ABOVE</b></li>
+            <li><b>LL_VALUE_ALIGN_BELOW</b></li>
+            <li><b>LL_VALUE_ALIGN_RIGHT</b></li>
+            <li><b>LL_VALUE_ALIGN_VALUES_SCALE</b></li>
+            <li><b>LL_VALUE_ALIGN_LEFT_EDGE</b></li>
+            <li><b>LL_VALUE_ALIGN_LEFT</b></li>
+            <li><b>LL_NAME_REVERSE_COLORS</b></li>
+            <li><b>LL_VALUE_REVERSE_COLORS_INV</b></li>
+            <li><b>LL_NAME_ALIGN_DOM_LABELS_COLUMN</b></li>
+            <li><b>LL_VALUE_ALIGN_DOM_LABELS_COLUMN</b></li>
+            <li><b>LL_DISPLAY_CUSTOM_VALUE_AT_Y</b></li>
+            <li><b>LL_NAME_ALIGN_LEFT_SIDE_VALUES_SCALE</b></li>
+            <li><b>LL_VALUE_ALIGN_LEFT_SIDE_VALUES_SCALE</b></li>
+            
+        </ul>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="comment">// Set the second Subgraph to display it's name on the far right side of the chart and center it vertically.
+</span><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">1</span><span class="operator">].</span>LineLabel<span class="operator"> =</span> LL_DISPLAY_NAME<span class="operator"> |</span> LL_NAME_ALIGN_CENTER<span class="operator"> |</span> LL_NAME_ALIGN_FAR_RIGHT<span class="operator">;</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scDisplayNameValueInWindowsFlags">sc.Subgraph[].DisplayNameValueInWindowsFlags</h3>
+        <div class="member-link">[<a href="#scDisplayNameValueInWindowsFlags">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write Integer variable. </p>
+
+        <p>Initial value: <b>SNV_DISPLAY_IN_WINDOWS | SNV_DISPLAY_IN_DATA_LINE</b></p>
+
+        <p><b>sc.Subgraph[].DisplayNameValueInWindowsFlags</b> can be set to a set of flags to enable displaying of the Subgraph's Name and Value on the Region Data Line on the chart window and/or  in the Chart Values Windows.</p>
+
+        <ul>
+            <li><b>SNV_DISPLAY_IN_WINDOWS </b></li>
+            <li><b>SNV_DISPLAY_IN_DATA_LINE</b></li>
+        </ul>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">1</span><span class="operator">].</span>DisplayNameValueInWindowsFlags<span class="operator"> =</span> SNV_DISPLAY_IN_WINDOWS<span class="operator"> |</span> SNV_DISPLAY_IN_DATA_LINE<span class="operator">;</span> </pre>
+            </div>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphAutoColoring">sc.Subgraph[].AutoColoring</h3>
+        <div class="member-link">[<a href="#scSubgraphAutoColoring">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Read/Write variable. </p>
+
+        <p>Initial value: <b>0</b></p>
+
+        <p>AutoColors a Subgraph. Can be one of the following constants:</p>
+
+        <ul>
+            <li><b>AUTOCOLOR_NONE</b></li>
+            <li><b>AUTOCOLOR_SLOPE</b></li>
+            <li><b>AUTOCOLOR_POSNEG</b></li>
+            <li><b>AUTOCOLOR_BASEGRAPH</b></li>
+        </ul>
+
+        <section class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">1</span><span class="operator">].</span>AutoColoring<span class="operator"> =</span> AUTOCOLOR_SLOPE<span class="operator">;</span></pre>
+            </div>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphDrawZeros">sc.Subgraph[].DrawZeros</h3>
+        <div class="member-link">[<a href="#scSubgraphDrawZeros">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write variable. </p>
+
+        <p>Initial value: <b>0</b> (disabled)</p>
+
+        <p><b>sc.Subgraph[].DrawZeros </b> can be a TRUE (1) or FALSE (0) value to enable or disable the drawing of Subgraph Data array elements that have a value of zero.  </p>
+        
+        <p>Set this value to 1 to enable the drawing of zero values. Set this value to 0 to disable the drawing of zero values.  </p>
+        
+        <p>When this is disabled, the Subgraph Draw Style of <b>DRAWSTYLE_LINE</b> will draw a continuous line between the chart columns that have non-zero values. </p>         
+        
+        <p>The Subgraph Draw Style of <b>DRAWSTYLE_LINE_SKIP_ZEROS</b>  can be used to skip over zero values and not draw a line between the last nonzero value and the next nonzero value as an alternative to using <b>sc.Subgraph[].DrawZeros = 0</b>.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>DrawZeros<span class="operator"> =</span><span class="int"> 1</span><span class="operator">;</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphDisplacement">sc.Subgraph[].GraphicalDisplacement</h3>
+        <div class="member-link">[<a href="#scSubgraphDisplacement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer variable. </p>
+
+        <p>Initial value: <b>0</b></p>
+
+        <p>This is either the positive or negative displacement, in chart columns, to shift the sc.Subgraph [] forward or backward by.  A positive number will shift the Subgraph forward and a negative number will shift the Subgraph backward. For more information, refer to <a href="index9099.html?page=doc/ChartStudies.html#Displacement">Displacement</a> in the Chart Studies documentation.</p>
+
+        <section class="h4"><h4>Example</h4>
+
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>GraphicalDisplacement<span class="operator"> =</span><span class="int"> 1</span><span class="operator">;</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scExtendedArrayElementsToGraph">sc.Subgraph[].ExtendedArrayElementsToGraph</h3>
+        <div class="member-link">[<a href="#scExtendedArrayElementsToGraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write variable. </p>
+
+        <p>Initial value: <b>0</b></p>
+
+        <p>ExtendedArrayElementsToGraph is the number of <b>sc.Subgraph[].Data[]</b> array elements   at  and after <b>sc.ArraySize</b> that will be graphed into the extended area on the chart.  
+
+        <p>Example:  <b>sc.Subgraph[0].Data[sc.ArraySize] = 10;</b>. This  line of code will set the value of 10   for Subgraph 0  at the element after the last bar in the chart.</p>
+
+        <p> The extended area on the chart are the columns after the very last bar in the chart. You can see this area by scrolling past the right edge of the chart. This is also known as the <a href="index69b6.html?page=doc/WorkingWithCharts.html#FillSpace" Target="_blank" rel="noopener noreferrer">Right Side Fill Space/Forward Projection area</a>.</p>
+
+        <p>To increase the number of columns after the last bar in the chart, use the  <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b>&gt;&gt; <a href="index4cf4.html?page=doc/ChartSettings.html#NumberOfForwardColumns">Number of Forward Columns</a></b>  setting. The default is 150.</p>
+
+        <p>For a code example, refer to the <b>scsf_ExtendedArrayExample</b> function in the <b>/ACS_Source/Studies6.cpp</b> file in the Sierra Chart installation folder.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>ExtendedArrayElementsToGraph<span class="operator"> =</span><span class="int"> 10</span><span class="operator">;</span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scTextDrawStyleText">sc.Subgraph[].TextDrawStyleText</h3>
+        <div class="member-link">[<a href="#scTextDrawStyleText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write SCString variable. </p>
+
+        <p>TextDrawStyleText is used to specify the actual text to use with the DRAWSTYLE_TEXT Draw Style.</p>
+
+        <p>This Subgraph member can be changed at any time even outside of the  <b>sc.SetDefaults</b> code block. When it is changed, it applies to all elements of the particular Subgraph it is set on. It is not possible to use different text for each chart bar/column with the DRAWSTYLE_TEXT Draw Style. </p>
+
+        <section class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre><span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>DrawStyle<span class="operator"> =</span>DRAWSTYLE_TEXT<span class="operator">;</span><span class="keyword">
+
+sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>TextDrawStyleText<span class="operator"> =</span><span class="string"> "Buy"</span><span class="operator">;</span><span class="keyword">
+sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>LineWidth<span class="operator"> =</span><span class="int"> 10</span><span class="operator">;</span><span class="comment">// Use a font height of 10. </span></pre></div>
+
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphShortName">sc.Subgraph[].ShortName</h3>
+        <div class="member-link">[<a href="#scSubgraphShortName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write SCString variable. </p>
+
+        <p>ShortName is used to specify the Subgraph Short Name.</p>
+
+        <div class="h4"><h4>Example</h4>
+            <div class="CPP_Code">
+                <pre>
+<span class="comment"> // Set the short name of the first Subgraph</span>
+<span class="keyword">sc</span><span class="operator">.</span>Subgraph<span class="operator">[</span><span class="int">0</span><span class="operator">].</span>ShortName<span class="operator"> =</span><span class="string"> "FSG"</span><span class="operator">;</span></pre></div>
+
+        </div>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraphIncludeInStudySummary">sc.Subgraph[].IncludeInStudySummary</h3>
+        <div class="member-link">[<a href="#scSubgraphIncludeInStudySummary">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer variable. </p>
+
+        <p><b>IncludeInStudySummary</b> can be set to  1 to include the Subgraph  in the  <a href="index9df4.html?page=doc/StudySummaryWindow.php" >Study Summary  Window</a>  or 0 to not include it.</p>
+
+        <p>This variable only has an effect, if the study itself is included in the Study Summary window. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraph_UseStudySummaryCellBackgroundColor">sc.Subgraph[].UseStudySummaryCellBackgroundColor</h3>
+        <div class="member-link">[<a href="#scSubgraph_UseStudySummaryCellBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer variable. </p>
+
+        <p><b>sc.Subgraph[].UseStudySummaryCellBackgroundColor </b> can be set to  1 to cause the color set with <a href="#scSubgraph_StudySummaryCellBackgroundColor" >sc.Subgraph[].StudySummaryCellBackgroundColor</a>  to be used for the cell background color when the study Subgraph is included in the <a href="index9df4.html?page=doc/StudySummaryWindow.php" >Study Summary</a>  window.</p>
+
+        <p>This variable only has an effect, if the study instance itself is included in the Study Summary window. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="scSubgraph_StudySummaryCellBackgroundColor">sc.Subgraph[].StudySummaryCellBackgroundColor</h3>
+        <div class="member-link">[<a href="#scSubgraph_StudySummaryCellBackgroundColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer  color variable. </p>
+
+        <p><b>sc.Subgraph[].StudySummaryCellBackgroundColor</b>  only applies when  <a href="#scSubgraph_UseStudySummaryCellBackgroundColor" >sc.Subgraph[].UseStudySummaryCellBackgroundColor</a>  is set to 1. </p>
+
+        <p> <b>sc.Subgraph[].StudySummaryCellBackgroundColor </b> is the  <a href="index1397.html?page=doc/ACSILDrawingTools.html#RGB">RGB Color Value</a> of the cell background color for the study   Subgraph when it is displayed in the  <a href="index9df4.html?page=doc/StudySummaryWindow.php" >Study Summary   Window</a>.</p>
+
+    </section>  
+    
+    <section class="h3">
+        <h3 id="scSubgraph_StudySummaryCellText">sc.Subgraph[].StudySummaryCellText</h3>
+        <div class="member-link">[<a href="#scSubgraph_StudySummaryCellText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write SCString variable. </p>
+
+        <p>  The <b>sc.Subgraph[].StudySummaryCellText</b> text string sets  the text   for the study Subgraph  to display in the  <a href="index9df4.html?page=doc/StudySummaryWindow.php" >Study Summary   Window</a> instead of the Subgraph value. </p>
+        
+        <p> This variable is not supported in the 32-bit version of Sierra Chart. </p>
+
+
+    </section>
+    
+    
+    <section class="h3">
+        <h3 id="scSubgraph_UseLabelsColor">sc.Subgraph[].UseLabelsColor</h3>
+        <div class="member-link">[<a href="#scSubgraph_UseLabelsColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write integer variable. </p>
+
+        <p>  The <b>sc.Subgraph[].UseLabelsColor</b> can be set to 1 or  0 and controls whether a separate color is used for  <a href = "index9099.html?page=doc/ChartStudies.html#NameValueLabels">Subgraph Name and Value Labels</a> instead of the  Subgraph primary and secondary color settings.</p>
+
+        
+        <p>If it is set to 1, the color is set through the  <a href = "#scSubgraph_LabelsColor">sc.Subgraph[].LabelsColor</a> variable.</p>
+        
+    </section>
+    
+    <section class="h3">
+        <h3 id="scSubgraph_LabelsColor">sc.Subgraph[].LabelsColor</h3>
+        <div class="member-link">[<a href="#scSubgraph_LabelsColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer variable. </p>
+
+        <p>  The <b>sc.Subgraph[].LabelsColor</b> only applies when  <a href = "#scSubgraph_UseLabelsColor">sc.Subgraph[].UseLabelsColor</a> is set to 1 and controls the color of <a href = "index9099.html?page=doc/ChartStudies.html#NameValueLabels">Subgraph Name and Value Labels</a>.</p>
+    </section>   
+
+    
+    <section class="h3">
+        <h3 id="scSubgraph_DisplayNameValueInDataLine">sc.Subgraph[].DisplayNameValueInDataLine</h3>
+        <div class="member-link">[<a href="#scSubgraph_DisplayNameValueInDataLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer variable. </p>
+
+        <p>  The <b>sc.Subgraph[].DisplayNameValueInDataLine</b> variable can be set to 1 (or any nonzero value) or 0 and controls whether to display the Subgraph Name and Value in the Region Data Line of the Chart Region the study is displayed in.  </p> 
+        
+        <p>When it is set to 1, the Subgraph Name and  Values are displayed. Otherwise, they are not.</p>
+    </section>
+        
+    <section class="h3">
+        <h3 id="scSubgraph_IncludeInSpreadsheet">sc.Subgraph[].IncludeInSpreadsheet</h3>
+        <div class="member-link">[<a href="#scSubgraph_IncludeInSpreadsheet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer variable. </p>
+
+        <p>  The <b>sc.Subgraph[].IncludeInSpreadsheet</b>  variable </p> 
+        
+    </section>   
+    
+    <section class="h3">
+        <h3 id="scSubgraph_UseTransparentLabelBackground">sc.Subgraph[].UseTransparentLabelBackground</h3>
+        <div class="member-link">[<a href="#scSubgraph_UseTransparentLabelBackground">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Integer variable. </p>
+
+        <p>  The <b>sc.Subgraph[].UseTransparentLabelBackground</b>  variable  can be set to 1 (or any nonzero value) or 0 and controls whether the Subgraph labels are transparent.  When they are transparent, only the text is  displayed without a background color.</p> 
+        
+    </section>    
+    
+    <section class="h3">
+        <h3 id="scSubgraph_GradientAngleUnit">sc.Subgraph[].GradientAngleUnit</h3>
+        <div class="member-link">[<a href="#scSubgraph_GradientAngleUnit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Float variable. </p>
+
+        <p>  The <b>sc.Subgraph[].GradientAngleUnit</b></p> 
+        
+    </section>   
+    
+    <section class="h3">
+        <h3 id="scSubgraph_GradientAngleMax">sc.Subgraph[].GradientAngleMax</h3>
+        <div class="member-link">[<a href="#scSubgraph_GradientAngleMax">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Read/Write Float variable. </p>
+
+        <p>  The <b>sc.Subgraph[].GradientAngleMax</b></p> 
+        
+    </section>
+
+
+</section>
+
+
+<section class="h2">
+    <h2 id="NumericInformationTableGraphDrawType">Numeric Information Table Graph Draw Type</h2>
+    <div class="member-link">[<a href="#NumericInformationTableGraphDrawType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart supports an <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scGraphDrawType">sc.GraphDrawType</a> for ACSIL  which displays a table of values in a Chart Region. Refer to the screenshot below which shows the table generated from the scsf_NumericInformationGraphDrawTypeExample function. This table can consist of multiple rows which  represents sc.Subgraphs within a study. And each column relates to a specific chart column and chart bar And corresponds to a particular element within a specific study Subgraph.</p>
+
+    <div style="text-align: center;"><a href="../images/numericinformationtablegraphexample.png" rel="lightbox"><img src="../images/numericinformationtablegraphexample.png" alt="" class="screenshot" loading="lazy" width="500" ></a></div>
+    
+    
+    <p> Below is the documentation for the related data structure and functions.</p>
+    
+    <section class="h3">
+        <h3 id="s_NumericInformationGraphDrawTypeConfig">s_NumericInformationGraphDrawTypeConfig</h3>
+        <div class="member-link">[<a href="#s_NumericInformationGraphDrawTypeConfig">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Structure</p>
+
+        <p>Members:</p>
+
+        <ul>
+            <li><p class="ACSILFunctionHighlighting">static const int <b>NUMBER_OF_THRESHOLDS</b> = 3</p> Constant value used to set the number of thresholds (see PercentCompareThresholds). This value cannot be changed.</li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>TextBackgroundColor</b></p> The background color of the text. 
+                <br>
+                Default value = <b>COLOR_BLACK</b>
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>TransparentTextBackground</b></p> Turns on or off the background coloring of the text. A value of <b>true</b> removes the background coloring and a value of <b>false</b> displays the background coloring.
+                <br>
+                Default value = <b>true</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>LabelsOnRight</b></p> When set to <b>true</b> the row labels are displayed on the right, otherwise they are displayed on the left.
+                <br>
+                Default value = <b>false</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>AllowLabelOverlap</b></p> When set to <b>true</b> the row values are drawn in the same location as the labels, potentially overwriting the row labels. Otherwise the row values are not displayed in the same location as the labels. 
+                <br>
+                Default Value = <b>false</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>DrawGridlines</b></p> When set to <b>true</b> the gridlines separating the rows and columns are drawn. Otherwise the gridlines are not drawn.
+                <br>
+                Default value = <b>true</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">int <b>GridlineStyleSubgraphIndex</b></p> Defines the index of the subgraph that will be used to define the Gridline Style.
+                <br>
+                Default value = <b>-1</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">int <b>FontSize</b></p> Allows for a custom font size to be defined. A value of <b>0</b> means that it will use the defined Chart Text Font.
+                <br>
+                Default value = <b>0</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>ShowPullback</b></p> A value of <b>true</b> will display the pullback column and any data that is available for the pullback column. Otherwise, the pullback column is not displayed. If a subgraph does not have any data defined for the pullback column when it is displayed, then the cell will be blank.
+                <br>
+                Default value = <b>false</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>HideLabels</b></p> A value of <b>true</b> will hide the labels so they are not displayed. Otherwise, the labels will be displayed.
+                <br>
+                Default value = <b>false</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">int <b>ValueFormat[SC_SUBGRAPHS_AVAILABLE]</b></p> Allows a subgraph to be displayed in a specific <a href="index9099.html?page=doc/ChartStudies.html#ValueFormat">Value Format</a>. 
+                <br>
+                Default value = <b>VALUEFORMAT_INHERITED</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">int <b>SubgraphOrder[SC_SUBGRAPHS_AVAILABLE]</b></p> Defines the display order of the subgraphs. It is easier to use the <b>sc.SetNumericInformationDisplayOrderFromString()</b> function (defined below) rather than set this order directly in this variable.
+                <br>
+                Default value = Subgraph index order.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>ColorBackgroundBasedOnValuePercent</b></p> A value of <b>true</b> will color the background of the cell according to the percentage value of the cell as determined from the <b>HighestValue[]</b> and <b>LowestValue[]</b> and uses the <b>PercentCompareThresholds[]</b> to determine the <b>Range#UpColor</b> or <b>Range#DownColor</b> to use. For more information refer to <a href="index5ee6.html?page=doc/NumbersBars.php#CalculatedValuesBackgroundColoringLogic">Numbers Bars Calculated Values Background Coloring Logic</a>. 
+                <br>
+                Default value = <b>false</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">int <b>DetermineMaxMinForBackgroundColoringFrom</b></p> When <b>ColorBackgroundBasedOnValuePercent</b> is set to <b>true</b>, then this variable sets whether the Maximum and Minimum values are determined from <b>All Data</b> or <b>Daily Data</b>.
+                <br>
+                This variable can not be changed with ACSIL, as there is no ability to control the Maximum and Minimum daily values through ACSIL.
+                <br>
+                Default value = <b>0</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">float <b>HighestValue[SC_SUBGRAPHS_AVAILABLE]</b></p> The highest value found for the subgraph. This is used to determine the color of the background when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b>.
+                <br>
+                Default value = <b>-FLT_MAX</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">float <b>LowestValue[SC_SUBGRAPHS_AVAILABLE]</b></p> The lowest value found for the subgraph. This is used to determine the color of the background when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b>.
+                <br>
+                Default value = <b>FLT_MAX</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">float <b>PercentCompareThresholds[NUMBER_OF_THRESHOLDS]</b></p> An array of percentages that is used to determine the color of the background when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b>. These values need to be assigned as the decimal form of the percentage. For example, if the desired percentages are 25%, 50%, and 75%, these should be assigned as .25, .50, and .75.
+                <br>
+                Default value = <b>[0.0, 0.0, 0.0]</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range3UpColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 3 Up category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range2UpColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 2 Up category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range1UpColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 1 Up category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range0UpColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 0 Up category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range0DownColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 0 Down category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range1DownColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 1 Down category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range2DownColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 2 Down category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>Range3DownColor</b></p> The background color that is used when <b>ColorBackgroundBasedOnValuePercent</b> is <b>true</b> and the percentage value of a cell falls into the Range 3 Down category.
+                <br>
+                Default value = <b>COLOR_BLACK</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlighting">bool <b>DifferentPullbackAndLabelsColor</b></p> A value of <b>true</b> will use the color defined in <b>PullbackAndLabelsColor</b> (see below) to color the text in the Pullback and Labels columns. Otherwise, the pullback and labels text are colored the same as the subgraph for the row.
+                <br>
+                Default value = <b>false</b>.
+            </li>
+ 
+            <li><p class="ACSILFunctionHighlighting">COLORREF <b>PullbackAndLabelsColor</b></p> Defines the color of the text for the Pullback and Labels columns when the <b>DifferentPullbackAndLabelsColor</b> is set to <b>true</b>.
+                <br>
+                Default value = <b>COLOR_WHITE</b>.
+            </li>
+
+            <li><p class="ACSILFunctionHighlight">bool <b>ColorPullbackBackgroundBasedOnPositiveNegative</b></p> A value of <b>true</b> will color the background of the Pullback Column based on whether the value is Positive or Negative. When the value in the Pullback Column is Positive, the Range3UpColor is used for the background, and when the value in the Pullback Column is Negative, the Range3DownColor is used for the background.
+                <br>
+                Default value = <b>false</b>
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetNumericInformationGraphDrawTypeConfig">sc.SetNumericInformationGraphDrawTypeConfig()</h3>
+        <div class="member-link">[<a href="#scSetNumericInformationGraphDrawTypeConfig">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>: Function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>SetNumericInformationGraphDrawTypeConfig</b>(const s_NumericInformationGraphDrawTypeConfig&amp; <b>NumericInformationGraphDrawTypeConfig</b>)</p>
+        
+        <p>The <b>sc.SetNumericInformationGraphDrawTypeConfig()</b> function sets the parameters for the Numeric Information Graph type, which are part of the <a href = "#s_NumericInformationGraphDrawTypeConfig">s_NumericInformationGraphDrawTypeConfig</a> structure.</p>
+        
+        <p>The <b>sc.SetNumericInformationGraphDrawTypeConfig</b> function is used when <b>sc.GraphDrawType</b> is set to <b>GDT_NUMERIC_INFORMATION</b> for the study.</p>
+
+        <section class="h4">
+            <h4>Parameters</h4>
+
+            <ul>
+                <li><b>NumericInformationGraphDrawTypeConfig</b>: The <a href = "#s_NumericInformationGraphDrawTypeConfig">s_NumericInformationGraphDrawTypeConfig</a> structure that is used to set the parameters for the Numeric Information Graph type.</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetNumericInformationDisplayOrderFromString">sc.SetNumericInformationDisplayOrderFromString()</h3>
+        <div class="member-link">[<a href="#scSetNumericInformationDisplayOrderFromString">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>:Function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>SetNumericInformationDisplayOrderFromString</b>(const SCString&amp; <b>CommaSeparatedDisplayOrder</b>)</p>
+
+        <p>The <b>sc.SetNumericInformationDisplayOrderFromString()</b> function takes a comma delimited text string, <b>CommaSeparatedDisplayOrder</b>,  with the one-based sc.Subgraph[] indexes in the order that you want to  display them in the Numeric Information Graph table. For example, "5,4,1,2" would display Subgraphs in the order given.</p>
+
+        <p>This function should be used to set the display order of the Subgraphs, rather than setting the display order using the <b>SubgraphOrder</b> member of the s_NumericInformationGraphDrawTypeConfig structure.</p>        
+        
+        <p>The <b>sc.SetNumericInformationDisplayOrderFromString</b> function is used when <b>sc.GraphDrawType</b> is set to <b>GDT_NUMERIC_INFORMATION</b>.</p>
+
+        <p>Any  other sc.Subgraphs which will be displayed in the table that are left out of the <b>CommaSeparatedDisplayOrder</b> text string will be appended to the end of the table in their normal order.</p>
+
+        <section class="h4">
+            <h4>Parameters</h4>
+            
+            <ul>
+                <li><b>CommaSeparatedDisplayOrder</b>: A string of index numbers (integers between 0 and 59) that are separated by commas that define the order of the subgraphs to be displayed in the Numeric Information Graph. For example - "4, 45, 3, 18" would display the data for subgraphs 4, 45, 3, and 18 in that order from top to bottom.</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="NumericInformationGraphExample">Numeric Information Graph Example</h3>
+        <div class="member-link">[<a href="#NumericInformationGraphExample">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The function <b>scsf_NumericInformationGraphDrawTypeExample</b> is an example of how to use the Numeric Information Graph Draw Type and can be found in the <b>studies8.cpp</b> file located in the /ACS_Source folder directly under the Sierra Chart installation folder.</p>
+    </section>
+</section>
+
+<hr><p>*Last modified Tuesday, 20th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_Members_scSubgraph.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:46 GMT -->
+</html>  

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SCRealTimeFOREX.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1683752966') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SCRealTimeFOREX.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Sierra Chart Real Time and Historical Forex and CFD Data Service -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexc82f.html?page=doc/SCRealTimeFOREX.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="indexc82f.html?page=doc/SCRealTimeFOREX.php">Sierra Chart Real Time and Historical Forex and CFD Data Service</a></h4> </div>     <h1 class="PageName">Sierra Chart Real Time and Historical Forex and CFD Data Service</h1>
+
+<a href="../images/screaltimeforex_img1.png" rel="lightbox"><img src="../images/screaltimeforex_img1.png" class="WideFloatRight" alt="Image"></a>
+
+<ul>
+    <li><a href="#Intro">Introduction</a></li>
+    <li><a href="#Included">What is Included</a></li>
+    <li><a href="#Setup">Setup Instructions</a></li>
+    <li><a href="#Symbols">Symbols</a></li>
+    <li><a href="#DataRecordingModes">Forex/CFD Market Data and Data Recording Modes</a></li>
+    <li><a href="#VolumeData">Volume Data for Forex and CFD Markets</a></li>
+    <li><a href="#HistoricalDailyDataSessionTimes">Historical Daily Data Session Times</a></li>
+    <li><a href="#LiveTrading">Live Forex Trading</a></li>
+    <li><a href="#AlternativeToCashIndexData">Alternative to Cash Index Data</a></li>
+    <li><a href="http://docs.fxcorporate.com/user-guide/ug-cfd-product-guide-ltd-en.pdf"  target="_blank" rel="noopener noreferrer">FXCM CFD Product Guide</a></li>
+    
+</ul>
+
+<hr>
+
+<div class="h2">
+    <h2 id="Intro">Introduction</h2>
+    <div class="member-link">[<a href="#Intro">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <img style="float:right; display: block; clear: right;" src="../images/logo-fxcm.gif" alt="FXCM Logo" >
+
+    <p>Sierra Chart offers a high quality real-time and historical Forex and CFD  (Contract for Difference) Data service.  </p>
+    
+    <p>The service is  supported by redundant data servers and  advanced real-time server software.  All maintained and developed by Sierra Chart. A large number of Forex pairs and CFDs are available. </p>
+
+    <p>Historical Daily and Intraday data is provided.</p>
+
+    <p>Detailed  data for Intraday charts is available back to December 2007.</p>
+
+    <p>CFD stands for <a href="https://en.wikipedia.org/wiki/Contract_for_difference" target="_blank" rel="noopener noreferrer">Contract For difference</a>. CFDs provide market data for indexes of 12 stock exchanges around the world, Crude oil, Gold, Silver, Platinum, Palladium, Natural Gas, Copper, Bund, and US dollar index markets. These are not futures contracts but can be used as an alternative to them.  The  prices that  these CFD symbols provide will not exactly match the futures contract price or  the  cash index price in the case of stock indexes, but they will be  close.</p>   
+    
+    <!--p Class = "GeneralBackgroundHighlightLight"><b>Availability of FXCM Data Feed</b>: The Sierra Chart Forex data feed is provided by FXCM. In the event that FXCM can no longer provide this data  feed related to the recent CFTC ruling, Sierra Chart will have a replacement data feed available immediately. You should not be concerned about the availability of the Sierra Chart Forex data. In the event that the FXCM  data feed becomes unavailable, Sierra Chart will immediately begin to provide the Forex and CFD data feed from <a href="/index.php?page=doc/LMAX.php">LMAX</a>. </p -->
+    
+    
+</div>
+
+<div class="h2">
+    <h2 id="Included">What is Included</h2>
+    <div class="member-link">[<a href="#Included">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>Streaming Real-Time Data: <b>Yes.</b></li>
+        
+        <li>Historical Intraday Data: <b>Yes.</b> Available back to December 2007. For at least the past 2 Years, the historical Intraday data is tick by tick.  Prior to that the historical  Intraday data is in 4 second time frame units.</li>
+        
+        <li>Historical Daily Data: Provided by Sierra Chart.  The data is sourced from FXCM. The opening price of each Daily bar begins at 5 PM  US Eastern time. The number of years of history available depends upon the symbol. For symbols which are not listed in <b class = "menu_item">File &gt;&gt; Find Symbol</b>, the historical Daily data is downloaded from the <a href="index765f.html?page=SierraChartHistoricalData.html">Sierra Chart Historical Daily Data</a> service. </li>
+        
+        <li>Historical Bid Trade Volume and Ask Trade Volume: <b>Yes.</b> </li>
+        <li>Live Trading Services: <b>No.</b>  For Forex and CFD trading use the <a href="index3985.html?page=doc/LMAX.php" target="_blank" rel="noopener noreferrer">LMAX Trading Service</a> service.</li>
+        <li>Simulated Trading: <b>Yes.</b></li>
+        <li>Order Types Supported: <b>All.</b></li>
+        <li>Server Managed OCO (Order Cancels Order): <b>No.</b></li>
+        <li>Automated Trading (applies to Live or Simulated): <b>Yes.</b></li>
+        <li><a href="index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow" target="_blank" rel="noopener noreferrer">Market Depth Data</a>: <b>No.</b> For market depth data for the Forex markets, and also various other markets  like equity index, precious metals, and oil, use the  <a href = "indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> which provides delayed futures data. This data feed provides market depth data.</li>
+        <li> Integrated with other Data and Trading Services in Sierra Chart: <b>Yes</b></li>
+        <li>Efficient Market Data with Processing on Background Thread: Yes.</li>
+    </ul>
+</div>
+
+<div class="h2">
+    <h2 id="Setup">Setup Instructions</h2>
+    <div class="member-link">[<a href="#Setup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+
+
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu.</li>
+
+        <li>In the <b>Service</b> list box, select <b>SC Data - All Services</b>.  Additionally, the <b>Sierra Chart Real-time and Historical Forex/CFD Data Service</b> is integrated  with all the other Trading services Sierra Chart supports  meaning this data is still accessible when using those Trading services in Sierra Chart. </li>
+
+        <li>Press <b>OK</b>.
+        
+        <div style="text-align: center;"><a href="../images/scdataallservicesdataserviceselection.png" rel="lightbox"><img src="../images/scdataallservicesdataserviceselection.png" width="500" class="screenshot" loading="lazy"></a> </div>
+
+        </li>
+
+
+        <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+		
+		<li> If there are messages added to the Message Log indicating a problem connecting to the Data server, or you cannot connect, then refer to <a href="indexf71c.html?page=doc/helpdetails1.html#NetworkCommunicationOrServerProblem" Target="_blank" rel="noopener noreferrer">Help Topic 1.2</a>.</li>
+
+        
+        <li>To open a Historical or an Intraday chart, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. Select a symbol from the  <span Class = "GeneralBackgroundHighlight"><b>CFD</b> or  <b>Forex</b></span> lists. This service provides historical and real-time data only for the symbols in those lists. To open a chart, press the <b>Open Intraday Chart</b> or <b>Open Historical Chart</b> button to open the type of chart you want. </li>
+
+        <li>Continue with Step  3 on the <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart" Target="_blank" rel="noopener noreferrer">Getting Started</a> documentation page.</li>
+    </ol>
+</div>
+
+<div class="h2">
+    <h2 id="Symbols">Symbols</h2>
+    <div class="member-link">[<a href="#Symbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For a list of symbols you can use with the <b>Sierra Chart Real-Time and Historical Forex and CFD Data Service</b>, select <b class="menu_item">File &gt;&gt; Find Symbol</b> in Sierra Chart. The symbols are in the <b><em>Forex</em></b> and <b><em>CFD</em></b> lists.  Any other symbols listed are provided by other Sierra Chart data services.</p>
+     
+    <p>With <em>Intraday</em> charts you can appended various suffixes like <b>-BID </b> or  <b>-BIDASK</b> to the symbol when opening it from <b class="menu_item">File &gt;&gt; Find Symbol</b>.   In the case of   <b>-BIDASK</b>, the real-time processed data will include the Bid and Ask prices in the chart bars rather than just the average of the Bid and Ask. This symbol suffix  <em>cannot</em> be used with Historical Daily charts. For the documentation for all of the available suffixes, refer to the <a href="indexb482.html?page=doc/RecordingModes.php"> Data Recording Modes</a>.</p>
+
+    <p>Keep in mind if you do not use the symbol suffix, <b>-BIDASK</b>, you will always still see the current Bid and Ask displayed in a chart along the top line of the chart and you can enable <b class="menu_item">Trade &gt;&gt; Draw DOM Graph on Chart</b>, to get the Bid and Ask lines graphically drawn on the right side of the chart.  Or you can enable <b class="menu_item">Chart &gt;&gt; Show Bid and Ask Lines</b> to get the Bid and Ask lines also drawn on the chart, but with less detail.</p>
+
+    <p>For a complete list of symbols for <span class="YellowHighlightNoBorder">Historical Charts</span>, refer to the <a href="index68e5.html?page=doc/SierraChartHistoricalData.php&amp;SymbolsPage=Forex">Historical Daily Forex Symbols</a> page. The <b>^</b> character does not need to be entered, although it can be. The symbols are 6 letters each. More than 10 years of Historical Daily data is available.</p>
+
+    <p><a href="https://en.wikipedia.org/wiki/Currency_pair" target="_blank" rel="noopener noreferrer">Currency pairs</a> are written by concatenating the ISO currency codes (ISO 4217) of the base currency and the counter currency, separating them with a slash character. Often the slash character is omitted. A widely traded currency pair is the relation of the euro against the US dollar, designated as EURUSD. The quotation EURUSD 1.2500 means that one euro is exchanged for 1.2500 US dollars.</p>
+</div>
+
+<div class="h2">
+    <h2 id="DataRecordingModes">Forex/CFD Market Data and Data Recording Modes</h2>
+    <div class="member-link">[<a href="#DataRecordingModes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The Forex and CFD markets only provide Bid and Ask prices.  There are not last trade prices provided from the source data feeds. This is typical of these types of markets. The Bid and Ask spread that you see, is set  by the data feed source.  The primary Forex and CFD data feed we offer is from FXCM. </p>
+    
+    <p>Therefore, by default the price bars and last trade prices you see in a Forex or CFD chart are <em>based on the midpoint or average of the Bid and Ask quotes </em>.</p>
+
+    <p>For example, when using the symbol EURUSD, the values of the price bars and last trade price will be based on the midpoint or average of the Bid and Ask quotes.</p>
+    
+    <p> To see the full precision  of the Bid and  Ask  prices, to understand the resulting average value,  increase the number of decimal places for the  <a href = "index4cf4.html?page=doc/ChartSettings.html#PriceDisplayFormat">Price Display Format</a> for the chart. </p>
+    
+    <p>There are several other Data Recording Modes which can be used by appending a suffix to the symbol when opening a chart. They are as follows:</p>
+    
+    <ul>
+        <li><b>Symbol-BID</b>: Example: <b>EURUSD-BID</b></li>
+        <li><b>Symbol-ASK</b>: Example: <b>EURUSD-ASK</b></li>
+        <li><b>Symbol-BIDASK</b>: Example: <b>EURUSD-BIDASK</b></li>
+    </ul>
+    
+    <p>For complete details, refer to <a href="indexb482.html?page=doc/RecordingModes.php">Data Recording Modes</a>.</p>
+    
+    <p> The Date and Time for each bar the chart  is the starting time of that bar. For more information, refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html#TimeScale" >Time Scale</a> on the Working with Charts page.</p>
+</div>
+
+<div class="h2">
+    <h2 id="VolumeData">Volume Data for Forex and CFD Markets</h2>
+    <div class="member-link">[<a href="#VolumeData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Since there is no central exchange for the foreign exchange markets or CFD (contract for difference) markets, generally there is no volume data available in these markets. </p>
+
+    <p>However, in the case of Intraday charts, Sierra Chart is able to provide volume data. The method by which Sierra Chart uses to provide the volume data is based upon the number of Bid and Ask price changes that are received from the particular Forex and CFD quote provider.  For the Sierra Chart Forex/CFD Data Service, the data feed comes from FXCM.</p>
+    
+    <p>For every price change, the volume is incremented by 1. Therefore, it is not a true measure of actual trading volume. It only provides an indicative measure. </p>
+    
+    <p>Bid Trade Volume (Bid Volume) and Ask Trade Volume (Ask Volume) are also provided by Sierra Chart for these markets. When there is a change with the Bid and Ask prices, if the prices have risen, then Ask Trade Volume is incremented by 1.  If the prices have declined, then Bid Trade Volume is incremented by 1.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="HistoricalDailyDataSessionTimes">Historical Daily Data Session Times</h2>
+    <div class="member-link">[<a href="#HistoricalDailyDataSessionTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Session Times for the  Historical Daily data provided by the    <b>Sierra Chart Real-time and Historical Forex/CFD Data Service</b> cannot be changed. The opening time  for a  Daily chart bar is  <em>17:00:00</em> US Eastern time. The ending time  for a Daily chart bar is <em>16:59:59.999</em> US Eastern time.</p>
+    
+    <p>Therefore, in historical Daily charts, the   <a href = "index219e.html?page=doc/TimeZone.html">Time Zone</a> for these charts must always be a US time zone.    Otherwise, there can be an issue where the high and low for the last displayed bar is not correct. </p> 
+</div>
+
+<div class="h2">
+    <h2 id="LiveTrading">Live Forex Trading</h2>
+    <div class="member-link">[<a href="#LiveTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the <b> SC Data-All Services </b> Service within Sierra Chart,  the Forex and CFD data is provided by FXCM.   </p>
+    
+    <p>If you want to do live Forex and CFD trading, then refer to the <a href="index3985.html?page=doc/LMAX.php"  target="_blank" rel="noopener noreferrer">LMAX Trading Service</a> page for instructions. </p>
+</div>
+
+
+<div class="h2">
+    <h2 id="AlternativeToCashIndexData">Alternative to Futures Data</h2>
+    <div class="member-link">[<a href="#AlternativeToCashIndexData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you require cash index data  and you do not want to pay extra for the real cash index data which is provided from the <a href = "index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php">Sierra Chart Exchange Data Feed</a>, then the <b> Sierra Chart Real-Time and Historical Forex / CFD Data Service </b>  is an alternative.</p>
+    
+    <p>This service provides real-time data for the cash prices for most major equity indexes, gold, silver and oil.</p>
+    
+    <p>Below is a table of the equivalent <b> Sierra Chart Real-Time and Historical Forex / CFD Data Service </b> symbols for major equity indexes, gold, silver and oil.</p>
+    
+    <p>The below symbols are listed in <b class = "menu_item">File &gt;&gt; Find Symbol &gt;&gt; CFD - FXCM</b>.</p>
+    
+    <div class="Aligned_Center">
+        <table class="doc">
+            <tr>
+                <th>SC Forex Data Symbol</th>
+                <th>Equivalent To</td>
+            </tr>
+            <tr>
+                <td>GER30</td>
+                <td>FDAX EUREX (German DAX index)</td>
+            </tr>
+            <tr>
+                <td>US30</td>
+                <td>$DOWI (Dow 30 Industrials)</td>
+            </tr>
+            <tr>
+                <td>NAS100</td>
+                <td>$IUXX (NASDAQ 100 index)</td>
+            </tr>
+            <tr>
+                <td>SPX500</td>
+                <td>$INX (S&P 500 index)</td>
+            </tr>
+             <tr>
+                <td>UKOil</td>
+                <td>Brent Crude Oil (BRN) ICE</td>
+            </tr>
+            <tr>
+                <td>USOil</td>
+                <td>Crude Oil WTI (CL) CME</td>
+            </tr>
+            
+            <tr>
+                <td>Bund</td>
+                <td>FGBL EUREX</td>
+            </tr>
+            
+            <tr>
+                <td>XAUUSD</td>
+                <td>Spot Gold</td>
+            </tr>
+            <tr>
+                <td>XAGUSD</td>
+                <td>Spot Silver</td>
+            </tr>        
+        <table>
+    </div>
+</div>
+
+<hr><p>*Last modified Wednesday, 10th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SCRealTimeFOREX.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:03 GMT -->
+</html>  

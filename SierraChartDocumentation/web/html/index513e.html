@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1685072265') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/AdvancedCustomStudyInterfaceAndLanguage.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Advanced Custom Study/System Interface and Language (ACSIL) -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study/System Interface and Language (ACSIL)</a></h4> </div>     <h1 class="PageName">Advanced Custom Study Interface and Language (ACSIL)</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#BasicStudyConcepts">Basic Study Concepts</a></li>
+    <li><a href="#CPlusPlusReferences">C++ References</a></li>
+    <li><a href="#CodeAndExamples">Code and Examples</a></li>
+    <li><a href="#SettingDefaultCodeEditor">Setting the Default Code Editor</a></li>
+    <li><a href="#StepByStepInstructions" >Step-By-Step Instructions to Create an Advanced Custom Study Function</a></li>
+    <li><a href="#CustomStudyDLLFileName">Custom Study DLL File Name Format</a></li>
+    <li><a href="#ExceptionsCausedByImproperProgramming">Exceptions Caused by Improper Programming</a></li>
+    <li><a href="#ReinstallingCPPCompiler" >Reinstalling C++ Compiler</a></li>
+    <li><a href="#UsingHeaderFiles">Using Additional Header Files</a></li>
+    <li><a href="#UsingYourOwnHeaderFiles">Using Your Own Header Files</a></li>
+    <li><a href="#ModifyingAdvancedCustomStudyCode">Modifying Advanced Custom Study Code</a></li>
+    <li><a href="#RedistributingToUsers">Redistributing Your Custom Studies To Users</a></li>
+    <li><a href="#Redistributing">Redistributing and Allowing Use Only by a Defined List of Users</a></li>
+    <li><a href="#AutomatedFileDistributionSystem">Automated File Distribution System</a></li>
+    <li><a href="#RemoteCompilerParameters">Remote Compiler Parameters</a></li>
+    <li><a href="#RelatedDocumentation">Related Documentation</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For instructions on how to use an Advanced Custom Study already developed by someone, refer to the <A href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php" >How to Use an Advanced Custom Study</A> documentation page.</p>
+
+    <p>Sierra Chart has a very advanced and easy to use custom study interface and language (ACSIL) which is based on C++ and allows you to create your own custom studies and trading systems, as well as do various other things with Sierra Chart with almost unlimited possibilities.  </p>
+
+    <p>Advanced Custom Study functions have access to all of the main price graph and study data displayed in a chart or other charts, tick by tick data, time and sales data (which includes Bid and Ask data), Depth of Market Data and various functions and variables in the Sierra Chart custom study interface.  </p>
+
+    <p>If you wish to share your advanced custom study with others, all you need to do is provide them with the  Advanced Custom Studies DLL (dynamic link library) file. All they need to do is simply place it into their Sierra Chart Data  folder. </p>
+
+    <p>If you wish to make the source code available, you only need to provide them with the source code file (these have the extension .cpp).</p>
+
+
+    <p>Despite articles that may claim C# is as fast as C++ or possibly even faster, the reality is that C++ native code which ACSIL uses, as it is called, is simply faster as has been proven time and time again with actual real-life tests. C# and .NET code is slower and more bulky and is Microsoft proprietary. Whereas Sierra Chart embraces open and flexible standards.</p>
+
+    <p>Do you need to know C++ to create custom studies? The answer is definitely not. You can simply work from the examples.  </p>
+
+    <p>The reason is because there is minimal use of C++ when creating a study or trading system. And the limited use of this language is <em>very similar to or the same</em> as the languages of other charting and trading programs.  </p>
+
+    <p>Of course, you have full access to the entire C++ language if you wish to use it, but typically there is no reason to use it. Normally you are working with the Sierra Chart custom study function framework, the interface functions and variables, C++ operators, simple variables, and "<b>if</b>" and "<b>for</b>" statements.</p>
+
+    <p>This is a very powerful feature of the program and is continuously being expanded. There are many functions available in the Advanced Custom Study Interface that provide a lot of functionality. This is in addition to the standard C++ functions.</p>
+
+    <p>Sierra Chart custom studies and systems are made using the standard C++ language, the <a href="index6788.html?page=doc/ACSIL_Members.html" >arrays, variables, and functions</a> that are  part of the custom study interface, and the standard C++ library. </p>
+
+    <p>All of these collectively make up the Sierra Chart Advanced Custom Study Interface and "Language".</p>
+
+    <p> With a simple menu command, you will easily create the Advanced Custom Studies DLL file which contains one or more study functions. </p>
+
+    <p>You will be working with the basics of the C++ programming language only. </p>
+
+    <p>This feature of the program is a more advanced feature. However, if you only have limited experience with the Basic language or some other easy to work with language, then that will be enough to create a simple study function.</p>
+
+    <p>If you have experience with the languages of other charting and trading programs, then you probably will find using the C++ language and the Sierra Chart Custom Study Interface easier to work with since it is based on standards and works as expected. It also provides much greater functionality and it is extremely fast. There is nothing faster. Step-by-step debugging of your custom function is also possible.</p>
+</section>
+
+<section class="h2">
+    <h2 id="BasicStudyConcepts">Basic Study Concepts</h2>
+    <div class="member-link">[<a href="#BasicStudyConcepts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>A study  can perform calculations and display visible results using both text and graphics.</li>
+        <li>A study can also be a trading system study which submits orders and/or displays buy and sell markers on the chart.</li>
+        <li>A study is contained within a single  <a href="#">Chart Region</a>.</li>
+        <li>A study can have up to 60 visible Subgraphs  sharing the same scale set for the study.  Each Subgraph has an additional 12 extra arrays for additional hidden calculations. These arrays can be used for any purpose whether they are associated with the Subgraph or not.</li>
+        <li>A study can make reference  to the chart data, other studies, other charts, market data, and chart settings.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="CPlusPlusReferences">C++ References</h2>
+    <div class="member-link">[<a href="#CPlusPlusReferences">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p><b>Note</b>: We have included below links to pages with good C++ language tutorials on the relevant areas of the language you will be working with. This information is from the C++ website (cplusplus.com).  </p>
+
+    <p>The C++ language provides a lot of functionality, but in almost all cases you will only be using the basics of it when working with ACSIL.  Therefore, only a minimum of the C++ language is used when creating an advanced custom study. Primarily operators, simple variables, and basic control statements like <b>if</b>. </p>
+
+    <p>What you would be working with is similar to languages in other charting and trading programs. </p>
+
+    <p>It is not recommended you work with C++ native arrays. It is always recommended to use the Sierra Chart <b>sc.Subgraph[].Data</b> and <b>sc.Subgraph[].Arrays[]</b> arrays to store your output data and background calculations. The reason for this is simplicity and safety because these arrays are safe and the bounds can never be overwritten.</p>
+
+    <p>Many of the examples in the following tutorials use the <b>cout</b> object to display output on a console window which Sierra Chart does not have.  If you were to use the <b>cout</b> object in your code, the text will not appear. </p>
+
+    <p>In place of the <b>cout</b> object, you would always use your own relevant code. If you did want to display output, you need to use the <a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scAddMessageToLog" >sc.AddMessageToLog()</a> function which will display  output in the Sierra Chart Message Log.</p>
+
+    <ul>
+        <li>C++ Language Tutorial: <a href="index7b37.html?page=doc/cpp_VariablesDataTypes.php" target="_blank" rel="noopener noreferrer">Variables and Data Types</a></li> 
+        <li>C++ Language Tutorial: <a href="indexfcfe.html?page=doc/cpp_Constants.php" target="_blank" rel="noopener noreferrer">Constants</a></li>
+        <li>C++ Language Tutorial: <a href="index2b23.html?page=doc/cpp_Operators.php" target="_blank" rel="noopener noreferrer">Operators</a></li>
+        <li>C++ Language Tutorial: <a href="indexfe09.html?page=doc/cpp_ControlStructures.php" target="_blank" rel="noopener noreferrer">Control Structures</a></li>
+        <li>C++ Language Tutorial: <a href="index72d7.html?page=doc/cpp_Functions.php" target="_blank" rel="noopener noreferrer">Functions (I)</a> This is a more  advanced subject. The reason you would want to create a function separate from your own primary ACSIL study function, is to break down more complex study functions into smaller units and to keep common code in a single place for easy maintenance. This makes your code better organized and allows for code that is used in many locations within your study function, to be contained within its own separate function and called at the appropriate locations within the primary study function. </li>
+
+        <li>Common mathematical operations and transformations: <a href="http://www.cplusplus.com/reference/cmath/" target="_blank" rel="noopener noreferrer">math.h</a>.  Opens on the cplusplus.com website.</li>
+
+        <li>Fuctions to read and write files: <a href="http://www.cplusplus.com/reference/cstdio/" target="_blank" rel="noopener noreferrer">stdio.h</a>.  Opens on the cplusplus.com website.</li>
+
+        <li><a href="http://gcc.gnu.org/onlinedocs/" target="_blank" rel="noopener noreferrer">GCC compiler reference</a>.  The C++ compiler used with the <b>Remote Build</b> command is the MinGW GCC C++ compiler.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="CodeAndExamples">Code and Examples</h2>
+    <div class="member-link">[<a href="#CodeAndExamples">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>All of  these listed files are located inside the <b>/ACS_Source</b> folder inside of the Sierra Chart installation folder.</p>
+    <ul>
+        <li><b>ExampleCustomStudies.cpp</b>: Basic example study functions which can be used as a starting point for your own functions.</li> 
+
+        <li><b>Studies#.cpp </b>: Multiple files containing most of the built-in Sierra Chart studies. All of the individual study functions contained in these files can be used as a starting point for your own study functions. They also serve as good examples.</li>
+
+        <li><b>CustomChart.cpp</b>: Contains a study function that creates a custom chart. This is a more advanced example.</li>
+        <li><b>SCConstants.h</b>: Constants you can use in a custom study function.</li>
+        <li><b>SCSymbolData.h</b>: Symbol pricing data structure. </li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="SettingDefaultCodeEditor">Setting the Default Code Editor</h2>
+    <div class="member-link">[<a href="#SettingDefaultCodeEditor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart includes the <a href="https://notepad-plus-plus.org/"  target="_blank" rel="noopener noreferrer">Notepad++</a> source code editor. This is set as the default source code editor. To change the default source code editor:</p>
+    <ol>
+        <li>Open the <b>Build Advanced Custom Studies DLL</b> window by selecting <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL</b> on the Sierra Chart menu.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; Select Editor</b> on the <b>Build Advanced Custom Studies DLL</b> window.</li>
+
+        <li>Acknowledge the notice about selecting a different editor by pressing <b>Yes</b>.</li>
+
+        <li> On the displayed Open File window, press the <b>Folder</b> button.</li>
+        
+        <li>  Navigate to the folder where your main Sierra Chart installation is located (typically C:\SierraChart). </li>
+        
+        <li> Select the <b>NPP</b> folder  that is under the main Sierra Chart folder.  If you want to use a different editor, than Notepad++, then to navigate to that folder where it is located on your system.</li>
+
+        <li>Press the OK button to select that folder.  </li>
+        
+        <li>You will see a program called Notepad++ show in the list of files.  Select that file.  If you want to use a different editor, than Notepad++, then  select that particular editor.</li>
+        
+        <li>Press the  <b>Open</b> button. </li>
+
+        <li>Next time you edit an advanced custom studies CPP file through <b class="menu_item">File  &gt;&gt; Select Files</b>,  the selected editor will be used.</li>
+    </ol>
+    
+    
+    <div style="text-align: center;"><a href="../images/fileselecteditor.png" rel="lightbox"><img src="../images/fileselecteditor.png" alt="" width="500"  class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="StepByStepInstructions">Step-By-Step Instructions to Create an Advanced Custom Study Function</h2>
+    <div class="member-link">[<a href="#StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are step-by-step instructions to create a custom study function and use it in Sierra Chart.</p>
+
+    <div style="text-align: center;"><a href="../images/acseditor.png" rel="lightbox"><img src="../images/acseditor.png" alt="" width="450"  class="screenshot" loading="lazy"></a></div>
+
+    <ol>
+        <li>To create your own custom studies or trading systems in Sierra Chart, you will be working with the code editor and build system provided by Sierra Chart, to edit your source code file and to generate an executable file containing your study functions. </li>
+
+        <li>To start the code editor, select <b class="menu_item">Analysis &gt;&gt; New/Open  Custom Studies File</b> on the Sierra Chart menu. A window will open to either  select an existing  source code file or  enter a new file name. </li>
+
+        <li>To create a <em>new</em> Advanced Custom Studies file, type the name of the file in the <b>File Name</b> box.  Or, select an existing file. The filename must not contain any spaces. There is no need to type the CPP file extension. It will be automatically added.</li>
+
+        <li>Press the <b>Open</b> button. This will launch the source code editor (see image above), where you can  edit your Advanced Custom Studies source code file.</li>
+
+        <li>The location where Advanced Custom Studies source files need to be located is the <b>/ACS_Source</b> folder in the folder where you installed Sierra Chart to.   The source code files will be automatically located in that folder.</li>
+
+        <li>You will see two lines at the top of every custom studies source code file: <b>#include "sierrachart.h"</b> and <b>CustomDLLName("My Custom Studies")</b>. These are both required and just need to be in the file only <em>once</em> and at the top. 
+            <br> <br>
+            Some source code files that are provided with Sierra Chart, like <b>studies#.cpp</b>, will not have the <b>CustomDLLName("")</b> line because it  only needs to be included in one source file when compiling multiple files. However, when compiling source code files individually it must be included.</li>
+
+        <li>Each study is contained within its own section of code known as a <em>function</em>.  Functions begin with a line similar to:  <b>SCSFExport scsf_FunctionName(SCStudyInterfaceRef sc)</b> followed by an opening brace <b>{</b> and a closing brace at the end <b>}</b>. All functions are contained in the source code file (.cpp file extension). A source file can contain one or more functions. You can add and remove functions as necessary. </li>
+
+        <li>To create a custom study, you will need to write a custom study function. To help you get started, each time you create a new Advanced Custom Studies source code file, it will contain a template function, with which you can use as your study function. The name of this function is <b>scsf_SkeletonFunction</b>.</li>
+
+        <li>The first step to writing a custom study function is to modify the predefined template function: <b>scsf_SkeletonFunction</b>. This function represents the basic structure required for every study function.</li>
+
+        <li>A good start to understanding what should go into a custom study function is to have a look at the <b>CustomStudies.cpp </b> source code file in the <b>/ACS_Source</b> folder in the folder that Sierra Chart is installed to. It contains many easy example study functions.
+
+            <br>
+            <br>
+
+            This file includes some template functions and some complete example study  functions like <b>scsf_SimpMovAvg</b> and <b>scsf_MovingAverageExample</b>. Also in that same folder  are the majority of Sierra Chart built-in studies. </li>
+
+        <li>You can copy and paste the functions from any of the files in the <b>/ACS_Source</b> folder  into your Advanced Custom Studies source file and make modifications.  If you do, you probably will want to delete <b>scsf_SkeletonFunction</b> in your source file and just work with the function or functions you have pasted into your source code file.</li>
+
+        <li> In general, what you will need to do in your Advanced Custom Study function is use the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn" Target="_blank" rel="noopener noreferrer">sc.BaseData[] arrays</a> which hold the data for the main price graph in the chart, perform calculations on that data, and then set your results into one or more of the <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData" target="_blank" rel="noopener noreferrer">sc.Subgraph[].Data arrays</a> to display the results on the chart.
+            <br>
+            <br>
+            For a comprehensive understanding  of ACSIL arrays and looping, refer to <a href="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html" Target="_blank" rel="noopener noreferrer">Working with ACSIL Arrays and Understanding Looping</a>.
+        </li>
+
+        <li>Or, in the case of an automated trading system, you will use  the <a href="index2bf5.html?page=doc/ACSILTrading.html" target="_blank" rel="noopener noreferrer">ACSIL Trading</a> functions  to perform trade actions. Keep in mind that these trade actions by default are simulated and do not ever have to be live trades.  They can simply be informational or you can manually respond to them.</li>
+
+        <li> Refer to the <a href="index6788.html?page=doc/ACSIL_Members.html"  target="_blank" rel="noopener noreferrer">Definitions of Advanced Custom Study/System Interface Members</a> page for complete documentation on the Advanced Custom Study Interface members that you can use in your function, and you see used in the study functions in the source code files that are provided in the <b>/ACS_Source</b> folder.   </li>
+
+        <li>These interface members begin with <b>sc.</b> in the source code.  This designates that the variable, function, or array is part of the  Sierra Chart Advanced Custom Study Interface. </li>
+
+        <li>For information about creating a <b>trading system study</b>, refer to <A href="indexd011.html?page=doc/ACSILProgrammingConcepts.html#SystemsAndAlerts" target="_blank" rel="noopener noreferrer">System Studies</A>.</li>
+
+        <li>It is recommended to begin with the predefined template function, <b>scsf_SkeletonFunction</b>, and rename it to something unique, for example: <b>scsf_MyNewStudyFunction</b>. The very top line of all study functions need to be defined like the following:
+            <br>
+            <pre class="Code FullLineHeight">
+SCSFExport scsf_UniqueFunctionName(SCStudyInterfaceRef sc)
+            </pre>
+
+            <br>Where <b><em>UniqueFunctionName</em></b> is the name that you give your function which must be unique from all other study functions in your advanced custom study source code file. <b>Important Note:</b> your function must always begin with the prefix <EM>scsf_</EM>.
+            <br><br>
+            Inside the function you will need to set the <b><A href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scGraphName" target="_blank" rel="noopener noreferrer">sc.GraphName</A></b> to the name of your study. This must be done inside the code block that checks if <b><A href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSetDefaults"   target="_blank" rel="noopener noreferrer">sc.SetDefaults</A></b> is set. For example:
+            <br>
+            <pre class="Code FullLineHeight">
+#include "sierrachart.h"
+SCDLLName("Custom Study DLL") 
+
+SCSFExport scsf_UniqueFunctionName(SCStudyInterfaceRef sc)
+{
+    if (sc.SetDefaults)
+    {
+        // Set the defaults
+        sc.GraphName = "My New Study Function";
+
+        sc.Subgraph[0].Name = "Subgraph name";
+        sc.Subgraph[0].DrawStyle = DRAWSTYLE_LINE;
+
+        sc.AutoLoop = 1;
+
+        // Enter any additional configuration code here
+        return;
+    }
+
+    // Perform your data processing here.
+
+    // Multiply the Last price at the current bar being processed, by 10.
+    sc.Subgraph[0][sc.Index] = sc.Close[sc.Index] * 10;
+
+    return;
+}
+            </pre>
+        </li>
+
+        <li>Once you are done with the work on your source code file, save the file by selecting <b class="menu_item">File &gt;&gt; Save</b> on the Editor menu.</li>
+
+        <li id="CompileACSILSourceCode">The next step is to compile the source code. If the source code contains no errors, the compilation process will create the Advanced Custom Studies DLL. Otherwise, you will be notified of any errors in your source code on the <b>Build Advanced Studies DLL &gt;&gt; Build Output</b> window. Follow these steps to compile the source code:<br>
+
+            <ol>
+                <li>Go to the Sierra Chart program main window.</li>
+                <li>Select <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL</b> on the Sierra Chart menu.
+                    <div style="text-align: center;"><a href="../images/buildacsdll.png" rel="lightbox"><img src="../images/buildacsdll.png" alt="" width="450"  class="screenshot" loading="lazy"></a></div>
+                </li>
+
+                <li>The selected file is displayed in the <b>Build Custom Studies DLL</b> window. To open a different file, press the <b>Select File</b> button and select the file you want.
+                    <div style="text-align: center;"><a href="../images/selectacsfile.png" rel="lightbox"><img src="../images/selectacsfile.png" alt="" width="450"  class="screenshot" loading="lazy"></a></div>
+                </li>
+                <li> You can select one or more files. Usually you will be working with one file but multiple files are supported. If you want to select multiple files, enable the <b>Multiple Selection </b> option and select multiple files by left clicking on them. </li>
+
+                <li>After selecting the file or files, press <b>Open</b> on the Select Advanced Custom Study Files window. </li>
+
+                <li>If you have selected more than one file to build, only one of the CPP files that you select can contain the  <b>SCDLLName</b> line at the top.</li>
+
+                <li> The filenames to be built will now be displayed in the text box at the top of the <b>Build Advanced Custom Studies DLL</b> window. </li>
+
+                <li> If there are any additional compiler parameters you want to specify,  then enter them in the <b>Additional Compiler Parameters</b> text box on the <b>Build Advanced Custom Studies DLL</b> window. These will be appended to the compiler parameters  given to the compiler. </li>
+
+                <li><b>Building Remotely</b> (Recommended): To compile the source code file and generate the DLL, select  <b class="menu_item">Build &gt;&gt; Remote Build</b>.  The compiling and generating  of the DLL is done on the Sierra Chart server. This is a very simplified way of generating the DLL file and is the recommended way unless you need to do something more advanced.
+                    <br> <br>
+                    <em>Any <b>#includes </b> that you have added to your CPP file are ignored when doing a remote build.</em> However, all of the standard C++ headers and <b>Windows.h</b> header are already included.
+                    <br> <br>
+                    The source code file is transmitted securely over an encrypted connection to the Sierra Chart server and deleted when the compiling is done or if it fails.  For those of you who have some kind of hypothetical concern, we could care less about your source code.  We just make sure it is deleted from the system used for compiling.</li>
+
+                <li><b>Building Locally</b>: To compile the source code locally, select  <b class="menu_item">Build &gt;&gt;  Build With Visual C++ - Release</b>. This requires that the  Visual C++ compiler be installed first  by selecting   <b class="menu_item">Build &gt;&gt; Install Visual C++ Compiler</b>.  
+                    <br> <br>
+
+                    Installing the compiler does take time. That must be completed first before using the <b class="menu_item">Build &gt;&gt;  Build with Visual C++ - Release</b> command.</li>
+
+				<li id="BuildingLocallyToDebug"><b>Building Locally, To Debug</b>: To compile the source code locally, and debug the ACSIL function, select <b class="menu_item">Build &gt;&gt;  Build With Visual C++ - Debug</b>. This requires that the  Visual C++ compiler be installed first  by selecting   <b class="menu_item">Build &gt;&gt; Install Visual C++ Compiler</b>.  
+                    <br> <br>
+
+                    Installing the compiler does take time. That must be completed first before using the <b class="menu_item">Build &gt;&gt;  Build with Visual C++ - Debug</b> command.  When you build a project in debug mode, two important files are created. A study dll file and a PDB file or <b>Program Debug Database</b>.  For example, if you build a source file called ExampleCustomStudies.cpp file, you will see a <b>ExampleCustomStudies.dll</b> and a <b>ExampleCustomStudies.pdb</b>.
+                    <br> <br>
+                    If you want to see that project built to the right place and that you are ready to debug, you can check that these two files were created in your    <b>ACS_Source</b> folder in the Sierra Chart installation folder.
+					<div style="text-align: center;"><a href="../images/debugbuildoutput.png" rel="lightbox"><img src="../images/debugbuildoutput.png" width="600" class="screenshot" loading="lazy" alt=""></a></div>
+					
+					<br> <br>
+					Refer to the <a href="index7cb8.html?page=doc/StepByStepACSILDebugging.php" target="_blank" rel="noopener noreferrer">Step-By-Step ACSIL Debugging</a> page for complete documentation on how to debug the ACSIL functions.</li>					
+            </ol>
+        </li>
+
+        <li>The compilation is performed. Upon successful completion, the Advanced Custom Studies DLL will be built and named after the name of the source code file name you entered. For example, if your source file is named <b>SCCustomStudies.cpp</b>, it will be named <b>SCCustomStudies.dll</b>.
+        </li>
+
+        <li><b>Note</b>: In case you want to provide your Advanced Custom Study or studies to another user or customer, this DLL file will be located in the Sierra Chart <b>Data Files Folder</b>. Simply give this DLL file to the other user.  It is all they need.  They just simply need to put it into the <b>Data Files Folder</b> in their copy of Sierra Chart. <em>It cannot be located in any other folder.</em> The Data Files Folder can be determined through <b class = "menu_item">Global Settings &gt;&gt; General Settings</b>. Look in the <b>Data Files Folder</b> box.
+        </li>
+
+        <li>If there are any errors in the source code, they will be displayed in the <b>Build Custom Studies DLL Output</b> window.  Here is an example:
+            <br>
+            <div class="MessageLog">CustomStudies.cpp(52): Error! E006: col(17) syntax error; probable cause: missing ';'</div>
+            <br>
+            You can quickly go to where the error is in the source file by double-clicking on the error line in the <b>Build Custom Studies DLL Output</b> window. Correct the error in the source file. Save the file. Switch to the Sierra Chart main window and select <b class="menu_item">Analysis &gt;&gt; Build Advanced  Custom Studies DLL </b> from the Sierra Chart menu. Press the <b>Build Custom Studies DLL </b> button to try building the DLL again.</li>
+
+
+        <li>Once the DLL build process completes without any errors, the Advanced Custom Studies DLL is ready to be used.</li>
+
+        <li>In Sierra Chart, open a chart you wish to apply the study to. Select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu. Press the <b>Add Custom Study </b> button. Locate the name of your advanced custom studies DLL file in the list of studies. It will have the name specified in the <b>CustomDLLName() </b> code line. Press the plus sign (+) by it, and select the study you just made (Example: <b>My New Study Function</b>). Press the <b>Add</b> button to add the selected study to the list of studies on the chart, and press the <b>OK</b> button on the <b>Chart Studies</b> window to apply it to the chart. Your new study is now on the chart and fully calculated.</li>
+
+        <li>See the <A href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php" Target="_blank" rel="noopener noreferrer">How to Use an Advanced Custom Study</A> page for more information on adding Advanced Custom Studies.</li>
+
+        <li>The study function will be called when the study is applied to the chart, when the chart is loaded or reloaded, and when the chart is updated when there is new data. For additional details, refer to <a href="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html#WhenTheStudyFunctionIsCalled"  target="_blank" rel="noopener noreferrer">When the Study Function is Called</a>.</li>
+
+        <li><b>Code Changes</b>: If you wish to make code changes, you can make those changes in the source code file using the source code editor and simply build the Custom Studies DLL file again. There is no need to remove the study from the chart or add it again unless you made changes in the <b>sc.SetDefaults</b> code block. However, it is still not necessary to re-add the study to the chart in that case. After you make changes to the source code and build the DLL again, you will want to go to <b class="menu_item">Chart &gt;&gt; Recalculate</b> to perform a full recalculation to see all of the results from your changes.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="CustomStudyDLLFileName">Custom Study DLL File Name Format</h2>
+    <div class="member-link">[<a href="#CustomStudyDLLFileName">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+       <p> DLL file  names have a specific format.  This format is not mandatory  but it is important to understand the format because it can cause some unexpected behaviors if it is not understood.</p>
+       
+        <p> The following is the format:   <em><b>[DLLName]_[optional numeric version number]_64.dll</b></em></p>
+        
+        <p> Example: <b>CustomMovingAverage_2201_64.dll</b></p>
+        
+        <p> It is supported to have multiple  filenames that share the same DLLName but have different version numbers. Sierra Chart will load the appropriate one based upon the  <em>internal version number</em> of the DLL file. This internal version number is related to the version of Sierra Chart they were compiled for. </p>
+        
+        <p>  This allows different versions of the same DLL to exist, which can be used with different versions of Sierra Chart. </p>
+
+        <p>  Therefore, if DLL file names only differ by version number, they are considered  the same DLL and only will be loaded based upon the version of Sierra Chart. </p>    
+       
+</section>
+
+<section class="h2">
+    <h2 id="ExceptionsCausedByImproperProgramming">Exceptions Caused by Improper Programming</h2>
+    <div class="member-link">[<a href="#ExceptionsCausedByImproperProgramming">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section briefly discusses <em>exceptions</em> which can be caused by improper programming in a custom studies  source code file which causes exceptions while the executable code in the compiled DLL is run.</p>
+
+    <p>The two most common exceptions that you would encounter are Access Violation and Integer Divide by Zero. Access Violation exceptions  are caused by accessing invalid memory locations. Integer Divide by Zero exceptions  are caused by dividing an integer by 0. </p>
+
+    <p>An Access Violation can even be caused by a memory corruption in one area of code at an earlier point in time causing a problem with other code at a later point in time that has no problem to begin with. This is what makes tracking these problems down very difficult. That is why one method is simply to carefully read through the code and see if there any obvious problems such as array bounds violations which can cause this. </p>
+
+    <p>When a custom study causes an exception it will be logged in  <b Class = "menu_item">Window &gt;&gt; Message Log</b>. Once an exception occurs,  the Sierra Chart process is no longer in a stable state and has to be restarted. Otherwise, Sierra Chart will be unstable and exceptions can continue to occur even though the underlying problem has been solved in the custom studies DLL. </p>
+</section>
+
+<section class="h2">
+    <h2 id="ReinstallingCPPCompiler">Reinstalling C++ Compiler</h2>
+    <div class="member-link">[<a href="#ReinstallingCPPCompiler">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> If there is some problem with the installation of the C++ compiler downloaded by Sierra Chart through <b class = "menu_item">Analysis &gt;&gt; Build Custom Studies DLL &gt;&gt; Build &gt;&gt;  Install Visual C++ Compiler</b>, then the compiler can be installed again just simply by  selecting that command again and going through the installation procedure again. </p>
+
+    <!-- <p>To do this, delete the following folder <b> [drive:]\SierraChart\CPPCompiler</b> from your system and then install the compiler again through  <b class = "menu_item">Analysis &gt;&gt; Build Custom Studies DLL &gt;&gt;  Install Compiler</b>. </p> -->
+</section>
+
+<section class="h2">
+    <h2 id="UsingHeaderFiles">Using Additional Header Files</h2>
+    <div class="member-link">[<a href="#UsingHeaderFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+     <p>   This section applies to including additional header files which are part of the operating system, the standard C/C++ libraries,  or some other library you may be using. It does not apply to the header files that you create yourself.</p>
+     
+     
+    <p>When including in your source code file these additional header files,  they need to be placed  <em>above</em> the <b>#include "sierrachart.h" </b> line. Refer to the example below. </p>
+
+    <p>If this is not done, then you may receive various compiler errors that probably will not make sense to you.</p>
+
+    <p>The Windows.h and standard C++ library header files are already included. So there is not a need to include those unless you receive an error indicating a particular identifier or function is not found. In that case include the required header file which contains that identifier or function.</p>
+
+    <pre class="Code FullLineHeight">
+#include &lt;header.h&gt;
+#include "sierrachart.h"
+    </pre>
+</section>
+
+<section class="h2">
+    <h2 id="UsingYourOwnHeaderFiles">Using Your Own Header Files</h2>
+    <div class="member-link">[<a href="#UsingYourOwnHeaderFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+     <p>  If you have created your own header files that you want to include when using the  <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL &gt;&gt; Build  &gt;&gt; Remote Build</b>  building method, then  you need to select that header or header files in addition to your source code files through     <b class="menu_item">File &gt;&gt; Select Files</b>  on the <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL</b>  window. </p>
+     
+      <p>   Refer to the image below. </p>
+      
+      <div style="text-align: center;"><a href="../images/buildcustomstudieswithlocalheaderfile.png" rel="lightbox"><img src="../images/buildcustomstudieswithlocalheaderfile.png" alt="" width=""  class="screenshot" loading="lazy"></a></div>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="ModifyingAdvancedCustomStudyCode">Modifying Advanced Custom Study Code</h2>
+    <div class="member-link">[<a href="#ModifyingAdvancedCustomStudyCode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Effective with Sierra Chart version 1842 and higher,  whenever  you build or rebuild  a custom studies DLL file through <b class="menu_item">Analysis &gt;&gt;   Build Custom Studies DLL &gt;&gt; Build</b>, the DLL file will be released as needed.  There is nothing special to do. </p>
+
+    <p>If you are using external custom study DLL build tools, then to be able to make changes to the source code of a custom study function for a study that is already or was on an open chart, and build the DLL file for it which has already been loaded into Sierra Chart, and see those changes in the corresponding study on a chart, you will need to select <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL &gt;&gt; Build &gt;&gt;  Release All DLLs and  Deny Load</b>  or <b class="menu_item">Release Single DLL and  Deny Load</b>, before you start the build with the external tools.   </p>
+
+    <p>After the build is complete, then select <b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL &gt;&gt; Build &gt;&gt; Allow Load DLLs</b>.    Recalculate the chart with  <b class="menu_item">Chart &gt;&gt; Recalculate</b> on the menu.</p>
+
+    <p> Alternatively these commands can be executed with the  <a href = "index1d53.html?page=doc/UDPAPI.html">UDP Interface Port Commands</a>. </p>
+
+
+    <p>If you change any of the code in the <b>sc.SetDefaults</b> code block at the top of your study function source code, such as Inputs or Subgraphs, and the study is already on a chart, then you will need to   <em>remove</em> the study from the chart and add it again to see  the changes after the DLL is rebuilt. </p>
+
+    <p>Or if you have saved a Chartbook with the study, close and reopen the Chartbook in order to see the source code changes in the <b>sc.SetDefaults</b> code block after building a new DLL file. This can be done through <b class = "menu_item">File &gt;&gt; Close Chartbook</b> and <b class = "menu_item">File &gt;&gt; Open Chartbook</b>. However, any settings in <b>sc.SetDefaults</b>   which are <em>saved</em> with the study in the Chartbook, are not going to go into effect unless you remove the study from the chart and add it again. </p>
+
+    <p>If you have saved the study by saving the charts containing the study as a Chartbook or by saving it as part of a Study Collection, then you will need to go into the  <a href="index9099.html?page=doc/ChartStudies.html#TechnicalStudySettingsWindow" >Study Settings</a> for the study and make sure the the Inputs and Subgraphs settings are all correct and as you expect.</p>
+
+    <p>Keep in mind if you have set  <a href="index9099.html?page=doc/ChartStudies.html#CustomDefaultStudySettings"  target="_blank" rel="noopener noreferrer">Custom Default Study Settings</a> for the study, then those will  be   applied after adding the study to the chart regardless of the defaults set in the  <b>sc.SetDefault</b> code block.  You may want to reset those default  Study settings. Refer to <a href="index9099.html?page=doc/ChartStudies.html#ResettingDefaultStudySettingsForAnIndividualStudy"  target="_blank" rel="noopener noreferrer" >Resetting Default Study Settings for an Individual Study</a>.</p>
+
+
+</section>
+
+
+<section class="h2">
+    <h2 id="RedistributingToUsers">Redistributing Your Custom Studies To Users</h2>
+    <div class="member-link">[<a href="#RedistributingToUsers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To redistribute custom studies or systems that you have developed, you simply need to provide the user the DLL file that has been created.  </p>
+
+    <p>When you are using the Sierra Chart build system (<b class="menu_item">Analysis &gt;&gt; Build Custom Studies DLL</b>), the DLL file is placed into the <b>Data Files Folder</b>. </p>
+
+    <p> You can determine where this folder is located by selecting <b class="menu_item">Global Settings &gt;&gt; General Settings</b>. The complete path is displayed in the <b>Data Files Folder</b> box. </p>
+
+    <p>When you provide your DLL file to other users, the DLL must be placed into their Data Files Folder. You should have them check the location of  this folder under <b class="menu_item">Global Settings &gt;&gt; General Settings</b> and make certain the DLL is copied to that folder. </p>
+
+    <p>Be aware that the Data Files Folder is not necessarily consistent and can be set to any location.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Redistributing">Redistributing and Allowing Use Only by a Defined List of Users</h2>
+    <div class="member-link">[<a href="#Redistributing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/customdllstudiesmanagement.png" rel="lightbox"><img src="../images/customdllstudiesmanagement.png" class="WideFloatRight" alt=""></a>
+
+    <p>Sierra Chart provides a feature to allow you to redistribute custom studies or trading system studies and only allow use by a defined list of users. This is a completely secure feature of Sierra Chart. </p>
+
+    <p>To control and allow use of your studies/systems by a certain defined list of users, you will need to provide Sierra Chart Support the <b>SCDLLName</b> through an <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets">Account Support Ticket</a>.  </p>
+
+    <p>The  <b>SCDLLName</b> line is located at the top of your CPP file.  You will then be provided access to a web-based control panel where you can specify the Sierra Chart Account Names of the allowed users and an Expiration date if you want an Expiration date.   </p>
+
+    <p>Also, an optional general-purpose 64-bit variable can be set on a user basis through this control panel and passed through to your custom study functions. In the custom study the ACSIL variable which  is set to this specified 64-bit variable is <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scDLLNameUserServiceLevel">sc.DLLNameUserServiceLevel</a>.</p>
+
+
+    <p>To automatically redistribute the custom studies DLL file that you have developed and any associated Chartbooks or Study Collections, refer to  <a href="#AutomatedFileDistributionSystem">Automated File Distribution System</a>.</p>
+
+
+    <p>In the case where there is no Internet connection to Sierra Chart, the user will still have access to the custom studies in a DLL they are allowed to use, for up to 30 days, as long as their Sierra Chart account has not expired.</p>
+
+    <p>The following information applies to version 1420 and higher of Sierra Chart: When a Sierra Chart account is removed from the list of authorized users for a custom studies file or the current date is passed the expiration date, the user will still have access to the studies until the user restarts Sierra Chart. <em>Unless</em> the user were to remove the study from the chart and add it again, close the Chartbook containing instances of the study and reopen it, open a Chartbook containing instances of the study, or add a new instance of the study. In any of these cases, they will not have access to the particular instances of the study which are involved in these operations. </p>
+
+    <p>To actually protect your studies or systems, you need to use the <b>sc.IsUserAllowedForSCDLLName</b> variable in your code. In the code example below, you will see code which checks this variable to see if the user is allowed to use the study. There is  a section  of code which adds a message to the  Message Log telling the user that they are not authorized.</p>
+
+    <pre class="Code FullLineHeight">
+//This function is an example of using the sc.IsUserAllowedForSCDLLName variable
+SCSFExport scsf_IsUserAllowedForSCDLLNameExample(SCStudyInterfaceRef sc)
+{
+
+  if (sc.SetDefaults)
+  {
+    // Set the configuration and defaults
+
+    sc.GraphName = "IsUserAllowedForSCDLLName";
+    sc.StudyDescription = "This function is an example of using the sc.IsUserAllowedForSCDLLName variable to protect a study.";
+    sc.AutoLoop = 1;
+
+
+    return;
+  }
+
+
+  // Do data processing
+
+  if(sc.IsUserAllowedForSCDLLName == false)
+  {
+
+    if(sc.Index == 0)
+    {
+      sc.AddMessageToLog("You are not allowed to use this study",1);
+    }
+
+    return;
+  }
+} 
+    </pre>
+</section>
+
+
+<section class="h2">
+    <h2 id="AutomatedFileDistributionSystem">Automated File Distribution System </h2>
+    <div class="member-link">[<a href="#AutomatedFileDistributionSystem">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart provides a feature where you are able to provide custom studies DLL, Study Collection and/or Chartbook files to users who have been authorized to use your Custom Studies developed for Sierra Chart.  </p>
+
+    <p>This feature is only supported if your Custom Studies support authorization through the method described in the <a href="#Redistributing">Redistributing and Allowing Use Only by a Defined List of Users</a> section. </p>
+
+    <p>You simply need to provide these files through an <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets">Account Support Ticket</a> and provide us your <b>SCDLLName</b>. 
+
+    <p>When you activate a Sierra Chart user for your custom studies, they will automatically receive the files after starting Sierra Chart. If the user has a DLL file with the same name already that is being provided, it will be overwritten  if the one that you are distributing is different. </p>
+
+    <p>In the case of Chartbooks and Study Collections, these individual files will only be downloaded by Sierra Chart if the user does not already have them.  However, the capability does now exist to automatically replace  those types of files with the specific version of them that you want the user to have. You have to specify to Sierra Chart Support you want it to work this way.</p>
+
+    <p>The compiled code in a custom studies DLL file cannot be reverse engineered. Since it was built with C++ and not C#. This is one huge advantage of C++ over C#. Additionally, it is high-performance native code which has proven to be solid and very fast. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="RemoteCompilerParameters">Remote Compiler Parameters</h2>
+    <div class="member-link">[<a href="#RemoteCompilerParameters">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h4">
+        <h4 id="RemoteCompilerParameters_32">32 Bit</h4>
+        <div class="member-link">[<a href="#RemoteCompilerParameters_32">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <pre class="Code FullLineHeight">
+i686-w64-mingw32-g++ -U NOMINMAX -march=i686 -mtune=i686 -O2 -shared -static -static-libgcc -static-libstdc++ -s -fno-rtti -fno-exceptions -std=gnu++11 {InputFiles} -o Output.dll -Wno-deprecated
+        </pre>
+    </section>
+
+    <section class="h4">
+        <h4 id="RemoteCompilerParameters_64">64 Bit</h4>
+        <div class="member-link">[<a href="#RemoteCompilerParameters_32">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <pre class="Code FullLineHeight">
+x86_64-w64-mingw32-g++ -D _WIN64 -U NOMINMAX -march=x86-64 -mtune=x86-64 -O2 -shared -static -static-libgcc -static-libstdc++ -s -fno-rtti -fno-exceptions -std=gnu++11 {InputFiles} -o Output.dll -Wno-deprecated
+        </pre>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="RelatedDocumentation">Related Documentation</h2>
+    <div class="member-link">[<a href="#RelatedDocumentation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li><a href="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html">Working with ACSIL Arrays and Understanding Looping</a></li>
+        <li><a href="index6788.html?page=doc/ACSIL_Members.html" >Definitions of Advanced Custom Study/System Interface Members</a></li>
+        <li><a href="indexd011.html?page=doc/ACSILProgrammingConcepts.html">ACSIL Programming Concepts</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">Persistent Variables</a></li>
+        <li><a href="index1397.html?page=doc/ACSILDrawingTools.html" >Using Drawing Tools from an Advanced Custom Study</a></li>
+        <li><a href="index32a3.html?page=doc/ACSInteractionWithMenusControlBarButtonsPointerEvents.php" >Advanced Custom Study Interaction With Menus, Control Bars, Mouse Pointer Events</a></li>
+        <li><a href="index3b5f.html?page=doc/ACSILDocumentationMembers.html" >ACSIL Study Documentation Interface Members</a></li>
+        <li><a href="index2bf5.html?page=doc/ACSILTrading.html" >Automated Trading From an Advanced Custom Study</a></li>
+        <li><a href="indexa852.html?page=doc/ACSILRefOtherTimeFrames.php" >Referencing Other Time Frames and Symbols When Using the ACSIL</a></li>
+        <li><a href="index7e04.html?page=doc/ACSILUsingStudyCalculationFunctions.php" >Using ACSIL Study Calculation Functions</a></li>
+        <li><a href="indexac34.html?page=doc/SCDateTime.html" >Working with the SCDateTime Variables and Values</a></li>
+        <li><a href="index8bb0.html?page=doc/ACSIL_ExampleTradingSystems.html">Example ACSIL Trading Systems</a></li>
+        <li><a href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php" >Developing Custom Studies and Systems for Sierra Chart</a></li>
+        <li id="debugging"><a href="index7cb8.html?page=doc/StepByStepACSILDebugging.php">Step-By-Step Debugging</a></li>
+        <li><a href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing Custom Studies and Systems for Sierra Chart</a></li>
+    </ul>
+</section>
+
+<hr><p>*Last modified Friday, 26th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:38 GMT -->
+</html>  

@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1681722917') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails3.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 3: Charts not Updating/Blank Charts -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index581c.html?page=doc/helpdetails3.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="index581c.html?page=doc/helpdetails3.html">Help topic 3: Charts not Updating/Blank Charts</a></h4> </div>     <h1 class="PageName">Intraday Chart or Chart Bars Not Updating | Blank Intraday Chart | "Currently no data to display" message for Intraday Chart</h1>
+
+<p>This page documents all of the possible reasons why an Intraday chart will not update in real-time or during a replay, or the Intraday chart is blank.</p>
+
+<p> Additionally,  the information on this page applies to the <a href = "indexc3ee.html?page=doc/TimeandSalesWindow.html">Time and Sales</a>  window if there is no updating there or the window is completely blank. This can happen if the chart is blank and not updating. </p>
+
+ <p> If a Historical Daily, Weekly,  or higher timeframe chart is not updating, then refer to <a href = "index5713.html?page=doc/helpdetails6.html">Help topic 6: No Historical Chart or Blank Chart / Historical Chart Not Updating / Missing Historical Chart Data</a> instead. </p>
+
+
+<p>Items with an <b style="color:red;">*</b> below are the more common  causes and should be checked first. </p>
+
+<ul>
+    <li>Common Causes
+        <ul>
+            <li><b style="color:red;">*</b> <a href="#InvalidSymbolOrInvalidDataTradingServiceSelected">3.2 - Invalid Symbol or Invalid Data/Trading Service Selected</a></li>
+            
+            <li><b style="color:red;">*</b> <a href="#StartAndEndTimesNotCoveringCurrentTime">3.3 - Start and End Times not Covering Current Time</a></li>
+           
+           <li><b style="color:red;">*</b> <a href="#NotReceivingRealTimeDataFromDataFeed">3.4 - Not Receiving Real-Time Data From Data Feed</a></li>
+            
+            <li><b style="color:red;">*</b> <a href="#NotScrolledToEndOfChart">3.8 - Not Scrolled to End of Chart</a></li>
+           
+           <li><b style="color:red;">*</b> <a href="#WeekendDataAndChartNotSetToLoadWeekendData">3.17 - Weekend Data and Chart Not Set to Load Weekend Data</a></li>
+           
+           <li><b style="color:red;">*</b> <a href="#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a></li>
+           <li><b style="color:red;">*</b> <a href="#ConflictingSymbols">Conflicting Symbols</a></li>
+
+        </ul>
+    </li>
+    <li>Less Common Causes
+        <ul>
+            <li><a href="#HistoricalDataBeingDownloaded">3.1 - Historical Data Being Downloaded</a></li>
+            <li><a href="#DelayedData">3.7 - Delayed Data</a></li>
+            <li><a href="#OptionsThatDisableChartUpdating">3.9 - Options that Disable Chart Updating</a></li>
+            <li><a href="#DataTradeServiceSpecificIssues">3.11 - Data/Trade Service Specific Issues</a></li>
+            <li><a href="#MarketIsClosedForSymbol">3.13 - Market is Closed for Symbol</a></li>
+            <li><a href="#SymbolSettingsForRoutingMarketDataRequestsMissing">3.14 - Symbol Settings for Routing Market Data Requests Missing</a></li>
+        </ul>
+    </li>
+    <li>Uncommon Causes
+        <ul>
+            <li><a href="#ChartNotUpdatingDueTtoCurrentDateBeingExcluded">3.10 - Chart Not Updating Due to Current Date Being Excluded</a> </li>
+            
+            <li><a href="#ChartUpdateInterval">3.12 - Chart Update Interval</a> </li>
+            
+            
+            <li><a href="#OutOfAvailableStorageSpace">3.16 - Out Of Available Storage Space</a></li>
+            <li><a href="#VolumeFilteringSettings">3.17 - Volume Filtering Settings</a></li>
+        </ul>
+    </li>
+
+    <li>Rare Causes
+        <ul>
+            <li><a href="#CorruptDataFile">3.5 - Corrupt Data File</a></li>
+        </ul>
+    </li>
+</ul>	
+<hr>
+
+<section class="h2">
+    <h2  id="HistoricalDataBeingDownloaded">3.1 - Historical Data Being Downloaded</h2>
+    <div class="member-link">[<a href="#HistoricalDataBeingDownloaded">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you create a new Intraday chart, open an Intraday chart, connect to the data feed (<b class="menu_item">File &gt;&gt; Connect to Data Feed</b>), or Sierra Chart becomes disconnected from the data feed and automatically reconnects, the data that is missing from the chart and is also available on the data feed server will be downloaded. </p>
+
+    <p class = "GeneralBackgroundHighlightLight">The download status will be displayed directly on the chart if <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt;  Charts &gt;&gt; Charts &gt;&gt; Show On-chart Status Messages</b> is enabled.  Therefore, enable this option to see these messages.  It is not recommended to disable this option.</p>
+
+    <p><span class="GeneralBackgroundHighlightLight">Updating of the chart bars does not occur until the historical data has been fully downloaded for the symbol.</span> This is the most common reason for an initial delay with Intraday chart bar updating.</p>
+
+    <p>Historical Intraday data is downloaded one symbol at a time in sequence. If you have many symbols for which historical data needs to be downloaded for, then it could be a while before updating begins on all of your charts.  Before updating begins, the price box displayed on the right side of the chart will show the current price.</p>
+
+    <p>If the chart is completely blank, the current price is outside the scale range of the price graph, or the chart window is not scrolled to the last bar in the chart, then the current price box on the right side of the chart in the price scale will not be shown.</p>
+
+    <p>To ensure   Sierra Chart is connected to the data feed so your charts will update, select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu to connect. When the <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> menu command is disabled and cannot be selected, this indicates Sierra Chart is connected to the data feed.</p>
+
+    <p> If you are not able to connect to the data feed, refer to <a href="indexf71c.html?page=doc/helpdetails1.html" target="_blank" rel="noopener noreferrer">Help Topic 1</a>.</p>
+
+    <p>Messages will be added to the Message Log reporting Intraday data download status for the symbols. To open the Message Log and see detailed progress of the historical data downloads: Select <b class="menu_item">Window &gt;&gt; Message Log</b> on the menu. </p>
+
+
+    <p> The below images indicate the On-chart Status Messages you will see relating to the downloading of historical  Intraday data for the symbol of the chart. The last image is what is displayed when the download is complete. If there are no  messages like these on the chart, then there is not downloading occurring unless you have disabled the option for these on chart messages. </p>
+
+    <div style="text-align: center;">
+
+        <a href="../images/waitingtodownloadhistoricaldata.png" rel="lightbox"><img src="../images/waitingtodownloadhistoricaldata.png"></a>
+        <a href="../images/downloadinghistoricaldata.png" rel="lightbox"><img src="../images/downloadinghistoricaldata.png"></a>
+        <a href="../images/historicaldownloadcomplete.png" rel="lightbox"><img src="../images/historicaldownloadcomplete.png"></a>
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="InvalidSymbolOrInvalidDataTradingServiceSelected">3.2 - Invalid Symbol or Invalid Data/Trading Service Selected</h2>
+    <div class="member-link">[<a href="#InvalidSymbolOrInvalidDataTradingServiceSelected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A chart will be blank, not update in real time, or  has stopped updating at a point in the past  because you may be using an  <em>invalid or outdated</em> symbol and receive a message on the chart like in the image below.  Recently Sierra Chart has begun to update some symbol formats  to use the exchange symbol  and also include the exchange code in the symbol.  Therefore, you  may be using an outdated symbol.</p>
+
+    <p>The symbols for each Data and Trading service that Sierra Chart supports are   <em>specific to each</em> individual service.  A particular symbol is not necessarily going to work across all supported Data and Trading services.  </p>
+
+    <p>The symbols for the selected Data/Trade Service you are using are listed in <b class = "menu_item">File &gt;&gt; Find Symbol</b>. Refer to <a href="indexf71c.html?page=doc/helpdetails1.html#Symbols" target="_blank" rel="noopener noreferrer">Symbols</a >   in help topic 1 for complete help with invalid symbols.</p>
+    
+    <p> To quickly update futures symbols in the open Chartbooks to the correct format for the selected  Data or Trading service being used, select <b class="menu_item">Edit &gt;&gt; <a href = "indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService">Translate Symbols to Current Service</a></b>.</p>
+
+
+    <p>You may not have the correct Data or Trading service selected in <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings  &gt;&gt; Service</b>.</p>
+
+    <p>Refer to the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php"  target="_blank" rel="noopener noreferrer">Data and Trading Services</a> page for a list of the supported services and set up instructions for each of them. </p>
+
+    <div style="text-align: center;" >
+        <a href="../images/symbolunknown.png" rel="lightbox"><img src="../images/symbolunknown.png"></a>
+    </div>
+    
+
+</section>
+
+<section class="h2">
+    <h2  id="StartAndEndTimesNotCoveringCurrentTime">3.3 - Session Start Time and End Time not Covering Current Time</h2>
+    <div class="member-link">[<a href="#StartAndEndTimesNotCoveringCurrentTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+   
+
+    <p>An Intraday chart will be blank, or will not  update in real time or not update during a replay if the <b>Start Time</b> and <b>End Time</b> in the <b>Chart Settings </b> window do not cover some of the time period when there has been trading and the time period that trading is <em>currently</em> occurring at.  </p>
+    
+    <p>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu to open this window. To see if this might be the problem, set the  <b>Start Time</b> to <b>0:00:00</b> and the <b>End Time</b> to <b>23:59:59</b> anyway, even if you think this is not the  issue.</p>
+
+    <p>For additional information, refer to <a href="index4ec1.html?page=doc/SessionTimes.php" target="_blank" rel="noopener noreferrer">Session Times</a> on the Chart Settings page. </p>
+
+    <p>These  Session Times settings must be relative to the <a href="index219e.html?page=doc/TimeZone.html" target="_blank" rel="noopener noreferrer">Time Zone</a> setting in <b class="menu_item">Global Settings &gt;&gt; Time Zone Settings</b>.  </p>
+
+    
+    <p>Or if the chart has its own time zone setting, you can set a specific time zone for the chart, then to the  <a href = "index219e.html?page=doc/TimeZone.html#DifferentTimeZoneForCharts">chart specific  Time Zone</a>. Make sure the <b> Time Zone </b>  setting either globally or for the chart is set as you require. </p>
+
+    <p> You may also have a problem with Date and Time settings on your computer system which can cause problems. For information about this, refer to  <a href="index3e87.html?page=doc/helpdetails38.html" target="_blank" rel="noopener noreferrer">Incorrect Date and/or Time Display, Missing Historical Intraday Data, Chart Not Updating</a>.</p>
+
+    <p>The price box on the right side of the chart will always show the current price when connected to the data feed, assuming the chart is scrolled to the very end. If the <b>Session Times </b> settings do not include the time of the last trade, then the current price box on the right will not match the close of the last displayed bar. Missing data in the Intraday chart data file will also cause the current price box not to match the close of the last bar.</p>
+    
+    <div style="text-align: center;"><a href="../images/sessiontimes.png" rel="lightbox"><img src="../images/sessiontimes.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+</section>
+
+<section class="h2">
+    <h2 id="NotReceivingRealTimeDataFromDataFeed" >3.4 - Not Receiving Real-Time Data From Data Feed</h2>
+    <div class="member-link">[<a href="#NotReceivingRealTimeDataFromDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A chart will not update or will be blank if streaming data is <b>not</b> being received for the symbol from the Data or Trading service you are connected to. Follow these step-by-step instructions to resolve the problem or isolate the source of the problem:</p>
+
+    <ol>
+
+        <li>Market data for some symbols is routed through separate connections other than the primary Data or Trading service connection being used. In this case it is necessary to have correct <b>Symbol Settings</b> for the symbol. 
+        <br> <br>
+        Therefore, the first step is to follow the procedure to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update Symbol the Settings</a>. Be sure to follow the steps to <em>reconnect</em> to the data feed. If this resolves the problem, then stop here.  Otherwise continue with the following steps.</li>
+
+        <li> It is possible through changes   to custom Symbol Settings that you may have inadvertently made that the routing of market data requests for a symbol are not correct.  This will cause the symbol to not receive streaming market data updates. Therefore,   <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#DisablingCustomSymbolSettings">Disable Custom Symbol Settings Values</a>. If this resolves the problem, then stop here.  Otherwise continue with the following steps.</li>
+
+        <li> The problem could be that there is no trading for the symbol of the chart. <a href="index5fdf.html?page=doc/helpdetails5.html" target="_blank" rel="noopener noreferrer">Help topic 5 (Futures Chart Not Updating)</a> explains that this could be because you are using an expired or inactive futures contract symbol.</li>
+
+        <li>Sierra Chart may not be connected to the Data Feed server. To ensure that Sierra Chart is connected, select  <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.
+            <br>
+            <br>
+            When the <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> menu command is disabled and cannot be selected, this indicates Sierra Chart is connected to the data feed server.
+            <br> <br>
+            When Sierra Chart has been started through <b class="menu_item">File &gt;&gt; New Instance</b> on the main menu and is running as a sub instance,  for that instance to be able to connect to the data feed, the main instance of Sierra Chart that it was started from must also be  running and itself connected to the data feed through <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.
+             <br> <br>
+            Run the main instance of Sierra Chart  if it is not already running and make sure it is connected to the data feed  by checking the state of <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> in the main instance of Sierra Chart.
+            </li>
+
+
+        <li> Make certain you are scrolled to the end of the chart and the very last bar is displayed. Press the <b>End</b> key on the keyboard to go to the end of the chart or select <b class = "menu_item">Chart &gt;&gt; Goto End of Chart</b>.</li>
+
+        <li>Check to be certain you do not have any settings which prevent the chart from updating. For a list of these settings, refer to <a href="#OptionsThatDisableChartUpdating">help topic 3.9</a>.</li>
+
+        <li class = "GeneralBackgroundHighlightLight"> Check with your Data or Trading services provider and make  sure your Data/Trading account is authorized for streaming real-time data for the particular exchange the symbol trades on. For additional information, refer to <a href="indexf71c.html?page=doc/helpdetails1.html#SymbolNotAuthorizedServiceAccount"  target="_blank" rel="noopener noreferrer">Symbol Not Authorized On Data/Trading Service Account</a>.</li>
+
+        <li> The next step is to check to see if you are actually <em>receiving</em> data from the data feed for the symbol. Use one of these 2 methods below, <b>3.4.1</b> or <b>3.4.2</b>, to view the data from the data feed for the symbol. These methods are used to definitively determine if you are receiving data from the data feed.
+
+            <div class="h3">
+                <h3>3.4.1 - Chart Has Some Data Displayed  </h3>
+                <p>If your Intraday chart has some data displayed, then select <b class="menu_item">Window &gt;&gt; Current Quote Window</b> on the menu.</p>
+
+                <div style="text-align: center;"><a href="../images/currentquotewindowforrealtimeupdating.png" rel="lightbox"><img src="../images/currentquotewindowforrealtimeupdating.png" alt="" class="screenshot" loading="lazy"></a></div>
+            </div>
+            <div class="h3">
+                <h3>3.4.2 - Chart Is Blank</h3>
+                <p>If your Intraday chart is completely blank, then select <b class="menu_item">File &gt;&gt; New Quote Board</b> on the menu.  Select <b class = "menu_item">Settings &gt;&gt; Set Symbols</b> on the Quote Board menu.  Press the <b>Add</b> button. Press the <b>Find</b> button, select a symbol and press  <b>OK</b>. Press the <b>Close</b> button. You should now get a quote line   for the symbol on the Quote Board.</p>
+            </div>
+        </li>
+    </ol>
+
+    <p>Using either of these two methods you should see prices/values for the symbol <b>and</b> changes with the <b>LastPrice</b>  and the <b>LastSize</b> as trading occurs. If you do and your chart is still not updating, then refer to the other sections on this page for other reasons for the Intraday chart to not update.  </p>
+
+    <p>If you <em>do not see changes with the <b>LastPrice</b>  and the <b>LastSize</b> values as trading is occurring</em>, then this does indicate data is not being received from the data feed for the symbol. In this last case you need to contact your Data or Trading service about this issue. </p>
+
+    <p> <b>Symbol Limits</b>:  One reason you may not be receiving market data for a particular symbol is that you have exceeded the maximum number of symbols allowed with the Data or Trading service you are using. In this case, you need to close charts for symbols that go beyond the symbol limit and remove symbols from Quote Boards to reduce the number of symbols you are tracking and then reconnect to the data feed with  <b class = "menu_item">File &gt;&gt; Disconnect</b> and then <b class = "menu_item">File &gt;&gt; Connect to Data Feed</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="CorruptDataFile" >3.5 - Corrupt Data File</h2>
+    <div class="member-link">[<a href="#CorruptDataFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the Intraday chart bars are not updating or the last Date-Time in chart are not correct, then the Intraday data file may be corrupted or a program such as a virus scanner could be causing the problem. The data file could possibly get corrupted if the computer was reset or the power was lost during a write function. In this case Sierra Chart will try to correct the error when Sierra Chart is started. </p>
+
+    <p>If you continue to see the problem even after restarting Sierra Chart, then go to the chart and select <b class="menu_item">Edit &gt;&gt; Edit/Download Data - Intraday Chart</b> on the menu. Using the scrollbar in the displayed Intraday Data Editor, scroll back several records and press the <b>Delete and Download Data From Current Position to End</b> button to delete and re-download the data.   This should solve a problem with a file corruption at the end of the file.</p>
+
+    <p> The entire Intraday data file can also  be deleted. Refer to the <a href="index7b4b.html?page=doc/IntradayDataEditor.html" target="_blank" rel="noopener noreferrer">Intraday Data Editor</a> documentation page for instructions.</p>
+
+    <p>Virus scanners can potentially cause problems. It is recommended that you exclude files with a  <b>SCID</b> file extension from scanning, or disable your  virus scanner altogether.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="DelayedData">3.7 Delayed Data</h2>
+    <div class="member-link">[<a href="#DelayedData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the market data for the symbol is delayed by  10-15 minutes or whatever amount of time as required by the exchange, then the Intraday chart updating might not occur until the delay period has passed after connecting to the data feed.  </p>
+    
+    <p>If the symbol is delayed 10 minutes, then updating may not occur until 10 minutes later. This happens because the historical data downloaded includes data up to the present time. Until the delayed data catches up to the data in the chart, the price bars will not update.  </p>
+    
+    <p>You may experience this issue with the DTN IQ Feed data service  or when using the <b>Denali Exchange Data Feed</b> or the<b> Delayed Exchange Data Feed</b>, and the historical data is provided to the current time, however the streaming data  is delayed because that is what is provided by the service, or you have not paid the exchange fee or otherwise the exchange is not authorized. </p>
+     
+     <p>To make the data come in real-time, you need to subscribe to real-time data from the exchange the symbol trades on or in the case of the <b>Denali Exchange Data Feed</b> contact Sierra Chart support to determine why the data is delayed. </p>
+</section>
+
+<section class="h2">
+    <h2 id="NotScrolledToEndOfChart">3.8 - Not Scrolled to End of Chart</h2>
+    <div class="member-link">[<a href="#NotScrolledToEndOfChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the chart is not scrolled to the end (to the last actual bar in the chart), then the chart will appear to not update and you will <em>not</em> see the latest trade price because you are not looking at the last bar in the chart.</p> 
+
+    <p>In this case, scroll to the end of the chart using the scroll bar at the bottom of the chart, press the <b>End</b> key on your keyboard, or select  <b class="menu_item">Chart &gt;&gt; Go to End of Chart</b> on the menu.</p>
+
+    <p> For information about how to determine if a chart is scrolled to the end, refer to  <a href="index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart" target="_blank" rel="noopener noreferrer">Scrolling the Chart and Right Side Fill Space</a>. </p>
+
+    <p>One option that can unexpectedly cause a chart to scroll back and cause this issue is <b Class = "menu_item">Tools &gt;&gt; Synchronize Charts</b>. Therefore, uncheck this option. </p>
+
+    <p>When <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Scroll</b> <b>&gt;&gt; Scroll Wheel Scrolls Chart. With 'Shift'  Changes Spacing</b> is selected in the list of scroll wheel settings, then the scroll wheel input device on your computer can move the position of the chart. You will want to select <b>No Scroll Wheel Support</b>  in the list of scroll wheel settings, to prevent this from happening unexpectedly.</p>
+</section>
+
+<section class="h2">
+    <h2  id="OptionsThatDisableChartUpdating">3.9 - Options that Disable Chart Updating</h2>
+    <div class="member-link">[<a href="#OptionsThatDisableChartUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are options which can disable or prevent chart updating. Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu. Check the following:</p>
+    <ul>
+        <li>Make sure there is no checkmark by <b>Chart Data &gt;&gt; Disable Data File Updating</b>.  This option is only for back compatibility purposes.  It serves no useful purpose when following the newer procedures to share chart data files.</li>
+
+        <li> If the <b>Main Settings &gt;&gt; Use Date Range  &gt;&gt; To</b> box contains a date, then this may prevent the chart from updating. Under normal conditions this box should be blank unless you want to prevent loading of the most current data.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2  id="ChartNotUpdatingDueTtoCurrentDateBeingExcluded">3.10 - Chart Not Updating Due to Current Date Being Excluded</h2>
+    <div class="member-link">[<a href="#ChartNotUpdatingDueTtoCurrentDateBeingExcluded">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p>It is possible through <b> Chart &gt;&gt; Chart Settings </b> on the <b> Chart Data</b> tab, to specify one or more calendar dates to exclude from a chart in the <b>Set Dates to Exclude </b> box.  If you have excluded the current Date, then the Intraday chart will not update in real-time.</p>
+</section>
+
+<section class="h2">
+    <h2  id="DataTradeServiceSpecificIssues">3.11 - Data/Trade Service Specific Issues</h2>
+    <div class="member-link">[<a href="#DataTradeServiceSpecificIssues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3>GAIN Capital (OEC Trader)</h3>
+
+        <div class="GeneralBackgroundHighlightLight"><p> In the case of when using GAIN Capital (OEC Trader), you have exceeded the 5 symbol limit. Refer to <a href="index6536.html?page=GAINCapitalOECTrader.php#OECLimit" target="_blank" rel="noopener noreferrer">GAIN Capital (OEC Trader) Symbol Limit</a>.</p></div>
+    </section>
+
+    <section class="h3">
+        <h3>Interactive Brokers</h3>
+
+        <p>In the case of when using Interactive Brokers, when <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Record True Real-Time Data in Intraday Charts</b> is set to <b> True</b>, then the chart bars will update no more often than every 5 seconds. If this is not what you want, then set this option to False. </p>
+
+        <p>Another problem that can arise when using this option  is that the real-time bars data may stop which causes the  chart bars to stop updating. One symptom of this problem is that you see the price box on the right side of the chart update but the chart bars do not. To solve this problem, set <b> Record True Real-Time Data in Intraday Charts</b> to False and select <b class = "menu_item">File &gt;&gt;  Disconnect</b> and <b class = "menu_item">File &gt;&gt; Connect to Data Feed</b>. For complete information about this option, refer to <a href="index1f4a.html?page=doc/IB.php#TrueRealTimeData"  target="_blank" rel="noopener noreferrer">Using IB True Real-Time Bar Data</a>.</p>
+
+        <p> You may not be subscribed to market data for the exchange the symbol trades on. For information about this, refer to <a href="index1f4a.html?page=doc/IB.php#MarketDataNotSubscribed" target="_blank" rel="noopener noreferrer">Market Data Not Subscribed Through IB</a>. </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="ChartUpdateInterval">3.12 - Chart Update Interval</h2>
+    <div class="member-link">[<a href="#ChartUpdateInterval">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>An Intraday chart will be slow to update as new market data is received if the <b class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Chart Update Interval</b> is set to too long of an interval.  </p>
+    
+     <p>It generally should be in the range of 500 ms to 1500 ms. For additional information, refer to <a href="index899f.html?page=doc/GeneralSettings.html#ChartUpdateInterval"  target="_blank" rel="noopener noreferrer">Chart Update Interval</a>. </p>
+     
+     <p>The Chart Update  Interval can also be set on an individual chart and override the global setting. To check if a chart is using its own setting,  select  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Display</b>.  If the  <b>Chart Update Interval in Milliseconds</b>  setting is set to a nonzero number, it is using its own setting.  Adjust it as needed. </p>
+     
+     <p>  Another possibility and this is a very rare condition, is that the internal timer  used by a chart could stop functioning at the operating system level. To start it back again, select  <b class="menu_item">Chart  &gt;&gt; Reload and Recalculate</b>. We really have never known this to be an issue since Windows 7.  But it is here for completeness in the case it does apply.</p>
+     
+     
+</section>
+
+<section class="h2">
+    <h2  id="MarketIsClosedForSymbol">3.13 - Market is Closed for Symbol</h2>
+    <div class="member-link">[<a href="#MarketIsClosedForSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>An Intraday chart will not update in real time or during a replay,  if at the current time or the point in time the replay is at, the market for the symbol of the chart is closed and there is no trading activity.  </p>
+
+    <p>Consult with the exchange website contract specifications or your trading services provider about the trading times for a particular symbol. </p>
+
+    <p>In the event of holidays, a market can be closed at a time when normally it is open, or there can be shortened trading hours the prior or subsequent day to the holiday day. </p>
+</section>
+
+<section class="h2">
+    <h2 id="SymbolSettingsForRoutingMarketDataRequestsMissing">3.14 - Symbol Settings for Routing Market Data Requests Missing</h2>
+    <div class="member-link">[<a href="#SymbolSettingsForRoutingMarketDataRequestsMissing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Market data for some symbols is routed through separate connections other than the primary Data or Trading service connection being used. This is true of the  <b>SC Data - All Services</b> service and other services as well. It really depends upon the symbol.</p>
+
+    <p> In this case it is necessary to have correct <b>Symbol Settings</b> for the symbol. In this case follow through the procedure <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update Symbol the Settings</a>. </p>
+
+    <p>Be sure to follow the steps to <em>reconnect</em> to the data feed. </p>
+
+    <p>Below are examples of messages you will see in the Message Log indicating  the real-time market data updates  have been incorrectly routed.</p>
+
+    <div class="MessageLog">
+        SC Data - All Services | Starting real-time market data updates for: GBPUSD. ID: 1 | (Date-Time)<br>
+        SC Data - All Services | Subscribing to streaming market data in the service client is not supported. Symbol: GBPUSD | (Date-Time)
+    </div>
+</section>
+
+
+<section class="h2">
+    <h2  id="OutOfAvailableStorageSpace">3.16 - Out Of Available Storage Space</h2>
+    <div class="member-link">[<a href="#OutOfAvailableStorageSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>Sierra Chart stores chart data for Intraday charts in the folder specified by <b Class = "menu_item">Global Settings &gt;&gt; General Settings</b> <b>&gt;&gt; Data Files Folder</b>.  This can be changed.</p>
+    
+    
+    <p> If the storage drive/device, that  this folder is contained on, is out of available space, then this will prevent Intraday charts from updating.  </p>
+
+    <p> If this is the cause of the problem, then you will see messages in the <b Class = "menu_item">Window &gt;&gt; Message Log</b> that contain the following error message:</p>
+
+    <div class="MessageLog">
+        Windows error code 8: Not enough storage is available to process this command.
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="VolumeFilteringSettings">3.17 - Volume Filtering Settings</h2>
+    <div class="member-link">[<a href="#VolumeFilteringSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>When using the <a href = "index4cf4.html?page=doc/ChartSettings.html#VolumeFilter">Volume Filtering</a> settings in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> and you have enabled <b>Filter Trade Completely</b>, then at times this will cause a condition where you see the last trade price box on the Values Scale  on the right side of the  indicate the current price but it does not match the last trade price of the last bar in the chart due to this filtering.</p>
+    
+    <p> Refer to the image below for an example.</p>
+     
+     
+        <div style="text-align: center;">
+
+        <a href="../images/volumefilteringoutprices.png" rel="lightbox"><img src="../images/volumefilteringoutprices.png"></a>
+        </div>
+    
+</section>
+
+<section class="h2">
+    <h2 id="WeekendDataAndChartNotSetToLoadWeekendData">3.17 - Weekend Data and Chart Not Set to Load Weekend Data</h2>
+    <div class="member-link">[<a href="#WeekendDataAndChartNotSetToLoadWeekendData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> An Intraday chart will not update in real-time or during a chart replay if the date of the most recent data in the chart is on a weekend  <em>or considered a weekend</em>, and the Load Weekend  Data option in Chart Settings is set to <em>not</em> load Saturday or Sunday data.</p>
+
+    <p> The solution is to select <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Main Settings</b>.  In the <b> Session Times</b> frame  choose from the list of Load Weekend Data options, <b>Load All Weekend Data</b>. Press  <b>OK</b>.</p>
+
+    <p>For additional information, refer to  <a href="index4ec1.html?page=doc/SessionTimes.php#LoadWeekendDataSetting" target="_blank" rel="noopener noreferrer">Load Weekend Data Setting</a>.</p>
+
+    <p>  It is important to understand, that during Friday  evening trading, which is after the <b>Session Times &gt;&gt; Evening Start Time</b>, or after the <b>Session Times &gt;&gt; Start Time</b> when using reversed Session Times, that this data will be considered as part of Saturday. For complete understanding of this, refer to <a href="index4ec1.html?page=doc/SessionTimes.php#UnderstandingTradingDayDatesBasedOnSessionTimes" target="_blank" rel="noopener noreferrer">Understanding Trading Day Dates Based on Session Times</a>.</p>
+
+    <p>Another condition which can cause Friday data to be on Saturday  or Saturday data to be on a Sunday unexpectedly is having the wrong time zone set for the chart. Check the <a href="index219e.html?page=doc/TimeZone.html" target="_blank" rel="noopener noreferrer">Time Zone</a> setting  both globally and for the chart and make sure it is not set to a far eastern time zone if that is not the intent.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</h2>
+    <div class="member-link">[<a href="#TradeAndCurrentQuoteSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When you have set a <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>, and <b>Use As Trade Only Symbol</b> is not enabled, then the last trade price box on the right side of the chart is updated using this symbol. </p>
+
+    <p> If the last trade price box is not updating when expected, or the price is different, then it is the result of this   <b>Trade and Current Quote Symbol</b>.  </p> 
+
+     <p>So you may want to remove the <b>Trade and Current Quote Symbol</b> or enable the <b>Use As Trade Only Symbol</b> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</p>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="ConflictingSymbols">Conflicting Symbols</h2>
+    <div class="member-link">[<a href="#ConflictingSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In Sierra Chart, every supported Data and Trading service uses its own unique symbols. It is possible for some services, including  <b>SC Data - All Services</b>, more than one symbol could map to the same internal symbol which is used to subscribe to market data.</p>
+    
+    <p>For example, you might be using these two symbols, within Sierra Chart: <b>ESM21</b> and <b>ESM21-CME</b>. In this case, these two symbols would conflict with each other. </p>
+      
+    <p>In this case, the following rejection message would be received from the Sierra Chart market data server for one of the symbols:</p>
+       
+    <div class="MessageLog">
+        Symbol Error - ESM21 is unknown, unavailable, or improperly formatted. Already subscribed to symbol. New subscription rejected. 
+    </div>
+      
+    <p>What happens in this case, is that only one of these symbols would  update within Sierra Chart and be receiving market data from the server. Although the only correct symbol is <b>ESM21-CME</b>. <b>ESM21</b> is not the valid symbol when using <b>SC Data - All Services</b>.</p>
+       
+    <p>   In this case, you need to correct all the symbols used within Sierra Chart to the correct symbol and then  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">reconnect to the data feed</a>.</p>
+
+    <p>One method to correct the symbols is to use the  <b class="menu_item">Edit &gt;&gt; Translate Symbols to Current Service</b> command.  Although this may not necessarily work in all cases.</p>   
+
+
+</section>
+
+<hr><p>*Last modified Monday, 17th April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:09 GMT -->
+</html>  

@@ -1,0 +1,1515 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudiesReference.php&ID=375 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:47:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1546897603') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/StudiesReference.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title> Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index0cc3.html?page=doc/StudiesReference.php&amp;ID=375" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#StudiesIndicators">(Table of Contents) Studies and Indicators</a> &gt;&gt; <a  href="indexeb8c.html?page=doc/TechnicalStudiesReference.php">Technical Studies Reference</a> &gt;&gt; <a href="index0cc3.html?page=doc/StudiesReference.php&amp;ID=375">Market Depth Historical Graph</a></h4> </div> <h1 class="PageName">Technical Studies Reference</h1>
+
+<section class="h2">
+    <ul>
+        <li><a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php">Technical Studies Reference</a></li>
+        <li><a href="index2db8.html?page=doc/StudiesReference_CommonStudyInputs.php" target="_blank" rel="noopener noreferrer">Common Study Inputs</a> (Opens a new page)</li>
+        <li><a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Using Studies</a> (Opens a new page)</li>
+    </ul>
+</section>
+<hr>
+
+<h1 class="PageName">Market Depth Historical Graph</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#StepByStepInstructions">Step by Step Instructions</a></li>
+    <li><a href="#StudyInputs">Study Inputs</a>
+        <ul>
+            <li><a href="#StudyInputs_Range3MaxAskColor">Range 3 Max Ask Color</a></li>
+            <li><a href="#StudyInputs_Range3MinAskColor">Range 3 Min Ask Color</a></li>
+            <li><a href="#StudyInputs_Range2MaxAskColor">Range 2 Max Ask Color</a></li>
+            <li><a href="#StudyInputs_Range2MinAskColor">Range 2 Min Ask Color</a></li>
+            <li><a href="#StudyInputs_Range1MaxAskColor">Range 1 Max Ask Color</a></li>
+            <li><a href="#StudyInputs_Range1MinAskColor">Range 1 Min Ask Color</a></li>
+            <li><a href="#StudyInputs_Range0MaxAskColor">Range 0 Max Ask Color</a></li>
+            <li><a href="#StudyInputs_Range0MinAskColor">Range 0 Min Ask Color</a></li>
+            <li><a href="#StudyInputs_Range0MinBidColor">Range 0 Min Bid Color</a></li>
+            <li><a href="#StudyInputs_Range0MaxBidColor">Range 0 Max Bid Color</a></li>
+            <li><a href="#StudyInputs_Range1MinBidColor">Range 1 Min Bid Color</a></li>
+            <li><a href="#StudyInputs_Range1MaxBidColor">Range 1 Max Bid Color</a></li>
+            <li><a href="#StudyInputs_Range2MinBidColor">Range 2 Min Bid Color</a></li>
+            <li><a href="#StudyInputs_Range2MaxBidColor">Range 2 Max Bid Color</a></li>
+            <li><a href="#StudyInputs_Range3MinBidColor">Range 3 Min Bid Color</a></li>
+            <li><a href="#StudyInputs_Range3MaxBidColor">Range 3 Max Bid Color</a></li>
+            <li><a href="#StudyInputs_UseRangeMinimumColors">Use Range Minimum Colors</a></li>
+            <li><a href="#StudyInputs_UsePercentOrActualValuesForThresholdLevels">Use Percent or Actual Values for Threshold Levels</a></li>
+            <li><a href="#StudyInputs_PercentColorThresholds">Percent Color Thresholds</a></li>
+            <li><a href="#StudyInputs_ActualColorThresholds">Actual Color Thresholds</a></li>
+            <li><a href="#StudyInputs_MinumumVolumeIntensityPercent">Minimum Volume Intensity Percent</a></li>
+            <li><a href="#StudyInputs_ColorValuesGreaterThanHighestQuantityForColoring">Color Values Greater Than the Highest Quantity for Coloring</a></li>
+            <li><a href="#StudyInputs_ValueTypeForHighestQuantityForColoring">Value Type for Highest Quantity for Coloring</a></li>
+            <li><a href="#StudyInputs_HighestQuantityForColoring">Highest Quantity For Coloring</a></li>
+            <li><a href="#StudyInputs_ValueTypeForLowestQuantityForColoring">Value Type for Lowest Quantity For Coloring</a></li>
+            <li><a href="#StudyInputs_LowestQuantityForColoring">Lowest Quantity for Coloring</a></li>
+            <li><a href="#StudyInputs_ExtendLastKnownDepth">Extend Last Known Depth</a></li>
+            <li><a href="#StudyInputs_NumberOfMinutesToExtendLastKnownDepth">Number of Minutes to Extend Last Known Depth (0 for All)</a></li>
+            <li><a href="#StudyInputs_ShowQuantityNumbers">Show Quantity Numbers</a></li>
+            <li><a href="#StudyInputs_QuantityNumbersColor">Bid Quantity Numbers Color</a></li>
+            <li><a href="#StudyInputs_AskQuantityNumbersColor">Ask Quantity Numbers Color</a></li>
+            <li><a href="#StudyInputs_UseSecondaryNumbersColorForQuantitiesGreaterThanOrEqualTo">Use Secondary Numbers Color for Quantities Greater Than or Equal To</a></li>
+            <li><a href="#StudyInputs_SecondaryNumbersColorForQuantitiesGreaterThanOrEqualTo">Secondary Numbers Color for Quantities Greater Than or Equal To</a></li>
+            <li><a href="#StudyInputs_DisplayMarketDepthLastQuantitiesAfterLastBar">Display Market Depth Quantities After Last Bar</a></li>
+            <li><a href="#StudyInputs_DepthQuantityTypeToDisplayAfterLastBar">Depth Quantity Type to Display After Last Bar</a></li>
+            <li><a href="#StudyInputs_PercentageOfFillSpaceToDisplayMarketDepthQuantityRectanglesIn">Percentage Of Fill Space To Display Market Depth Quantity Rectangles In</a></li>
+            <li><a href="#StudyInputs_UseLastQuantityInsteadOfMaxQuantityForBars">Use Last Quantity Instead Of Max Quantity For Bars</a></li>
+            <li><a href="#StudyInputs_DetermineMinAndMaxLevelsFromAllBarsOrVisibleBars">Determine Min and Max Levels from All Bars or Visible Bars</a></li>
+            <li><a href="#StudyInputs_FontSize">Font Size</a></li>
+            <li><a href="#StudyInputs_MaximumlevelsToDisplay">Maximum Levels to Display (0 for All)</a></li>
+            <li><a href="#CombineIncrementInTicks">Combine Increment in Ticks</a></li>
+            <li><a href="#AutomaticCombineIncrementAdjustmentValue">Automatic Combine Increment Adjustment Value</a></li>
+        </ul>
+    </li>
+    <li><a href="#BlockColoringLogic">Block Coloring Logic</a></li>
+    <li><a href="#CombineIncrementInTicksAdditionalInformation">Combine Increment in Ticks Additional Information</a></li>
+    <li><a href="#MarketDepthHistoricalGraphNotDisplaying">Market Depth Historical Graph Not Displaying</a></li>
+    <li><a href="#MarketDepthDataTimeStampingAndReplays">Market Depth Data Time Stamping During Real Time Updates and Replays</a></li>
+    <li><a href="#MarketDepthHistoricalGraphTimingInRelationToChartBarDateTimes">Market Depth Historical Graph Timing in Relation to Chart Bar Date-Times</a></li> 
+    <li><a href="#DrawingOfDepthQuantitiesAtPriceLevelsOnChartBarsWhereThereHaveBeenNoDepthUpdates">Drawing of Depth Quantities at Price Levels on Chart Bars where there have been No Depth Updates</a></li>
+    <li><a href="#ImprovingPerformance">Improving Performance</a></li>
+    <li><a href="#DownloadingOfHistoricalMarketDepthData">Downloading of Historical Market Depth Data</a></li>
+    
+    <li><a href="#OtherRelatedUsefulStudies">Other Related Useful Studies</a></li>
+    <li><a href="index0078.html?page=doc/c_ACSILDepthBars.php" target="_blank" rel="noopener noreferrer">c_ACSILDepthBars (Programmatically Accessing Market Depth Data)</a> (Opens a new page)</li>
+
+</ul>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The <b>Market Depth Historical Graph </b> study  displays by default at each chart column the <em>highest market depth quantity</em> at each price level, which occurred during the timeframe of the chart bar, as a color-coded rectangle.</p>
+
+    <p>If the <b>Use Last Quantity Instead Of Max Quantity For Bars</b> Input is set to Yes, then the last market depth quantity at a price level for the chart column will be displayed instead of the maximum quantity.</p>
+
+    <p>This study only works with Intraday charts.</p>
+
+    <p>The market depth quantities displayed after the last bar in the chart from the last column currently displayed in the chart, are displayed in the space between the last column with market depth data and the right side of the chart when the <b>Display Market Depth Quantities After Last Bar</b> Input is set to Yes. These values will match with the data in <b class="menu_item">File &gt;&gt; Open Market Depth Window</b> when the <b>Depth Quantity Type to Display After Last Bar</b> is set to <b>Last Depth</b>.</p>
+
+    <p>The <em>maximum</em> market depth quantity at a price level is only shown at the chart bar during the timeframe it occurred. For subsequent bars, if there has been no market depth update at that price level, the <em>last</em> market depth quantity is displayed until it is <em>deleted by the market depth data stream</em>.</p>
+
+    <p>In order for the <b>Market Depth Historical Graph</b> study to display the color-coded rectangles for market depth, historical market depth data must be collected for the chart's symbol. Refer to the <a href="#StepByStepInstructions">Step by Step Instructions</a>.</p>
+
+    <p>If there has been no market depth updates for an entire bar, then, by default, no market depth data is displayed for that bar. Setting the Input for <a href="#StudyInputs_ExtendLastKnownDepth">Extend Last Known Depth</a> to <b>Yes</b> will extend the known depth value forward into those bars that do not have data. The Input for <a href="#StudyInputs_NumberOfMinutesToExtendLastKnownDepth">Number of Minutes to Extend Last Known Depth (0 for All)</a> controls how far forward the extensions will extend.</p>
+
+    <p>Replaying market depth is also supported by using the <a href="index9600.html?page=doc/ReplayChart.html" target="_blank" rel="noopener noreferrer">Chart Replay</a> feature.</p>
+    
+    <p>During the formation of a chart bar which covers a certain span of time, the market depth bid and ask values are continuously varying during that timeframe. Therefore, for a given price level, there can be and most likely are both bid and ask market depth quantities recorded. However, only the bid side or ask side quantity at that price level is displayed depending upon which one is dominant. Both are not displayed.</p>
+
+    <p>Below are examples of the Market Depth Historical Graph study on an Intraday chart:</p>
+
+    <div style="text-align: center;"><a href="../images/marketdepthhistoricalgraph-2.png" rel="lightbox"><img src="../images/marketdepthhistoricalgraph-2.png" alt="" width="550"  class="screenshot" loading="lazy"></a></div>
+
+    <div style="text-align: center;"><a href="../images/marketdepthhistoricalgraphwithvalues.png" rel="lightbox"><img src="../images/marketdepthhistoricalgraphwithvalues.png" alt="" width="550"  class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="StepByStepInstructions">Step by Step Instructions</h2>
+    <div class="member-link">[<a href="#StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li> Make sure your Sierra Chart <a href="indexa1cf.html?page=doc/Packages.php">Service Package</a> is set to a Service Package that includes <em>Advanced</em> features.</li>
+        
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> on the menu.</li>
+
+        <li>Locate the symbol or symbol pattern for the Symbol in the list of symbols, that you want to use the Market Depth Historical Graph study with. Select that symbol or symbol pattern.</li>
+
+        <li>Select the <b>Record Market Depth Data</b> option in the <b>Settings</b> section on the right for this symbol or symbol pattern.</li>
+
+        <li>Enable the <b>Record Market Depth Data</b> option by selecting <b>Yes</b> in the <b>Custom</b>  list.</li>
+
+        <li>Check to ensure that the option for <b>Use Custom Symbol Settings Values</b> in the upper left corner of the Symbol Settings window is enabled. If this is not enabled, then click in the box to place a checkmark and enable this option.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li>Reconnect to the data feed with <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> after altering the Symbol Settings.</li>
+
+        <li>Go to the chart you want to add the <b>Market Depth Historical Graph</b> study to.</li>
+
+        <li>Select <b class="menu_item">Analysis &gt;&gt; Studies</b>.</li>
+
+        <li>In the list of the <b>Studies Available</b>, select <b>Market Depth Historical Graph</b>.</li>
+
+        <li> Press the <b>Add </b> button.</li>
+
+        <li>Press the <b>Settings</b> button. Set the <a href="#StudyInputs">Study Inputs</a> as required.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li>Press <b>OK</b>.</li>
+        
+        <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</li>
+         
+        <li>Adjust the <b>Use Number of Days to Load &gt;&gt; Market Depth</b> to the maximum number of days of market depth data you want to load in the chart relative to the last date loaded in the chart.</li>
+        
+        <li>Press <b>OK</b>.</li>
+
+        <li>As the market depth data starts to be received, you will see the color-coded rectangles on the chart. Sierra Chart will need to be connected to the data feed with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> and the market needs to be open for the symbol in order to receive market depth data.</li>
+
+        <li>By default, historical market depth data is only loaded for the last 10 days of data in an Intraday chart if there is historical market depth data available for those days. To adjust this, select  <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. Increase or decrease the <b>Use Number of Days to Load &gt;&gt; Market Depth</b> setting. The default is 10.</li>
+    </ol>
+
+        <p>The market depth data is permanently recorded in depth files. One for each day. These files are located in the <b>MarketDepthData</b> subfolder of the Sierra Chart <a href="index899f.html?page=doc/GeneralSettings.html#DataFilesFolder">Data Files Folder</a>. In the case of a <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html">Continuous Futures Contract</a> chart, currently only historical market depth data will be displayed for the bars in the chart that are for the current futures contract symbol set with the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b> setting.</p>
+
+        <p>To display lines on the chart at the most recent Bid and Ask prices at each chart bar, use the <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s355" target="_blank" rel="noopener noreferrer">Bid and Ask Prices</a> study. This is an optional study and not required.</p>
+
+        <p>Historical Market Depth Data can be downloaded for the previous 15 days when using the Denali Exchange Data Feed. Therefore, if Market Depth Data is missing due to not having Sierra Chart connected to the data feed at all times, then refer to the section for <a href="#DownloadingOfHistoricalMarketDepthData">Downloading of Historical Market Depth Data</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="StudyInputs">Study Inputs</h2>
+    <div class="member-link">[<a href="#StudyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+<!-- Ask Colors -->
+    <section class="h3">
+        <h3 id="StudyInputs_Range3MaxAskColor">Range 3 Max Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range3MaxAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is greater than the last percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 3 Min Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range3MinAskColor">Range 3 Min Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range3MinAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is greater than the last percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 3 Max Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range2MaxAskColor">Range 2 Max Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range2MaxAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is greater than the second percentage and less than or equal to the third percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 2 Min Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range2MinAskColor">Range 2 Min Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range2MinAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is greater than the second percentage and less than or equal to the third percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 2 Max Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range1MaxAskColor">Range 1 Max Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range1MaxAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is greater than the first percentage and less than or equal to the second percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 1 Min Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range1MinAskColor">Range 1 Min Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range1MinAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is greater than the first percentage and less than or equal to the second percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 1 Max Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range0MaxAskColor">Range 0 Max Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range0MaxAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is less than or equal to the first percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 0 Min Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range0MinAskColor">Range 0 Min Ask Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range0MinAskColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Ask quantity is greater than the Bid quantity and the depth value as a percentage of the greatest range is less than or equal to the first percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 0 Max Ask Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+<!-- Bid Colors -->
+    <section class="h3">
+        <h3 id="StudyInputs_Range0MinBidColor">Range 0 Min Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range0MinBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is less than or equal to the first percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 0 Max Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range0MaxBidColor">Range 0 Max Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range0MaxBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is less than or equal to the first percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 0 Min Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range1MinBidColor">Range 1 Min Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range1MinBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is greater than the first percentage and less than or equal to the second percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 1 Max Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range1MaxBidColor">Range 1 Max Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range1MaxBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is greater than the first percentage and less than or equal to the second percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 1 Min Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range2MinBidColor">Range 2 Min Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range2MinBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is greater than the second percentage and less than or equal to the third percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 2 Max Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range2MaxBidColor">Range 2 Max Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range2MaxBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is greater than the second percentage and less than or equal to the third percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 2 Min Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range3MinBidColor">Range 3 Min Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range3MinBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the minimum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is greater than the last percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>This Input is only used when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>. When this is the case then the color gradient is based on this color and the <b>Range 3 Max Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_Range3MaxBidColor">Range 3 Max Bid Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_Range3MaxBidColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the maximum intensity color that is used for price levels at which the Bid quantity is greater than the Ask quantity and the depth value as a percentage of the greatest range is greater than the last percentage entered in the <b>Percent Color Thresholds</b>.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>No</b> then this should be set to a light color when using a dark background in the chart as the gradient is based on these two colors.</p>
+
+        <p>When the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b> then the color gradient is based on this color and the <b>Range 3 Min Bid Color</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+<!-- Other Inputs -->
+    <section class="h3">
+        <h3 id="StudyInputs_UseRangeMinimumColors">Use Range Minimum Colors</h3>
+        <div class="member-link">[<a href="#StudyInputs_UseRangeMinimumColors">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this Input is set to <b>Yes</b>, the <b>Range # Min Ask/Bid Color</b> Inputs are used along with the <b>Range # Max Ask/Bid Color</b> to determine the color gradient for depth values that fall into a specific range. Otherwise, the background color is used along with the <b>Range # Max Ask/Bid Color</b> to determine the color gradient for depth values that fall into a specific range.</p>
+
+        <p>Regardless of this setting, the <b>Minimum Volume Intensity Percent</b> still applies for each range of color values.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_UsePercentOrActualValuesForThresholdLevels">Use Percent or Actual Values for Threshold Levels</h3>
+        <div class="member-link">[<a href="#StudyInputs_UsePercentOrActualValuesForThresholdLevels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls whether the Threshold Levels that determine which color range a particular depth value will be colored, is determined from the <b>Percent Color Thresholds</b> or the <b>Actual Color Thresholds</b>.</p>
+
+        <p>This Input has two options:</p>
+
+        <ul>
+            <li><b>Percent</b>: When the <b>Use Percent or Actual Values for Thresholds Levels</b> is set to this selection, the color range thresholds are determined from the <a href="#StudyInputs_PercentColorThresholds">Percent Color Thresholds</a> Input.</li>
+
+            <li><b>Actual Value</b>: When the <b>Use Percent or Actual Values for Thresholds Levels</b> is set to this select, the color range thresholds are determined from the <a href="#StudyInputs_ActualColorThresholds">Actual Color Thresholds</a> Input.</li>
+        </ul>
+
+        <p>For more information, refer to the <a href="#BlockColoringLogic">Block Coloring Logic</a> section.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_PercentColorThresholds">Percent Color Thresholds</h3>
+        <div class="member-link">[<a href="studyinputs_percentcolorthresholds.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This defines the percentages at which the <b>Range 0-3 Ask/Bid Color</b> options are separated when the Input for <b>Use Percent or Actual Values for Threshold Levels</b> is set to <b>Percent</b>.</p>
+
+        <p>Three values are to be entered as decimal values with a comma separating the values. For example, if the desired percentages are <b>40%</b>, <b>60%</b>, and <b>80%</b>, these would be entered in this field as <b>.40, .60, .80</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_ActualColorThresholds">Actual Color Thresholds</h3>
+        <div class="member-link">[<a href="studyinputs_actualcolorthresholds.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This defines the actual depth values at which the <b>Range 0-3 Ask/Bid Color</b> options are separated when the Input for <b>Use Percent or Actual Values for Threshold Levels</b> is set to <b>Actual Values</b>.</p>
+
+        <p>Three values are to be entered with a comma separating the values. For example, if the desired values are <b>500</b>, <b>1000</b>, and <b>1500</b>, these would be entered in this field as <b>500, 1000, 1500</b>.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_MinumumVolumeIntensityPercent">Minimum Volume Intensity Percent</h3>
+        <div class="member-link">[<a href="#StudyInputs_MinumumVolumeIntensityPercent">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This percentage is the intensity used for the blocks with the smallest, non-zero, market depth quantity within each color range among all of the visible blocks on the chart. The valid range for this Input is 0 to 90.</p>
+
+        <p>A greater value for this Input will effectively increase the visibility of blocks towards the bottom of each color range, but decrease the overall contrast. Whereas a lesser value for this Input will increase the contrast between blocks, but decrease the visibility of blocks towards the bottom of each color range. A value of 0 will make it so the blocks with the smallest, non-zero, market depth quantity within each color range, among all of the visible blocks on the chart will have an intensity of 0 percent, effectively making them the same color as the chart background.</p>
+
+        <p>See the <a href="#BlockColoringLogic">Block Coloring Logic</a> section for more details.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_ColorValuesGreaterThanHighestQuantityForColoring">Color Values Greater Than the Highest Quantity for Coloring</h3>
+        <div class="member-link">[<a href="studyinputs_colorvaluesgreaterthanhighestquantityforcoloring.html">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls whether values that are greater than the Highest Quantity for Coloring will be drawn or not. When this Input is set to <b>Yes</b> (the default), then any quantity that is greater than or equal to the Highest Quantity for Coloring, will be drawn and colored the Range 3 Max Color.</p>
+
+        <p>When this Input is set to <b>No</b>, then any value that is greater than the Highest Quantity for Coloring will not be drawn.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_ValueTypeForHighestQuantityForColoring">Value Type for Highest Quantity for Coloring</h3>
+        <div class="member-link">[<a href="#StudyInputs_ValueTypeForHighestQuantityForColoring">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls how the value entered in the <b>Highest Quantity for Coloring</b> is interpreted. The available options are the following:</p>
+
+        <ul>
+            <li><b>Actual Value</b>: This sets the value entered in the <b>Highest Quantity for Coloring</b> Input as the actual Market Depth value that will be used as the largest depth value for coloring purposes.</li>
+
+            <li><b>Percentage of Maximum Depth</b>: This sets the value entered in the <b>Highest Quantity for Coloring</b> Input as a Percentage of the Maximum Depth which establishes the largest depth value for coloring purposes.</li>
+        </ul>
+
+        <p>It is important to note that when using the option <b>Percentage of Maximum Depth</b> this is the percentage of the Maximum Market Depth Value based on the setting for the <b>Determine Min and Max Levels From All Bars or Visible Bars</b> Input. When <b>Determine Min and Max Levels From All Bars or Visible Bars</b> is set to <b>Visible Bars</b> then as scrolling through the chart, the highest quantity for coloring, will be constantly changing as the Maximum Depth Value changes based on what is in view.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_HighestQuantityForColoring">Highest Quantity For Coloring</h3>
+        <div class="member-link">[<a href="#StudyInputs_HighestQuantityForColoring">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This value determines the highest depth level that will be used for the <a href="#BlockColoringLogic">Block Coloring Logic</a>. Any Market Depth value that is greater than or equal to the determined Highest Quantity for Coloring will be colored the <b>Range 3 Max Color</b>.</p>
+
+        <p>When the Input for <b>Value Type for Highest Quantity for Coloring</b> is set to <b>Actual Value</b> then the value of this Input is used directly to set the highest depth level that is used for coloring the blocks. In this case, setting this Input to a value of 0 means the highest quantity is set by the actual Maximum Depth being used. Setting this value to any number greater than the actual Maximum Depth will have no effect.</p>
+
+        <p>When the Input for <b>Value Type for Highest Quantity for Coloring</b> is set to <b>Percentage of Maximum Depth</b> then this Input is divided by 100 to determine a decimal percentage which is then multiplied by the actual Maximum Depth Value to determine the highest quantity that is used for coloring. In this case, setting this Input to a value of 0 is treated as 0% and 0 is established as the highest and lowest quantity for coloring. Also in this case, setting this to a value greater than or equal to 100 will use the actual Maximum Depth Value as the highest quantity for coloring.</p>
+
+        <p>The purpose of this Input is to prevent very large values from desaturating the rest of the graph. For example, if you were viewing a graph where most quantity values are in the range of 100-500, but there are one or two quantities that are over 5000, then these large quantity values will stand out significantly while all of the other quantity values would be barely visible. With this Input, if it is set to a value of 500 or 600 (and the <b>Value Type for Highest Quantity for Coloring</b> is set to <b>Actual Value</b>) for example, then the large quantity values would not stand out as much, and the details of the rest of the graph would be more visible.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_ValueTypeForLowestQuantityForColoring">Value Type for Lowest Quantity For Coloring</h3>
+        <div class="member-link">[<a href="#StudyInputs_ValueTypeForLowestQuantityForColoring">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls how the value entered in the <b>Lowest Quantity for Coloring</b> is interpreted. The available options are the following:</p>
+
+        <ul>
+            <li><b>Actual Value</b>: This sets the value entered in the <b>Lowest Quantity for Coloring</b> Input as the actual Market Depth value that will be used as the lowest depth value for coloring purposes.</li>
+
+            <li><b>Percentage of Maximum Depth</b>: This sets the value entered in the <b>Lowest Quantity for Coloring</b> Input as a Percentage of the Maximum Depth which establishes the lowest depth value for coloring purposes.</li>
+        </ul>
+
+        <p>It is important to note that when using the option <b>Percentage of Maximum Depth</b> this is the percentage of the Maximum Market Depth value based on the setting for the <b>Determine Min and Max Levels from All Bars or Visible Bars</b> Input. When <b>Determine Min and Max Levels from All Bars or Visible Bars</b> is set to <b>Visible Bars</b> then as scrolling through the chart, the lowest quantity for coloring, will be constantly changing as the Maximum Depth Value changes based on what is in view.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_LowestQuantityForColoring">Lowest Quantity for Coloring</h3>
+        <div class="member-link">[<a href="#StudyInputs_LowestQuantityForColoring">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This value determines the lowest depth level that will be used for the <a href="#BlockColoringLogic">Block Coloring Logic</a>. Any Market Depth value that is less than or equal to the determined Lowest Quantity for Coloring is not displayed on the graph.</p>
+
+        <p>It is not possible to set a Lowest Quantity for Coloring that is equal to or greater than the <b>Highest Quantity for Coloring</b>. Therefore, when this Input is entered that would establish a Lowest Quantity for Coloring that is greater than or equal to the Highest Quantity for Coloring, then the Lowest Quantity for Coloring is set to be a value of 1 less than the Highest Quantity for Coloring and the number displayed for this Input is appropriately updated.</p>
+
+        <p>When the Input for <b>Value Type for Lowest Quantity for Coloring</b> is set to <b>Actual Value</b> then the value of this Input is used directly to set the lowest depth level that is used for coloring the blocks. In this case, setting this Input to a value of 0 means the lowest quantity is set by the actual Minimum Depth being used. Setting this value to any number less or equal to the actual Minimum Depth will have no effect.</p>
+
+        <p>When the Input for <b>Value Type for Lowest Quantity for Coloring</b> is set to <b>Percentage of Maximum Depth</b> then this Input is divided by 100 to determine a decimal percentage which is then multiplied by the actual Maximum Depth Value to determine the lowest quantity that is used for coloring. In this case, setting this Input to a value of 0 means the lowest quantity is set by the actual Minimum Depth being used.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_ExtendLastKnownDepth">Extend Last Known Depth</h3>
+        <div class="member-link">[<a href="#StudyInputs_ExtendLastKnownDepth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this is set to Yes, the last known market depth quantities will be drawn to extend forward into chart columns where no actual depth quantities are known, up to the number of minutes defined in the <b>Number of Minutes to Extend Last Known Depth</b> Input.</p>
+
+        <p>This Input only has an effect when market depth data at a price level has been <em>deleted</em> or <em>does not exist</em> and there has not been a market depth update at that price level at subsequent chart bars.</p>
+
+        <p>When the depth data for the last bar or bars in the chart are not known, then this setting does not extend the last known depth to the end of the chart bars. In this case it is necessary to use the <a href="#StudyInputs_DisplayMarketDepthLastQuantitiesAfterLastBar">Display Market Depth Quantities After Last Bar</a> setting.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_NumberOfMinutesToExtendLastKnownDepth">Number of Minutes to Extend Last Known Depth (0 for All)</h3>
+        <div class="member-link">[<a href="#StudyInputs_NumberOfMinutesToExtendLastKnownDepth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls how far forward the market depth data is extended forward when the input for <b>Extend Last Known Depth</b> is set to <b>Yes</b>. When this input is set to a value of 0, the data is extended as far forward as possible. Otherwise, it is only extended the number of minutes that are entered.</p>
+
+        <p>The extension of the market depth for any given bar is only performed when that bar is displayed and visible on the chart. When the bar is not visible, then the extended market depth data from that bar will also not be displayed. Therefore, there may still be areas of the chart in which the Market Depth Historical Graph does not display any depth information regardless of the value of this setting.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_ShowQuantityNumbers">Show Quantity Numbers</h3>
+        <div class="member-link">[<a href="#StudyInputs_ShowQuantityNumbers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls the display of the market depth quantities used for the colored blocks. The quantities are displayed within the colored blocks.</p>
+
+        <p>This Input has the following 4 options:</p>
+
+        <ul>
+            <li><b>None</b>: No quantity values are displayed.</li>
+
+            <li><b>In Bars Only</b>: The quantities are only displayed in the price bars.</li>
+
+            <li><b>In Bars and After Last Bar</b>: If the Input <b>Display Market Depth Quantities After Last Bar</b> is set to <b>Yes</b> then the quantity numbers are displayed in the price bars as well as the extended last bar on the right side of the chart. If the Input <b>Display Market Depth Quantities After Last Bar</b> is set to <b>No</b> then the quantities are only displayed in the price bars.</li>
+
+            <li><b>Only After Last Bar</b>: If the Input <b>Display Market Depth Quantities After Last Bar</b> is set to <b>Yes</b> then the quantity numbers are only displayed in the extended last bar on the right side of the chart. If the Input <b>Display Market Depth Quantities After Last Bar</b> is set to <b>No</b> then no quantities are displayed.</li>
+        </ul>
+
+        <p>If there is not enough space within the block to display the full number, the number will be clipped. This is something to be aware of. In this particular case you will need to increase the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChangingBarSpacing">chart bar spacing</a>.</p>
+        
+        <p>You may want to change the color of the quantity numbers to make them more visible. To do this, set the <a href="#StudyInputs_QuantityNumbersColor">Bid Quantity Numbers Color</a> and the <a href="#StudyInputs_QuantityNumbersColor">Ask Quantity Numbers Color</a> Inputs to the colors that you want.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_QuantityNumbersColor">Bid Quantity Numbers Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_QuantityNumbersColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the color that is used for the displayed Bid quantity numbers when the <b>Show Quantity Numbers</b> Input is set to a value other than <b>None</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_AskQuantityNumbersColor">Ask Quantity Numbers Color</h3>
+        <div class="member-link">[<a href="#StudyInputs_AskQuantityNumbersColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the color that is used for the displayed Ask quantity numbers when the <b>Show Quantity Numbers</b> Input is set to a value other than <b>None</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_UseSecondaryNumbersColorForQuantitiesGreaterThanOrEqualTo">Use Secondary Numbers Color for Quantities Greater Than or Equal To</h3>
+        <div class="member-link">[<a href="#StudyInputs_UseSecondaryNumbersColorForQuantitiesGreaterThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this Input is set to a value other than zero and the Input for <b>Show Quantity Numbers</b> is set to a value other than <b>None</b>, then any Market Depth value that is greater than or equal to this Input will be colored the <b>Secondary Numbers Color for Quantities Greater Than or Equal to</b>.</p>
+
+        <p>Otherwise, if this Input is set to zero, then the quantity coloring is set by the <b>Bid Quantity Numbers Color</b> and <b>Ask Quantity Numbers Color</b> Inputs only.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_SecondaryNumbersColorForQuantitiesGreaterThanOrEqualTo">Secondary Numbers Color for Quantities Greater Than or Equal To</h3>
+        <div class="member-link">[<a href="#StudyInputs_SecondaryNumbersColorForQuantitiesGreaterThanOrEqualTo">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls the coloring of Market Depth quantity values that are greater than or equal to the Input for <b>Use Secondary Numbers Color for Quantities Greater Than or Equal To</b>. The Input for <b>Show Quantity Numbers</b> also must be set to a value other than <b>None</b> to see the quantities displayed in the graph.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_DisplayMarketDepthLastQuantitiesAfterLastBar">Display Market Depth Quantities After Last Bar</h3>
+        <div class="member-link">[<a href="#StudyInputs_DisplayMarketDepthLastQuantitiesAfterLastBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this is set to Yes, the depth quantities for the last visible bar will be extended from the last bar to the right side of the chart, subject to the <b>Percentage Of Fill Space To Display Market Depth Quantity Rectangles In</b> Input. The depth values displayed are determined from the Input <b>Depth Quantity Type to Display After Last Bar</b>.</p>
+
+        <p>This column of blocks after the last bar which display the market depth quantities (when the <a href="#StudyInputs_DisplayMarketDepthLastQuantitiesAfterLastBar">Display Market Depth Last Quantities After Last Bar</a> Input is set to Yes),  will only update using market depth updates which have timestamps which are within the timeframe of the last bar. If the last bar is a variable timeframe bar, then they will only update using market depth updates with timestamps up to the timestamp of the last trade within that bar.</p>
+        
+        <p>When a bar completes and before a new bar begins, the market depth data quantities displayed after the last bar, will not update until the new bar begins. This will cause them to appear delayed relative to the current market depth data displayed through other features displaying market depth like the  <a href="index4451.html?page=doc/GlobalTradeSettings.html#CustomizeChartTradeDOMColumns">Bid Size and Ask Size columns</a> in the market data and trading columns on the right side of the chart, if enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_DepthQuantityTypeToDisplayAfterLastBar">Depth Quantity Type to Display After Last Bar</h3>
+        <div class="member-link">[<a href="#StudyInputs_DepthQuantityTypeToDisplayAfterLastBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls which data is displayed after the last bar when the Input <b>Display Market Depth Last Quantities After Last Bar</b> is set to <b>Yes</b>. This allows the depth data displayed after the last bar to display different information than what is in the last bar. The following options are available:</p>
+
+        <ul>
+            <li><b>Maximum Depth</b>: This displays the maximum depth value obtained at each price level.</li>
+
+            <li><b>Last Depth</b>: This displays the last depth value at each price level.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_PercentageOfFillSpaceToDisplayMarketDepthQuantityRectanglesIn">Percentage Of Fill Space To Display Market Depth Quantity Rectangles In</h3>
+        <div class="member-link">[<a href="#StudyInputs_PercentageOfFillSpaceToDisplayMarketDepthQuantityRectanglesIn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For any depth quantities that are extended to the right side of the chart, such as from the <b>Extend Last Known Depth</b> or <b>Display Market Depth Last Quantities After Last Bar</b> Inputs, this Input controls how much of the fill space may be used for drawing those extensions.  </p>
+        
+        <p>A value of 0 means extensions will not enter the fill space, where as a value of 100 means extensions will fill all of the fill space.  A value of 50 means extensions will fill into the left half of the fill space while the right half of the fill space remains untouched.</p>
+        
+        <p>It is useful to set this to a value of less than 100 when <b class = "menu_item">Trade &gt;&gt; Draw DOM Graph on Chart</b> is enabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_UseLastQuantityInsteadOfMaxQuantityForBars">Use Last Quantity Instead Of Max Quantity For Bars</h3>
+        <div class="member-link">[<a href="#StudyInputs_UseLastQuantityInsteadOfMaxQuantityForBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This applies to price levels within bars where more than one depth quantity was recorded within the timeframe of the bar for that price level. When this Input is set to true, only the last quantity at the price level for the timeframe of the bar will be displayed, otherwise the maximum quantity at the price level within the timeframe of the bar will be displayed. This Input has no effect on the quantities that are displayed as extending beyond the end of a bar.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_DetermineMinAndMaxLevelsFromAllBarsOrVisibleBars">Determine Min and Max Levels from All Bars or Visible Bars</h3>
+        <div class="member-link">[<a href="#StudyInputs_DetermineMinAndMaxLevelsFromAllBarsOrVisibleBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls how the Minimum and Maximum volumes that are used to determine the coloring of the Market Depth Historical Graph, are determined.<p>
+
+        <p>This Input has the following options:</p>
+
+        <ul>
+            <li><b>All Bars</b>: When this option is selected, the Minimum and Maximum depth levels are determined from all bars in the chart that contain market depth data.</li>
+
+            <li><b>Visible Bars</b>: When this option is selected, the Minimum and Maximum depth levels are determined from the bars where the timeframe for those bars is within the visible portion of the screen. In other words, this setting is only dependent on the visible area from the left to the right of the screen and is not dependent on the top or bottom of the screen. Therefore, if market depth data is displayed above the top, or below the bottom of the visible area, but the bar is still within the visible timeframe, then those market depth levels are taken into consideration for the Maximum and Minimum values.</li>
+
+            <li><b>Trading Day</b>: When this option is selected, the Minimum and Maximum depth levels are determined for each trading day. The trading day is defined by the <a href="index4ec1.html?page=doc/SessionTimes.php#SessionTimes">Session Times</a> and starts at the Evening Session Start Time and ends at the Primary Session End Time. If an Evening Session is not being used, then the Primary Session Start and End Times are used.</li>
+
+            <li><b>Day/Evening Sessions</b>: When this option is selected, the Minimum and Maximum depth levels are determined for each trading session. Each trading session is defined by the <a href="index4ec1.html?page=doc/SessionTimes.php#SessionTimes">Session Times</a> where the Primary Session is determined separately from the Evening Session.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_FontSize">Font Size</h3>
+        <div class="member-link">[<a href="#StudyInputs_FontSize">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls the size of the font that is used to display quantity values when the Input <b>Show Quantity Numbers</b> is set to anything other than <b>None</b>.</p>
+
+        <p>When this Input is set to a value of <b>0</b>, the font size is set by the Chart Text font as defined in the <a href="index5795.html?page=doc/GraphicsSettings.html#FontsAndText">Fonts and Text</a> section of the Graphics Settings.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyInputs_MaximumlevelsToDisplay">Maximum Levels to Display (0 for All)</h3>
+        <div class="member-link">[<a href="#StudyInputs_MaximumlevelsToDisplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls the total number of Market Depth levels that are displayed at each bar. The location of the levels is centered around the Last price of the bar.</p>
+
+        <p>Note that this is the total number of levels, including both Bid and Ask levels, not just the amount for one side.</p>
+
+        <p>Setting this Input to 0 will display all available Market Depth levels.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="CombineIncrementInTicks">Combine Increment in Ticks</h3>
+        <div class="member-link">[<a href="#CombineIncrementInTicks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Input controls the number of levels of Market Depth that are combined together to form a single new depth level.</p>
+
+        <p>The combination is done based on the number of ticks that are to be combined, with the result placed at the rounded price level for the combination.<p> 
+
+        <p>The following image gives an example of how the combining is performed. In this example, the tick size is <b>0.25</b>, and the <b>Combine Increment in Ticks</b> is set to <b>3</b>.</p>
+
+        <div style="text-align: center;"><a href="../images/marketdepthcombineincrementinticksexample.png" rel="lightbox"><img src="../images/marketdepthcombineincrementinticksexample.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+        <p>Additional information on differences that can be seen between the Market Depth Historical Graph and other Market Depth values due to the Combine Increment in Ticks can be found in the <a href="#CombineIncrementInTicksAdditionalInformation">Combine Increment in Ticks Additional Information</a> section.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutomaticCombineIncrementAdjustmentValue">Automatic Combine Increment Adjustment Value</h3>
+        <div class="member-link">[<a href="#AutomaticCombineIncrementAdjustmentValue">Link</a>] - [<a href="#top">top</a>]</div>
+
+        <p>When this Input is set to a value of 5 or greater, and the chart scale is compressed (expanded) to a point within the range of the entered value, then the Market Depth Historical Graph data will be automatically combined (disjoined).</p>
+
+        <p>A smaller value will require the market depth data to be more closely spaced before they are combined (disjoined), whereas a larger value allows the market depth data to be larger before being combined (disjoined).</p>
+
+        <p>This Input works by actually adjusting the <b>Combine Increment in Ticks</b> Input and updates the Combine Increment In Ticks with the actual increment that is being used to join (disjoin) the data. 
+
+        <p>If the <b>Combine Increment in Ticks</b> is changed when the <b>Automatic Combine Increment Adjustment Value</b> is set to a value of 5 or greater, then the Market Depth Historical Data will change to the entered <b>Combine Increment in Ticks</b> and then will combine (disjoin) the data immediately based on the setting for <b>Automatically Combine Increment Adjustment Value</b>.</p>
+
+        <p>A value of 5 or greater is required in order to allow the Automatic Combine Increment in Ticks to function. Any value less than 5 will not combine the market depth data as the scaling is changed.</p>
+
+        <p>The actual value entered is the number of pixels on the screen, such that when the size of a data increment of the market depth data becomes smaller (larger) than this number of pixels, then it will combine (disjoin) the data. It is important to understand that although there is an internal methodology as to how it determines when to combine (disjoin), it is not meant for a user to calculate a specific value to be used. Rather, it is expected that the user will simply use this as a control to be tweaked to a value that works best for their circumstances.</p>
+
+        <p>When the chart scaling is set to <b>Automatic</b>, it is very likely that as scrolling through the chart, the market depth data will combine (disjoin) due to changes in the scaling of the chart.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="BlockColoringLogic">Block Coloring Logic</h2>
+    <div class="member-link">[<a href="#BlockColoringLogic">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Historical market depth quantities are shown on the chart as colored blocks.  Each block represents a market depth quantity within a particular time frame and price level.  These blocks are colored such that blocks with greater quantity within a given color range (Range n Max Ask/Bid Color) use a color that is closer to the corresponding color input. Blocks with lesser quantities within a given color range will appear faded toward the color of the background or to the color defined by the <b>Range n Min Ask/Bid Color</b> when the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>.</p>
+
+    <p>Blocks are colored relative to the minimum and maximum historical market depth quantities that are established by the Input for <b>Determine Min and Max Levels from All Bars or Visible Bars</b>. The maximum quantity is the greater of both the greatest Bid quantity and the greatest Ask quantity. The minimum quantity is the lesser of both the smallest Bid quantity and the smallest Ask quantity. Very often the minimum market depth value is not visible on the chart, as it is of the opposing depth type (for example, at a price of 2040.25 the Bid Depth is 50 and the Ask Depth is 2, the Bid Depth is displayed on the chart, but the Ask may be the minimum depth value).</p>
+
+    <p>If the <b>Highest Quantity for Coloring</b> Input is set to a value greater than zero, any historical market depth quantities that are greater than that value will be treated as equal to that value for the purposes of coloring. This Input value does not increase the maximum quantity value used for coloring if all visible historical market depth quantities are less than the <b>Highest Quantity For Coloring</b>.</p>
+
+    <p>The study has separate color Inputs for the Bid side and the Ask side. The color used for a particular block is determined by the side with the greater quantity at that particular price level and chart column. Either the Bid quantity or the Ask quantity will be used.</p>
+
+    <p>Intensities for the entire graph are calculated independent of side. If the greatest historical Bid quantity is greater than the greatest historical Ask quantity, the intensity of the greatest historical Ask quantity will be less than the intensity of the greatest historical Bid quantity. Setting the color Inputs for both sides to the same color will make the Bid and Ask sides indistinguishable.</p>
+
+    <p>For the block (or blocks) with a quantity that matches the maximum quantity, the exact Range 3 Max Color Input for the dominant side of that block is used. Quantities less than the maximum quantity within the color range are faded into the chart background color or to the Minimum Range Color if the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>.</p>
+
+    <p>For the block (or blocks) with a quantity that matches the minimum quantity (if visible), the color for that block will have an intensity equal to the <b>Minimum Volume Intensity Percent</b> Input. The only rare exception to this case is when the minimum quantity is equal to the maximum quantity, in which case the intensity will be 100%.</p>
+
+    <p>Intensity is the percentage of the dominant side Range Maximum Input color that is used over the chart background color (or Range Minimum Color if the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>). An intensity of 0% results in the chart background color (Range Minimum Color), and an intensity of 100% results in the exact Range Maximum Input color. An intensity of 50% is half way between the chart background color (Range Minimum Color) and Range Maximum Input color.</p>
+
+    <p>The color intensities for blocks with quantities between the lowest quantity and the highest quantity and within a particular color range correspond to a linear scale between the 0% and 100%. The use of a particular color range is determined by the values entered in the <b>Percent Color Thresholds</b> or <b>Actual Color Thresholds</b> depending on the setting for <b>Use Percent or Actual Values for Threshold Levels</b>.</p>
+
+    <p>Quantities of zero, if they need to be displayed, will use the same color as the chart background color (Range Minimum Color).</p>
+
+    <p>The following logic is used when determining a particular color:</p>
+
+    <ul>
+        <li>The range of the highest to lowest depth is determined. If the <b>Highest Quantity for Coloring</b> and the <b>Lowest Quantity for Coloring</b> are both set to <b>0</b> and their respective Value Types are both set to <b>Actual Value</b> then this is the highest depth value minus the lowest depth value of the respective bars in the chart. As noted above, the lowest depth value may not be displayed as it is most likely the non-dominant side.
+        <br><br>
+            If the <b>Highest Quantity for Coloring</b> is non-zero and is less than the Maximum Depth Value, then the value entered in the <b>Highest Quantity for Coloring</b> Input will be used as the highest depth value.
+        <br><br>
+            If the <b>Lowest Quantity for Coloring</b> is non-zero and is greater than the Minimum Depth Value, then the value entered in the <b>Lowest Quantity for Coloring</b> Input will be used as the lowest depth value.
+        </li>
+
+        <li>The range of depth values is treated as a percentage ranging from 0% (lowest value) to 100% (highest value), and each depth value is evaluated to determine it's percentage position within the range.</li>
+
+        <li>The choice of Bid or Ask is determined by which side is larger. For example, if the Ask is 243 and the Bid is 54, then the Depth at that Bar and Price will be the Ask at 243.</li>
+
+        <li>When using the <b>Actual Color Thresholds</b>, the entered values are converted internally to percentages of the range of depth values in order to determine the appropriate coloring option. The percentage is determined by the following formula: <b>Percentage = (Actual Color Threshold Value - Minimum Depth) / (Maximum Depth - Minimum Depth)</b>. This step is necessary in order to increase the speed of the Market Depth Historical Graph calculations by creating a mask of data that is used once, rather than continually recalculating the data.
+        <br><br>
+            Internally, the range of the masking data goes from 0 to 1000, but it is still possible that while using the Actual Color Thresholds with large depth numbers, that a particular depth will not change to the specific color level at the precise number, but will do so at a value within a few points of the entered number. For example, if the <b>Actual Color Thresholds</b> are entered as <b>5000, 15000, 25000</b>, then it is possible that a depth value of 25001 will still be within the Range 2 colors and that it is not until a depth of 25003 that the color changes to Range 3.</li>
+
+        <li>The <b>Range 0-3 Max/Min Ask/Bid Color</b> to be used is determined by the Percentage or percentage equivalent of the Actual value of each depth value (as determined above) and where it falls into the range of values defined in the <b>Percent Color Thresholds</b> or the <b>Actual Color Thresholds</b>. The following determines which specific color range is used:
+            <ul>
+                <li>If the Percentage is less than or equal to the lowest value in the <b>Percent Color Thresholds</b> or the Depth Value is less than or equal to the percentage equivalent of the lowest value in the <b>Actual Color Thresholds</b> when using the <b>Actual Values</b>, then the <b>Range 0 Bid/Ask Color</b> is used.</li>
+
+                <li>If the Percentage is greater than the lowest value and less than or equal to the middle value in the <b>Percent Color Thresholds</b> or the Depth Value is greater than the percentage equivalent of the lowest value and less than or equal to the percentage equivalent of the middle value in the <b>Actual Color Thresholds</b> when using the <b>Actual Values</b>, then the <b>Range 1 Bid/Ask Color</b> is used.</li>
+
+                <li>If the Percentage is greater than the middle value and less than or equal to the highest value in the <b>Percent Color Thresholds</b> or the Depth Value is greater than the percentage equivalent of the middle value and less than or equal to the percentage equivalent of the highest value in the <b>Actual Color Thresholds</b> when using the <b>Actual Values</b>, then the <b>Range 2 Bid/Ask Color</b> is used.</li>
+
+                <li>If the Percentage is greater than the highest value in the <b>Percent Color Thresholds</b> or the Depth Value is greater than the percentage equivalent of the highest value in the <b>Actual Color Thresholds</b> when using the <b>Actual Values</b>, then the <b>Range 3 Bid/Ask Color</b> is used.</li>
+            </ul>
+        </li>
+
+        <li>Each color range is also treated as a percentage range from 0% to 100% (color percentage). A depth value is then converted to a percentage within the range of values within a specific Color range. The final color that is used is determined by a linear interpolation from the Input color to the Background color (or to the Range Minimum Color if the Input for <b>Use Range Minimum Colors</b> is set to <b>Yes</b>) based on this color percentage, where 100% is the entered Input color and 0% is the Background color (or the Range Minimum Color).
+            <br><br>
+            If the <b>Minimum Volume Intensity Percent</b> is non-zero, then any color that would be lower than this percentage value is not used in the calculation of the color percentage. This would mean that a Color Percentage of 0% would map to the color value that would be defined at the <b>Minimum Volume Intensity Percent</b> without this scaling.
+        </li>
+    </ul>
+
+    <p><b>Example 1 - Interpolation to Background Color with Percent Color Thresholds</b>:</p>
+
+    <p>The following example uses only the Ask depths for simplicity. The data and Inputs are as follows:</p>
+    
+    <ul>
+        <li>Maximum Depth Value: 1000</li>
+
+        <li>Minimum Depth Value: 0</li>
+
+        <li>Range 3 Max Ask Color: Grey (RGB values of 100, 100, 100)
+
+        <li>Background Color: Black (RGB values of 0, 0, 0)
+
+        <li>Highest Quantity for Coloring: 0</li>
+
+        <li>Lowest Quantity for Coloring: 0</li>
+
+        <li>Percent Color Thresholds: .25, .5, .75</li>
+
+        <li>Minimum Volume Intensity Percent: 0</li>
+
+        <li>Depth Value: 850</li>
+    </ul>
+
+    <p>The following steps are used to calculate the specific color for this depth and price:</p>
+
+    <ol>
+        <li>Since the Depth Value is 850, and the range of data is 0 - 1000, the Range Percentage for this value is 0.85 (850 / (1000 - 0)).</li>
+
+        <li>This Range Percentile is greater than the highest value in the <b>Percent Color Thresholds</b>, therefore the <b>Range 3 Max Ask Color</b> is the basis color for this depth value.</li>
+
+        <li>Since the <b>Minimum Volume Intensity Percent</b> is zero, the full range of possible colors for this Color Range will be used. The low value of this color range is 750 (.75 * 1000) and the high value within this color range is 1000, therefore this Depth Value equates to a Color Percentage of 0.4 ((850 - 750) / (1000 - 750)).</li>
+
+        <li>A linear interpolation of the entered color results in a grey color with RGB values of (40, 40, 40).</li>
+    </ol>
+
+    <p><b>Example 2 - Interpolation to Range Minimum Color with Percent Color Thresholds</b>:</p>
+
+    <p>The following example uses only the Ask depths for simplicity. The data and Inputs are as follows:</p>
+    
+    <ul>
+        <li>Maximum Depth Value: 1000</li>
+
+        <li>Minimum Depth Value: 0</li>
+
+        <li>Range 3 Max Ask Color: Dark Blue (RGB values of 0, 0, 100)
+
+        <li>Range 3 Min Ask Color: Dark Red (RGB values of 100, 0, 0)
+
+        <li>Highest Quantity for Coloring: 0</li>
+
+        <li>Lowest Quantity for Coloring: 0</li>
+
+        <li>Percent Color Thresholds: .25, .5, .75</li>
+
+        <li>Minimum Volume Intensity Percent: 0</li>
+
+        <li>Depth Value: 850</li>
+    </ul>
+
+    <p>The following steps are used to calculate the specific color for this depth and price:</p>
+
+    <ol>
+        <li>Since the Depth Value is 850, and the range of data is 0 - 1000, the Range Percentage for this value is 0.85 (850 / (1000 - 0)).</li>
+
+        <li>This Range Percentile is greater than the highest value in the <b>Percent Color Thresholds</b>, therefore the <b>Range 3</b> colors are used to determine the final color for this depth value.</li>
+
+        <li>Since the <b>Minimum Volume Intensity Percent</b> is zero, the full range of possible colors for this Color Range will be used. The low value of this color range is 750 (.75 * 1000) and the high value within this color range is 1000, therefore this Depth Value equates to a Color Percentage of 0.4 ((850 - 750) / (1000 - 750)).</li>
+
+        <li>A linear interpolation of the entered color results in a Burgundy color with RGB values of (40, 0, 40).</li>
+    </ol>
+
+    <p><b>Example 3 - Interpolation to Range Minimum Color with Actual Color Thresholds</b>:</p>
+
+    <p>The following example uses only the Ask depths for simplicity. The data and Inputs are as follows:</p>
+    
+    <ul>
+        <li>Maximum Depth Value: 1000</li>
+
+        <li>Minimum Depth Value: 0</li>
+
+        <li>Range 3 Max Ask Color: Dark Blue (RGB values of 0, 0, 100)
+
+        <li>Range 3 Min Ask Color: Dark Red (RGB values of 100, 0, 0)
+
+        <li>Highest Quantity for Coloring: 0</li>
+
+        <li>Lowest Quantity for Coloring: 0</li>
+
+        <li>Actual Color Thresholds: 250, 500, 750</li>
+
+        <li>Minimum Volume Intensity Percent: 0</li>
+
+        <li>Depth Value: 850</li>
+    </ul>
+
+    <p>The following steps are used to calculate the specific color for this depth and price:</p>
+
+    <ol>
+        <li>The Actual Color Thresholds are converted to percentage values based on the Minimum and Maximum Depth values. For the Actual Color Threshold of 250, the following calculation is used: Percentage = (250 - 0) / (1000 - 0). This results in Actual Color Thresholds as percentages of 0.25, 0.50, 0.75.</li>
+
+        <li>Since the Depth Value is 850, and the range of data is 0 - 1000, the Range Percentage for this value is 0.85 (850 / (1000 - 0)).</li>
+
+        <li>This Range Percentile is greater than the highest percentage value of the <b>Actual Color Thresholds</b>, therefore the <b>Range 3</b> colors are used to determine the final color for this depth value.</li>
+
+        <li>Since the <b>Minimum Volume Intensity Percent</b> is zero, the full range of possible colors for this Color Range will be used. The low value of this color range is 750 and the high value within this color range is 1000, therefore this Depth Value equates to a Color Percentage of 0.4 ((850 - 750) / (1000 - 750)).</li>
+
+        <li>A linear interpolation of the entered color results in a Burgundy color with RGB values of (40, 0, 40).</li>
+    </ol>
+
+
+<!--    <section class="h3">
+        <h3>Example Coloring With Default Settings</h3>
+
+        <p>Here is an example of the colors and intensities that will be shown for a handful of quantity values using default settings.</p>
+
+        <p><b>Default Settings:</b></p>
+        <ul>
+            <li>Bid Color = 128, 190, 255 <span style="background-color: #80BEFF; border: 1px solid black;">&emsp;</span></li>
+            <li>Ask Color = 255, 255, 0 <span style="background-color: #FFFF00; border: 1px solid black;">&emsp;</span></li>
+            <li>Minimum Volume Intensity Percent = 20</li>
+            <li>Chart Background Color = 0, 0, 0 <span style="background-color: #000000; border: 1px solid black;">&emsp;</span></li>
+        </ul>
+
+        <table class="doc">
+            <tr>
+                <th>Bid</th>
+                <th>Ask</th>
+                <th>Color</th>
+                <th>Intensity</th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>210</td>
+                <td style="background-color: #FFFF00;"></td>
+                <td>100%</td>
+                <td>Maximum visible quantity (210).</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>110</td>
+                <td style="background-color: #999900;"></td>
+                <td>60%</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>60</td>
+                <td style="background-color: #666600;"></td>
+                <td>40%</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td style="background-color: #000000;"></td>
+                <td>0%</td>
+                <td>No quantity (0), uses background color.</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>0</td>
+                <td style="background-color: #192633;"></td>
+                <td>20%</td>
+                <td>Minimum visible quantity (10), uses <b>Minimum Volume Intensity Percent</b>.</td>
+            </tr>
+
+            <tr>
+                <td>60</td>
+                <td>0</td>
+                <td style="background-color: #334C66;"></td>
+                <td>40%</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>160</td><td>0</td><td style="background-color: #6698CC;"></td><td>80%</td><td>Maximum bid quantity (160) is only a fraction of the maximum visible quantity (210).</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section class="h3">
+        <h3>Example of Minimum Volume Intensity Percent</h3>
+
+        <p>Here is an example of how different values of the <b>Minimum Volume Intensity Percent</b> can affect the same quantity values as above.</p>
+
+        <table>
+            <tr>
+                <th rowspan=2>Bid</th>
+                <th rowspan=2>Ask</th>
+                <th colspan=5>Minimum Volume Intensity Percent</th>
+            </tr>
+            <tr>
+                <th style="width: 3em;">0</th>
+                <th style="width: 3em;">-20-</th>
+                <th style="width: 3em;">40</th>
+                <th style="width: 3em;">60</th>
+                <th style="width: 3em;">80</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>210</td>
+                <td style="background-color: #FFFF00;"></td>
+                <td style="background-color: #FFFF00;"></td>
+                <td style="background-color: #FFFF00;"></td>
+                <td style="background-color: #FFFF00;"></td>
+                <td style="background-color: #FFFF00;"></td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>110</td>
+                <td style="background-color: #7F7F00;"></td>
+                <td style="background-color: #999900;"></td>
+                <td style="background-color: #B2B200;"></td>
+                <td style="background-color: #CCCC00;"></td>
+                <td style="background-color: #E5E500;"></td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>60</td>
+                <td style="background-color: #3F3F00;"></td>
+                <td style="background-color: #666600;"></td>
+                <td style="background-color: #8C8C00;"></td>
+                <td style="background-color: #B2B200;"></td>
+                <td style="background-color: #D8D800;"></td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td style="background-color: #000000;"></td>
+                <td style="background-color: #000000;"></td>
+                <td style="background-color: #000000;"></td>
+                <td style="background-color: #000000;"></td>
+                <td style="background-color: #000000;"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>0</td>
+                <td style="background-color: #000000;"></td>
+                <td style="background-color: #192633;"></td>
+                <td style="background-color: #334C66;"></td>
+                <td style="background-color: #4C7299;"></td>
+                <td style="background-color: #6698CC;"></td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>0</td>
+                <td style="background-color: #202F3F;"></td>
+                <td style="background-color: #334C66;"></td>
+                <td style="background-color: #46688C;"></td>
+                <td style="background-color: #5985B2;"></td>
+                <td style="background-color: #6CA1D8;"></td>
+            </tr>
+            <tr>
+                <td>160</td>
+                <td>0</td>
+                <td style="background-color: #608EBF;"></td>
+                <td style="background-color: #6698CC;"></td>
+                <td style="background-color: #6CA1D8;"></td>
+                <td style="background-color: #73ABE5;"></td>
+                <td style="background-color: #79B4F2;"></td>
+            </tr>
+        </table>
+
+        <p>Note that the minimum visible quantity (10) uses the <b>Minimum Volume Intensity Percent</b> for its intensity directly.  The intensities for all other quantities are scaled proportionally between the <b>Minimum Volume Intensity Percent</b> and the maximum intensity of 100%.</p>
+    </section>
+-->
+
+</section>
+
+<section class="h2">
+    <h2 id="CombineIncrementInTicksAdditionalInformation">Combine Increment in Ticks Additional Information</h2>
+    <div class="member-link">[<a href="#CombineIncrementInTicksAdditionalInformation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When the Input for <a href="#CombineIncrementInTicks">Combine Increment in Ticks</a> is set to a value other than 1, there are few changes that occur to the way the Market Depth Historical Graph is displayed. The following gives the information on why these may occur and how they are to be interpreted.</p>
+
+    <ul>
+        <li><b>Rounded Price Level</b>: When using a Combine Increment in Ticks value other than 1, the resulting data is placed at the rounded price level for the given <b>Tick Size</b> and <b>Combine Increment in Ticks</b>. This rounded price level is the price at which the price can be divided by the Combined Tick Size with no remainder. 
+            <br><br>
+            For example, given a tick size of 0.25 and a Combine Increment in Ticks value of 3, the summed depth values will be placed at price values of 0.75, 1.50, 2.25, ... 3099.75, 3100.50, 3101.25, etc.
+            <br><br>
+            This also means that the values that are summed together are those depth values that are surrounding the rounded depth, using a standard rounding mechanism. For example, at the new rounded price level of 3100.50, the depths at the following prices were summed together: 3100.25, 3100.50, 3100.75.
+            <br><br>
+            The following image shows this combination of the depths for the above scenario.
+
+            <div style="text-align: center;"><a href="../images/marketdepthcombineincrementinticksexample.png" rel="lightbox"><img src="../images/marketdepthcombineincrementinticksexample.png" alt="" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li><b>Best Bid/Best Ask Does Not Match DOM</b>: When using a Combine Increment in Ticks value other than 1, the data is combined based on the rounding price value as described above. Although they are not displayed in the DOM, there are Bid Depth values above the current price and there are Ask Depth values below the current price. These values are included in the calculation of the combined market depth.
+            <br><br>
+            In the image below, both the Market Depth Historical Graph and the Chart DOM have been set to have a <b>Combine Increment in Ticks</b> to 2. As can be seen, there is a difference in the Bid Depth, which is showing as <b>59</b> in the Chart DOM and <b>61</b> in the Market Depth Historical Graph. This is because the Market Depth Historical Graph is including an additional depth of 2 that would be located at the price above the Best Bid.
+
+            <div style="text-align: center;"><a href="../images/mdhg-combineincrement-bestbidaskdifference.png" rel="lightbox"><img src="../images/mdhg-combineincrement-bestbidaskdifference.png" alt="" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li><b>Space at Top of Market Depth When Using Maximum Levels to Display and Combine Increment in Ticks</b>: When using both the <b>Maximum Levels to Display</b> and the <b>Combine Increment in Ticks</b> there may be a space between the coloring of the Highest Priced Market Depth and the one below it. This is due to the number of depth levels at the top and bottom of the Market Depth Historical Graph being split by the Combine Increment in Ticks based on the actual price at any given time and how that relates to the <b>Rounded Price Level</b> (see above). Therefore, what is presented is the number of levels combined at the top, but then displayed at the rounded price for that level.
+            <br><br>
+            In the image below, the Market Depth of 133 is the sum of the 73 and 60 Ask Depths at prices of 3213.50 and 3213.75 respectivly. But the display of the combined depth is at the price of 3215.00 which is the rounded price level for the given Combine Increment in Ticks at that level. The thickness of the market depth bar at that level reflects the number of market depth levels that actually contributed to that bar (2 in this case).
+
+            <div style="text-align: center;"><a href="../images/mdhg-combineincrement-spaceattop.png" rel="lightbox"><img src="../images/mdhg-combineincrement-spaceattop.png" alt="" class="screenshot" loading="lazy"></a></div>
+        </li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="MarketDepthHistoricalGraphNotDisplaying">Market Depth Historical Graph Not Displaying</h2>
+    <div class="member-link">[<a href="#MarketDepthHistoricalGraphNotDisplaying">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow through the instructions here to resolve a problem where the Market Depth Historical Graph study does not display any data, or not displaying any data at particular Date-Times in the chart.</p>
+    
+    <p>The instructions here also apply to verifying there is historical market depth data for a particular period of time in the chart for the purpose of seeing if during a <em>replay</em>, market depth data will be replayed during that time range. </p>
+    
+    <p>In this case, the chart <em>must not be replaying</em> and you will need to scroll the chart back in time to the point in time you want to do the replay for, to see if there is historical market depth data for that period of time.</p>
+    
+    <p>This information also applies to verify there is historical market depth data which is used by the <a href = "indexb203.html?page=doc/StudiesReference.php&amp;ID=213&amp;Name=Bid_Ask_Depth_Bars">Bid and Ask Depth Bars</a> study.   If there is not any data displayed by the Market Depth Historical Graph   study for the period of time you want to see data from the <b>Bid and Ask Depth Bars</b> study, then this is why you do not see data for that study. </p>
+    
+    <ol>
+        <li> First, make sure your Sierra Chart    <a href = "indexa1cf.html?page=doc/Packages.php">Service Package</a> is set to a  Service Package  that includes  <em>Advanced</em> features. Otherwise, the Market Depth Historical Graph study will not display anything. It will be blank.</li>
+        
+        <li>Make sure to add the <b>Market Depth Historical Graph</b> study to the chart if it is not already. Refer to the <a href="#StepByStepInstructions">Step by Step Instructions</a> on this page.</li>
+        
+        <li> The <b>Market Depth Historical Graph</b> study can only be used on an Intraday chart. Not Historical Daily  charts. </li>
+        
+        <li> To ensure there is market depth data from the particular Date-Time you want to see market depth data for in the chart, follow the <a href="#DownloadingOfHistoricalMarketDepthData">Downloading of Historical Market Depth Data</a>instructions on this page.  If this resolves the problem, then  <em>stop here</em>.</li>
+
+        
+        <li><a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" target="_blank" rel="noopener noreferrer">Reconnect to the data feed</a>. Stop here if the problem is resolved.</li>
+        
+        <li>Verify market depth data is being received for the symbol. To do this, first connect to the data feed with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. 
+        <br><br>
+        Go to the chart and select  <b class="menu_item">File &gt;&gt; Open Market Depth Window</b>.  You should see multiple levels of market depth data.  If not, that is where the problem is.   You will need to contact your Data/Trading Service provider and make sure that market depth data is authorized for the symbols that you require market depth data for. Stop here if this is the problem.
+            <br> <br>
+            This step is only applicable for viewing market depth data at the last bar in the chart and ensuring it will be recorded in the present time  so it can be viewed historically.
+            <br> <br>
+            If you want to view <em>historical market depth data</em> on the chart, then this step is not going to be applicable.
+             <br> <br>
+             There are also settings which limit the amount of market depth data requested from the external data feed and displayed. For more information, refer to <a href = "index8793.html?page=doc/FileMenu.html#NotReceivingTheFullNumberOfMarketDepthLevels">Not Receiving the Full Number of Market Depth Levels</a>. 
+            </li>
+        
+         <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Market Depth</b>. Make sure the <b>Maximum Market Depth Data Days to Load</b> setting is set to the number of days from the last date in the chart, that you want to load market depth data for. This is particularly important during a chart replay, that it is set high enough to load market depth data back to the  dates you will be replaying. </li>
+         
+        <li>Reset the defaults for the <b>Market Depth Historical Graph</b> study by <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"  Target="_blank" rel="noopener noreferrer">opening the Study Settings</a> window for the study (<b Class = "menu_item">Analysis &gt;&gt; Studies &gt;&gt; [select study in <b>Studies to Graph</b>] &gt;&gt;  Settings</b>). 
+        <br> <br>
+        
+        Press the <b>Reset Defaults</b> button.  </li>
+
+        <li>Press  <b>OK</b>.</li>
+
+        <li>Press the <b>Remove</b> button on the <b>Chart Studies</b> window to remove the study. </li>
+
+        <li>Add the <b>Market Depth Historical Graph</b> study again from the  <b>Studies Available</b> list.</li>
+
+        <li>Press <b>OK</b>. Stop here if the problem is resolved. </li>
+        
+         <li>If you see the Market  Depth Historical Graph colored rectangles on the chart but no quantity numbers displayed within them, then make sure the <a href = "#StudyInputs_ShowQuantityNumbers">Show Quantity Numbers</a> Input  for the  <b>Market Depth Historical Graph</b> study is set as you require.  
+          <br> <br>
+         Also check the <a href = "#StudyInputs_QuantityNumbersColor">Quantity Numbers Color</a> setting to make sure it is set to a visible color.   To adjust Study Inputs, refer to <a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"   target="_blank" rel="noopener noreferrer">Modifying Studies</a>.
+            <br> <br>
+            And increase the <a href = "index69b6.html?page=doc/WorkingWithCharts.html#ChangingBarSpacing">chart bars spacing</a> to ensure there is sufficient width per chart column to display the quantity numbers.
+        </li>  
+
+        <li>Set the <a href = "#StudyInputs_LowestQuantityForColoring">Lowest Quantity for Coloring</a> Input with the <b>Market Depth Historical Graph</b> study to zero(0). To adjust Study Inputs, refer to <a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies"   target="_blank" rel="noopener noreferrer">Modifying Studies</a>.   </li>
+         
+        <li>If market depth data is not being displayed on only a portion of the chart (market depth data is displayed in some areas, but not in others), then this indicates that the market depth data  is missing where you are not seeing it.
+            <br><br>
+           In this case, refer to <a href="#DownloadingOfHistoricalMarketDepthData">Downloading of Historical Market Depth Data</a>
+            <br><br>
+            If required, the last reported market depth quantities can be displayed from the chart bar which that occurred on, forward into the areas with missing data. To do this, set the    <b>Market Depth Historical Graph</b> Input for <a href="#StudyInputs_ExtendLastKnownDepth">Extend Last Known Depth</a> to <b>Yes</b>. 
+        </li>
+
+        <li>Verify that there are data files present. Go to the <b>\Data\MarketDepthData</b>  folder in the Sierra Chart installation folder on your system (usually <em>C:\SierraChart</em>), through your operating system file manager. 
+            <br> <br>
+            This folder contains all of the market depth data files. The file extension is <em><b>.depth</b></em>. The filename format is <b>[symbol].[UTC date].depth</b>. 
+            <br><br>
+            The symbol of the market depth data file needs to <em>match</em> the symbol of the chart <em>exactly</em>.
+            <br><br>
+            The date on a market depth data file is the UTC date and covers a time span from 0:00:00 to 23:59:59 for that date in UTC time. If the file for a particular date does not exist, then there will be no data for that  particular date in the chart.
+            <br> <br>
+            If connected to the data feed and if receiving market depth data for a symbol, the market depth data file for the current date and for the symbol of the chart will be   <em>increasing in size</em>. Periodically check the size of this file for confirmation that the data is actually being appended to the file. If not, then that is an indication of a problem.
+            <br> <br>
+            Also, consider the fact that the market depth data file may only contain data for a portion of the date it is for. Or Sierra Chart may not have been connected to the data feed at all times during that date or the necessary settings to maintain  historical market depth data for the symbol were not present all times.
+        </li>
+       
+        <!-- li>If the depth file does exist for a particular date yet the data is not displayed on the chart, and the chart is updating in real-time and contains the <b>Market Depth Historical Graph</b> study, then as a last step, disconnect from the data feed with <b class = "menu_item">File &gt;&gt; Disconnect</b>.
+            <br><br>
+            Rename the  market depth data file for the symbol and the current date to the same name with a <em>.backup</em> file extension. Connect to the data feed with <b>File &gt;&gt; Connect to Data Feed</b>. We would not normally expect this last procedure to really be necessary.  
+        </li  -->
+      
+      <li> If there are a large number of chart bars loaded in the chart, there could be  a memory allocation error occurring which prevents  any historical market depth data from displaying.
+       <br> <br>
+      This error will display in the  <b class="menu_item">Window  &gt;&gt; Message Log</b>. The solution to this is to select <b class="menu_item">Chart  &gt;&gt; Chart Settings</b>. Set the <b>Days to Load</b> setting to 1. Press <b>OK</b>. Example message:
+      <div class="MessageLog">
+      Failed to add to the depth data for [symbol], as a result of running out of memory.  The depth data accounted for  [memory usage]" of memory.  Depth data will be unavailable until the chart can be reloaded.
+      </div>
+       <br> <br>
+       For additional information for help with errors like  this, refer to <a href = "index69b6.html?page=doc/WorkingWithCharts.html#OutOfMemoryCondition">Out of Memory Condition</a>.
+      
+      </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="MarketDepthDataTimeStampingAndReplays">Market Depth Data Time Stamping During Real Time Updates and Replays</h2>
+    <div class="member-link">[<a href="#MarketDepthDataTimeStampingAndReplays">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> For 100% accurate time stamping for market depth data, it is mandatory that you use the  <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a>.  This is the definitive solution to this problem described in this section. The Denali Exchange Data Feed does not use the local computer clock  for time stamping and instead timestamps market data according to the exchange timestamps.</p>
+    
+    <p>  Additionally, in newer versions of Sierra Chart, both market depth data  and trades, are time stamped to the millisecond.   Therefore, it is important to be running a current version of Sierra Chart for the most precise time stamping.</p> 
+
+    <p>During real-time chart updating and also during <a href="index9600.html?page=doc/ReplayChart.html" target="_blank" rel="noopener noreferrer">Chart Replays</a>, a chart that uses the market depth data in some way like through the <a href = "#">Market Depth Window</a> or when using the <b>Market Depth Historical Graph</b> study, it is important to be aware of time stamping differences between the market depth data and trades which can cause the market depth data to be out of sync with the last trade prices within the price bars.</p>
+
+    <p>Depending upon the particular data feed being used, trades could be timestamped using the timestamp from the data feed and the market depth data could use the local computer clock timestamp. This will cause these two different data sets to be potentially out of sync when replaying a chart.</p>
+
+    <p>It also could be that the time stamping of the market depth data uses the timestamp from the data feed but market depth data timestamp is not completely accurate relative to the timestamp used for trades. <em>Sierra Chart has no control over this</em>.</p>
+
+    <p>There is not necessarily a perfect solution to this kind of problem. If the local computer clock is being used for time stamping, it is recommended that your computer's clock be set extremely accurately  and synchronized multiple times an hour to a network time server. Refer to <a href="index3e87.html?page=doc/helpdetails38.html" target="_blank" rel="noopener noreferrer">Incorrect Date and/or Time Display</a>  for further information.</p>
+
+    <p>If the particular Data or Trading service you are using supports time stamping using the local computer clock, then set <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b>Service Setting &gt;&gt; Timestamp Using Local Computer Clock</b> to <b>Yes/True</b> to use the local computer clock, if this option is available for the Service you are using.  </p>
+
+    <p>In some cases market depth data is always time stamped using the local computer clock depending upon the particular Data/Trading service being used. </p>
+    
+</section>
+
+<section class="h2">
+    <h2 id="MarketDepthHistoricalGraphTimingInRelationToChartBarDateTimes">Market Depth Historical Graph Timing in Relation to Chart Bar Date-Times</h2>
+    
+    <div class="member-link">[<a href="#MarketDepthHistoricalGraphTimingInRelationToChartBarDateTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>During real-time updating of a chart and chart replays there are rules related to loading and displaying of market depth data in relation  to the latest/ending Date-Time in the last bar  in the chart and whether the market depth data with Date-Times beyond this latest/ending Date-Time is loaded/displayed or not. </p>
+
+    <p> The following are the rules for this.</p>
+    
+     <p> The following paragraphs use the term <em>reference Date-Time</em>. What this refers to is what is considered the latest Date-Time in the chart  which is the Date-Time  for which market depth updates that are beyond this Date-Time are  <em>not loaded</em>.  </p> 
+     
+     <p> This means that you can see current market depth quantity values, which are not immediately displayed in the last  bar in the chart until such time that the reference Date-Time catches up to the Date-Time of the most recent market depth data.  This may not be until a new chart bar begins.</p>
+    
+    <p>During a chart replay, the reference  Date-Time for market depth data will be based upon the current Date-Time of the replay whether or not the last bar in the chart includes that particular Date-Time. The current Date-Time during a chart replay depends upon the replay speed and the starting Date-Time of the replay, and the actual elapsed time. </p>
+    
+    <p>When a chart is not replaying and the chart bars are based upon a fixed time, the reference  Date-Time for market depth data  is the  <em>ending time</em> of the chart bar  based upon its time duration whether or not that time has yet been encountered.  So in other words in the case of a  5 minute chart bar, with the starting time of 12:00:00 the ending time will be 12:04:59.999999. A new bar does not begin until there is a new trade within the timeframe of that upcoming bar.</p>
+
+	 <p>When a chart is not replaying and the chart bars are based upon a variable timeframe, Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars, the reference Date-Time is the Date-Time of the last trade within that bar.</p>
+
+    <p>In all of these cases market depth  activity beyond the  reference Date-Time will <em>not</em> be displayed <em>until</em> a new chart bar is added to the chart which will only occur when there is a trade within the timeframe of that upcoming bar.</p>
+    
+    <p>  <em>In no case</em>, is market depth data ever missed or ignored.  Once a chart bar is added to the chart and contains the Date-Time of market depth data received, then that chart bar  will display that market depth  data according to the Input settings of the  <b>Market Depth Historical Graph</b> study. </p>
+    
+     <p>If you want to see the market depth data updates on the chart bars in all cases immediately as they occur, it is necessary for there to be a chart bar  that contains the timestamp of the market depth data updates. <</p>
+     
+      <p>In order to have chart bars immediately appear as there are updates with market depth data, and not trades, it is necessary to use a <a href = "indexb482.html?page=doc/RecordingModes.php" target="_blank" rel="noopener noreferrer">Data Recording Mode</a> suffix on the symbol. You need to use the  <a href = "indexb482.html?page=doc/RecordingModes.php#BID_ASK_TRADE_SYNC" target="_blank" rel="noopener noreferrer">-BID_ASK_TRADE_SYNC</a> data recording suffix.  There are others available as well.</p>
+      
+       <p> This data recording  suffix for the   <b>Market Depth Historical Graph</b> is only supported with version 2393 or higher.  You need to update to this version or higher for proper use of this recording suffix when using the  <b>Market Depth Historical Graph </b> study. </p>
+     
+      <p>In addition to this, it is necessary to set the  <a href = "index2c7f-2.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit</a>  to  <b>1 Tick</b>. This is essential. </p>
+     
+      <p>There is no other solution to seeing market depth data updates immediately on the chart bars, other than what is explained in the paragraphs above. </p>
+</section>
+
+<section class="h2" >
+    <h2 id="DrawingOfDepthQuantitiesAtPriceLevelsOnChartBarsWhereThereHaveBeenNoDepthUpdates">Drawing of Depth Quantities at Price Levels on Chart Bars where there have been No Depth Updates</h2>
+    
+    <div class="member-link">[<a href="#DrawingOfDepthQuantitiesAtPriceLevelsOnChartBarsWhereThereHaveBeenNoDepthUpdates">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <em>maximum</em> market depth quantity at a price level is only shown at the chart bar during the timeframe it occurred. For subsequent chart bars, if there has been no market depth update at that price level, but there have been updates at other price levels in that chart bar, then the <em>last</em> market depth quantity is displayed until it is <em>deleted by the market depth data stream</em> even if there has been no market depth update at that price level at a particular chart bar.</p>
+
+    <p>This is the standard functioning of the Market Depth Historical Graph study for price levels on chart bars where there have been no market depth updates but the prior depth levels have not been deleted by the data feed.</p>
+
+    <p>This is considered essential functioning of the study otherwise the Market Depth Historical Graph will have a broken appearance.</p>
+   
+    <p> This occurs whether <a href="#StudyInputs_ExtendLastKnownDepth">Extend Last Known Depth</a> is set to Yes or No.</p>
+      
+    <p>One thing you need to understand is that if Sierra Chart has lost the connection to the data feed and your computer has gone into a Sleep or Hibernate state and then comes out of that state hours or days later or whatever the timeframe is, the market depth levels at the last update still exist and can be extended forward until the time you get a connection to the data feed again by setting the Input <a href="#StudyInputs_ExtendLastKnownDepth">Extend Last Known Depth</a> to <b>Yes</b>.</p>
+
+    <p>This is why you must always disconnect Sierra Chart from the data feed to cause the current levels to be internally deleted before putting your computer to Sleep/Hibernate. </p>
+
+    <div style="text-align: center;"><a href="../images/marketdepthhistoricalgraphnoupdatesexample.png" rel="lightbox"><img src="../images/marketdepthhistoricalgraphnoupdatesexample.png" alt="" width="550" class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="ImprovingPerformance">Improving Performance</h2>
+    <div class="member-link">[<a href="#ImprovingPerformance">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To improve the drawing performance and therefore lower the CPU usage when using the Market Depth Historical Graph study, follow the below steps.</p>
+        
+        <ol>
+            <li>Go to the chart and select <b class="menu_item">Chart &gt;&gt;  Chart Settings &gt;&gt; Display</b>.</li>
+            
+            <li>Set the <b>Chart Update Interval in Milliseconds</b> to 1000 or higher.</li>
+
+            <li> Press <b>OK</b>.</li>
+            
+            <li>Open the <a href = "index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Study Settings window</a> for the  <b>Market Depth Historical Graph</b> study.</li>
+            
+            <li>Set the <b>Show Quantity Numbers</b> Input to <b>None</b> or <b>Only After Last Bar</b>.</li>
+            
+            <li>Set the <b>Maximum Levels to Display</b> Input to 20 or lower.</li>
+
+            <li> Press <b>OK</b> to close the <b>Study Settings</b> window.</li>
+        </ol>
+</section>
+
+<section class="h2">
+    <h2 id="DownloadingOfHistoricalMarketDepthData">Downloading Of Historical Market Depth Data</h2>
+    <div class="member-link">[<a href="#DownloadingOfHistoricalMarketDepthData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to enable the downloading of historical  market depth data from either the    <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> or the <a href = "indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a>.</p>
+        
+        <p>  Market depth data is maintained on Sierra Chart servers for a maximum of 180 days. Prior to that, the files are  automatically deleted. </p>
+        
+        <ol>
+            <li>Make sure you are running an up-to-date version of Sierra Chart.  Refer to the <a href = "indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate">Fast Update</a> instructions. </li>
+
+            <li>  Unless you are specifically wanting  to use the <b>Delayed Exchange Data Feed</b>, make sure <a href = "index2c7f.html?page=doc/DataSourceSettings.php#AllowSupportSierraChartDataFeeds">Allow Support for Sierra Chart Data Feeds</a> is enabled.</li>
+            
+            <li> Select <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings</b>. </li>
+            
+            <li> Set the  <b>Support Downloading Historical Market Depth Data</b> option to Yes.</li>
+            
+             <li> Set the  <b> Maximum Historical Market Depth Days to Download</b>  setting to the number of days you want to download. The larger the number, the longer it takes for market depth data to be downloaded.  This setting only exists in newer versions.  Make sure Sierra Chart is up-to-date.</li>
+             
+            <li>  Press  <b>OK</b>.</li>   
+            
+             <li>  When Sierra Chart is connected to the data feed and historical market depth data is required for a chart like when the <b>Market Depth Historical Graph</b>  study is on the chart, then historical market depth data will be downloaded for the current symbol of the chart. 
+             <br> <br>
+             In the case of a Continuous Futures Contract chart, historical market depth data <em>will not be downloaded</em>, for prior futures contracts loaded in the chart.</li>
+             
+             <li>There is the ability to re-download the historical market depth data from a particular Date-Time in the chart. You can add the command for that through <b class="menu_item">Global Settings &gt;&gt; Customize Chart Shortcut Menu</b>. 
+             <br> <br>
+             The name of the command is  <b>Download Depth Data from Date-Time</b>. To use this command, right click on the chart at the point in time you want to start the market depth data download at, and select the command.  This command only works to download market depth data for the current symbol of the chart.
+             <br> <br>
+             To download historical market depth data for prior futures contracts symbols in a   <a href = "index5c14.html?page=doc/ContinuousFuturesContractCharts.html">Continuous Futures Contract Chart</a>, you will need to open a separate chart for those individual prior futures contracts and download historical Market Depth for each of them.
+             </li>
+             
+             <li> To view the historical market depth data, add the  <b>Market Depth Historical Graph</b> study to the chart. Refer to <a href="#StepByStepInstructions">Step by Step Instructions</a>. </li>
+             
+            <li>If for some reason the downloaded market depth data is not displaying in the chart, then select <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b> to load it in,  <em>after</em> the historical market depth data download is complete.   You can monitor the progress of the data downloading through the  <b class="menu_item">Window &gt;&gt; Message Log</b>.</li>
+            
+            <li>The amount of market depth data available depends upon the exchange. Market depth data for CME Group is maintained for 180 days. Market depth data from NASDAQ TotalView is maintained for 31 days. </li>
+        </ol>
+</section>
+
+<section class="h2">
+    <h2 id="OtherRelatedUsefulStudies">Other Related Useful Studies</h2>
+    <div class="member-link">[<a href="#OtherRelatedUsefulStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Below are some studies which you may find useful to use along with the <b>Market Depth Historical Graph</b> study.</p>
+    
+    <ul>
+        <li><a href="index4e7e.html?page=doc/StudiesReference.php&amp;ID=355&amp;Name=Bid_Ask_Prices">Bid and Ask Prices Study</a></li>
+        <li><a href="indexa4f3.html?page=doc/StudiesReference.php&amp;ID=390&amp;Name=Large_Volume_Trade_Indicator">Large Volume Trade Indicator</a></li>
+        <li><a href="index29a2.html?page=doc/StudiesReference.php&amp;ID=141&amp;Name=Volume_by_Price">Volume by Price Study</a></li>
+        <li><a href="index4451.html?page=doc/GlobalTradeSettings.html#CustomizeChartTradeDOMColumns">Chart DOM Market Data Columns</a></li>
+    </ul>
+</section>
+
+<hr><p>*Last modified Wednesday, 21st June, 2023.</p><script type="text/javascript">
+
+      function HasStudyFileBeenModified(filemtime = '1687356096') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasStudyFileBeenModified',
+              'filemtime': filemtime,
+              'StudyID': '375',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+<script type="text/javascript" async src="../images/mathjaxb198.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudiesReference.php&ID=375 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:47:33 GMT -->
+</html>  

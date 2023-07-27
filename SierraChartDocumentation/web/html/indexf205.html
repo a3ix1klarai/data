@@ -1,0 +1,1970 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_MarketDataMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1642806286') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DTCMessages_MarketDataMessages.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Market Data Messages -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ExternalInterfaces.DTCProtocol">(Table of Contents) Data and Trading Communications (DTC) Protocol</a> &gt;&gt; <a  href="indexe379.html?page=doc/DTCMessageDocumentation.php">DTC Messages and Procedures</a> &gt;&gt; <a  href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php">Market Data Messages</a></h4> </div>     <h1 class="PageName">Market Data Messages</h1>
+
+<ul>
+    <li><a href="#Messages-MARKET_DATA_FEED_STATUS">MARKET_DATA_FEED_STATUS</a></li>
+    <li><a href="#Messages-MARKET_DATA_FEED_SYMBOL_STATUS">MARKET_DATA_FEED_SYMBOL_STATUS</a></li>
+    <li><a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a></li>
+    <li><a href="#Messages-MARKET_DATA_REJECT">MARKET_DATA_REJECT</a></li>
+    <li><a href="#Messages-MARKET_DATA_SNAPSHOT">MARKET_DATA_SNAPSHOT</a></li>
+
+    <li><a href="#Messages-MARKET_DATA_UPDATE_TRADE">MARKET_DATA_UPDATE_TRADE</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_TRADE_WITH_UNBUNDLED_INDICATOR_2">MARKET_DATA_UPDATE_TRADE_WITH_UNBUNDLED_INDICATOR_2</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_TRADE_NO_TIMESTAMP">MARKET_DATA_UPDATE_TRADE_NO_TIMESTAMP</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_TRADE_COMPACT">MARKET_DATA_UPDATE_TRADE_COMPACT</a></li>    
+    <li><a href="#Messages-MARKET_DATA_UPDATE_LAST_TRADE_SNAPSHOT">MARKET_DATA_UPDATE_LAST_TRADE_SNAPSHOT</a></li>
+    
+    <li><a href="#Messages-MARKET_DATA_UPDATE_BID_ASK">MARKET_DATA_UPDATE_BID_ASK</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_BID_ASK_NO_TIMESTAMP">MARKET_DATA_UPDATE_BID_ASK_NO_TIMESTAMP</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_BID_ASK_FLOAT_WITH_MICROSECONDS">MARKET_DATA_UPDATE_BID_ASK_FLOAT_WITH_MICROSECONDS</a></li>
+
+    <li><a href="#Messages-MARKET_DATA_UPDATE_SESSION_OPEN">MARKET_DATA_UPDATE_SESSION_OPEN</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_SESSION_HIGH">MARKET_DATA_UPDATE_SESSION_HIGH</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_SESSION_LOW">MARKET_DATA_UPDATE_SESSION_LOW</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_SESSION_SETTLEMENT">MARKET_DATA_UPDATE_SESSION_SETTLEMENT</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_SESSION_VOLUME">MARKET_DATA_UPDATE_SESSION_VOLUME</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_OPEN_INTEREST">MARKET_DATA_UPDATE_OPEN_INTEREST</a></li>
+
+    <li><a href="#Messages-MARKET_DATA_UPDATE_SESSION_NUM_TRADES">MARKET_DATA_UPDATE_SESSION_NUM_TRADES</a></li>
+    <li><a href="#Messages-MARKET_DATA_UPDATE_TRADING_SESSION_DATE">MARKET_DATA_UPDATE_TRADING_SESSION_DATE</a></li>
+    
+    <li><a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a></li>    
+    <li><a href="#Messages-MARKET_DEPTH_REJECT">MARKET_DEPTH_REJECT</a></li>
+    <li><a href="#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">MARKET_DEPTH_SNAPSHOT_LEVEL</a></li>
+    <li><a href="#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL_FLOAT">MARKET_DEPTH_SNAPSHOT_LEVEL_FLOAT</a></li>
+    <li><a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL">MARKET_DEPTH_UPDATE_LEVEL</a></li>
+    <li><a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS">MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS</a></li>
+    <li><a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL_NO_TIMESTAMP">MARKET_DEPTH_UPDATE_LEVEL_NO_TIMESTAMP</a></li>
+
+    <li><a href="#Messages-TRADING_SYMBOL_STATUS">TRADING_SYMBOL_STATUS</a></li>
+</ul>
+
+
+<hr>
+
+<section class="h2">
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_FEED_STATUS">MARKET_DATA_FEED_STATUS [s_MarketDataFeedStatus structure] Server  &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_FEED_STATUS">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The <b>MARKET_DATA_FEED_STATUS</b>  message is an optional message sent by the Server to indicate the overall status of the market data feed. This status applies to all  symbols that have been subscribed to for market data.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#MarketDataFeedStatusEnum">[MarketDataFeedStatusEnum]</a> <b>Status</b></td>
+                <td>    
+                    <p>This can be set to <b>MARKET_DATA_FEED_UNAVAILABLE</b>, to indicate the market data feed is presently not available. Or it can be set to <b>MARKET_DATA_FEED_AVAILABLE</b>, to indicate the market data feed has been restored.</p>
+
+                    <p>Upon a connection to the server, <b>MARKET_DATA_FEED_AVAILABLE</b> is assumed to be the status.  It is not until there has been expressly given <b>MARKET_DATA_FEED_UNAVAILABLE</b>, will the data feed be considered lost.</p>
+                </td>
+            </tr>
+        </table>
+    </div>    
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_FEED_SYMBOL_STATUS">MARKET_DATA_FEED_SYMBOL_STATUS [s_MarketDataFeed SymbolStatus structure] Server  &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_FEED_STATUS">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The <b>MARKET_DATA_FEED_SYMBOL_STATUS</b> message is an optional message sent by the Server to indicate status of the market data feed for a particular symbol.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#MarketDataFeedStatusEnum">[MarketDataFeedStatusEnum]</a> <b>Status</b></td>
+                <td>    
+                    <p>This can be set to <b>MARKET_DATA_FEED_UNAVAILABLE</b>, to indicate the market data feed is presently not available for the symbol. Or it can be set to <b>MARKET_DATA_FEED_AVAILABLE</b>, to indicate the market data feed has been restored for the symbol.</p>
+
+                    <p>Upon a connection to the server, <b>MARKET_DATA_FEED_AVAILABLE</b> is assumed to be the status.  It is not until there has been expressly given <b>MARKET_DATA_FEED_UNAVAILABLE</b>, will the market data feed for the symbol be considered lost.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the status in this message is for.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST [s_MarketDataRequest structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_REQUEST">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a>  message will subscribe to market data for a particular Symbol or request a market data snapshot. </p> 
+        
+        <p>The Server  can also send market depth data in response to this message and not require a <a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a>.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#RequestActionEnum">[RequestActionEnum]</a> <b>RequestAction</b></td>
+                <td>    
+                    <p>This needs to be set to <b>SUBSCRIBE</b>  to subscribe to market data for the Symbol from the Server. The Server will respond with an initial <a href="#Messages-MARKET_DATA_SNAPSHOT">MARKET_DATA_SNAPSHOT</a> message and then provide <b>MARKET_DATA_UPDATE_*</b> updates as necessary. </p>
+
+                    <p>To unsubscribe, use  <b>UNSUBSCRIBE</b>. </p>
+
+                    <p>To request only a  <a href="#Messages-MARKET_DATA_SNAPSHOT">MARKET_DATA_SNAPSHOT</a> message, set this to <b>SNAPSHOT</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the identifier which will be used in all of the market data response messages. This identifier is used so that the <b>Symbol</b> and  <b>Exchange</b>  do not have to be passed back  in response messages from the Server.   This makes the market data feed bandwidth efficient.</p> 
+
+                    <p>If the Server receives a <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> for a Symbol and Exchange to subscribe to data for, that is currently subscribed to and this SymbolID is different, then the Server needs to reject it.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>    
+                    <p>The Symbol that market data is requested for. Not set when unsubscribing.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>    
+                    <p>Optional Exchange. Not set when unsubscribing.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_REJECT">MARKET_DATA_REJECT [s_MarketDataReject structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_REJECT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The <a href="#Messages-MARKET_DATA_REJECT">MARKET_DATA_REJECT</a>  message is sent by the Server to the Client to reject a <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message for any reason.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>RejectText</b></td>
+                <td>    
+                    <p>Free-form text explaining the reason for the reject.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_SNAPSHOT">MARKET_DATA_SNAPSHOT [s_MarketDataSnapshot structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_SNAPSHOT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The Server sends the <a href="#Messages-MARKET_DATA_SNAPSHOT">MARKET_DATA_SNAPSHOT</a>  message to the Client immediately after a successful <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a>  message has been received from the Client and it has indicated to subscribe to the symbol or requested the snapshot of data.</p>
+
+        <p>Any changes to the data fields within the <b>MARKET_DATA_SNAPSHOT</b>  message during the trading session will be sent by the Server to the Client through the corresponding <b>MARKET_DATA_UPDATE_*</b> messages.</p>
+
+        <p>It is recommended that the <b>MARKET_DATA_SNAPSHOT</b> be sent by the Server at the start of a new trading session.</p>
+
+        <p>This message can be sent more often, however it is not intended to be sent frequently.</p>
+
+        <p>This message type does not signify a trade has occurred.  It should never be interpreted by the Client in that way.</p>
+
+        <p>There is no need to send this when there is a new High or Low during the trading session. The Server should use the <a href="#Messages-MARKET_DATA_UPDATE_SESSION_HIGH">MARKET_DATA_UPDATE_SESSION_HIGH</a> or  <a href="#Messages-MARKET_DATA_UPDATE_SESSION_LOW">MARKET_DATA_UPDATE_SESSION_LOW</a> messages instead.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>SessionSettlementPrice</b></td>
+                <td>    
+                    <p>The previous Settlement price when this message is sent before the market closes for the trading session. After the market has closed, this is the most recent Settlement price.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>SessionOpenPrice</b></td>
+                <td>    
+                    <p>The Opening price for the trading session.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>SessionHighPrice</b></td>
+                <td>    
+                    <p>The the High price for the trading session.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>SessionLowPrice</b></td>
+                <td>    
+                    <p>The Low price for the trading session.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>SessionVolume</b></td>
+                <td>    
+                    <p>The total Volume for the trading session.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SessionNumTrades</b></td>
+                <td>    
+                    <p>The number of Trades for the trading session.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to UINT_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>OpenInterest</b></td>
+                <td>    
+                    <p>Contains the Open Interest for futures and options.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to UINT_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>BidPrice</b></td>
+                <td>    
+                    <p>The latest best Bid price.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>AskPrice</b></td>
+                <td>    
+                    <p>The latest best Ask price.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>AskQuantity</b></td>
+                <td>    
+                    <p>The quantity of the orders at the Ask price.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>BidQuantity</b></td>
+                <td>    
+                    <p>The quantity of the orders at the Bid price.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>LastTradePrice</b></td>
+                <td>    
+                    <p>The most recent last trade price.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>LastTradeVolume</b></td>
+                <td>    
+                    <p>The quantity/volume of the most recent last trade.</p>
+
+                    <p>For binary encoding, if this field is not set it needs to be set to DBL_MAX. Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnsetMessageFields">Unset Message Fields</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMilliseconds">[t_DateTimeWithMilliseconds]</a> <b>LastTradeDateTime</b></td>
+                <td>    
+                    <p>The Date-Time of the last trade.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMilliseconds">[t_DateTimeWithMilliseconds]</a> <b>BidAskDateTime</b></td>
+                <td>    
+                    <p>The Date-Time of the last Bid and Ask quote data update.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime4Byte">[t_DateTime4Byte]</a> <b>SessionSettlementDateTime</b></td>
+                <td>    
+                    <p>The trading date the Settlement price is for. The time component is not normally considered relevant for this field.</p>
+
+                    <p>This field will be 0 if this field is not available from the data feed.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime4Byte">[t_DateTime4Byte]</a> <b>TradingSessionDate</b></td>
+                <td>    
+                    <p>This is the Date of the trading session that the data contained in this snapshot message is for.</p>
+
+                    <p>The time component is not normally considered relevant for this field. </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_TRADE">MARKET_DATA_UPDATE_TRADE [s_MarketDataUpdateTrade structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_TRADE">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The Server sends this market data feed message to the Client when a trade occurs.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum">[AtBidOrAskEnum]</a> <b>AtBidOrAsk</b></td>
+                <td>    
+                    <p>Indicator whether the trade occurred at the bid or ask.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>The price of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Volume</b></td>
+                <td>    
+                    <p>The volume of the trade.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMilliseconds">[t_DateTimeWithMilliseconds]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The Date-Time of the trade.</p>
+
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_TRADE_WITH_UNBUNDLED_INDICATOR_2">MARKET_DATA_UPDATE_TRADE_WITH_UNBUNDLED_INDICATOR_2 [s_MarketDataUpdateTradeWithUnbundledIndicator2 structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_TRADE_WITH_UNBUNDLED_INDICATOR_2">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client when a trade occurs.  This message has additional fields as compared to the <a href="#Messages-MARKET_DATA_UPDATE_TRADE">MARKET_DATA_UPDATE_TRADE</a> message and also supports microsecond time stamping.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>Price</b></td>
+                <td>    
+                    <p>The price of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>Volume</b></td>
+                <td>    
+                    <p>The volume of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMicrosecondsInt">[t_DateTimeWithMicrosecondsInt]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The timestamp of the trade in UNIX  microseconds time format.</p>
+                </td>
+            </tr>            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum8">[AtBidOrAskEnum8]</a> <b>AtBidOrAsk</b></td>
+                <td>    
+                    <p>Indicator whether the trade occurred at the Bid or Ask price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnbundledTradeIndicatorEnum">[UnbundledTradeIndicatorEnum]</a> <b>UnbundledTradeIndicator</b></td>
+                <td>  
+
+                    <p>This is an optional field. </p> 
+                    
+                    <p> For symbols on exchanges which support reporting individual trades which are part of a larger summary trade,  this message field is used. It indicates whether  the trade is part of a larger summary trrade and reported  as an unbundled individual trade.</p>
+                    
+                   <p>  The possible values are listed below. </p> 
+                   <ul>
+                       <li>UNBUNDLED_TRADE_NONE = 0</li>
+                       <li>FIRST_SUB_TRADE_OF_UNBUNDLED_TRADE = 1</li>
+                       <li>LAST_SUB_TRADE_OF_UNBUNDLED_TRADE = 2</li>
+                   </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TradeConditionEnum">[TradeConditionEnum]</a>  <b>TradeCondition</b></td>
+                <td>    
+                    <p> This is an optional field.   It usually applies to stock symbols.</p>
+                    <p>  This  field indicates a special condition which applies to the trade. The possible values are listed below.</p>
+                    <ul>
+                       <li>TRADE_CONDITION_NONE = 0</li>
+                       <li>TRADE_CONDITION_NON_LAST_UPDATE_EQUITY_TRADE = 1</li>
+                       <li>TRADE_CONDITION_ODD_LOT_EQUITY_TRADE = 2</li>
+                    </ul>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_TRADE_NO_TIMESTAMP">MARKET_DATA_UPDATE_TRADE_NO_TIMESTAMP [s_MarketDataUpdateTradeNoTimestamp structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_TRADE_NO_TIMESTAMP">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p> This message is optional.</p>
+        
+        <p>Sent by the Server to the Client when a trade occurs.  This message  is identical to the <a href="#Messages-MARKET_DATA_UPDATE_TRADE_WITH_UNBUNDLED_INDICATOR_2">MARKET_DATA_UPDATE_TRADE_WITH_UNBUNDLED_INDICATOR_2</a> message   except it does not have a timestamp.  It needs to be sent when there is no change with the timestamp for the trade as compared to the prior trade. </p>
+        
+        <p>When the Server sends this message to the Client, the Client needs to use the prior received  trade timestamp  to know what the timestamp is for this message.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                     <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+               
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>Price</b></td>
+                <td>    
+                   <p>The price of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>Volume</b></td>
+                <td>    
+                     <p>The volume of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum8">[AtBidOrAskEnum8]</a> <b>AtBidOrAsk</b></td>
+                <td>    
+                    <p>Indicator whether the trade occurred at the Bid or Ask price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#UnbundledTradeIndicatorEnum">[UnbundledTradeIndicatorEnum]</a> <b>UnbundledTradeIndicator</b></td>
+                <td>    
+                    <p>This is an optional field. </p> 
+                    
+                    <p> For symbols on exchanges which support reporting individual trades which are part of a larger summary trade,  this message field is used. It indicates whether  the trade is part of a larger summary trrade and reported  as an unbundled individual trade.</p>
+                    
+                   <p>  The possible values are listed below. </p> 
+                   <ul>
+                       <li>UNBUNDLED_TRADE_NONE = 0</li>
+                       <li>FIRST_SUB_TRADE_OF_UNBUNDLED_TRADE = 1</li>
+                       <li>LAST_SUB_TRADE_OF_UNBUNDLED_TRADE = 2</li>
+                   </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TradeConditionEnum">[TradeConditionEnum]</a>  <b>TradeCondition</b></td>
+                <td>    
+                    <p> This is an optional field.  It usually applies to stock symbols.</p>
+                    
+                    <p>  This  field indicates a special condition which applies to the trade. The possible values are listed below.</p>
+                   
+                   <ul>
+                       <li>TRADE_CONDITION_NONE = 0</li>
+                       <li>TRADE_CONDITION_NON_LAST_UPDATE_EQUITY_TRADE = 1</li>
+                       <li>TRADE_CONDITION_ODD_LOT_EQUITY_TRADE = 2</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_TRADE_COMPACT">MARKET_DATA_UPDATE_TRADE_COMPACT [s_MarketDataUpdateTradeCompact structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_TRADE_COMPACT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client when a trade occurs.  This message is a more compact <a href="#Messages-MARKET_DATA_UPDATE_TRADE">MARKET_DATA_UPDATE_TRADE</a>. For the price it uses a 4 byte float.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>Price</b></td>
+                <td>    
+                    <p>The price of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>Volume</b></td>
+                <td>    
+                    <p>The volume of the trade.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime4Byte">[t_DateTime4Byte]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The timestamp of the trade in UNIX time format.  This does not contain the milliseconds for compactness.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum">[AtBidOrAskEnum]</a> <b>AtBidOrAsk</b></td>
+                <td>    
+                    <p>Indicator whether the trade occurred at the Bid or Ask price.</p>
+                </td>
+            <tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_LAST_TRADE_SNAPSHOT">MARKET_DATA_UPDATE_LAST_TRADE_SNAPSHOT [s_MarketDataUpdateLastTradeSnapshot structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_LAST_TRADE_SNAPSHOT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the  Server to the Client  to update the last trade price, volume and date-time fields under conditions when there is not a trade.</p>
+         
+        <p>This message type does not signify a trade has occurred.  It should never be interpreted by the Client in that way.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>LastTradePrice</b></td>
+                <td>
+                    <p>The most recent last trade price.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>LastTradeVolume</b></td>
+                <td>
+                    <p>The quantity/volume of the most recent last trade.</p>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMilliseconds">[t_DateTimeWithMilliseconds]</a> <b>LastTradeDateTime</b></td>
+                <td>
+                    <p>The Date-Time of the last trade.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_BID_ASK">MARKET_DATA_UPDATE_BID_ASK [s_MarketDataUpdateBidAsk structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_BID_ASK">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The Server sends this market data feed message to the Client  when the best bid or ask price or size changes.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>BidPrice</b></td>
+                <td>    
+                    <p>The current Bid price. Leave unset if there is no price available.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>BidQuantity</b></td>
+                <td>    
+                    <p>The current number of contracts/shares at the bid price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>AskPrice</b></td>
+                <td>    
+                    <p>The current ask or offer price. Leave unset if there is no price available.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>AskQuantity</b></td>
+                <td>    
+                    <p>The current number of contracts/shares at the ask price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime4Byte">[t_DateTime4Byte]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The Date-Time of the Bid and Ask update. </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_BID_ASK_NO_TIMESTAMP">MARKET_DATA_UPDATE_BID_ASK_NO_TIMESTAMP [s_MarketDataUpdateBidAskNoTimeStamp structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_BID_ASK_NO_TIMESTAMP">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p> This message is optional.</p>
+        
+        <p>Sent by the Server to the Client  when there is an update to the Bid Ask prices  and/or quantities.  This message  is identical to the <a href="#Messages-MARKET_DATA_UPDATE_BID_ASK">MARKET_DATA_UPDATE_BID_ASK</a> message   except it does not have a timestamp.  It needs to be sent when there is no change with the timestamp for the Bid Ask update as compared to the prior  update. </p>
+        
+        <p>When the Server sends this message to the Client, the Client needs to use the prior received  Bid Ask update timestamp  to know what the timestamp is for this message.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>BidPrice</b></td>
+                <td>    
+                    <p>The current Bid price. Leave unset if there is no price available.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>BidQuantity</b></td>
+                <td>    
+                    <p>The current number of contracts/shares at the Bid price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>AskPrice</b></td>
+                <td>    
+                    <p>The current Ask or offer price. Leave unset if there is no price available.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>AskQuantity</b></td>
+                <td>    
+                    <p>The current number of contracts/shares at the Ask price.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_BID_ASK_FLOAT_WITH_MICROSECONDS">MARKET_DATA_UPDATE_BID_ASK_FLOAT_WITH_MICROSECONDS [s_MarketDataUpdateBidAskFloatWithMicroseconds structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_BID_ASK_FLOAT_WITH_MICROSECONDS">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p> This message is optional.</p>
+        
+        <p>Sent by the Server to the Client  when there is an update to the Bid Ask prices  and/or quantities.  This message  is identical to the <a href="#Messages-MARKET_DATA_UPDATE_BID_ASK">MARKET_DATA_UPDATE_BID_ASK</a> message   except it does not have a timestamp.  It needs to be sent when there is no change with the timestamp for the Bid Ask update as compared to the prior  update. </p>
+        
+        <p>When the Server sends this message to the Client, the Client needs to use the prior received  Bid Ask update timestamp  to know what the timestamp is for this message.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                
+                </td>
+            </tr>   
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>BidPrice</b></td>
+                <td>    
+                    <p>The current Bid price. Leave unset if there is no price available.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>BidQuantity</b></td>
+                <td>    
+                    <p>The current number of contracts/shares at the bid price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>AskPrice</b></td>
+                <td>    
+                    <p>The current ask or offer price. Leave unset if there is no price available.</p>
+                </td>
+            </tr> 
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>AskQuantity</b></td>
+                <td>    
+                    <p>The current number of contracts/shares at the ask price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMicrosecondsInt">[t_DateTimeWithMicrosecondsInt]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The timestamp of the trade in UNIX  microseconds time format.</p>
+                </td>
+            </tr>            
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_SESSION_OPEN">MARKET_DATA_UPDATE_SESSION_OPEN [s_MarketDataUpdateSessionOpen structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_SESSION_OPEN">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to update the session Open.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>The session Open price.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_SESSION_HIGH">MARKET_DATA_UPDATE_SESSION_HIGH [s_MarketDataUpdateSessionHigh structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_SESSION_HIGH">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to update the session High as the High price changes throughout the session.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>The session High price.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_SESSION_LOW">MARKET_DATA_UPDATE_SESSION_LOW [s_MarketDataUpdateSessionLow structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_SESSION_LOW">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to update the session Low as the Low price changes throughout the session.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>The session Low price.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_SESSION_SETTLEMENT">MARKET_DATA_UPDATE_SESSION_SETTLEMENT [s_MarketDataUpdateSessionSettlement structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_SESSION_SETTLEMENT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to update the session settlement price when the session settlement price changes.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>The settlement price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime4Byte">[t_DateTime4Byte]</a> <b>DateTime</b></td>
+                <td>    
+                    <p> That trading date the settlement price is for. The time component is not normally considered relevant in this case.  </p>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_SESSION_VOLUME">MARKET_DATA_UPDATE_SESSION_VOLUME [s_MarketDataUpdateSessionVolume structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_SESSION_VOLUME">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client when the session trade Volume needs to be updated.</p>
+
+        <p>The recommended rule for the Server to notify the Client of a change with the session trade volume to maintain bandwidth efficiency, is as follows: When a trade occurs for a symbol subscribed to, the Server will send a <a href="#Messages-MARKET_DATA_UPDATE_TRADE">MARKET_DATA_UPDATE_TRADE</a> message to the Client. The Client should then increment its session trade volume value for the symbol  by the value in the <b> Volume </b> field in this message.</p>
+
+        <p>The Server will assume the Client is doing this. Therefore, when a trade occurs and the session trade volume does not equal the prior session trade volume plus the Volume  for the most recent trade sent to the Client, then the Server must send out a <b>MARKET_DATA_UPDATE_SESSION_VOLUME </b> message to the client since the client calculation of the session trade volume is no longer correct.</p>
+
+        <p>It is assumed that the reason for this inconsistency is due to trades included within the session trade volume which have not been sent out as normal trades.  </p>
+
+        <p>The Server should also send this message out at the frequency that the Server determines, such as every minute if there also has been a trade at that time.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Volume</b></td>
+                <td>    
+                    <p>The total Volume for the session.</p>
+                </td>
+            </tr>
+        </table>
+    </div>  
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_OPEN_INTEREST">MARKET_DATA_UPDATE_OPEN_INTEREST [s_MarketDataUpdateOpenInterest structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_OPEN_INTEREST">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The  <a href="#Messages-MARKET_DATA_UPDATE_OPEN_INTEREST">MARKET_DATA_UPDATE_OPEN_INTEREST</a> message is sent by the Server to the Client to update the OpenInterest field previously sent through the <a href="#Messages-MARKET_DATA_SNAPSHOT">MARKET_DATA_SNAPSHOT</a> message.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>OpenInterest</b></td>
+                <td>    
+                    <p>The open interest for the symbol.</p>
+                </td>
+            </tr>
+        </table>
+    </div>       
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_SESSION_NUM_TRADES">MARKET_DATA_UPDATE_SESSION_NUM_TRADES [s_MarketDataUpdateSessionNumTrades structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_SESSION_NUM_TRADES">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to update the trading session number of trades.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>NumTrades</b></td>
+                <td>    
+                    <p>The number of trades which have occurred during the current trading session.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_TRADING_SESSION_DATE">MARKET_DATA_UPDATE_TRADING_SESSION_DATE [s_MarketDataUpdateTradingSessionDate structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_TRADING_SESSION_DATE">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to update the trading session Date.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime4Byte">[t_DateTime4Byte]</a> <b>Date</b></td>
+                <td>    
+                    <p>The date of the current trading session.  The time component is not normally considered relevant in this case.  </p>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST [s_MarketDepthRequest structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_REQUEST">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#RequestActionEnum">[RequestActionEnum]</a> <b>RequestAction</b></td>
+                <td>    
+                    <p>This needs to be set to <b>SUBSCRIBE</b> to subscribe to market data for the Symbol from the Server. The server will respond with an initial <a href="#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">MARKET_DEPTH_SNAPSHOT_LEVEL</a> message and then provide <a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL">MARKET_DEPTH_UPDATE_LEVEL</a> updates as necessary. </p>
+
+                    <p>To unsubscribe, use <b>UNSUBSCRIBE</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the identifier which will be used in all of the market depth data response messages.</p>
+
+                    <p>This SymbolID can be the same as the one used in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message for the same Symbol and Exchange.</p>
+
+                    <p>This identifier is used so that the Symbol does not have to be passed back  in response messages from the Server. If the Server receives a <a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> for a Symbol and Exchange to subscribe to market depth data for, that is currently subscribed to and this SymbolID is different, then the Server should reject it.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>    
+                    <p>The symbol for the market depth request. Not set when unsubscribing.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>    
+                    <p>The optional exchange for the symbol. Not set when unsubscribing.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int32">[int32]</a> <b>NumLevels</b></td>
+                <td>    
+                    <p>Number of depth levels requested. Not set when unsubscribing.</p>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+   
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DEPTH_REJECT">MARKET_DEPTH_REJECT [s_MarketDepthReject structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_REJECT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+
+        <p>The <b>MARKET_DEPTH_REJECT</b>  message is sent by the Server to the Client to reject a <a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message for any reason.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>RejectText</b></td>
+                <td>    
+                    <p>Free-form text explaining the reason for the reject.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+   
+    <div class="h3">
+        <h3 id="Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">MARKET_DEPTH_SNAPSHOT_LEVEL [s_MarketDepthSnapshotLevel structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is a message sent by Server to provide the initial market depth data entries to the Client after the  Client subscribes to market data or separately subscribes to market depth data. The Client will need to separately subscribe to market depth data if the Server requires it.</p> 
+
+        <p>Each message provides a single entry of depth data. Therefore, the Server will send multiple <b>MARKET_DEPTH_SNAPSHOT_LEVEL</b> messages in a series in order for the Client to build up its initial market depth book.</p>
+
+        <p>The first message will be identified by the <b>IsFirstMessageInBatch</b>  field being set to 1. The last message will be identified by the <b>IsLastMessageInBatch</b>  field being set to 1.</p>
+
+        <p>In the case where the market depth book is empty, the Server still needs to send through one single message with the <b>SymbolID</b> set, <b>IsFirstMessageInBatch</b> equal to 1 and <b>IsLastMessageInBatch</b> equal to 1. All other members will be at the default values. The  Client will understand this as an empty book.</p>
+
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a>/<a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>   
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum">[AtBidOrAskEnum]</a> <b>Side</b></td>
+                <td>    
+                    <p>Set to AT_BID = 1 if this is a bid side market depth entry. Set to  AT_ASK = 2, if this is an ask side market depth entry.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>This is the price of the market depth entry.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>This is the quantity of orders at the Price.</p>
+                </td>
+            </tr> 
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Level</b></td>
+                <td>    
+                    <p>This indicates the level of the price within the market depth book. The minimum value  is 1. There is no maximum value. A value of 1 is considered the best  bid or ask data.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>IsFirstMessageInBatch</b></td>
+                <td>    
+                    <p>Set to 1 if this is the first message in the batch of messages.</p>
+                </td>
+            </tr>            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>IsLastMessageInBatch</b></td>
+                <td>    
+                    <p>Set to 1 if this is the last message in a batch of messages. If there is only a single message to be sent, in case the market depth book is empty, then IsFirstMessageInBatch will equal 1 and IsLastMessageInBatch will equal 1.</p>
+                </td>
+            </tr>            
+
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DEPTH_SNAPSHOT_LEVEL_FLOAT">MARKET_DEPTH_SNAPSHOT_LEVEL_FLOAT [s_MarketDepthSnapshotLevelFloat structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL_FLOAT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is a message sent by Server to provide the initial market depth data entries to the Client after the  Client subscribes to market data or separately subscribes to market depth data. The Client will need to separately subscribe to market depth data if the Server requires it.</p> 
+
+        <p>Each message provides a single entry of depth data. Therefore, the Server will send multiple <b>MARKET_DEPTH_SNAPSHOT_LEVEL_FLOAT</b> messages in a series in order for the Client to build up its initial market depth book.</p>
+
+        <p>The first message will be identified by the <b>IsFirstMessageInBatch</b>  field being set to 1. The last message will be identified by the <b>IsLastMessageInBatch</b>  field being set to 1.</p>
+
+        <p>In the case where the market depth book is empty, the Server still needs to send through one single message with the <b>SymbolID</b> set, <b>IsFirstMessageInBatch</b> equal to 1 and <b>IsLastMessageInBatch</b> equal to 1. All other members will be at the default values. The  Client will understand this as an empty book.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a>/<a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum8">[AtBidOrAskEnum8]</a> <b>Side</b></td>
+                <td>    
+                    <p>Set to AT_BID = 1 if this is a bid side market depth entry. Set to  AT_ASK = 2, if this is an ask side market depth entry.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>Price</b></td>
+                <td>    
+                   <p>This is the price of the market depth entry.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>Quantity</b></td>
+                <td>
+                    <p>This is the quantity of orders at the Price.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#FinalUpdateInBatchEnum">[FinalUpdateInBatchEnum]</a> <b>FinalUpdateInBatch</b></td>
+                <td>    
+                    <p> An indicator whether this is the final message or not in a batch of updates.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[uint32_t]</a> <b>NumOrders</b></td>
+                <td>    
+                    <p> The number of orders at the <b>Price</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Level</b></td>
+                <td>    
+                    <p>This indicates the level of the price within the market depth book. The minimum value  is 1. There is no maximum value. A value of 1 is considered the best  bid or ask data.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DEPTH_UPDATE_LEVEL">MARKET_DEPTH_UPDATE_LEVEL [s_MarketDepthUpdateLevel structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to  <b>Update/Insert</b> or <b>Delete</b> a particular market depth price level in the market depth book maintained by the Client.</p>
+
+        <p>Each <b>MARKET_DEPTH_UPDATE_LEVEL</b> message updates one level of market depth on one side. An insert/update/delete model is used for market depth.</p>
+
+        <p>The Client will need to determine the based upon the price, what particular market depth level is being updated, inserted or deleted.</p>
+
+        <p>It is for this reason, that an insert/update is considered as one update type since it is possible to determine whether it is an insert or update based upon the existence of the price level in the existing market depth book on the Client side.  </p>
+		
+		<p>What this means is that when the <b>UpdateType</b>  field is <b>MARKET_DEPTH_INSERT_UPDATE_LEVEL</b>, it is considered an insert if the price level is not found on the particular side of the  market depth being updated. It is considered an update, if the price level is found on the particular side of market depth being updated.</p>
+		
+		 <p>  This message uses  a double datatype for the  <b>Price </b> field. 	There is no level index.  It is the responsibility of the  Client to determine where in its market depth array it is maintaining  where the insert/update/delete operation needs to occur.  </p> 
+         
+         <p>Since floating-point comparisons are not always precise, there should be a comparison made only to the number of decimal places the symbol  specifies in its security definition. This can be determined through the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE::PriceDisplayFormat</a> field. </p>
+
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum">[AtBidOrAskEnum]</a> <b>Side</b></td>
+                <td>    
+                    <p>Specifies whether the side being updated is the Bid (AT_BID)  or Ask (AT_ASK).</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price</b></td>
+                <td>    
+                    <p>The price level to insert, update or delete.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>The number of shares/contracts at the Price level. This will be 0 in the case when <b>UpdateType</b> is set to  <b>MARKET_DEPTH_DELETE_LEVEL</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#MarketDepthUpdateTypeEnum">[MarketDepthUpdateTypeEnum]</a> <b>UpdateType</b></td>
+                <td>    
+                    <p>Specifies whether this is a <b>MARKET_DEPTH_INSERT_UPDATE_LEVEL</b>  operation or a  <b>MARKET_DEPTH_DELETE_LEVEL</b> operation.</p>
+
+                    <p><b>MARKET_DEPTH_INSERT_UPDATE_LEVEL</b>: Insert or update in the market depth book on the specified side, the particular  Price and Volume specified.  It is an insert operation of the price level does not exist. It is an update operation if the price level already exists. In the case of insert, the other levels in the market depth book need to be shifted to make room for the new level.</p>
+
+                    <p><b>MARKET_DEPTH_DELETE_LEVEL</b>:  Remove from the market depth book on the specified side, the specified Price level. The other levels need to be shifted to fill in the missing level. In this particular case the Quantity is ignored and will be 0.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMilliseconds">[t_DateTimeWithMilliseconds]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The Date-Time of the market depth update.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[uint32_t]</a> <b>NumOrders</b></td>
+                <td>    
+                    <p> The number of orders at the <b>Price</b>.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS">MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS [s_MarketDepthUpdateLevelFloatWithMilliseconds structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to  Update/Insert or Delete a particular market depth price level in the market depth book maintained by the Client.</p>
+
+        <p> This message is a more compact version of the <a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL">MARKET_DEPTH_UPDATE_LEVEL</a> message. For the <b>Price</b> and <b>Quantity</b> fields, it uses a <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">4 byte float</a> for compactness.  It also supports millisecond precision for the timestamp.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTimeWithMillisecondsInt">[t_DateTimeWithMillisecondsInt]</a> <b>DateTime</b></td>
+                <td>    
+                    <p>The Date-Time of the market depth update with millisecond precision.</p>
+                    
+                    <p> This is an integer representing the number of milliseconds since the UNIX Epoch. </p>
+                </td>
+            </tr>            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#AtBidOrAskEnum">[AtBidOrAskEnum]</a> <b>Side</b></td>
+                <td>    
+                    <p>Specifies whether the side being updated is the Bid (AT_BID)  or Ask (AT_ASK).</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>Price</b></td>
+                <td>    
+                    <p>The price level to insert, update or delete.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>The number of shares/contracts at the Price level. This will be 0 in the case when <b>UpdateType</b> is set to  <b>MARKET_DEPTH_DELETE_LEVEL</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#MarketDepthUpdateTypeEnum">[MarketDepthUpdateTypeEnum]</a> <b>UpdateType</b></td>
+                <td>    
+                    <p>Specifies whether this is a <b>MARKET_DEPTH_INSERT_UPDATE_LEVEL</b>  operation or a  <b>MARKET_DEPTH_DELETE_LEVEL</b> operation.</p>
+
+                    <p><b>MARKET_DEPTH_INSERT_UPDATE_LEVEL</b>: Insert or update in the market depth book on the specified side, the particular  Price and Volume specified.  It is an insert operation of the price level does not exist. It is an update operation if the price level already exists. In the case of insert, the other levels in the market depth book need to be shifted to make room for the new level.</p>
+
+                    <p><b>MARKET_DEPTH_DELETE_LEVEL</b>:  Remove from the market depth book on the specified side, the specified Price level. The other levels need to be shifted to fill in the missing level. In this particular case the Quantity is ignored and will be 0.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[uint32_t]</a> <b>NumOrders</b></td>
+                <td>    
+                    <p> The number of orders at the <b>Price</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#FinalUpdateInBatchEnum">[FinalUpdateInBatchEnum]</a> <b>FinalUpdateInBatch</b></td>
+                <td>    
+                    <p> An indicator whether this is the final message or not in a batch of updates.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-MARKET_DEPTH_UPDATE_LEVEL_NO_TIMESTAMP">MARKET_DEPTH_UPDATE_LEVEL_NO_TIMESTAMP [s_MarketDepthUpdateLevelNoTimestamp structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL_NO_TIMESTAMP">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the Server to the Client to  <b>Update/Insert</b> or <b>Delete</b> a particular market depth price level in the market depth book maintained by the Client.</p>
+		
+		 <p>This message is identical  to the <a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL">MARKET_DEPTH_UPDATE_LEVEL</a>  message except it has no timestamp field. It needs to be sent when there is no change with the timestamp for the market depth update as compared to the prior update.</p>
+        
+        <p>When the Server sends this message to the Client, the Client needs to use the prior received  market depth update timestamp  to know what the timestamp is for this message.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                     <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DEPTH_REQUEST">MARKET_DEPTH_REQUEST</a> message which corresponds to the  Symbol that the data in this message is for.</p>     
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int8">[uint8_t]</a> <b>Side</b></td>
+                <td>    
+                    <p>Specifies whether the side being updated is the Bid (AT_BID)  or Ask (AT_ASK).</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a> <b>Price</b></td>
+                <td>
+                    <p>The price level to insert, update or delete.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>The number of shares/contracts at the Price level. This will be 0 in the case when <b>UpdateType</b> is set to  <b>MARKET_DEPTH_DELETE_LEVEL</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#FinalUpdateInBatchEnum">[FinalUpdateInBatchEnum]</a> <b>FinalUpdateInBatch</b></td>
+                <td>    
+                    <p> An indicator whether this is the beginning or final update in a batch of updates.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>NumOrders</b></td>
+                <td>    
+                    <p> The number of orders at the <b>Price</b>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#MarketDepthUpdateTypeEnum">[MarketDepthUpdateTypeEnum]</a> <b>UpdateType</b></td>
+                <td>    
+                    <p>Specifies whether this is a <b>MARKET_DEPTH_INSERT_UPDATE_LEVEL</b>  operation or a  <b>MARKET_DEPTH_DELETE_LEVEL</b> operation.</p>
+
+                    <p><b>MARKET_DEPTH_INSERT_UPDATE_LEVEL</b>: Insert or update in the market depth book on the specified side, the particular  Price and Volume specified.  It is an insert operation of the price level does not exist. It is an update operation if the price level already exists. In the case of insert, the other levels in the market depth book need to be shifted to make room for the new level.</p>
+
+                    <p><b>MARKET_DEPTH_DELETE_LEVEL</b>:  Remove from the market depth book on the specified side, the specified Price level. The other levels need to be shifted to fill in the missing level. In this particular case the Quantity is ignored and will be 0.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="h3">
+        <h3 id="Messages-TRADING_SYMBOL_STATUS">TRADING_SYMBOL_STATUS [s_TradingSymbolStatus structure] Server &gt;&gt; Client</h3>
+        <div class="member-link">[<a href="#Messages-TRADING_SYMBOL_STATUS">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>Sent by the  Server to the Client to indicate the status of the symbol in regards to whether trading is open  or closed or some other intermediate state.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int32">[unsigned int32]</a> <b>SymbolID</b></td>
+                <td>    
+                    <p>This is the same SymbolID sent by the Client in the <a href="#Messages-MARKET_DATA_REQUEST">MARKET_DATA_REQUEST</a> message which corresponds to the  Symbol that the status in this message is for.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TradingStatusEnum">[TradingStatusEnum]</a> <b>Status</b></td>
+                <td>    
+                    <p>The current trading status for the symbol. Can be one of the following.</p>
+                    
+                 <ul>
+                    <li>TRADING_STATUS_UNKNOWN = 0</li>
+                    <li>TRADING_STATUS_PRE_OPEN = 1</li>
+                    <li>TRADING_STATUS_OPEN = 2</li>
+                    <li>TRADING_STATUS_CLOSE = 3</li>
+                    <li>TRADING_STATUS_TRADING_HALT = 4</li>
+                 </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<hr><p>*Last modified Friday, 21st January, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_MarketDataMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:54 GMT -->
+</html>  

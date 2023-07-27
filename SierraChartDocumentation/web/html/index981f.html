@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/Scaling.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1687426668') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/Scaling.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Chart Scale and Scale Adjusting -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index981f.html?page=doc/Scaling.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index981f.html?page=doc/Scaling.html">Chart Scale and Scale Adjusting</a></h4> </div>     <h1 class="PageName">Chart Scale and Scale Adjusting</h1>
+
+<ul>
+    <li><a href="#ScaleWindow">Scale Window</a>
+        <ul>
+            <li><a href="#ScaleWindowMainPriceGraph">Opening the Scale Settings Window for the Main Price Graph</a></li>
+            <li><a href="#ScaleWindowValuesScale">Accessing  Scale Settings through the Values Scale</a></li>
+            <li><a href="#ScaleWindowStudy">Opening the Scale Settings Window For a Study</a></li>
+            <li><a href="#ScaleType">Scale Type</a>
+                <ul>
+                    <li><a href="#LinearScaleType">Linear</a></li>
+                    <li><a href="#LogarithmicScaleType">Logarithmic</a></li>
+                </ul>
+            </li>
+            <li><a href="#ScaleRange">Scale Range</a>
+                <ul>
+                    <li><a href="#ScaleRange_Automatic">Automatic</a></li>
+                    <li><a href="#ScaleRange_Independent">Independent</a></li>
+                    <li><a href="#ConstantRange_ScaleRange">Constant Range</a>
+						<ul>
+						    <li><a href="#ConstantRangeScaleModes_Manual">Constant Range Scale Modes &gt;&gt; Manual Mode</a></li>
+						    <li><a href="#ConstRangeKeepLastBarInView">Constant Range Scale Modes &gt;&gt; Keep The Last Bar Within View</a></li>
+						    <li><a href="#ConstantRangeScaleModes_ReCenterToLastBarOnUpdate">Constant Range Scale Modes &gt;&gt; Re-Center To The Last Bar On Every Update</a></li>
+						    <li><a href="#ConstRangeLastPrice">Constant Range Scale Modes &gt;&gt; Re-Center To The Last Price On Every Update</a></li>
+						    <li><a href="#ConstantRangeScaleModes_ReCenterWhenLastBarExceedsCertainNumberOfTicks">Constant Range Scale Modes &gt;&gt; Re-Center When The Last Bar Exceeds A Certain Number Of Ticks From The Center</a></li>
+						</ul>
+					</li>
+                    <li><a href="#ConstRangeReCenterChartScroll">Re-Center On Chart Scroll</a></li>
+                    <li><a href="#ScaleRange_UserDefined">User Defined</a></li>
+                    <li><a href="#SameAsRegion">Same As Region</a></li>
+                    <li><a href="#ScaleRange_AutomaticZeroBased">Automatic Zero-Based</a></li>
+                    <li><a href="#ScaleRange_AutomaticZeroCentered">Automatic Zero Centered</a></li>
+                </ul>
+            </li>
+            <li><a href="#ScaleIncrement">Scale Increment</a></li>
+            <li><a href="#HorizGridLineIncrement">Horizontal Grid Line Increment</a></li>
+            <li><a href="#NumberOfIncrementsForSecondaryGrid">Number of Increments for Secondary Grid</a></li>
+            <li><a href="#ScalePaddingPercentage">Scale Padding Percentage</a></li>
+            <li><a href="#ReduceInteractiveScaleRangePaddingOnNewHighLow">Reduce Interactive Scale Range Padding on New High/Low</a></li>
+            <li><a href="#IncludeInScaleWidthCalculation">Include in Scale Width Calculation</a></li>
+            <li><a href="#UseInLeftSideScale">Use In Left Side Scale</a></li>
+            <li><a href="#ConstantRangeScaleRecenterOnInteractiveScalingChange">Constant Range Scale Recenter on Interactive Scaling Change</a></li>
+        </ul>
+    </li>
+    <li><a href="#EffectOfWindowSize">Effect Of Window Sizes On Graph Display</a></li>
+    <li><a href="#BasingScaleOnlyOnPriceBars">Basing Scale Only on Price Bars</a></li>
+    <li><a href="#MaintainingSameScaleForMultipleGraphsInChartRegion">Maintaining Same Scale for Multiple Graphs in Chart Region</a></li>
+    <li><a href="#DisplayingMultipleGraphsInChartRegion">Displaying Multiple Graphs in Chart Region</a></li>
+    <li><a href="#ConstantRelationship">X &amp; Y Constant Relationship Scaling</a></li>
+    <li><a href="#UsingConstRangeScale">Using a Constant Range Scale</a></li>    
+    <li><a href="#UsingFixedValuesForTopAndBottomOfScaleRange">Using Fixed Values for Top and Bottom of Scale Range</a></li>  
+
+    <li><a href="#InteractiveScaling">Interactive Scaling</a>
+        <ul>
+            <li><a href="#InteractiveScalingExpandCompress">Interactive Scale Range - Expand/Compress Scale</a>
+				<ul>
+				    <li><a href="#InteractiveScaleRangeDoesNotWorkWithLogarithmic">Interactive Scale Range  Does Not Work with Logarithmic Scale Type</a></li>   
+				</ul>
+			</li>
+            <li><a href="#InteractiveScalingMoveUpDown">Interactive Scale Move -  Move Scale Up and Down</a></li>
+            <li><a href="#InteractiveScalingResetting">Resetting the Scale</a></li>
+            <li><a href="#InteractiveScalingLocking">Locking the Scale</a></li>
+            <li><a href="#InteractiveScalingInvertingMode">Inverting the Scale Mode</a></li>
+            <li><a href="#StudiesNotAdjustingWithScaleRangeMoveChanges">Studies Not Adjusting with Scale  Range/Move  Changes</a></li>
+            <li><a href="#LeftSideScale_InteractiveScaleRange_Move">Left Side Scale - Interactive Scale Range/Move</a></li>
+            <li><a href="#InteractiveScalingInstructionalImages">Instructional Images</a></li>
+        </ul>
+    </li>
+    <li><a href="#ResetScales">Chart Bars or Studies Not Completely within View, Not Displayed, or Cut Off. Reset Scales</a></li>
+    <li><a href="index3c50.html?page=doc/ChartTrading.html#ScalingtheChartDOM">Scaling the Chart DOM</a> (Opens a new page)</li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="ScaleWindow">Scale Window</h2>
+    <div class="member-link">[<a href="#ScaleWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b>Scale Window</b> is for setting the scale to use for the main price graph or study graphs on the chart. Each graph in the chart has its own Scale Settings. </p>
+
+    <div style="text-align: center;"><a href="../images/scalewindow.png" rel="lightbox"><img src="../images/scalewindow.png" alt="" class="screenshot" loading="lazy" width="485"></a></div>
+
+    <section class="h3">
+        <h3 id="ScaleWindowMainPriceGraph">Opening the Scale Settings Window for the Main Price Graph</h3>
+        <div class="member-link">[<a href="#ScaleWindowMainPriceGraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to open the Scale Settings window for a Chart or Trade DOM window.</p>
+
+        <ol>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu.</li>
+            <li>Select the  <b class="menu_item">Scale</b> tab from the top menu.</li>
+            <li>Press the <b>Scale</b> button at the top of the tab. Refer to the image below for its location.</li>
+            <li>Adjust the settings as required.</li>
+            <li>Press <b>OK</b>.</li>
+            <li>Press <b>OK</b>.</li>
+        </ol>
+
+        <div style="text-align: center;"><a href="../images/chartsettingsscalebutton.png" rel="lightbox"><img src="../images/chartsettingsscalebutton.png" alt="" class="screenshot" loading="lazy" width="900"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScaleWindowValuesScale">Accessing  Scale Settings through the Values Scale</h3>
+        <div class="member-link">[<a href="#ScaleWindowValuesScale">Link</a>] - [<a href="#top">Top</a>]</div>
+        <ol>
+            <li>Right-click on the  Values Scale on the right side of the chart.  The Scale menu will display. </li>
+            <li>Select the Scale Range that you require.</li>
+            <li>Or select <b> Scale</b>  to open the Scale Settings window.</li>
+
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScaleWindowStudy">Opening the Scale Settings Window For a Study</h3>
+        <div class="member-link">[<a href="#ScaleWindowStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li>Select <b class="menu_item">Analysis &gt;&gt; Studies</b>.</li>
+            <li>Select the particular study you want to modify the <b>Scale</b> settings for, in the   <b>Studies to Graph</b> list.</li>
+            <li>Press the <b>Settings</b> button.</li>
+            <li>Select the <b>Settings and Inputs</b> tab.</li>
+            <li>Press the <b>Scale</b> button.</li>
+            <li>Adjust the settings as required.</li>
+            <li>Press <b>OK</b> to close the Scale Settings window.</li>
+            <li>Press <b>OK</b>.</li>
+            <li>To quickly access the Study Settings window for a study refer to <a href="index9099.html?page=doc/ChartStudies.html#QuickAccess">Quick Access to Study Settings</a> on the Chart Studies page.</li>
+
+        </ol>
+
+        <div style="text-align: center;"><a href="../images/studyscalesettingswindow.png" rel="lightbox"><img src="../images/studyscalesettingswindow.png" class="screenshot" loading="lazy" alt="" width="500"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScaleType">Scale Type</h3>
+        <div class="member-link">[<a href="#ScaleType">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        
+        <p> The   <b>Scale Type </b> settings are located in the Scale window. To open the Scale window for the main price graph, or a study,  or by using other methods, refer to the <a href="#ScaleWindow">Scale Window</a>  section. </p>
+
+        <section class="h4">
+            <h4 id="LinearScaleType">Linear</h4>
+            <div class="member-link">[<a href="#LinearScaleType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>With a <em>linear</em> scale, all values in the graph are evenly spaced across the region.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id = "LogarithmicScaleType">Logarithmic</h4>
+            <div class="member-link">[<a href="#LogarithmicScaleType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>With a <em>logarithmic</em> scale, smaller values take more space in the region as compared with higher values. This gives a clearer view of a graph when there has been a large percentage increase in prices or values over a period of time.</p>
+
+            <p>It is possible to easily change to a logarithmic scale for the main price graph of the chart through  <b class="menu_item">Chart &gt;&gt; Linear/Logarithmic Scale</b>. Or you can add the Logarithmic Control Bar button through <b class="menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar #</b>.</p>
+
+            <p>When a logarithmic scale is enabled for the chart you will see <b>Log</b> displayed in the lower right of the chart.</p>
+
+            <p> When any of the data in the visible chart bars has a negative or 0 value, then logarithmic scaling is automatically disabled. This also applies to studies as well which are set to use a logarithmic scale.</p>
+
+            <div style="text-align: center;"><a href="../images/logscaleenabled.png" rel="lightbox"><img src="../images/logscaleenabled.png" class="screenshot" loading="lazy" alt="" width="400"></a></div>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScaleRange">Scale Range (Scale Settings)</h3>
+        <div class="member-link">[<a href="#ScaleRange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Scale Range setting specifies how the highest and lowest  value of the chart scale for the  Main Price Graph or a   Study is determined. </p>
+
+        <p> To set the Scale Range for the main price graph, refer to <a href="#ScaleWindowMainPriceGraph">Opening the Scale Settings Window for the Main Price Graph</a>. To set the Scale Range for a study, refer to <a href="#ScaleWindowStudy">Opening the Scale Settings Window For a Study</a>. </p>
+
+        <p>  If you have used <a href="#InteractiveScaling">Interactive Scale Move</a> to move the vertical scale of the chart up or down,  this will alter the scale from the default that the selected Scale Range  setting has set for the visible scale.  In this case, right-click on the  Values Scale of numbers on the right side of the chart and select <b>Reset</b> to remove any <b>Interactive Scale Move</b> adjustments, or double-click the  Values Scale on the right side of the chart to perform a reset.</p>
+
+        <section class="h4">
+            <h4 id="ScaleRange_Automatic">Automatic (Scale Range)</h4>
+            <div class="member-link">[<a href="#ScaleRange_Automatic">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The top and bottom values for the scale range for the price or study graph are automatically set. </p>
+
+            <p>The top and bottom values are the highest high and the lowest low  respectively, of all graphs in the Chart Region which have their <b>Scale Range</b> set to <b>Automatic</b>.</p>
+
+
+            <p>The <b>Interactive Scale Locked  </b> command on the right click shortcut menu on the right side Values Scale, does not lock  the  Automatic scale top and bottom values. These values will be updated as needed according to the graphs in the Chart Region. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ScaleRange_Independent">Independent (Scale Range)</h4>
+            <div class="member-link">[<a href="#ScaleRange_Independent">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The top and bottom values for the scale for the graph are automatically set and are determined from the study graph itself and not other graphs which are in the same region. This allows you to overlay multiple graphs in a region which have different scale ranges and values. For example you can overlay a stochastic on the main price graph in region 1. To do this you would set the stochastic to display in region 1 and set its scale to Independent.</p>
+            <p>The Independent scale is useful when overlying studies on the main price graph or over other study graphs. It is the default scale for the Overlay study.  </p>
+
+            <p>A graph that uses an Independent scale range type uses a completely independent scale. Graph values will not match the same values on other graphs in the same region. Graph lines that are over a certain position on another graph in the region may not be over that same position as you change bar spacing, scroll the chart to a different position, or change the size of the window. </p>
+
+        </section>
+
+        <section class="h4">
+            <h4 id="ConstantRange_ScaleRange">Constant Range (Scale Range)</h4>
+            <div class="member-link">[<a href="#ConstantRange_ScaleRange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the <b>Constant Range</b> option is enabled, the difference between the top and bottom values for the scale will always be equal to the specified <b>Range</b> value.</p>
+
+            <p>There are additional modes that control the automatic behavior of the vertical scale when using a <b>Constant Range</b> scale.  They are documented below.</p>
+
+            <section class="h5">
+                <h5 id="ConstantRangeScaleModes">Constant Range Scale Modes</h5>
+                <div class="member-link">[<a href="#ConstantRangeScaleModes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <section class="h5">
+                    <h5 id="ConstantRangeScaleModes_Manual">Constant Range Scale Modes &gt;&gt; Manual Mode</h5>
+                    <div class="member-link">[<a href="#ConstantRangeScaleModes_Manual">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>The vertical scale will not change with any new bars or values, it will only change with user interaction.  Pressing the <b>End</b> key on your keyboard, or double-clicking   on the values scale area on the   right side of the chart will re-center the vertical scale to the last bar   in the chart or last trade price in the case of a Trade  DOM.</p>
+                </section>
+
+                <section class="h5">
+                    <h5 id="ConstRangeKeepLastBarInView">Constant Range Scale Modes &gt;&gt; Keep The Last Bar Within View</h5>
+                    <div class="member-link">[<a href="#ConstRangeKeepLastBarInView">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>The vertical scale will be automatically adjusted to ensure that the High and Low of the last bar   always are within a specified number of ticks from the  top or bottom edge of the chart. The scale will not adjust until such time that  the High or Low of the last chart bar are less than the specified number of ticks from the top or bottom of the chart.</p>
+
+                    <p>However, if you have used <a href="#InteractiveScaling">Interactive Scale Move</a> to move the vertical scale of the chart up or down, the High and Low of the last bar could possibly move outside of the visible view, in which case this option cannot keep the last bar High or Low within view.  In this case, right-click on the scale of numbers on the right side of the chart and select <b>Reset</b> to remove any <b>Interactive Scale Move</b> adjustments, or double-click the scale on the right side of the chart.</p>
+
+                    <p>Pressing the <b>End</b> key on your keyboard, or double-clicking the   values scale area on the   right side of the chart will re-center the vertical scale to the last bar.</p>
+
+                    <p>In the case of a Trade  DOM the last trade price is used instead since there are no visible chart bars.</p>
+                </section>
+
+                <section class="h5">
+                    <h5 id="ConstantRangeScaleModes_ReCenterToLastBarOnUpdate">Constant Range Scale Modes &gt;&gt; Re-Center To The Last Bar On Every Update</h5>
+                    <div class="member-link">[<a href="#ConstantRangeScaleModes_ReCenterToLastBarOnUpdate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>The vertical scale will be automatically adjusted each time the chart is updated so that the center of the scale will match the combined average prices of the last two visible bars.  Or the last trade price in the case of a Trade DOM. </p>
+
+                    <p>Be aware that if the price difference between the last two visible bars is greater than the range of the scale, then both bars potentially could end up off the top and bottom edges of the chart, which could give the appearance of a blank chart.  This  paragraph does not apply to a  Trade  DOM.</p>
+
+                    <p>In the case of a Trade  DOM the last trade price is used instead since there are no visible chart bars.</p>
+                </section>
+
+                <section class="h5">
+                    <h5 id="ConstRangeLastPrice">Constant Range Scale Modes &gt;&gt; Re-Center To The Last Price On Every Update</h5>
+                    <div class="member-link">[<a href="#ConstRangeLastPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                    <p>The vertical scale will be automatically adjusted each time the chart is updated so that the center of the scale will match the last price of the last visible last bar or  the last trade price in the case of a Trade DOM.</p>
+                </section>
+
+                <section class="h5">
+                    <h5 id="ConstantRangeScaleModes_ReCenterWhenLastBarExceedsCertainNumberOfTicks">Constant Range Scale Modes &gt;&gt; Re-Center When The Last Bar Exceeds A Certain Number Of Ticks From The Center</h5>
+                    <div class="member-link">[<a href="#ConstantRangeScaleModes_ReCenterWhenLastBarExceedsCertainNumberOfTicks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+                    <p> This Constant Range Scale Mode only applies to <em>Intraday</em> charts.  It cannot be selected for Historical Daily charts. </p>
+
+                    <p>The vertical scale will be automatically adjusted to re-center to the last bar (or last trade price in the case of a Trade DOM) only when the last bar/price exceeds a specified number of ticks from the current center of the scale.  </p>
+
+                    <p> The number of ticks is specified with the   <b>Ticks from Center</b>  setting directly below  the  <b>Constant Range Scale Mode</b> list. </p>
+
+                    <p>The scale will  will be adjusted within the timeframe specified by the  <b>Adjust Interval (ms)</b> setting, also directly below  the  <b>Constant Range Scale Mode</b> list.   </p>
+                    
+                    <p> <b>Adjust Interval (ms)</b> specifies the number of milliseconds to complete   the adjustment. Adjust this as required to not cause any sudden jumps.  This can be set to a minimum of 1 ms.</p>
+                    
+                    <p>Pressing the <b>End</b> key on your keyboard, or double-clicking the scale area on the right will immediately re-center the vertical scale to the last bar (or last trade price in the case of a Trade DOM).  </p>
+
+                    <p>This Constant Range  Scale Mode can only be used on the main price graph.</p>
+
+
+                    <div style="text-align: center;"><a href="../images/constantrangescalemodesettings.png" rel="lightbox"><img src="../images/constantrangescalemodesettings.png" class="screenshot" loading="lazy" width="485" alt=""></a> </div>
+
+                </section>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h4 id="ConstRangeReCenterChartScroll">Re-Center On Chart Scroll (Scale Range)</h4>
+            <div class="member-link">[<a href="#ConstRangeReCenterChartScroll">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p >This only applies when using a Constant Range scale. When the <b>Re-Center On Chart Scroll</b> option is enabled, the vertical scale will be re-centered any time the scroll bar or arrow keys are used to scroll the chart. </p>
+            
+            <p>This option does not apply to a Trading DOM since that cannot be scrolled horizontally. </p>
+
+            <p> The default for this option is enabled.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ScaleRange_UserDefined">User Defined (Scale Range)</h4>
+            <div class="member-link">[<a href="#ScaleRange_UserDefined">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The top and bottom values for the scale range for the graph are set to the values you enter in the <b>Top of Range</b> and <b>Bottom of Range</b> text boxes in this window.</p>
+
+        </section>
+
+        <section class="h4">
+            <h4 id="SameAsRegion">Same As Region (Scale Range)</h4>
+            <div class="member-link">[<a href="#SameAsRegion">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the  <b>Same As Region</b> option is enabled, the top and bottom values for the scale range for the graph are the same as other graphs in the Chart Region which are set to <b>Automatic</b>. The highest high or lowest low of the graph does not affect the top and bottom values for the scale range.</p> 
+
+            <p>This keeps a study with a wider range from compressing the other graphs in the same Chart Region. </p>
+
+            <p>This is a useful Scale Range type to use for overlaying Moving Averages and other studies on the main price graph when those studies cause the main price graph to become compressed because the studies occupy a wider range than the main price graph. </p>
+
+            <p>When using this Scale Range type with a study which is displayed in Chart Region 1, the main price graph needs to be set to  <b>Automatic</b> and the study needs to be set to <b>Same As Region</b>. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ScaleRange_AutomaticZeroBased">Automatic Zero-Based (Scale Range)</h4>
+            <div class="member-link">[<a href="#ScaleRange_AutomaticZeroBased">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This scale range is similar to <b>Automatic</b> where the top and bottom values for the scale range for the graph are automatically set based upon the displayed range of values for the graph.  The difference is that the bottom value is always zero.  By default this is used with the <b> Volume </b> study.  When this Scale Range Type is used, neither Interactive Scale Range or Interactive Scale Move <a href="#InteractiveScaling">Interactive Scaling</a> methods will work.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ScaleRange_AutomaticZeroCentered">Automatic Zero Centered (Scale Range)</h4>
+            <div class="member-link">[<a href="#ScaleRange_AutomaticZeroCentered">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This scale range sets  the zero level as the center of the scale for the study or the main price graph.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScaleIncrement">Scale Increment (Scale Settings)</h3>
+        <div class="member-link">[<a href="#ScaleIncrement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The  <b>Scale Increment</b> setting is for the increment between the scale number labels displayed in the Values Scale on the right and left side of the chart. Set this to <b> 0 </b> for automatic labeling. In the case of the main price graph,  the automatically set increment is always a multiple of the chart <a href="index4cf4.html?page=doc/ChartSettings.html#TickSize">Tick Size</a>. </p>	
+    </section>
+
+    <section class="h3">
+        <h3  id = "HorizGridLineIncrement">Horizontal Grid Line Increment (Scale Settings)</h3>
+        <div class="member-link">[<a href="#HorizGridLineIncrement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The  <b>Horizontal Grid Line Increment</b> displays and sets the increment between <a href="indexfd56.html?page=doc/ChartMenu.html#HorizontalGrid">Horizontal Grid</a> lines in the chart region of the  main price graph or study that you are modifying the Scale  Settings for. </p>
+
+        <p>Set this to 0 to use the same value as the <b>Scale Increment</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="NumberOfIncrementsForSecondaryGrid">Number of Increments for Secondary Grid (Scale Settings)</h3>
+        <div class="member-link">[<a href="#NumberOfIncrementsForSecondaryGrid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Number of Increments for Secondary Grid</b> defines the increment of the Horizontal Grid that will be highlighted using the <a href="index5795.html?page=doc/GraphicsSettings#ChartGridSecondary">Chart Grid Secondary</a> graphics settings when the Horizontal Grid is displayed.</p> 
+
+        <p>As an incremental value, this is defined as every n'th gridline. For example, an entry of 4 will result in every 4th gridline being drawn using the Chart Secondary Grid graphics settings rather than the Chart Grid settings.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScalePaddingPercentage">Scale Padding Percentage (Scale Settings)</h3>
+        <div class="member-link">[<a href="#ScalePaddingPercentage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Scale Padding Percentage</b> determines the amount of blank space above the highest bar and below the lowest bar for the graph.</p>
+
+        <p>The value is entered as a percentage and uses this percentage of the displayed bar range to determine the top and bottom spacing.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReduceInteractiveScaleRangePaddingOnNewHighLow">Reduce Interactive Scale Range Padding on New High/Low  (Scale Settings)</h3>
+        <div class="member-link">[<a href="#ReduceInteractiveScaleRangePaddingOnNewHighLow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is enabled, any increased amount of padding above or below the chart bars  added by increasing the range of prices  with  <a href="#InteractiveScalingExpandCompress">Interactive Scale Range</a>, is reduced  as there is a new high or   low in the main price graph during chart updating.</p>
+
+
+        <p>The amount the padding is reduced by is equivalent to the expansion of the highest high and lowest  low of the price graph by the new high or low. </p>
+
+        <p>  This option only applies to the main price graph and  <em>not</em> to studies.  </p>
+    </section>    
+
+
+    <section class="h3">
+        <h3 id="IncludeInScaleWidthCalculation">Include in Scale Width Calculation</h3>
+        <div class="member-link">[<a href="#IncludeInScaleWidthCalculation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>  When this option is enabled, the width of the values of the study graph displayed on the left or right side  chart  Values Scale affect the width of the  Values Scale region. Otherwise, they do not.</p>
+        
+        <p>To change this setting, refer to <a href="#ScaleWindowStudy">Opening the Scale Settings Window For a Study</a>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UseInLeftSideScale">Use In Left Side Scale</h3>
+        <div class="member-link">[<a href="#UseInLeftSideScale">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When the left-side values scale is displayed, then the first study that has this option enabled will determine the scaling for the left-side scale for that region</p>
+
+        <p>The order in which the studies are evaluated follows the order of the studies in the Chart Studies window from top to bottom.</p>
+
+        <p>Although this will allow a study to set the left-side scaling, the study must be set to a scale other than <b>Automatic</b> or <b>Same As Region</b> in order for the scaling to work properly.</p>
+
+        <p>This setting only applies to studies. It has no affect on the scaling of the Main Price Graph or those studies that replace the Main Price Graph.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ConstantRangeScaleRecenterOnInteractiveScalingChange">Constant Range Scale Recenter on Interactive Scaling Change</h3>
+        <div class="member-link">[<a href="#ConstantRangeScaleRecenterOnInteractiveScalingChange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this setting is enabled and the Trading DOM price has automatically moved from the center of the Trading DOM (due to market pressures), then when a change is made to adjust the scale, it will first recenter the price and then perform the adjustment.</p>
+
+        <p>This setting only applies to the Trading DOM. It does not have any effect on the Chart DOM.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="EffectOfWindowSize">Effect Of Window Sizes On Graph Display</h2>
+    <div class="member-link">[<a href="#EffectOfWindowSize">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>With larger chart window sizes or decreased bar spacing, more of a study graph is visible which increases the range of the graph.  </p>
+
+    <p>The range is the highest high minus the lowest low of the study graph values displayed.  </p>
+
+    <p>Areas of the study graph which have a small range will appear to be more compressed compared with that same area in a smaller window size or with increased bar spacing because under these conditions the chart region will display a smaller range of values  making the area of the study more zoomed.</p>
+</section>
+
+<section class="h2">
+    <h2 id="BasingScaleOnlyOnPriceBars">Basing Scale Only on Price Bars</h2>
+    <div class="member-link">[<a href="#BasingScaleOnlyOnPriceBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/studysameasregion.png" rel="lightbox"><img src="../images/studysameasregion.png" alt="" class="WideFloatRight"></a>
+
+    <p>Sometimes you may <em>not</em> want to have studies which are displayed in Chart Region 1  where the main price graph is, affect the scale of the main price graph. For example,  in this image (right)  you can see the  <b>Moving Average </b> study affect the price scale. </p>
+
+    <p>To prevent this, set the <b>Scale Range</b> for the study to be <b>Same As Region</b>. For instructions to set the scale for a study, refer to <a href="#ScaleWindowStudy">Opening the Scale Window For a Study</a>.</p>
+
+    <p>   To ensure there have been no  Interactive Scale Range or Move adjustments on the main price graph which  can also cause it to become partially out of view or compressed or expanded, select   <b class = "menu_item">Chart &gt;&gt; Reset Scales</b>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="MaintainingSameScaleForMultipleGraphsInChartRegion">Maintaining Same Scale for Multiple Graphs in Chart Region</h2>
+    <div class="member-link">[<a href="#MaintainingSameScaleForMultipleGraphsInChartRegion">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When there are multiple study graphs displayed in a Chart Region, and you want them to all use the same scale so that they remain synchronized to each other, then follow the instructions below.</p>
+
+    <p> If the study graphs including the  Main Price Graph,  are in the same chart  region and are not using the same    Scale Settings, they will not be  vertically synchronized with each other.  In other words they will be misaligned in relation to each other.</p>
+
+    <ol>
+        <li> For each study in the same Chart Region, set the <b>Scale Range</b> for the study to <b>Automatic</b>. Follow the instructions in the <a href="#ScaleWindowStudy">Opening the Scale Window For a Study</a> section to do this.</li>
+
+        <li> When studies are in Chart Region 1, it is also important that the main price graph is set to have an <b>Automatic </b> Scale Range.    To do this, refer to <a href="#ScaleWindowMainPriceGraph">Opening the Scale Settings Window for the Main Price Graph</a>.   Set the  <b>Scale Range</b> for the Main Price Graph to  <b>Automatic</b>.</li>
+
+        <li>For any study in the Chart Region that you do not want to have share the same scale with the other studies, then set its <b>Scale Range</b> to <b>Independent</b>. Follow the instructions in the <a href="#ScaleWindowStudy">Opening the Scale Window For a Study</a> section to do this.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="DisplayingMultipleGraphsInChartRegion">Displaying Multiple Graphs in Chart Region</h2>
+    <div class="member-link">[<a href="#DisplayingMultipleGraphsInChartRegion">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p> To display multiple graphs in the same chart region when and when they use different range of values, it is necessary that each of the studies use an  <a href = "#ScaleRange_Independent">Independent</a>  Scale Range.  </p>
+     
+     <p> This will put them into the same view in the Chart Region. But there is no way to specifically align them within the Chart Region if they are all using different scales. </p>
+     
+     <p>  To change the scale for a study, refer to  <a href="#ScaleWindowStudy">Opening the Scale Settings Window For a Study</a>. </p>
+
+
+</section>
+
+
+
+<section class="h2">
+    <h2 id="ConstantRelationship">X &amp; Y Constant Relationship Scaling</h2>
+    <div class="member-link">[<a href="#ConstantRelationship">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p><b>X &amp; Y Constant Relationship Scaling</b> maintains a constant relationship between the right side Values Scale and the Time Scale or bar spacing in a chart.  </p>
+
+    <div style="text-align: center;"><a href="../images/constantrelationshipscaling.png" rel="lightbox"><img src="../images/constantrelationshipscaling.png" class="screenshot" loading="lazy" width="485" alt=""></a> </div>
+
+    <p>Therefore, when you change the Values Scale by expanding or compressing the price range, the Time Scale or bar spacing will automatically adjust to maintain the original ratio between the two.  </p>
+
+    <p>Likewise, when you alter the bar spacing in the chart,  which is done by adjusting the spacing for the Time Scale, the Values Scale will automatically expand or compress to maintain the original ratio between the two.</p>
+
+
+    <p> Only the  main price graph in the chart supports Constant Relationship  Scaling.</p>
+
+    <p> Only the <b>Constant Range</b> Scale Range type for the main price graph supports <b>X and Y Constant Relationship Scaling</b>.</p>
+
+
+    <p>Follow  these instructions to  enable a X &amp; Y Constant Relationship  Scale. </p>
+
+    <ol>
+        <li>Set the bar spacing in the chart as you require.   For instructions, refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html" Target="_blank" rel="noopener noreferrer">Working With Charts</a>. </li>
+
+        <li>Adjust the <em>range</em> of prices on the right side Values Scale  to maintain the ratio that you want to the Time Scale in the chart.  For instructions, refer to <a href="#InteractiveScalingExpandCompress">Interactive Scale Range - Expand/Compress Scale</a>. </li>
+
+        <li> Right-click on the Values Scale on the right side of the chart and select <b> Set X &amp; Y Constant Relationship</b>.  This is the only way to enable this feature.  It cannot be enabled through the <a href="#ScaleWindow">Scale Window</a> for the main price graph.  Refer to the image below.
+
+            <div style="text-align: center;"><a href="../images/xyconstantrelationshipscalingenable.png" rel="lightbox"><img src="../images/xyconstantrelationshipscalingenable.png" class="screenshot" loading="lazy" width="250" alt=""></a></div>
+        </li>
+
+        <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Scale</b> to set the number of <b>Bars</b> and <b>Values Range</b>  settings for <b> X and Y Constant Relationship Scaling</b> if you want to alter them. 
+            <br> <br>
+            These settings establish the ratio between the Time Scale or bar spacing and the Values Scale. As you alter the Values Scale or the bar spacing in the chart, this ratio is used to change the other dimension to maintain the original ratio.  These values are automatically set when you select <b> Set X &amp; Y Constant Relationship</b> on the Values Scale menu which is displayed by right clicking on the  Values Scale on the right side of the chart. </li>
+
+        <li>To disable use of <b> X and Y Constant Relationship Scaling</b>, right-click on the Values Scale on the right side of the chart and uncheck <b> Set X &amp; Y Constant Relationship </b>.   </li>
+
+        <li>You may also want to right-click  again on the right side Values Scale and set the <b>Scale Range</b> back to   <b>Automatic</b>  since it will have been changed to <b>Constant Range</b>.  </li>
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingConstRangeScale">Using a Constant Range Scale</h2>
+    <div class="member-link">[<a href="#UsingConstRangeScale">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To use a constant range scale where there is a constant range for the scale of the chart and where the last bar is centered within that range, follow the instructions below. </p>
+
+    <ol>
+        <li>Open the Scale Window for the chart. Refer to <a href="#ScaleWindowMainPriceGraph">Opening the Scale Window for the Main Price Graph</a>.</li>
+        <li>Set the <b>Scale Range</b> to <a href="#ConstantRange_ScaleRange">Constant Range</a>.</li>
+        <li>Select the desired mode of automatic behavior.  The <b>Keep The Last Bar Within View</b> mode is recommended.</li>
+        <li>Understand that when using <a href="#InteractiveScalingMoveUpDown">Interactive Scale Move</a>, that this shifts the center point of the scale.  Therefore, when using the <b>Keep The Last Bar Within View</b> mode, and because of this shifting of the scale, the High or Low of the last bar is not always going to be in view.</li>
+        <li>To manually re-center the scale, right-click on the right side Values Scale and select <b>Reset</b>.  Or double-click on the right side of Values Scale.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="UsingFixedValuesForTopAndBottomOfScaleRange"> Using Fixed  Values for Top and Bottom of Scale Range</h2>
+    <div class="member-link">[<a href="#UsingFixedValuesForTopAndBottomOfScaleRange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> To set both the top and the bottom of the current scale range as displayed within the current view of the chart, to fixed values so that when you scroll the chart,  those specific top and bottom values remain, follow the instructions below.</p>
+
+    <ol>
+        <li> Right-click  with your pointer on the  right side  Values Scale of the chart.</li>
+        <li> Select <b>Scale Range: User Defined with Auto Set</b>.</li>
+        <li>  You can now scroll the chart left and right and the top and bottom values of the scale remain the same.</li>
+        <li> To set this back to automatic,  Right-click  with your pointer on the  right side  Values Scale of the chart.</li>
+        <li> Select <b>Scale Range: Automatic</b>.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="InteractiveScaling">Interactive Scaling</h2>
+    <div class="member-link">[<a href="#InteractiveScaling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="InteractiveScalingExpandCompress">Interactive Scale Range - Expand/Compress Scale</h3>
+        <div class="member-link">[<a href="#InteractiveScalingExpandCompress">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>With <b>Interactive Scale Range</b>, you are able to left click and drag with your Pointer up and down in the Values Scale on the right side of the chart to expand the scale (increase the displayed range of prices) and compress the scale (decrease the displayed range of prices). </p>
+
+        <p> The Values Scale is the column of numbers on the right side of the chart.  When you are using studies on the chart that are displayed below the main price graph, then there are multiple Chart Regions used. </p>
+
+        <p> Each Chart Region has its own independent Values Scale. Therefore, you can invoke scale changes for each of these separate Chart Regions and they are all independent from each other. </p>
+
+        <p>To be able to use <b>Interactive Scale Range</b>, you need to right-click with your Pointer over the Values Scale on the right side of the chart to display the <b>Scale Menu</b>. Make sure <b>Interactive Scale Range</b> is selected.  </p>
+
+        <p> When you left-click and drag the Values Scale with your Pointer it will expand and compress the scale. Refer to the  <a href="#InteractiveScalingInstructionalImages">images below for visual instructions</a>.</p>
+
+        <section class="h4">
+            <h4 id="InteractiveScaleRangeDoesNotWorkWithLogarithmic">Interactive Scale Range  Does Not Work with Logarithmic Scale Type</h4>
+            <div class="member-link">[<a href="#InteractiveScaleRangeDoesNotWorkWithLogarithmic">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+            <p>When the chart is set to a  <a href="#LogarithmicScaleType" >Logarithmic Scale</a> which is set through the <a href="#ScaleWindowMainPriceGraph">Scale Window for the Main Price Graph</a>, then the  <b>Interactive Scale Range</b>  function is <em>disabled</em>. Therefore, to use Interactive Scale Range, it is necessary to use a <b>Linear</b> Scale Type instead.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="InteractiveScalingMoveUpDown">Interactive Scale Move -  Move Scale Up and Down</h3>
+        <div class="member-link">[<a href="#InteractiveScalingMoveUpDown">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> Within a chart you can left click and drag   your Pointer up and down in the Values Scale on the right side of the chart to move the chart up and down.  </p>
+
+        <p>The Values Scale is the column of numbers on the right side of the chart.  </p> 
+
+        <p>When you are using studies on the chart that are displayed below the main price graph, then there are multiple  <em>Chart Regions</em> used.  Each region has its own independent Values Scale. Therefore, you can invoke scale changes for each of these separate regions and they are all independent from each other.  </p>
+
+        <p>Right-click with your  Pointer over the Values Scale  on the right side of the chart in the appropriate chart region to bring up the <b>Scale Menu</b>. Make sure <b>Interactive Scale Move</b> is selected.  When you left-click and drag the Values Scale it will move the Chart Region up and down.   </p>  
+
+        <p>Refer to the <a href="#InteractiveScalingInstructionalImages">Instructional Images</a> below for a visual representation. </p>
+
+        <p> The <b> Hand </b> tool can be set to move the chart up and down as well. For more information, refer to <a href="indexb844.html?page=doc/Tools.html#Hand">Hand Tool</a>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="InteractiveScalingResetting">Resetting the Scale</h3>
+        <div class="member-link">[<a href="#InteractiveScalingResetting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>After  Interactive Scale Range or Interactive Scale Move adjustments to a scale, <em>double-click</em> with your Pointer on the Values Scale  within the Chart Region on the right side of the chart to reset the scale for that region to the default. 
+
+        <p>Alternatively, you can right-click over the Values Scale for a Chart Region on the right side of the chart and select <b>Reset Scale</b> to reset it back to the default. </p>
+
+        <p> Select <b class="menu_item">Chart &gt;&gt; Reset Scale</b> on the menu to reset the scale for all Chart Regions back to the default at once.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="InteractiveScalingLocking">Locking the Scale</h3>
+        <div class="member-link">[<a href="#InteractiveScalingLocking">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>You can lock the  Values Scale to prevent the Values Scale from being modified at all by clicking and dragging, by selecting <b>Interactive Scale Locked</b> on the right-click <b>Scale Menu</b>. The <b>Reset and Lock</b> menu option will first reset the scale before locking it. Right click with your mouse pointer over the Values Scale on the right side of the chart to bring up the <b>Scale Menu</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="InteractiveScalingInvertingMode">Inverting the Scale Mode</h3>
+        <div class="member-link">[<a href="#InteractiveScalingInvertingMode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> You can temporarily invert the Scale Mode   between Interactive Scale Range  and Interactive Scale Move, by holding down the <b>Ctrl</b> key on your keyboard while dragging the Values Scale with the mouse pointer.</p>
+        
+    </section>
+   
+    <section class="h3">
+        <h3 id="StudiesNotAdjustingWithScaleRangeMoveChanges">Studies Not Adjusting with Scale  Range/Move  Changes</h3>
+        <div class="member-link">[<a href="#InteractiveScalingInvertingMode">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+           <p> When using  <a href = "#InteractiveScalingExpandCompress">Interactive Scale Range</a> or  <a href = "#InteractiveScalingMoveUpDown">Interactive   Scale Move</a>, in a particular Chart Region on a chart,  and not all of the graphs within that region are being adjusted, make sure the   <a href = "index981f.html?page=doc/Scaling.html#ScaleRange">Scale Range</a> for each graph is set to    <b>Automatic</b>.</p>
+
+    </section>
+    
+    <section class="h3">
+        <h3 id="LeftSideScale_InteractiveScaleRange_Move"> Left Side Scale - Interactive Scale Range/Move</h3>
+        <div class="member-link">[<a href="#LeftSideScale_InteractiveScaleRange_Move">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If the   <a href = "index4cf4.html?page=doc/ChartSettings.html#UseLeftSideScale">Left Side Scale</a> is enabled for the chart, then it is possible to perform <a href="#InteractiveScalingExpandCompress">Interactive Scale Range - Expand/Compress Scale</a> and <a href="#InteractiveScalingMoveUpDown">Interactive Scale Move -  Move Scale Up and Down</a> adjustments there as well. </p>
+        
+        <p>  If a Study in the chart, is set to use an  <b>Independent</b>  <a href = "#ScaleRange">Scale Range</a>, then  Interactive Scale changes on the left side scale will affect those Independent study graphs in the Chart Region being adjusted. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="InteractiveScalingInstructionalImages">Instructional Images</h3>
+        <div class="member-link">[<a href="#InteractiveScalingInstructionalImages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div style="text-align: center;"><a href="../images/interactivescale_1.png" rel="lightbox"><img src="../images/interactivescale_1.png" class="screenshot" loading="lazy" alt="" width="500"></a></div>
+        <div style="text-align: center;"><a href="../images/interactivescale_2.png" rel="lightbox"><img src="../images/interactivescale_2.png" class="screenshot" loading="lazy" alt="" width="500"></a></div>
+        <div style="text-align: center;"><a href="../images/interactivescale_3.png" rel="lightbox"><img src="../images/interactivescale_3.png" class="screenshot" loading="lazy" alt="" width="500"></a></div>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ResetScales">Chart Bars or Studies Not Completely within View, Not Displayed, or Cut Off. Reset Scales.</h2>
+    <div class="member-link">[<a href="#ResetScales">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you notice that the bars in a chart or study lines are not all within view vertically on the chart or are only partially visible, follow these steps to reset the chart Scale Settings and scaling back to default:</p>
+    <ol>
+        <li>Optional step: To ensure that there are sufficient chart bars displayed, disable  <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b> if it is enabled.  And then select  <b class="menu_item">Chart &gt;&gt; Goto End of Chart</b>.  You can make adjustments to the  <a href = "index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart">Right Side Fill Space</a>  after all of the below steps.</li>
+        
+        <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu.   </li>
+
+        <li>Press the <b>Scale</b> button.</li>
+
+        <li> Select the <b>Automatic</b> option  within the <b>Scale Range</b> section.</li> 
+
+        <li> Press  <b>OK</b>.  </li>
+
+        <li> Select the  <b>Regions</b> tab.</li>
+
+        <li> Check each <b>Region Data Lines &gt;&gt; Region Number &gt;&gt; Region #</b>  and make sure the <b>State</b> is <em>not</em> set to <b>Overlapped</b>.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li> Make sure that <b class="menu_item">Chart &gt;&gt; Graph Draw Types</b> is not set  to  <b>Blank</b>. </li>
+
+        <li>In the case of a study, open the Study Settings window for the study by following the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a> instructions.</li>
+
+        <li>Press the <b>Scale</b> button and check that the  <b>Scale Range</b> is set to <b> Automatic </b>.  In the case of a study, depending upon the study or what <b>Chart Region</b> it is displayed in, it may use a different Scale Range other than  <b>Automatic </b>.  In this case you will need to use the <b>Scale Range</b> which is considered proper for it.</li> 
+
+        <li>Select <b class="menu_item">Chart &gt;&gt; Reset Scales</b> on the menu to reset the scales for all of the Chart Regions of the chart. When you have used <a href="#InteractiveScalingMoveUpDown">Interactive Scale Move</a> to move the scale up or down, this is going to cause a problem where chart bars are cut off at either the top or bottom of the  Chart Region. This is why it is necessary to reset the scales to remove these adjustments.</li>
+
+        <li>Additionally, unless you have a need for <a href="index981f.html?page=doc/Scaling.html" >Logarithmic</a> scaling, we recommend unchecking <b class = "menu_item">Chart &gt;&gt; Logarithmic Scale</b>. With a Logarithmic scale,  expanding and compressing the scale using <a href="index981f.html?page=doc/Scaling.html#InteractiveScaling" >Interactive Scale Range</a> is not supported.</li>
+    </ol>
+
+    <p> To prevent this problem from occurring, avoid using the <a href="#" >Interactive Scale Move</a> feature which causes the scale of the chart to be shifted up or down and therefore causes chart bars to not be within view.</p>
+
+    <p>And to prevent this from occurring when using the <b>Hand</b> tool, disable <b Class = "menu_item">Global Settings &gt;&gt; Tool Settings &gt;&gt; Support Vertical Scaling/Movement with Hand Tool</b>. </p>
+</section>
+
+<hr><p>*Last modified Thursday, 22nd June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/Scaling.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:16 GMT -->
+</html>  

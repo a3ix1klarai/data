@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChartDataFiles.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1678095315') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ChartDataFiles.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Chart Data and Chart Data Files -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2d36.html?page=doc/ChartDataFiles.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ManagingData">(Table of Contents) Managing Symbol Data</a> &gt;&gt; <a  href="index2d36.html?page=doc/ChartDataFiles.html">Chart Data and Chart Data Files</a></h4> </div>     <h1 class="PageName">Chart Data and Chart Data Files</h1>
+
+
+<ul>    
+    <li><a href="#Notes">Notes About Chart Data Files</a></li>
+    <li><a href="#RenamingFiles">Renaming Chart Data Files</a></li>
+    <li><a href="#DeletingChartDataFile">Deleting a Chart Data File</a></li>
+    <li><a href="#DeletingMarketDepthDataFile">Deleting Market Depth Data File</a></li>
+    <li><a href="#CorrectingSymbolLetterCase">Correcting  Letter Case of Symbols</a></li>
+    <li><a href="#WhenIntradayDataFilesAreUpdated">When Intraday Data Files Are Updated</a></li>
+    <li><a href="#VolumeData">Volume Data</a></li>
+    <li><a href="#BidVolumeAskVolume">Bid Volume and Ask Volume</a></li>
+    <li><a href="#SimulateTradesMatchDailyVolume">Simulate Trades to Match Daily Volume</a></li>
+    <li><a href="#ReDownloadingDataMultipleCharts">Deleting and Re-Downloading Data for Multiple Charts</a></li>
+    <li><a href="#LocatingMissingData">Locating Missing Data  in Charts</a></li>
+    <li><a href="#LargeVolumeTrades">Large Volume Trades</a></li>
+    <li><a href="#CleaningUpOldSymbols">Cleaning Up Old and Unused Symbols for Efficiency</a></li>
+    <li><a href="#CompletenessOfBarDataInChart">Completeness of Bar Data and Volume in Chart</a></li>
+    <li><a href="#ReducingNumberOfSymbolsBeingTracked" >Reducing Number of Symbols Being Tracked by Sierra Chart</a></li>
+    <li><a href="#MeaningOfMDesignationAfterSymbol" >The  Meaning of the [M] Designation after a Symbol</a></li>
+    <li><a href="#ForexTickSizes" >Forex Tick Sizes</a></li>
+     <li> <a href = "index5017.html?page=doc/ChangingPeriodOfBars.php#ImprovingPerformanceOfLoadingChartData">Improving Performance of Loading Chart Data</a> (Opens in new page)</li>
+     
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Notes">Notes About Chart Data Files</h2>
+    <div class="member-link">[<a href="#Notes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Chart data files for both  <a href = "index03a9.html?page=doc/GettingStarted.php#AlternateMethodOpenChart_Historical">Historical Charts</a> and <a href = "index03a9.html?page=doc/GettingStarted.php#AlternateMethodOpenChart_Intraday">Intraday Charts</a> are stored in the Sierra Chart  <a href = "index899f.html?page=doc/GeneralSettings.html#DataFilesFolder">Data Files Folder</a> which is set through <b class = "menu_item">Global Settings &gt;&gt; General Settings</b>. By default this is the  <b> Data</b> subfolder in the folder where Sierra Chart is installed to on your computer system.</p>
+
+    <p>Historical daily data files have a  <em><b>dly</b></em> file extension.</p>
+
+    <p>Intraday data files have a  <em><b>scid</b></em> file extension.</p>
+
+    <p>In the case of Intraday data files,  they are compressed using the operating system file compression. When you look at these files through the <b class = "menu_item">File &gt;&gt; Open Historical/Intraday Chart</b> window or through Windows Explorer, you will notice that the filename is in <em>blue</em> indicating they are compressed. If the filename is in black, then the file is not compressed.</p>
+
+
+</section> 
+
+<section class="h2">
+    <h2 id="RenamingFiles">Renaming Chart Data Files</h2>
+    <div class="member-link">[<a href="#RenamingFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Chart data is stored in files. Each symbol has its own file. These files are called <em>chart data files</em>. </p>
+    
+    <p>To rename a file,  follow these instructions below.</p>
+
+    <ol>
+        <li>Disconnect from the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> on the menu.</li>
+        <li>Select <b class="menu_item">File &gt;&gt; Close All Chartbooks</b> on the menu. Press Yes to save if prompted.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; New/Open Historical Chart</b> or <b class="menu_item">File &gt;&gt; New/Open Intraday Chart</b> on the menu. Select the specific chart data file for the symbol you want to rename in the list.</li>
+
+        <li>Press the <b>Rename</b> button.</li>
+
+        <li> Type the new symbol. Make sure the file extension still is part of the filename. Historical Daily chart data files use the extension: <b>dly</b> and Intraday data files use the extension: <b>scid</b>. 
+            <br>
+            <br>
+            <b>Example:</b> Stock symbol <b>ABCD</b> has changed to <b>ABC</b>. Rename <b>ABCD</b> to <b>ABC</b>.</li>
+            
+        <li>Press <b> OK</b>.</li>
+
+        <li>Do this for each chart data file for each symbol you need to rename. When you are done, press the <b>Cancel</b> button on the <b>Open File</b> window.</li>
+
+        <li>After renaming a symbol you will need to change the symbol of your charts that are using the old symbol to the new symbol. To do this, go  to the chart, select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu. Type the new symbol into the <b>Symbol</b> box or select one from the list opened with the <b>Find </b> button. For complete instructions, refer to <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#ChangingChartSymbol" >Changing the Symbol of a Chart</a> documentation page.</li>
+
+        <li>To have your chart drawings (Lines,  Rays, Text...) from the prior symbol display on the new symbol, then enable the <b>Show Chart Drawings for Different Symbols</b> option in Chart Settings. </li>
+
+        <li> Press <b>OK</b> to close the Chart Settings window.</li>
+
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Intraday File Update List</b> on the menu. If you have added the renamed symbols to this list previously, then you need to modify those symbols to the new symbol you are charting. To do this, click on the symbol in the <b>Symbols List</b>, modify the symbol displayed in the <b>Symbol</b> box, do this for each symbol, and press <b>OK</b> when finished.</li>
+
+        <li>Connect to the data feed by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu. </li>
+    </ol>
+
+
+</section> 
+<section class="h2">
+    <h2 id="DeletingChartDataFile">Deleting a Chart Data File</h2>
+    <div class="member-link">[<a href="#DeletingChartDataFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+
+        <li>To ensure the chart data file you will deleting does not come back, you first need to do 2 things. <em>Skip this step if you want to keep the charts</em>, but just delete the chart data file in order to get fresh data or for other reasons.
+        <br>
+            <ol>
+                <li>Select <b class="menu_item">Global Settings &gt;&gt; Intraday File Update List</b> on the menu. If the symbol of the file you want to delete appears on the list, highlight it and press the <b> Delete </b> button.</li>
+
+                <li>Select <b class="menu_item">Window &gt;&gt; Windows and Chartbooks</b> on the menu. From this window look at each Chartbook and see if there is a chart for the symbol you want to delete.
+                    <br>
+                    <br>
+                    If there is a chart for the symbol, then select it and press <b>OK</b>. This will activate the chart. To remove the chart from the Chartbook, select <b class="menu_item">File &gt;&gt; Close Active Window</b> on the menu. Repeat this step until you no longer find any charts for the symbol you want to delete. </li>
+
+                <li>Select <b class="menu_item">File &gt;&gt; Save All</b> to save your Chartbooks after removing the charts.</li>
+            </ol>
+        </li>
+
+        <li>Disconnect from the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> on the menu.</li>
+        
+        <li> Close the Chartbooks by selecting <b class = "menu_item">File &gt;&gt; Close All Chartbooks</b>.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; New/Open Historical Chart</b> or <b class="menu_item">File &gt;&gt; New/Open Intraday Chart</b> on the menu depending upon whether you want to delete a Historical chart data file or an Intraday chart data file.  </li>
+        
+        <li>Select the symbol in the list of chart data files.</li>
+
+        <li>Press the <b>Delete</b> button to delete the file. Press  <b>Yes</b> to confirm. </li>
+
+        <li> Click on <b>Cancel</b> to close the <b>Open File</b> window.</li>
+
+        <li>Connect to the data feed by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.</li>
+        <li> Reopen the Chartbooks through the <b class = "menu_item">File</b> menu. </li>
+
+    </ol>
+
+
+</section> 
+
+<section class="h2">
+    <h2 id="DeletingMarketDepthDataFile">Deleting a Market Depth Data File</h2>
+    <div class="member-link">[<a href="#DeletingMarketDepthDataFile">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Sierra Chart maintains  historical market depth data when using the  <a href="#">Market Depth Historical Graph</a> study.  Or when the  <b>Record Market Depth Data  </b> option is enabled for the Symbol in the  <b Class = "menu_item">Global Settings &gt;&gt; Symbol Settings</b> window. </p>
+    
+    <p> Follow the instructions below to delete unneeded market depth data files.    This may be a good idea to do periodically because these files can  use a lot of space on  your permanent storage system.</p> 
+    
+        <ol>
+
+        <li> Determine what the  Sierra Chart <b>Data Files Folder </b>   path is through <b Class = "menu_item">Global Settings &gt;&gt; General Settings</b>.
+        </li>
+
+        <li>Disconnect from the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b> on the menu.</li>
+
+        <li>  Through your operating system file manager, go to the Sierra Chart   <b>Data Files Folder</b>  that you determined the path  of above. Within that folder there will be a   <b>MarketDepthData </b> subfolder.  Open that folder.</li>
+
+        <li> All of the market depth data files will be located in there.   The file name contains the  symbol of the chart and the date of the file. Example: <b>ESM17.2017-04-18.depth</b>.   The dates are relative to UTC time. Delete the files that you no longer require.</li>
+
+        <li>After you are done deleting the files, connect to the data feed by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.</li>
+
+    </ol>
+    
+    
+</section>
+
+<section class="h2">
+    <h2 id="CorrectingSymbolLetterCase">Correcting Letter Case Of Symbols</h2>
+    <div class="member-link">[<a href="#CorrectingSymbolLetterCase">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> In the case where a Data or Trading service has case sensitivity for Symbols, it is essential that the case of the symbols is correct. </p>
+
+    <p>This is not a problem when you choose symbols through the <b class = "menu_item">File &gt;&gt; Find Symbol</b> window. If you manually type in symbols, you must make sure the letter case of them is correct according to the symbol specifications for the Data or Trading service you are using.</p>
+
+    <p>If you have used an incorrect letter case for symbols, this can cause the market  data requests and order submissions to get rejected. This will prevent charts from updating, prevent the quotes on Quote Boards from updating, and cause rejected orders.</p>
+
+    <p> Follow the below procedure to correct the letter case of symbols which are incorrect. <em>Generally this is an uncommon issue and is a rarely required procedure</em>.</p>
+
+    <ol>        
+        <li> Select  <b Class = "menu_item">File &gt;&gt; Disconnect</b>. </li>
+        
+        <li>If you have any Quote Boards which are open which contain Symbols with incorrect letter case, then correct the letter case of those Symbols by selecting <b class = "menu_item">Settings &gt;&gt; Set Symbols</b> on the Quote Board menu.</li>
+
+        <li> Select  <b class = "menu_item">Global Settings &gt;&gt; Intraday File Update List</b>. Check all of the symbols in that list, if any, and make sure the letter case of them is correct. </li>
+
+
+        <li>Select <b class="menu_item">Window &gt;&gt; Windows and Chartbooks</b> on the menu.  This window will let you see all of your open Chartbooks and charts within those Chartbooks. Go through each of the open Chartbooks  and go to each chart within the Chartbook which has a Symbol which is of the incorrect letter case.</li>
+
+        <li>When a chart that has a Symbol with an  incorrect letter case is active, select <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b>.</li>
+
+        <li>In the <b> Symbol </b> box, choose the correct symbol by pressing the <b>Find</b> button beside it and selecting the correct symbol.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li Class = "GeneralBackgroundHighlightLight">It is essential, that every single chart and Quote Board that has a Symbol with an incorrect letter case,  has the Symbol corrected to be of the proper case. <em>Otherwise you will continue to have the same problem</em>.</li>
+        
+        <li>Select  <b class="menu_item">File &gt;&gt; Close All Chartbooks</b>.</li>
+
+        <li>Select  <b class="menu_item">File &gt;&gt;  New/Open Intraday Chart</b>.</li>
+
+        <li><a href="#RenamingFiles">Rename</a> the listed chart data files, which have an incorrect letter case.</li>
+
+        <li>Select  <b class="menu_item">File &gt;&gt; New/Open  Historical Chart</b>. </li>
+
+        <li><a href="#RenamingFiles">Rename</a> the listed chart data files, which have an incorrect letter case.</li>
+
+        <li>Select <b Class = "menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+    </ol>
+
+
+</section> 
+
+<section class="h2">
+    <h2 id="WhenIntradayDataFilesAreUpdated">When Intraday Data Files Are Updated</h2>
+    <div class="member-link">[<a href="#WhenIntradayDataFilesAreUpdated">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Historical data is downloaded to an Intraday chart data file and current trade data is written to the file only when the chart data file is open or the symbol is added to the <a href="indexa20c.html?page=doc/EditMenu.html#IntradayFileUpdateList">Intraday File Update List</a>. </p>
+
+     <p>When historical Intraday data is downloaded to a chart data file, it is only the data that is missing from the last Date-Time  in the file to the present time.   </p>
+    
+    <p>Select <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#IntradayFileUpdateList" >Global Settings &gt;&gt; Intraday File Update List</a> on the menu to add files to this list.</p>
+    
+    <p>If the Data or Trading service Sierra Chart is connected to does not provide streaming real-time or delayed data, then Intraday charts will not automatically be kept up-to-date. This applies to the <b>Sierra Chart Historical Data service </b>. You will need to select <b Class = "menu_item">File &gt;&gt; Disconnect</b> and <b Class = "menu_item">File &gt;&gt; Connect to Data Feed </b>  to cause a historical data download for the Intraday charts so they will be up-to-date.</p>
+
+
+</section> 
+
+<section class="h2">
+    <h2 id="VolumeData">Volume Data</h2>
+    <div class="member-link">[<a href="#VolumeData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Not all symbols from a Data or Trading service will provide historical and real-time volume data. This would include some cash indexes and the Forex and CFD markets.  Futures and stock markets will provide historical and real-time volume data.</p>
+
+    <p>If a Data or Trading service provides historical volume data for a particular symbol, then it will be available in real-time also for that same symbol.  </p>
+    
+   <p> If the Data or Trading service does not provide historical volume data, then it will not be available in real-time either.</p>
+
+    <p>In the case where there is no historical volume data available either historically or in real-time, Sierra Chart will set the volume to 1 for every trade received in real-time.  Or in the case of the Forex markets, for every  Bid and Ask price received in real-time.   This is commonly known as Tick Volume.   </p>
+    
+     <p>When using the <b>Sierra Chart Real-Time and Historical Forex/CFD Data Service</b>  and other Forex Data/Trading services, the volume data is Tick Volume where each new Bid and Ask price update received causes the volume to be incremented by 1.</p>
+    
+    <p>It is a substitute for the lack of actual volume data.  Although, it is not true volume data.  </p>
+    
+    <p>To know that an Intraday chart uses Tick volume, add both the <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s8" >Volume</a> and <a href="indexd2fb.html?page=doc/StudiesReference.php&amp;ID=94#Number_of_Trades">Number of Trades</a> studies to the chart. You will see that they have <em>equal</em> values at each chart  bar. </p>
+    
+     <p>In the case where Sierra Chart is using 1 for volume on the price data received in real-time, you will not see any volume data at all for the bars in the chart downloaded from historical data <em>unless</em> the data comes from the Sierra Chart historical data servers which will be the case for the <a href="indexc82f.html?page=doc/SCRealTimeFOREX.php">Sierra Chart Real-time and Historical Forex/CFD Data Service</a>, the <a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php">Sierra Chart Real-time Exchange Data Feed</a>, and the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.</p>
+</section> 
+
+<section class="h2">
+    <h2 id="BidVolumeAskVolume">Bid Volume and Ask Volume</h2>
+    <div class="member-link">[<a href="#BidVolumeAskVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>Throughout the Sierra Chart documentation and functionality you will see references to <b>Bid Volume</b> and <b>Ask Volume</b>.</p>
+
+    <p>Bid Volume is the volume of trades that occurred at the Bid price or lower. Usually this is in relation to the volume for a chart bar. </p>
+
+    <p>Ask Volume is the volume of trades that occurred at the Ask price or higher. Usually this is in relation to the volume for a chart bar.</p>
+
+    <p>In the case where the trade occurs between the Bid and Ask, it is considered to be at the Bid price, if it traded lower than the price before. Or if it traded at the same price as before, then  when looking back through trades, the last time there was a trade at a different price, that trade was down compared to the previous price. The opposite is true  if a trade occurs at a higher price and is between the Bid and Ask prices. It will be considered at the Ask if it traded higher than the previous price.</p>
+
+    <p>Bid Volume and Ask Volume  <em>only are available for Intraday charts</em>. Not for Historical Daily charts.</p>
+
+    <p>Bid Volume and Ask Volume volume is not always available historically with all supported Data and Trading services. For more information, refer to <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php#HistoricalBidAskVolume">Historical Bid Volume and Ask Volume</a>.</p>
+
+    <p>In the case of the Forex markets where there are only Bid and Ask prices and not last trade prices, Bid Volume and Ask Volume are determined by comparing the midpoint price, the price between the Bid and the Ask, to the prior midpoint price.  If the midpoint price increases, then this is considered an Ask trade and Ask Volume is incremented by 1. If the midpoint price decreases, then this is considered a Bid trade and the Bid volume is incremented by 1. </p>
+
+    <p>The determination of Bid Volume and Ask Volume with Data/Trading  services that only transmit the Bid price as the last trade price, is not going to be accurate. Most if not all of the volume will be assigned to Bid Volume.  This would be true with IQ Feed and OEC. This is not the case with the <b>Sierra Chart Real-Time and Historical Forex/CFD Data Service</b>.</p>
+
+</section> 
+
+<section class="h2">
+    <h2 id="SimulateTradesMatchDailyVolume">Simulate Trades to Match Daily Volume</h2>
+    <div class="member-link">[<a href="#SimulateTradesMatchDailyVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>For Interactive Brokers, there are simulated trades generated by Sierra Chart in response to Daily Volume messages received from the data feed which are used to make up for missing trades not transmitted by the data feed. </p>
+
+    <p>Daily Volume messages for a symbol sent by the data feed indicate the total Daily Volume for the trading day at the current moment. These are frequently sent messages. They may be sent with every trade or sent every few seconds. </p>
+
+    <p>    When a Daily Volume message is received from the data feed, Sierra Chart calculates the difference between this Daily Volume message and the prior Daily Volume.  If the sum of the volumes for the insectionidual trades received since the prior Daily Volume message is less than that needed to match the current Daily Volume message, then a simulated trade is generated with the volume needed to fill in the difference. The price of this simulated trade, is the last trade price received. The volume of this simulated trade, is the quantity of the difference as explained. </p>
+
+    <p> This inserted trade will be considered to be at the Bid price if the price of the simulated trade is at the current Bid price or lower. Or it will be considered to be at the Ask price if the price of the simulated trade is at the current Ask price or higher. If it is considered at the Bid, then the volume will be added to the BidVolume for the data record. If it is considered to be at the Ask, then the volume will be added to the AskVolume for the data record.</p>
+
+    <p> When using the Interactive Brokers Trading service, this functionality to simulate a trade in order for the Intraday chart volume to match the Daily Volume messages, has shown to cause volume spikes in Intraday charts.  Therefore, this can be disabled for Interactive Brokers.  To disable this,  set <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service Setting &gt;&gt; Simulate Trades to Match Daily Volume</b> to  false. </p>
+    
+    <p> However, for years, even if you  disabled this option, upon reconnecting to the data feed it would be automatically re-enabled and set to true.  It is possible to keep  this option permanently set to false by updating to version 2152. </p>
+
+
+</section> 
+
+<section class="h2">
+    <h2 id="ReDownloadingDataMultipleCharts">Deleting and Re-Downloading Data for Multiple Charts</h2>
+    <div class="member-link">[<a href="#ReDownloadingDataMultipleCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To delete and re-download data from a particular Date-Time for multiple charts, follow the steps below.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Customize Chart Shortcut Menu</b>.</li>
+        <li>Add the <b> Delete and Download Data-All Charts </b> command to the <b>Selected Menu Items</b> list.</li>
+        <li>Press OK.</li>
+        <li>Go to a chart and right-click at the Date-Time in the chart where you want to delete and re-download data from.</li>
+        <li>Select the <b> Delete and Download Data-All Charts </b> command on the menu.</li>
+        <li>Press Yes to confirm.  The data will be deleted from that Date-Time  in all of the currently open charts and the data will be downloaded if connected to the data feed.</li>
+    </ol>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="LocatingMissingData">Locating Missing Data  in Charts</h2>
+    <div class="member-link">[<a href="#LocatingMissingData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There can be various reasons why data is missing from Historical or Intraday charts. It is more likely that Intraday charts are affected and much less likely that Historical charts are affected.  The most common reason for missing data in a chart is a failed historical data download which can occur for various reasons.  </p>
+    
+    
+    <p>Follow the instructions below to locate missing data in charts, whether they are Historical or Intraday charts.</p>
+
+    <ol>
+        <li> Go to the chart.
+
+        <li>Select <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Bar Period</b>. </li>
+        <li> Enable  <b>Include Columns with No Data</b>. Press OK.
+
+        <li>When you have enabled the <b>Include Columns With No Data</b> option, this will insert bars  where there is no data in the chart data file for the  Date-Time of those inserted bars. The open, high, low, close will all be the same price. These bars will have the same price as the previous closing price. These bars help you to clearly spot where there is missing data in the chart.
+            <a href="../images/missingdataexample.png" rel="lightbox"><img src="../images/missingdataexample.png" alt="" class="MediumFloatRight" ></a></li>
+
+
+        <li>Use the <a href="indexb844.html?page=doc/Tools.html#ChartValues" >Tools &gt;&gt; Chart Values Tool</a> tool and the <b class = "menu_item" >Window &gt;&gt; Tool Values Window</b> to look at the Date-Times  of the bars which have been inserted with the <b>Include Columns With No Data</b> option. The Date-Times of these bars is where you have missing data, assuming there was actually trading at those particular Date-Times. Therefore, you must be familiar with the particular market you are trading in order to confirm this.
+            <br> <br>
+            In the case of Intraday charts, there will not be bars inserted for entire days which are missing. This is something to keep in mind. </li>
+
+        <li>Select  <b class = "menu_item" >Chart &gt;&gt; Chart Settings &gt;&gt; Bar Period</b>. </li>
+       
+       <li> Disable  <b>Include Columns with No Data</b>. Press OK.</li>
+        
+        <li>Once you have located that there is missing data, then you can re-download it by right clicking  with your   Pointing device before the missing data in the chart and select <b class = "menu_item">Delete and Download Data</b>. Or select <b class = "menu_item">Edit &gt;&gt; Delete All Data and Download </b>  from the main menu to re-download all the data in the chart.</li>
+
+    </ol>
+
+</section>
+
+
+
+<section class="h2">
+    <h2 id="LargeVolumeTrades">Large Volume Trades</h2>
+    <div class="member-link">[<a href="#LargeVolumeTrades">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section provides a discussion of why large volume trades cannot be identified and when they are identified, they do not have any definite significance.</p>
+
+
+    <ol>
+        <li> First and foremost, a large trade does not fill all at once. An order for 100 contracts likely will fill in many smaller orders as it is matched with smaller orders. It is unlikely that there is going to be a matching 100 contract order  to fill it. Therefore, the activity of large traders,  simply cannot be tracked. Combining trades of the same side, the same time and  same price is also not a reliable means to detect a large trade.</li>
+        
+        
+        <li> Since a large trade  matches up with multiple smaller orders,  there can be different fill prices which makes the ability to detect these types of trades even more difficult and impossible. Even the Sierra Chart Exchange Data Feed which effective July 2017, has the ability to combine smaller CME trades  into a single   larger trade based upon exchange data,  does not combine the  smaller sub trades  at different price levels into a large  trade. The combining only works at the same price  because the exchange  reports  these trades at different prices as separate trade summaries.</li>
+
+        <li>A large trader may enter a series of smaller orders.  For example, if they want to sell 100 contracts, they can enter 100 orders of 1 lot each very simply using a  computer program. This could be part of a high-frequency trading strategy. Making it impossible to even identify the large order to begin with. And as we indicated in the previous  items,  it is still not possible to reliably identify a large order  in many cases.</li>
+
+        <li>You have no idea why a large trader is entering the order that they are. It is not a predictive of short-term price movement.  There can be numerous reasons. </li>
+
+        <li>For every order there is both a buyer and a seller. So in the case where you see a large order go through, what does it mean? Can you answer this question definitively? If not, then obviously the trade in and of itself, does not mean much of anything.</li>
+
+        <li>You have no idea as to the timeframe the large trader is trading in.  It could be  5 minutes, or it could be  3 months. Although in the short-term, a position they put on may be a loss, it could be a profit over a longer timeframe.</li>
+
+        <li> The trade could be part of a hedge. They could be taking an opposite trade in some other market.</li>
+
+        <li> The exchange, the data feed, or the program you are running, could be combining multiple trades  into one making it seem as though there was a large trade, when there was not. For example, when using Interactive Brokers and you have enabled <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Simulate Trades to Match Daily Volume </b> (we recommend this be enabled), you will see large trades appear in the Time  and Sales occasionally, which are not actually high-volume trades but an insertion of volume  to make the Intraday volume match the Daily reported volume.  This is necessary with the Interactive Brokers data feed. Otherwise, you would notice the trading activity in the chart to be sparse.</li>
+
+        <li> In summary, relying upon large trades, does not come across as reliable  and is misleading. Traders who pay attention to large trades as being meaningful in the futures market, generally are going to be inexperienced traders who do not know how the markets work. 
+        <br> <br>
+        Additionally, the concept of identifying large trades is based upon the idea that a large trader is "smart" and knows what  is going to happen in the future. Nobody can definitively predict the future unless they are planning something at a future point in time to move the market. They very well could be planning to move the market and are part of an organization with large sums of money,  most likely banks, which are capable of moving the market.  
+        <br> <br>
+        The problem is, it is not possible to identify their activity to begin with,  at least not always, and exactly when that move will occur. </li>
+
+    </ol>
+
+    <p>Instead of paying attention to large trades, we recommend using the <a href="index3c6f.html?page=doc/StudiesReference.php&amp;ID=292#Cumulative_Delta_Bars_-_Volume">Cumulative Delta Bars</a> studies found in <b class = "menu_item">Analysis &gt;&gt; Studies</b>. These studies provide an objective analysis of buying pressure and selling pressure over a period of time.</p>
+
+    <p>Also, it would seem to be more useful  to be looking at increases in volume over a period of time and the direction the market is moving in during that increase. What exactly this means, is not the purpose of this discussion. This is up to you to determine and to determine if this is even useful to begin with.</p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="CleaningUpOldSymbols">Cleaning Up Old and Unused Symbols for Efficiency</h2>
+    <div class="member-link">[<a href="#CleaningUpOldSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>To avoid market data requests and historical data downloading for symbols that you no longer use or have expired, it is a good idea to clean them up from your Sierra Chart Chartbooks and other features of Sierra Chart which contain symbols.   </p>
+    
+    
+    <p>Follow the steps below to do this.</p>
+     <ol> 
+        <li>Select <b class="menu_item">Window &gt;&gt; Windows and Chartbooks</b> on the menu. From this window look at each Chartbook and see if there is a chart for an old/unused symbol.
+        <br>
+        <br>
+        If there is, then select it and press <b>OK</b>. This will activate the chart. To remove the chart from the Chartbook, select <b class="menu_item">File &gt;&gt; Close Active Window</b> on the menu. Repeat this step until you no longer find any charts for old/unused symbols.</li>
+       
+       <li>Using the method above, iterate among all of your charts, you can also access the charts through the   <b class="menu_item">CB</b> and  <b class="menu_item">CW</b> menus at the top of the main window,  and check the <a href = "indexa1a5.html?page=doc/SwitchingSymbols.html#AssociatedSymbolList">Chart &gt;&gt; Associated Watch  List</a> for each chart and remove any old symbols from those lists.  </li>
+        
+        <li>Look among the Quote Boards and remove any old/unused symbols through <b class="menu_item">Settings &gt;&gt; Set Symbols</b> on the Quote Board menu. If you cannot see a Quote Board and you know that you have one within the current open Chartbook, then you can set it to a default position by selecting <b class="menu_item">Window &gt;&gt; Reset Windows</b>.</li>
+        
+        <li>Select <b class="menu_item">Global Settings &gt;&gt;  Intraday File Update List</b>. Remove any old/unused symbols from that list.</li>
+        
+        <li>Select <b class="menu_item">Window &gt;&gt;  Alerts Manager </b>. Select the <b>Symbol Alerts</b> tab. Right-click your Pointer on the lines for any old/unused symbols and select <b>Delete</b>.
+
+        <div style="text-align: center;"><a href="../images/symbolalertstab.png" rel="lightbox"><img src="../images/symbolalertstab.png" alt="" width="550"  class="screenshot" loading="lazy"></a></div>
+
+        </li>
+        
+        <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+        
+        <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. This will cause Sierra Chart to no longer track the old/unused/expired symbols which you have removed with the steps above.</li>
+
+        <li> <em>Delete</em> the chart data files that are no longer needed. Refer to <a href = "#DeletingChartDataFile">Deleting Chart Data File</a>. </li>
+        
+        <li> <em>Delete</em> the older market depth data files  (<b>.depth</b> file extension) that you no longer  require. Each market depth data file  has the symbol and date  in its file name. So you can tell which date and symbol it is for. These files do consume a lot of  storage space.  
+        <br> <br>
+        Through your operating system file manager, go to the   <b>MarketDepthData</b> subfolder within the  <a href = "index899f.html?page=doc/GeneralSettings.html#DataFilesFolder">Data Files Folder</a>.  
+         <br> <br>
+        The file names contain a date in them which represents the date  the file is for.  Delete the files  in that  folder that you no longer require. </li>
+
+    </ol>                
+
+</section>
+
+<section class="h2">
+    <h2 id="CompletenessOfBarDataInChart">Completeness of Bar Data and Volume in Chart</h2>
+    <div class="member-link">[<a href="#CompletenessOfBarDataInChart">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>The completeness of the chart bars and volume in a chart depends upon the particular Data/Trading service being used, the symbol and the particular point in time the chart bar is for.</p>
+    
+
+    <p>In the case of a futures contract, the data at a particular point in time for a chart bar and the volume for that bar depends upon the contract month and year, and whether that particular contract is actively traded at that time.</p>
+
+    <p>Also, a futures contract which is just not actively traded at any time, will contain much less data compared to an actively traded futures contract.</p>
+    
+    <p>For an actively traded futures contract, to ensure that for every bar in the chart you are looking at the most active contract year and month and see complete data, use the  <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" >Continuous Futures Contract</a> feature.</p>
+    
+    <p>  After reading the above information, if you still believe there is incomplete data in a chart, then for Intraday charts refer to the  <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html">Historical Intraday Data</a> page. In the case of Historical charts, refer to the <a href="index5713.html?page=doc/helpdetails6.html">Missing Historical Chart Data</a> page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ReducingNumberOfSymbolsBeingTracked">Reducing Number of Symbols Being Tracked by Sierra Chart</h2>
+    <div class="member-link">[<a href="#ReducingNumberOfSymbolsBeingTracked">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When connected to the real-time data feed in Sierra Chart, Sierra Chart will begin real-time streaming data updates for the symbols in Charts, Trade DOMs, Quote Boards, Quote Spreadsheets, the Intraday File Update List, and Symbol Alerts.</p>
+    
+    
+    <p> To determine how many symbols Sierra Chart is currently tracking from the connected data feed, refer to the <a href = "index2422.html?page=doc/StatusBar.html"  target="_blank" rel="noopener noreferrer">Status Bar</a> page.</p>
+    
+    <p>If a symbol is no longer being used in one of these objects or the object has been closed, Sierra Chart will continue to track that symbol until you reconnect to the data feed.</p>
+    
+    <p>Tracking too many symbols can cause a problem where when you have a symbol limit with the real-time data feed being used, that you end up exceeding the symbol limit.</p>
+    
+    <p>When the symbol limit has been exceeded, you need to reduce the number of symbols being currently used, in order to receive real-time data  for the symbols which have gone over the limit.</p>
+    
+    <p>This involves any of the following:</p>
+
+    <ul>
+        <li>Closing <a href="index7674.html?page=doc/Chartbooks.html" >Chartbooks</a>.</li>
+        
+        <li>Closing Charts. You can find these on the  <b class="menu_item">CW</b> menu on the main window and then close each one with <b class="menu_item">File &gt;&gt; Close Active Window</b>.</li>
+        
+        <li>Closing Trading DOMs. You can find these on the  <b class="menu_item">CW</b> menu on the main window and then close each one with <b class="menu_item">File &gt;&gt; Close Active Window</b>.</li>
+        
+        <li>Closing or reducing the number of symbols  in <a href="index1eaf.html?page=doc/GettingQuotes.html#QuoteBoard" >Quote Boards</a>.</li>
+        
+        <li>Closing or reducing the number of symbols in <a href = "index1eaf.html?page=doc/GettingQuotes.html#QuotesOnSpreadsheets">Quote Spreadsheets</a>.</li>
+        
+        <li>Reducing the number of symbols in the <b  Class = "menu_item">Global Settings &gt;&gt; Intraday File Update List</b>.</li>
+        
+        <li>Removing Symbol Alerts  from the <b Class = "menu_item">Window &gt;&gt; Alerts Manager &gt;&gt; Symbol Alerts</b>.</li>
+        
+        <li>  Unchecking the <a href = "index899f.html?page=doc/GeneralSettings.html#DetectRolloverOfCurrentFuturesContractsSymbolsBasedOnRealTimeVolume">Global Settings &gt;&gt; General Settings &gt;&gt; Detect Rollover of Current Futures Contract Symbols Based on Real-time Volume</a> option.   The reason this option should be unchecked is because within approximately two days of when a futures contract is expected to roll over,  there is a request for real-time data for the next futures contract symbol increasing the symbol count by 1 for each futures symbol being used.</li>
+        
+        <li>   If you are running any sub instances of Sierra Chart (<a href = "index9bbd.html?page=doc/NewInstance.php">File &gt;&gt; New Instance</a>), make sure you reduce the number of symbols in those sub instances as well  according to the above items.  </li>
+    </ul> 
+    
+    <p>When you have completed any of the above, follow the instructions to <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" >Reconnect to the Data Feed</a> to reduce the number of symbols subscribed to from the real-time data feed.  You will also need to reconnect to the data feed in any running sub instances as well.</p>
+    
+    
+</section>
+
+<section class="h2">
+    <h2 id="MeaningOfMDesignationAfterSymbol">The Meaning of the [M] Designation after a Symbol</h2>
+    <div class="member-link">[<a href="#MeaningOfMDesignationAfterSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>On the title bar of the chart, in the  <a href="index69b6.html?page=doc/WorkingWithCharts.html#RegionDataLine">Region Data Line</a> and other places where a Symbol is displayed, the Symbol may have a <b class = "GeneralBackgroundHighlight">[M]</b>  designation after it.  </p>
+    
+    <p>This means that Symbol is remapped to an alternate data feed and not the primary data feed Sierra Chart is connected to. Sierra Chart supports multiple data feeds with separate connections. The letter M is from the word  <em>map</em>. </p>
+    
+     <p> When using the  <b>Denali Exchange Data Feed</b>, or any of the other real-time or delayed data feeds provided by Sierra Chart, those symbols will always have the <b class = "GeneralBackgroundHighlight">[M]</b> designation after the symbol.  It is an indication, the market data request is being internally mapped to a dedicated connection, to the particular server providing the market data.  </p> 
+     
+     <p>For example, when accessing EUREX data, there is a connection to Frankfurt. When accessing CME data, there is a connection to Chicago. When accessing the NASDAQ data there is a connection to New York.  Sierra Chart maintains multiple connections to the lowest latency connection point.  There is not one central server serving all of the data. There are many. This is a distributed architecture.</p>
+    
+    <p>When using a sub instance of Sierra Chart through <a href="index9bbd.html?page=doc/NewInstance.php" >File &gt;&gt; New Instance</a>, all data originates from the main instance of Sierra Chart. So in  <em>no case</em> will you see the <b class = "GeneralBackgroundHighlight">[M]</b> indicator on the chart after the symbol. This is completely normal. It is just enough that you see it in the main instance of Sierra Chart for the symbol. </p>
+    
+    
+</section>
+
+<section class="h2">
+    <h2 id="ForexTickSizes">Forex Tick Sizes</h2>
+    <div class="member-link">[<a href="#ForexTickSizes">Link</a>] - [<a href="#top">Top</a>]</div>
+ 
+ 
+     <p>In the cash Forex markets like FXCM and LMAX provide trading services for, there is no standard Tick size  for a particular Forex pair,  at least among the different liquidity providers  and exchanges.   In the case of the EURUSD and other Forex markets, trading can be to an increment as small as  <em>.00001</em>.   </p>
+
+     <p>In these  cases, by default, Sierra Chart will use a Tick Size of <em>.00005</em> in the Chart Settings. The smaller Tick Size is not used in order  to  <em>not</em> increase CPU usage for studies that use   Volume at Price data and  perform calculations using that data. </p>
+   
+     <p>Otherwise, the CPU usage will be considerably higher  and can also cause Sierra Chart to freeze at times during  calculations which are done on the primary thread.  This includes studies like the  <a href = "index29a2.html?page=doc/StudiesReference.php&amp;ID=141&amp;Name=Volume_by_Price">Volume by Price</a> study. </p>
+
+</section>
+
+ 
+
+<hr><p>*Last modified Monday, 06th March, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChartDataFiles.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:51 GMT -->
+</html>  

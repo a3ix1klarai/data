@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/NewInstance.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1685435962') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/NewInstance.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Using DTC Server for Data and Trading in Another Sierra Chart Instance (New Instances) -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index9bbd.html?page=doc/NewInstance.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ExternalInterfaces.DTCProtocol">(Table of Contents) Data and Trading Communications (DTC) Protocol</a> &gt;&gt; <a  href="indexedef.html?page=doc/DTCServer.php">Data and Trading Communications (DTC) Protocol Server</a> &gt;&gt; <a  href="index9bbd.html?page=doc/NewInstance.php">Using DTC Server for Data and Trading in Another Sierra Chart Instance (New Instances)</a></h4> </div>     <h1 class="PageName">Using DTC Server for Data and Trading in Another Sierra Chart Instance</h1>
+
+<ul>
+    <li>
+        <a href="#UsingDTCServerForDataAndTradingInAnotherSCInstance">Using DTC Server for Data and Trading in Another Sierra Chart Instance</a>
+        <ul>
+            <li><a href="#InstructionsForSharingDataUsingSubInstances">Instructions For Sharing Data Using Sub Instances (Easiest And Recommended Method)</a></li>
+            <li><a href="#HistoricalDataAndMissingData">Historical Data and Missing Historical Data</a></li>
+            
+            <li><a href="#SimulatedTradingInSubInstance">Simulated Trading in a Sub Instance</a>
+				<ul>
+					<li><a href="#SimulatedTradingInSubInstance_FirstMethod">First Method</a></li>
+					<li><a href="#SimulatedTradingInSubInstance_SecondMethod">Second Method</a></li>
+				</ul>
+			</li>
+            
+            <li><a href="#ViewingTradingDataInSubInstanceFromMainInstance">Viewing Trading Data in Sub instance from Main Instance</a></li>
+            <li><a href="#DifferencesWithOrderHandlingBetweenMainServerAndSubInstance">Differences with Order Handling Between  Main/Server and Sub Instance</a></li>
+  
+            <li><a href="#UsingCorrectTradeAccount">Using the Correct Trade Account (Rejections Related to Simulation Mode)</a></li>
+            <li><a href="#ResolvingDTCProtocolServerPortNumberConflicts">Resolving DTC Protocol Server Port Number Conflicts</a></li>
+        </ul>
+    </li>
+    <li><a href="#UsingSameSymbolSettingsInNewInstances">Using Same Symbol Settings  in New Instances</a></li>
+    <li><a href="#DeletingSubInstances">Deleting Sub Instances</a></li>
+    <li><a href="#SourceOfDataForSubInstances">Source of Data for Sub Instances</a></li>
+    <li><a href="#EachSubInstanceIsIndependent">Each Sub Instance is Independent</a></li>
+    <li><a href="#CopyingFilesBetweenInstances">Copying Files Between Instances</a>
+		<ul>  
+			<li><a href="#AutomaticallyCopyingFilesFromTheMainInstanceToSubInstance">Automatically  Copying  Files from  the Main Instance to Sub Instance</a></li>
+		</ul>
+    </li>
+    <li><a href="#PerformanceWhenUsingSubInstances">Performance When Using Sub Instances</a></li>
+</ul>
+
+<section class="h2">
+    <h2 id="UsingDTCServerForDataAndTradingInAnotherSCInstance">Using DTC Server for Data and Trading in Another Sierra Chart Instance</h2>
+    <div class="member-link">[<a href="#UsingDTCServerForDataAndTradingInAnotherSCInstance">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The DTC Protocol Server in Sierra Chart can be used by another instance of Sierra Chart either on the same computer or across a network. <em>Although market data is only allowed to be used on the same computer</em>.</p>
+
+    <p>The DTC Protocol Server allows the sharing of the market data and trading functionality of the server instance of Sierra Chart to other instances of Sierra Chart. These other instances are referred to as the <em>client</em> instances. This DTC Server supports both market data and trading.</p>
+    
+     <p>  Although the sharing of market data across a network is prohibited  in order to maintain compliance with market data rules. </p>
+    
+    <p> The instructions on this page are for sharing the market data and trading functionality from one instance of Sierra Chart with another instance.  </p>
+    
+    <p> If you want to use multiple copies of Sierra Chart with <em>different</em> Data and Trading services, then refer to the  <a href="index6ebd.html?page=doc/MultipleServices.html" target="_blank" rel="noopener noreferrer">Using Multiple Data and Trading services</a> page <em>instead</em> of the instructions on this page below. That page also explains how to share market data between instances of Sierra Chart that use  <em>different  Trading services</em>.</p>
+    
+    <p>One reason to use additional instance of Sierra Chart is to distribute processing load among instances which run as independent processes which can utilize additional CPU cores for study calculations for example.</p>
+    
+    
+    <section class="h3">
+        <h3 id="InstructionsForSharingDataUsingSubInstances">Instructions For Sharing Data Using Sub Instances (Easiest And Recommended Method)</h3>
+        <div class="member-link">[<a href="#InstructionsForSharingDataUsingSubInstances">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+    <ol>
+        
+        <li>Start another instance of Sierra Chart by selecting  <b Class = "menu_item">File &gt;&gt; New Instance</b> in an existing running instance of Sierra Chart. This can only be done from the main instance of Sierra Chart, not a sub-instance.</li>
+          
+          
+        <li> To automatically start new instances of Sierra Chart on startup of the main instance, the instance numbers can be  specified as a comma separated list in <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Instances to Run on Startup</b>. For example, you can enter a <b><em>2</em></b> in that edit box to automatically start a second instance. Or enter  <b><em>2, 3</em></b> to start a second and third instance automatically.</li>
+        
+        <li>When using <b Class = "menu_item">File &gt;&gt; New Instance</b>, a new instance is automatically updated to the same version as the main instance of Sierra Chart.</li>
+        
+        <li> Each instance of Sierra Chart maintains its own copy of global settings, Chartbooks and  chart data files. The first time a new instance is created,  it receives a copy of the global settings and Chartbooks from the main instance.
+        </li>
+
+
+        <li> To open a chart which will be fed by the DTC Server from the  main instance of Sierra Chart,  select <b  Class = "menu_item">File &gt;&gt; Find Symbol</b> in the new instance of Sierra Chart. </li>
+
+        <li>The <b>Find Symbol</b> list will initially be <em>empty</em> because the Symbol Settings have to be requested. Wait a moment for them to be received and then the list will fill in. 
+         <br> <br>
+        If this does not occur within about 5 to 20 seconds, then follow the procedure to perform an  <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettings" Target="_blank" rel="noopener noreferrer">Update of the Symbol  Settings</a> to get them. It is necessary to have the proper Symbol Settings in an instance of Sierra Chart which is connected to the DTC Server of another instance. </li>
+
+    </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="HistoricalDataAndMissingData">Historical Data and Missing Historical Data</h3>
+        <div class="member-link">[<a href="#HistoricalDataAndMissingData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>All historical Intraday and Daily data for a Symbol in an instance of Sierra Chart started using New Instance, is downloaded from the existing Intraday or Daily chart data file in the Main Instance if the file exists. </p>
+
+        <p>If the file exists, but it is not up to date with the current data, then the current data will be downloaded into the file first before the data is served to client instances of Sierra Chart.</p>
+
+        <p>If a chart data file does not exist in the Main Instance, then the data will be first automatically downloaded for that Symbol and chart data type from the connected Data or Trading service the Main Instance is set to use. When this historical data download is done, then the data is served to client instances of Sierra Chart.</p>
+
+        <p>If there is any  missing or incorrect Historical Daily or Intraday chart data in the client instance of Sierra Chart which is connected to the Main Instance, then go to the the <em>main instance</em> of  where you  selected <b Class = "menu_item">File &gt;&gt; New Instance</b>) and open the same type of chart (Historical or Intraday) for the same Symbol and correct any missing or incorrect data issues there <em>first</em>.</p>
+        
+        <p>Refer to the following sections to solve a missing or incorrect data issue.</p>
+
+
+        <ul>
+            <li> <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#MissingOrIncompleteIntradayChartData"  Target="_blank" rel="noopener noreferrer">Missing  or Incomplete Intraday Chart Data</a> </li>
+            <li><a href="index5713.html?page=doc/helpdetails6.html" Target="_blank" rel="noopener noreferrer">Missing Historical Chart Data</a> (Daily, Weekly, Monthly, Quarterly, Yearly Charts) </li>
+            <li> <a href="index1230.html?page=doc/helpdetails2.html#h2.1.2" Target="_blank" rel="noopener noreferrer">Deleting and Re-downloading Data  (Intraday  Charts)</a></li>           
+            <li> <a href="index1230.html?page=doc/helpdetails2.html#h2.2.2" Target="_blank" rel="noopener noreferrer">Correcting Data Errors by Downloading the Data Again</a>  (Historical Daily, Weekly, Monthly, Quarterly, Yearly Charts)</li>
+            <li><a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DownloadingViewingMoreHistoricalIntradayData" target="_blank" rel="noopener noreferrer">Downloading/Viewing More Historical Intraday Data</a> </li>
+        </ul>
+        
+        <p>Once you have corrected the missing or incorrect data issue  in the <em>Main Instance</em> of Sierra Chart, then re-download the data in the sub instances of Sierra Chart by re-downloading all of the data in the chart by going to the chart and selecting <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. You just need to do this once per symbol and not for each chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SimulatedTradingInSubInstance">Simulated Trading in a Sub Instance</h3>
+        <div class="member-link">[<a href="#SimulatedTradingInSubInstance">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Simulated trading can be performed two different ways in a sub instance of Sierra Chart.</p>
+
+        <section class="h4">
+            <h4 id="SimulatedTradingInSubInstance_FirstMethod">First Method</h4>
+            <div class="member-link">[<a href="#SimulatedTradingInSubInstance_FirstMethod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Use <a href="indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a> by enabling <b Class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>. In this case, all of the trading activity is contained within the sub instance where the trading is performed.</p>
+            
+            <p>This is the method to use if you want to perform live trading in your main/server instance of Sierra Chart. In this case, the main instance of Sierra Chart needs to have <b Class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> disabled so that live trading is possible.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SimulatedTradingInSubInstance_SecondMethod">Second Method</h4>
+            <div class="member-link">[<a href="#SimulatedTradingInSubInstance_SecondMethod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ol>
+                <li>Set the main instance of Sierra Chart that the sub instance is connected to, to use <a href="indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a>.
+
+                <li>In the sub instance, disable <b Class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>.</li>
+
+                <li>Ensure that the setting for <a href="index4451.html?page=doc/GlobalTradeSettings.html#SelectNonSimTradeAccountOnEnteringNonSimModeInSubInstances">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Select Non Sim Trade Account on Entering Non-Sim Mode in Sub Instances</a> in the  <em>sub instance</em> is set to <b>No</b>. This needs to be enabled in the <em>sub instance</em> and not the main instance of Sierra Chart.</li>
+
+                <li>From the Chart or Trade DOM you will be trading from in the sub instance, select one of the Simulation (<b>Sim#</b>) accounts. Refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Selecting Trade Account</a>. </li>
+
+                <li>All trading from the sub instance will then be simulated and be processed in the main instance. Logging of the simulated trading will be in both instances.</li>
+            </ol>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ViewingTradingDataInSubInstanceFromMainInstance">Viewing Trading Data in Sub instance from Main Instance</h3>
+        <div class="member-link">[<a href="#ViewingTradingDataInSubInstanceFromMainInstance">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+         <p>To view trading data on a chart in a sub instance, for trading activity occurring in the main instance, it is necessary to disable/uncheck  <b class="menu_item">Trade &gt;&gt;  Trade Simulation Mode On</b> on the menu.  </p>
+         
+         <p>The next step is to follow through all of the steps in the <a href = "index3c50.html?page=doc/ChartTrading.html#ViewingSimulatedAndNonSimulatedOrdersAndPosition">Viewing Simulated and Non-Simulated Working Orders and Trade Position</a> section on the Chart Trading page. </p>
+    </section>
+    
+    
+    <section class="h3">
+        <h3 id="DifferencesWithOrderHandlingBetweenMainServerAndSubInstance">Differences with Order Handling Between  Main and Sub Instance</h3>
+        <div class="member-link">[<a href="#DifferencesWithOrderHandlingBetweenMainServerAndSubInstance">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>When using multiple Target Attached Orders, the parent order is  <a href = "index0ef8.html?page=doc/AttachedOrders.html#OCOGroup">split up into  multiple orders</a> to match the quantity of each  Target order.  These multiple parent orders   are linked together. When  you adjust the price of one of them the others will automatically adjust along with it.    There is a link between these paired orders. <p>
+         
+        <p>If you go to a different instance  of Sierra Chart as compared to where   the orders were submitted from,  the link between these orders does not exist.    If you adjust the price of one of these parent orders,  the others will not adjust. </p>
+        
+        <p>To avoid this issue only adjust the order from the instance it was initiated in.  </p>
+
+        <p> Related to this is that since the parent order is split up into multiple orders, when you cancel one of these  parent orders in an instance other  than where  the orders were originally entered from, you will have to cancel each order individually and get multiple order confirmations. </p>
+
+        <p>   A similar case is true of the  order association lines between Target and Stop  order. You will only see these lines in the instance where the orders  were entered from. You will not see them in other instances.   The information necessary for these lines only exists in the instance where the   orders were submitted from.  However, you will see the order association lines in the   main/server instance of Sierra Chart.  Since it is aware    the Target  and Stop orders are in  an OCO group.  </p>  
+    </section>
+    
+    <section class="h3">
+        <h3 id="UsingCorrectTradeAccount">Using the Correct Trade Account (Rejections Related to Simulation Mode)</h3>
+        <div class="member-link">[<a href="#UsingCorrectTradeAccount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When trading in a sub instance of Sierra Chart and <b Class = "menu_item">Trade &gt;&gt; Trade Simulation  Mode On</b> is <em>disabled</em>, it is necessary  to use the Trade Account  in the sub instance which corresponds to the  <b Class = "menu_item">Trade &gt;&gt; Trade Simulation  Mode On</b> setting in the main instance of Sierra Chart.</p>
+
+        <p>When <b Class = "menu_item">Trade &gt;&gt; Trade Simulation  Mode On</b>  is <em>enabled</em> in the main instance, then you can only use simulated trading accounts in the sub instance (Example:  <b>Sim1</b>). Refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.</p>
+
+        <p>When <b Class = "menu_item">Trade &gt;&gt; Trade Simulation  Mode On</b>  is <em>disabled</em> in the main instance, then you can only use non-simulated trading accounts in the sub instance. Refer to <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Selecting Trade Account</a>.</p>
+
+        <p>If the incorrect Trade Account is being used in the sub instance, you will see a message like this in <b Class = "menu_item">Trade &gt;&gt; Trade Service Log</b> in the sub instance after submitting an order:</p>
+
+        <div class="MessageLog">Order update (Order reject). Info: Simulated Trade Account (Sim1) cannot be used when Trade Simulation Mode is disabled. Internal Order ID: #. Service Order ID: (none). Symbol: (symbol)</div>
+        
+        <p>To trade live from a sub instance, it is necessary that <b class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is disabled <em>both</em> in the sub instance and in the main instance of Sierra Chart. And that you have selected a non-simulated trading account.  Otherwise, the below rejection message will be given when submitting an order from the sub instance.</p>
+        
+         <div class="MessageLog">Order update (Order reject). Info: Non-simulated Trade Account (TradeAccount) cannot be used with Trade Simulation Mode. Internal Order ID: #. Service Order ID: (none). Symbol: (symbol)</div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ResolvingDTCProtocolServerPortNumberConflicts">Resolving DTC Protocol Server Port Number Conflicts</h3>
+        <div class="member-link">[<a href="#ResolvingDTCProtocolServerPortNumberConflicts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Normally only <em>one instance</em> of Sierra Chart that you are running on the same computer should be set to be a DTC Server and have the   <b>DTC Protocol Server</b> enabled.  </p>
+        
+        <p>If other instances of Sierra Chart which are running your computer system  at the same time  also have the  <b>DTC Protocol Server</b> enabled  (<b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server &gt;&gt;  Enable DTC Protocol Server = Yes</b>, you need to make sure there are not port number conflicts. In other words, they need to be using different port numbers.</p>
+        
+        <p>Client instances of Sierra Chart which connect to a DTC Server instance of Sierra Chart must have the  <b Class = "menu_item">Global Settings &gt;&gt;  Sierra Chart Server Settings &gt;&gt; DTC Protocol Server &gt;&gt; Enable DTC Protocol Server</b> option <em>disabled</em> to avoid port number conflicts.  </p>
+        
+        <p>Once you have disabled this option, you should not have to continue with the further instructions.   Unless more than one instance of Sierra Chart is running as a server on the same computer.</p>
+
+        <p> Below is an example of what you will see in the Message Log indicating a port number conflict. </p>
+
+
+        <div class="MessageLog">
+            <p>DTC Protocol Server failed to start listening on port 11099.</p>
+            <p>Listening socket (1740), port 0 | Failed to bind socket to 0.0.0.0:11099. Windows error code 10048: Only one usage of each socket address (protocol/network address/port) is normally permitted.</p>
+            <p>Listening socket (1740), port 0 | Closed.</p>
+        </div>
+
+        <p>Follow through the below steps to resolve port number conflicts for each installation of Sierra Chart that you have running.</p>
+
+        <ol>
+            <li>Exit from any sub instances of Sierra Chart, started with  <b class="menu_item">File &gt;&gt; New Instance</b>.</li>
+            
+            <li>Go to one of the instances of Sierra Chart you have running on your system and select <b Class = "menu_item">Global Settings &gt;&gt;  Sierra Chart Server Settings &gt;&gt; DTC Protocol Server</b>.</li>
+
+            <li>Make sure the <b> Enable DTC Protocol Server</b> option is enabled and make a note of the <b>Listening Port</b> and <b>Historical Data Port</b> numbers.</li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>Go to the next instance of Sierra Chart on your system and select    <b Class = "menu_item">Global Settings &gt;&gt;  Sierra Chart Server Settings &gt;&gt; DTC Protocol Server</b>.</li>
+
+            <li> Either <em>uncheck</em> the <b>Enable DTC Protocol Server</b>  option or set the  <b>Listening Port</b> and <b>Historical Data Port</b> numbers to different port numbers than what are currently used in other instances of Sierra Chart. You can use any port numbers. They should be in the range of 10000 through 60000.
+            <br> <br>
+            Make sure you are not using a port already in use on your system or used by another instance of Sierra Chart. You can determine what ports are in use through the  <b>netstat</b> program. Commandline:  <em>netstat -a -b</em>.
+             <br> <br>
+            Unless these other instances of Sierra Chart should be functioning as a DTC server,  which is unlikely in most cases, then <em>uncheck</em> <b>Enable DTC Protocol Server</b>.
+            </li>
+
+            <li>  In the case of an instance of Sierra Chart started with <b Class = "menu_item">File &gt;&gt; New Instance</b> and where the   <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b> &gt;&gt; Service</b> in that instance is set to <b>DTC - Sub Instance</b>, then you must uncheck the <b>Enable DTC Protocol Server</b> option. </li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>Repeat the steps above starting with step 5 for other instances of Sierra Chart on your system. </li>
+        </ol>
+    </section>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="UsingSameSymbolSettingsInNewInstances">Using Same Symbol Settings in New Instances</h2>
+    <div class="member-link">[<a href="#UsingSameSymbolSettingsInNewInstances">Link</a>] - [<a href="#top">Top</a>]</div>
+   
+    <p> To use the same Symbol Settings as set in  <b class = "menu_item">Global Settings &gt;&gt; Symbol Settings </b>, in sub instances of Sierra Chart started through   <b class = "menu_item">File &gt;&gt; New Instance</b>, then enable  <b class = "menu_item">Global Settings &gt;&gt; Symbol Settings</b> <b> &gt;&gt;   Use  These Symbol Settings in New Instances When Started</b> in the  <em>server instance</em> of Sierra Chart. </p>
+    
+    
+    <p> After enabling this option, or after changing the Symbol Settings in the   server instance of Sierra Chart, it is necessary to exit from the sub instance, and start it again with  <b class = "menu_item">File &gt;&gt; New Instance</b>, to receive the updated Symbol Settings.  </p>
+</section>
+
+<section class="h2">
+    <h2 id="DeletingSubInstances">Deleting Sub Instances</h2>
+    <div class="member-link">[<a href="#DeletingSubInstances">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When a  sub   instance is started for the first time, a new Sierra Chart installation is created within a subfolder within the main Sierra Chart installation folder (<b>C:\SierraChart</b> by default). The name of the folder is <b>SierraChartInstance_#</b> where # is the instance number.  The instance numbers start at 2 and go up depending upon how many sub instances were simultaneously  running. </p>
+
+    <p> A complete copy of the main Sierra Chart installation folder is made except for Intraday and Daily chart data files, and the internal order ID file. These do not need to be copied to the sub instance folder.</p>
+     
+    <p>You are able to completely delete the sub instance folder when the sub instance is not currently running. After you do this a complete copy of the main Sierra Chart installation folder is made except for Intraday and Daily chart data files, and the internal order ID file, when the new instance is started again with <b class = "menu_item">File &gt;&gt; New Instance</b>. </p>
+
+    <p>This lets you fully reinitialize the sub instance completely. However, keep in mind any Chartbook files you previously created  in the sub instance would be lost if you do this. So make a backup of those first. </p>
+    
+    <p> You also have the ability to manually copy Chartbooks  (<b>Cht</b> file extension) from the main instance Data folder to the sub instance Data folder. Do this through the operating system file manager. Refer to <a href="#CopyingFilesBetweenInstances">Copying Files Between Instances</a>.  This would be  good to do if you want to copy newly created Chartbooks to the sub instance.</p>
+      
+    <p> If you do not want to use the sub instance any longer or just want to delete all of the files for whatever reason, the entire <b>SierraChartInstance_#</b>  subfolder in the Sierra Chart installation folder can be deleted through your operating system file manager. After this, check the <a href="index899f.html?page=doc/GeneralSettings.html#InstancesToOpenOnStartup">Instances To Open On Startup</a>  setting to make sure the instance number is not automatically started when you start Sierra Chart.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SourceOfDataForSubInstances">Source of Data for Sub Instances</h2>
+    <div class="member-link">[<a href="#SourceOfDataForSubInstances">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>The source of both continuously updating real-time and historical data in a sub instance of Sierra Chart opened with <b class = "menu_item">File &gt;&gt; New Instance</b> or another instance of Sierra Chart connected to the DTC Server in a main instance, will always be the main instance of Sierra Chart.</p>
+    
+    <p> In the sub instance, you will never see the  <a href="index2d36.html?page=doc/ChartDataFiles.html#MeaningOfMDesignationAfterSymbol" >[M] designation after a symbol</a>. This is normal. </p>
+</section>
+
+<section class="h2">
+    <h2 id="EachSubInstanceIsIndependent">Each Sub Instance is Independent</h2>
+    <div class="member-link">[<a href="#EachSubInstanceIsIndependent">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> When starting a new sub instance of Sierra Chart (<b class="menu_item">File &gt;&gt; New Instance</b>), and that sub instance was never started before, that sub instance is initialized with the global configuration from the main instance, and all of the Chartbooks  from the main instance of Sierra Chart.</p>
+    
+    <p>  After this initialization as described above, the sub instance  is fully independent from the main instance. Any changes to the Global settings, or Chartbooks are only within that particular instance.  There is no synchronization between instances supported. </p>
+     
+    <p>The particular sub instance you are working in can be identified by the number after the #  on the title bar of the main window. </p>
+     
+    <p>  After starting a sub instance for the first time, if you later want to copy  Chartbook files between the main instance  and the sub instance this has to be done manually.   Otherwise, there is no synchronization of Chartbooks between instances.</p>
+
+
+    <p>For example, you cannot save a Chartbook in the main instance and have it accessible in the sub instance.   Chartbook files can be copied between   Sierra Chart instances through your operating system file manager. These Chartbook files  (.Cht file extension) are contained within  the  <a href = "index899f.html?page=doc/GeneralSettings.html#DataFilesFolder">Data Files Folder</a> of each instance of Sierra Chart and can be easily copied between data folders. However,  they should only be copied after they have been  <a href = "index7674.html?page=doc/Chartbooks.html#SaveChartbook">saved</a> to ensure they have the latest changes made to a Chartbook.</p>
+</section>
+
+   
+<section class="h2">
+    <h2 id="CopyingFilesBetweenInstances">Copying Files Between Instances</h2>
+    <div class="member-link">[<a href="#CopyingFilesBetweenInstances">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> It is supported to copy  files from the main Sierra Chart instance  to sub instances,  like the main configuration file (Sierra4.config) or Chartbooks. If you are copying the main configuration  file, you will need to exit from the main instance of Sierra Chart  and any sub instances.  </p>
+    
+    <p>It is not necessary to exit when copying Chartbooks, only save them with <b class="menu_item">File &gt;&gt; Save All</b>. </p>
+
+    <p>Simply copy the files you want from the  main instance  to the corresponding sub  instances.  Overwrite them in the destination if necessary.  You can copy files in either direction. From the main instance to a sub instance or from a sub instance to the main instance.</p>    
+
+    <p> The  sub instance  installation folders, are located in the main instance folder with the name   <em><b>\SierraChartInstance_#</b></em> where # is the instance number. The main instance folder is usually  <em><b>C:\SierraChart</b></em>.</p>
+       
+    <p> For the instructions to copy files, refer to <a href = "index0d07.html?page=doc/helpdetails15.html#TransferringSCSettingsAndDataToNewInstallation">Transferring Sierra Chart Settings and Data to a New Installation</a>. </p>
+    
+    <section class="h3">
+		<h3 id="AutomaticallyCopyingFilesFromTheMainInstanceToSubInstance">Automatically  Copying  Files from  the Main Instance to Sub Instance</h3>
+		<div class="member-link">[<a href="#AutomaticallyCopyingFilesFromTheMainInstanceToSubInstance">Link</a>] - [<a href="#top">Top</a>]</div>
+ 
+ 
+        <p>The below procedure will start with a new/fresh copy of a sub instance and then copy all of the main Sierra Chart installation folder  to the sub instance folder except for Intraday and Daily chart data files, and  the current Internal Order ID file. These files  copied include  Chartbook and Spreadsheet files.</p>
+        
+        <p>Any existing sub instance files will be lost because this procedure explains deleting them. </p>
+        
+        <ol>
+            <li>  Exit from any sub instances you are currently running. Go to the Sierra Chart installation folder through your operating system file manager. This is usually  <b>C:\SierraChart</b>.  You can find this folder through <b class="menu_item">Window &gt;&gt; Message Log</b>. Refer to the  <b>Program path</b> line near the top of the log. Example:  <b>Program path: C:\SierraChart\</b>.</li>
+            <li>  Delete the <b>SierraChartInstance_2</b> subfolder.  This will be the first, folder for a sub instance. This will be the folder you will usually want to delete.  You may want to make a backup of it first. Other sub instances may exist, and will have this folder format: <b>SierraChartInstance_#</b>, where the # represents the instance number.  
+             <br> <br>
+            The main instances always  Considered instance 1.</li>
+        
+            <li>  Start a sub instance through <b class="menu_item">File &gt;&gt; New Instance</b>. </li>
+            <li>   The sub instance will now have access to the main instance Chartbooks and you can open them in the sub instance in the same way through <b class="menu_item">File &gt;&gt; Open Chartbook</b>. </li>
+         
+            <li>  Any charts you no longer want to use in the main instance  among the currently open Chartbooks, can be closed by selecting the chart from the   <b class="menu_item">CW</b> menu and then selecting  <b class="menu_item">File &gt;&gt; Close Active Window</b>.  After this Save the Chartbook with  <b class="menu_item">File &gt;&gt; Save</b>. </li>
+        </ol>
+    </section>
+</section>
+
+   
+<section class="h2">
+    <h2 id="PerformanceWhenUsingSubInstances">Performance When Using Sub Instances</h2>
+    <div class="member-link">[<a href="#PerformanceWhenUsingSubInstances">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When using additional  sub instances of Sierra Chart which is connected to a server instance  either through <b class="menu_item">File &gt;&gt; New Instance</b> or as an independent instance using the  <b>DTC-Sub Instance</b>   Service  in <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>, this allows for the distribution of processing  load  from chart updating and study calculations,  among the CPU cores.  </p>
+
+    <p>This is in addition to the   <a href = "indexc0b8.html?page=doc/Features.php#Performance">multithreaded functionality</a> Sierra Chart already has in other areas of the program.</p>
+
+    <p> There is no additional resource usage, when  using additional  instances, since the basic  core Sierra Chart program  does not itself use any CPU usage and the memory usage is very low. It is only when  Charts, Trading DOMs, Spreadsheets, Quote Boards  are open or other functionality is being used, is where the CPU load comes from. </p>
+    
+     <p>In the case of when viewing the same symbol within different installed instances of Sierra Chart, there is a separate  chart data storage for each instance of Sierra Chart but this does not add to CPU usage.  It only increases storage space requirements, but the data is compressed and with large storage drives, this usually is of no consequence.  And this also has the advantage of being able to have a sub instance use  a higher  <b>Intraday  Data Storage Time Unit</b>.  </p>
+     
+     <p>For more information, refer to <a href = "index5017.html?page=doc/ChangingPeriodOfBars.php#ImprovingPerformanceOfLoadingChartData">Improving Performance of Loading Chart Data</a>. </p>
+</section>
+
+<hr><p>*Last modified Tuesday, 30th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/NewInstance.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:57 GMT -->
+</html>  

@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/PriceGraphTypes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1670594223') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/PriceGraphTypes.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Graph Draw Types -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexabed.html?page=doc/PriceGraphTypes.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="indexabed.html?page=doc/PriceGraphTypes.html">Graph Draw Types</a></h4> </div>     <h1 class="PageName">Graph Draw Types</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#AvailableGraphDrawTypes">Available Graph Draw Types</a>
+		<ul>
+			<li><a href="#OpenHighLowCloseBar">Open High Low Close (OHLC) Bars</a></li>
+			<li><a href="#CandleStick">CandleStick Bars</a></li>
+			<li><a href="#CandleStickBodyOnly">Candlestick Body Only Bars</a></li>
+			<li><a href="#CandlestickHollow">Candlestick Bars Hollow</a></li>
+			<li><a href="#LineonClose">Line on Close</a></li>
+			<li><a href="#Mountain">Mountain</a></li>
+			<li><a href="#HLCBars">HLC Bars</a></li>
+			<li><a href="#HLBars">HL Bars</a></li>
+			<li><a href="#LineOnOpen">Line On Open</a></li>
+			<li><a href="#LineOnHLAvg">Line On HL Avg</a></li>
+			<li><a href="#StairSteponClose">Stair Step on Close</a></li>
+			<li><a href="#BidAskVolumeBars">Bid Ask Volume Bars</a>
+				<ul>
+					<li><a href="#ColorSettingsForBidAskVolumeBars">Color Settings for Bid Ask Volume Bars</a></li>
+				</ul>
+			</li>
+			<li><a href="#PriceVolumeBars">Price Volume Bars</a></li>
+			<li><a href="#CandlePriceVolumeBars">Candle Price Volume Bars</a></li>
+			<li><a href="#CandlePriceVolumeBarsHollow">Candle Price Volume Bars Hollow</a></li>
+			<li><a href="#RenkoBrick">Renko Brick</a></li>
+			<li><a href="#RenkoBrickWithWicks">Renko Brick With Wicks</a></li>
+			<li><a href="#Blank">Blank</a></li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p><b>Graph Draw Types</b> set the type of graph to be displayed using the bar data which includes Open, High, Low and Close data.</p>
+
+    <p>There several ways to set the <b>Graph Draw Type</b>: 
+
+    <ol>
+        <li>To set the  Graph Draw Type for the main price graph of the chart, select <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. </li>
+
+        <li>In the  <b>Graph Draw Type </b> box, select the Graph Draw Type that you require. </li>
+
+        <li>The alternative way to quickly set the Graph Draw Type for the main price graph of the chart, is to select <b class="menu_item">Chart &gt;&gt; Graph Draw Types</b> and choose the Graph Draw Type that you require in the list on the menu.</li>
+
+        <li>To set the Graph Draw Type for a study that supports the <b>Graph Draw Type</b> setting, open the <b>Study Settings </b> window.  </li>
+
+        <li> Select the <b>Subgraphs</b> tab of the <b>Study Settings</b> window. </li>
+
+        <li>Change the <b>Graph Draw Type</b> to what you require. Refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Adding/Modifying Studies</a> for instructions.</li>
+    </ol>
+        
+    <p>In the case of when using one of the Graph Draw Types for a study, refer to  <a href="index64f7.html?page=doc/GraphDrawTypesColorSettings.php">Color Settings for Graph Draw Types</a> for information about the color settings. </p>
+</section>
+
+<section class="h2">
+    <h2 id="AvailableGraphDrawTypes">Available Graph Draw Types</h2>
+    <div class="member-link">[<a href="#AvailableGraphDrawTypes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="OpenHighLowCloseBar">Open High Low Close (OHLC) Bars</h3>
+        <div class="member-link">[<a href="#OpenHighLowCloseBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The vertical line of the bar indicates the High and Low for the period of the bar. The mark on the left is the Open. The mark on the right is the Close or last.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-ohlc.png" rel="lightbox"><img src="../images/graphdrawtype-ohlc.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="CandleStick">CandleStick Bars</h3>
+        <div class="member-link">[<a href="#CandleStick">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The vertical line in this type of bar indicates the High and Low for the period of the bar. The box/body over the line goes from the Open to the Close for the period of the bar. </p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-candlestick.png" rel="lightbox"><img src="../images/graphdrawtype-candlestick.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="CandleStickBodyOnly">Candlestick Body Only Bars</h3>
+        <div class="member-link">[<a href="#CandleStickBodyOnly">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is similar to the Candlestick Bars, except that only the box/body, that goes from the Open to the Close for the period of the bar, is displayed.
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-candlestickbodyonly.png" rel="lightbox"><img src="../images/graphdrawtype-candlestickbodyonly.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="CandlestickHollow">Candlestick Bars Hollow</h3>
+        <div class="member-link">[<a href="#CandlestickHollow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the same as the Candlestick Bars except that the box/body is not colored in (the center of the body is hollow).</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-candlestickhollow.png" rel="lightbox"><img src="../images/graphdrawtype-candlestickhollow.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="LineonClose">Line on Close</h3>
+        <div class="member-link">[<a href="#LineonClose">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A line drawn at the level of the closing price for the period of a chart column to the closing price of next period.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-lineonclose.png" rel="lightbox"><img src="../images/graphdrawtype-lineonclose.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="Mountain">Mountain</h3>
+        <div class="member-link">[<a href="#Mountain">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Mountain</b> Graph Draw Type draws a Mountain graph using the period Close values.</p>
+
+        <p>The color for the <b>Mountain</b> Graph Draw Type can be set through the <a href="index5795.html?page=doc/GraphicsSettings.html" >Graphics Settings</a> window.</p>
+
+        <p>The specific color setting is <b>Line on Close / Line On Open / Mountain</b> and is listed in the <b>Colors and Widths</b> list.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-mountain.png" rel="lightbox"><img src="../images/graphdrawtype-mountain.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="HLCBars">HLC Bars</h3>
+        <div class="member-link">[<a href="#HLCBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>HLC Bars</b> Graph Draw Type is similar to the <b>OHLC Bars</b> Graph Draw Type, except that the Open value is not displayed on the chart.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-hlc.png" rel="lightbox"><img src="../images/graphdrawtype-hlc.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="HLBars">HL Bars</h3>
+        <div class="member-link">[<a href="#HLBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>HL Bars</b> Graph Draw Type is similar to the <b>OHLC Bars</b> Graph Draw Type, except that the Open and Close values are not displayed on the chart.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-hl.png" rel="lightbox"><img src="../images/graphdrawtype-hl.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="LineOnOpen">Line On Open</h3>
+        <div class="member-link">[<a href="#LineOnOpen">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Line On Open</b> Graph Draw Type draws a line from the Open Price of one bar period to the Open Price of the next bar period.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-lineonopen.png" rel="lightbox"><img src="../images/graphdrawtype-lineonopen.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="LineOnHLAvg">Line On HL Avg</h3>
+        <div class="member-link">[<a href="#LineOnHLAvg">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Line On HL Avg</b> Graph Draw Type draws a line from the average of the High Price and the Low Price of one bar period to the average of the High Price and the Low Price of the next bar period.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-lineonhlavg.png" rel="lightbox"><img src="../images/graphdrawtype-lineonhlavg.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="StairSteponClose">Stair Step on Close</h3>
+        <div class="member-link">[<a href="#StairSteponClose">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Draws a Stair Step graph using the period Close values.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-stairsteponclose.png" rel="lightbox"><img src="../images/graphdrawtype-stairsteponclose.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="BidAskVolumeBars">Bid Ask Volume Bars</h3>
+        <div class="member-link">[<a href="#BidAskVolumeBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <div style="text-align: center;"><a href="../images/bidaskbargraph_1.png" rel="lightbox"><img src="../images/bidaskbargraph_1.png" alt="Chart with Bid Ask Bars" class="screenshot" loading="lazy" width="700"></a></div>
+
+        <p>This graph is based on the Bid Volume, Ask Volume and total volume data as well as the Open, High, Low, and Close values.</p>
+
+        <p>For these bars to function as documented you must have Bid Volume and Ask Volume for the symbol of the chart.  To confirm that you do, add the Bid Volume and Ask Volume studies to the chart.  If these studies do not display any bars or have missing bars, then where you do not see bars you do not have Bid Volume and Ask Volume available.  If Bid Volume and Ask Volume are not known for a bar in the chart, they are assumed to each be 50% of the total volume of the bar.</p>
+
+        <p>Each bar provides the following information:</p>
+
+        <ul>
+            <li><b>High</b> price value: The top of the bar.</li>
+            <li><b>Low</b> price value: The bottom of the bar.</li>
+            <li><b>Open</b> price value: The thin dash on the left of the bar.</li>
+            <li><b>Close</b> price value: The  thin dash on the right of the bar.</li>
+            <li><b>Volume</b>: The width of the bar depends on its total volume. The widest bar corresponds to the bar with the largest volume among the visible bars in the chart. The narrowest bar corresponds to the bar with lowest volume among the visible bars in the chart.</li>
+            <li><b>BidVolume</b> and <b>AskVolume</b>: The bar has two colors. The Bid Volume color (red by default) represents the volume of the trades that make up the bar that traded at the Bid. The Ask Volume color (green by default) represents the volume of the trades that make up the bar that traded at the Ask. For example, if Bid volume and Ask volume each represent 50% of the total volume, then each will be 50% of the bar. The color of BidVolume and AskVolume depends upon the width of the bar. These colors are explained in the Bid Ask Volume Bars Color Settings section.</li>
+        </ul>
+
+        <p>The largest width for these types of chart bars is controlled through the <b class = "menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other &gt;&gt; Price Volume Bars Width %</b> setting.  The default setting is 125 percent.</p>
+
+        <section class="h4">
+			<h4 id="ColorSettingsForBidAskVolumeBars">Color Settings for Bid Ask Volume Bars</h4>
+			<div class="member-link">[<a href="#ColorSettingsForBidAskVolumeBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>You can set the colors for the <b>Bid Ask Volume Bars</b> Graph Draw Type through the  <a href="index5795.html?page=doc/GraphicsSettings.html" >Graphics Settings</a> window.  </p>
+
+            <p>The color settings are in the  <b>Colors and Widths</b> list.</p>
+
+            <div style="text-align: center;">
+                <a href="../images/bidaskbargraphcolorsettings.png" rel="lightbox"><img src="../images/bidaskbargraphcolorsettings.png" alt="Graphics Settings" width="500"></a>
+            </div>
+
+            <br><br>
+
+            <table class="doc center">
+                <tr>
+                    <th style="background-color: rgb(222, 233, 236);">Color</th>
+                    <th style="background-color: rgb(222, 233, 236);">Description</th>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Large Volume Ask Color</td>
+                    <td>This color is used for the Ask Volume portion of the bar when the total volume of the bar is in the 75% to 100% range of the volumes of the displayed bars.</td>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Medium - Large Volume Ask Color</td>
+                    <td>This color is used for the Ask Volume portion of the bar when the total volume of the bar is in the 50% to less than 75% range of the volumes of the displayed bars.</td>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Light - Medium Volume Ask Color</td>
+                    <td>This color is used for the Ask Volume portion of the bar when the total volume of the bar is in the 25% to less than 50% range of the volumes of the displayed bars.</td>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Light Volume Ask Color</td>
+                    <td>This color is used for the Ask Volume portion of the bar when the total volume of the bar is in the 0%  to less than 25% range of the volumes of the displayed bars.</td>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Large Volume Bid Color</td>
+                    <td>This color is used for the Bid Volume portion of the bar when the total volume of the bar is in the 75% to 100% range of the volumes of the displayed bars.</td>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Medium - Large Volume Bid Color</td>
+                    <td>This color is used for the Bid Volume portion of the bar when the total volume of the bar is in the 50% to less than 75% range of the volumes of the displayed bars.</td>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Light - Medium Volume Bid Color</td>
+                    <td>This color is used for the Bid Volume portion of the bar when the total volume of the bar is in the 25% to less than 50% range of the volumes of the displayed bars.</td>
+                </tr>
+                <tr>
+                    <td>Bid Ask Bar: Light Volume Bid Color</td>
+                    <td>This color is used for the Bid Volume portion of the bar when the total volume of the bar is in the 0%  to less than 25% range of the volumes of the displayed bars.</td>
+                </tr>
+            </table>
+
+        </section>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="PriceVolumeBars">Price Volume Bars</h3>
+        <div class="member-link">[<a href="#PriceVolumeBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This Graph Draw Type will combine Price and Volume into the chart bars.  The width of the bar depends on the Volume compared to the Volume of other bars displayed within the visible chart window.  The wider the bar, the higher the volume of that bar relative to the other bars that are visible.</p>
+
+        <p>These bars are also reffered to as EquiVolume Bars.</p>
+
+        <p>For these bars to function properly, the symbol must have Volume data.</p>
+
+        <p> The largest width for these types of chart bars is controlled through the <b class = "menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other &gt;&gt; Price Volume Bars Width %</b> setting. The default setting is 125 percent. </p>
+
+
+        <p>  For each chart bar there is a consistent amount of space   in the chart  regardless of the width of the actual  displayed bar itself.  To change the spacing between the bars, refer to <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChangingBarSpacing">Changing Bar Spacing</a>. </p>
+
+        <div style="text-align: center;"><a href="../images/pricevolumebars.png" rel="lightbox"><img src="../images/pricevolumebars.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="CandlePriceVolumeBars">Candle Price Volume Bars</h3>
+        <div class="member-link">[<a href="#CandlePriceVolumeBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Candle Price Volume Bars </b> Graph Draw Type draws candlesticks that have a variable width  based upon the volume of the candlestick relative to the candlestick with the maximum volume.   </p>
+        
+        <p>A narrow width indicates that the candlestick bar has a lower volume compared to the visible candlestick bar with the maximum volume.   </p> 
+        
+        <p>A wide width indicates the candlestick bar has a larger volume compared to the visible candlestick bar with the minimum volume.</p>
+
+        <p>The width of a candlestick bar is based upon the comparison of the volume of that particular bar to the visible candlestick bar with the maximum volume.  Therefore, as you scroll the chart, the candlestick bar widths  can change previous to  what they were at a different position in the chart.</p>
+
+        <p> The largest width for these types of chart bars is controlled through the <b class = "menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other &gt;&gt; Price Volume Bars Width %</b> setting. The default setting is 125 percent. </p>
+
+        <div style="text-align: center;"><a href="../images/candlepricevolumebars.png" rel="lightbox"><img src="../images/candlepricevolumebars.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="#CandlePriceVolumeBarsHollow">Candle Price Volume Bars Hollow</h3>
+        <div class="member-link">[<a href="#CandlePriceVolumeBarsHollow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Candle Price Volume Bars Hollow</b> Graph Draw Type draws candlesticks that have a variable width based upon the volume of the candlestick relative to the candlestick with the maximum volume. The interior of these candlesticks is not colored in.</p>
+        
+        <p>A narrow width indicates that the candlestick bar has a lower volume compared to the visible candlestick bar with the maximum volume.</p> 
+        
+        <p>A wide width indicates the candlestick bar has a larger volume compared to the visible candlestick bar with the minimum volume.</p>
+
+        <p>The width of a candlestick bar is based upon the comparison of the volume of that particular bar to the visible candlestick bar with the maximum volume.  Therefore, as you scroll the chart, the candlestick bar widths can change previous to what they were at a different position in the chart.</p>
+
+        <p>The largest width for these types of chart bars is controlled through the <b class = "menu_item">Global Settings &gt;&gt; Graphics Settings &gt;&gt; Other &gt;&gt; Price Volume Bars Width %</b> setting. The default setting is 125 percent.</p>
+
+        <div style="text-align: center;"><a href="../images/candlepricevolumebarshollow.png" rel="lightbox"><img src="../images/candlepricevolumebarshollow.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="PointAndFigureXO">Point and Figure XO</h3>
+        <div class="member-link">[<a href="#PointAndFigureXO">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>The Point and Figure XO</b> Graph Draw Type consists of columns of X's or O's. An X column is created when the price of the symbol is going up. An O column is created when the price of the symbol is going down. One X or O is drawn for each price move of the specified Box Size Input.</p>
+
+        <p>If the price of the symbol reverses direction by the number of boxes specified by the Reversal Size Input setting or more, then a new column is created in the opposite direction. If the prior column consisted of X's, then the next column will be O's, or O's if the prior column is X's. The Reversal Size in no way controls the minimum number of boxes per chart column. The number of boxes per chart column just simply depends upon whether a reversal has occurred based on the price action of the symbol. So there can be just one box.</p>
+
+        <p>The chart Tick Size can be changed to whatever that you require and this will affect the Box Size. However, this does not change the values of the underlying data in the chart. Those will remain the same. And as explained below all comparisons are based upon the Price Display Format setting on the chart.<p>
+
+        <p>For more information on how Point and Figure charts are generated, refer to the <a href="indexdb8f.html?page=doc/StudiesReference.php&amp;ID=140#Point_and_Figure_Chart">Point and Figure Chart Study</a>.</p>
+
+        <div style="text-align: center;"><a href="../images/pointandfigurechartsquarexos.png" rel="lightbox"><img src="../images/pointandfigurechartsquarexos.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="RenkoBrick">Renko Bricks</h3>
+        <div class="member-link">[<a href="#RenkoBrick">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Renko Brick</b> Graph Draw Type draws a Renko Brick body based on the <b>Bar Size</b> as defined in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>.</p>
+
+        <p>For more information on Renko Bricks and how to create a Chart using Renko Bricks see the <a href="index2885.html?page=doc/RenkoCharts.html">Renko Charts</a> documentation.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-renkobrick.png" rel="lightbox"><img src="../images/graphdrawtype-renkobrick.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="RenkoBrickWithWicks">Renko Brick With Wicks</h3>
+        <div class="member-link">[<a href="#RenkoBrick">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Renko Brick With Wicks</b> Graph Draw Type is similar to the <b>Renko Brick</b> Graph Draw Type, except that it includes lines (wicks) on the top and bottom of the Renko Brick Body that extend up to the High and down to the Low of the bar.</p>
+
+        <p>For more information on Renko Bricks With Wicks and how to create a Chart using Renko Bricks With Wicks see the <a href="index2885.html?page=doc/RenkoCharts.html">Renko Charts</a> documentation.</p>
+
+        <div style="text-align: center;"><a href="../images/graphdrawtype-renkobrickwithwicks.png" rel="lightbox"><img src="../images/graphdrawtype-renkobrickwithwicks.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="Blank">Blank</h3>
+        <div class="member-link">[<a href="#Blank">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Blank</b> Graph Draw Type does not display any bars in the chart</p>
+    </section>
+</section>
+
+<hr><p>*Last modified Friday, 09th December, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/PriceGraphTypes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:38 GMT -->
+</html>  

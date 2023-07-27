@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACS_ArraysAndLooping.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105672') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACS_ArraysAndLooping.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Working with ACSIL Arrays and Understanding Looping -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="indexcf5e.html?page=doc/ACS_ArraysAndLooping.html">Working with ACSIL Arrays and Understanding Looping</a></h4> </div>     <h1 class="PageName">Working with ACSIL Arrays and Understanding Looping</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#ArraysOverview">Overview of <b>sc.BaseData[][]</b>, <b>sc.Subgraph[].Data[]</b>, <b>sc.Subgraph[].Arrays[][] </b> Arrays</a></li>
+    <li><a href="#ArrayIndexing">Array Indexing and Sizes</a></li>
+    <li><a href="#AutomaticArrayBoundsCorrection">Automatic Array Bounds Correction</a></li>
+    <li><a href="#AutomaticLoopingIterating">Automatic Looping/Iterating</a></li>
+    <li><a href="#ManualLooping">Manual Looping/Iterating</a></li>
+    <li><a href="#WhenTheStudyFunctionIsCalled">When the Study Function Is Called</a></li>
+    <li><a href="#ArrayTypes">Array Types</a></li>
+    <li><a href="#ArrayIndexingInTradingDOMWindows">Array Indexing in Trading DOM Windows</a></li>
+    <li><a href="#WhenArraysAreCleared">When Arrays are Cleared</a></li>
+    
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This documentation page provides an explanation on how to work with the three most common arrays in the Sierra Chart Advanced Custom Study Interface. </p>
+
+    <p>It also discusses another important topic, the two methods of looping or iterating through all of the bars/columns in the chart. Looping through all of the bars/columns in the chart is necessary in order to fully calculate your study to produce a result that goes across the entire chart. </p>
+
+    <p> The two methods of looping are <b>Automatic Looping</b> and <b>Manual Looping</b>. <span class="GeneralBackgroundHighlightLight">These are exclusive of each other and you will never use both methods of looping in the same function.  Otherwise, you would cause significant inefficiencies.</span></p>
+
+    <p>The preferred method is <b>Automatic</b> Looping.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ArraysOverview">Overview of <br><b>sc.BaseData[][]</b><br><b>sc.Subgraph[].Data[]</b><br><b>sc.Subgraph[].Arrays[][]</b></h2>
+    <div class="member-link">[<a href="#ArraysOverview">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The three most common arrays you will work with are:</p>
+
+    <ul>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></li>
+        <li><a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData">sc.Subgraph[].Data[]</a></li>
+        <li><a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphArrays">sc.Subgraph[].Arrays[][]</a></li>
+    </ul>
+
+    <p>The <b>sc.BaseData[][]</b> arrays contain the data for the main price graph in the chart. The <b>sc.BaseData[][]</b> arrays are used as input data to your study.</p>
+
+    <p>The <b>sc.Subgraph[].Data[]</b> arrays, (shorthand notation: sc.Subgraph[][]), are for your studies displayable output and can be used to hold the results of background or intermediate calculations.</p>
+
+    <p>There are also the extra arrays, <b>sc.Subgraph[].Arrays[][]</b>, that can be used to hold the results of background or intermediate calculations for a sc.Subgraph[].Data[] array that is graphed on the chart.</p>
+
+    <p>The next two sections provide examples on how to work with these arrays.</p>
+
+    <p>A good way to understand how to organize your study calculations and use the <b>sc.Subgraph[]</b> arrays to hold the results of those calculations is to ask yourself how would I do this if I were using one of the Sierra Chart <b>Spreadsheet Studies</b>. If your study would require 2 Spreadsheet columns, one for a background calculation and another for the final result to be graphed and visible, then you would use for example <b>sc.Subgraph[0][sc.Index]</b> (shorthand notation) for the final result to be graphed. Make sure <b>sc.Subgraph[0].Name</b> is set for the Subgraph. For the background calculation you would use <b>sc.Subgraph[0].Arrays[0][sc.Index]</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ArrayIndexing">Array Indexing and Sizes</h2>
+    <div class="member-link">[<a href="#ArrayIndexing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a> arrays have 2 indexing operators ([]). The second indexing operator is for accessing the individual values within the chart Base Data array specified by the first indexing operator.</p>
+
+    <p>For the second indexing operator, the first element starts at 0, and the last element is <b>sc.ArraySize</b> - 1. Examples: <b>sc.BaseData[SC_LAST][0]</b>, <b>sc.BaseData[SC_LAST][sc.ArraySize-1]</b>. An index value of 0 for the second indexing operator is the leftmost bar in the chart.</p>
+
+    <p> The size of the second array can also be determined by <b>sc.BaseData[0].GetArraySize()</b>. If this function returns 0, then the array is not allocated and is currently unused.</p>
+
+    <p>The <b>sc.BaseDateTimeIn[]</b> array has 1 indexing operator ([]). This operator is for accessing the individual <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> variables within the sc.BaseDateTimeIn[] array. The first element starts at 0, and the last element is <b>sc.ArraySize</b> -1. Examples: <b>sc.BaseDateTimeIn[0]</b> , <b>sc.BaseDateTimeIn[sc.ArraySize-1]</b>. The first element is the Date-Time of the leftmost bar in the chart. This array always contains the starting time of the chart bars.</p>
+
+    <p>The <b>sc.DateTimeOut[]</b> array has 1 indexing operator ([]). This operator is for accessing the individual <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> variables within the sc.DateTimeOut[] array. The first element starts at 0, and the last element is <b>sc.OutArraySize</b> -1. Examples: <b>sc.DateTimeOut[0]</b> , <b>sc.DateTimeOut[sc.OutArraySize-1]</b>. The first element is for the leftmost bar in the chart.</p>
+
+    <p>The <b>sc.Subgraph[][] / sc.Subgraph[].Data[]</b> arrays have 2 indexing operators ([]). <b>sc.Subgraph[][]</b> is a shorthand version of sc.Subgraph[].Data[]. The second indexing operator is for accessing the individual values within the Subgraph array specified by the first indexing operator. For the second indexing operator, the first element starts at 0, and the last element is <b>sc.ArraySize</b> - 1. Examples: Examples: <b>sc.Subgraph[0][0] , sc.Subgraph[0][sc.ArraySize-1]</b>. An index value of 0 for the second indexing operator is the leftmost bar in the chart. </p>
+
+    <p>If <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIsCustomChart">sc.IsCustomChart</a> is set to 1, then the last element of sc.Subgraph[].Data[] is specified as <b>sc.Subgraph[0].Data[sc.OutArraySize-1]</b>. </p>
+
+    <p>The <b>sc.Subgraph[].Arrays[][]</b> arrays have 3 indexing operators ([]). The third indexing operator is for accessing the individual values within the specified Extra Array (second indexing operator) for the specified Subgraph (first indexing operator). For the third indexing operator, the first element starts at 0, and the last element is sc.ArraySize -1. Examples: <b>sc.Subgraph[0].Arrays[0][0] , sc.Subgraph[0].Arrays[0][sc.ArraySize-1] </b>. An index value of 0 for the third indexing operator is the leftmost bar in the chart. </p>
+
+    <p>If <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIsCustomChart">sc.IsCustomChart</a> is set to 1, then the last element of <b>sc.Subgraph[].Arrays[][]</b> is specified as <b>sc.Subgraph[0].Arrays[0][sc.OutArraySize-1]</b>. </p>
+
+
+    <p class="GeneralBackgroundHighlightLight">With all of the above arrays and in the case of Automatic Looping, you would access the element at the current index (the index at which your study function needs to perform calculations at) by using <b>sc.Index</b> with the last indexing operator or with the single indexing operator if there is only one indexing operator supported with the array. </p>
+
+    <p>Example: <b>sc.BaseData[SC_LAST][sc.Index]</b>. This will be understood better when you review the <a href="#AutomaticLoopingIterating">Automatic Looping/Iterating</a> section.</p>
+
+    <p>To get the size of an array, use the <b>GetArraySize()</b> member function. Example: <b><b>sc.Subgraph[0].Data</b>.GetArraySize()</b>. This is particularly useful when you have accessed an array from another chart which has different array sizes compared to the chart where the arrays were gotten from.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AutomaticArrayBoundsCorrection">Automatic Array Bounds Correction</h2>
+    <div class="member-link">[<a href="#AutomaticArrayBoundsCorrection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> With all Advanced Custom Study Interface and Language provided arrays, they are all safe with the use of invalid index values with the indexing operators. </p>
+
+    <p>When the specified index value is out of bounds, it will automatically be corrected to be just within the nearby bound. For example using a negative number with an indexing operator will result in the index being set to zero. </p>
+
+    <p> When using an index value which is greater than or equal to the array size, will result in the index being set to the array size minus 1. For example the following code will access the first element of the array and will not cause any type of error or exception: <b>sc.Subgraph[].Data[-1]</b>. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="AutomaticLoopingIterating">Automatic Looping/Iterating</h2>
+    <div class="member-link">[<a href="#AutomaticLoopingIterating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When your study function uses automatic looping, then it is <i>automatically</i> called once for every bar or column in the chart when the study is initially calculated. If there are 100 bars in the chart, then it will be called 100 times when your study is initially calculated. After that, the study function is called as the latest bar is updated and new bars are added. </p>
+
+    <p><b>sc.Index</b> is set to the index of the bar/column in the chart that your study function is being called for. This is a zero (0) based index. During normal chart updating, <b>sc.Index</b> will initially start at the <b>sc.Index</b> value of the last prior call to the study function. This will be the index of the last bar in the chart before any new bars have been added.</p>
+
+    <p>For information about when the study function is called during normal chart updating after the initial calculation of the study, refer to <a href="#WhenTheStudyFunctionIsCalled">When the Study Function Is Called</a>.</p>
+
+    <p><b>sc.CurrentIndex</b> and <b>sc.Index</b> are the same. They are two different variables that are set to the same index value always. You can use either one. Normally the documentation will refer to <b>sc.Index</b>. <b>sc.Index</b> is equal to the elements in the <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></b> arrays that need to be processed and/or the elements in the <b><a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData">sc.Subgraph[][]</a></b> arrays that need to be filled in. This will be more clear when you look at the code example below.</p>
+
+    <p>If you are creating a custom chart by setting <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIsCustomChart">sc.IsCustomChart</a></b> to 1 (true), this is very unlikely, then <b>sc.Index</b> only refers to the elements in the <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></b> arrays to process, assuming your custom chart function uses the <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></b> arrays. </p>
+
+    <p>Automatic looping is activated by setting <b><a href="#scAutoLoop">sc.AutoLoop</a> = 1;</b> in the code block at the top of your function for setting the defaults and configuration. When you create a new Advanced Custom Study file, the template function in that file, sets this variable to 1 (true). Therefore, by default, automatic looping is done for new functions. However, if <b>sc.AutoLoop</b> is not set, then its value will be zero and automatic looping will be off. </p>
+
+    <p><b>sc.Index</b> initially starts at 0 and increments up to sc.ArraySize -1 when the study is fully recalculated. This happens when the chart is loaded or reloaded. Each time it increments, your study function is called again. There can be other cases for a full recalculation. For example, when you add or remove a study from a chart. Another case a full recalculation can occur is when you are using a custom chart such as the Renko Chart study or the Point and Figure Chart study and a new bar which was added by one of the studies is removed. In this case a full recalculation of the other studies is necessary. In this case <b>sc.Index</b> will start back at 0 and increment back up to the sc.ArraySize-1.</p>
+
+    <p>Here is an example of writing code that supports <em>automatic looping</em>:</p>
+
+    <pre class="Code FullLineHeight">
+/*============================================================================
+This function demonstrates using sc.AutoLoop.
+----------------------------------------------------------------------------*/
+SCSFExport scsf_AutoLoopExample(SCStudyInterfaceRef sc)
+{
+
+    if (sc.SetDefaults)
+    {
+
+        // Set the configuration and defaults
+        sc.GraphName = "Auto Loop Example";
+
+        sc.StudyDescription = "This is an example of the new auto loop method for Advanced Custom Studies.";
+
+        // Setting sc.AutoLoop to 1 (true) means looping is performed
+        // automatically. This means that if there are 100 bars in your
+        // chart, this function is called 100 times initially.
+        sc.AutoLoop = 1; // true
+
+        sc.Subgraph[0].Name = "Average";
+        sc.Subgraph[1].Name = "Back Reference Example";
+
+        sc.Subgraph[3].Name = "Current Low Price";
+        return;
+    }
+
+    // Do data processing
+    sc.SimpleMovAvg(sc.BaseData[SC_LAST], sc.Subgraph[0], sc.Index, 10);
+
+    // The following line demonstrates referencing data one element back from
+    // the current index.
+    sc.Subgraph[1][sc.Index] = sc.BaseData[SC_LAST][sc.Index - 1];
+
+    // The following line demonstrates referencing data at the current index.
+    sc.Subgraph[3][sc.Index] = sc.BaseData[SC_LOW][sc.Index];
+}
+    </pre>
+</section>
+
+<section class="h2">
+    <h2 id="ManualLooping">Manual Looping/Iterating</h2>
+    <div class="member-link">[<a href="#ManualLooping">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section describes manual array element looping or iterating. Manual looping is going to be more efficient than automatic looping because the study function is called only once during a full recalculation. </p>
+
+    <p> However, <a href="#AutomaticLoopingIterating">Automatic Looping</a> is easier to use unless your study function does not require automatic looping or it would instead work best with manual looping. For example, you would want to use <em>manual looping</em> if the custom study does not need to perform a calculation at each chart bar.</p>
+
+    <p>Manual looping needs to be properly implemented. If it is not implemented correctly by using <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scUpdateStartIndex">sc.UpdateStartIndex</a>, then it becomes very inefficient.</p>
+
+
+    <p>If <b>sc.AutoLoop</b> is set to zero (0), which is the default if it is not specified in the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSetDefaults">sc.SetDefaults</a> code block at the top of the study function for setting the defaults and configuration, then manual looping is specified and you need to use a <b>for</b> loop in the study function to iterate through all the <b>sc.BaseData[][]</b> and <b>sc.Subgraph[][]</b> data array elements. </p>
+
+    <p>The function must use the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scUpdateStartIndex">sc.UpdateStartIndex</a> variable to determine what element Index to begin the <b>for</b> loop at. If you were to start the loop at position zero always, your study will be very inefficient. Instead you must use <b>sc.UpdateStartIndex</b>.</p>
+
+    <p><b>sc.Index</b> is <em>not</em> used with manual looping. </p>
+
+    <p>During normal chart updating and after the initial study calculation, refer to <a href="#WhenTheStudyFunctionIsCalled">When the Study Function Is Called</a> to know when the study function will be called.</p>
+
+    <p> When there is an event which will cause the study function to be called, it will be called at the <b>Chart Update Interval</b> set in <b class="menu_item">Global Settings &gt;&gt; General Settings</b>, and not more often. So it does not happen immediately upon, for example new market data received. It will be soon as the <b>Chart Update Interval</b> has elapsed and there is new data which causes an update.</p>
+
+    <p>The following is more information on <b>sc.UpdateStartIndex</b> and example code for manual looping:</p>
+
+    <section class="h3">
+        <h3>More information about sc.UpdateStartIndex</h3>
+
+        <p><b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scUpdateStartIndex">sc.UpdateStartIndex</a></b> is set by Sierra Chart to the index where your primary <b>for</b> loop will start looping from. This is the index in the <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></b> arrays where updating has begun. This is the same index where updating should begin in the <b><a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData">sc.Subgraph[][]</a></b> arrays. </p>
+
+        <p>If you are creating a custom chart, <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scIsCustomChart">sc.IsCustomChart</a></b> is set to true (this is very unlikely), then <strong>sc.UpdateStartIndex</strong> only refers to the <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[][]</a></b> element to process.</p>
+
+        <section class="h4"><h4>Example</h4>
+            <pre class="Code FullLineHeight">
+
+for (int Index = sc.UpdateStartIndex; Index < sc.ArraySize; ++Index)
+{
+    // fill in the first subgraph with the last values
+    sc.Subgraph[0][Index] = sc.BaseData[SC_LAST][Index];
+} 
+            </pre>
+        </section>
+
+        <p>The above loop will always fill in and update the necessary elements in the one output (Subgraph) array we are using (<b><a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData">sc.Subgraph[0][]</a></b>). If you are using manual looping, most studies will require a primary for loop to iterate through the elements in the arrays unless one is clearly not required based upon what the study function is doing. </p>
+
+        <p>This is a good example of the primary loop that you will need to use. You will begin at <b>sc.UpdateStartIndex</b>. You will loop from there up to, but not including, <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scArraySize">sc.ArraySize</a></b>. You do not include <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scArraySize">sc.ArraySize</a></b> because the arrays are zero-based, meaning the last element in the array is at the index <b><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scArraySize">sc.ArraySize</a> - 1</b>.</p>
+
+        <p> See below for a complete study function using manual looping. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3>Example Code</h3>
+        <pre class="Code FullLineHeight">
+/*============================================================================
+This function demonstrates manual looping using a for loop.
+----------------------------------------------------------------------------*/
+SCSFExport scsf_ManualLoopExample(SCStudyInterfaceRef sc)
+{
+
+    if (sc.SetDefaults)
+    {
+        // Set the configuration and defaults
+        sc.GraphName = "Manual Loop Example";
+
+        sc.StudyDescription = "This is an example of using manual looping.";
+        sc.AutoLoop = 0; // 0 is the default: there is no auto-looping
+
+        sc.Subgraph[0].Name = "High Low Difference";
+        sc.Subgraph[1].Name = "High - Low Average";
+
+        sc.Subgraph[2].Name = "Back Reference Example";
+        sc.Subgraph[3].Name = "Forward Reference Example";
+
+        return;
+    }
+    
+    // Do data processing
+    for (int Index = sc.UpdateStartIndex; Index < sc.ArraySize; Index++)
+    {    
+        // Calculate the difference between the high and the low
+        sc.Subgraph[0][Index] = sc.BaseData[SC_HIGH][Index] - sc.BaseData[SC_LOW][Index];
+
+        // SimpleMovAvg will fill in the data element in sc.Subgraph[1] at index Index.
+        sc.SimpleMovAvg(sc.Subgraph[0], sc.Subgraph[1], Index, 10);
+
+        // Copy the previous last price (Index-1) to subgraph array number 3
+        sc.Subgraph[2][Index] = sc.BaseData[SC_LAST][Index - 1];
+
+        // Copy the next last price (Index+1) to subgraph array number 4
+        sc.Subgraph[3][Index] = sc.BaseData[SC_LAST][Index + 1];
+    }
+}
+        </pre>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="WhenTheStudyFunctionIsCalled">When the Study Function is Called</h2>
+    <div class="member-link">[<a href="#WhenTheStudyFunctionIsCalled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section describes the different conditions for when a study function is called by a chart it is contained within. A study function begins with <b>scsf_</b> and is contained in a CPP file. This file is compiled into a DLL file which is the executable file.</p>
+
+    <p>The study function will be called separately for each instance of the study. </p>
+
+    <section class="h3">
+        <h3>Initial/First Call</h3>
+
+        <p> The initial or first call into a study function occurs when a study instance is added to a chart, a Chartbook is opened and a chart in that Chartbook contains an instance of the study, or a Study Collection is applied to a chart and an instance of the study is part of that Study Collection.</p>
+        
+        <p> In the case when a Chartbook is opened, a study function  for study instance on that chart is only called when  the chart data loading is complete  for that chart.  When that data loading is complete, all of the studies on that chart are fully recalculated. </p>
+
+
+        <p>There are at least two calls to the study function for the conditions described above. Once to set the defaults of the study. In this case <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSetDefaults">sc.SetDefaults</a> is set to 1. The second call is for the full calculation of the study. </p>
+
+
+        <p>During this second call into the study function there is a full calculation. Read the description below.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3>Full Calculation/Recalculations</h3>
+
+        <p>A study will be fully calculated/recalculated when it is added to a chart, any time its Input settings are changed, another study is added or removed from a chart, when the Study Window is closed with OK or the settings are applied. Or under other conditions which can cause a full recalculation. </p>
+
+        <p>Other conditions include: When the chart the study is applied to is being referenced by another chart and the other chart has been fully recalculated, the chart data loaded, or a historical data download finishes. For more information, refer to <a href="index9099.html?page=doc/ChartStudies.html#ReferencesOtherChartsTagging">References to Other Charts and Tagging</a>. The rebuilding of the internal Trades List in a chart, if it is being used, which can occur when changing the Trade Account on the chart or enabling or disabling Trade Simulation Mode.</p>
+
+        <p> In the case of <em>manual looping</em>, the study function will be called 1 time with <b>sc.UpdateStartIndex</b> set to 0, and usually will be called again when the chart is immediately updated after. On this additional call, <b>sc.UpdateStartIndex</b> is set to <b>sc.ArraySize</b> -1. </p>
+
+        <p> In the case of <em>automatic looping</em>, the study function will be called once for each bar in the chart. </p>
+
+        <p><b>sc.Index</b> starts at 0 and increments for each bar in the chart. Therefore, this is a series of calls which can be many thousands of times. Once for each chart bar. This group of function calls is considered the full calculation of the study. </p>
+
+        <p>After this full calculation is complete in the case of automatic looping, usually there will be an additional call into this study function when the chart is immediately updated after. During this additional call, <b>sc.Index</b> is set to <b>sc.ArraySize</b> -1. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UpdateStudyFunctionCalls">Update Study Function Calls</h3>
+        <div class="member-link">[<a href="#UpdateStudyFunctionCalls">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> A study function will be called with either manual or automatic looping, with one or more of the conditions given below. None of the conditions described below, cause an immediate call. They flag that the study function needs to be called, and the call occurs at the <b>Chart Update Interval</b> set in <b class="menu_item">Global Settings &gt;&gt; General Settings</b>. </p>
+
+        <p>Each individual chart can also override this setting and use their own independent Chart Update Interval. We recommend charts be set to use their own independent <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval">Chart Update Interval</a> if they need to use either a shorter or longer interval compared to the global settings.</p>
+
+        <p> The call into the study function will just be an update call with <b>sc.Index/sc.UpdateStartIndex </b> set to the <em>prior array size</em>. The following are the conditions for when this call happens.</p>
+        <ul>
+            <li>There is new trade market data received</li>
+
+            <li>Historical downloaded data received</li>
+
+            <li>Bid and ask data received</li>
+
+            <li>Market depth data received</li>
+
+            <li>Fundamental data received</li>
+
+            <li>New orders or order updates for the symbol and trade account the chart is set to.</li>
+
+            <li>Trade Position updates for the symbol and trade account the chart is set to.</li>
+
+            <li>When records are read from the chart data file during a Replay of an Intraday chart</li>
+
+            <li>When using <b>sc.UpdateAlways</b> = 1</li>
+
+            <li>The <b Class="menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> state has been changed. This causes a call because of the order related data for the chart has changed even though there may not be any orders.</li>
+
+
+        </ul>
+
+        <p>In these cases the study function will be called when the <b>Chart Update Interval</b> set in <b class="menu_item">Global Settings &gt;&gt; General Settings</b> elapses, and not more often. Therefore, it does not happen immediately upon, for example a new trade occurring for the symbol. It will be soon as the <b>Chart Update Interval</b> has elapsed and there is new data which causes an update for one of the given reasons. </p>
+
+        <p>During an accelerated Chart Replay, the <b>Chart Update Interval</b> is reduced internally to a shorter time.</p>
+
+        <p> While technically there is an option to cause a study function to be called at every market data update, that is simply something which is impractical and leads to problems. It is something that just should never be done. The whole concept itself is illogical due to variability with market data rates. </p>
+
+
+        <p>To access individual trades and bid/ask updates in between calls into the study function, use the following functions:</p>
+
+        <ul>
+            <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetTimeAndSales">sc.GetTimeAndSales</a></li>
+            <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetTimeAndSalesForSymbol">sc.GetTimeAndSalesForSymbol</a></li>
+            <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scReadIntradayFileRecordAtIndex">sc.ReadIntradayFileRecordAtIndex</a></li>
+            <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scReadIntradayFileRecordForBarIndexAndSubIndex">sc.ReadIntradayFileRecordForBarIndexAndSubIndex</a></li>
+        </ul>
+
+        <p> If a study function takes longer to calculate than the Chart Update Interval, this will lead to skipping of update calculations. For example, if a study takes 200 ms to calculate, which is a very long time, and the Chart Update Interval is 100 ms, then there is going to be skipping of chart updates as needed based on the study calculation time. </p>
+
+
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyFunctionCallingAndThreads">Study Function Calling and Threads</h3>
+        <div class="member-link">[<a href="#StudyFunctionCallingAndThreads">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Study calculations, the calling of a study function, the updating of a chart, and the drawing of the chart, all occurs on a single thread and this is the main thread of Sierra Chart.</p>
+
+        <p>Only one study function can run and be called at the same time. Each study is calculated one at a time and according to a <a href="index9099.html?page=doc/ChartStudies.html#StudyCalculationPrecedence" target="_blank" rel="noopener noreferrer">calculation order</a> determined by Sierra Chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="BrowsingOfCustomStudiesInDLL">Browsing of Custom Studies in DLL</h3>
+        <div class="member-link">[<a href="#BrowsingOfCustomStudiesInDLL">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When a user selects <b class="menu_item">Analysis &gt;&gt; Studies &gt;&gt; Add Custom Study</b>, all of the found study functions that begin with <b>scsf_</b> in the DLL file are called with <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scSetDefaults">sc.SetDefaults</a> set to true/1. This is so the actual names of them can be discovered and listed to the user in the Add Custom Study window. </p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ArrayTypes">Array Types</h2>
+    <div class="member-link">[<a href="#ArrayTypes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are descriptions of the different types of arrays used in the Advanced Custom Study Interface and Language for study and main price graph Subgraphs.</p>
+    
+    <p> When getting one of these arrays  with the various  <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html">ACSIL Functions</a> for getting an array from a study or a chart,  a reference to the array is always made.  Never in any case, is a copy made of the array. </p>
+
+    <ul>
+        <li><b>SCFloatArray </b>: This is an array of 4 byte float variables. This is the type of array used with the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn">sc.BaseData[]</a> and <a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html#scSubgraphData">sc.Subgraph[].Data</a> arrays. This type of array is a reference to an array which is internally allocated and maintained within Sierra Chart. It does not contain a copy of the data. Only a reference to the data. The contents of this type of array can be modified by the study function.</li>
+
+        <li><b>SCFloatArrayRef</b>: This type is a reference to a <b>SCFloatArray</b> array. So it effectively just directly references another array of float variables.</li>
+
+        <li><b>SCDateTimeArray</b>: This is an array of <a href="indexac34.html?page=doc/SCDateTime.html">SCDateTime</a> variables. This is the type of array used with the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDateTimeIn">sc.BaseDateTimeIn[]</a> array. This type of array is a reference to an array which is internally allocated and maintained within Sierra Chart. It does not contain a copy of the data. Only a reference to the data. The contents of this type of array can be modified by the study function.</li>
+
+        <li><b>SCDateTimeArrayRef</b>: This type is a reference to a <b>SCDateTimeArray</b> array. So it effectively just directly references another array of SCDateTime variables.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="ArrayIndexingInTradingDOMWindows">Array Indexing in Trading DOM Windows</h2>
+    <div class="member-link">[<a href="#ArrayIndexingInTradingDOMWindows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A <a href="index3c50.html?page=doc/ChartTrading.html#TradeDOM">Trading DOM</a> window is opened through <b Class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Open Trading DOM</b>. It is a chart that consists of 1 chart bar which is not visible. </p>
+
+    <p>However, if it contains studies, then it contains more than one bar and the number of bars it contains is going to be based upon the <b Class="menu_item">Chart &gt;&gt; Chart Settings</b>.</p>
+
+    <p>The bar indexing and bar spacing in a Trading DOM window works just like any other chart. Although the bars are just not visible. So therefore, all of the information on this page applies to a Trading DOM window as well.</p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="WhenArraysAreCleared">When Arrays are Cleared</h2>
+    <div class="member-link">[<a href="#WhenArraysAreCleared">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>All of the main price graph and study arrays in a chart are cleared  when the chart is reloaded. For example this happens when using   <b class="menu_item">Chart &gt;&gt; Reload and Recalculate</b>. </p>
+
+    <p> The study arrays are cleared when making changes to studies through <b class="menu_item">Analysis &gt;&gt; Studies</b>.</p>
+
+
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACS_ArraysAndLooping.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:40 GMT -->
+</html>  

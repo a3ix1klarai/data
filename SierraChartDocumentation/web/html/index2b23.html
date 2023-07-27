@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_Operators.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1642806286') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/cpp_Operators.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title> Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2b23.html?page=doc/cpp_Operators.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a></h4> </div>     <h1 class="PageName">C++ Operators</h1>
+
+<section class="h2">
+    <h2>Related Documentation Pages</h2>
+    <ul>
+        <li><a href="index7b37.html?page=doc/cpp_VariablesDataTypes.php">C++ Variables and Data Types</a></li>
+        <li><a href="indexfcfe.html?page=doc/cpp_Constants.php">C++ Constants</a></li>
+        <li>C++ Operators</li>
+        <li><a href="indexfe09.html?page=doc/cpp_ControlStructures.php">C++ Control Structures</a></li>
+        <li><a href="index72d7.html?page=doc/cpp_Functions.php">C++ Functions</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Assignment">Assignment (=)</a></li>
+        <li><a href="#Arithmeticoperators">Arithmetic operators ( +, -, *, /, % )</a></li>
+        <li><a href="#Compoundassignment">Compound assignment (+=, -=, *=, /=, %=, &gt;&gt;=, &lt;&lt;=, &amp;=, ^=, |=)</a></li>
+        <li><a href="#IncreaseandDecrease">Increase and decrease (++, --)</a></li>
+        <li><a href="#RelationalEquality">Relational and equality operators ( ==, !=, &gt;, &lt;, &gt;=, &lt;= )</a></li>
+        <li><a href="#LogicalOperators">Logical operators ( !, &amp;&amp;, || )</a></li>
+        <li><a href="#ConditionalOperator">Conditional operator ( ? )</a></li>
+        <li><a href="#CommaOperator">Comma operator ( , )</a></li>
+        <li><a href="#BitwiseOperators">Bitwise Operators ( &amp;, |, ^, ~, &lt;&lt;, &gt;&gt; )</a></li>
+        <li><a href="#Explicittypecastingoperator">Explicit type casting operator</a></li>
+        <li><a href="#sizeof">sizeof()</a></li>
+        <li><a href="#Otheroperators">Other operators</a></li>
+        <li><a href="#Precedenceofoperators">Precedence of operators</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<br>
+<div style="text-align:right;">Published by <b>Juan Soulie</b></div>
+<br>
+
+
+<section class="h2">
+    <p>Once we know of the existence of variables and constants, we can begin to operate with them. For that purpose, C++ integrates operators. Unlike other languages whose operators are mainly keywords, operators in C++ are mostly made of signs that are not part of the alphabet but are available in all keyboards. This makes C++ code shorter and more international, since it relies less on English words, but requires a little of learning effort in the beginning.</p>
+
+    <p>You do not have to memorize all the content of this page. Most details are only provided to serve as a later reference in case you need it.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Assignment">Assignment (=)</h2>
+    <div class="member-link">[<a href="#Assignment">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The assignment operator assigns a value to a variable.</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="int"> 5</span><span class="operator">;</span></pre>
+    </div>
+
+    <p>This statement assigns the integer value 5 to the variable <b>a</b>. The part at the left of the assignment operator (<b>=</b>) is known as the <i>lvalue</i> (left value) and the right one as the <i>rvalue</i> (right value). The lvalue has to be a variable whereas the rvalue can be either a constant, a variable, the result of an operation or any combination of these.<br>
+        The most important rule when assigning is the <i>right-to-left</i> rule: The assignment operation always takes place from right to left, and never the other way:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span> b<span class="operator">;</span></pre>
+    </div>
+
+    <p>This statement assigns to variable <b>a</b> (the lvalue) the value contained in variable <b>b</b> (the rvalue). The value that was stored until this moment in <b>a</b> is not considered at all in this operation, and in fact that value is lost.</p>
+
+    <p>Consider also that we are only assigning the value of <b>b</b> to <b>a</b> at the moment of the assignment operation. Therefore a later change of <b>b</b> will not affect the new value of <b>a</b>.</p>
+
+    <p>For example, let us have a look at the following code - I have included the evolution of the content stored in the variables as comments:</p>
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// assignment operator
+</span><span class="pre">
+#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> a<span class="operator">,</span> b<span class="operator">;</span><span class="comment">         // a:?,  b:?
+</span>
+  a<span class="operator"> =</span><span class="int"> 10</span><span class="operator">;</span><span class="comment">           // a:10, b:?
+</span>  b<span class="operator"> =</span><span class="int"> 4</span><span class="operator">;</span><span class="comment">            // a:10, b:4
+</span>  a<span class="operator"> =</span> b<span class="operator">;</span><span class="comment">            // a:4,  b:4
+</span>  b<span class="operator"> =</span><span class="int"> 7</span><span class="operator">;</span><span class="comment">            // a:4,  b:7
+</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> "a:"</span><span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> a<span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span><span class="string"> " b:"</span><span class="operator">;</span>
+  cout<span class="operator"> &lt;&lt;</span> b<span class="operator">;</span><span class="flow">
+
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+a:4 b:7
+*/</span></pre>
+    </div>
+
+    <p>This code will give us as result that the value contained in <b>a</b> is <b>4</b> and the one contained in <b>b</b> is <b>7</b>. Notice how <b>a</b> was not affected by the final modification of <b>b</b>, even though we declared <b>a = b</b> earlier (that is because of the <i>right-to-left rule</i>).</p>
+
+    <p>A property that C++ has over other programming languages is that the assignment operation can be used as the rvalue (or part of an rvalue) for another assignment operation. For example:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="int"> 2</span><span class="operator"> + (</span>b<span class="operator"> =</span><span class="int"> 5</span><span class="operator">);</span></pre>
+    </div>
+
+    <p>is equivalent to:</p>
+
+    <div class="CPP_Code">
+        <pre>b<span class="operator"> =</span><span class="int"> 5</span><span class="operator">;</span>
+a<span class="operator"> =</span><span class="int"> 2</span><span class="operator"> +</span> b<span class="operator">;</span></pre>
+    </div>
+
+    <p>that means: first assign <b>5</b> to variable <b>b</b> and then assign to <b>a</b> the value <b>2</b> plus the result of the previous assignment of <b>b</b> (i.e. 5), leaving <b>a</b> with a final value of <b>7</b>.</p>
+
+    <p>The following expression is also valid in C++:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span> b<span class="operator"> =</span> c<span class="operator"> =</span><span class="int"> 5</span><span class="operator">;</span></pre>
+    </div>
+
+    <p>It assigns <b>5</b> to the all three variables: <b>a</b>, <b>b</b> and <b>c</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Arithmeticoperators">Arithmetic operators ( +, -, *, /, % )</h2>
+    <div class="member-link">[<a href="#Arithmeticoperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The five arithmetical operations supported by the C++ language are:</p>
+
+    <table class="doc">
+        <tr><td>+</td><td>addition</td></tr>
+        <tr><td>-</td><td>subtraction</td></tr>
+        <tr><td>*</td><td>multiplication</td></tr>
+        <tr><td>/</td><td>division</td></tr>
+        <tr><td>%</td><td>modulo</td></tr>
+    </table>
+
+    <p>Operations of addition, subtraction, multiplication and division literally correspond with their respective mathematical operators. The only one that you might not be so used to see is <i>modulo</i>; whose operator is the percentage sign (<b>%</b>). Modulo is the operation that gives the remainder of a division of two values. For example, if we write:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="int"> 11</span><span class="operator"> %</span><span class="int"> 3</span><span class="operator">;</span></pre>
+    </div>
+
+    <p>the variable <b>a</b> will contain the value <b>2</b>, since <b>2</b> is the remainder from dividing <b>11</b> between <b>3</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Compoundassignment">Compound assignment (+=, -=, *=, /=, %=, &gt;&gt;=, &lt;&lt;=, &amp;=, ^=, |=)</h2>
+    <div class="member-link">[<a href="#Compoundassignment">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When we want to modify the value of a variable by performing an operation on the value currently stored in that variable we can use compound assignment operators:</p>
+
+    <table class="doc">
+        <tr><th>expression</th><th>is equivalent to</th></tr>
+        <tr><td><b>value += increase;</b></td><td><b>value = value + increase;</b></td></tr>
+        <tr><td><b>a -= 5;</b></td><td><b>a = a - 5;</b></td></tr>
+        <tr><td><b>a /= b;</b></td><td><b>a = a / b;</b></td></tr>
+        <tr><td><b>price *= units + 1;</b></td><td><b>price = price * (units + 1);</b></td></tr>
+    </table>
+
+    <p>and the same for all other operators. For example:</p>
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// compound assignment operators
+</span><span class="pre">
+#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> a<span class="operator">,</span> b<span class="operator">=</span><span class="int">3</span><span class="operator">;</span>
+  a<span class="operator"> =</span> b<span class="operator">;</span>
+  a<span class="operator">+=</span><span class="int">2</span><span class="operator">;</span><span class="comment">             // equivalent to a=a+2
+</span>
+  cout<span class="operator"> &lt;&lt;</span> a<span class="operator">;</span><span class="flow">
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output
+5
+*/</span></pre>
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="IncreaseandDecrease">Increase and decrease (++, --)</h2>
+    <div class="member-link">[<a href="#IncreaseandDecrease">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Shortening even more some expressions, the increase operator (<b>++</b>) and the decrease operator (<b>--</b>) increase or reduce by one the value stored in a variable. They are equivalent to <b>+=1</b> and to <b>-=1</b>, respectively. Thus:</p>
+
+    <div class="CPP_Code">
+        <pre>c<span class="operator">++;</span>
+c<span class="operator">+=</span><span class="int">1</span><span class="operator">;</span>
+c<span class="operator">=</span>c<span class="operator">+</span><span class="int">1</span><span class="operator">;</span></pre>
+    </div>
+
+    <p>are all equivalent in its functionality: the three of them increase by one the value of c.</p>
+
+    <p>In the early C compilers, the three previous expressions probably produced different executable code depending on which one was used. Nowadays, this type of code optimization is generally done automatically by the compiler, thus the three expressions should produce exactly the same executable code.</p>
+
+    <p>A characteristic of this operator is that it can be used both as a prefix and as a suffix. That means that it can be written either before the variable identifier (<b>++a</b>) or after it (<b>a++</b>). Although in simple expressions like <b>a++</b> or <b>++a</b> both have exactly the same meaning, in other expressions in which the result of the increase or decrease operation is evaluated as a value in an outer expression they may have an important difference in their meaning: In the case that the increase operator is used as a prefix (++a) the value is increased <strong>before</strong> the result of the expression is evaluated and therefore the increased value is considered in the outer expression; in case that it is used as a suffix (<b>a++</b>) the value stored in a is increased after being evaluated and therefore the value stored before the increase operation is evaluated in the outer expression. Notice the difference:</p>
+
+    <table class="doc">
+        <tr><th>Example 1</th><th>Example 2</th></tr>
+        <tr>
+            <td>
+                <div class="CPP_Code">
+                    <pre>B<span class="operator">=</span><span class="int">3</span><span class="operator">;</span>
+A<span class="operator">=++</span>B<span class="operator">;</span><span class="comment">
+// A contains 4, B contains 4</span></pre>
+                </div>
+            </td>
+            <td>
+                <div class="CPP_Code">
+                    <pre>B<span class="operator">=</span><span class="int">3</span><span class="operator">;</span>
+A<span class="operator">=</span>B<span class="operator">++;</span><span class="comment">
+// A contains 3, B contains 4</span></pre>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <p>In Example 1, <b>B</b> is increased before its value is copied to <b>A</b>. While in Example 2, the value of <b>B</b> is copied to <b>A</b> and then <b>B</b> is increased.</p>
+
+    <h2 id="RelationalEquality">Relational and equality operators ( ==, !=, &gt;, &lt;, &gt;=, &lt;= )</h2>
+    <div class="member-link">[<a href="#RelationalEquality">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In order to evaluate a comparison between two expressions we can use the relational and equality operators. The result of a relational operation is a Boolean value that can only be true or false, according to its Boolean result.</p>
+
+    <p>We may want to compare two expressions, for example, to know if they are equal or if one is greater than the other is. Here is a list of the relational and equality operators that can be used in C++:</p>
+
+    <table class="doc">
+        <tr><td>==</td><td>Equal to</td></tr>
+        <tr><td>!=</td><td>Not equal to</td></tr>
+        <tr><td>&gt;</td><td>Greater than</td></tr>
+        <tr><td>&lt;</td><td>Less than</td></tr>
+        <tr><td>&gt;=</td><td>Greater than or equal to</td></tr>
+        <tr><td>&lt;=</td><td>Less than or equal to</td></tr>
+    </table>
+
+    <p>Here there are some examples:</p>
+
+    <div class="CPP_Code">
+        <pre><span class="operator">(</span><span class="int">7</span><span class="operator"> ==</span><span class="int"> 5</span><span class="operator">)</span><span class="comment">     // evaluates to false.
+</span><span class="operator">(</span><span class="int">5</span><span class="operator"> &gt;</span><span class="int"> 4</span><span class="operator">)</span><span class="comment">      // evaluates to true.
+</span><span class="operator">(</span><span class="int">3</span><span class="operator"> !=</span><span class="int"> 2</span><span class="operator">)</span><span class="comment">     // evaluates to true.
+</span><span class="operator">
+(</span><span class="int">6</span><span class="operator"> &gt;=</span><span class="int"> 6</span><span class="operator">)</span><span class="comment">     // evaluates to true.
+</span><span class="operator">(</span><span class="int">5</span><span class="operator"> &lt;</span><span class="int"> 5</span><span class="operator">)</span><span class="comment">      // evaluates to false. 
+</span></pre>
+    </div>
+
+    <p>Of course, instead of using only numeric constants, we can use any valid expression, including variables. Suppose that <b>a=2</b>, <b>b=3</b> and <b>c=6</b>,</p>
+
+    <div class="CPP_Code">
+        <pre><span class="operator">(</span>a<span class="operator"> ==</span><span class="int"> 5</span><span class="operator">)</span><span class="comment">     // evaluates to false since a is not equal to 5.
+</span><span class="operator">(</span>a<span class="operator">*</span>b<span class="operator"> &gt;=</span> c<span class="operator">)</span><span class="comment">   // evaluates to true since (2*3 &gt;= 6) is true. 
+</span><span class="operator">(</span>b<span class="operator">+</span><span class="int">4</span><span class="operator"> &gt;</span> a<span class="operator">*</span>c<span class="operator">)</span><span class="comment">  // evaluates to false since (3+4 &gt; 2*6) is false. 
+</span><span class="operator">
+((</span>b<span class="operator">=</span><span class="int">2</span><span class="operator">) ==</span> a<span class="operator">)</span><span class="comment"> // evaluates to true.</span></pre>
+    </div>
+
+    <p>Be careful! The operator <b>=</b> (one equal sign) is not the same as the operator <b>==</b> (two equal signs), the first one is an assignment operator (assigns the value at its right to the variable at its left) and the other one (<b>==</b>) is the equality operator that compares whether both expressions in the two sides of it are equal to each other. Thus, in the last expression <b>((b=2) == a)</b>, we first assigned the value <b>2</b> to <b>b</b> and then we compared it to <b>a</b>, that also stores the value <b>2</b>, so the result of the operation is true.</p>
+</section>
+
+<section class="h2">
+    <h2 id="LogicalOperators">Logical operators ( !, &amp;&amp;, || )</h2>
+    <div class="member-link">[<a href="#LogicalOperators">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p>The Operator <b>!</b> is the C++ operator to perform the Boolean operation NOT, it has only one operand, located at its right, and the only thing that it does is to inverse the value of it, producing false if its operand is true and true if its operand is false. Basically, it returns the opposite Boolean value of evaluating its operand. For example:</p>
+
+    <div class="CPP_Code">
+        <pre><span class="operator">!(</span><span class="int">5</span><span class="operator"> ==</span><span class="int"> 5</span><span class="operator">)</span><span class="comment">    // evaluates to false because the expression at its right (5 == 5) is true. 
+</span><span class="operator">!(</span><span class="int">6</span><span class="operator"> &lt;=</span><span class="int"> 4</span><span class="operator">)</span><span class="comment">    // evaluates to true because (6 &lt;= 4) would be false. 
+</span><span class="operator">!</span><span class="bool">true</span><span class="comment">        // evaluates to false
+</span><span class="operator">!</span><span class="bool">false</span><span class="comment">       // evaluates to true. </span></pre>
+    </div>
+
+    <p>The logical operators <b>&amp;&amp;</b> and <b>||</b> are used when evaluating two expressions to obtain a single relational result. The operator <b>&amp;&amp;</b> corresponds with Boolean logical operation AND. This operation results true if both its two operands are true, and false otherwise. The following panel shows the result of operator <b>&amp;&amp;</b> evaluating the expression <b>a &amp;&amp; b</b>:</p>
+
+    <p><b>&amp;&amp; OPERATOR</b></p>
+    <table class="doc">
+        <tr><th>a</th><th>b</th><th>a &amp;&amp; b</th></tr>
+        <tr><td>true</td><td>true</td><td>true</td></tr>
+        <tr><td>true</td><td>false</td><td>false</td></tr>
+
+        <tr><td>false</td><td>true</td><td>false</td></tr>
+        <tr><td>false</td><td>false</td><td>false</td></tr>
+    </table>
+
+    <p>The operator <b>||</b> corresponds with Boolean logical operation OR. This operation results true if either one of its two operands is true, thus being false only when both operands are false themselves. Here are the possible results of <b>a || b</b>:</p>
+
+    <p><b>|| OPERATOR</b></p>
+    <table class="doc">
+        <tr><th>a</th><th>b</th><th>a || b</th></tr>
+        <tr><td>true</td><td>true</td><td>true</td></tr>
+        <tr><td>true</td><td>false</td><td>true</td></tr>
+        <tr><td>false</td><td>true</td><td>true</td></tr>
+        <tr><td>false</td><td>false</td><td>false</td></tr>
+    </table>
+
+    <p>For example:</p>
+
+    <div class="CPP_Code">
+        <pre><span class="operator">( (</span><span class="int">5</span><span class="operator"> ==</span><span class="int"> 5</span><span class="operator">) &amp;&amp; (</span><span class="int">3</span><span class="operator"> &gt;</span><span class="int"> 6</span><span class="operator">) )</span><span class="comment">  // evaluates to false ( true &amp;&amp; false ).
+</span><span class="operator">
+( (</span><span class="int">5</span><span class="operator"> ==</span><span class="int"> 5</span><span class="operator">) || (</span><span class="int">3</span><span class="operator"> &gt;</span><span class="int"> 6</span><span class="operator">) )</span><span class="comment">  // evaluates to true ( true || false ). 
+</span></pre>
+    </div>
+
+    <p>When using the logical operators, C++ only evaluates what is necessary from left to right to come up with the combined relational result, ignoring the rest. Therefore, in this last example (<b>(5==5)||(3&gt;6)</b>), C++ would evaluate first whether <b>5==5</b> is true, and if so, it would never check whether <b>3&gt;6</b> is true or not. This is known as short-circuit evaluation, and works like this for these operators:</p>
+
+    <table class="doc">
+        <tr><th>operator</th><th>short-circuit</th></tr>
+        <tr><td><b>&amp;&amp;</b></td><td>if the left-hand side expression is false, the combined result is false (right-hand side expression not evaluated).</td></tr>
+        <tr><td><b>||</b></td><td>if the left-hand side expression is true, the combined result is true (right-hand side expression not evaluated).</td></tr>
+    </table>
+
+    <p>This is mostly important when the right-hand expression has side effects, such as altering values:</p>
+
+    <div class="CPP_Code">
+        <pre><span class="flow">if</span><span class="operator"> ((</span>i<span class="operator">&lt;</span><span class="int">10</span><span class="operator">)&amp;&amp;(++</span>i<span class="operator">&lt;</span>n<span class="operator">)) {</span><span class="comment"> /*...*/</span><span class="operator"> }</span></pre>
+    </div>
+
+    <p>This combined conditional expression increases <b>i</b> by one, but only if the condition on the left of <b>&amp;&amp;</b> is true, since otherwise the right-hand expression (<b>++i&lt;n</b>) is never evaluated.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ConditionalOperator">Conditional operator ( ? )</h2>
+    <div class="member-link">[<a href="#ConditionalOperator">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The conditional operator evaluates an expression returning a value if that expression is true and a different one if the expression is evaluated as false. Its format is:</p>
+
+    <div class="CPP_Code">
+        <pre>condition<span class="operator"> ?</span> result1<span class="operator"> :</span> result2</pre>
+    </div>
+
+    <div class="CPP_Code">
+        <pre><span class="int">7</span><span class="operator">==</span><span class="int">5</span><span class="operator"> ?</span><span class="int"> 4</span><span class="operator"> :</span><span class="int"> 3</span><span class="comment">     // returns 3, since 7 is not equal to 5.
+</span><span class="int">7</span><span class="operator">==</span><span class="int">5</span><span class="operator">+</span><span class="int">2</span><span class="operator"> ?</span><span class="int"> 4</span><span class="operator"> :</span><span class="int"> 3</span><span class="comment">   // returns 4, since 7 is equal to 5+2.
+</span><span class="int">5</span><span class="operator">&gt;</span><span class="int">3</span><span class="operator"> ?</span> a<span class="operator"> :</span> b<span class="comment">      // returns the value of a, since 5 is greater than 3.
+</span>a<span class="operator">&gt;</span>b<span class="operator"> ?</span> a<span class="operator"> :</span> b<span class="comment">      // returns whichever is greater, a or b.</span></pre>
+    </div>
+
+    <div class="CPP_Code">
+        <pre><span class="comment">// conditional operator
+</span><span class="pre">
+#include &lt;iostream&gt;
+</span><span class="keyword">using namespace</span> std<span class="operator">;</span><span class="type">
+
+int</span><span class="keyword"> main</span><span class="operator"> ()
+{</span><span class="type">
+  int</span> a<span class="operator">,</span>b<span class="operator">,</span>c<span class="operator">;</span>
+
+  a<span class="operator">=</span><span class="int">2</span><span class="operator">;</span>
+  b<span class="operator">=</span><span class="int">7</span><span class="operator">;</span>
+  c<span class="operator"> = (</span>a<span class="operator">&gt;</span>b<span class="operator">) ?</span> a<span class="operator"> :</span> b<span class="operator">;</span>
+
+  cout<span class="operator"> &lt;&lt;</span> c<span class="operator">;</span><span class="flow">
+
+  return</span><span class="int"> 0</span><span class="operator">;
+}</span><span class="comment">
+
+/* Output 
+7
+*/</span></pre>
+    </div>
+
+    <p>In this example <b>a</b> was <b>2</b> and <b>b</b> was <b>7</b>, so the expression being evaluated (<b>a&gt;b</b>) was not true, thus the first value specified after the question mark was discarded in favor of the second value (the one after the colon) which was <b>b</b>, with a value of <b>7</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="CommaOperator">Comma operator ( , )</h2>
+    <div class="member-link">[<a href="#CommaOperator">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The comma operator (<b>,</b>) is used to separate two or more expressions that are included where only one expression is expected. When the set of expressions has to be evaluated for a value, only the rightmost expression is considered.</p>
+
+    <p>For example, the following code:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> = (</span>b<span class="operator">=</span><span class="int">3</span><span class="operator">,</span> b<span class="operator">+</span><span class="int">2</span><span class="operator">);</span></pre>
+    </div>
+
+    <p>Would first assign the value <b>3</b> to <b>b</b>, and then assign <b>b+2</b> to variable <b>a</b>. So, at the end, variable <b>a</b> would contain the value <b>5</b> while variable <b>b</b> would contain value <b>3</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="BitwiseOperators">Bitwise Operators ( &amp;, |, ^, ~, &lt;&lt;, &gt;&gt; )</h2>
+    <div class="member-link">[<a href="#BitwiseOperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Bitwise operators modify variables considering the bit patterns that represent the values they store.</p>
+
+    <table class="doc">
+        <tr><th>operator</th><th>asm equivalent</th><th>description</th></tr>
+        <tr><td><b>&amp;</b></td><td>AND</td><td>Bitwise AND</td></tr>
+
+        <tr><td><b>|</b></td><td>OR</td><td>Bitwise Inclusive OR</td></tr>
+        <tr><td><b>^</b></td><td>XOR</td><td>Bitwise Exclusive OR</td></tr>
+        <tr><td><b>~</b></td><td>NOT</td><td>Unary complement (bit inversion)</td></tr>
+        <tr><td><b>&lt;&lt;</b></td><td>SHL</td><td>Shift Left</td></tr>
+        <tr><td><b>&gt;&gt;</b></td><td>SHR</td><td>Shift Right</td></tr>
+
+    </table>
+</section>
+
+<section class="h2">
+    <h2 id="Explicittypecastingoperator">Explicit type casting operator</h2>
+    <div class="member-link">[<a href="#Explicittypecastingoperator">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Type casting operators allow you to convert a datum of a given type to another. There are several ways to do this in C++. The simplest one, which has been inherited from the C language, is to precede the expression to be converted by the new type enclosed between parentheses (<b>()</b>):</p>
+
+    <div class="CPP_Code">
+        <pre><span class="type">int</span> i<span class="operator">;</span><span class="type">
+float</span> f<span class="operator"> =</span><span class="float"> 3.14</span><span class="operator">;</span>
+i<span class="operator"> = (</span><span class="type">int</span><span class="operator">)</span> f<span class="operator">;</span></pre>
+    </div>
+
+    <p>The previous code converts the float number <b>3.14</b> to an integer value (<b>3</b>), the remainder is lost. Here, the typecasting operator was <b>(int)</b>. Another way to do the same thing in C++ is using the functional notation: preceding the expression to be converted by the type and enclosing the expression between parentheses:</p>
+
+    <div class="CPP_Code">
+        <pre>i<span class="operator"> =</span><span class="type"> int</span><span class="operator"> (</span> f<span class="operator"> );</span></pre>
+    </div>
+
+    <p>Both ways of type casting are valid in C++.</p>
+</section>
+
+<section class="h2">
+    <h2 id="sizeof">sizeof()</h2>
+    <div class="member-link">[<a href="#sizeof">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This operator accepts one parameter, which can be either a type or a variable itself and returns the size in bytes of that type or object:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="keyword"> sizeof</span><span class="operator"> (</span><span class="type">char</span><span class="operator">);</span></pre>
+    </div>
+
+    <p>This will assign the value <b>1</b> to a because <b>char</b> is a one-byte long type.</p>
+    <p>The value returned by <b>sizeof</b> is a constant, so it is always determined before program execution.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Otheroperators">Other operators</h2>
+    <div class="member-link">[<a href="#Otheroperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Later in these tutorials, we will see a few more operators, like the ones referring to pointers or the specifics for object-oriented programming. Each one is treated in its respective section.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Precedenceofoperators">Precedence of operators</h2>
+    <div class="member-link">[<a href="#Precedenceofoperators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When writing complex expressions with several operands, we may have some doubts about which operand is evaluated first and which later. For example, in this expression:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="int"> 5</span><span class="operator"> +</span><span class="int"> 7</span><span class="operator"> %</span><span class="int"> 2</span></pre>
+    </div>
+
+    <p>we may doubt if it really means:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="int"> 5</span><span class="operator"> + (</span><span class="int">7</span><span class="operator"> %</span><span class="int"> 2</span><span class="operator">)</span><span class="comment">    // with a result of 6, or
+</span>a<span class="operator"> = (</span><span class="int">5</span><span class="operator"> +</span><span class="int"> 7</span><span class="operator">) %</span><span class="int"> 2</span><span class="comment">    // with a result of 0 </span></pre></div>
+
+    <p>The correct answer is the first of the two expressions, with a result of <b>6</b>. There is an established order with the priority of each operator, and not only the arithmetic ones (those whose preference come from mathematics) but for all the operators which can appear in C++. From greatest to lowest priority, the priority order is as follows: </p>
+
+    <table class="doc">
+        <tr><th>Level</th><th>Operator</th><th>Description</th><th>Grouping</th></tr>
+
+        <tr><td>1</td><td><b>::</b></td><td>scope</td><td>Left-to-right</td></tr>
+        <tr><td>2</td><td><b>() [] . -&gt; ++ -- dynamic_cast static_cast reinterpret_cast const_cast typeid</b></td><td>postfix</td><td>Left-to-right</td></tr>
+        <tr><td rowspan="3">3</td><td><b>++ -- ~ ! sizeof new delete</b></td><td>unary (prefix)</td><td rowspan="3">Right-to-left</td></tr>
+
+        <tr><td><b>* &amp;</b></td><td>indirection and reference (pointers)</td></tr>
+        <tr><td><b>+ -</b></td><td>unary sign operator</td></tr>
+        <tr><td>4</td><td><b>(type)</b></td><td>type casting</td><td>Right-to-left</td></tr>
+        <tr><td>5</td><td><b>.* -&gt;*</b></td><td>pointer-to-member</td><td>Left-to-right</td></tr>
+
+        <tr><td>6</td><td><b>* / %</b></td><td>multiplicative</td><td>Left-to-right</td></tr>
+        <tr><td>7</td><td><b>+ -</b></td><td>additive</td><td>Left-to-right</td></tr>
+        <tr><td>8</td><td><b>&lt;&lt; &gt;&gt;</b></td><td>shift</td><td>Left-to-right</td></tr>
+        <tr><td>9</td><td><b>&lt; &gt; &lt;= &gt;=</b></td><td>relational</td><td>Left-to-right</td></tr>
+
+        <tr><td>10</td><td><b>== !=</b></td><td>equality</td><td>Left-to-right</td></tr>
+        <tr><td>11</td><td><b>&amp;</b></td><td>bitwise AND</td><td>Left-to-right</td></tr>
+        <tr><td>12</td><td><b>^</b></td><td>bitwise XOR</td><td>Left-to-right</td></tr>
+        <tr><td>13</td><td><b>|</b></td><td>bitwise OR</td><td>Left-to-right</td></tr>
+
+        <tr><td>14</td><td><b>&amp;&amp;</b></td><td>logical AND</td><td>Left-to-right</td></tr>
+        <tr><td>15</td><td><b>||</b></td><td>logical OR</td><td>Left-to-right</td></tr>
+        <tr><td>16</td><td><b>?:</b></td><td>conditional</td><td>Right-to-left</td></tr>
+        <tr><td>17</td><td><b>= *= /= %= += -= &gt;&gt;= &lt;&lt;= &amp;= ^= |=</b></td><td>assignment</td><td>Right-to-left</td></tr>
+
+        <tr><td>18</td><td><b>,</b></td><td>comma</td><td>Left-to-right</td></tr>
+    </table>
+
+    <p>Grouping defines the precedence order in which operators are evaluated in the case that there are several operators of the same level in an expression.</p>
+
+    <p>All these precedence levels for operators can be manipulated or become more legible by removing possible ambiguities using parentheses signs <b>(</b> and <b>)</b>, as in this example:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="int"> 5</span><span class="operator"> +</span><span class="int"> 7</span><span class="operator"> %</span><span class="int"> 2</span><span class="operator">;</span></pre>
+    </div>
+
+    <p>might be written either as:</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> =</span><span class="int"> 5</span><span class="operator"> + (</span><span class="int">7</span><span class="operator"> %</span><span class="int"> 2</span><span class="operator">);</span></pre>
+    </div>
+
+    <p>or</p>
+
+    <div class="CPP_Code">
+        <pre>a<span class="operator"> = (</span><span class="int">5</span><span class="operator"> +</span><span class="int"> 7</span><span class="operator">) %</span><span class="int"> 2</span><span class="operator">;</span></pre>
+    </div>
+
+    <p>depending on the operation that we want to perform.</p>
+
+    <p>So if you want to write complicated expressions and you are not completely sure of the precedence levels, always include parentheses. It will also make your code easier to read.</p>
+
+</section>
+
+<hr><p>*Last modified Friday, 21st January, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/cpp_Operators.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+</html>  

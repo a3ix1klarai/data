@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/Trade-SpreadOrderEntryStudy.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1674190010') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/Trade-SpreadOrderEntryStudy.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Spread Order Entry Study -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexdd2a.html?page=doc/Trade-SpreadOrderEntryStudy.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="indexdd2a.html?page=doc/Trade-SpreadOrderEntryStudy.html">Spread Order Entry Study</a></h4> </div>     <h1 class="PageName">Spread Order Entry Study</h1>
+ 
+<ul>
+    <li><a href="#Introduction">Introduction</a>
+    <li><a href="#StepByStepInstructions">Step-by-Step Instructions</a>
+    <li><a href="#StudyInputs">Study Inputs</a></li>
+    <li><a href="#EnablingDisablingTheStudy">Enabling/Disabling the Study</a>
+		<ul>
+		    <li><a href="#EnableDisableFromStudySettings">Enable/Disable From Study Settings</a>
+		    <li><a href="#EnableDisableFromTradeWindow">Enable/Disable from Trade Window</a>
+		    <li><a href="#EnableDisableWithShortcutMenu">Enable/Disable with Shortcut  Menu</a>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>The  <b>Spread Order Entry Study</b>  supports entering spread orders.  The number of legs supported is from 2 to 4.  </p>
+
+    <p> When the specified <b>Spread Entry Price</b>  is reached, then at that moment market orders are sent for each of the symbols specified through the <b>Leg # Symbol</b> Inputs.  The <b>Leg  # Side</b> Inputs specify the sides (Buy/Sell) and the <b>Leg # Quantity</b> Inputs specify the quantities. </p>
+    
+    <p> So this is fully client-side managed and uses market orders for each of the legs. </p>
+
+    <p> Any combination of these Inputs can be used.  A minimum of two symbols need to be specified to create the spread order. </p>
+
+    <p> This feature is  <em>not</em> meant to be used  from a Trading DOM. It is meant to be used from a standard chart. </p>
+
+    <p>   If there is an exchange listed  spread or strategy symbol available, and the Trading service you are using Sierra Chart with, supports trading  these symbols, then there is no need to use the Spread Order Entry  study feature.   You should instead trade the exchange listed spread/strategy.  To trade exchange listed spreads, it is recommended to use the  <a href = "index6880.html?page=doc/SierraChartOrderRoutingServiceWithData.php">SC Order  Routing  Service</a>. </p> 
+
+</section>
+
+
+<section class="h2">
+    <h2 id="StepByStepInstructions">Step-by-Step Instructions</h2>
+    <div class="member-link">[<a href="#StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+    
+        <li>  Go to a chart and open the Trade Window   for the chart. For instructions, refer to <a href = "index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Opening Trade Window</a>.</li>
+        
+        
+        <li>On the Trade Window for the chart, select the  <b>A</b> tab.  Press the  <b>Enter Spread Order</b> button. The Spread Order Entry study is now added to the chart and the <b>Study Settings</b> window will be  opened for it.
+         
+        <div style="text-align: center;"><a href="../images/tradewindow_spreadorders.png" rel="lightbox"><img src="../images/tradewindow_spreadorders.png" width="" class="screenshot" loading="lazy" alt=""></a></div>
+       
+        </li>
+
+        <li>On the  <b>Settings and Inputs</b> tab of the Study Settings window set the required parameters for the Spread Order. 
+         <br> <br>
+       At a minimum, the Inputs for <b>Leg 1 Symbol</b>, <b>Leg 1 Side</b>, <b>Leg 1 Quantity</b>, <b>Leg 2 Symbol</b>, <b>Leg 2 Side</b>, <b>Leg 2 Quantity</b> all need to be entered. This allows for the display of the Spread Price.
+       </li>
+
+        <li>Select the <b>Apply</b> button to update the chart and have the Spread  Price displayed.  It is necessary to be connected to the real-time data feed to receive  current data to see the Spread Price. 
+         <br> <br>
+        Connect with <b class="menu_item">File &gt;&gt; Connect to Data  Feed</b>  from the main menu if not already connected. You can get back to the Study Settings window through the <b>Enter Spread Order</b>  button on the Trade Window. </li>
+
+        <li>Based on the most recent value for the Spread Price  Subgraph at the bottom of the chart, enter a value for the <b>Spread Entry Price</b> to be used.  </li>
+        
+        <li>Select a setting for the <b>Spread Entry Price Operator</b> Input to determine how <b>Spread Entry Price</b> is used in comparison to the actual Spread Price.</li>
+
+        <li>If using the built-in Target and Stop orders in the study, then select <b>Yes</b> for the <b>Use Target After Fill of Spread Entry</b> and the <b>Use Stop After Fill of Spread Entry</b> Inputs. Enter appropriate values for the <b>Target Spread Price</b> and the <b>Stop Spread Price.</b></li>
+
+        <li>On the  <b>A</b> tab of the Trade Window, select the <b>Enable</b> button.
+        <br><br>
+        It is also possible to right-click on the chart and select the option <b>Enable Spread Order Entry</b> to enable the monitoring of the  spread price.
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="StudyInputs">Study Inputs</h2>
+    <div class="member-link">[<a href="#StudyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li><b>Is Active and Waiting for Spread Trigger Price</b>: When this Input is set to <b>Yes</b> then the study is in an Enabled state and is monitoring for a match to either the Spread Entry parameters or to the Target and/or Stop parameters. Otherwise, the study is <b>Disabled</b> and is not actively checking for a match for these items and will not enter or exit any Orders.</li>
+
+        <li><b>Leg 1 Symbol</b>: This is the symbol for the first leg of the spread.</li>
+
+        <li><b>Leg 1 Side</b>: This is the position to take for the first leg of the spread. The possible values are <b>Buy</b> or <b>Sell</b>.</li>
+
+        <li><b>Leg 1 Quantity</b>: This is the quantity for the first leg of the spread.</li>
+
+        <li><b>Leg 2 Symbol</b>: This is the symbol for the second leg of the spread.</li>
+
+        <li><b>Leg 2 Side</b>: This is the position to take for the second leg of the spread. The possible values are <b>Buy</b> or <b>Sell</b>.</li>
+
+        <li><b>Leg 2 Quantity</b>: This is the quantity for the second leg of the spread.</li>
+
+        <li><b>Leg 3 Symbol</b>: This is the symbol for the third leg of the spread.</li>
+
+        <li><b>Leg 3 Side</b>: This is the position to take for the third leg of the spread. The possible values are <b>Buy</b> or <b>Sell</b>.</li>
+
+        <li><b>Leg 3 Quantity</b>: This is the quantity for the third leg of the spread.</li>
+
+        <li><b>Leg 4 Symbol</b>: This is the symbol for the fourth leg of the spread.</li>
+
+        <li><b>Leg 4 Side</b>: This is the position to take for the fourth leg of the spread. The possible values are <b>Buy</b> or <b>Sell</b>.</li>
+
+        <li><b>Leg 4 Quantity</b>: This is the quantity for the fourth leg of the spread.</li>
+
+        <li><b>Spread Entry Price</b>: This is the trigger price that is used in combination with the <b>Spread Entry Price Operator</b>  to determine when market orders are sent for the specified symbols when this  entry price is reached.</li> 
+
+        <li><b>Spread Entry Price Operator</b>: This Input is used in combination with the <b>Spread Entry Price</b> to determine when the defined symbols are initially bought or sold. The following options are available:
+            <ul>
+                <li><b>Less or Equal</b>: The sending of market orders for the symbols will occur when the Spread Price is Less than or Equal to the Spread Entry Price.</li>
+
+                <li><b>Greater or Equal</b>: The sending of market orders for the symbols will occur when the Spread Price is Greater than or Equal to the Spread Entry Price.</li>
+            </ul>
+        </li>
+
+        <li><b>Number of Bars for Subgraphs</b>: This Input controls how many bars across which each of the subgraphs will be drawn/kept. Note that when changing this value, the Spread Price subgraph will not update until there is an update to the Main Price Graph.</li>
+
+        <li><b>Draw Zero Values</b>: When this Input is set to <b>Yes</b> then subgraphs that have a value of 0 will be drawn. Otherwise, the subgraph will not be drawn when it has a value of 0. Note that this can become important in order to visualize the lines when one of the Spread Entry Price, Target Spread Price, or Stop Spread Price is intentionally set to a value of 0.</li>
+
+        <li><b>Use Target After Fill of Spread Entry</b>: When this Input is set to <b>Yes</b> then a Target trigger is monitored as part of the study at the price specified in the <b>Target Spread Price</b> after the fill of the Spread Entry. This Target order will close the open Spread Entry Positions when the Spread Price reaches the <b>Target Spread Price</b>.</li>
+
+        <li><b>Target Spread Price</b>: This Input is used in combination with the <b>Use Target After Fill of Spread Entry</b> to define a level at which a Target trigger will be placed.</li>
+
+        <li><b>Use Stop After Fill of Spread Entry</b>: When this Input is set to <b>Yes</b> then a Stop order trigger is monitored as part of the study at the price specified in the <b>Stop Spread Price</b> after the fill of the Spread Entry. This Stop order will close the open Spread Entry Positions when the Spread Price reaches the <b>Stop Spread Price</b>.</li>
+
+        <li><b>Stop Spread Price</b>: This Input is used in combination with the <b>Use Stop After Fill of Spread Entry</b> to define a level at which a Stop trigger will be placed.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="EnablingDisablingTheStudy">Enabling/Disabling the Study</h2>
+    <div class="member-link">[<a href="#EnablingDisablingTheStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Since this study includes active monitoring of the prices against the entered values in order to determine when to take an action, it is necessary to either Enable or Disable this monitoring apart from placing the study on the chart.</p>
+
+    <p>Note that due to the timing of the display of the information in various windows, it is possible that one area of the program may show the monitoring <b>Enabled</b> and another that it is <b>Disabled</b>. A refresh of the windows that contain this information (closing the window and reopening it) should set the values appropriately. In addition, the text displayed with this study always give the correct state of the study.</p>
+
+    <p>This study has text that is displayed in the region of the chart in which the study is displayed. This text always give the most accurate information of the state of the study.</p>
+
+    <p>The following sections give information on how to Enable and Disable the study from various locations within the program.</p>
+
+
+
+    <section class="h3">
+        <h3 id="EnableDisableFromStudySettings">Enable/Disable From Study Settings</h3>
+        <div class="member-link">[<a href="#EnableDisableFromStudySettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The study Input <b>Is Active and Waiting for Spread Trigger Price</b> enables the monitoring when it is changed from <b>No</b> to <b>Yes</b>. Conversely, this disables the monitoring when it is changed from <b>Yes</b> to <b>No</b>.</p>
+
+        <p>The Study Settings page does not update when the study has been Enabled or Disabled from another location, and requires a refresh of the window in order to display the proper information. Nonetheless, the action of changing the value from <b>No</b> to <b>Yes</b> or from <b>Yes</b> to <b>No</b> will properly deal with the current state of the monitoring. For example, if the <b>Trading: Spread Order Entry</b> Settings window is displayed, and the monitoring is changed from <b>Disabled</b> to <b>Enabled</b> through another means, then the Input for <b>Is Active and Waiting for Spread Trigger Price</b> will still show a value of <b>No</b>. Changing this value, however, to <b>Yes</b> does not change the monitoring state, but leaves it as <b>Enabled</b>. If, however, the Input is then changed back to <b>No</b>, then the monitoring will be <b>Disabled</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="EnableDisableFromTradeWindow">Enable/Disable from Trade Window</h3>
+        <div class="member-link">[<a href="#EnableDisableFromTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <a href="index9473.html?page=doc/TradeWindow.html" target="_blank" rel="noopener noreferrer">Trade Window</a> has special controls for this study on the <b>A</b> tab under the section for <b>Spread Orders</b>.</p>
+
+        <p>Depending on the state of the monitoring, there is a button that will show either <b>Enable</b> or <b>Disable</b>. Selecting the button when <b>Enable</b> is displayed, will enable the monitoring. Whereas, selecting the button when <b>Disable</b> is displayed will disable the monitoring.</p>
+
+        <p>For more information on these controls, refer to the <a href="index9473.html?page=doc/TradeWindow.html#SpreadOrder" target="_blank" rel="noopener noreferrer">Spread Order</a> documentation for the Trade Window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="EnableDisableWithShortcutMenu">Enable/Disable with Shortcut  Menu</h3>
+        <div class="member-link">[<a href="#EnableDisableWithShortcutMenu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When the <b>Spread Order Entry</b> study is on a chart, then the ability to Enable and Disable the study can be done by right clicking with your  Pointer on the chart to display the chart shortcut menu.</p>
+
+        <p>In order to Enable or Disable the monitoring, simply right-click  on the chart and the right click shortcut menu will display the options for <b>Enable Spread Order Entry</b> and for <b>Disable Spread Order Entry</b>. Depending on the state of the monitoring, only one of these options will be available.</p>
+
+        <p>If the monitoring is not active, then the option for <b>Enable Spread Order Entry</b> will be available on the right-click menu and the <b>Disable Spread Order Entry</b> will not be available. Selecting the <b>Enable Spread Order Entry</b> option will enable the monitoring of the Spread Order Entry study.</p>
+
+        <p>Conversely, if the monitoring is active, then the option for <b>Disable Spread Order Entry</b> will be available on the right-click menu and the <b>Enable Spread Order Entry</b> will not be available. Selecting the <b>Disable Spread Order Entry</b> option will disable the monitoring of the Spread Order Entry study.</p>
+    </section>
+</section>
+
+<hr><p>*Last modified Friday, 20th January, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/Trade-SpreadOrderEntryStudy.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:04 GMT -->
+</html>  

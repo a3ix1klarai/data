@@ -1,0 +1,1979 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GeneralSettings.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:54:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1687347488') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/GeneralSettings.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>General Settings -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index899f.html?page=doc/GeneralSettings.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SettingsWindows">(Table of Contents) Settings Windows</a> &gt;&gt; <a  href="index899f.html?page=doc/GeneralSettings.html">General Settings</a></h4> </div>     <h1 class="PageName">General Settings Window</h1>
+
+<ul>
+    <li><a href="#AccessingGeneralSettings">Accessing the General Settings Window</a></li>
+    <li><a href="#Tab_General">General</a>
+        <ul>
+            <li><a href="#UpdateIntervalsSection">Update Intervals</a>
+                <ul>
+                    <li><a href="#ChartUpdateInterval">Chart Update Interval</a></li>
+                    <li><a href="#QuoteBoardUpdateInterval">Quote Board Update Interval</a></li>
+                    <li><a href="#PeriodicallySetSystemDateTimeFromServer">Periodically Set System Date-Time from Server</a></li>
+                    <li><a href="#QuoteBoardHighLowTimeoutTimeInSeconds">Quote Board High/Low Timeout Time in Seconds</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#StartupSection">Startup</a>
+                <ul>
+                    <li><a href="#FilesToOpenOnStartupEnabled">Open Files On Startup</a>
+                        <ul>
+                            <li><a href="#TemporarilyPreventingAutomaticOpeningOfFilesOnStartup">Temporarily Preventing Automatic Opening of Files on Startup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#FilesToOpenOnStartup">Select Files to Open on Startup</a></li>
+                    <li><a href="#AcceptServerSideSetStartupFiles">Accept Server-Side Set Startup Files</a></li>
+                    
+                    
+                </ul>
+            </li>            
+            
+            <li><a href="#NewInstancesSection">NewInstances</a>
+                <ul>
+                  <li><a href="#InstancesToOpenOnStartup">Instances to Open on Startup</a></li>
+                  <li><a href="#UseSymbolSettingsInNewInstanceswhenStarted">Use Symbol Settings in New Instances when Started</a></li>
+                  <li><a href="#AlwaysCopyConfigurationFilesToNewInstancesWhenStarted">Always Copy Configuration Files to New Instances When Started</a></li>
+                </ul>
+            </li>
+                  
+            
+            <li><a href="#DataSection">Data</a>
+                <ul>
+                    <li><a href="#SubscribeRTDataAndDownloadHistoricalDataDuringScan">Subscribe RT Data and Download Historical Data During Scan</a></li>
+                    <li><a href="#UseMondayAsStartOfWeekInsteadOfSunday">Use Monday as Start of Week instead of Sunday</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#Tab_GUI">GUI</a>
+        <ul>
+            <li><a href="#ScrollSection">Scroll</a>
+                <ul>
+                    <li><a href="#ScrollMultiplier">Scroll Multiplier</a></li>
+                    <li><a href="#EnableWorkspaceScrolling">Enable Workspace Scrolling</a></li>
+                    <li><a href="#ScrollWheelSetting">Scroll Wheel Setting</a></li>
+                </ul>
+            </li>
+            <li><a href="#ApplicationGUISection">Application GUI</a>
+                <ul>
+                    <li><a href="#CustomTitleBarName">Custom Title Bar Name</a></li>
+                    <li><a href="#AutoHideTitleScrollbars">Auto Hide Charts Title Bar And Scrollbar</a></li>
+                    <li><a href="#MinimizeRestoreDetachedWindowsWithMainWindow">Minimize / Restore Detached Windows With Main Window</a></li>
+                    <li><a href="#BringDetachedWindowsToTopOnMainWindowFocus">Bring Detached Windows to Top on Main Window Focus</a></li>
+                    <li><a href="#IgnoreMinimizedWindowsWhenTiling">Ignore Minimized Windows When Tiling</a></li>
+                    <li><a href="#DestroyChartWindowsWhenHidden">Destroy Chart Windows when Hidden</a></li>
+                    <li><a href="#StatusBarWidthInCharacters">Status Bar Width in Characters</a></li>
+                    <li><a href="#SmallPixelAmountScalingFactor">Small Pixel Amount Scaling Factor</a></li>
+                    <li><a href="#DisplaySaveAll">Display Save All Option on Exit</a></li>
+                    <li><a href="#SortCWMenuChartNumber">Sort CW Menu by Chart Number</a></li>
+                    <li><a href="#MaximumItemsPerColumnForCWMenu">Maximum Items per Column for CW Menu</a></li>
+                    <li><a href="#MaximumItemsPerColumnForStudyCollectionsMenu">Maximum Items per Column for Study Collections Menu</a></li>
+                </ul>
+            </li>
+            <li><a href="#PrintingSection">Printing</a>
+                <ul>
+                    <li><a href="#PrintBlackWhite">Print Only In Black And White</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#Tab_Windows">Windows</a>
+        <ul>
+            <li><a href="#ChartbookTabsSection">Chartbook Tabs</a>
+                <ul>
+                    <li><a href="#UseChartbookTabs">Use Chartbook Tabs</a></li>
+                    <li><a href="#ShowChartbookTabsAt">Show Chartbook Tabs At</a></li>
+                    <li><a href="#ChartbookTabs_SupportMultipleRows">Support Multiple Rows</a></li>
+                    <li><a href="#ChartbookTabs_ShowArrowsAtStart">Show Arrows Before Chartbook Tabs</a></li>
+                </ul>
+            </li>
+            <li><a href="#WindowTabsSection">Window Tabs</a>
+                <ul>
+                    <li><a href="#UseMDIWindowTabs">Use MDI Window Tabs</a></li>
+                    <li><a href="#ShowMDITabsAt">Show MDI Tabs At</a></li>
+                    <li><a href="#MDITabs_SupportMultipleRows">Support Multiple Rows for MDI Tabs</a></li>
+                    <li><a href="#MDITabs_ShowArrowsAtStart">Show Arrows Before MDI Tabs</a></li>
+                </ul>
+            </li>
+            <li><a href="#WindowTilingSection">Window Tiling</a>
+                <ul>
+                    <li><a href="#UseWindowsCustomGridLayout">Use Windows Custom Grid Layout</a></li>
+                    <li><a href="#RowsCount">Rows Count</a></li>
+                    <li><a href="#ColumnsCount">Columns Count</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#Tab_Charts">Charts</a>
+        <ul>
+            <li><a href="#Charts">Charts</a>
+                <ul>
+                    <li><a href="#HideStudyInputs">Hide Study Inputs On Charts</a></li>
+                    <li><a href="#ColorChartTabsWithChartLinkNumberColor">Color Chart Tabs with Chart Link Number Color</a></li>
+                    <li><a href="#ChartTimeframeOnChartTabs">Display Chart Timeframe On Tabs When Title Bar Name Is Set To Be Used On Chart Tab</a></li>
+                    <li><a href="#ShowOnChartStatusMessages">Show On-Chart Status Messages</a></li>
+                    <li><a href="#UseControledOrderChartUpdating">Use Controlled Order Chart Updating</a></li>
+                    <li><a href="#LargeIncreaseDecreaseChartSpacingPixels">Large Increase/Decrease Chart Spacing Pixels</a></li>
+                    <li><a href="#FractionsShortFormat">Display Fractions In Short Format</a></li>
+                    <li><a href="#AllowNewDataUnlockedFillSpace">Allow New Data In Unlocked Fill Space</a></li>
+                    <li><a href="#AdditionalDaysToAddToRolloverDateForAutomaticChartAndQuoteBoardRollovers">Additional Days to Add to Rollover Date for Chart and Quote Board Rollovers</a></li>
+                    <li><a href="#ResetBarSizeSpacingScaleOnSymbolChange">Reset Bar Size/Spacing/Scale On Symbol Change</a></li>
+                    <li><a href="#ResetBarSizeSpacingScaleOnTimeFrameChange">Reset Bar Size/Spacing/Scale On Timeframe Change</a></li>
+                </ul>
+            </li>
+            <li><a href="#StudyCollectionSection">Study Collection</a>
+                <ul>
+                    <li><a href="#DefaultStudyCollection">Use Default Study Collection for New Charts</a></li>
+                    <li><a href="#DefaultStudyCollectionList">Default Study Collection</a></li>
+                </ul>
+            </li>
+            <li><a href="#SymbolSection">Symbol</a>
+                <ul>
+                    <li><a href="#SupportPlusMinusKeysForChangingSymbolInCharts">Support Plus Minus Keys for Changing Symbol in Charts</a></li>
+                    <li><a href="#SupportSymbolEntry">Support Symbol Entry from Chart Window</a></li>
+                    <li><a href="#DetectRolloverOfCurrentFuturesContractsSymbolsBasedOnRealTimeVolume">Detect Rollover Of Current Futures Contracts Symbols Based On Real Time Volume</a></li>
+                </ul>
+            </li>
+            <li><a href="#ChartbooksSection">Chartbooks</a>
+                <ul>
+                    <li><a href="#CloseExistingChartbooksWhenOpenChartbookGroup">Close Existing Chartbooks When Open Chartbook Group</a></li>
+                    <li><a href="#AutoSaveChartbooks">Auto-Save Chartbooks and Spreadsheets</a></li>
+                    <li><a href="#AutoSaveChartbooksIntervalInMinutes">Auto-Save Chartbooks Interval In Minutes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="tab_settingswindows.html">Settings Windows</a>
+        <ul>
+            <li><a href="#SettingsWindowsSection">Settings Windows</a>
+                <ul>
+                    <li><a href="#ResizeSettingsWindowOnColumnCountChange">Resize Settings Window on Column Count Change</a></li>
+                    <li><a href="#UseSingleClickForYesNoInSettingsWindowWhenNotSelected">Use Single Click for Yes/No in Settings Window when not Selected</a></li>
+                    <li><a href="#UseSingleClickForEditControlInSettingsWindowWhenNotSelected">Use Single Click for Edit Control in Settings Window when not Selected</a></li>
+                    <li><a href="#UseSingleClickForListBoxInSettingsWindowWhenNotSelected">Use Single Click for List Box in Settings Window when not Selected</a></li>
+                    <li><a href="#UseSingleClickForEditableListBoxInSettingsWindowWhenNotSelected">Use Single Click For Editable List Box In Settings Window When Not Selected</a></li>
+                    <li><a href="#UseSingleClickForButtonInSettingsWindowWhenNotSelected">Use Single Click for Button in Settings Window when not Selected</a></li>
+                    <li><a href="#UseSingleClickForColorControlInSettingsWiondowWhenNotSelected">Use Single Click for Color Control in Settings Window when not Selected</a></li>
+                    <li><a href="#SelectAllTextInEditControlUponEditing">Select All Text in Edit Control Upon Editing</a></li>
+                    <li><a href="#ImmediatelyShowDropDownWhenListSettingIsBeingEdited">Immediately Show Drop Down When List Setting Is Being Edited</a></li>
+                    <li><a href="#ShowViewMenuInSettingsWindow">Show View Menu in Settings Window</a></li>
+                    <li><a href="#UseMouseScrollWheelToSelectSettingsInSettingsWindow">Use Mouse Scroll Wheel to Select Settings in Settings Window</a></li>
+                    <li><a href="#SelectStringMatchingMethodInSearch">Select String Matching Method in Search</a></li>
+                </ul>
+            </li>
+            <li><a href="#CustomizationsSection">Customizations</a>
+                <ul>
+                    <li><a href="#AvailablePreconfiguredLanguageCustomizations">Available Preconfigured Language Customizations</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#Tab_Log">Log</a>
+        <ul>
+            <li><a href="#LogSection">Log</a>
+                <ul>
+                    <li><a href="#SaveMessageLogToFile">Save Message Log to File</a></li>
+                    <li><a href="#DetailedContinuousFuturesContractLogging">Detailed Continuous Futures Contract Logging</a></li>
+                    <li><a href="#NeverAutomaticallyOpenMessageLogOrTradeServiceLog">Never Automatically Open Message Log or Trade Service Log</a></li>
+                    <li><a href="#SaveAlertsLogToFile">Save Alerts Log to File</a></li>
+                    <li><a href="#EnableDetailedHTTPLogging">Enable Detailed HTTP Logging</a></li>
+                    <li><a href="#ControlBarDebugLogging">Control Bar Debug Logging</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#Tab_Paths">Paths</a>
+        <ul>
+            <li><a href="#FilesAndFolderPathsSection">Files and Folder Paths</a>
+                <ul>
+                    <li><a href="#DataFilesFolder">Data Files Folder</a>
+						<ul>
+							<li><a href="#ChangingDataFilesFolder">Changing the Data Files Folder</a></li>
+						</ul>
+					</li>
+                    <li><a href="#AlwaysUseDataFolder">Always Use 'Data' Folder within Main Folder</a></li>
+                    <li><a href="#ChartImageFolder">Chart Image Folder</a></li>
+                    <li><a href="#TextEditorPathAndFilename">Text Editor Path and Filename</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#Tab_Alerts">Alerts</a>
+        <ul>
+            <li><a href="#AlertSettingsSection">Alert Settings</a>
+                <ul>
+                    <li><a href="#Alert">Alert</a></li>
+                    <li><a href="#NumberOfTimesToPlayThisAlert">Number of Times to Play This Alert</a></li>
+                    <li><a href="#RunProgramWhenThisAlertTriggered">Run Program When This Alert Triggered</a></li>
+                    <li><a href="#SendEMailWhenThisAlertIsTriggered">Send E-Mail When This Alert is Triggered</a></li>
+                    <li><a href="#SendSMSWhenThisAlertIsTriggered">SendSMSWhenThisAlertIsTriggered</a></li>
+                    <li><a href="#IncludeAlertCommentInAlertEmail">Include Alert Comment in Alert Email/Pop-up</a></li>
+                </ul>
+            </li>
+            <li><a href="#SoundFileSection">Sound File</a>
+                <ul>
+                    <li><a href="#AlertSoundFileName">Alert Sound File Name</a></li>
+                    <li><a href="#TestSound">Test Sound</a></li>
+                </ul>
+            </li>
+            <li><a href="#UserDefinedNameSection">User Defined Name</a>
+                <ul>
+                    <li><a href="#UserDefinedName">User Defined Name</a></li>
+                    <li><a href="#IncludeUserDefinedNameInAlertEmailPopup">Include User Defined Name in Alert Email/Pop-up</a></li>
+                    <li><a href="#UseUserDefinedNameOnlyInAlertMessage">Use User Defined Name Only in Alert Message</a></li>
+                </ul>
+            </li>
+            <li><a href="#NoficationSection">Notification</a>
+                <ul>
+                    <li><a href="#EmailAddressOrTwitterUsername">E-Mail Address or Twitter Username</a></li>
+                    <li><a href="#SMSNumber">SMS Number</a></li>
+                </ul>
+            </li>
+            <li><a href="#AdditionalSettingsSection">Additional Settings</a>
+                <ul>
+                    <li><a href="#ShowAlertsLogOnStudyAlert">Show Alerts Log On Study Alert</a></li>
+                    <li><a href="#AddAlertToCompactAlertPopupWindow">Add Alert to Compact Alert Popup Window</a></li>
+                    <li><a href="#WaitForPriorAlertSoundToFinishBeforePlayingNextQueuedSound">Wait for Prior Alert Sound to Finish Before Playing Next Queued Sound</a></li>
+                </ul>
+            </li>
+            <li><a href="#RemoteAlertsSection">Remote Alerts</a>
+                <ul>
+                    <li><a href="#EnableRemoteAlerts">Enable Remote Alerts</a></li>
+                    <li><a href="#AlertNumberForRemoteAlert">Alert Number for Remote Alert</a></li>
+                </ul>
+            </li>
+            <li><a href="#ServerAlertsSection">Server Alerts</a>
+                <ul>
+                    <li><a href="#ServerConnectedAlert">Server Connected Alert</a></li>
+                    <li><a href="#ServerConnectionLostAlert">Server Connection Lost Alert</a></li>
+                </ul>
+            </li>
+            <li><a href="#TextToSpeechWaveFileCreationSection">Text to Speech Wave File Creation</a>
+                <ul>
+                    <li><a href="#TextToSpeechWaveFileCreation">Text to Speech Wave File Name</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#AdditionalAlertInformation">Additional Alert Information</a>
+        <ul>
+            <li><a href="#ConfiguringAlertNumberInstructions">Configuring Alert Number Instructions</a></li>
+            <li><a href="#AlertsDuringBackTesting">Alerts During Back Testing</a></li>
+            <li><a href="#PlayingAlertSoundMultipleTimes">Playing Alert Sound Multiple Times</a></li>
+            <li><a href="#TextToSpeechAlerts">Text-To-Speech Alerts</a></li>
+            <li><a href="#EmailNotifications">E-mail/Twitter Notifications for Alerts</a></li>
+            <li><a href="#SMSNotifications">SMS Notifications for Alerts</a></li>
+            <li><a href="#FailedSMSDelivery">Failed SMS Delivery</a></li>
+            <li><a href="#SamplingSoundFiles">Sampling/Testing Sound Files</a></li>
+            <li><a href="#DefaultSound">Default Sound</a></li>
+            <li><a href="#TimeDelayBetweenSounds">Time Delay Between Sounds</a></li>
+            <li><a href="#ClearingSoundQueue">Clearing the Alert Sound Queue</a></li>
+            <li><a href="#TroubleshootingAlertSounds">Troubleshooting for Alert Sounds That Do Not Play</a></li>
+            <li><a href="#PlayingAnAlertSoundRepeatedlyUntilManuallyStopped">Playing an Alert Sound Repeatedly Until Manually Stopped</a></li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="AccessingGeneralSettings">Accessing the General Settings Window</h2>
+    <div class="member-link">[<a href="#AccessingGeneralSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To display the <b>General Settings</b> window select <b class="menu_item">Global Settings &gt;&gt; General Settings</b> on the menu.</p>
+
+    <p>Press <b>OK</b> to save settings or <b>Cancel</b> to exit without saving.</p>
+</section>
+
+
+<section class="h2">
+    <h2  id="Tab_General">General</h2>
+    <div class="member-link">[<a href="#Tab_General">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingsgeneral1.png" rel="lightbox"><img src="../images/generalsettingsgeneral1.png" class="screenshot" loading="lazy" alt="" width="500"></a></div>
+
+    <section class="h3">
+        <h3  id="UpdateIntervalsSection">Update Intervals (Global Settings &gt;&gt; General Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#UpdateIntervalsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to update intervals for various parts of the Sierra Chart software.</p>
+
+        <section class="h4">
+            <h4  id="ChartUpdateInterval">Chart Update Interval (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Update Intervals)</h4>
+            <div class="member-link">[<a href="#ChartUpdateInterval">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b> Chart Update Interval</b> sets how often the chart graphics are updated and studies are calculated when connected to the Data/Trade server. When market data, Trade Order data or Trade Position data is received, it will be displayed within this time interval. </p>
+
+            <p>If there is no new market data, Trade Order or Position data, then the chart will not be updated.</p>
+
+            <p>Enter the value in milliseconds. Using a higher value will reduce CPU usage. However, the chart will update slower. Using a lower value will increase CPU usage. However, the chart will update faster. This setting does <b>not</b> affect the speed at which data is stored, it is stored tick by tick without any gaps. All trades received are displayed.</p>
+
+            <p>The <b>Chart Update Interval</b> provides for very efficient use of the CPU, and prevents lags. Using a very short update interval may require a fast CPU.</p>
+
+            <p>Using too short of an update interval,  like 50 milliseconds   or less on a large number of charts, may have the effect of causing a lag of data received because the load that Sierra Chart will present to the CPU may be too high  preventing network data from being process timely.</p>
+
+            <p>You will know if the Chart Update Interval setting is too fast if the CPU usage of Sierra Chart, as reported in the system Task Manager, is near to the limit of a single core.  For example, if your system has 8 cores, the maximum core percentage will be 12.5 percent as reported in the Task Manager. If you see the Sierra Chart process at the  maximum or higher percentage for a single core, then  it is presenting the maximum load to the CPU. Although Sierra Chart does use multiple threads, so  you can see at certain times, a percentage which is higher than what a single core will use. Most of the time this will not be the case though.</p>
+
+            <p>If you encounter any problems with a short  Chart Update Interval, increase it. <em>Do not contact support about issues arising from too short of a Chart Update Interval.</em></p>
+
+            <p>At each Chart update, in the case of an Intraday chart, Sierra Chart will read the latest data from the Intraday chart data file and perform other functions even if there is not any new market data to read. Therefore, using too short of a Chart Update Interval, does increase the CPU load.</p>
+
+            <p class="GeneralBackgroundHighlightLight">Each individual chart can also override the global Chart Update Interval and use its own chart update interval. So this gives you the ability to set some charts to a faster or slower speed than the global setting. Refer to  <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval">Chart Update Interval</a> in the <b>Chart Settings</b> documentation.</p>
+
+            <p>While Sierra Chart is a fast and responsive program, it was <em>not</em> designed with high-frequency trading in mind where one would require response times in the microsecond range or very low millisecond range. The <b>Chart Update Interval</b> can be reduced as low as 10 milliseconds. However, if you require study calculations to be done at intervals faster than that and have reaction times from an automated trading system to be less than that, and in the microsecond range, then instead you would need to develop your trading system external to Sierra Chart and communicate with Sierra Chart using the <a href="indexedef.html?page=doc/DTCServer.php">DTC Protocol Server</a>.</p>
+            
+            <p>Since charts are updated at the specified Chart Update Interval, there can be momentary differences with price values between charts of the same symbol, at any instant in time. This becomes less noticeable, the faster the chart update interval.</p>
+        </section>
+
+        <section class="h4">
+            <h4  id="QuoteBoardUpdateInterval">Quote Board Update Interval (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Update Intervals)</h4>
+            <div class="member-link">[<a href="#QuoteBoardUpdateInterval">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Quote Board Update Interval</b> specifies how often and milliseconds the data on a <a href="index1eaf.html?page=doc/GettingQuotes.html#QuoteBoard">Quote Board</a> updates if it has changed.</p>
+
+            <p>A recommended setting  is between 500 to 1000 milliseconds.</p>
+            
+            <p>This setting also applies to  <a href = "index9df4.html?page=doc/StudySummaryWindow.php">Study Summary Windows</a> and  <a href = "index1eaf.html?page=doc/GettingQuotes.html#QuotesOnSpreadsheets">Quote Spreadsheets</a>.  In the case of a Quote Spreadsheet, you need to close and reopen it for the new Update Interval  to go into effect.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="PeriodicallySetSystemDateTimeFromServer">Periodically Set System Date-Time from Server (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Update Intervals)</h4>
+            <div class="member-link">[<a href="#PeriodicallySetSystemDateTimeFromServer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then every hour the current  Date-Time in UTC is requested from the Sierra Chart Web server and your computer's clock is adjusted to this time.</p>
+
+            <p>For complete details about this functionality, refer to <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#SetSystemDateTimeFromServer">Global Settings &gt;&gt; Set System Date-Time from Server</a>.</p>
+        </section>
+
+
+        <section class="h4">
+            <h4 id="QuoteBoardHighLowTimeoutTimeInSeconds">Quote Board High/Low Timeout Time in Seconds (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Update Intervals)</h4>
+            <div class="member-link">[<a href="#QuoteBoardHighLowTimeoutTimeInSeconds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Quote Board High/Low Timeout Time in Seconds</b> setting specifies the amount of time in seconds the High or Low <a href="index1eaf.html?page=doc/GettingQuotes.html#QuoteBoard">Quote Board</a> fields remain highlighted for when there is a new  High or Low respectively.</p>
+           
+           <p>For information about setting the highlighting color, refer to <a href = "index1eaf.html?page=doc/GettingQuotes.html#SettingColors">Setting Colors (Quote Board)</a>.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="StartupSection">Startup (Global Settings &gt;&gt; General Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#StartupSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to functionality that occurs at the startup of the Sierra Chart software.</p>
+    
+        <section class="h4">
+            <h4 id="FilesToOpenOnStartupEnabled">Open Files On Startup (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Startup)</h4>
+            <div class="member-link">[<a href="#FilesToOpenOnStartupEnabled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the files in the <b>Files to Open on Startup</b> list will automatically be opened when Sierra Chart is started. When this option is set to <b>No</b>, this will not occur.</p>
+
+            <p>This setting is also on the Sierra Chart login window and can be turned on or off from that window. When a change is made on the Login window, then that change will be reflected in this setting.</p>
+
+            <section class="h5">
+                <h5 id="TemporarilyPreventingAutomaticOpeningOfFilesOnStartup">Temporarily Preventing Automatic Opening of Files on Startup</h5>
+                <div class="member-link">[<a href="#TemporarilyPreventingAutomaticOpeningOfFilesOnStartup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <p>To prevent the automatic opening of files, Chartbooks and Spreadsheets, in the list of <b>Files to Open on Startup</b> in <b class="menu_item">Global Settings &gt;&gt; General Settings</b>, when Sierra Chart is started, then disable the <b>Files to Open on Startup</b> option on the <b>General Settings</b> window.</p>
+
+                <p>Alternatively, when Sierra Chart is started, on the Login window disable the <b>Open Files on Startup</b> option. This will prevent Chartbooks and other files from automatically being opened upon startup.</p>
+                
+                <p>The <b>Files to Open on Startup</b> will not automatically open on startup of Sierra Chart if <b>Open Files on Startup</b> is disabled on the Login window.</p>
+            </section>
+        </section> 
+
+        <section class="h4">
+            <h4 id="FilesToOpenOnStartup">Select Files to Open On Startup (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Startup)</h4>
+            <div class="member-link">[<a href="#FilesToOpenOnStartup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting allows you to create a list of files to automatically open when you start Sierra Chart. These files can include Chartbook and Spreadsheet files (<em>.scss</em> file extension). These are the only files you can automatically open.</p>
+
+            <p>Selecting the button for <b>Files to Open on Startup</b> will bring up a window that allows the files to be added to the list.</p>
+
+            <p>Press the <b>Add</b> button to add a file to the list. The <b>Open File</b> window will display. Select the file you want to add and press the <b>Open</b> button.</p>
+
+            <p>To change an existing file in the list, select the file you want to change in the list and press the <b>Change</b> button.</p>
+
+            <p>To remove a file, select the file you wish to remove and press the <b>Remove</b> button.</p>
+
+            <p>You can change the order of the files to control the order in which they are opened, by using the <b>Up Arrow</b> and the <b>Down Arrow</b> buttons. The last file in the list, will be the last file opened. In the case of a Chartbook, this will  become the active Chartbook file.</p>
+
+            <p>For information about chartbooks, refer to the <a href="index7674.html?page=doc/Chartbooks.html">Chartbooks</a> documentation page.</p>
+
+            <p> If the first file to open in the list is a Spreadsheet, then a new Chartbook will be created when that Spreadsheet is automatically opened because a Chartbook is required to exist when opening a Spreadsheet file. Therefore, it is recommended to put the Spreadsheet files at the end of the list of Files to Open on Startup to avoid this.</p>
+
+            <p>The files will not automatically open if the <b>Open Files on Startup</b> option is disabled.</p>
+        </section>
+  
+        <section class="h4">
+            <h4 id="AcceptServerSideSetStartupFiles">Accept Server-Side Set Startup Files (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Startup)</h4>
+            <div class="member-link">[<a href="#AcceptServerSideSetStartupFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>For some Sierra Chart accounts files may be automatically added to the <b>Files to Open On Startup</b> list. This happens when logging into Sierra Chart.</p>
+
+            <p>To prevent the files from being added to this list, set <b>Accept Server-Side Set Startup Files</b> to <b>No</b>.</p>
+        </section>
+    </section>
+    
+    
+    <section class="h3">
+        <h3 id="NewInstancesSection">NewInstances (Global Settings &gt;&gt; General Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#NewInstancesSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>.</p>
+        
+        <section class="h4">
+            <h4 id="InstancesToOpenOnStartup">Instances to Open on Startup (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; New Instances)</h4>
+            <div class="member-link">[<a href="#InstancesToOpenOnStartup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Sierra Chart supports running new instances with the <b class="menu_item">File &gt;&gt; New Instance</b> command.</p>
+
+            <p>For additional information, refer to <a href="index9bbd.html?page=doc/NewInstance.php#UsingDTCServerForDataAndTradingInAnotherSCInstance">Using DTC Server for Data and Trading in Another Sierra Chart Instance</a>.</p>
+
+            <p>After you have manually started new instances with that command, to automatically start those instances when Sierra Chart is started, enter the instance numbers in the <b>Instances to Open on Startup</b> field. This is a comma separated list of instance numbers. Example: <b>2, 3</b>.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="UseSymbolSettingsInNewInstanceswhenStarted">Use Symbol Settings in New Instances when Started (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; New Instances)</h4>
+            <div class="member-link">[<a href="#UseSymbolSettingsInNewInstanceswhenStarted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+             <p>When this option is set to Yes, then when <b class="menu_item">File &gt;&gt; New Instance</b> is used to start a new instance of Sierra Chart, then the Global Symbol Settings from the main instance the new instance is started from, are copied to the new instance. The new instance then uses these Symbol Settings. This is useful to make sure the customized settings you have set in the main instance are used by all of the sub instances.</p>
+        
+            <p> It is important to understand that when this option is enabled, you must not make changes to Symbol Settings within sub  instances started with <b class="menu_item">File &gt;&gt; New Instance</b>.  Otherwise,  when those sub instances are restarted, those  Symbol Settings changes  or custom symbols added, will then be  <em>lost and overwritten with the main instance Symbol Settings</em>. </p>
+            
+        </section>
+        
+        <section class="h4">
+            <h4 id="AlwaysCopyConfigurationFilesToNewInstancesWhenStarted">Always Copy Configuration Files to New Instances When Started (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; New Instances)</h4>
+            <div class="member-link">[<a href="#AlwaysCopyConfigurationFilesToNewInstancesWhenStarted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to Yes, then all of the global configuration files from the main instance of Sierra Chart are copied to a sub instance every time the sub instance is started with <b class="menu_item">File &gt;&gt; New Instance</b>. </p>
+            
+            <p> This ensures that the Global Settings within the main instance,  are always applied to the sub instance. </p>
+            
+            <p>However, any changes to Global settings within a    sub instance will be lost when it is closed and started again  with <b class="menu_item">File &gt;&gt; New Instance</b> or is automatically run on startup. </p>
+            
+            <p> Global configuration files do  <em>not include</em> Chartbooks, Study Collections, Trade Window configurations or Spreadsheets. </p>
+        </section>
+        
+    </section>
+    
+
+    <section class="h3">
+        <h3 id="DataSection">Data (Global Settings &gt;&gt; General Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#DataSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to how data is handled.</p>
+
+        <section class="h4" >
+            <h4 id="SubscribeRTDataAndDownloadHistoricalDataDuringScan">Subscribe RT Data and Download Historical Data During Scan (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Data)</h4>
+            <div class="member-link">[<a href="#SubscribeRTDataAndDownloadHistoricalDataDuringScan">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when <a href="indexfd56.html?page=doc/ChartMenu.html#ScanMenuCommands">scanning</a> through symbols in a chart, historical data will be downloaded for the chart if it has not already been downloaded and real-time data updates will be started for the symbol.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseMondayAsStartOfWeekInsteadOfSunday">Use Monday as Start of Week instead of Sunday (Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Data)</h4>
+            <div class="member-link">[<a href="#UseMondayAsStartOfWeekInsteadOfSunday">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, the start of the week is considered Monday instead of Sunday. Otherwise, the start of the week is considered Sunday.</p>  
+
+            <p>This setting applies to <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php">studies</a> which have a <b>Time Period Type</b> Input which is set to <b>Weeks </b>.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Tab_GUI">GUI (Global Settings &gt;&gt; General Settings)</h2>
+    <div class="member-link">[<a href="#GUISection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingsgui.png" rel="lightbox"><img src="../images/generalsettingsgui.png" class="screenshot" loading="lazy" alt=""></a></div>
+    
+    <section class="h3">
+        <h3 id="ScrollSection">Scroll (Global Settings &gt;&gt; General Settings &gt;&gt; GUI)</h3>
+        <div class="member-link">[<a href="#ScrollSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to scrolling.</p>
+
+        <section class="h4">
+            <h4 id="ScrollMultiplier">Scroll Multiplier (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Scroll)</h4>
+            <div class="member-link">[<a href="#ScrollMultiplier">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Scroll Multiplier</b> setting sets the speed of scrolling in charts. When it is set to 1.0 and you click on the chart Scrollbar arrows or press the left and right arrows on your keyboard, the chart will scroll by 1 bar/column.</p>
+
+            <p>Also, with this same setting when you you scroll the chart page-by-page by clicking within the Scrollbar area (not on the Scrollbar arrows or scroll box), the chart will scroll by one full window of bars/columns.</p>
+
+            <p>When this setting is set to 0.5, then the scrolling amount with any of the scrolling methods becomes reduced by half. When this setting is set to 2, then the scrolling amount with any of the scrolling methods, is doubled. Use a higher value for increased scrolling speed.</p>
+
+            <p>When the <b>Scroll Multiplier</b> is set to 1 and Sierra Chart scrolls by more than 1 bar/column when using a scroll wheel, then the issue has to do with the scroll wheel implementation on your computer system and Sierra Chart has no control over that.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="EnableWorkspaceScrolling">Enable Workspace Scrolling (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Scroll)</h4>
+            <div class="member-link">[<a href="#EnableWorkspaceScrolling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Enables scroll bars to appear on the main Sierra Chart window when you move chart and Spreadsheet windows beyond the main window's edges.</p>
+
+            <p>This allows you to widen your Chartbook workspace. You can then use the scroll bars to move charts in and out of view.</p>
+
+            <p>You need to restart Sierra Chart when enabling or disabling this option for the change to go into effect.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ScrollWheelSetting">Scroll Wheel Setting (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Scroll)</h4>
+            <div class="member-link">[<a href="#ScrollWheelSetting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The scroll wheel can be used to control the chart horizontal position and also the spacing between the chart bars. The options for how the scroll wheel can be used are as follows:</p>
+            
+            <p> When the scroll wheel  is used to scroll the chart horizontally, the <a href="#ScrollMultiplier">Scroll Multiplier</a> setting applies in this case. </p>
+
+            <ul>
+                <li><b>No Scroll Wheel Support</b></li>
+                <li><b>Scroll Wheel Scrolls Chart. With 'Shift' Changes Spacing</b></li>
+                <li><b>Scroll Wheel Changes Spacing. With 'Shift' Scrolls Chart</b></li>
+                <li><b>Scroll Wheel Scrolls Vertical Scale. With 'Shift' Changes Spacing</b></li>
+                <li><b>Scroll Wheel Scrolls Vertical Scale. With 'Shift' Scrolls Chart</b></li>
+                <li><b>Scroll Wheel Scrolls Chart. With 'Shift' Scrolls Vertical Scale</b></li>
+                <li><b>Scroll Wheel Changes Spacing Normal. With 'Shift' Changes Spacing at Bar</b>: When using the <b>Shift</b> key on the keyboard with this option, the bar being pointed to with the <a href="indexb844.html?page=doc/Tools.html#ChartValues">Chart Values</a> tool is maintained at the location, as best as possible, in its current location.</li>
+            </ul>  
+        </section>
+    </section>
+    
+    <section class="h3">
+        <h3 id="ApplicationGUISection">Application GUI (Global Settings &gt;&gt; General Settings &gt;&gt; GUI)</h3>
+        <div class="member-link">[<a href="#ApplicationGUISection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to the Sierra Chart application Graphical User Interface (GUI).</p>
+
+        <section class="h4">
+            <h4 id="CustomTitleBarName">Custom Title Bar Name (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#CustomTitleBarName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting allows you to set text which is displayed on the title bar of the main program window. When there is text set, the name of the Data or Trading service will no longer be displayed on the title bar.</p>
+
+            <p>The text is displayed on the far left side of the title bar assuming the operating system is not centering the text. This text will also be visible with the icon on the system Taskbar to help identify a particular instance of Sierra Chart when you are running multiple instances.</p>
+
+            <p>The setting immediately goes into effect and updates the title bar.</p>
+
+            <p>It is also supported to use your own custom icon at the top left of the Sierra Chart windows and on the system taskbar. Simply place a <b>Program.ico</b> file with your own custom icon in the installation folder for Sierra Chart. It will be automatically used when Sierra Chart is started.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AutoHideTitleScrollbars">Auto Hide Charts Title Bar And Scrollbar (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#AutoHideTitleScrollbars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Auto Hide Charts Title Bar and Scrollbar</b> option when enabled will automatically hide a charts title bar and scrollbar, when the chart does not have the focus and is not the active window.</p>
+
+            <p>This setting also affects Time and Sales windows, and Trade DOM windows.</p>
+
+            <p>For details on moving and resizing a window which has its title bar removed, refer to <a href="indexfd56.html?page=doc/ChartMenu.html#ShowTitleBars">Show Title Bar</a> on the Chart Menu page.</p>
+
+            <p>If this option does not work reliably, then understand it is an operating system level problem and we recommend not using it in that case. The feature is reliably implemented within Sierra Chart.</p>
+
+            <p>It is also supported to manually hide both the Title Bar and Scrollbar on an individual chart through the <b class="menu_item">Chart</b> menu. Refer to <a href="indexfd56.html?page=doc/ChartMenu.html#ShowTitleBars">Show Title Bar</a> and <a href="indexfd56.html?page=doc/ChartMenu.html#ShowScrollbar">Show Scrollbar</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4  id="MinimizeRestoreDetachedWindowsWithMainWindow">Minimize / Restore Detached Windows With Main Window (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#MinimizeRestoreDetachedWindowsWithMainWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when minimizing the main Sierra Chart window, any detached Chart and Spreadsheet windows will also be minimized at the same time.</p>
+
+            <p> When this option is to <b>Yes</b>, then when maximizing or restoring the main Sierra Chart window, any detached Chart and Spreadsheet Windows will also be restored at the same time.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="BringDetachedWindowsToTopOnMainWindowFocus">Bring Detached Windows to Top on Main Window Focus (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#BringDetachedWindowsToTopOnMainWindowFocus">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, and there are <a href="index2414.html?page=doc/DetachingandAttachingChartWindows.html" target="_blank" rel="noopener noreferrer">detached charts</a> in the visible Chartbook, then when the main window of Sierra Chart is given the focus, then these detached charts are also brought to the top of what is called the Z order and moved above other windows from other programs that they may be under.</p>
+
+            <p>The order in which these detached charts are brought to the top is according to the order in which they are listed in <a href="indexc5fd.html?page=doc/WindowMenu.html#WindowsandChartbooks">Window &gt;&gt; Windows and Chartbooks</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IgnoreMinimizedWindowsWhenTiling">Ignore Minimized Windows When Tiling (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#IgnoreMinimizedWindowsWhenTiling">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is selected and one of the Windows Tiling options is selected (such as Windows &gt;&gt; Tile Horizontally), the space that is occupied by the minimized windows icons at the bottom of the graphics area is ignored, and the windows are placed over the icons.</p>
+
+            <p>Otherwise, when this option is not selected, the tiling of windows will take into account the space that is occupied by the minimized windows icons and will place the tiled windows so they do not cover the icons.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DestroyChartWindowsWhenHidden">Destroy Chart Windows when Hidden (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#DestroyChartWindowsWhenHidden">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when a chart window is hidden because the Chartbook it is part of is no longer the visible Chartbook, the chart window will be destroyed. This conserves operating system window related resources and allows more chart windows to be open at the same time.</p>
+
+            <p>When this option is set to <b>No</b>, then when a Chartbook is not visible, and it remains open, the charts are only hidden but not destroyed.</p>
+
+            <p>This option must only be changed when Chartbooks are not currently open. Close all Chartbooks first before changing this option. Otherwise, it is possible when switching to a Chartbook which is currently open, that its charts will not appear, but they would still be present within the Chartbook.</p>
+
+            <p>The term "destroy" is an operating system term which indicates that the operating system window for the chart is being destroyed when it is hidden. This is simply means that the resources associated with it, are removed. When a chart window is made visible again like when making the Chartbook it is part of, active, then the window is re-created exactly as it was before. There is no loss of information at all.</p>
+
+            <p>If you have a large number of charts open for different symbols because you want to overlay them within a common single chart window, then instead consider using the <a href="index7014.html?page=doc/StudiesReference.php&amp;ID=400&amp;Name=Add_Additional_Symbol">Add Additional Symbol</a> study instead of using a large number of separate charts.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="StatusBarWidthInCharacters">Status Bar Width in Characters (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#StatusBarWidthInCharacters">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting controls the width of the <a href="index2422.html?page=doc/StatusBar.html">Status Bar</a> display on the Control Bar in characters.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SmallPixelAmountScalingFactor">Small Pixel Amount Scaling Factor (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#SmallPixelAmountScalingFactor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is a scaling factor/multiplier which is used to adjust various small widths and sizes of various display elements throughout Sierra Chart. By default this is 1. Using a larger value will cause larger widths or sizes to be used.</p>
+
+            <p>Using a value of 2 means that the default pixel width for a particular display element, then becomes twice the number of pixels from the default.</p>
+
+            <p>Some of the included items that this setting affects are as follows:</p>
+
+            <ul>
+                <li>The width of the short vertical divider line displayed on a header when hovering between columns on the header columns in adjustable multicolumn list views like the Time and Sales window.</li>
+                <li>Default column widths for multicolumn list views. These columns are also manually adjustable.</li>
+                <li>Spacing between columns on the Numbers Bars study.</li>
+                <li>Minimum and Maximum padding when using a Subgraph <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle">Draw Style</a> of <b>Left Side Tick Size Rectangle</b> or <b>Right Side Tick Size Rectangle</b>.</li>
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="DisplaySaveAll">Display Save All Option on Exit (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#DisplaySaveAll">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b> and you exit from Sierra Chart, a Save All window will display allowing you to save all of your Chartbooks and your Spreadsheets. If this option is set to <b>No</b>, then this window will not be displayed on exit.</p>
+
+            <p>Effectively this option to display the <b>Save All</b> question functions as a prompt to confirm exiting from Sierra Chart since it will always display when enabled.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SortCWMenuChartNumber">Sort CW Menu by Chart Number (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#SortCWMenuChartNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then the <b class="menu_item">CW</b> (Child Window) menu which lists Chart and Spreadsheet windows, will be sorted according to the Chart Number rather than alphabetically. In this case any open Spreadsheet windows will be listed at the end.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MaximumItemsPerColumnForCWMenu">Maximum Items per Column for CW Menu (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#MaximumItemsPerColumnForCWMenu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting establishes the number of listed charts that are displayed in each column in the <a href="indexc5fd.html?page=doc/WindowMenu.html">CW Menu</a>.</p>
+
+            <p>This setting is to be used if the number of available charts is too long to be able to see the entire list on a monitor. When this occurs, lower the number in this setting in order to split the list of charts into multiple columns so that all the charts can be seen in the list. This value determines the number of charts per column.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MaximumItemsPerColumnForStudyCollectionsMenu">Maximum Items per Column for Study Collections Menu (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Application GUI)</h4>
+            <div class="member-link">[<a href="#MaximumItemsPerColumnForStudyCollectionsMenu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting establishes the number of listed study collections that are displayed in each column in the <a href="index42ac.html?page=doc/AnalysisMenu.html">Analysis</a> menu.</p>
+
+            <p>This setting is to be used if the number of available Study Collections is too long to be able to see the entire list on a monitor. When this occurs, lower the number in this setting in order to split the list of study collections into multiple columns so that all the study collections can be seen in the list. This value determines the number of study collections per column.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="PrintingSection">Printing (Global Settings &gt;&gt; General Settings &gt;&gt; GUI)</h3>
+        <div class="member-link">[<a href="#PrintingSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to printing.</p>
+
+        <section class="h4">
+            <h4 id="PrintBlackWhite">Print Only In Black And White (Global Settings &gt;&gt; General Settings &gt;&gt; GUI &gt;&gt; Printing)</h4>
+            <div class="member-link">[<a href="#PrintBlackWhite">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled and you print a chart with <b class="menu_item">File &gt;&gt; Print</b>, then the chart is printed in black and white only. The background remains the color of the printer paper, or if you are printing to an electronic document it will be white.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Tab_Windows">Windows (Global Settings &gt;&gt; General Settings)</h2>
+    <div class="member-link">[<a href="#Tab_Windows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingswindows.png" rel="lightbox"><img src="../images/generalsettingswindows.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <section class="h3">
+        <h3 id="ChartbookTabsSection">Chartbook Tabs (Global Settings &gt;&gt; General Settings &gt;&gt; Windows)</h3>
+        <div class="member-link">[<a href="#ChartbookTabsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to chartbook tabs.</p>
+
+        <section class="h4">
+            <h4 id="UseChartbookTabs">Use Chartbook Tabs (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Chartbook Tabs)</h4>
+            <div class="member-link">[<a href="#UseChartbookTabs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the Chartbook Tabs are displayed at the location determined by the setting for <b>Show Chartbook Tabs At</b>. Otherwise, if this is set to <b>No</b>, then the Chartbook Tabs are not displayed and a chartbook would be selected by choosing it in the <b class="menu_item">CB</b> menu.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowChartbookTabsAt">Show Chartbook Tabs At (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Chartbook Tabs)</h4>
+            <div class="member-link">[<a href="#ShowChartbookTabsAt">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option determines where the Chartbook tabs will be located. The following options are available:</p>
+
+            <ul>
+                <li><b>Top</b>: When this option is selected, the Chartbook tabs are placed at the top of the Sierra Chart window, but below any Control Bars that are also Attached to the Top.</li>
+
+                <li><b>Bottom</b>: When this option is selected, the Chartbook tabs are placed at the bottom of the Sierra Chart window, below the MDI Tabs if they are also located on the bottom.</li>
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartbookTabs_SupportMultipleRows">Support Multiple Rows (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Chartbook Tabs)</h4>
+            <div class="member-link">[<a href="#ChartbookTabs_SupportMultipleRows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, and there are enough Chartbook Tabs to go beyond the viewable edge of the window, then the Chartbook Tabs are placed into multiple rows.</p>
+
+            <p>Otherwise, the Chartbook Tabs are placed out of view and arrows are displayed to allow for scrolling left and right through the Chartbook Tabs.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartbookTabs_ShowArrowsAtStart">Show Arrows Before Chartbook Tabs (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Chartbook Tabs)</h4>
+            <div class="member-link">[<a href="#ChartbookTabs_ShowArrowsAtStart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled and the option for <b>Support Multiple Rows</b> is disabled, and there are enough Chartbook Tabs to go beyond the viewable edge of the window, then the Chartbook Tab Arrows, that allow for scrolling to the left and right through the Chartbook Tabs, will be displayed on the left side of the Chartbook Tabs.</p>
+
+            <p>Otherwise the arrows are displayed on the right side of the Chartbook Tabs.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="WindowTabsSection">Window Tabs (Global Settings &gt;&gt; General Settings &gt;&gt; Windows)</h3>
+        <div class="member-link">[<a href="#WindowTabsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to the Multi-Document Interface (MDI) Tabs</p>
+
+        <p>Double-clicking with your Pointer on an MDI tab, will maximize or restore the chart or Spreadsheet window associated with that tab.</p>
+
+        <p>For information on how to change the order of tabs, change the coloring of tabs, and changing tab names go to the <a href="index69b6.html?page=doc/WorkingWithCharts.html#WorkingWithTabs">Working with Tabs</a> section.</p>
+
+        <section class="h4">
+            <h4 id="UseMDIWindowTabs">Use MDI Window Tabs (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Window Tabs)</h4>
+            <div class="member-link">[<a href="#UseMDIWindowTabs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the MDI Tabs are displayed at the location determined by the setting for <b>Show MDI Tabs At</b>. Otherwise, if this is set to <b>No</b>, then the MDI Tabs are not displayed and an MDI window would be selected by choosing it in the <b class="menu_item">CW</b> menu.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowMDITabsAt">Show MDI Tabs At (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Window Tabs)</h4>
+            <div class="member-link">[<a href="#ShowMDITabsAt">Link</a>] - <a href="#top">Top</a>]</div>
+
+            <p>This option determines where the MDI (Multiple Document Interface) tabs will be located. MDI Tabs include the Chart and Spreadsheet windows. The following options are available:</p>
+
+            <ul>
+                <li><b>Top</b>: When this option is selected, the MDI Tabs are placed at the top of the Sierra Chart window, but below any Control Bars that are also Attached to the Top, and below the Chartbook tabs if they are located at the top.</li>
+
+                <li><b>Bottom</b>: When this option is selected, the MDI Tabs are placed at the bottom of the Sierra Chart window, above the Chartbook tabs if they are also located on the bottom.</li>
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="MDITabs_SupportMultipleRows">Support Multiple Rows for MDI Tabs (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Window Tabs)</h4>
+            <div class="member-link">[<a href="#MDITabs_SupportMultipleRows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b> and there are enough MDI Tabs to go beyond the viewable edge of the window, then the MDI Tabs are placed into multiple rows.</p>
+
+            <p>Otherwise, the MDI Tabs are placed out of view and arrows are displayed to allow for scrolling left and right through the MDI Tabs.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MDITabs_ShowArrowsAtStart">Show Arrows Before MDI Tabs (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Window Tabs)</h4>
+            <div class="member-link">[<a href="#MDITabs_ShowArrowsAtStart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b> and the option for <b>Support Multiple Rows</b> is set to <b>No</b>, and there are enough MDI Tabs to go beyond the viewable edge of the window, then the MDI Tab Arrows, that allow for scrolling to the left and right through the MDI Tabs, will be displayed on the left side of the MDI Tabs.</p>
+
+            <p>Otherwise, the arrows are displayed on the right side of the MDI Tabs.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="WindowTilingSection">Window Tiling (Global Settings &gt;&gt; General Settings &gt;&gt; Windows)</h3>
+        <div class="member-link">[<a href="#WindowTilingSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to window tiling.</p>
+
+        <section class="h4">
+            <h4 id="UseWindowsCustomGridLayout">Use Windows Custom Grid Layout (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Window Tiling)</h4>
+            <div class="member-link">[<a href="#UseWindowsCustomGridLayout">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b> and positive values are entered in the <b>Rows Count</b> and the <b>Columns Count</b>, then when selecting <b class="menu_item">Window &gt;&gt; Tile As Grid - Horizontally</b> or <b class="menu_item">Window &gt;&gt; Tile As Grid - Vertically</b>, the windows will arrange into a grid pattern defined by the <b>Rows Count</b> and the <b>Columns Count</b>.</p>
+
+            <p>For example, if <b>Rows Count</b> is set to <b>3</b> and the <b>Columns Count</b> is set to <b>2</b> then when selecting <b class="menu_item">Window &gt;&gt; Tile As Grid - Horizontally/Vertically</b> the windows will be arranged into 3 rows and 2 columns.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="RowsCount">Rows Count (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Window Tiling)</h4>
+            <div class="member-link">[<a href="#RowsCount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the number of rows into which the windows are tiled when the setting for <b>Use Windows Custom Grid Layout</b> is set to <b>Yes</b> and an option to tile the windows is selected.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ColumnsCount">Columns Count (Global Settings &gt;&gt; General Settings &gt;&gt; Windows &gt;&gt; Window Tiling)</h4>
+            <div class="member-link">[<a href="#ColumnsCount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This sets the number of columns into which the windows are tiled when the setting for <b>Use Windows Custom Grid Layout</b> is set to <b>Yes</b> and an option to tile the windows is selected.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Tab_Charts">Charts (Global Settings &gt;&gt; General Settings)</h2>
+    <div class="member-link">[<a href="#Tab_Charts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingscharts.png" rel="lightbox"><img src="../images/generalsettingscharts.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <section class="h3">
+        <h3 id="ChartsSection">Charts (Global Settings &gt;&gt; General Settings &gt;&gt; Charts)</h3>
+        <div class="member-link">[<a href="#ChartsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to charts.</p>
+
+        <section class="h4">
+            <h4 id="HideStudyInputs">Hide Study Inputs On Charts (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#HideStudyInputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the values for study Inputs will not be displayed after the study Name on the Region Data Line at the top of the Chart Region where the study is located, and the values of study Inputs will not be displayed in the Chart Values windows. This is a global option and overrides the study Input display option on the studies themselves.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ColorChartTabsWithChartLinkNumberColor">Color Chart Tabs with Chart Link Number Color (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#ColorChartTabsWithChartLinkNumberColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, the chart window tabs in the main Sierra Chart window are color-coded according to the associated color for the Chart Link Number if the chart is set to a nonzero Link Number.</p>
+
+            <p>For more information about Chart Linking, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Chart Linking</a>.</p>
+
+            <p>The Chart Link Number colors are set through the <a href="index5795.html?page=doc/GraphicsSettings.html">Graphics Settings</a> window in the <b>Colors and Widths</b> list box. They are labeled <b>Link Number Color #1</b> through <b>Link Number Color #16</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartTimeframeOnChartTabs">Display Chart Timeframe On Tabs When Title Bar Name Is Set To Be Used On Chart Tab (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#ChartTimeframeOnChartTabs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>In <b class="menu_item">Chart &gt;&gt; Chart Settings</b>, if you have set a <b>Title Bar Name</b> and you have enabled <b>Use Title Bar Name As Tab Label</b>, then the chart bars period is no longer displayed on the MDI tab for the chart. When you enable this option, then the chart bars period will be displayed on the MDI chart tab even in this case.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowOnChartStatusMessages">Show On-Chart Status Messages (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#ShowOnChartStatusMessages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The download status for a symbol can be shown on the chart. This lets you instantly and clearly know what the current download status is. The chart will not update in real time until the historical data has been downloaded for it. When this option is set to <b>Yes</b>, you will see the download status on the chart. Therefore it is advised that you always keep this option enabled so you can clearly see the download status. It is not recommended you disable this option.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseControledOrderChartUpdating">Use Controlled Order Chart Updating (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#UseControledOrderChartUpdating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>By default this option is set to <b>No</b> and under typical use this should stay <b>No</b>. When this option is set to <b>Yes</b>, then studies which reference data in other charts are used to determine the order of calculating charts. </p>
+            
+            <p>Charts which depend upon other charts are calculated last in the order of calculations. For example, if there are charts 1, 2 and 3 and chart 1 depends upon charts 2 and 3 in its calculations because it makes a reference to those charts, then charts 2 and 3 will be calculated first and then chart 1 will be calculated last.</p>
+            
+            <p>By default this option is disabled and under typical use this should be disabled.  The calculation order of charts, when this option is disabled is going to be random.  However, this is the most efficient method of calculations. </p>
+
+            <p>One potential effect of using this option, but not necessarily, is that if you have many charts open in a Chartbook and it takes a significant amount of time to calculate those charts, then you will notice that the user interface of Sierra Chart will momentarily be busy while the calculations are occurring.</p>
+        </section>
+
+        <section class="h4"> 
+            <h4 id="LargeIncreaseDecreaseChartSpacingPixels">Large Increase/Decrease Chart Spacing Pixels (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#LargeIncreaseDecreaseChartSpacingPixels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting controls the number of pixels that the bar spacing will be changed by when increasing or decreasing the chart spacing by a <em>large amount</em> as documented in <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChangingBarSpacing">Changing Bar Spacing</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="FractionsShortFormat">Display Fractions In Short Format (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#FractionsShortFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, fractions such as <b>110 5/32</b> will be displayed as <b>110'5</b> in charts. </p>
+            
+            <p> Due to the nature of a  <a href = "index3c50.html?page=doc/ChartTrading.html#TradeDOM">Trading DOM</a> and the requirement for a fixed width for the price column,  symbols which use a fractional display, will always be displayed in a short format like <b>110'5</b>, even when <b>Display Fractions In Short Format</b> is set to <b>No</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4> id="AllowNewDataUnlockedFillSpace"Allow New Data In Unlocked Fill Space (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#AllowNewDataUnlockedFillSpace">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ScrollingTheChart">Right Side Fill Space</a> is unlocked, and <b>Allow New Data in Unlocked Fill Space</b> is set to <b>Yes</b>, then as new bars are added to the chart, then these bars will be added in the fill space.</p>
+
+            <p>If this option is set to <b>No</b> and new bars are added to the chart, then the Right Side Fill Space will be preserved.</p>
+        </section>
+
+        <section class="h4" >
+        
+            <h4 id="AdditionalDaysToAddToRolloverDateForAutomaticChartAndQuoteBoardRollovers">Additional Days to Add to Rollover Date for Chart and Quote Board Rollovers (Global Settings  &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+           
+           <div class="member-link">[<a href="#AdditionalDaysToAddToRolloverDateForAutomaticChartAndQuoteBoardRollovers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting works with Charts, Quote Boards, and  the symbol list window (<b class="menu_item">Chart &gt;&gt; Associated Symbol List</b>).</p>
+
+            <p>This option sets the number of days after the date-based rollover date for the symbol, for the symbol to be considered expired or needs to be rolled over. </p>
+            
+            <p>For example, if this is set to <b>3</b> and the date-based automatic rollover for a symbol is March 31, then the symbol will not rollover until April 3.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ResetBarSizeSpacingScaleOnSymbolChange">Reset Bar Size/Spacing/Scale On Symbol Change (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#ResetBarSizeSpacingScaleOnSymbolChange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when the thickness of the chart bars changed with <b class="menu_item">Chart &gt;&gt; Decrease/Increase Bar Width</b> is reset, the spacing between the chart bars is reset, and the chart scale is reset, when the symbol of the chart is changed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ResetBarSizeSpacingScaleOnTimeFrameChange">Reset Bar Size/Spacing/Scale On Timeframe Change (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Charts)</h4>
+            <div class="member-link">[<a href="#ResetBarSizeSpacingScaleOnTimeFrameChange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the thickness of the chart bars which have been changed with <b class="menu_item">Chart &gt;&gt; Decrease/Increase Bar Width</b> is reset, the spacing between the chart bars is reset, and the chart scale is reset, when the timeframe / bar period of the chart bars is changed.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="StudyCollectionSection">Study Collection (Global Settings &gt;&gt; General Settings &gt;&gt; Charts)</h3>
+        <div class="member-link">[<a href="#StudyCollectionSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to Study Collections.</p>
+
+        <section class="h4">
+            <h4 id="DefaultStudyCollection">Use Default Study Collection for New Charts (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Study Collection)</h4>
+            <div class="member-link">[<a href="#DefaultStudyCollection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then the selected Study Collection will automatically be applied to <em>new</em> charts that you open. Choose the Study Collection that you wish to automatically apply to new charts, from the list box entitled <b>Default Study Collection</b>. Refer to <a href="indexc9c0.html?page=doc/StudyCollections.html">Study Collections</a>  for more information.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DefaultStudyCollectionList">Default Study Collection (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Study Collection)</h4>
+            <div class="member-link">[<a href="#DefaultStudyCollectionList">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option defines the Study Collection that will be applied to all new charts when the option for <b>Use Default Study Collection for New Charts</b> is set to <b>Yes</b>.
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SymbolSection">Symbol (Global Settings &gt;&gt; General Settings &gt;&gt; Charts)</h3>
+        <div class="member-link">[<a href="#SymbolSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4 id="SupportPlusMinusKeysForChangingSymbolInCharts">Support Plus Minus Keys for Changing Symbol in Charts (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Symbol)</h4>
+            <div class="member-link">[<a href="#SupportPlusMinusKeysForChangingSymbolInCharts">Link</a>] - [<a href="#top">top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the Plus (+) and Minus (-) keys on the keyboard will cycle through the list of symbol files in the data folder for this Sierra Chart instance. Each press will change the symbol to the next (or previous) data file found and load that data into the chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SupportSymbolEntry">Support Symbol Entry from Chart Window (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Symbol)</h4>
+            <div class="member-link">[<a href="#SupportSymbolEntry">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then you are allowed to enter a symbol directly from the chart window by simply typing the symbol into the chart window and pressing the ENTER key on the keyboard. For more information, refer to the <a href="indexa1a5.html?page=doc/SwitchingSymbols.html">Changing the Symbol of the Chart</a> page.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DetectRolloverOfCurrentFuturesContractsSymbolsBasedOnRealTimeVolume">Detect Rollover Of Current Futures Contracts Symbols Based On Real Time Volume (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Symbol)</h4>
+            <div class="member-link">[<a href="#DetectRolloverOfCurrentFuturesContractsSymbolsBasedOnRealTimeVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, then the daily volume of a futures symbol for a chart is compared to the daily volume of the next contract month. When the volume of the next contract month is higher than the current futures symbol of a chart, then the current symbol is considered expired and a Rollover message will be displayed on the chart.</p>
+
+            <p>This feature can only work properly when Sierra Chart is connected to the data feed. To connect to the data feed select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</p>
+
+            <p>If the absolute value of the difference between the current date and the rollover date based upon the date rollover rules for the symbol, is more than 4 days, then a volume-based rollover analysis is not performed. In other words if the current date is not within 4 days of the date based rollover date for the symbol, then a volume-based rollover analysis is not performed.</p>
+
+            <p>If a symbol is considered expired by a week or more according to the date rollover rules, then a volume-based rollover analysis is not performed. In this case, the standard date based rollover rules will indicate a message on the chart that the symbol is expired.</p>
+
+            <p>When the symbol is considered expired based upon the volume being higher in the next contract month, then a Rollover message is displayed on the chart for a half a day. It is necessary to rollover to the next contract month to clear this message. This message will redisplay after reconnecting to the data feed.</p>
+
+            <p>Left click on this message to display the <a href="indexa967.html?page=doc/ChangingFuturesContract.html#ChangingNewMonth">Futures Symbol Rollover</a> window to roll over to the next contract month.</p>
+            
+            <p>The check for determining if the symbol is expired based on volume is performed every 10 minutes.</p>
+             
+            <p>If you want to prevent the Volume based Rollover message from being displayed on the chart, then you need to disable this option, <b>Detect Rollover Of Current Futures Contracts Symbols Based On Real Time Volume</b>, and then restart Sierra Chart. You may still see the standard rollover text message on the chart for 30 seconds but it will clear after that amount of time.  </p>
+            
+            <p>When using the <b>Detect Rollover Of Current Futures Contracts Symbols Based On Real Time Volume</b> option, you are going to want to disable the <a href="index4cf4.html?page=doc/ChartSettings.html#AutomaticallyRolloverFuturesSymbol">Automatically Rollover Futures Symbol</a> option in the Chart Settings for the chart.</p>
+            
+             <p>The <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html#RolloverOptions">Continuous Contract</a> option in <b class="menu_item">Chart &gt;&gt; Chart Settings</b> is fully unrelated to <b>Detect Rollover Of Current Futures Contracts Symbols Based On Real Time Volume</b>, and has no effect upon the current symbol of the chart.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartbooksSection">Chartbooks (Global Settings &gt;&gt; General Settings &gt;&gt; Charts)</h3>
+        <div class="member-link">[<a href="#ChartbooksSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings for items related to Chartbooks.</p>
+
+        <section class="h4">
+            <h4 id="CloseExistingChartbooksWhenOpenChartbookGroup">Close Existing Chartbooks When Open Chartbook Group (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Chartbooks)</h4>
+            <div class="member-link">[<a href="#CloseExistingChartbooksWhenOpenChartbookGroup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>No</b>, then when <a href="index8793.html?page=doc/FileMenu.html#OpenChartbookGroup">opening a Chartbook Group</a> all open Chartbooks are not closed. Otherwise, when this option is set to <b>Yes</b>, and a Chartbook Group is opened, the open Chartbooks are automatically closed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AutoSaveChartbooks">Auto-Save Chartbooks and Spreadsheets (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Chartbooks)</h4>
+            <div class="member-link">[<a href="#AutoSaveChartbooks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the <a href = "index7674.html?page=doc/Chartbooks.html">Chartbooks</a> that are currently open will be automatically saved at the interval specified in the setting <b>Auto-Save Chartbooks Interval In Minutes</b>.</p>
+            
+            <p>  At the same time, all open  <a href = "indexdf54.html?page=doc/WorkingWithSpreadsheets.php">Spreadsheet</a> files are also saved.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AutoSaveChartbooksIntervalInMinutes">Auto-Save Chartbooks Interval In Minutes (Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Chartbooks)</h4>
+            <div class="member-link">[<a href="#AutoSaveChartbooksIntervalInMinutes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option specifies the number of minutes between automatic saving of open chartbooks when the option for <b>Auto-Save Chartbooks</b> is set to <b>Yes</b>.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Tab_SettingsWindows">Settings Windows (Global Settings &gt;&gt; General Settings)</h2>
+    <div class="member-link">[<a href="#Tab_SettingsWindows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingssettingswindows.png" rel="lightbox"><img src="../images/generalsettingssettingswindows.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+    <section class="h3">
+        <h3 id="SettingsWindowsSection">Settings Windows (Global Settings &gt;&gt; General Settings &gt;&gt; Settings Windows)</h3>
+        <div class="member-link">[<a href="#SettingsWindowsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to the settings windows.</p>
+
+        <section class="h4">
+            <h4 id="ResizeSettingsWindowOnColumnCountChange">Resize Settings Window on Column Count Change (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#ResizeSettingsWindowOnColumnCountChange">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, and there is a change to the number of columns on a Settings Window it will automatically resize  appropriately. Either larger or smaller.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseSingleClickForYesNoInSettingsWindowWhenNotSelected">Use Single Click for Yes/No in Settings Window when not Selected (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#UseSingleClickForYesNoInSettingsWindowWhenNotSelected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when selecting the Yes/No area of a non-highlighted setting (any setting other than the currently active one), the setting will change the Yes/No value (Yes will become No and No will become Yes). Otherwise, selecting the Yes/No area of a non-highlighted setting will not change the value.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseSingleClickForEditControlInSettingsWindowWhenNotSelected">Use Single Click for Edit Control in Settings Window when not Selected (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#UseSingleClickForEditControlInSettingsWindowWhenNotSelected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when selecting the Value Field area of a non-highlighted setting (any setting other than the currently active one), the value field will be selected to allow immediate editing. Otherwise, selecting the Value Field area of a non-highlighted setting will not select the Value Field.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseSingleClickForListBoxInSettingsWindowWhenNotSelected">Use Single Click for List Box in Settings Window when not Selected (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#UseSingleClickForListBoxInSettingsWindowWhenNotSelected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when selecting the List Box area of a non-highlighted setting (any setting other than the currently active one), the list box area will be selected. Otherwise, selecting the List Box area of a non-highlighted setting will not select the list box.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseSingleClickForEditableListBoxInSettingsWindowWhenNotSelected">Use Single Click For Editable List Box In Settings Window When Not Selected (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#UseSingleClickForEditableListBoxInSettingsWindowWhenNotSelected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when selecting the Editable List Box area of a non-highlighted setting (any setting other than the currently active one), the editable list box area will be selected. Otherwise, selecting the Editable List Box area of a non-highlighted setting will not select the editable list box.</p>
+        </section>
+              
+        <section class="h4">
+            <h4 id="UseSingleClickForButtonInSettingsWindowWhenNotSelected">Use Single Click for Button in Settings Window when not Selected (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#UseSingleClickForButtonInSettingsWindowWhenNotSelected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when selecting the Button area of a non-highlighted setting (any setting other than the currently active one), the button will be activated. Otherwise, selecting the button of a non-highlighted setting will not activate the button.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseSingleClickForColorControlInSettingsWiondowWhenNotSelected">Use Single Click for Color Control in Settings Window when not Selected (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#UseSingleClickForColorControlInSettingsWiondowWhenNotSelected">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when selecting the Color Control area of a non-highlighted setting (any setting other than the currently active one), the control will be activated. Otherwise, selecting the color control of a non-highlighted setting will not activate the color control.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SelectAllTextInEditControlUponEditing">Select All Text in Edit Control Upon Editing (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#SelectAllTextInEditControlUponEditing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when selecting an editable field on a Settings Window, the existing text within that field will be automatically selected. This allows for immediate entry of new information without having to select the text separately. When this option is set to <b>No</b> then the text in the editable field will not be selected.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ImmediatelyShowDropDownWhenListSettingIsBeingEdited">Immediately Show Drop Down When List Setting Is Being Edited (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#ImmediatelyShowDropDownWhenListSettingIsBeingEdited">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, and a settings row contains a drop-down list box,  when the editing begins for that row, the drop-down list will be automatically opened.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ShowViewMenuInSettingsWindow">Show View Menu in Settings Window (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#ShowViewMenuInSettingsWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the <b>View</b> menu will be displayed on the Settings windows. Otherwise, the View menu will not be displayed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseMouseScrollWheelToSelectSettingsInSettingsWindow">Use Mouse Scroll Wheel to Select Settings in Settings Window (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#UseMouseScrollWheelToSelectSettingsInSettingsWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b> then when a Settings Window is the active window and the scroll wheel is used, the selection highlight showing which option is active will move with the scroll wheel. This also means that the scroll wheel will not scroll the window up or down, if there is space to do so, but the selection highlight will stay in the viewable area.</p>
+
+            <p>Otherwise, when this option is set to <b>No</b> and a Settings Window is the active window, then the scroll wheel will have not change the selection highlight, but will scroll the window up/down if there is space to do so.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SelectStringMatchingMethodInSearch">Select String Matching Method in Search (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h4>
+            <div class="member-link">[<a href="#SelectStringMatchingMethodInSearch">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting gives the following options for how to search for strings within the search capabilities of the Settings Windows:</p>
+
+            <ul>
+                <li><b>Exact String Matching</b>: The exact string that is entered will only match exactly to strings within the settings window.</li>
+                <li><b>Fuzzy String Matching</b>: The string that is entered will match to other strings that are similar to the entered string, but do not have to be exact matches (exact matches will also be matched) within the settings window.</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="CustomizationsSection">Customizations (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows)</h3>
+        <div class="member-link">[<a href="#CustomizationsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to customizing Sierra Chart.</p>
+
+        <section class="h4">
+            <h4 id="AvailablePreconfiguredLanguageCustomizations">Available Preconfigured Language Customizations (Global Settings &gt;&gt; General Settings &gt;&gt; SettingsWindows &gt;&gt; Customizations)</h4>
+            <div class="member-link">[<a href="#AvailablePreconfiguredLanguageCustomizations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting an item in this list will customize the Sierra Chart interface for the selected language</p>
+
+            <p>Further information on language customization can be found in the section for <a href="index7ba8.html?page=doc/AdditionalLanguageSupport.php">Additional Language Support</a>.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Tab_Log">Log (Global Settings &gt;&gt; General Settings)</h2>
+    <div class="member-link">[<a href="#Tab_Log">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingslog.png" rel="lightbox"><img src="../images/generalsettingslog.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+    <section class="h3">
+        <h3 id="LogSection">Log (Global Settings &gt;&gt; General Settings &gt;&gt; Log)</h3>
+        <div class="member-link">[<a href="#LogSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4 id="SaveMessageLogToFile">Save Message Log to File (Global Settings &gt;&gt; General Settings &gt;&gt; Log &gt;&gt; Log)</h4>
+            <div class="member-link">[<a href="#SaveMessageLogToFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the <b class="menu_item">Window &gt;&gt; Message Log</b> lines are automatically saved to a file.</p>
+
+            <p>The Message Log files are saved in the <b>Logs</b> subfolder in the folder that Sierra Chart is installed to on your system. The default location for the logs folder is: <b>C:\SierraChart\Logs</b>. This folder will be different if Sierra Chart is installed into a different folder on your system. To determine the location where Sierra Chart is installed on your system, open the Message Log with <b class="menu_item">Window &gt;&gt; Message Log</b>.</p>
+
+            <p>If the Message Log does not display, select <b class="menu_item">Window &gt;&gt; Reset Windows</b>, and try opening the Message Log again.</p>
+
+            <p>Near the top, you will see a line like this: <b>Program path: C:\SierraChart\</b>.</p>
+
+            <p>The filename format for the saved log is: <em><b>Message Log YYYY-MM-DD HHMMSS.log</b></em>.</p>
+
+            <p>A new message log file is created every 24 hours at the time a new message is added.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DetailedContinuousFuturesContractLogging">Detailed Continuous Futures Contract Logging (Global Settings &gt;&gt; General Settings &gt;&gt; Log &gt;&gt; Log)</h4>
+            <div class="member-link">[<a href="#DetailedContinuousFuturesContractLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when data is being downloaded and also loaded from local disk files for a Continuous Futures Contract chart, detailed logging will be added to the  <a href="index84bb.html?page=doc/MessageLog.html">Message Log</a> window indicating relevant detailed messages.</p>
+
+            <p>Normally this option should be set to <b>No</b>. Do not enable it unless you need to see the detailed messages because a lot of messages will be added to the Message Log.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="NeverAutomaticallyOpenMessageLogOrTradeServiceLog">Never Automatically Open Message Log or Trade Service Log (Global Settings &gt;&gt; General Settings &gt;&gt; Log &gt;&gt; Log)</h4>
+            <div class="member-link">[<a href="#NeverAutomaticallyOpenMessageLogOrTradeServiceLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, the  <a href = "index84bb.html?page=doc/MessageLog.html">Message Log</a> and  <a href = "index7cfb.html?page=doc/TradeStatusWindows.html#TradeServiceLog">Trade Service Log</a> windows will not automatically open if they are currently not open, even when there is an error message which requires user attention.</p>  
+
+            <p>It is recommended not to enable this option and Sierra Chart takes no responsibility whatsoever for the consequence of enabling this option. This will be fully the end-user's responsibility.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SaveAlertsLogToFile">Save Alerts Log to File (Global Settings &gt;&gt; General Settings &gt;&gt; Log &gt;&gt; Log)</h4>
+            <div class="member-link">[<a href="#SaveAlertsLogToFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the <b class="menu_item">Window &gt;&gt; Alerts Log</b> lines are automatically saved to a file as they are added to the Log.</p>
+
+            <p>The  Alerts Log files are saved in the <b>Logs</b> subfolder in the folder that Sierra Chart is installed to on your system. The default location for the logs folder is: <b>C:\SierraChart\Logs</b>.</p>
+
+            <p>This folder will be different if Sierra Chart is installed into a different folder on your system. To determine the location where Sierra Chart is installed on your system, open the Message Log with <b class="menu_item">Window &gt;&gt; Message Log</b>.</p>
+
+            <p>If the Message Log does not display, select <b class="menu_item">Window &gt;&gt; Reset Windows</b>. And try opening the Message Log again.</p>
+
+            <p>Near the top, you will see a line like this: <b>Program path: C:\SierraChart\</b>.</p>
+
+            <p>The filename format for the Alert Log is: <em><b>Alert Log YYYY-MM-DD HHMMSS.log</b></em>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="EnableDetailedHTTPLogging">Enable Detailed HTTP Logging (Global Settings &gt;&gt; General Settings &gt;&gt; Log &gt;&gt; Log)</h4>
+            <div class="member-link">[<a href="#EnableDetailedHTTPLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when historical data is being downloaded from the Sierra Chart historical data service, detailed logging will be added to the <a href="index84bb.html?page=doc/MessageLog.html">Message Log</a> window indicating relevant detailed messages.</p>
+
+            <p>Normally this option should be set to <b>No</b>. Do not enable it unless you need to see the detailed messages because a lot of messages will be added to the Message Log.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ControlBarDebugLogging">Control Bar Debug Logging (Global Settings &gt;&gt; General Settings &gt;&gt; Log &gt;&gt; Log)</h4>
+            <div class="member-link">[<a href="#ControlBarDebugLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when a <a href="index6736.html?page=doc/ControlBar.php">Control Bar Button</a> is selected, detailed logging will be added to the <a href="index84bb.html?page=doc/MessageLog.html">Message Log</a> window indicating relevant detailed messages.</p>
+
+            <p>Normally this option should be set to <b>No</b>. Do not enable it unless you need to see the detailed messages because a lot of messages will be added to the Message Log.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Tab_Paths">Paths (Global Settings &gt;&gt; General Settings)</h2>
+    <div class="member-link">[<a href="#Tab_Paths">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingspaths.png" rel="lightbox"><img src="../images/generalsettingspaths.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+    <section class="h3">
+        <h3 id="FilesAndFolderPathsSection">Files and Folder Paths (Global Settings &gt;&gt; General Settings &gt;&gt; Paths)</h3>
+        <div class="member-link">[<a href="#FilesAndFolderPathsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to file and folder names and locations</p>
+
+        <section class="h4">
+            <h4 id="DataFilesFolder">Data Files Folder (Global Settings &gt;&gt; General Settings &gt;&gt; Paths &gt;&gt; Files and Folder Paths)</h4>
+            <div class="member-link">[<a href="#DataFilesFolder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Data Files Folder</b> displays the path to the folder where the Daily and Intraday data files, Market Depth data files, Chartbook, and Study Collection files are stored/located.</p>
+
+            <p>To change this folder, either type in the folder name, or select the <b>browse</b> button and select a folder in the <b>Browse for Folder</b> window and press OK.</p>
+
+            <p>The default folder is the <b>Data</b> folder under the folder where Sierra Chart is installed.</p>
+
+            <p>If you make changes, then you need to use your operating system file manager and move files from the old folder to the new folder or you will not have access to those files.</p>
+
+            <p>If you are connected to the data feed, then Intraday data will still be written to the files in the old folder until the next time you reconnect to the data feed. If you change the data files folder, then you should restart Sierra Chart to ensure data will be written to the new folder.</p>
+
+            <section class="h5">
+                <h5 id="ChangingDataFilesFolder">Changing the Data Files Folder</h5>
+                <div class="member-link">[<a href="#ChangingDataFilesFolder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+                <ol>
+                    <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+
+                    <li>Select <b class="menu_item">Global Settings &gt;&gt; General Settings</b>.</li>
+
+                    <li>Uncheck the <b>Always Use 'Data' Folder within Main Folder</b> option.</li>
+
+                    <li>Press the <b>browse</b> button in the <b>Data Files Folder</b> field. Change the folder to what you require. The Browse for Folder window gives you the ability to also create a new folder to select. This folder can be located on any storage device, but it should be a  storage device which has fast access.</li>
+
+                    <li>Press <b>OK</b>.</li>
+
+                    <li>Press <b>OK</b> to close the <b>General Settings</b> window.</li>
+
+                    <li>Select <b class="menu_item">File &gt;&gt; Exit</b> to exit from Sierra Chart.</li>
+
+                    <li>Move the files in the old Data Files Folder to the new Data Files Folder through your operating system file manager.</li>
+
+                    <li>Start Sierra Chart.</li>
+                </ol>
+            </section>
+        </section>
+
+        <section class="h4">
+            <h3 id="AlwaysUseDataFolder">Always Use 'Data' Folder within Main Folder (Global Settings &gt;&gt; General Settings &gt;&gt; Paths &gt;&gt; Files and Folder Paths)</h3>
+            <div class="member-link">[<a href="#AlwaysUseDataFolder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When the <b>Always Use 'Data' Folder within Main Folder</b> option is set to <b>Yes</b>, then the Data Files Folder will always be set to the <b>Data</b> folder that is located within the folder that Sierra Chart is installed to.</p>
+
+            <p>When this option is set to <b>Yes</b> and Sierra Chart is relocated to another folder or drive, the path to the <b>Data Files Folder</b> will be changed to be the Data folder within the main folder where Sierra Chart is currently located.</p>
+
+            <p>It is recommended to keep this setting enabled unless you are using a Data folder that is not within the Sierra Chart installation folder such as if the folder is on another storage drive on your system.</p>
+           
+            <p>In the case of a sub instance of Sierra Chart started with <b class="menu_item">File &gt;&gt; New Instance</b>, <b>Always Use 'Data' Folder within Main Folder </b> is always enabled and cannot be disabled. This is to ensure, there is not an improper setting of the <b>Data Files Folder</b> in that case. If you want to relocate the Data Files Folder in the case of a sub-instance to another storage drive on your system, it is then necessary to relocate the main Sierra Chart instance to that same storage drive itself and then all of the sub instances will be on that drive as well as the Data folders. It is recommended to use a large capacity solid-state drive. For information about relocating/moving Sierra Chart, refer to <a href="index0d07.html?page=doc/helpdetails15.html">help topic 15</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ChartImageFolder">Chart Image Folder (Global Settings &gt;&gt; General Settings &gt;&gt; Paths &gt;&gt; Files and Folder Paths)</h4>
+            <div class="member-link">[<a href="#ChartImageFolder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Chart Image Folder</b> displays the path to the folder where the last Image uploaded using <a href="indexf34e.html?page=doc/Image_to_Server.html">Sierra Chart Image Upload Service</a> and a log of the images uploaded is saved.</p>
+
+            <p>To change this folder, enter a new path or press the <b>Browse</b>button and select a folder in the <b>Browse for Folder</b> window then press OK.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TextEditorPathAndFilename">Text Editor Path and Filename (Global Settings &gt;&gt; General Settings &gt;&gt; Paths &gt;&gt; Files and Folder Paths)</h4>
+            <div class="member-link">[<a href="#TextEditorPathAndFilename">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This field displays the text editor to use when the <b>Edit &gt;&gt; Edit Data - Historical Chart</b> command is selected or after data is exported and the editor is automatically opened.</p>
+
+            <p>To change the editor, press the <b>Browse</b> button, then select an editor to use. The default is Notepad++ that is included with Sierra Chart</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2"id="AlertSoundSettings">
+    <h2 id="Tab_Alerts">Alerts (Global Settings &gt;&gt; General Settings)</h2>
+    <div class="#member-link">[<a href="#Tab_Alerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/generalsettingsalerts.png" rel="lightbox"><img src="../images/generalsettingsalerts.png" alt="Alerts" class="screenshot" loading="lazy"></a></div>
+
+    <section class="h3">
+        <h3 id="AlertSettingsSection">Alert Settings (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#AlertSettingsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings for general alert items.</p>
+
+        <p>You can set a sound to play when a <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Simple Alert</a> condition or a <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet System or Alert</a> study condition becomes true.</p>
+
+        <p>You can set a sound to play when trade orders are <a href="index4451.html?page=doc/GlobalTradeSettings.html#GeneralTradeSettings">Filled or Canceled</a>.</p> 
+
+        <p>Alert sounds will also be played when <b>Advanced Custom Studies</b> generate sound alerts.</p>
+
+        <p>Sierra Chart supports 150 Alert Sound configurations. An e-mail message can also be sent when an Alert sound is played.</p>
+
+        <p>When an Alert Number is triggered, a message will also be added to the <a href="index2ac2.html?page=doc/AlertsManager.html">Alerts Log</a> with complete details about the alert.</p>
+
+        <p>These sounds are from standard <a href="https://en.wikipedia.org/wiki/WAV" target="_blank" rel="noopener noreferrer">wav</a> file that can be located anywhere on your computer.</p>
+
+        <section class="h4">
+            <h4 id="Alert">Alert (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Alert Settings)</h4>
+            <div class="member-link">[<a href="#Alert">Link</a>] - [ <a href="#top">Top</a>]</div>
+
+            <p>Select the specific alert number from the list for which the rest of the settings on this tab will apply.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="NumberOfTimesToPlayThisAlert">Number of Times to Play This Alert (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Alert Settings)</h4>
+            <div class="member-link">[<a href="#NumberOfTimesToPlayThisAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting specifies the number of times to play the sound file associated with the selected <b>Alert  Number</b>. This can be set to 0 to not play the sound file if you just want a text message only.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="RunProgramWhenThisAlertTriggered">Run Program When This Alert Triggered (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Alert Settings)</h4>
+            <div class="member-link">[<a href="#RunProgramWhenThisAlertTriggered">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Enter the complete path and filename to a program to run when the alert is triggered. This program will be run every time the alert is triggered.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SendEMailWhenThisAlertIsTriggered">Send E-Mail When This Alert is Triggered (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Alert Settings)</h4>
+            <div class="member-link">[<a href="#SendEMailWhenThisAlertIsTriggered">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b> then the e-mail or twitter address entered in the <b>E-Mail Address or Twitter Username</b> field will receive a notification each time the alert is triggered.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SendSMSWhenThisAlertIsTriggered">Send SMS When This Alert is Triggered (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Alert Settings)</h4>
+            <div class="member-link">[<a href="#SendSMSWhenThisAlertIsTriggered">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b> then an SMS message will be sent to the number entered in the <b>SMS Number</b> field.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IncludeAlertCommentInAlertEmail">Include Alert Comment in Alert Email/Pop-up  (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Alert Settings)</h4>
+            <div class="member-link">[<a href="#IncludeAlertCommentInAlertEmail">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option only applies to <a href="index2ac2.html?page=doc/AlertsManager.html">Symbol Alerts and Time Alerts</a> which allow a user defined comment to be configured for each of these types of alerts.</p>
+
+            <p>This option controls whether the user specified comment is included in generated alert email messages and also the alert pop-up window (not the <b class="menu_item">Alerts Manager &gt;&gt; Alerts Log</b>).</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SoundFileSection">Sound File (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#SoundFileSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to the sound for alerts.</p>
+        
+        <section class="h4">
+            <h4 id="AlertSoundFileName">Alert Sound File Name (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Sound File)</h4>
+            <div class="member-link">[<a href="#AlertSoundFileName">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This shows the currently active sound file for this alert. You can select the entry field in order to select a different file.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="TestSound">Test Sound (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Sound File)</h4>
+            <div class="member-link">[<a href="#TestSound">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Select the <b>[Test Sound]</b> button to play the sound defined by the <b>Alert Sound File Name</b> setting.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="UserDefinedNameSection">User Defined Name (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#UserDefinedNameSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to the User Defined Name for Alerts.</p>
+    
+        <section class="h4">
+            <h4 id="UserDefinedName">User Defined Name (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; User Defined Name)</h4>
+            <div class="member-link">[<a href="#UserDefinedName">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>This field allows for a specific name to be given to an alert. When a <b>User Defined Name</b> is entered, then instead of the <b>Alert Number</b> the <b>User Defined Name</b> will be displayed. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IncludeUserDefinedNameInAlertEmailPopup">Include User Defined Name in Alert Email/Pop-up (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; User Defined Name)</h4>
+            <div class="member-link">[<a href="#IncludeUserDefinedNameInAlertEmailPopup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the <b>User Defined Name</b> for the alert is included in generated alert email messages and in the alert pop-up window.</p>
+
+            <p>When the User Defined Name is included in the e-mail and pop-up window, the format is: <b><em> | Alert: [User Defined Name]</em></b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseUserDefinedNameOnlyInAlertMessage">Use User Defined Name Only in Alert Message (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; User Defined Name)</h4>
+            <div class="member-link">[<a href="#UseUserDefinedNameOnlyInAlertMessage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the <a href="#UserDefinedName">User Defined Name</a> for the Alert will be used for the alert message text and no other text will be included.</p>
+
+            <p>This allows for customization of the alert by only including the <b>User Defined Name</b>.</p>
+        </section> 
+    </section>
+
+    <section class="h3">
+        <h3 id="NoficationSection">Notification (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#NoficationSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to the notifications for alerts.</p>
+
+        <section class="h4">
+            <h4 id="EmailAddressOrTwitterUsername">E-Mail Address or Twitter Username (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Notification)</h4>
+            <div class="member-link">[<a href="#EmailAddressOrTwitterUsername">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This field allows for the entry of an e-mail address or a twitter username. When an appropriate entry is made in this field and the option for <b>Send E-Mail When This Alert is Triggered</b> is set to <b>Yes</b>, then the alert information will be sent to the e-mail or twitter address entered.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SMSNumber">SMS Number (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Notification)</h4>
+            <div class="member-link">[<a href="#SMSNumber">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This field allows for the entry of an SMS Number. When an appropriate entry is made in this field and the option for <b>Send SMS When This Alert is Triggered</b> is set to <b>Yes</b> and the account is setup to send SMS messages, then an SMS message will be sent to the number in this setting.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="AdditionalSettingsSection">Additional Settings (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#AdditionalSettingsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings for additional settings for alerts.</p>
+
+        <section class="h4">
+            <h4 id="ShowAlertsLogOnStudyAlert">Show Alerts Log On Study Alert (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Additional Settings)</h4>
+            <div class="member-link">[<a href="#ShowAlertsLogOnStudyAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When a study <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Alert Condition Formula</a> becomes TRUE, it will add an alert message to the Alerts Log.</p>
+
+            <p>When this option is set to <b>Yes</b>, the Alerts Log window will open when this message is added. Otherwise, it will not automatically open. To manually open the Alerts Log, select <b class="menu_item">Window &gt;&gt; Alerts Manager</b> on the menu.</p>
+
+            <p>This setting also applies to <a href="indexc3ee.html?page=doc/TimeandSalesWindow.html" target="_blank" rel="noopener noreferrer">Time and Sales Window</a> alerts and <a href="indexb844.html?page=doc/Tools.html" target="_blank" rel="noopener noreferrer">Chart Drawing Alerts</a>.</p>
+
+            <p>If the Alerts Log opens even when this option is disabled, then this would indicate the message is being added by an <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php" target="_blank" rel="noopener noreferrer">Advanced Custom Study</a>, which is causing the Alerts Log to always open. The custom study itself will need to be modified to prevent this.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AddAlertToCompactAlertPopupWindow">Add Alert to Compact Alert Popup Window (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Additional Settings)</h4>
+            <div class="member-link">[<a href="#AddAlertToCompactAlertPopupWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, the alert message is also added to the Compact Alert Popup Window. The Compact Alert Popup Window will automatically display when a new message is added to it.</p>
+            
+            <p>When the Compact Alert Popup Window is closed, the lines of messages in the log are automatically cleared.</p>
+            
+             <p>There is only one Compact Alert Popup Window per Sierra Chart instance. New alerts are just added to the existing list if it is already open.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="WaitForPriorAlertSoundToFinishBeforePlayingNextQueuedSound">Wait for Prior Alert Sound to Finish Before Playing Next Queued Sound (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Additional Settings)</h4>
+            <div class="member-link">[<a href="#WaitForPriorAlertSoundToFinishBeforePlayingNextQueuedSound">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when multiple alert sounds are activated, then the sounds are queued and played in order in which the alerts occurred waiting for each one to finish before playing the next. Otherwise, all the alert sounds are played at the time of the alert and will play over each other if the one has not ended before the next one needs to start.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="RemoteAlertsSection">Remote Alerts (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#RemoteAlertsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to remote alerts.</p>
+
+        <section class="h4">
+            <h4 id="EnableRemoteAlerts">Enable Remote Alerts (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Remote Alerts)</h4>
+            <div class="member-link">[<a href="#EnableRemoteAlerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When <b>Enable Remote Alerts</b> is set to <b>Yes</b>, any Sierra Chart instances that are connected via the DTC protocol to the server instance of Sierra Chart on which this setting is enabled will receive any alerts that originate on the Sierra Chart instance on which this setting is enabled.</p>
+
+            <p>It is important to understand that enabling this setting makes this Sierra Chart instance a <b>Server</b> with regards to the Alerts that are generated on this instance. These Alerts are then sent to the connected <b>Client</b> instances of Sierra Chart that are connected via the DTC protocol.</p>
+
+            <p>The particular alert sound, email notification and other related settings that occurs on the remote (client) Sierra Chart instances is determined by the setting <b>Alert Number for Remote Alert</b> as set on the <em>client instances</em>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AlertNumberForRemoteAlert">Alert Number for Remote Alert (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Remote Alerts)</h4>
+            <div class="member-link">[<a href="#AlertNumberForRemoteAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The selected alert sound will play when a remote alert is received from another Sierra Chart instance that has <b>Enable Remote Alerts</b> enabled.</p>
+
+            <p>If the option <b>No Alert Sound</b> is selected, then no alert sound will play when a remote alert is received, but the alert will still be logged in the <a href = "index2ac2.html?page=doc/AlertsManager.html">Alerts Manager</a>.</p>
+
+            <p>It is important to understand that this setting only applies to the <b>Client</b> instances of Sierra Chart with regards to the Alerts that are generated on a <b>Server</b> instance of Sierra Chart which are sent to Client instances when that server has the <a href="#EnableRemoteAlerts">Enable Remote Alerts</a> setting enabled.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ServerAlertsSection">Server Alerts (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#ServerAlertsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains global settings related to alerts for server connections.</p>
+
+        <section class="h4">
+            <h4 id="ServerConnectedAlert">Server Connected Alert (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Server Alerts)</h4>
+            <div class="member-link">[<a href="#ServerConnectedAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This lets you set an alert to use when connected to the Data/Trading server. This alert will play a sound, add a message to the <a href="index2ac2.html?page=doc/AlertsManager.html#AlertsLog">Alerts Log</a> and can also send an E-mail message.</p>
+
+            <p>Select one of the <b>Alert Numbers</b> to trigger an alert when connected to the Data/Trading Service. Select <b>No Alert</b> to disable this feature.</p>
+
+            <p>To configure the actual sound and other Alert settings for the selected <b>Alert #</b>, refer to <a href="#Tab_Alerts">Alert Sound Settings</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ServerConnectionLostAlert">Server Connection Lost Alert (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Server Alerts)</h4>
+            <div class="member-link">[<a href="#ServerConnectionLostAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This lets you set an alert to use when the connection is lost to the Data/Trading server. This alert will play a sound, add a message to the <a href="index2ac2.html?page=doc/AlertsManager.html#AlertsLog">Alerts Log</a> and can also send an E-mail message.</p>
+
+            <p>Select one of the <b>Alert Numbers</b> to trigger an alert when disconnected from the Data/Trading Service. Select <b>No Alert</b> to disable this feature.</p>
+
+            <p>To configure the actual sound and other Alert settings for the selected <b>Alert #</b>, refer to <a href="#Tab_Alerts">Alert Sound Settings</a>.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TextToSpeechWaveFileCreationSection">Text to Speech Wave File Creation (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts)</h3>
+        <div class="member-link">[<a href="#TextToSpeechWaveFileCreationSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains the global setting to create a speech wave file from entered text.</p>
+
+        <section class="h4">
+            <h4 id="TextToSpeechWaveFileCreation">Text to Speech Wave File Creation (Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Text to Speech Wave File Creation)</h4>
+            <div class="member-link">[<a href="#TextToSpeechWaveFileCreation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Enter a line of text in this field and select the <b>Create</b> button in the field in order to create a Microsoft .wav file of the entered text as spoken words. This file can then be used as an Alert sound.</p>
+
+            <p>In order for the conversion to take place, the Sierra Chart account must be setup to allow for the conversion and there is an additional fee for each file that is created.</p>
+
+            <p>The <a href="texttospeechalerts.html">Text-To-Speech Alerts</a> section gives full instructions on how to use this feature.</p>
+        </section>
+    </section>
+</section>
+        
+<section class="h2">
+    <h2 id="AdditionalAlertInformation">Additional Alert Information</h2>
+    <div class="member-link">[<a href="#AdditionalAlertInformation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="ConfiguringAlertNumberInstructions">Configuring Alert Number Instructions</h3>
+        <div class="member-link">[<a href="#ConfiguringAlertNumberInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To set up the specific alert sound file to be played and also set up an  e-mail alert for a particular Alert Number follow these steps:</p>
+
+        <ol>
+            <li>Select<b class="menu_item">Global Settings &gt;&gt; General Settings</b>.</li>
+            <li>Select the <b>Alerts</b> tab.</li>
+            <li>Select an Alert Number in the <b>Alert</b> drop down list. All of the settings in the <b>Notifications</b> section and below, apply to the <em>currently selected Alert Number</em>.
+
+                <div style="text-align: center;"><a href="../images/alertnumbersettings.png" rel="lightbox"><img src="../images/alertnumbersettings.png" alt="Alert Number" class="screenshot" loading="lazy"></a></div>
+            </li>
+            <li>The settings for each Alert Number set in the <b>General Settings &gt;&gt; Alerts</b> tab, correspond to the <b>Alert Sound &gt;&gt; Alert Number</b> set on a study or on a chart, and the Alert Number in <b class="menu_item">Global Settings &gt;&gt; General Trade Settings</b> for order related alerts.</li>
+            <li>Press the <b>Select</b> button in the <b>Alert Sound File Name</b> field to choose the wav sound file to play. The sound file can be located in any folder.</li>
+            <li><b>Number of Times to play this alert</b>: This setting specifies the number of times to play the sound file associated with the selected <b>Alert Number</b>. This can be set to 0 to not play the sound file if you just want a text message only.</li>
+            <li>You have the ability to rename the selected <b>Alert Number</b> by entering a more descriptive name in the <b>User Defined Name</b> field. Wherever you normally would see the particular <b>Alert  Number</b> listed in Sierra Chart, instead you will see your user-defined name.</li>
+            <li>Enable the <b>Send E-Mail When This Alert Is Triggered</b> option if you want an e-mail message or Twitter message sent when the selected Alert Number is triggered. Enter your e-mail address or Twitter username in the <b>E-Mail Address or Twitter Username</b> field. For further details about this, refer to <a href="#EmailNotifications">E-mail Notifications for Alerts</a>.</li>
+            <li>Enable the <b>Send SMS When This Alert Is Triggered</b> option if you want to send an SMS message to a mobile device when the selected Alert Number is triggered. For complete details, refer to <a href="#SMSNotifications">SMS Notifications for Alerts</a>.</li>
+            <li>Repeat steps 3 through 8 above to set the settings for each <b>Alert #</b> you are using.</li>
+            <li>Press <b>OK</b>.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="AlertsDuringBackTesting">Alerts During Back Testing</h3>
+        <div class="member-link">[<a href="#AlertsDuringBackTesting">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>During back testing, Alert sounds and Alert email messages are suppressed. Only Alert Messages added to the Alerts Log are allowed. At the end of the Alert Message in the Alerts Log you will see the following text: "No alert sound/email".</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="PlayingAlertSoundMultipleTimes">Playing Alert Sound Multiple Times</h3>
+        <div class="member-link">[<a href="#PlayingAlertSoundMultipleTimes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In the <b>Number Of Times This Alert Sounds</b> box for the selected <b>Alert</b>, enter the number of times you want to have the <b>wav</b> file played when the Alert Number is triggered.</p>
+
+        <p>In the case of a <a href="index4451.html?page=doc/GlobalTradeSettings.html#GeneralTradeSettings_PlayAlertWhenOrderFilled">trade order alert</a>, when using sub-instances of Sierra Chart, if the same trade order alert is configured in the sub instance, then it will be played there as well since order related messages are sent through to sub-instances. This is something to keep in mind when you hear an alert play more than once even though <b>Number Of Times This Alert Sounds</b> is set to 1. You may want to set the sub-instances to not use order alerts as a solution.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TextToSpeechAlerts">Text-To-Speech Alerts</h3>
+        <div class="member-link">[<a href="#TextToSpeechAlerts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is supported to enter a text phrase and use that as an alert sound. The text is converted to speech. Follow the procedure below to do this.</p>
+
+        <p> This feature is only available to Sierra Chart users with their own account and there is an extra cost associated with this feature.</p>
+        <ol>
+            <li>Select <b class="menu_item">Help &gt;&gt; Account Control Panel</b> from the menu in Sierra Chart.</li>
+            <li>Go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=TextToSpeech" target="_blank" rel="noopener noreferrer">Text to Speech Generator</a> page.</li>
+            <li>Press the <b>Enable/Disable Text To Speech Alert Generation &gt;&gt; Enable</b> button if text-to-speech generation is not currently enabled for your account. Take note of the current price for each text-to-speech alert phrase generated.</li>
+            <li> On the Text to Speech Generator webpage you have the ability to change the voice for the text-to-speech generation. You will also see all of the <b>Generated Alerts</b> listed on the webpage for your account. You can Delete or Download any of them.</li>
+            <li>Go back to Sierra Chart.</li>
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; General Settings</b>.</li>
+            <li>Select the <b>Alerts</b> tab</li>
+            <li>Enter a phrase in the <b>Text-To-Speech Wav File Creation</b> field.</li>
+            <li>Press the <b>Create</b> button to generate the speech sound file. This will take a moment and the result is logged in the <b class="menu_item">Window &gt;&gt; Message Log</b>.</li>
+            <li>Select the <b>Alert</b> from the list box at the top you want to assign generated speech sound file to.</li>
+            <li>Press the <b>Select</b> button in the <b>Alert Sound File Name</b> field and select the sound file that has the filename of the phrase you generated a speech sound file for.</li>
+            <li> Whenever the particular Alert Number is triggered, the phrase you entered will be spoken.</li>
+        </ol>
+
+        <div style="text-align: center;"><a href="../images/text-to-speechalerts.png" rel="lightbox"><img src="../images/text-to-speechalerts.png" alt="" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="EmailNotifications">E-mail/Twitter Notifications for Alerts</h3>
+        <div class="member-link">[<a href="#EmailNotifications">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To get an e-mail notification or Twitter message when an alert is triggered, then enable the <b>Send E-mail When This Alert is Triggered</b> option for the selected <b>Alert #</b> on the <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts</b> tab.</p>
+
+        <p>Optionally enter your e-mail address in the <b>E-Mail Address</b> box. If you leave this box blank, the e-mail address for your Sierra Chart account will be used instead. If you wish to receive e-mail notifications for alerts to multiple e-mail addresses, then in the E-Mail Address box enter the e-mail addresses separated by either a "," or a ";".</p>
+
+        <p>If you enter a Twitter Username, then you also need to perform additional setup for your Twitter account. Go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=Twitter" target="_blank" rel="noopener noreferrer">Twitter Control Panel</a> to perform this setup.</p>
+
+        <p>The <b>Twitter Control Panel</b> also allows you to add additional Twitter accounts, modify how the Tweets are handled by your account and which account is the primary account.</p>
+
+        <p>In order to prevent remote mail servers from blacklisting the Sierra Chart web server which is sending the emails, there are limits placed on the number of emails sent over a period of time. The current rules are: 20 emails per minute. 200 emails per hour. 500 emails per day. These restrictions do not apply to Twitter usernames. Although Twitter does have their own restrictions.</p>
+
+        <section class="h4">
+            <h4 id="WhatToDoIfYouDoNotGetAnEMailAlertMessage">What to Do if You Do Not Get an E-Mail Alert Message</h4>
+            <div class="member-link">[<a href="#WhatToDoIfYouDoNotGetAnEMailAlertMessage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The very first step is to make certain the Alert Condition formula or other event that causes an alert sound or message to be generated, is actually working. In all cases you will get a message in the <b class="menu_item">Window &gt;&gt; Alerts Manager &gt;&gt; Alerts Log</b>.</p> 
+
+            <p>Therefore, the first step is to look in the <b>Alerts Log</b> and see if the Alert Condition formula or the particular event, is adding a message there. If not, then you need to check the Alert Condition formula or other settings that cause an alert to see if they are all correct. If you are seeing the message in the Alerts Log, then try a different e-mail address.</p>
+
+            <p>You will also see a line in the <b>Alerts Log</b> containing the text <em><b>Alert message successfully sent | Web Service response</b></em> indicating the email has been sent. If not, the email message was never sent.</p>
+
+            <p>If there was an error sending an e-mail, there may also be an error given for this in the <b>Alerts Log</b>. This error message could indicate that the email sending limit per minute, hour, day has been met.</p>
+
+            <p>It is possible that your e-mail provider is filtering the message. Another possibility is that your E-mail address has been blocked from receiving Alert Messages from the Sierra Chart server. In the case of the E-mail address being blocked, <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets">contact Sierra Chart support</a> about this.</p>
+            
+            <p>Email providers can also <em>delay</em> messages that are received to your email address and you may not see them in your email box until a significantly later time. This is something to be aware of.</p>
+
+            <p>If Sierra Chart is not running it is not possible for E-mail alert messages to be sent since Alert Condition formulas are not being evaluated or other events which cause alerts are not being triggered. An E-mail alert message cannot be sent if you do not have an Internet connection. Another thing to be aware of is that some E-mail providers delay E-mail delivery. Therefore, it is possible you might get delayed E-mail alert messages even when Sierra Chart is running.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SMSNotifications">SMS Notifications for Alerts</h3>
+        <div class="member-link">[<a href="#SMSNotifications">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To send an SMS message when a particular Alert Number is triggered, enable the option <b>Send SMS When this Alert is Triggered</b> for the selected Alert Number.</p>
+
+        <p>In the <b>SMS Number</b> box, enter the mobile phone number using this format: <b>+ [country code] [prefix] [local phone number]</b>.</p>
+
+        <p>You also need to activate SMS Messages on your Sierra Chart account and there is an associated cost per message for this. Go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=SMS" Target="_blank" rel="noopener noreferrer">SMS Control Panel</a> to activate the functionality and to accept the cost per message.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="FailedSMSDelivery">Failed SMS Delivery</h3>
+        <div class="member-link">[<a href="#FailedSMSDelivery">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you failed to receive an SMS message to your mobile device, then verify the number is entered correctly. To do this, select <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts</b>. Check the number in the <b>SMS Number</b> box.</p> 
+        
+        <p>And check the other relevant settings as explained in the <a href="#SMSNotifications">SMS Notifications for Alerts</a> section to make sure that all the relevant settings are enabled to ensure you will receive the SMS message.</p>
+        
+        <p>Try triggering alert which will send an SMS message. If you continue to not receive an SMS message, then as a matter of policy Sierra Chart support does not conduct any research into this issue because this is generally beyond our control. Only if there is a widespread problem, would we look into this.</p>
+       
+       <p> If you contact Sierra Chart support about an SMS delivery issue we will respond with "SMS delivery issues are out of our control and we are unable to help with this."<p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SamplingSoundFiles">Sampling/Testing Sound Files</h3>
+        <div class="member-link">[<a href="#SamplingSoundFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you want to hear what a sound file contains, then after configuring the Alert Sound file for a particular Alert Number, refer to <a href="configuringalertnumberinstructions.html">Configuring Alert Number Instructions</a>, press the  <b>Apply</b> button, then select that particular Alert Number and press the <b>Test Sound</b> button on the <b>Alerts</b> tab of the <b class="menu_item">Global Settings &gt;&gt; General Settings</b> window.</p>
+
+        <p>Make sure the audio on your computer system is not muted and the audio volume on your computer system is set high enough.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DefaultSound">Default Sound</h3>
+        <div class="member-link">[<a href="#DefaultSound">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If a sound file for an Alert Number is not specified, but the Alert Number is used wherever Alert Numbers are supported, the default operating system beep will be played.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TimeDelayBetweenSounds">Time Delay Between Sounds</h3>
+        <div class="member-link">[<a href="#TimeDelayBetweenSounds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When there are multiple alert sounds to be played because of various events triggering the alert sounds, the alert sounds by default will be played one after another. When one sound stops, the next one will be quickly started in less than a second. If you notice more of a delay than this between sounds, then most likely this is the result of a sound file being longer in time than you expect. You need to shorten your sound files as short as possible. You may be surprised to find out the actual time of them is longer than you realize.</p>
+
+        <p>Another solution to this is to set the option for <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts &gt;&gt; Wait for Prior Alert Sound to Finish before Playing Next Queued Sound</b> to <b>No</b>. When this option is set to <b>No</b>, then as soon as an alert event occurs and there is a sound file to be played for the particular Alert Number set for the event, it will be played immediately.</p>
+
+        <p>However, whether it is immediately played or not, is dependent upon the operating system, since the operating system plays the sound file through the supported audio device.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ClearingSoundQueue">Clearing the Alert Sound Queue</h3>
+        <div class="member-link">[<a href="#ClearingSoundQueue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If there are many sounds in the queue that are waiting to be played, you can clear the current queue by selecting <b class="menu_item">Global Settings &gt;&gt; Clear Alert Sound Queue</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TroubleshootingAlertSounds">Troubleshooting for Alert Sounds That Do Not Play</h3>
+        <div class="member-link">[<a href="#TroubleshootingAlertSounds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the below steps to troubleshoot a condition where an Alert Sound does not play when you expect that it should.</p>
+        <ol>
+            <li>Select <b class="menu_item">Window &gt;&gt; Alert Manager &gt;&gt; Alerts Log</b>.</li>
+            <li>Go to the bottom of the Alerts Log, assuming <b class="menu_item">Sort &gt;&gt; Descending</b> is not selected.</li>
+            <li> Check to see if there is an Alert Message added for the particular alert event. Example: <b>Alert - Chart: EURUSD  1 Min   #2 | Formula: =C &gt;1.0 is TRUE. | Last Price: 1.06814 | Bar Start Time: 2015-04-21  02:51:00 | Alert: AlertSound (1)</b>.</li>
+            <li>The particular sound file which plays, is after the <b>Alert:</b> text. Directly after that in parentheses, the Alert Number associated with that sound file is displayed. If there is a user-defined name for the Alert Number which has been set, then the user-defined name will be displayed after <b>Alert:</b> instead of the sound file. Refer to the image below.
+                <div style="text-align: center;"><a href="../images/alertsoundfilenameinalertslog.png" rel="lightbox"><img src="../images/alertsoundfilenameinalertslog.png" alt="" class="screenshot" loading="lazy"></a></div>
+            </li>
+            <li>If you do not see a message for the alert in the Alerts Log, then the problem is that the particular alert event which is triggering the Alert Sound/Message is not occurring to begin with.  
+                <br> <br>
+                If you are using a <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Simple Alert Condition Formula</a> on a study, then you need to check on the Alert Condition Formula to make sure it is correct and does what you require. On the <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php#EnterAlertOnStudy">Alerts</a> tab of the <b>Study Settings</b> window for the study, make sure the <b>Enabled</b> option is enabled in order to be sure an Alert Message will be added to the Alerts Log.
+                <br> <br>
+                If you have enabled an Alert Condition on a Chart Drawing and it is not triggering when expected, then check the <a href="indexb844.html?page=doc/Tools.html#Alerts" >Chart Drawing Alert Settings</a>.
+                <br><br>
+                If you are not getting the Alert Message in the <b>Alerts Log</b>, stop here because the particular alert event is not occurring to begin with.
+            </li>
+            <li>Notice at the end of the alert message, where it has text like <b> Alert: AlertSound (1)</b>. What this means is that the sound file named AlertSound is what has been played. As soon as the Alert message is added to the <b>Alerts Log</b>, the sound file is <em>immediately</em> played at that time. If there is a delay, then this delay is not coming from Sierra Chart.</li>
+            <li>If after <b>Alert:</b> text in the Alert message, it says <b>| Muted</b>, then this means the alert sounds are muted. To unmute them, remove the checkmark from  <b class="menu_item">Global Settings &gt;&gt; Mute All Alert Sounds</b>. In this particular case, stop here.</li>
+            
+            
+            <li>If at the end of the alert message it says <b> | No alert sound/email</b>, then this means for the particular study alert or chart alert, there is no <b>Alert Sound</b> set. 
+            <br> <br>
+            In this case go to the Study Settings window for the study. Refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>. Select the <b>Alerts</b> tab. Set the <b>Alert Sound</b> setting to one of the available <b>Alert Numbers(#)</b>.  <br> <br>
+            In the case of when using the <b>Spreadsheet System/Alert</b> or the <b>Spreadsheet System for Trading</b> studies, the Alert Numbers are set with the <b>Column K-Z Alert</b> Input settings.</li>
+            
+            
+            <li> Select <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt;  Alerts</b>. Make sure the particular Sound File you want played for the particular Alert Number the alert event is using, is set to what you want. If there is no file set, then the default beep sound will be used, assuming the <b>/AlertSounds/AlertSound.wav</b> file exists. For additional information, refer to the <a href="#Tab_Alerts">Alert Sound Settings</a> section.</li>
+            
+            
+            <li>If you continue to not hear the alert sound, then make sure the audio on your computer system is not muted and the audio volume on your computer system is set high enough. Try testing the sound file by following the  <a href="#SamplingSoundFiles">Sampling/Testing Sound Files</a> instructions.</li>
+            
+            
+            <li> Another possible reason for not hearing the sound could be that in the Windows operating system Volume Mixer control panel, sounds for the Sierra Chart application have been muted, or the volume is too low.
+                <br> <br>
+                Therefore, check the Windows Volume Mixer control panel to make sure that the volume is set high enough and sounds for Sierra Chart are not muted. Each instance of Sierra Chart you are running, will have a <em>separate</em> Volume control within this Volume Mixer.
+                
+ 
+           <div style="text-align: center;"><a href="../images/windowsvolumemixer.png" rel="lightbox"><img src="../images/windowsvolumemixer.png" class="screenshot" loading="lazy" alt="" width="410"></a></div>               
+                
+            </li>
+            
+            <li> Sierra Chart uses the Windows operating system PlaySound function to play sound files.  This may help troubleshoot the issue if you have an understanding of that function.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="PlayingAnAlertSoundRepeatedlyUntilManuallyStopped">Playing an Alert Sound Repeatedly Until Manually Stopped</h3>
+        <div class="member-link">[<a href="#PlayingAnAlertSoundRepeatedlyUntilManuallyStopped">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There is a technique which can be followed to play an alert sound so many times until you manually stop it.</p>
+
+        <p>The first step is for a particular Alert Number, set it to play a large number of times. For instructions, refer to <a href="#PlayingAlertSoundMultipleTimes">Playing Alert Sound Multiple Times</a>.</p>
+
+        <p>When that particular Alert Number is triggered, then at the time it begins to play, when you want to stop it you just need to select <b class="menu_item">Global Settings &gt;&gt; Clear Alert Sound Queue</b>. You can also set up a <a href="index6736.html?page=doc/ControlBar.php">Control Bar</a> button for this particular command.</p>
+    </section>
+</section>
+
+<hr><p>*Last modified Wednesday, 21st June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GeneralSettings.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:54:51 GMT -->
+</html>  

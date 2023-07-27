@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SwitchingSymbols.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1681722917') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SwitchingSymbols.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Changing the Symbol of a Chart -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexa1a5.html?page=doc/SwitchingSymbols.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="indexa1a5.html?page=doc/SwitchingSymbols.html">Changing the Symbol of a Chart</a></h4> </div>     <h1 class="PageName">Changing the Symbol of a Chart</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#ChangingChartSymbol">Changing the Symbol of a Chart or Trade  DOM Through Chart Settings</a></li>
+    <li><a href="#QuicklyChangingToExistingSymbol">Quickly Changing the Symbol of a Chart to a Symbol for which a Data File Exists</a></li>
+    <li><a href="#QuicklyChangingTheSymbolToASymbolWithNoDataFile">Quickly Changing the Symbol of a Chart to a New Symbol  for which a Data File Does Not Exist</a></li>
+    <li><a href="#ClearingCharacterInputBuffer">Clearing Character Input Buffer</a> </li>
+    <li><a href="#PreventingAccidentalSymbolChanges">Preventing  Accidental Symbol Changes to Chart</a></li>
+    <li><a href="#AssociatedSymbolList">Using the Associated Watch List</a>
+        <ul>
+            <li><a href="#CombiningAssociatedWatchListWithChartLinking">Combining the Associated Watch List with Chart Linking</a></li>
+            <li><a href="#AssociatedSymbolListMovingThroughSymbols">Moving through the Symbols in the Associated Watch List</a></li>
+            <li><a href="#AssociatedSymbolListScanning">Scanning</a></li>
+            <li><a href="#WatchListMode">Watch List Mode</a></li>
+            <li><a href="#AutomaticallyRollingOverFuturesSymbolsInWatchlist">Automatically Rolling over Futures Symbols in Watch List</a></li>
+            <li><a href="#UsingCompactAssociatedWatchListOnControlBar">Using Compact Associated Watch List on Control Bar for Chart or Trade DOM</a></li>
+            <li><a href="#ExportingListOfSymbols">Exporting a List of Symbols</a></li>        
+            <li><a href="#ImportingListOfSymbols">Importing a List of Symbols</a></li>
+            <li><a href="#DownloadingHistoricalDailyDataForSymbolsList">Downloading Historical Daily Data for Symbols List</a></li>
+            <li><a href="#DownloadingHistoricalIntradayDataForSymbolsList">Downloading Historical Intraday Data for Symbols List</a></li>
+            <li><a href="#AutomaticallyInsertingSymbolsForExchangeOrIndex">Automatically Inserting Symbols for Exchange or Index</a></li>
+            <li><a href="#ChangingMultipleChartsSymbols">Changing Multiple Charts Symbols</a></li>
+        </ul>
+    </li>
+    <li><a href="#ProgrammaticallyChangingSymbolOfChart">Programmatically Changing Symbol of a Chart</a></li>
+    <li><a href="#OtherMethodsToChangeTheSymbolOfAChart">Other methods to Change the Symbol of a Chart</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Within a chart you can change to a different symbol. This feature lets you change to <em>any symbol</em> in the chart and keep all the existing chart settings and studies the same. </p>
+
+    <p>Data for each symbol is stored in its own chart data file. These files are located in the   <b>Data Files Folder</b>.  Select <b class = "menu_item">Global Settings &gt;&gt; General Settings</b> to see the location of the Data Files Folder.</p>
+
+    <p><b>Trading  DOM windows</b>: All of the methods described on this page to change the symbol of the chart, also apply to Trade  DOMs as well. </p>
+</section>
+
+<section class="h2">
+    <h2 id="ChangingChartSymbol">Changing the Symbol of a Chart or Trade  DOM Through Chart Settings</h2>
+    <div class="member-link">[<a href="#ChangingChartSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/chartsettingssymbol.png" rel="lightbox"><img src="../images/chartsettingssymbol.png" alt="" class="WideFloatRight"></a>
+
+    <p>The method described in this section is the simplest method of changing the Symbol of a chart or Trade  DOM.  As with any of the methods described on this page, the existing settings and studies in the chart will be preserved  after changing the symbol. Although the <b>Tick Size, Price Display Format  </b> and  <b>Session  Times </b> can change  to correspond to the new symbol.</p>
+
+    <p>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu. In the <b>Symbol</b> box type the symbol you want to change the chart to. </p>
+
+    <p>If you are not sure what the  symbol is or to look up the symbol, press the   <a href="index8793.html?page=doc/FileMenu.html#FileFindSymbol" target="_blank" rel="noopener noreferrer">Find</a> button to choose one from a list.  In the case of futures contracts, it is always recommended to use the <b>Find</b> button to select the symbol. </p>
+
+    <p>For some services, you may need to use the <b>Get Symbols</b> button  to actually request and list the symbols. In this case, refer to <a href="index8793.html?page=doc/FileMenu.html#FileFindSymbol_GetSymbols" target="_blank" rel="noopener noreferrer">Getting Symbols</a> for instructions.  </p>   
+
+
+     <p>When done, press the <b> OK </b> button. </p>
+
+    <p>A new chart data file will be created for the entered symbol if you have not previously requested the symbol before.</p>
+    
+    <p> If you find that the symbol changes to the following contract month as compared to the contract month you selected or entered, then disable the  <a href = "index4cf4.html?page=doc/ChartSettings.html#AutomaticallyRolloverFuturesSymbol">Automatically Rollover Futures Symbol</a> option. </p>
+
+    <p><b>Futures:</b> For instructions to change the symbol of a chart to a new futures contract month and include the data from prior futures contracts, refer to the <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html">Continuous Futures Contract</a> page. </p>
+</section>
+
+<section class="h2">
+    <h2 id="QuicklyChangingToExistingSymbol">Quickly Changing the Symbol of a Chart to a Symbol for which a Data File Exists</h2>
+    <div class="member-link">[<a href="#QuicklyChangingToExistingSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The instructions in this section explain how to change the symbol of a chart  to a symbol which there is already a data file existing for that symbol.
+
+    <p>You will have a data file for a symbol if you previously opened a chart for that symbol.</p>
+
+    <ol>
+        <li> Make a chart window active if it is not already by clicking on its title bar with your Pointer.</li>
+
+        <li> Optional: Press the <b>Escape (Esc) </b> key on your keyboard to clear the character input buffer. The character input buffer could be holding mistakenly entered keystrokes which will affect the symbol entry. You can see what is in the character input buffer by looking at the title bar of the chart. <em>The typed characters are displayed on the title bar</em>.</li>
+
+        <li>For this feature to work, you need to have the option <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Support Symbol Entry from Chart Window</b> enabled. You may want to disable this option to prevent accidentally modifying the symbol of a chart from inadvertent pressing of keys on the keyboard. </li>
+
+        <li>Type a complete symbol or <b>partial </b>symbol into the active chart window and press the <b>Enter</b>  key on the keyboard.  This will load the first symbol that there is a data file for that matches the entered symbol.   The window captures the keystrokes as you type them.  There is no specific place on the chart you need to type them.  The keystrokes will be displayed in the title bar of the window.</li>
+
+        <li> For example, you can type: <b>IBM </b> and press the <b>Enter</b> key on the keyboard to change to the symbol IBM. Or for example, you can type: <b>IB </b> and press the <b>Enter</b> key to change to the symbol IBM assuming you do not have a data file for IB.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2  id="QuicklyChangingTheSymbolToASymbolWithNoDataFile">Quickly Changing the Symbol of a Chart to a New Symbol for which a Data File Does Not Exist</h2>
+    <div class="member-link">[<a href="#QuicklyChangingTheSymbolToASymbolWithNoDataFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To quickly change the symbol of a chart to a new symbol for which a data file does not exist, follow these instructions:
+
+    <ol>
+        <li>Activate the chart by clicking on its title bar or anywhere on the chart. </li>
+
+        <li>Type a <b>slash (/)</b> followed by the symbol, and press the <b>Enter</b> key on your keyboard.  Example: <b>/ESH16</b>.</li>
+
+        <li>The chart window captures the keystrokes as you type them.  There is no specific place on the chart you need to type them.  The keystrokes will be displayed in the title bar of the window.</li>
+
+        <li>For this feature to work, you need to have the option <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Support Symbol Entry from Chart Window</b> enabled. You may want to disable this option to prevent accidentally modifying the symbol of a chart from inadvertent pressing of keys on the keyboard.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ClearingCharacterInputBuffer">Clearing Character Input Buffer</h2>
+    <div class="member-link">[<a href="#ClearingCharacterInputBuffer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following 2 features use the <em>character input buffer</em> for the chart:</p>
+
+    <p><a href="#ChangingChartSymbol">Changing The Symbol of a Chart or Trade  DOM</a></p>
+
+    <p><a href="#QuicklyChangingToExistingSymbol">Quickly Changing the Symbol of a Chart to a Symbol for which a Data File Exists</a></p>
+
+    <p>As you type keys from the keyboard you will see the characters appear on the top of the chart window. Refer to the below image. </p>
+
+    <div style="text-align: center;"><a href="../images/characterinputbuffer.png" rel="lightbox"><img src="../images/characterinputbuffer.png" class="screenshot" loading="lazy" alt="" ></a></div>
+
+    <p>To clear the  character input buffer from keys pressed from the keyboard and are displayed on the title bar of a chart, simply press the <b>Escape (Esc)</b> key on your keyboard. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="PreventingAccidentalSymbolChanges">Preventing  Accidental Symbol Changes to Chart</h2>
+    <div class="member-link">[<a href="#PreventingAccidentalSymbolChanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To prevent accidentally changing the symbol of a chart by inadvertent character entry from your keyboard, disable <b Class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Charts &gt;&gt; Symbol</b> &gt;&gt; <b>Support Symbol Entry from Chart Window</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AssociatedSymbolList">Using the Associated Watch List</h2>
+    <div class="member-link">[<a href="#AssociatedSymbolList">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Associated Watch List will allow you to select or cycle among multiple symbols within a chart or Trade DOM. This allows you to maintain the same Chart Settings and studies for all of the symbols in the Watch List.</p>
+
+    <div style="text-align: center;"><a href="../images/watchlist.png" rel="lightbox"><img src="../images/watchlist.png" class="screenshot" loading="lazy" alt="" ></a></div>
+
+    <P>All of the current settings for the chart window or Trade  DOM will stay the same except for the settings which relate specifically for the symbol.  Before you can use the Associated Watch List, you must add symbols to the Associated Watch List for the chart.  Each chart window or Trade DOM has its own Associated Watch List.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Chart &gt;&gt; Associated Watch List</b> on the menu.</li>
+
+        <li>If the <b>Associated Watch/Symbol  List</b> window does not appear, then select <b class = "menu_item">Chart &gt;&gt; Reset Child Windows</b> and it should appear. If necessary open it again with  <b class="menu_item">Chart &gt;&gt; Associated Watch List</b>. </li>
+
+        <li>Press the <b>Add</b> button.</li>
+
+        <li>Type the symbol in the Symbol text box you wish to add.  Press <b>Add</b> before entering each symbol. Use the <b>Find</b> button to choose among the available symbols for the Data or Trading service you are using.</li>
+
+        <li> Enable the  <b>Watch List Mode</b> option on the Associated Watchlist window to cause the symbol of the chart to immediately change to the selected symbol.  </li>
+        <li>Select <b> File &gt;&gt; Save </b> on the menu to save your Chartbook, so that the  Associated Watch List will be saved.</li>
+        <li>Remember that each Associated Watch List is associated with a particular chart.  If you have closed the Watch List window and you want to open it again, go to the chart and select	<b class="menu_item">Chart &gt;&gt; Associated Watch List</b> on the menu.  You can also add a <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar">Control Bar button</a> for this command.</li>
+    </ol>
+
+    <p>Each chart has its own Associated Watch List. When you open the Associated Watch List you will see the associated chart name on the title bar. </p>
+
+    <p>The Associated Watch List can be opened by using a Control Bar button for quick access.  To do this, select <b class = "menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar 1-8</b>. In the in the  <b>Available Control Bar Commands </b> list, go to the <b>Chart  </b> sub list and Add the <b>Associated Watch List</b> command to the Control Bar.</p>
+
+    <section class="h3">
+        <h3 id="CombiningAssociatedWatchListWithChartLinking">Combining the Associated Watch List with Chart Linking</h3>
+        <div class="member-link">[<a href="#CombiningAssociatedWatchListWithChartLinking">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>You may want to have several charts linked by symbol, so when you use the Associated Watch List on one of these charts, the other charts will change to the same symbol. For additional information, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Chart Linking</a> on the Chart Settings page.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="AssociatedSymbolListMovingThroughSymbols">Moving through the Symbols in the Associated Watch List</h3>
+        <div class="member-link">[<a href="#AssociatedSymbolListMovingThroughSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Once the Associated Watch List is setup, make sure the option <b class="menu_item">Chart &gt;&gt; Only Symbols in Watch List</b> on the menu is checked.  Otherwise, in the case of an Intraday chart you will instead move through all of the Intraday data files that are in the <b>Data Files Folder</b>.</p>
+
+        <p>And in the case of a Historical chart, you will instead move through all of the Historical chart data files that are in the Data Files Folder.</p>
+
+        <p>Use the <b>+</b> and <b>-</b> keys on your keyboard to change the symbol displayed in the chart to the next or previous symbol in the Associated Watch List, respectively.</p>
+
+        <p>There are also the <b class="menu_item">Chart &gt;&gt; Next File</b> and <b class="menu_item">Chart &gt;&gt; Previous File</b> menu commands which will move to the next or previous file in the Associated Watch List if <b class="menu_item">Chart &gt;&gt; Only Symbols in Watch List</b> on the menu is checked. </p>
+
+        <p>Otherwise, if this option is not checked, these menu commands will move to the next or previous data files in the <b>Data Files Folder</b>. </p>
+
+        <p>You are also able to add Control Bar buttons for these commands to move to the Next or Previous symbols. This will allow you to use Control Bar buttons to move to the Next or Previous symbol. </p>
+
+        <p>Another method you can use is to move through the open chart windows within the visible chartbook. This can be done using the <b>F4</b> (<b class="menu_item"> Window &gt;&gt;Previous Chart</b>) key on your keyboard and the <b>F9</b> (<b class="menu_item"> Window &gt;&gt;Next Chart</b>) key. These particular shortcut keys need to be set up, if they are not already, through <b class = "menu_item">Global Settings &gt;&gt; Customize Keyboard Shortcuts</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AssociatedSymbolListScanning">Scanning</h3>
+        <div class="member-link">[<a href="#AssociatedSymbolListScanning">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is possible to scan through the symbols in the Associated Watch List.  This is useful to  evaluate Simple Alert Formulas you have set on the studies on the chart or through <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;  Alerts</b>. Or to evaluate the Spreadsheet formulas when using the <b>Spreadsheet System/Alert</b> study.</p>
+
+        <p>These formulas will provide alert signals.  The <b class="menu_item">Chart &gt;&gt; Start Scan</b> command will cause the chart to cycle through all symbols in the Associated Watch List. </p>
+
+        <p>However, if the <b class="menu_item">Chart &gt;&gt; Only Symbols in Watch List</b> option is not checked, this will cause the chart to cycle through the symbols, based on chart type, you have a data file for in the Data Files Folder.  The <b class="menu_item">Chart &gt;&gt; Stop Scan</b> command will stop the chart from scanning.</p> 
+        
+         <p>Scanning is also a method by which you can perform historical Intraday chart data downloads  for the symbols in the list when the chart is an Intraday chart.  </p>
+
+        <p> For complete instructions, refer to <a href="indexfd56.html?page=doc/ChartMenu.html#ScanMenuCommands">Scan Menu Commands</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="WatchListMode">Watch List Mode</h3>
+        <div class="member-link">[<a href="#WatchListMode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>On the  <a href="#AssociatedSymbolList">Chart &gt;&gt; Associated Watch List</a> window you can enable the <b>Watch List Mode</b> option.   </p>
+
+        <p>When this is enabled, simply click on a symbol in the list to change the chart immediately to that symbol. </p>
+
+        <p>If you have used one of the  <a href="indexb844.html?page=doc/Tools.html" target="_blank" rel="noopener noreferrer">Drawing Tools</a> on the chart, make sure that   <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b> &gt;&gt;  Chart Drawings &gt;&gt; Show Chart Drawings for Different Symbols </b>  is disabled to prevent  Chart Drawings for other symbols from displaying   on the chart for a different symbol that you have changed to from the  Associated Symbol List. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutomaticallyRollingOverFuturesSymbolsInWatchlist">Automatically Rolling over Futures Symbols in Watch List</h3>
+        <div class="member-link">[<a href="#AutomaticallyRollingOverFuturesSymbolsInWatchlist">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Futures symbols in the Watch List can be automatically rolled over as they are used in the chart  by setting  <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol &gt;&gt; Automatically Rollover Futures Symbol</b> to Yes.  </p>
+        
+        <p>When the symbol of the chart is changed to an expired Watch List symbol and this option is enabled, the symbol will be updated to the current symbol. The future symbol in the Watch List will still remain the same.</p>
+         
+        <p>You can also rollover the symbols, within the Watch List window itself by going to the Watch List  window and selecting   <b class="menu_item">Symbols &gt;&gt; Rollover Expired Futures Symbols</b>.   Only those symbols which are fully expired will be rolled over to the current contract. If they are not expired, they will  <em>not</em> be rolled over.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="UsingCompactAssociatedWatchListOnControlBar">Using Compact Associated Watch List on Control Bar for Chart or Trade DOM</h3>
+        <div class="member-link">[<a href="#UsingCompactAssociatedWatchListOnControlBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A compact symbol drop-down list containing the same symbols from the  <a href="#AssociatedSymbolList" >Associated Watch  List</a> for a Chart or Trade DOM can be added to a Control Bar.  </p>
+
+        <p>For a <a href="index2414.html?page=doc/DetachingandAttachingChartWindows.html" >detached Chart or Trade DOM</a>, a Control Bar can be  added to those. </p>
+
+        <p>Follow the instructions below. </p>
+
+        <ol>
+            <li> In the case of the main Sierra Chart window, if the Control Bar is not already displayed,  then select <b class = "menu_item">Window &gt;&gt; Control Bars &gt;&gt; Control Bar #</b>. Where the # equals the particular Control Bar you want to display.  This can be 1-8. Make sure there is a Checkmark  by that menu command indicating the Control Bar is displayed. For more details, refer to <a href="indexc5fd.html?page=doc/WindowMenu.html#ControlBar" >Control Bars &gt;&gt; Control Bar [1-8]</a>.</li>
+
+            <li> In the case of a detached Chart or Trade DOM, if the Control Bar is not already displayed, then select <b class = "menu_item">Window &gt;&gt; Control Bars &gt;&gt; Control Bar #</b>. Where the # equals the particular Control Bar you want to display.  This can be 1-8. Make sure there is a Checkmark  by that menu command indicating the Control Bar is displayed. For more details, refer to <a href="indexc5fd.html?page=doc/WindowMenu.html#ControlBar" >Control Bars &gt;&gt; Control Bar [1-8]</a>.</li>
+
+            <li>Select  <b class = "menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar 1-8</b> depending upon what particular Control Bar you want to add the Watch List control to.  This will be the  Control  Bar you have added to the Sierra Chart main window or to a detached Chart/Trade DOM.
+
+                <div style="text-align: center;"><a href="../images/tradedomcontrolbar.png" rel="lightbox"><img src="../images/tradedomcontrolbar.png" class="screenshot" loading="lazy" alt="" ></a></div>
+            </li>
+
+            <li>In the <b>Available Control Bar Commands</b> list, go to <b> Special Items</b>.</li>
+
+            <li>Select the  <b>Watch List </b>item. It will not be there in the list if it is already on the Control Bar. If it is listed, then press the <b>Add</b> button.</li>
+
+            <li>It will now be listed on the  <b>Selected Control Bar Commands</b> list. Use the  <b>Move Up</b> or <b>Move Down</b> buttons to position it where you require.</li>
+
+            <li> Press <b>OK</b>.</li>
+
+            <li>You will now see the Watch List displayed on the Control Bar. Refer to the image below. 
+
+                <div style="text-align: center;"><a href="../images/watchlistoncontrolbar.png" rel="lightbox"><img src="../images/watchlistoncontrolbar.png" class="screenshot" loading="lazy" alt="" width="500"></a></div>
+
+            </li>
+
+            <li> Select from the list  <b>Edit Watch List</b> to add symbols to the list. </li>
+
+            <li>Select a symbol from the Watch List on the Control Bar to change the active Chart or Trade DOM to that symbol.</li>
+        </ol>
+        
+        <p> The Symbol/Watch List  on a Control Bar  in the case of when the chart is set to a futures contract symbol, will also list the forward contract months for that chart futures contract symbol.   It will list those symbols in addition to the symbols in the Associated Watch List for the chart. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ExportingListOfSymbols">Exporting a List of Symbols</h3>
+        <div class="member-link">[<a href="#ExportingListOfSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to export the list of symbols in the <b>Associated Watch List</b> window to a text file.</p>
+
+        <ol>
+            <li>Open the Associated Watch List window by going to the chart and selecting <b class="menu_item">Chart &gt;&gt; Associated Watch List</b>.</li>
+
+            <li>Press the <b>Export</b> button.  This button will only be enabled if there is at least one or more symbols in the list.</li>
+
+            <li>In the <b>File Name</b> box, enter a name that you want to save the list of symbols as. By default it will have a <b>SymbolList</b> file extension. There is no need to type that extension. It will be automatically added.</li>
+
+            <li>Press the  <b>Save</b> button to save the list of files.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="ImportingListOfSymbols">Importing a List of Symbols</h3>
+        <div class="member-link">[<a href="#ImportingListOfSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is possible to import a list of symbols from a plain text file into the Associated Watch List. Each symbol needs to be on its own line in this file.  </p>
+
+        <p>When importing a list of symbols, they are added to the existing list. Existing symbols will remain in the list. </p>
+
+        <p>This feature is especially useful if you have a long or complex list of symbols. Follow the steps below.</p>
+
+        <ol>
+            <li>The first step is to create the list of symbols in a text file. To create this text file, use an editor like the Notepad++ editor supplied with Sierra Chart. This is in the <b>NPP</b> subfolder within the folder that Sierra Chart is installed to on your system. Enter each symbol on its own line in the file. The last line in the file needs to be blank in order to properly import the last symbol. If the last symbol is not importing, then ensure there is an <b>Enter</b> placed after the last symbol creating a blank line at the end of the file.</li>
+
+            <li>Save the file to the Sierra Chart <b>Data Files Folder</b>. The location of this folder  can be determined through <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Data Files Folder</b>.</li>
+
+            <li>Open the Associated Watch List by selecting <b class="menu_item">Chart &gt;&gt; Associated Watch List</b>.</li>
+
+            <li>Press the <b>Import</b> button.</li>
+
+            <li>Locate your text file you created in the prior step, select it, and press <b>Open</b>. The list of symbols will now be imported. </li>
+
+            <li>The existing symbols will still remain in the list and duplicates will be ignored when the file is imported.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="DownloadingHistoricalDailyDataForSymbolsList">Downloading Historical Daily Data for Symbols  List</h3>
+        <div class="member-link">[<a href="#DownloadingHistoricalDailyDataForSymbolsList">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to download Historical Daily data for a list of symbols in the Associated Watch List.</p>
+
+        <ol>
+            <li>Open a Historical Daily chart if one is not already open.  Refer to <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart" Target="_blank" rel="noopener noreferrer">Opening Charts</a>.</li>
+
+            <li>Follow the instructions to use the   <a href=" #AssociatedSymbolList">Associated Watch List</a>  and add symbols to it.</li>
+
+            <li>Select <b class="menu_item">Edit &gt;&gt; Download Daily Data for Associated Watch List Symbols</b>.</li>
+
+            <li>After the historical data download is complete for all of the symbols, you can then select the symbols in the Associated Watch List and they will already be up-to-date with the latest data.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="DownloadingHistoricalIntradayDataForSymbolsList">Downloading Historical Intraday Data for Symbols List</h3>
+        <div class="member-link">[<a href="#DownloadingHistoricalIntradayDataForSymbolsList">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Follow the instructions below to download Historical Intraday data for a list of symbols in the Associated Watch List.</p>
+
+        <ol>
+            <li>Open a Intraday chart if one is not already open.  Refer to <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart" Target="_blank" rel="noopener noreferrer">Opening Charts</a>. If one is already open, go to that Intraday chart.</li>
+
+            <li>Follow the instructions to use the   <a href=" #AssociatedSymbolList">Associated Watch List</a>  and  add the symbols you want historical  Intraday data for.</li>
+            <li>  Enable <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt;  General &gt;&gt; Data</b> <b> &gt;&gt; Subscribe Real Time (RT) Data and Download Historical Data During Scan</b>. </li>
+           
+           <li>  Enable <b class="menu_item">Chart &gt;&gt;  Only Symbols in Watch List</b>. </li>            
+
+            <li>Select <b class="menu_item">Chart &gt;&gt; Start Scan</b>.  The symbol of the chart will be changed to each symbol  one at a time and historical  Intraday data will be downloaded for the symbols.</li>
+        </ol>
+    </section>    
+
+    <section class="h3">
+        <h3 id="AutomaticallyInsertingSymbolsForExchangeOrIndex">Automatically Inserting Symbols for Exchange or Index</h3>    
+        <div class="member-link">[<a href="#AutomaticallyInsertingSymbolsForExchangeOrIndex">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> It is supported to automatically insert into the  <a href="#AssociatedSymbolList" >Associated Watch List</a>, symbols for a supported Exchange or Index.</p>
+
+        <ol>
+            <li>Open a new chart or go to an existing chart.</li>
+            
+            <li>Select <b class="menu_item">Chart &gt;&gt; Associated Watch List</b>.</li>
+            
+            <li>Press the <b>Remove All</b> button to clear the existing symbols from the list.</li>
+            
+            <li>From the <b class="menu_item">Symbols</b> menu, select a particular Exchange or Index you want to add the symbols for to the list.</li>
+        </ol> 
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangingMultipleChartsSymbols">Changing Multiple Charts Symbols</h3>
+        <div class="member-link">[<a href="#ChangingMultipleChartsSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To automatically change the symbols on multiple charts at one time, or to create a  Chartbook with a specific set of charts with specific symbols, follow these instructions:</p>
+
+        <ol>
+
+            <li>Open  or switch to the desired   <a href="index7674.html?page=doc/Chartbooks.html#OpenChartbook"  target="_blank" rel="noopener noreferrer">Chartbook</a> that contains the charts for which you want to change the symbols. Or,  create a <a href="index7674.html?page=doc/Chartbooks.html#CreateChartbook"  target="_blank" rel="noopener noreferrer">new  Chartbook</a>  and then open a single chart.</li>
+
+            <li>Open the <a href="#AssociatedSymbolList">Associated Watch List</a> and add the desired symbols to the list using the <b>Add</b> button. Use the <b>Find</b> button to display a list of the available symbols. Alternatively, use the <a href="#ImportingListOfSymbols" target="_blank" rel="noopener noreferrer">Import</a> button to import a pre-defined list of symbols.</li>
+
+            <li>On the Associated Watch List window select <b class="menu_item">Symbols &gt;&gt; Set Charts to Symbols</b>. </li>
+            
+            <li> You will receive a  <b>Add Additional Charts</b> prompt. Press <b>Yes</b> to open additional charts as required to match the number of symbols in the Associated Symbols/Watch List. Or press  <b>No</b>, to not.</li>
+            
+            <li>The charts in the Chartbook will be updated to the list of symbols in the Watch List. Additional charts will be opened as needed if you pressed yes in response to <b>Add Additional Charts</b>. <br> <br>
+            
+            Otherwise, if there are fewer charts than the number of symbols, then only the symbols that can fit into the charts will be updated. If there are more charts than the number of symbols, then the remaining charts after the symbols have been updated will not change from the symbol they originally had.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ProgrammaticallyChangingSymbolOfChart">Programmatically Changing Symbol of a Chart</h2>    
+    <div class="member-link">[<a href="#ProgrammaticallyChangingSymbolOfChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is possible to programmatically change the symbol of a chart through the  <a href="index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study Interface and Language</a>.  </p>
+
+    <p>Refer to <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scDataFile">sc.DataFile</a> for complete documentation.  </p>
+</section>
+
+<section class="h2">
+    <h2 id="OtherMethodsToChangeTheSymbolOfAChart">Other Methods to Change the Symbol of a Chart</h2>    
+    <div class="member-link">[<a href="#OtherMethodsToChangeTheSymbolOfAChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Another method to change the symbol of a chart is through the Chart Linking feature by setting the same link number for two or more charts and enabling the <b>Chart Linking &gt;&gt; Symbol</b>  option in  <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. For complete documentation, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#LinkNumber">Chart Linking</a>.</p>
+
+    <p>Another method  to change the symbol of a chart is through the <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Change Chart Symbol</b> command.</p>
+    
+    <p> Another method to change the symbol  of a chart is through  <a href = "index1eaf.html?page=doc/GettingQuotes.html#ChangingSymbolOfChart">Quote Boards</a>.</p>
+</section>
+
+<hr><p>*Last modified Monday, 17th April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SwitchingSymbols.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:28 GMT -->
+</html>  

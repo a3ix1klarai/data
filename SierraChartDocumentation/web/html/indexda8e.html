@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/UsingChartTemplates.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1657711946') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/UsingChartTemplates.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Using Chart Templates -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexda8e.html?page=doc/UsingChartTemplates.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="indexda8e.html?page=doc/UsingChartTemplates.php">Using Chart Templates</a></h4> </div>     <h1 class="PageName">Using Chart Templates</h1>
+
+<ul>
+    <li><a href="#StudyCollections">Study Collections</a></li>
+    <li><a href="#DuplicatingCharts">Duplicating Charts / Template Charts</a></li>
+    <li><a href="#SettingDefaultChartSettings">Setting Default Chart Settings For New Charts</a></li>
+    <li><a href="#ChangingSymbol">Changing the Symbol of the Chart / Trade DOM</a></li>
+    <li><a href="#DefaultSymbolSettings">Default Symbol Settings</a></li>
+    <li> <a href="#UsingChartLinking">Using Chart Linking</a></li>
+    <li> <a href="#DuplicatingEntireChartbook">Duplicating Entire Chartbook</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2>Using Chart Templates</h2>
+
+    <p>There are several methods by which you can use default Symbol Settings, default Chart Settings, and sets of studies, for new charts, duplicated charts, and when you change the symbol of a chart.</p>
+
+    <p>All of these methods are explained below.</p>
+
+    <section class="h3">
+        <h3 id="StudyCollections">Study Collections</h3>
+        <div class="member-link">[<a href="#StudyCollections">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The studies on a chart can be saved as a <em>Study Collection</em>. A Study Collection can then be applied to an existing or new chart by selecting the Study Collection name from the  <b class = "menu_item">Analysis</b> menu.  </p>
+
+        <p>All of the existing saved Study Collection  names are listed directly on the <b class = "menu_item">Analysis</b>  menu.  </p>
+
+        <p>You also have the ability to set this Study Collection to <em>automatically</em> be applied to new charts that you open. </p>
+
+        <p>For complete instructions for all of the above, refer to the <a href="indexc9c0.html?page=doc/StudyCollections.html">Study Collections</a> page.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="DuplicatingCharts">Duplicating Charts / Template Charts</h3>
+        <div class="member-link">[<a href="#DuplicatingCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <em>simplest method</em> to use a chart or Trade DOM as a <em>template</em> and create an identical one is to use the <b>Duplicate Chart</b> commands.  </p>
+        
+        <p>The various duplicate chart functionality is the only method by which you can use a chart as a template to create another one. There is no other method.</p>
+
+        <p>What we recommend doing is create a chart or charts that serve as templates for other charts. You can actively use this chart or these charts, or just keep them minimized and out-of-the-way. In this way the chart serves as a template. </p>
+
+        <p>When you want a chart based on one of them, simply duplicate one to the same or a different Chartbook. Either are possible. By supporting the use of existing charts as templates, you have an unlimited set of possible configurations that you can use as templates and for default settings.</p>
+
+        <p>Follow the instructions below to duplicate a  chart or Trade DOM.</p>
+        <ol>
+            <li> Go to the chart or Trade DOM you want to duplicate.</li>
+            <li> Use one of the following methods to duplicate it.</li>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Duplicate Chart</b> to duplicate the chart or Trade DOM to the same Chartbook.</li>
+
+            <li>Select <b class="menu_item">Chart &gt;&gt; Duplicate Chart to Chartbook</b> to duplicate the chart to a different Chartbook.</li>
+
+            <li>After you duplicate a chart, you have the ability to change the symbol on the duplicated chart to any symbol. For complete step-by-step instructions, refer to the <a href="indexfd56.html?page=doc/ChartMenu.html#DuplicateChart">Duplicate Chart</a> documentation.</li>
+
+            <li>An easier way to duplicate a chart or Trade DOM and have it be set to a particular symbol, is to go to that chart that you want to duplicate and then select  <b class = "menu_item">File &gt;&gt; Find Symbol</b>. Select the symbol in the list you want for the duplicated chart or Trade DOM and press the <b>Duplicate Active Chart </b> button. </li>
+
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="SettingDefaultChartSettings">Setting Default Chart Settings For New Charts</h3>
+        <div class="member-link">[<a href="#SettingDefaultChartSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>You are able to set defaults for the following Chart Settings: <b>Days to Load, Intraday Bar Period</b> (Intraday charts only),  <b>Graph Draw Type</b>. The Graph Draw Type is the setting for the bar type (Open High Low Close Bars, Candlestick Bars, ...). 
+        <ol>
+            <li>Select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu.</li>
+
+            <li>Set the <b>Data Limiting &gt;&gt; Days to Load...</b>, <b>Bar Period &gt;&gt; Intraday Bar Period Settings</b> (Intraday charts only) and the <b>Bar Period &gt;&gt; Graph Draw Type</b> as you require.</li>
+
+            <li>Set the <b>Chart Data &gt;&gt; Save Days to Load, Intraday Bar Period, Graph Draw Type as Default</b> option to <b>Yes</b>.</li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>When you open a new chart, these default settings will be applied to that new chart.</li>
+        </ol>
+
+        <p>You should also be familiar with <b> Chartbooks </b> (workspaces). Charts that you open  should be saved to Chartbooks.  This way you can reopen them at once with the same configuration that you had when you saved the chartbook.  For more information, refer to <a href="index7674.html?page=doc/Chartbooks.html">Chartbooks</a>.</p>	
+    </section>
+
+    <section class="h3">
+        <h3 id="ChangingSymbol">Changing the Symbol of the Chart / Trade DOM</h3>
+        <div class="member-link">[<a href="#ChangingSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Another method by which you can use a chart as a template and reuse its existing settings and studies is to change the symbol of the Chart or Trade DOM  to another symbol.  </p>
+
+        <p>Refer to the <a href="indexa1a5.html?page=doc/SwitchingSymbols.html">Changing the Symbol of a Chart</a> documentation for instructions.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="DefaultSymbolSettings">Default Symbol Settings</h3>
+        <div class="member-link">[<a href="#DefaultSymbolSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Symbol Settings defined for  a symbol or symbol pattern in <b class = "menu_item">Global Settings &gt;&gt; Symbol Settings</b>, will automatically be applied to new charts for the matching symbol and when changing the symbol of a chart.</p>
+
+        <p> For complete details, refer to the <a href="index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a> page.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="UsingChartLinking">Using Chart Linking</h3>
+        <div class="member-link">[<a href="#UsingChartLinking">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p> It is supported to link charts together and have various categories of settings  set the same between them.  </p>
+        
+          <p>This also includes Studies as well.  When the studies on one chart  are changed,    the other charts set to the same Link Number will be set with the same set of studies and the  same study settings.  </p>
+    
+        <p>For information on linking charts, refer to the <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking">Chart Linking</a>   section.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="DuplicatingEntireChartbook">Duplicating Entire Chartbook</h3>
+        <div class="member-link">[<a href="#DuplicatingEntireChartbook">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p> It is supported to duplicate  all of the charts in a Chartbook to another Chartbook.  The destination Chartbook where the charts are duplicated to can be a new or existing Chartbook.</p>
+        
+           <p> Follow the instructions below. </p>
+           
+        <ol>
+            <li>  <a href = "index7674.html?page=doc/Chartbooks.html#OpenChartbook">Open the Chartbook</a> that you want to duplicate the charts from. This will be called the Source Chartbook.</li>
+            
+            <li>  <a href = "index7674.html?page=doc/Chartbooks.html#OpenChartbook">Open the Chartbook</a> that you want to duplicate the charts  to.   This will be called the Destination Chartbook. Skip this step if you will be duplicating to a new Chartbook.</li>
+            
+            <li> Go back to the Source Chartbook by selecting it from the <b class="menu_item"> CB</b> menu.</li>
+            
+            <li>  Select  <b class="menu_item">Chart &gt;&gt; Duplicate   All Charts to Chartbooks</b>.</li>
+            
+            <li>   In the new displayed window, select  in the list of <b> Chartbooks</b>  the Destination  Chartbook  if you are duplicating to an existing Chartbook.</li>
+            
+            <li>  If you are not duplicating to an existing Chartbook, set   <b>Create New Chartbook</b> to <b>Yes</b>.</li> 
+            
+            <li>Press OK to complete the operation.</li>
+        </ol>
+    </section>
+
+</section>
+
+
+<hr><p>*Last modified Wednesday, 13th July, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/UsingChartTemplates.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:19 GMT -->
+</html>  

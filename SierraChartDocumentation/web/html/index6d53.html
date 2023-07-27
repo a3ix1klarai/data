@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TickbyTickDataConfiguration.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105657') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/TickbyTickDataConfiguration.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Tick by Tick Data Configuration -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index6d53.html?page=doc/TickbyTickDataConfiguration.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ManagingData">(Table of Contents) Managing Symbol Data</a> &gt;&gt; <a  href="index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick Data Configuration</a></h4> </div>     <h1 class="PageName">Tick by Tick Data Configuration</h1>
+
+<ul>
+    <li><a href="#Instructions">Instructions</a></li>
+    <li><a href="#VerifyingTickByTickData">Verifying if Tick by Tick Data is in Intraday Data File</a></li>
+    <li><a href="#HistoricalBidAskVolume">Historical Bid Volume and Ask Volume</a></li>
+    <li><a href="#ServicesThatSupportBVandAV">Services That Support Bid Volume and Ask Volume</a></li>
+</ul>
+<hr>
+
+<section class="h2">
+    <h2 id="Instructions">Instructions</h2>
+    <div class="member-link">[<a href="#Instructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page explains settings that need to be made in order for Sierra Chart  to download and store  Intraday chart data in a tick by tick format. A tick means 1 trade. </p>
+
+    <p>There are various features in Sierra Chart which require tick by tick data for accuracy. These include the following studies and <b>Bar Period Types</b>:</p>
+
+    <ul>
+        <li>Numbers Bars study</li>
+        <li>Volume by Price study on Intraday charts</li>
+        <li>Volume Value Area Lines</li>
+        <li>Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</li>
+    </ul>
+
+    <p>Keep in mind that tick by tick data is less efficient because it takes more time to download, uses more drive space, and more CPU time during the historical data download. However, it is necessary for <em>accuracy</em>.</p>
+
+    <p>Follow the instructions below to set Sierra Chart to a tick by tick data configuration.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.  </li>
+
+        <li>Change the <b>Intraday Data Storage Time Unit</b> to <b>1 Tick</b>. <em>You must use <b>1 Tick</b> for maximum accuracy</em>.
+
+        <div style="text-align: center;"><a href="../images/tickbytickdataconfiguration.png" rel="lightbox"><img src="../images/tickbytickdataconfiguration.png"  class="screenshot" loading="lazy" width="450" alt="Data/Trade Service Settings"></a></div>
+        </li>
+
+        <li>Some supported Data and Trading services may <em>not</em> provide historical data in a tick by tick format. This is true of  Interactive Brokers. Therefore, with these particular services, the historical data will not be tick by tick unless you use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php"  target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a>.</li>
+
+        <li>Enable <b>Allow Support for Sierra Chart Data Feeds</b>. The only case where this should be disabled is if you are using one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a> and you deliberately do not want to connect to that data feed in the instance of Sierra Chart you are running.</li>
+
+        <li>Press <b>OK</b> on the <b>Data/Trade Service Settings</b> window. </li>
+
+        <li> To make sure that the historical Intraday data request is routed to the proper source, it is necessary that the Symbol Settings are up-to-date by following the instructions to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.  This only needs to be done one time.</li> 
+
+        <li>To ensure the Intraday chart data file  for a symbol has complete tick by tick data, you will need to  fully re-download the data in the Intraday charts by going to an Intraday chart for a symbol and selecting <b class="menu_item">Edit &gt;&gt; Delete All Data And Download</b>. 
+            <br> <br>
+
+            This only needs to be done <em>once</em> on an Intraday chart for each symbol. In other words, this does not need to be done for every Intraday chart you have open for the same symbol. Only one of them.</li>
+
+        <li> Based upon the particular Data or Trading service you are using and possibly your Sierra Chart account Service Package,  1 Tick Historical data may not be available. It could be a higher increment. One indication of this is the following line in the Sierra Chart Message Log:
+            <br><br>
+            <em>HD Request # 10 | Requesting Intraday data.  Start Date-Time: (Date-Time). <b>Record interval:  1</b>. Symbol: EURUSD</em>
+
+            <br> <br>
+            If the <b>Record Interval</b> is not 0, then historical tick by tick data was not being downloaded. The Record interval should be 0 in this particular case.
+
+        </li>
+
+        <li>When chart data is loaded from the chart data file, 1 Tick data will take longer to load.  And even longer to load when using the <b>Numbers Bars</b>, <b>Volume by Price</b>, <b>TPO Profile Chart</b> and any other studies that require detailed volume data due to the extra volume analysis needed while loading the chart data.</li>
+
+        <li><b> Optional</b>:  If you want to see the tick by tick data in a chart, go to an Intraday chart and select <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>. Set the  <b>Use Number of Days to Load &gt;&gt; Days to Load</b> to a small number like 1 or 2. </li>
+
+        <li> Set the  <b>Intraday Chart Bar Period &gt;&gt; Bar Period Type</b> to <b>Number of Trades per Bar</b>. Set the value in the box below to 1.  Press <b>OK</b>. </li>
+
+        <li>These last two steps are not a necessary procedure, but only a way to confirm you have tick by tick data. You can confirm this by seeing that the Open, High, Low, and Close values for each bar are the same.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="VerifyingTickByTickData">Verifying if Tick by Tick Data is in Intraday Data File</h2>
+    <div class="member-link">[<a href="#VerifyingTickByTickData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to verify there is tick by tick data for a particular symbol in the Intraday chart data file for that symbol.</p>
+
+    <ol>
+        <li>Open an Intraday chart for the symbol if it is not already open through <b  class = "menu_item">File &gt;&gt; Find Symbol &gt;&gt; [select symbol] &gt;&gt; Open Intraday Chart</b>.</li>
+
+        <li>Select <b class = "menu_item">Edit &gt;&gt; Edit/Download Data - Intraday Chart</b> to open the Intraday Data Editor.</li>
+
+        <li>Using the scroll bar at the bottom of the Intraday Data Editor, you can scroll through the data records in the data file.</li>
+
+        <li> An indication that a record is a single trade/tick is that the <b>Open</b> price will be 0 (zero) and <b>Number of Trades</b> will equal 1. </li>
+
+        <li>Another indication is when you look at the Hours, Minutes, and Seconds for the <b>Time</b>, you will notice that they are often the same for multiple adjacent data records. You will also notice the milliseconds for some records will be nonzero. This is another indication of tick by tick data.</li>
+
+        <li>We recommend checking several records throughout the file to determine  if the above is the true. Once you confirm this, then you have confirmed that the data file at the point in time you are looking at the records, are tick by tick data records.</li>
+
+        <li>  You need to also understand that an Intraday data file can contain various data record timeframes  at different points in time. There could be a higher timeframe record like 1 Minute data at one point in time and tick by tick data at another point in time in the Intraday data file for the symbol.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="HistoricalBidAskVolume">Historical Bid Volume and Ask Volume</h2>
+    <div class="member-link">[<a href="#HistoricalBidAskVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In addition to configuring Sierra Chart  to request and maintain tick by tick data from the data server from the Data or Trading service being used, another consideration for certain studies and analysis methods, like  the <b>Numbers Bars </b> and  <b>Cumulative Delta Bars </b> studies,  is that historical <b>Bid Volume</b> and <b>Ask Volume</b> needs to be provided by the particular Data or Trading service you are using.   </p>
+
+    <p>For a list of services providing this data, refer to <a href="#ServicesThatSupportBVandAV">Services That Support Bid Volume and Ask Volume</a>.</p>
+
+    <p>If historical Bid Volume and Ask Volume is not provided, then you need to stay connected to the data feed server (<b class = "menu_item">File &gt;&gt; Connect To Data Feed</b>) as much as possible in order to have Sierra Chart  maintain this data in real-time which Sierra Chart will be able to do with any Data or Trading service being used.</p>
+
+    <p> Bid Volume and Ask Volume represent the volume actually traded at the Bid or Ask respectively.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ServicesThatSupportBVandAV">Services That Support Bid Volume and Ask Volume</h2>
+    <div class="member-link">[<a href="#ServicesThatSupportBVandAV">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>With all of the supported Data and Trading services, Sierra Chart will calculate and record Bid Volume (Bid Trade Volume) and Ask Volume (Ask Trade Volume) for the symbol from real-time data received, so long as the symbol provides Bid prices, Ask prices and trade Volume. Additionally, for this data to be accurate tick by tick data needs to be provided by the data feed.</p>
+
+    <p>Bid Volume and Ask Volume refer to actual <em>traded</em> volume at the Bid or Ask prices, respectively. They do <em>not</em> refer to Bid or Ask Quantities in the order book/market depth.</p>
+
+    <p>With cash indexes there  are no Bid or Ask prices, and sometimes there is not Volume. So historical Bid Volume and Ask Volume is not available with these symbols. However, Sierra Chart does record Bid Volume and  Ask Volume if there are no Bid or Ask prices, by using a special algorithm.</p>
+
+    <p>To receive Bid Volume and Ask Volume for historical Intraday downloaded data, you need to use to use a Data or Trading service that provides this data.  </p>
+
+    <p>The following are the Data and Trading services that provide historical Bid Volume and Ask Volume:</p>
+    <ul>
+        <li><a href="indexc82f.html?page=doc/SCRealTimeFOREX.php" >Sierra Chart Real-time and Historical Forex and CFD Data Service</a></li>
+        <li><a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php">Sierra Chart Real-Time and Historical Exchange Data Feed</a></li>
+        <li><a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a></li>
+        <li><a href="index765f.html?page=doc/SierraChartHistoricalData.php" target="_blank" rel="noopener noreferrer">Sierra Chart Historical Data Service</a> </li>
+        <li>CTS T4 (when downloading historical <b>1-Tick</b> data) Trading Platform Service</li>
+        <li>CQG Trading Platform Service</li>
+        <!-- li>TransAct Trading Service</li -->
+        <li>GAIN Capital (OEC Trader) Trading Service</li>
+        <li>Rithmic Trading Platform Service</li>
+        <li>FXCM FIX Trading Service</li>
+        <li>Currenex Trading Service</li>
+        <li>LMAX Trading Service</li>
+        <li>DTN IQ Feed Data Service. Only when downloading historical  <b>Tick</b> data and you must be aware of the 8 Day <a href="index3f62.html?page=doc/DTNIQFeed.html#TickLimitMarketHours" >Tick Data Limitation</a>. We recommend using either of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> instead. <em>The 8-day tick limitation from IQ Feed has proven to be an ongoing serious limitation and problem for users and has been an unnecessary support burden upon us</em>.</li>
+        <li>Cryptocurrency Data Services</li>
+    </ul>
+
+    <p>When using Interactive Brokers data, there is complete and total inaccuracy with Bid Volume and Ask Volume, the number of trades and volume. Historical Bid Volume and Ask Volume is not provided either. Sierra Chart Support will not provide any help with any data problems encountered with Interactive Brokers. when using Interactive Brokers you must use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a> for a reliable and complete data feed.</p>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TickbyTickDataConfiguration.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:52 GMT -->
+</html>  

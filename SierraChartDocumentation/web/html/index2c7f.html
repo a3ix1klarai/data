@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DataSourceSettings.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686213506') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DataSourceSettings.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Data/Trade Service Settings -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2c7f.html?page=doc/DataSourceSettings.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SettingsWindows">(Table of Contents) Settings Windows</a> &gt;&gt; <a  href="index2c7f.html?page=doc/DataSourceSettings.php">Data/Trade Service Settings</a></h4> </div>     <h1 class="PageName">Data/Trade Service Settings</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#ServiceSpecificSettings">Service Specific Settings</a></li>
+    <li><a href="#ChangingDataTradeServiceSpecificSettings">Changing Data/Trade Service Specific Settings</a></li>
+    <li><a href="#MainSettings">Main Settings</a>
+        <ul>
+            <li><a href="#ServiceSection">Service</a>
+                <ul>
+                    <li><a href="#CurrentSelectedService">Current Selected Service</a></li>
+                </ul>
+            </li>
+            <li><a href="#ServiceSettings">Service Settings</a></li>
+            <li><a href="#SavedDTSConfiguration">Saved DTS Configuration</a>
+                <ul>
+                    <li><a href="#DTSConfig">DTS Config</a></li>
+                    <li><a href="#DTSConfig_Load">[Load]</a></li>
+                    <li><a href="#DTSConfig_Save">[Save]</a></li>
+                    <li><a href="#DTSConfig_Delete">[Delete]</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#CommonSettings">Common Settings</a>
+        <ul>
+            <li><a href="#CommonSettingsSection">Common Settings</a>
+                <ul>
+                    <li><a href="#ConnectOnProgramStartup">Connect on Program Startup</a></li>
+                    <li><a href="#ReconnectOnFailure">Reconnect on Failure</a></li>
+                    <li><a href="#IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit</a></li>
+                </ul>
+            </li>
+			<li><a href="#MaximumHistoricalIntradayDaysToDownloadSection">Maximum Historical Intraday Days to Download &gt;&gt; Non-Tick Data / 1-Tick Data</a>
+			    <li><a href="#NonTickData">Non-Tick Data</a></li>
+			    <li><a href="#1TickData">1-Tick Data</a></li>
+			</li>
+            <li><a href="#CommonOtherSettingsSection">Common Other Settings</a>
+                <ul>
+                    <li><a href="#AllowSupportSierraChartDataFeeds">Allow Support for Sierra Chart Data Feeds</a></li>
+                    <li><a href="#StoredTimeSalesRecords">Number of Stored Time and Sales Records</a></li>
+                    <li><a href="#MaximumTimeAndSalesDepthLevels">Maximum Time and Sales Depth Levels</a></li>
+                    <li><a href="#EnableFIXLogging">Enable FIX Logging</a></li>
+                    <li><a href="#LogFIXMarketData">Log FIX Market Data</a></li>
+                    <li><a href="#ProcessKnownOddLotEquityTradesForDTCServices">Process Known Odd Lot Equity Trades for DTC Services</a></li>
+                    <li><a href="#DownloadDividendAdjustedHistoricalData">Download Dividend Adjusted Historical Data</a></li>
+                    <li><a href="#DownloadTotalVolumeForAllContractsForFuturesDailyData">Download Total Volume for All Contracts for Futures Daily Data</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#ReducingMaximumHistoricalIntradayDaysToDownload1Tick">Reducing the Maximum Historical Intraday Days to Download &gt;&gt; 1-Tick Data Setting</a></li>
+    <li><a href="#SavingLoadingSettings">Saving and Loading Service Settings</a></li>
+    <li><a href="#BandwidthUsage">Bandwidth Usage</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/datatradeservicesettingswindow.png" rel="lightbox"><img src="../images/datatradeservicesettingswindow.png" class="MediumFloatRight"  alt="" ></a>
+
+    <p>The <b>Data/Trade Service Settings</b> window is for viewing and specifying settings for Sierra Chart to work with Data and Trading services.</p>
+
+    <p>The <b>Data/Trade Service Settings</b> window also contains various settings related to connectivity and the processing of market data.</p>
+
+    <p>Press <b>OK</b> to save the settings or <b>Cancel</b> to not save them.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ServiceSpecificSettings">Service Specific Settings</h2>
+    <div class="member-link">[<a href="#ServiceSpecificSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The image below shows the Data or Trading Service specific settings on the <b>Data/Trade Service Settings</b> window.</p>
+
+    <p>The Service specific settings change depending upon what <b>Service</b> is selected on this window.</p>
+
+    <p>For descriptions of the Service specific settings, refer to the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data and Trading Services</a>  page for links to pages for the service you are using.</p>
+
+    <p>Each page for a specific <b>Data</b> or <b>Trading</b> Service contains the instructions for setting the Service specific controls.</p>
+
+    <p>The Service specific settings controls are not documented on this page.</p>
+
+    <p>You will need to consult the corresponding <b>Data</b> or <b>Trading</b> service page for the service, for the specific set up instructions for that service.</p>
+
+    <div style="text-align: center;"><a href="../images/servicespecificdatatradeservicesettings.png" rel="lightbox"><img src="../images/servicespecificdatatradeservicesettings.png" class="screenshot" loading="lazy" alt="" ></a></div>
+</section>
+
+
+<section class="h2">
+    <h2 id="ChangingDataTradeServiceSpecificSettings">Changing Data/Trade Service Specific Settings</h2>
+    <div class="member-link">[<a href="#ChangingDataTradeServiceSpecificSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/changingdatatradeservicesettings.png" rel="lightbox"><img src="../images/changingdatatradeservicesettings.png" class="screenshot" loading="lazy" alt="" ></a></div>
+
+    <p>For information on how to work with the various fields on the Data/Trade Service Settings window, refer to the information on the <a href="indexe6e0.html?page=doc/SettingsWindowsInterface.php">Settings Windows Interface</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="MainSettings">Main Settings (Global Settings &gt;&gt; Data/Trade Service Settings)</h2>
+    <div class="member-link">[<a href="#MainSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/datatradeservicesettingswindow.png" rel="lightbox"><img class="screenshot" loading="lazy" src="../images/datatradeservicesettingswindow.png" alt=""></a></div>
+
+    <section class="h3">
+        <h3 id="ServiceSection">Service (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings)</h3>
+        <div class="member-link">[<a href="#ServiceSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains settings for defining the data/trading service used by Sierra Chart</p>
+
+        <section class="h4">
+            <h4 id="CurrentSelectedService">Current Selected Service (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings &gt;&gt; Service)</h4>
+            <div class="member-link">[<a href="#CurrentSelectedService">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This control displays and sets the <b>Data</b> and/or <b>Trading</b> service you want to use Sierra Chart with.</p>
+
+            <p>If the selected service supports <em>market data only</em> and <em>not live</em> trading it will have a <span class="GeneralBackgroundHighlight"><b>[data]</b></span> suffix.</p>
+
+            <p>If the selected service supports market data and <em>live</em> trading functionality it will have a <span class="GeneralBackgroundHighlight"><b>[trading]</b></span> suffix.</p>
+            
+            <p>For instructions to use this setting, refer to <a href="indexe6e0.html?page=doc/SettingsWindowsInterface.php#WorkingWithSierraChartWindows_SelectionSpecificOptions_ItemList">Item List (Working with Sierra Chart Windows &gt;&gt; Selection Specific Options)</a>.</p>
+            
+            <p>To connect to the data feed, select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. If Sierra Chart is already connected to the data feed, then after changing the <b>Current Selected Service</b>, there will be an automatic reconnection to the data feed.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ServiceSettings">Service Settings (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings)</h3>
+        <div class="member-link">[<a href="#ServiceSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The settings in this sub-section vary depending on the value selected for the <b>Current Selected Service</b>. For information on specific service settings, refer to the Setup Instructions for the specific service.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="SavedDTSConfiguration">Saved DTS Configuration (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings)</h3>
+        <div class="member-link">[<a href="#SavedDTSConfiguration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The settings in this sub-section apply towards loading and saving different Data/Trade Service Settings as stored configurations.</p>
+
+        <section class="h4">
+            <h4 id="DTSConfig">DTS Config (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings &gt;&gt; Saved DTS Configuration)</h4>
+            <div class="member-link">[<a href="#DTSConfig">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This contains the list of available configurations that can be selected. Entering a new name in this field allows for the current configuration to be stored under that name.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DTSConfig_Load">[Load] (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings &gt;&gt; Saved DTS Configuration)</h4>
+            <div class="member-link">[<a href="#DTSConfig_Load">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting the <b>[Load]</b> button will load the selected configuration in the <b>DTS Config</b> field.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="DTSConfig_Save">[Save] (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings &gt;&gt; Saved DTS Configuration)</h4>
+            <div class="member-link">[<a href="#DTSConfig_Save">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting the <b>[Save]</b> button will save the current configuration in the name that is entered in the <b>DTS Config</b> field.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DTSConfig_Delete">[Delete] (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings &gt;&gt; Saved DTS Configuration)</h4>
+            <div class="member-link">[<a href="#DTSConfig_Delete">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Selecting the <b>[Delete]</b> button will delete the current configuration that is selected in the <b>DTS Config</b> field.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="CommonSettings">Common Settings</h2>
+    <div class="member-link">[<a href="#CommonSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/datatradeservicesettings_commonsettings.png" rel="lightbox"><img class="screenshot" loading="lazy" src="../images/datatradeservicesettings_commonsettings.png" alt=""></a></div>
+
+    <section class="h3">
+        <h3 id="CommonSettingsSection">Common Settings (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings)</h3>
+        <div class="member-link">[<a href="#CommonSettingsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains data/trade service settings that apply to all services.</p>
+
+        <section class="h4">
+            <h4 id="ConnectOnProgramStartup">Connect on Program Startup (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Settings)</h4>
+            <div class="member-link">[<a href="#ConnectOnProgramStartup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>If this option is set to <b>Yes</b>, then Sierra Chart will connect to the Data and Trade servers when you start Sierra Chart.</p>
+
+            <p>Otherwise, when Sierra Chart is started, no connection will be made to the Data and Trade servers.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ReconnectOnFailure">Reconnect on Failure (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Settings)</h4>
+            <div class="member-link">[<a href="#ReconnectOnFailure">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then Sierra Chart will reconnect to the Data and Trade servers when the connection is detected to be lost or it will retry to connect to the servers if it could not connect initially.</p>
+
+            <p>It is recommended to keep this option enabled in most cases.</p> 
+
+            <p>Also, when this option is enabled, and when using one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a> with a supported Trading service, then when the connection to the Trading server is lost, the data feed will continue to be received from the Data Feed which comes from a different server.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Settings)</h4>
+            <div class="member-link">[<a href="#IntradayDataStorageTimeUnit">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <div style="text-align: center;"><a href="../images/intradaydatastoragetimeunit.png" rel="lightbox"><img src="../images/intradaydatastoragetimeunit.png" class="MediumFloatRight" alt=""></a></div>
+
+            <p>This sets the time period for each record of data in an Intraday chart data file which is used to build the chart bars in Intraday charts. These files have a <b>.scid</b> file extension.</p>
+
+            <p>Setting this to <b>1 Tick</b> means there will be one data record for each tick/trade. It is <em>necessary</em> to use <b>1 Tick</b> when you are using a <b>Bar Period Type</b> in an Intraday chart based upon a <b>Number of Trades</b>, <b>Volume</b>, <b>Range</b>, <b>Reversal</b>, <b>Renko</b>, <b>Delta Volume</b>, or <b>Price Changes</b> amount, for 100% accuracy.</p>
+
+            <p>Although even with these Intraday chart <b>Bar Period Types</b>, you may want to use <b>1 Second</b> as an alternative since it is more CPU efficient. This is less accurate but still may work sufficiently. <b>1 Tick</b> will provide 100% accuracy for these <b>Bar Period Types</b>. However, it will use more disk space, cause slower Chartbook loading, and slower historical data downloading.</p>
+
+            <p>If you are only using chart bars that are based upon a fixed amount of time, like based upon a specific amount of minutes, then you can use an <b>Intraday Storage Time Unit</b> setting that divides evenly with no remainder into the shortest bar time frames you will be working with. For example, 30 seconds divides evenly into 1 minute with no remainder.</p>
+
+            <p>Intraday data files do use compression. However, there will be an increase in disk space usage with smaller Intraday Data Storage Time Units. Using <b>1 Minute</b> will save disk space and provide maximum performance.</p>
+
+            <p>If you do not use chart bar periods less than 1 minute, then use a setting of <b>10 Seconds</b> or higher.</p>
+
+            <p>The <b>Intraday Data Storage Time Unit</b> setting affects data collected in real-time and the <em>historical Intraday data downloaded unless</em> the Data/Trading service you are using only provides historical data in 1 Minute units.</p>
+
+            <p><em>All Ticks/Trades received from the data feed are stored</em>, independent of whatever this setting is. No data is missed by using a setting of <b>1 Minute</b>. Your charts will still update at the same speed. This setting is also independent of the <a href="index899f.html?page=doc/GeneralSettings.html">Chart Update Interval</a> in General Settings.</p>
+
+            <p>When using a setting of <b>1 Tick</b>, any Intraday <b>Bar Period Type</b> and bar duration can be used and will be accurate, including bar periods of Days. The same is true with higher settings, but the accuracy becomes less with the following Bar Period Types: <b>Number of Trades</b>, <b>Volume</b>, <b>Range</b>, <b>Reversal</b>, <b>Renko</b>, <b>Delta Volume</b>, or <b>Price Changes</b>. Also, when using for example a setting of 10 Seconds, then it is not possible to create 1 second chart bars.</p>
+
+            <p>The <b>Intraday Data Storage Time Unit</b> setting has no effect on Market Depth data or Time and Sales data.</p>
+
+            <p>Anytime this setting is changed, in order to apply it to existing historical data in the charts, go to an Intraday chart for each symbol and select <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. This only needs to be done <em>once</em> for each symbol. Refer to the <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DeleteDownloadAllCharts" >Deleting and Downloading Intraday Data for All Charts</a> documentation for instructions to re-download data for multiple symbols at once.</p>
+        </section>
+    </section>
+
+    <section class='h3'>
+        <h3 id="MaximumHistoricalIntradayDaysToDownloadSection">Maximum Historical Intraday Days to Download (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings)</h3>
+        <div class="member-link">[<a href="#MaximumHistoricalIntradayDaysToDownloadSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains settings to control the maximum number of days of historical Intraday data that will be downloaded from the remote historical data server when historical Intraday data is downloaded for a symbol.</p>
+
+        <p>There are separate settings for <b>Non-Tick Data</b> and <b>1-Tick Data</b>. <b>Non-Tick data</b> is Intraday data downloaded from the data server which has a timeframe greater than 1 tick/trade. <b>1-Tick Data</b> is Intraday data downloaded from the data server which is tick by tick. Each tick is 1 trade in this case.</p>
+
+        <p>In the case of when the Data/Trading service supports both historical Minute data and Tick data, then there are two separate downloads performed. One for Minute data which uses the <b>Non-Tick Data</b> setting, and one for 1 Tick data which uses the <b>1-Tick Data</b> setting. This is only true in the case of IQ Feed.</p>
+
+        <p>The amount of Historical Intraday data that will actually be downloaded for a symbol depends upon the last Date-Time in the Intraday data file. If the file is empty and is therefore a new Intraday data file, then the <b>Maximum Historical Intraday Days to Download</b> settings will exactly control the number of days downloaded, assuming the server has the same amount of data available. If this setting is set to 90, but the file was only missing 1 day of data from the last Date-Time in the file to the present time, then only 1 day of data will be downloaded.</p>
+
+        <p>When you increase this setting, then this will not automatically cause more data to be inserted into existing Intraday data files. You will need to go to an Intraday chart for the symbol you want to get more data for and then select <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b> on the menu. You only need to do this once per symbol.</p>
+
+        <p>Likewise, when <b>Maximum Historical Intraday Days to Download</b> is reduced, to actually reduce the data in an Intraday chart data file you also need to go to the Intraday chart for the symbol and re-download the data with <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>.</p>
+
+        <p>The <b class="menu_item">Chart &gt;&gt; Chart Settings</b> of an individual chart <em>do not</em> have any effect upon the historical Intraday data which is downloaded.</p>
+
+        <p>Although the only exception to this, is when using the <b>Continuous Contract</b> option in a chart. In this case the number of days of historical data downloaded for historical futures contract symbols is <em>*not*</em> going to follow the <b>Maximum Historical Intraday Days to Download</b> and instead the required data is downloaded.</p>
+
+        <section class="h4">
+            <h4 id="NonTickData">Non-Tick Data (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Maximum Historical Intraday Days to Download)</h4>
+            <div class="member-link">[<a href="#NonTickData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting applies when the <a href="#IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit</a> is set to <b>1 Tick</b>.</p>
+
+            <p>This controls the number of days of Non-Tick data that is downloaded when there is a need to download new data as specified above.</p>
+
+            <p>If this value is higher than the number of days available on the server, then only the number of days of Intraday data on the server will be downloaded.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="1TickData">1-Tick Data (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Maximum Historical Intraday Days to Download)</h4>
+            <div class="member-link">[<a href="#1TickData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting applies when the <a href="#IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit</a> is set to a setting <em>greater than <b>1 Tick</b></em>.</p>
+
+            <p>This controls the number of days of 1-Tick data that is downloaded when there is a need to download new data as specified above.</p>
+
+            <p>If this value is higher than the number of days available on the server, then only the number of days of Intraday data on the server will be downloaded.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="CommonOtherSettingsSection">Common Other Settings (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings)</h3>
+        <div class="member-link">[<a href="#CommonOtherSettingsSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains other settings that are common to all data/trade services.</p>
+
+        <section class="h4">
+            <h4 id="AllowSupportSierraChartDataFeeds">Allow Support for Sierra Chart Data Feeds (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#AllowSupportSierraChartDataFeeds">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>Left click where it says <b>Yes or No</b> to change the state between Yes and No. Press <b>OK</b> after changing the setting to save.</p>
+
+            <p>The <b>Allow Support for Sierra Chart Data Feeds</b> option only applies if you have activated one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> on your Sierra Chart account.</p>
+
+            <p>To use one of the Sierra Chart data feeds in a copy of Sierra Chart you have installed, this option must be set to <b>Yes</b>. To <em>not</em> use one of the Sierra Chart data feeds and instead to use your Trading service provided data feed, then this option must be set to <b>No</b>.</p>
+
+            <p>When the <b>Current Selected Service</b> setting on the <b>Data/Trade Service Settings</b> window is set to <b>SC Data - All Services</b> and <b>Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> is disabled, then it means delayed streaming data will be provided by the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> for the symbols provided by that data feed. Delayed streaming data will also be provided by the <b>Delayed Exchange Data Feed</b> for the symbols that it provides if not subscribed to real-time data for those symbols regardless of how <b>Allow Support for Sierra Chart Data Feeds</b>is set.</p>
+
+            <p>After enabling or disabling this option, it is necessary to reconnect to the data feed with <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</p>
+            
+            <p>You will know that one of the real-time Sierra Chart Exchange Data Feeds is being used for the symbol when you see an <b class="GeneralBackgroundHighlight">[M]</b> indicator after the <em>Symbol</em> on the top line of the chart or Trade DOM. Refer to the image below.</p>
+
+            <div style="text-align: center;"><a href="../images/alternatemappeddatafeedindicator.png" rel="lightbox"><img class="screenshot" loading="lazy" src="../images/alternatemappeddatafeedindicator.png" alt=""></a></div>
+                
+            <p>When using a sub-instance of Sierra Chart through <b class="menu_item">File &gt;&gt; New Instance</b>, you will <em>not</em> see the <b class="GeneralBackgroundHighlight">[M]</b> indicator. However, the real-time data feeds from Sierra Chart are still being used for the symbol as long as <em>you do see</em> the <b class="GeneralBackgroundHighlight">[M]</b> indicator for the same symbol in the <em>main instance</em> of Sierra Chart.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="StoredTimeSalesRecords">Number of Stored Time and Sales Records (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#StoredTimeSalesRecords">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting controls how many Time and Sales records Sierra Chart will maintain in memory during a Sierra Chart session. Each Time and Sales record is equivalent to one trade or one Bid/Ask quote update. The Number of Stored Records applies for each symbol being tracked.</p>
+
+            <p>Using a high <b>Records</b> setting could potentially take a considerable amount of memory. It is recommended to maintain about 5000 <b>Records</b>. If you use 100000, for example, that is going to consume a lot of memory!</p>
+
+            <p>The <b>Number of Stored Time and Sales Records</b> is completely separate from charting. It is only used for the Time and Sales window, the <b>Time and Sales</b> studies, to fill Simulated orders and manage trailing stop orders and certain other types of managed orders, and for other specialized purposes which rely on Time and Sales data. Studies like the <b>Volume by Price</b> study do not rely on this data.</p>
+
+            <p>Changes to this setting do not go into effect until the next reconnection to the data feed. To do this, refer to <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">Reconnecting to Data Feed</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MaximumTimeAndSalesDepthLevels">Maximum Time and Sales Depth Levels (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#MaximumTimeAndSalesDepthLevels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The <b>Maximum Time and Sales Depth Levels</b> setting controls how many market depth levels are included when the total Bid depth quantities and the total Ask depth quantities are calculated and included with the Time and Sales data.</p>
+
+            <p>With Time and Sales Bid and Ask records, the total of the Bid quantities and the total of the Ask quantities in the market depth data are added together and included in the <b>Total Bid Sizes</b> and <b>Total Ask Sizes</b> fields.</p>
+
+            <p>If this is set to 0 all of the market depth levels are added together to calculate the total. Otherwise, the specified number of levels are only added.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="EnableFIXLogging">Enable FIX Logging (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#EnableFIXLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Sierra Chart uses <a href="https://en.wikipedia.org/wiki/FIX_protocol" target="_blank" rel="noopener noreferrer">FIX</a> connections to various supported Trading services.</p>
+
+            <p>When this option is enabled, a log file is maintained for the FIX connection which contains the sent and received messages. Heartbeat messages, market data full refresh and market data incremental refresh messages are not saved because those use too much space.</p>
+
+            <p>The advantage of logging messages is that if there is ever a problem with trading, this log file provides additional data about the messages exchanged.</p>
+
+            <p>The log files are saved in the  <b>Logs</b> subfolder in the folder Sierra Chart is installed to.</p>
+
+            <p>This option does not apply to Trading services that do not use the FIX protocol. It does not apply to <a href="http://www.dtcprotocol.org/" target="_blank" rel="noopener noreferrer">DTC Protocol</a> connections.</p>
+
+            <p>If you need to provide a FIX log to Sierra Chart support, then refer to <a href="index2c4d.html?page=doc/helpdetails79.html">Providing FIX Log to Support</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="LogFIXMarketData">Log FIX Market Data (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#LogFIXMarketData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is enabled, for data services which provide FIX based market data, the  FIX market data messages will be added to the  <b class="menu_item">Window &gt;&gt; Message Log</b>. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ProcessKnownOddLotEquityTradesForDTCServices">Process Known Odd Lot Equity Trades for DTC Services (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#ProcessKnownOddLotEquityTradesForDTCServices">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>  When this option is set to Yes, then  Odd Lot equity trades from the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> for US equities will be processed.   This will cause the price  of  Lot trades to be displayed in the following places:  <a href = "indexc3ee.html?page=doc/TimeandSalesWindow.html">Time and Sales Window</a>. The last trade price box on the  right side of the chart. The Daily High and Low values in the Current Quote Window. The  Daily High and Low values affect the last bar in a Historical Daily Chart.</p>
+            
+            <p>The problem with Odd Lot trades is that they  can and often will be out of range causing what looks like an incorrect Daily High and Low for the day. </p>
+              
+           <p> After changing  this setting,   reconnect to the data feed with  <b class="menu_item">File &gt;&gt; Reconnect</b>.  And reload the  Historical  Daily charts with   <b class="menu_item">Edit &gt;&gt; Reload Historical Charts</b>.</p>
+              
+            <p> It is recommended that this option be set to  No/disabled. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DownloadDividendAdjustedHistoricalData">Download Dividend Adjusted Historical Data (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#DownloadDividendAdjustedHistoricalData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the Historical Daily stock data downloaded will be adjusted for stock dividends. Otherwise, if it is unchecked the data will not be adjusted. This only applies to the <a href="index765f.html?page=doc/SierraChartHistoricalData.php">Sierra Chart Historical Data</a> service.</p>
+
+            <p>After changing this setting, it is necessary to re-download the data in the Historical Daily charts by selecting <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b> for the data in the chart to be updated. This only needs to be done once per symbol and not per chart if the symbol is the same on the charts.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="DownloadTotalVolumeForAllContractsForFuturesDailyData">Download Total Volume for All Contracts for Futures Daily Data (Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Common Other Settings)</h4>
+            <div class="member-link">[<a href="#DownloadTotalVolumeForAllContractsForFuturesDailyData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then when historical daily futures data is downloaded for a particular symbol, the Volume and Open Interest for that symbol will be for all contract months for that particular futures root symbol, which are in existence.</p>
+            
+            <p>When this option is set to <b>No</b> (recommended), then when historical daily futures data is downloaded for a particular symbol, the Volume and Open Interest for that symbol will be for that particular symbol contract month and year only.</p>
+            
+            <p>When using Continuous Futures Contract charts, it is <em>imperative</em> that <b>Download Total Volume for All Contracts for Futures Daily Data</b> be set to No.</p>
+            
+            <p>After changing this setting, to update the Volume and Open interest in a Historical Daily chart, requires that you re-download the data with <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. This needs to be done only once per symbol.</p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ReducingMaximumHistoricalIntradayDaysToDownload1Tick">Reducing the Maximum Historical Intraday Days to Download &gt;&gt; 1-Tick Data Setting</h2>
+    <div class="member-link">[<a href="#ReducingMaximumHistoricalIntradayDaysToDownload1Tick">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using some Data and Trading services (like IQ Feed), it can be slow to download 1 Tick data due to how those services work. Follow the instructions below to reduce the <b>Maximum Historical Intraday Days to Download &gt;&gt; 1-Tick Data</b> setting in order to increase the speed of historical Intraday data downloading.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</li>
+
+        <li>Select the <b>Common Settings</b> tab.</li>
+
+        <li>Set the <b>Maximum Historical Intraday Days to Download &gt;&gt; 1-Tick Data</b> to <em>31</em> or lower.</li>
+
+        <li>If Sierra Chart is currently connected to the data feed, and you want to cancel the existing historical Intraday data downloads and use this new lower setting, then select <b class="menu_item">File &gt;&gt; Disconnect</b>. After this, select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SavingLoadingSettings">Saving and Loading Service Settings</h2>
+    <div class="member-link">[<a href="#SavingLoadingSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Data and Trading <a href="#ServiceSpecificSettings">Service Specific Settings</a> on the <b>Data/Trade Service Settings</b> window, can be saved and restored at a later time.</p>
+
+    <p>Only the Service specific settings can be saved and loaded. Not the common settings.</p>
+
+    <p>This is useful if you have different sets of settings for the <em>same</em> Data or Trading service and you need to switch between them.</p>
+
+    <p>The settings for different Data and Trading services are already stored separately by Sierra Chart.</p>
+
+    <p>Below are the descriptions of the available commands for this feature and explanations of how to use them.</p>
+
+    <ul>
+        <li><b>Main Settings &gt;&gt; Saved DTS Configuration &gt;&gt; [Load]</b>: This button is used to load a saved set of settings into the service specific settings controls. It is first necessary to select an existing configuration from the <b>DTS Config</b> list box before pressing this button. Refer to the image below. When loading existing settings, the <b>Service</b> setting will be changed to the service that the settings are for.
+            <br> <br>
+            After you <b>Load</b> the new settings for the same <b>Service</b> that Sierra Chart is already connected to and press OK, it is the necessary to <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" target="_blank" rel="noopener noreferrer">reconnect</a> to the data feed to use the new settings.
+        </li>
+
+        <li><b>Main Settings &gt;&gt; Saved DTS Configuration &gt;&gt; [Save]</b>: This button is used to save the service specific settings. It is first necessary to type in a name in the <b>DTS Config</b> box or select the name from the list that you want to save the settings as.</li>
+
+        <li><b>Main Settings &gt;&gt; Saved DTS Configuration &gt;&gt; [Delete]</b>: This button is used to delete previously saved settings. It is first necessary to select the name of the previously saved settings in the <b>DTS Config</b> list box.</li>
+    </ul>
+
+    <div style="text-align: center;"><a href="../images/saveloadservicesettings.png" rel="lightbox"><img src="../images/saveloadservicesettings.png" class="screenshot" loading="lazy" alt="" width="400" ></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="BandwidthUsage">Bandwidth Usage</h2>
+    <div class="member-link">[<a href="#BandwidthUsage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Occasionally we are asked about the bandwidth usage of Sierra Chart. This would be the number of bits/bytes per second on average Sierra Chart would use for received data.</p>
+
+    <p>It is impossible for us to answer this question with any degree of accuracy. The reasons for this are as follows:</p>
+
+    <ol>  
+        <li>We do not know the bandwidth usage of the particular Data or Trading service you are using and the bandwidth usage of those services.</li>
+
+        <li>We  do not know how many symbols you are tracking.</li>
+
+        <li>We do not know the market activity of those symbols.</li>
+
+        <li>The amount of bandwidth usage is also affected by the amount of historical data being downloaded. Although historical data downloading is relatively infrequent.</li>
+    </ol>
+
+    <p>You are able to monitor the bandwidth usage of an individual process running within Windows. From within Windows you can access this through <b>Windows Task Manager &gt;&gt; Performance &gt;&gt; Resource Monitor</b>. For further information, consult with the documentation for the Resource Monitor.</p>
+    
+    <p>You can also see how much data over a period of time Sierra Chart is receiving for streaming data on the current connection. This is shown on the <a href="index2422.html?page=doc/StatusBar.html">Status Bar</a> and is supported with many of the supported Data/Trading Services.</p>
+</section>
+
+<hr><p>*Last modified Thursday, 08th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DataSourceSettings.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:10 GMT -->
+</html>  

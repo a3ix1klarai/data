@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeMenu.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105656') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/TradeMenu.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Trade Menu -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index96f7.html?page=doc/TradeMenu.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index96f7.html?page=doc/TradeMenu.html">Trade Menu</a></h4> </div>     <h1 class="PageName">Trade Menu</h1>
+
+<hr>
+<ul>
+	<li><a href="#TradeSimulationModeOn">Trade Simulation Mode On</a></li>
+	<li><a href="#TradingLocked">Trading Locked</a></li>
+	<li><a href="#OpenTradeWindow">Open Trade Window for Chart</a></li>
+	<li><a href="#AttachTradeWindow">Attach Trade Window To Chart Window</a></li>
+	<li><a href="#ChartTradeModeOn">Chart Trade Mode On</a></li>
+	<li><a href="#TradingChartDOMOn">Trading Chart DOM On</a></li>
+	<li><a href="#ShowOrderFills">Show Order Fills</a></li>
+	<li><a href="#ShowOrdersAndPosition">Show Orders And Position</a></li>
+	<li><a href="#OnlyOrdersFromChart">Only Orders From Chart</a></li>
+	<li><a href="#ShowMarketDataColumns">Show Market Data Columns</a>
+		<ul>
+			<li><a href="#ShowMarketDataColumns_AdditionalSteps">Additional Steps</a></li>
+		</ul>
+	</li>
+	<li><a href="#DrawDOMGraph">Draw DOM Graph on Chart</a>
+		<ul>
+			<li><a href="#SettingColorsOfTheDOMGraph">Setting the Colors of the DOM Graph</a></li>
+			<li><a href="#DOMGraphLinesAreTooShort">DOM Graph Lines Are Too Short</a></li>
+		</ul>
+	</li>
+	<li><a href="#ReCenterTradeDOMScales">Re-Center Trade  DOM Scales</a></li>
+	<li><a href="#ClearRecentBidAskVolumeOnChartDOM">Clear Recent Bid/Ask Volume</a></li>
+	<li><a href="#ClearCurrentTradedBidAskVolumeOnChartDOM">Clear Current Traded Bid/Ask Volume</a></li>
+	<li><a href="#ClearRecentBidAskVolume-AllSymbols">Clear Recent Bid/Ask Volume - All Symbols</a></li>
+	<li><a href="#ClearCurrentTradedBidAskVolume-AllSymbols">Clear Current Traded Bid/Ask Volume - All Symbols</a></li>
+	<li><a href="#TradeOrdersWindow">Trade Orders Window</a></li>
+	<li><a href="#TradePositionsWindow">Trade Positions Window</a></li>
+	<li><a href="#AccountBalancesWindow">Account Balances Window</a></li>
+	<li><a href="#TradeServiceLog">Trade Service Log</a></li>
+	<li><a href="#RefreshTradeDataFromService">Refresh Trade Data From Service</a></li>
+	<li><a href="#TradeActivityLog">Trade Activity Log</a></li>
+	<li><a href="#GlobalTradeSettings">General Trade Settings</a></li>
+	<li><a href="#ChartTradeSettings">Chart Trade Settings</a></li>
+	<li><a href="#ChartDOMSettings">Chart DOM Settings</a></li>
+	<li><a href="#CustomizeChartTradeDOMColumns">Customize Chart/Trade DOM Columns</a></li>
+	<li><a href="#ClearTradeSimulationData">Clear Trade Simulation Orders &amp; Data</a></li>
+	<li><a href="#AutoTradeSystemBarBasedBacktest">AutoTrade System Bar Based Backtest</a></li>
+	<li><a href="#AutoTradeSystemBarBasedBacktestWithScan">AutoTrade System Bar Based Backtest with Scan</a></li>
+	<li><a href="#AutoTradeSystemReplayBacktest">AutoTrade System Replay Backtest</a></li>
+	<li><a href="#TradingKeyboardShortcutsEnabled">Trading Keyboard Shortcuts Enabled</a></li>
+	<li><a href="#AutoTradingEnabled">Auto Trading Enabled - Global</a></li>
+	<li><a href="#AutoTradingEnabled_Chart">Auto Trading Enabled - Chart</a></li>
+	<li><a href="#DisableAutoTradingOnStartup">Disable Auto Trading On Startup</a></li>
+	<li><a href="#GotoNextChartFill">Goto Next Chart Fill</a></li>
+	<li><a href="#GotoPreviousChartFill">Goto Previous Chart Fill</a></li>
+</ul>
+<hr>
+
+<section class="h2">
+
+    <section class="h3">
+        <h3 id="TradeSimulationModeOn">Trade Simulation Mode On (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradeSimulationModeOn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this menu item is checked/enabled, then <a href="indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a> is globally enabled. </p>
+        
+        <p>This is a global state. All submitted orders, order modifications and order cancellations will be simulated when Trade Simulation Mode is enabled.</p>
+        
+        <p>When Trade Simulation Mode is enabled, the <a href = "index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Trade Account</a> setting on the Trade Window for charts is set to a simulated account (Sim#).  </p> 
+
+        <p>However,  in newer versions the Trade Window does list and support selecting non-simulated accounts as well to allow the  <a href = "index9600.html?page=doc/ReplayChart.html">replaying</a> of non-simulated order fill activity. </p>
+        
+        <p> When a chart is   <a href = "index9600.html?page=doc/ReplayChart.html">replaying</a> it is <em>not</em> possible to disable Trade Simulation Mode. The checkmark cannot be removed and an error message is added  to the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b> about this (<em>Cannot disable Trade Simulation Mode while a chart is replaying.</em>).   Therefore, it is necessary first to stop replaying all of the charts  before you can disable Trade Simulation Mode.</p>
+        
+         <p> With some supported Trading services, like   <b>Trading Evaluator</b>, it is not possible to  enable  Trade Simulation Mode  unless a chart is replaying. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="TradingLocked">Trading Locked (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradingLocked">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When <b>Trading Locked</b> is enabled, has a checkmark beside it, then this means that order submissions, order modifications  and order cancellations from anywhere within Sierra Chart,  including the <a href="indexedef.html?page=doc/DTCServer.php" >DTC Server</a> are blocked and will give an error message in the <b class = "menu_item">Trade &gt;&gt; Trade Service Log</b>.</p>
+
+        <p>When <b> Trading Locked</b> is disabled, then none of this applies.</p>
+        
+        <p>You can also add a  <a href = "index6736.html?page=doc/ControlBar.php">Control Bar</a> button for  <b class="menu_item">Trading Locked</b> so that you can quickly enable and disable it through a button. </p>
+        
+        <p> Trading can also be locked by the <a href = "index8118.html?page=doc/GlobalProfitLossManagement.php">Global Profit/Loss Management</a> functionality.  To disable it, refer <a href = "index8118.html?page=doc/GlobalProfitLossManagement.php#LockTrading">Lock Trading</a> to the setting.  When trading is locked by Global Profit/Loss Management, the <b class="menu_item">Trade &gt;&gt; Trading Locked</b> menu command will  <em>not</em> be checked. Although trading will still be locked in the background. </p> 
+    </section>
+
+    <section class="h3">
+        <h3 id="OpenTradeWindow">Open Trade Window for Chart (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#OpenTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index9473.html?page=doc/TradeWindow.html">Trade Window</a> for the active chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachTradeWindow">Attach Trade Window To Chart Window (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#AttachTradeWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Attaches the <a href="index9473.html?page=doc/TradeWindow.html">Trade Window</a> for the active chart to the chart window. It can be attached to the left or right side. By default it is attached to the left side. To move it to the right side, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading</b> and enable <b>Attach Trade Window to Right Side</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeModeOn">Chart Trade Mode On (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ChartTradeModeOn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this menu item is checked/enabled, then  <a href="index3c50.html?page=doc/ChartTrading.html" Target="_blank" rel="noopener noreferrer">Chart Trade Mode</a> for the active chart is enabled.</p>
+        
+        <p> This means that  order entry, modification, and cancellation is supported directly from the chart itself.   </p>
+        
+        <p>This menu command applies for the active chart. It is not global.</p>
+        
+        
+        <p> If you want to just display orders on the chart but not be able to modify or cancel them, then disable   <b class = "menu_item">Trade &gt;&gt; Chart Trade Mode On</b> and instead enable <b class = "menu_item">Trade &gt;&gt; Show Orders and Position</b>. </p>
+        
+        <p>  <a href="index6736.html?page=doc/ControlBar.php"  target="_blank" rel="noopener noreferrer">Control Bar</a> buttons can be set up for each of these commands. </p>
+       
+       <p> In the case of a simulated order when <b class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is enabled, it is necessary that either  <b class = "menu_item">Trade &gt;&gt; Chart Trade Mode On</b>  or <b class = "menu_item">Trade &gt;&gt; Show Orders and Position</b> is enabled. Otherwise, the order will <em>not</em> fill. This is explained in the <a href="indexad24.html?page=doc/TradeSimulation.php#FillPricesWrong_OrdersDoNotFill" Target="_blank" rel="noopener noreferrer" >Orders Do Not Fill When Expected</a> section.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="TradingChartDOMOn">Trading Chart DOM On (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradingChartDOMOn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When  the <b>Trading Chart DOM On </b> menu item is checked/enabled, then the <a href="index3c50.html?page=doc/ChartTrading.html#ChartDOM">Chart DOM</a> is displayed and functional for the active chart.</p>
+
+        <p>The <b>Chart DOM</b> allows you to enter orders using a price ladder style interface, that is directly integrated into the chart.</p>
+
+        <p>This option is always enabled  for a dedicated  <a href="index3c50.html?page=doc/ChartTrading.html#TradeDOM" target="_blank" rel="noopener noreferrer">Trading DOM</a> window.</p>
+
+        <p>The Chart DOM can be customized to display market data columns   and the order of all of the columns can be changed. For instructions, refer to <a href="index4451.html?page=doc/GlobalTradeSettings.html#CustomizeChartTradeDOMColumns" Target="_blank" rel="noopener noreferrer">Customize Chart/Trade DOM Columns</a>.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="ShowOrderFills">Show Order Fills (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ShowOrderFills">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this menu command is checked, then Order Fills will be displayed on the chart. Order Fills are displayed as  small boxes on the chart indicating the Quantity and Price of the fill and other fill data along with a corresponding arrow at the price level of the fill. This command applies to the active chart. The data that is displayed can be customized. For complete documentation, refer to <a href="index3c50.html?page=doc/ChartTrading.html#DisplayingOrderFills">Displaying Order Fills on the Chart</a> documentation.</p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="ShowOrdersAndPosition">Show Orders And Position (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ShowOrdersAndPosition">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this menu item is checked, then working orders for the Symbol and <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount" target="_blank" rel="noopener noreferrer">Trade Account</a> of the chart will be displayed on the chart. The Trade Position line will be displayed on the chart as well. Although it may not be visible if the Position Average Price is not known or its Average Price is outside of the range of prices currently displayed on the chart.</p>
+
+        <p>For additional information,  refer to the  <a href="index3c50.html?page=doc/ChartTrading.html" target="_blank" rel="noopener noreferrer">Chart Trading</a> documentation.</p>
+
+        <p>This option is always set to be on when <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b> is enabled. Therefore, to actually uncheck <b>Show Orders And Position</b> it is first necessary that <b class="menu_item">Trade &gt;&gt; Chart Trade Mode On</b>  <em> be unchecked</em>.</p>
+        
+        <p>  Also make sure that <b class = "menu_item">Trade &gt;&gt; Only Orders from Chart</b> is disabled to see orders from other charts and Trading DOMs. </p>
+        
+        <p> To see child Attached Orders on the chart, it is also necessary to disable/uncheck <b class = "menu_item">Menu &gt;&gt;  Settings  &gt;&gt; Hide Pending Attached Orders </b> through the  <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Trade Window</a> menu.  </p>
+        
+         <p> In the case of a simulated order when <b class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> is enabled, it is necessary that either  <b class = "menu_item">Trade &gt;&gt; Chart Trade Mode On</b>  or <b class = "menu_item">Trade &gt;&gt; Show Orders and Position</b> is enabled. Otherwise, the order will <em>not</em> fill. This is explained in the <a href="indexad24.html?page=doc/TradeSimulation.php#FillPricesWrong_OrdersDoNotFill" Target="_blank" rel="noopener noreferrer" >Orders Do Not Fill When Expected</a> section.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OnlyOrdersFromChart">Only Orders From Chart (<b Class = "menu_item">Trade</b> menu)</h3> 
+        <div class="member-link">[<a href="#OnlyOrdersFromChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this menu item is checked, then only orders which originated from the chart or Trade DOM will be displayed. Otherwise, any order from any other chart or Trade DOM that matches the Symbol and Trade Account will also be displayed.</p>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="ShowMarketDataColumns">Show Market Data Columns (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ShowMarketDataColumns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this menu command is checked,  the configured Chart/Trade DOM  columns will be displayed on the Values Scale area on the right side of the chart. However,  order  entry is not possible unless  <b Class = "menu_item">Trade &gt;&gt; Trading Chart DOM On</b>  is also enabled.</p>
+
+        <p>To configure the columns, refer to <a href="index4451.html?page=doc/GlobalTradeSettings.html#CustomizeChartTradeDOMColumns"  target="_blank" rel="noopener noreferrer" >Customize Chart/Trade DOM Columns</a>.</p>
+
+        <p>If   <b Class = "menu_item">Trade &gt;&gt; Trading Chart DOM On </b>  is disabled, then the buy and sell order entry columns will not be displayed.</p>
+
+
+        <p>When the <b class="menu_item">Trade &gt;&gt; Trading Chart DOM On</b> is enabled,  the <b>Show Market Data Columns</b> menu command will be disabled   since the market data columns will be displayed in that case.</p>
+
+        <section class="h4">
+			<h4 id="ShowMarketDataColumns_AdditionalSteps">Additional Steps</h4>
+			<div class="member-link">[<a href="#ShowMarketDataColumns_AdditionalSteps">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ol>
+                <li>The  <b>Bid Size</b> and <b>Ask Size</b> columns need to be added to the Chart DOM to see the market  depth sizes/quantities in the Values Scale. Otherwise, they will not display. To add these columns, select <b class="menu_item">Trade &gt;&gt; Customize Chart/Trade DOM Columns</b>. There are various configurations available for the Bid Size and Ask Size columns.  It is recommended to add the <b> Combined Bid/Ask Size-Centered</b> column for this purpose.</li>
+
+
+                <li>There needs to be market depth data available from the Data or Trading service you are using to see the market depth sizes/quantities. For additional information, refer to <a href="index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow" >Open Market Depth Window</a>.</li>
+
+                <li>You may want to use the <b>Constant Range</b> Scale Range type and expand the scale vertically, in order to see all of the available Bid and Ask sizes without overlapping. For more information, refer to the <a href="index981f.html?page=doc/Scaling.html">Chart Scale and Scale Adjusting</a> documentation page.</li>
+            </ol>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="DrawDOMGraph">Draw DOM Graph on Chart  (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#DrawDOMGraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/domgraph.png" rel="lightbox"><img src="../images/domgraph.png" class="WideFloatRight" alt="  "></a>
+
+        <p>When the  <b class="menu_item">Trade &gt;&gt; Draw DOM Graph on Chart</b> menu command is checked, then a graph of the depth of market (DOM) quantities for all of the available Bid and Ask levels will be drawn on the right side of the chart. This option is specific to each individual chart and applies to the active chart window.</p>
+
+        <p>To be able to see the DOM Graph for a particular symbol, there are several conditions which need to be true.  The  Data or Trading service you are using with Sierra Chart must provide market depth data for the symbol of the chart.</p>
+
+        <p>Check with the service you are using to see if this data is available.  There needs to be a connection to the data feed (<b class="menu_item"> File &gt;&gt; Connect to Data Feed </b>). The market for the symbol needs to be open and trading. If these conditions are not true, there will not be a visible graph.  Or only a single level of depth will be visible.</p>
+
+        <p>By default you will see the total quantities for all of the Ask prices and the total quantities for  all of the Bid prices displayed along with the percentages that these are of the total of all of the market depth quantities.</p>
+
+        <p>Settings to control the display of this graph are found in <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Market Depth &gt;&gt; DOM Graph</b>.</p>
+
+        <div style="text-align: center;"><a href="../images/chartsettings_domgraph.png" rel="lightbox"><img src="../images/chartsettings_domgraph.png" alt="" class="screenshot" loading="lazy" width="550"></a></div>
+
+
+        <p>The settings are documented below.</p>
+
+        <ul>
+            <li><b>Draw DOM Graph on Chart</b>: When this option is enabled, the <b>Depth of Market</b> graph is displayed on the right side of the chart.</li>
+
+            <li><b>Show Volume Numbers</b>: When this option is enabled, each line of the Depth of Market graph will have the volume for that line displayed as text beside it. If the volume lines are all close together, then this option is not going to be useful because it will be hard to read the volume numbers.</li>
+
+
+            <li><b>Only Levels with Greatest Volume</b>: When this option is enabled, only the Bid and Ask levels that have the greatest volume will have lines displayed for them.</li>
+
+            <li><b>Show Volume Totals and Percentages</b>: When this option is enabled, then the total of the depth volumes and the percentages, are calculated for the bid side and the ask side and displayed.</li>
+
+            <li><b>Show Spread</b>: When this option is enabled, the difference between the best ask price and the best bid price is calculated and displayed on the DOM Graph.</li>
+
+            <li><b>Show Bid and Ask Prices</b>: When this option is enabled, the Ask and Bid prices are displayed at the top and bottom of the DOM Graph respectively.</li>
+
+            <li><b>Width in Bars</b>: This sets the width of the DOM Graph based upon the specified number of chart bars.</li>
+
+
+        </ul>
+
+        <p>The DOM graph is drawn on the right side of the chart. The chart bars will overlay this graph. What you need to do to prevent this is first make certain there is no checkmark by <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b>. Scroll  the chart toward the left using the scrollbar at the bottom of the chart  to create space for the DOM graph  on right side of the chart. And enable <b class="menu_item">Chart &gt;&gt; Lock Fill Space</b>.</p>
+
+        <section class="h4">
+            <h4 id="SettingColorsOfTheDOMGraph">Setting the Colors of the DOM Graph</h4>
+
+            <p>To set the colors used for the DOM Graph, select <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> or <b class="menu_item">Chart &gt;&gt; Graphics Settings</b> (to set the colors specific to the active chart) on the menu. Set the color for  <b>DOM Graph Ask Lines </b> and <b>DOM Graph Bid Lines</b>.</p>
+        </section>        
+        
+        <section class="h4">
+            <h4 id="DOMGraphLinesAreTooShort">DOM Graph Lines Are Too Short</h4>
+            <div class="member-link">[<a href="#DOMGraphLinesAreTooShort">Link</a>] - [<a href="#top">Top</a>]</div>
+            <p>If you notice the DOM Graph lines being too short, the reason for this is simply that there is a much larger depth value  somewhere on the Bid side or  Ask side. The overall size of the lines is limited  according to the    <b>Width in Bars </b> setting. Therefore, when there is a   large  market depth volume value, that would cause all the other  lines to become smaller and have less differentiation.</p>
+
+            <p>   <a href = "index981f.html?page=doc/Scaling.html#InteractiveScalingExpandCompress">Expand the range</a> of prices displayed to see if you can notice the large  market depth volume value.</p>
+
+            <p>One method to overcome this is to use the option for   <a href = "index4cf4.html?page=doc/ChartSettings.html#MaximumMarketDepthLevels">Maximum Market Depth Levels</a> and set this to a value that will  filter the outlying depth values. </p>
+
+            <p>Another option would be to use the  <a href = "index0cc3.html?page=doc/StudiesReference.php&amp;ID=375#Market_Depth_Historical_Graph">Market Depth Historical Graph</a> and use color rather than bar length as a visual  indication of the market depth volume values.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReCenterTradeDOMScales">Re-Center Trade  DOM Scales (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ReCenterTradeDOMScales">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When  the <b>Re-Center Trade  DOM Scales</b> command is selected, the   <a href = "index981f.html?page=doc/Scaling.html#ConstantRange_ScaleRange">Constant Range</a> scales for all of the open Trade DOM windows in all Chartbooks are reset which means the price will be re-centered.</p>  
+        
+        <p>However, if the scale of the Trade DOM was manually offset from its true center by <a href = "index981f.html?page=doc/Scaling.html#InteractiveScalingMoveUpDown">dragging the price scale up or down</a>, then that offset will continue to remain.</p>
+
+        <p>You may want to set up a <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts" Target="_blank" rel="noopener noreferrer">Keyboard Shortcut</a> or add a <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar"  target="_blank" rel="noopener noreferrer">Control Bar</a> button for this command.</p>
+        
+        <p> An individual  Chart/Trade DOM can be recentered simply by double clicking on the Price scale.  Refer to the     <a href="index981f.html?page=doc/Scaling.html#InteractiveScalingResetting" >Interactive Scaling Resetting</a> documentation.</p>
+          
+        <p>  Also  refer to   <a href="index3c50.html?page=doc/ChartTrading.html#ScalingtheChartDOM" >Scaling the Chart DOM</a>.  </p>
+
+        <p>Additionally, you can create either a <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts" Target="_blank" rel="noopener noreferrer">Keyboard Shortcut</a> or  a <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar"  target="_blank" rel="noopener noreferrer">Control Bar</a>  button to reset an individual Chart/Trade DOM Scale by using the  <b>Reset Scales</b> item.  </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ClearRecentBidAskVolumeOnChartDOM">Clear Recent Bid/Ask Volume (<b class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ClearRecentBidaskVolumeOnChartDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this command is selected, then the  <a href = "index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_RecentBidVolume">Recent Bid/Ask Volume</a> market data columns  on the  Chart and Trade DOMs  are fully cleared for the same symbol as the active chart / Trade DOM.</p>
+        
+         <p>  This applies to all charts that are not replaying. In the case of a replaying chart, this command only affects the very specific active chart or Trade DOM which is active when the command is selected. </p>
+         
+         <P> This command is also accessible when you right-click on the price scale of a Chart/Trade DOM. </P>
+
+        <p> A  <a href = "indexfbca.html?page=doc/KeyboardCommands.html">Keyboard Shortcut</a> can be set for this menu command. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ClearCurrentTradedBidAskVolumeOnChartDOM">Clear Current Traded Bid/Ask Volume (<b class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ClearCurrentTradedBidAskVolumeOnChartDOM">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this command is selected, then the  <a href = "index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CurrentTradedBidVolume">Current Traded Bid Volume,  Ask Volume, Total Volume</a> market data columns  on the  Chart and Trade DOMs  are fully cleared for the same symbol as the active chart / Trade DOM.</p>
+        
+         <p>  This applies to all charts that are not replaying. In the case of a replaying chart, this command only affects the very specific active chart or Trade DOM which is active when the command is selected. </p>
+         
+          <P> This command is also accessible when you right-click on the price scale of a Chart/Trade DOM. </P>
+         
+         <p> A  <a href = "index6536.html?page=doc/KeyboardCommaands.html">Keyboard Shortcut</a> can be set for this menu command. </p>
+          
+    </section>
+    
+    <section class="h3">
+        <h3 id="ClearRecentBidAskVolume-AllSymbols">Clear Recent Bid/Ask Volume - All Symbols (<b class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ClearRecentBidAskVolume-AllSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>When this command is selected, then the  <a href = "index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_RecentBidVolume">Recent Bid/Ask Volume</a> market data columns  on the  Chart and Trade DOMs  are fully cleared for all symbols.</p>
+        
+         <p>  This applies to all charts in all open Chartbooks.  </p>
+         
+        <p> A  <a href = "indexfbca.html?page=doc/KeyboardCommands.html">Keyboard Shortcut</a> can be set for this menu command. </p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="ClearCurrentTradedBidAskVolume-AllSymbols">Clear Current Traded Bid/Ask Volume - All Symbols (<b class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ClearCurrentTradedBidAskVolume-AllSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+       
+       <p>When this command is selected, then the <a href = "index4451.html?page=doc/GlobalTradeSettings.html#ColumnDescription_CurrentTradedBidVolume">Current Traded Bid Volume,  Ask Volume, Total Volume</a> market data columns on the  Chart and Trade DOMs  are fully cleared for all symbols.</p>
+        
+       <p>This applies to all charts in all open Chartbooks.  </p>
+         
+       <p>A <a href = "indexfbca.html?page=doc/KeyboardCommands.html">Keyboard Shortcut</a> can be set for this menu command. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeOrdersWindow">Trade Orders Window (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradeOrdersWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradeOrders">Trade Orders</a> window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradePositionsWindow">Trade Positions Window (<b class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradePositionsWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#PositionsWindow">Trade Positions</a> window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AccountBalancesWindow">Account Balances Window (<b class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#AccountBalancesWindow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#AccountBalanceTab">Account Balances</a> window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeServiceLog">Trade Service Log (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradeServiceLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#TradeServiceLog">Trade Service Log</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="RefreshTradeDataFromService">Refresh Trade Data From Service (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#RefreshTradeDataFromService">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b> Refresh Trade Data From Service </b> command requests the open  Orders and current Trade Positions from the connected Trading service.</p>
+
+        <p>In some cases a request for Trade Positions will not occur depending upon how Positions are determined  from the connected Trading Service.</p>
+
+        <p>There is not a need to normally use this command because the Trade Orders and Positions are kept up-to-date automatically.</p>
+
+        <p>The general reason why this command would be used is if you see for example an order which is in a Pending Cancel state and actually has been Canceled but there has been no response from the connected Trading service indicating that the cancel operation has completed. When this command is selected, the order will be marked as Canceled if it is no longer Open.</p>
+        
+        <p>Depending upon the particular Trading server Sierra Chart is connected to, this command may or may not have any effect or work as intended.   The more sure way to refresh the Order list and Trade Positions list is to reconnect to the data feed with  <b class="menu_item">File &gt;&gt; Disconnect</b> followed by  <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. </p>
+        
+        <p> When using a Sierra Chart Order Routing service, then   <b class="menu_item">Refresh Trade Data from Service</b> command will work as intended but it should never have to be used to begin with. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeActivityLog">Trade Activity Log (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradeActivityLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a>.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="GlobalTradeSettings">General Trade Settings (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#GlobalTradeSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index4451.html?page=doc/GlobalTradeSettings.html#GeneralTradeSettings">General Trade Settings</a> window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartTradeSettings">Chart Trade Settings (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ChartTradeSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartTradeSettings">Chart Trade Settings</a> window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ChartDOMSettings">Chart DOM Settings (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ChartDOMSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Opens the <a href="index4451.html?page=doc/GlobalTradeSettings.html#ChartDOMSettings">Chart DOM Settings</a> window.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="CustomizeChartTradeDOMColumns">Customize Chart/Trade DOM Columns (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#CustomizeChartTradeDOMColumns">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command opens the Customize Chart/Trade DOM Columns window.  Use this to customize the market data and order entry columns on the active Chart or Trade DOM.</p>
+
+        <p>For the market data columns and order entry columns to be visible on a chart,  the chart needs to have <b Class = "menu_item">Trade &gt;&gt; Trading Chart  DOM On</b> enabled.</p>
+
+        <p>For more information, refer to <a href="index3c50.html?page=doc/ChartTrading.html#CustomizeChartDOMColumns">Customize Trade  DOM and Chart DOM Columns</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ClearTradeSimulationData">Clear Trade Simulation Orders &amp; Data (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#ClearTradeSimulationData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this command is selected and you press  <b>Yes</b> to confirm, simulated Open orders are canceled, all simulated orders listed in the  <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b> are removed, and any records in the Trade Activity Log for simulated orders and trades are removed for  all internal  <em>simulated</em> trade accounts.</p>
+                
+        <p>This operation performs a Trade Activity  query to delete the internal simulated Trade Activity records.  Depending upon how much Trade Activity data Sierra Chart has stored for the simulated trading accounts, this can take a significant amount of time. When you perform this command, go to the <b class="menu_item">Trade &gt;&gt; Trade  Activity Log</b>. Look at the  <b>Query Count</b> status at the top left.  When it goes to 0, then the operation is definitely completed.  Until that goes to 0, this operation could still be in progress or other Trade Activity query operations are in progress.</p>
+        
+        <p>For an alternative to clear simulated  trading activity for a specific Symbol and/or  Trade Account, refer to the <a href =  "index509f.html?page=doc/TradeActivityLog.php#ClearingTradeActivityData">Clearing Trade Activity Data</a> instructions. However, this only clears simulated trade activity in the  <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>.   This will not cancel any  simulated open orders for the selected  Symbol  and Trade Account. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="AutoTradeSystemBarBasedBacktest">AutoTrade System Bar Based Backtest (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#AutoTradeSystemBarBasedBacktest">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For complete documentation about automated trading system back testing and this particular command, refer to the <a href="indexe891.html?page=doc/Backtesting.php#BarBasedBackTesting" target="_blank" rel="noopener noreferrer">Auto Trade System Back Testing</a> page.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="AutoTradeSystemBarBasedBacktestWithScan">AutoTrade System Bar Based Backtest with Scan (<b Class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#AutoTradeSystemBarBasedBacktestWithScan">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This command initiates a Bar Based back test for an automated trading system as is documented on the <a href="indexe891.html?page=doc/Backtesting.php#BarBasedBackTesting" target="_blank" rel="noopener noreferrer">Auto Trade System Back Testing</a> page, for each symbol in the <a href = "indexa1a5.html?page=doc/SwitchingSymbols.html#AssociatedSymbolList" target="_blank" rel="noopener noreferrer">Associated Watch List</a> for the chart. It iterates through the symbols one at a time performing the back test on each one, one at a time.</p>
+
+         <p>If there are many symbols, this can take a while to complete. To stop this process of iteration, select  <b class="menu_item">Chart &gt;&gt; Stop Scan</b>.</p> 
+         
+         <p>  The results of the back testing for each symbol can be viewed through the  <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity" target="_blank" rel="noopener noreferrer">Trade Activity Log</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutoTradeSystemReplayBacktest">AutoTrade System Replay Backtest  (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#AutoTradeSystemReplayBacktest">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For complete documentation about automated trading system back testing and this particular command, refer to the <a href="indexe891.html?page=doc/Backtesting.php">Auto Trade System Back Testing</a> page.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradingKeyboardShortcutsEnabled">Trading Keyboard Shortcuts Enabled (<b class="menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#TradingKeyboardShortcutsEnabled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is checked/enabled, then Trading Keyboard Shortcuts that have been setup through <b class="menu_item">Global Settings &gt;&gt; Customize Keyboard Shortcuts &gt;&gt; Trading Keyboard Shortcuts</b> will be available. Otherwise, these keyboard shortcuts will not perform the assigned trading activity when selected.</p>
+
+        <p>For more information refer to <a href="index9473.html?page=doc/TradeWindow.html#KeyboardShortcuts">Trading Keyboard Shortcuts</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutoTradingEnabled">Auto Trading Enabled - Global (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#AutoTradingEnabled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is checked/enabled, then automated trading systems are allowed to Submit, Modify and Cancel trade orders.</p>
+
+        <p>If this option is not checked, then automated trading systems are not allowed to Submit, Modify or Cancel trade orders.</p>
+
+        <p>An automated trading system is one created with the <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php" Target="_blank" rel="noopener noreferrer">Spreadsheet System for Trading</a> study or a study function that uses the <a href="index2bf5.html?page=doc/ACSILTrading.html"  target="_blank" rel="noopener noreferrer">ACSIL (Advanced Custom Study Interface and Language) Trading</a> functions. 
+        
+         <p>This command in no way affects trades manually entered orders or <a href="index0ef8.html?page=doc/AttachedOrders.html" >Attached Orders</a>.</p>
+
+        <p>When an automated trading system is denied the ability to Submit, Modify or Cancel an order because this option is not checked, a message will be added to the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b> indicating this.</p>
+        
+         <p>When automated trading is disabled, it also stops trading from the  <a href="index0ef8.html?page=doc/AttachedOrders.html#StudyControlledTargetsStops" >Trade Management by Study</a> study.</p>
+
+        <p>This is a global option that affects all open charts in all open Chartbooks.</p>
+        
+        <p>There is also the  <a href="#AutoTradingEnabled_Chart" >Auto Trading Enabled - Chart</a> option which disables automated trading for an individual chart. </p> 
+
+        <p> Under no condition does this option ever get automatically enabled but it can be disabled automatically under some conditions. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutoTradingEnabled_Chart">Auto Trading Enabled - Chart (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#AutoTradingEnabled_Chart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is checked/enabled,  then the automated trading system for the active chart is allowed to Submit, Modify and Cancel trade orders.  <b Class = "menu_item">Auto Trading Enabled - Global</b>  must also be enabled as well for the chart to be able to Submit, Modify and Cancel trade orders.</p>
+
+        <p>If this option is not checked,  then the automated trading system for the active chart is not allowed to Submit, Modify or Cancel trade orders.</p>
+       
+       <p>  If the chart that this has been enabled or disabled for, is no longer the active chart, then the Auto Trading Enabled state  it was set to, still remains in effect for that particular chart. </p>
+
+        <p>For additional information, refer to <a href="#AutoTradingEnabled" >Auto Trading Enabled - Global</a>.</p>
+        
+        <p> Under no condition does this option ever get automatically enabled but it can be disabled automatically under some conditions. </p>
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="DisableAutoTradingOnStartup">Disable Auto Trading On Startup (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#DisableAutoTradingOnStartup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When this option is checked/enabled, then when Sierra Chart is started, the <b>Auto Trading Enabled - Global</b> option on the menu will be disabled.</p>
+    </section>
+
+    <section class="h3" >
+        <h3 id="GotoNextChartFill">Goto Next Chart Fill (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#GotoNextChartFill">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When displaying    <a href = "index3c50.html?page=doc/ChartTrading.html#DisplayingOrderFills">trade order fills a chart</a>, it is supported to move  to the position in the chart where  a particular chart fill is located.</p>
+        
+        <p> To go to the next chart order fill, use the   <b class="menu_item">Trade &gt;&gt; Goto Next Chart Fill</b> command.</p>
+        
+        <p>A  <a href = "index6736.html?page=doc/ControlBar.php">Control Bar button</a>  or  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Keyboard Shortcut</a>   can be set up for this command. </p>
+    </section>
+    
+    <section class="h3" >
+        <h3 id="GotoPreviousChartFill">Goto Previous Chart Fill (<b Class = "menu_item">Trade</b> menu)</h3>
+        <div class="member-link">[<a href="#GotoPreviousChartFill">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When displaying    <a href = "index3c50.html?page=doc/ChartTrading.html#DisplayingOrderFills">trade order fills a chart</a>, it is supported to move  to the position in the chart where  a particular chart fill is located.</p>
+        
+        <p> To go to the previous chart order fill, use the   <b class="menu_item">Trade &gt;&gt; Goto Previous Chart Fill</b> command. </p> 
+        
+        <p>A  <a href = "index6736.html?page=doc/ControlBar.php">Control Bar button</a>  or  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Keyboard Shortcut</a>   can be set up for this command. </p>
+    </section>
+
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeMenu.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:58 GMT -->
+</html>  

@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/LMAX.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677191866') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/LMAX.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>LMAX Trading Service -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index3985.html?page=doc/LMAX.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="index3985.html?page=doc/LMAX.php">LMAX Trading Service</a></h4> </div>     <h1 class="PageName">LMAX Trading Service</h1>
+
+<br><br>
+
+<div style="text-align: center;"><img border="0" src="../images/lmax-exchange-logo.png" alt="LMAX Logo"></div>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Included">What is Included</a></li>
+    <li><a href="#SetupInstructions">Setup Instructions</a></li>
+    <li><a href="#OrderQuantities">Order Quantities</a></li>
+    <li><a href="#Symbols">Symbols</a></li>
+    <li><a href="#StopTriggering">Stop Triggering</a></li>
+    <li><a href="#OrderErrorMessages">Order Error Messages</a></li>
+    <li><a href="#CurrentPositions">How Current Trade Positions Are Determined</a></li>
+    <li><a href="#UnderstandingPositionReportingProblems">Understanding Position Reporting Problems</a></li>
+    <li><a href="#TechnicalSupport">Technical Support</a></li>
+    <li><a href="#StopOrders">Modification of Stop Orders</a></li>
+    <li><a href="#DifferencesLMAXLiveDemoDataFeeds">Differences Between LMAX Live and Demo Data Feeds</a></li>
+    <li><a href="#AccessingOrdersThroughLMAXTradingInterfaces">Accessing Orders through LMAX Trading Interfaces</a></li>
+    <li><a href="#OpeningAccountBalanceRequirement">Opening Account Balance Requirement</a></li>
+   <li><a href="index0ef8.html?page=doc/AttachedOrders.html#UnderstandingHowServerSideOCOAndBracketOrdersAreImplementedWithIntermediaryServer" target="_blank" rel="noopener noreferrer">Understanding How Server-Side OCO and Bracket Orders Are Implemented</a> (Opens in new page)</li>
+   
+   <li><a href="https://www.lmax.com/global/trading" target="_blank" rel="noopener noreferrer"> LMAX Product / Instrument Information</a> (Opens in new page)</li>
+ 
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart fully supports the LMAX Exchange, the FCA regulated MTF (Multilateral Trading Facility) for FX and CFD trading. Through LMAX Exchange trading technology,  you have the ability to trade the foreign exchange markets and CFDs (Contracts for Difference), including Gold, Silver, Oil, and many world stock indexes.</p>
+
+    <p>Complete and detailed market data is provided along with 20 levels of market depth. This includes real-time streaming data, detailed tick by tick historical Intraday data, and Historical Daily data.</p>
+
+    <p>With Sierra Chart you are able to trade the spot Forex markets and CFDs on LMAX Exchange. Sierra Chart provides you a high-performance and easy to use trading environment to use with LMAX Exchange.  Take advantage of clear and easy to use trading directly from the high-quality charts. </p>
+
+    <p class="GeneralBackgroundHighlightLight">Sierra Chart uses a connection model for the LMAX Exchange where there are no monthly fees from LMAX Exchange, easy connection to LMAX Exchange, full support for server-side OCO and bracket orders, and long-term order fill history maintained on the server.</p>
+    
+    <p>It is <em>not recommended</em> to use the direct  LMAX FIX connection that Sierra Chart also supports.  This does not support what is described in the above paragraph  and has a 300 USD/month fee  from LMAX if the monthly minimums are not met with  trading volume. We do not provide technical support for direct LMAX FIX connections. We only support the method  documented on this page.  You will not have proper order fill history, or server-side OCO and bracket orders when using the direct connection. We simply do not advise using it.  And you are on your own with technical issues that you encounter.</p>
+
+    <p>Sierra Chart uses a low latency market data and trading connection to LMAX Exchange.  </p>
+    
+     <p>  There have been some incidents in the past where some users have been charged for  the inactivity fee for the  FIX connection to their LMAX account.  If this were to happen  it is a mistake  and that is something which should not happen. Let us know and we will have LMAX credit your account for this.  </p>
+
+    <p><em>LMAX Exchange is not available for residents of the United States</em>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Included">What is Included</h2>
+    <div class="member-link">[<a href="#Included">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>Streaming Real-Time Data: <b>Yes.</b></li>
+        <li>Streaming Market Depth Data: <b>Yes.</b></li>
+        <li>Historical Intraday Data: <b>Yes.</b> Tick by Tick. Data available back to March 2013 for most symbols. </li>
+        <li>Historical Daily Data: <b>Yes. </b>Data available back to March 2013.</li>
+        <li>Historical BidVolume and AskVolume: <b>Yes.</b> </li>
+        <li>Live Trading Services: <b>Yes.</b> Forex and CFD trading.</li>
+        <li>Simulated Trading: <b>Yes by using Sierra Chart Trade Simulation Mode </b></li>
+        <li>Order Types Supported: <b>Market, Limit, Stop, Stop-Limit.</b></li>
+        <li>Server Managed OCO (Order Cancels Order): <b>Yes.</b></li>
+        <li>Server Managed Bracket Orders: <b>Yes.</b></li>
+        <li>Automated Trading (applies to Live or Simulated): <b>Yes.</b></li>
+        <li> Order Fill History: Up to  <b>6 months</b>. </li>
+        <li>Ultra low latency market data and trading connection to LMAX. Server hardware provided by <a href="http://www.ultrafxvps.com/" target="_blank" rel="noopener noreferrer">UltraFX VPS</a>.</li>
+    </ul>
+</section>
+
+<div class="h2">
+
+    <h2 id="SetupInstructions">Setup Instructions</h2>
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+
+        <li>The first step is to make sure you are on the latest version of Sierra Chart. Update by selecting <b class="menu_item">Help &gt;&gt; Download Current Version</b>. This is an essential step.</li>
+        
+        <li>You need to have a Live or Demo account with LMAX.   You will need a standard LMAX Web Client or API account. Either one will work. You can have an account directly with LMAX or through one of their Introducing Brokers:
+            <ul>
+                <li><a href="http://www.lmax.com/" target="_blank" rel="noopener noreferrer">LMAX</a> </li>
+
+            </ul>
+        </li>
+
+
+        <li>Start an  <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets&amp;NewTicketSubject=LMAX%20Account%20Number%20Assignment%20Request" target="_blank" rel="noopener noreferrer">Account Support Ticket</a>  and give us your Live or Demo LMAX Account ID (This is a numeric number.  <em>Not your LMAX username</em>.) and request it to be used with the Sierra Chart LMAX order routing connection. 
+        <br> <br>
+        Provide your full name. You can write: "My LMAX account ID is (number) and I request that it be allowed to be used on the Sierra Chart order routing connection. (Full name)". 
+            <br> <br>
+            We will then make this request to LMAX, they will verify it and allow the account to be  used with the Sierra Chart order routing connection.</li>
+
+        <li> Go to  Sierra Chart and select <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu.
+
+            <div style="text-align: center;">
+                <a href="../images/globalsettings_datatradeservicesettings.png" rel="lightbox"><img src="../images/globalsettings_datatradeservicesettings.png" width="400" class="screenshot" loading="lazy" ></a>
+            </div>
+        </li>
+
+        <li> In the <b> Service </b> list box  select <b>LMAX Demo Trading - DTC</b>  if you want  to use your LMAX Demo account, or select <b>LMAX  Live Trading - DTC</b>  if you want to use your LMAX Live account.
+
+            <div style="text-align: center;">
+                <a href="../images/lmaxservicesettings.png" rel="lightbox"><img src="../images/lmaxservicesettings.png"   width="400" class="screenshot" loading="lazy" ></a>
+            </div>
+        </li>
+        
+         <li> Press the A button to save the setting.</li>
+         
+         <li>In the case of when you have a live account and you have set the  <b>Service</b> to <b>LMAX  Live Trading - DTC</b> , then you will see a    <b>Service Settings &gt;&gt; Account Association</b> list box.  Choose from the list the account association for your LMAX account. If you do not know, you need to ask LMAX.</li>
+
+        <li>Set the <a href="index219e.html?page=doc/TimeZone.html" Target="_blank" rel="noopener noreferrer">Time Zone</a> setting to the time zone that you want times displayed in.</li>
+
+        <li>Set the <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" Target="_blank" rel="noopener noreferrer">Intraday Data Storage Time Unit</a>  to what you require. </li>
+
+        <li> Press  <b> OK</b>.</li>
+
+        <li> Connect to the data and trading servers by selecting <b class = "menu_item">File  &gt;&gt; Connect to Data Feed</b> on the menu.</li>
+
+        <li>  If there is any connection error, it will be displayed in the Sierra Chart   <a href = "index84bb.html?page=doc/MessageLog.html" target="_blank" rel="noopener noreferrer">Window &gt;&gt; Message Log</a>. Review all of the steps above if you have trouble connecting. Select  <b class = "menu_item">File  &gt;&gt; Disconnect</b> to prevent further connection attempts before reviewing the steps. Select <b class = "menu_item">File  &gt;&gt; Connect to Data Feed</b>,  to try connecting again.</li>
+
+        <li> If you want to use server-side OCO and bracket orders, then enable  <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings</b>  <b>&gt;&gt; Use Server-Side OCO Orders</b>  and  <b>Use  Server-side Bracket Orders</b>. </li>
+
+        <li>To open a Historical chart, Intraday chart or Trading DOM, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. 
+          <br> <br>
+        Select a symbol in the  <b>Forex</b>   or <b> CFD</b> lists and press the appropriate button. 
+        <br><br>
+        Only the symbols listed in the <b> Forex/CFD </b> lists are LMAX symbols. These are the symbols which can be traded.
+        <br><br>
+        All the other symbols in the other subcategories, come from other sources of data but are available to be used with LMAX.
+        </li>
+        
+        
+        <li>Refer to and understand the <a href="#CurrentPositions">How Current Trade Positions Are Determined</a> and also the <a href="#OrderQuantities" >Order Quantities</a> sections. </li>
+
+        <li>Continue with step number 3 on the <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart" Target="_blank" rel="noopener noreferrer">Getting Started</a> documentation page.</li>
+        
+        <li>When submitting an order, if you receive a <em><b>LMAX Live Trading - DTC order update (Order reject). Info: LMAX order update (Rejected). Text: ACCOUNT_DOES_NOT_EXIST. Internal Order ID: #. Service Order ID: #. Symbol: (symbol)</b></em> message in the  <b class = "menu_item">Trade &gt;&gt; Trade Service Log</b>, then contact <a href="https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets" target="_blank" rel="noopener noreferrer">Sierra Chart Support</a> about this. This means the account number has not been assigned to the FIX order routing connection. </li>
+    </ol>
+</div>
+
+<div class="h2">
+    <h2 id="OrderQuantities">Order Quantities</h2>
+    <div class="member-link">[<a href="#OrderQuantities">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When setting the <em>Order Quantity</em> for any symbol through the Sierra Chart Trade Window <b>Quantity</b> setting,  or the Trade Mode Box at the top left of a Chart or Trade DOM, a quantity of <b>10</b>, is equivalent to an LMAX quantity of <b><em>1</em></b>.</p> 
+
+    <p>A quantity of <b>1</b> entered within Sierra Chart, is equivalent to LMAX quantity of <b><em>0.1</em></b>.</p>
+
+    <p>As of version 1118, for CFDs, the above rules also apply. No longer will a quantity of 1 equal 1 for a CFD. A quantity of 1 for a CFD now equals <b>.1</b>.</p>
+
+    <p>For Forex pairs, a LMAX quantity of <b>1</b> is equivalent to 10000 currency units on the LMAX exchange.</p>
+    
+    
+    <p>Since a quantity of 10 in Sierra Chart is equivalent to a quantity of 1.0 in LMAX, this also means that the  <b>Currency Value per Tick </b> setting for the symbol will be 1/10 of its normal value. </p>
+    
+    <p>  In the case of when viewing <a href = "index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow">Market Depth</a> quantities for LMAX instruments within Sierra Chart, these quantities match up with the  Order Quantity rules described in this section and will be 10 times what you see within the LMAX software. </p>
+</div>
+
+<div class="h2">
+    <h2 id="Symbols">Symbols</h2>
+    <div class="member-link">[<a href="#Symbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For a list of symbols you can use with the <b>LMAX Trading Service</b>, select <b class="menu_item">File &gt;&gt; Find Symbol</b> in Sierra Chart. All of the Forex, Futures and CFD's are listed. If you do not see up-to-date futures contracts listed, let us know.</p>
+
+    <p>With Intraday charts you can append  <b>-BID</b> or <b>-ASK</b> to the symbol when opening it from <b class="menu_item">File &gt;&gt; Find Symbol</b>. When you do this, real-time data received, not historical data, will always draw the Bid or Ask price respectively rather than the  <em>average of the Bid and Ask</em>. These symbol suffixes  <em>cannot</em> be used with Historical daily charts. For a description of all of the suffixes, refer to <a href="indexb482.html?page=doc/RecordingModes.php">Recording Modes</a>.</p>
+
+    <p>Keep in mind if you do not use the symbol suffixes, <b>-BID</b> or <b>-ASK</b>, you will always still see the current Bid and Ask displayed in a chart along the top line of the chart or you can enable <b class="menu_item">Trade &gt;&gt; Draw DOM Graph on Chart</b>, to get the Bid and Ask lines graphically drawn on the right side of the chart.  Or you can enable <b class="menu_item">Chart &gt;&gt; Show Bid and Ask Lines</b> to get the Bid and Ask lines also drawn on the chart, but with less detail.</p>
+    
+    <p>  You can also use the  <a href = "index4e7e.html?page=doc/StudiesReference.php&amp;ID=355&amp;Name=Bid_Ask_Prices">Bid and Ask Prices</a> study. </p>
+</div>
+
+
+<div class="h2">
+    <h2 id="StopTriggering">Stop Triggering</h2>
+    <div class="member-link">[<a href="#StopTriggering">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> Stop orders submitted through Sierra Chart when using LMAX are triggered according to the following rule:   </p>
+    
+     <p>Sell Stops will trigger when the Best Ask meets the Stop Level and Buy Stops will trigger when the Best Bid meets the Stop Level.</p>
+    </p>
+</div>
+
+
+<div class="h2">
+    <h2 id="OrderErrorMessages">Order Error Messages</h2>
+    <div class="member-link">[<a href="#OrderErrorMessages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are error messages you can receive when submitting an order to LMAX.  These will be displayed in the  <b class="menu_item">Trade  &gt;&gt; Trade Service log</b>  and will also be logged in the <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b> at the time of the order rejection.</p>
+
+    <p> <b>EXPOSURE_CHECK_FAILURE:</b> The error message  means that the client does not have sufficient funds to place the trade. In this case the client will need to deposit funds into their account.  </p>
+
+</div>
+
+
+
+
+<div class="h2">
+    <h2 id="CurrentPositions">How Current Trade Positions Are Determined</h2>
+    <div class="member-link">[<a href="#CurrentPositions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The current  Trade Position Quantity and Position Average Price for a Symbol and Trade Account being traded on the LMAX exchange is calculated by Sierra Chart from order fills received in real-time and the historical fills downloaded from the trading server.</p>
+    
+    <p>Order fills are held in the <a href="index509f.html?page=doc/TradeActivityLog.php"  target="_blank" rel="noopener noreferrer">Trade &gt;&gt; Trade Activity Log</a>.  You have the ability to <b>Insert </b>  and <b>Edit</b> order fills through the <b class="menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Edit</b> menu.</p>
+
+    <p>The LMAX system does not provide over a FIX connection, which our order routing server uses, the Quantity and Average Price as individual values for  Trade Positions you are currently carrying.  </p>
+
+    <p>The Sierra Chart trading server maintains order fills for Symbols and Trade Accounts from order fills received in real-time over the FIX protocol connection.  At least 6 months of fills are maintained.</p>
+
+    <p> Since LMAX does not provide Trade Positions data, the <b class = "menu_item"> Trade &gt;&gt; Trade Positions Window</b> tab will not show the current Trade Positions.   Therefore, you will also not see  Positions displayed in a Quote Board  for the symbol either. </p>
+
+    <p>You need to refer to the <b class = "menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Stats for Charts</b>  tab instead for the <b>Open Quantity</b> for each  Trade Position for each open chart or Trade DOM. This very same Open Quantity is displayed on the Trade Window of a chart  or Trade DOM.</p>
+
+    <p>  When calculating the current  Trade Position  Quantity for a Symbol and Trade account from the  order fills that Sierra Chart has, this can result in a current  Trade Position  Quantity which  <em>is incorrect</em>. Therefore,  in some cases the  Trade Position   Quantity and Average Price reported by Sierra Chart for a  Symbol and Trade  Account <em>will be incorrect</em>. This is something to be aware of. The solution is explained in the next paragraph. </p>
+
+    <!-- p>The solution to this is to follow the instructions in the <a href="/index.php?page=doc/TradeWindow.html#UsingOrderFillCalculatedTradePositionDataIndependentPosition"  target="_blank" rel="noopener noreferrer" >Using Order Fill Calculated Trade Position Data for Independent Position Tracking</a>  section to control the starting Date-Time of the order fills that the Trade Position data for a particular Symbol and Trade Account is calculated from. Skip the step  for using the <em><b>Order Fill Calculated Trade Position Data</b></em> since this is already the case when using LMAX.</p -->
+
+    <p class = "GeneralBackgroundHighlightLight">The solution to this is to enter the starting Date-Time for the order fills that make up the current Trade Position for the Symbol and Trade Account, in the <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Trading &gt;&gt; Order Fills Start Date-Time</b> boxes  for the chart or Trade DOM you are trading from.  </p>
+    
+    
+    <p>Once this  start Date-Time  is set correctly and being that Sierra Chart should not miss any order fills because a complete set of fills is held on the server and provided to Sierra Chart when it connects, if there any missing, you should not have to adjust this Date-Time for a while even for new Trade Positions.   </p>
+    
+
+</div>
+
+
+<div class="h2">
+    <h2 id="UnderstandingPositionReportingProblems">Understanding Position Reporting Problems</h2>
+    <div class="member-link">[<a href="#UnderstandingPositionReportingProblems">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>  Occasionally Sierra Chart receives reports from LMAX users, about an incorrectly  reported Trade Position Quantity in a Chart or Trading DOM when using LMAX. </p>
+    
+     <p> This occurrence makes complete sense.  The Trade Position reporting has a high probability of simply being incorrect, unless you understand how the calculation is done and have properly set  the relevant setting for this. All of this is explained in detail in the <a href="#CurrentPositions">How Current Trade Positions Are Determined</a> section on this page. </p>
+     
+     <p> Sometimes users tell us, that they see a  Trade Position  which is unexpected and therefore "Flatten" this Trade Position only to therefore open a  new actual Trade Position. They see the correct   Trade Position according to what LMAX is reporting for Trade Positions for their account. And they continue this process for a while and realize something  is going wrong.   </p>
+
+     <p>Our question to you is why are you closing a  Trade Position that you should  recognize as incorrect? Why is it that you are doing this and then you are later telling us about the problem?  </p>
+
+     <p> You need to be conscientious of what   your correct  Trade Position is and if you see something that is incorrect,   based on the fact that the  Trade Position in Sierra Chart   when using LMAX is calculated based on order fills, which potentially could be missing,   and the <b>Order Fills Start Date-Time</b> Chart Setting, then you need to  follow the instructions in the <a href="#CurrentPositions">How Current Trade Positions Are Determined</a>  section to get the Trade Position quantity reported correctly in Sierra Chart.</p>
+     
+      <p>You need to do your own research and answer your own questions. You need to determine what has happened based upon all of this relevant documentation: </p>
+      
+    <ol>
+        <li>The available order fills for the Symbol and Trade Account in the Trade Activity Log:  <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Viewing Historical Trade Activity</a>. </li> 
+
+        <li> The <a href = "index4cf4.html?page=doc/ChartSettings.html#OrderFillsStartDateTime">Order Fills Start Date-Time</a>  setting for the Chart or Trading DOM being used to determine the Trade Position Quantity.</li>
+  
+        <li> Understand how the Position Quantity is determined in the  Chart  or Trading DOM.  Refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#TradeStatsOpenQuantityFieldCalculation"> Open Quantity Fields Calculation Method</a>.  </li>
+
+        <li>Consideration of any missing fills which were downloaded  upon Sierra Chart's connection or reconnection to the trading server.  Any fills which are downloaded,  can potentially alter  the reported Trade Position Quantity  at the time they are received.  
+         <br> <br>
+        There is also the potential possibility of missing order fills or duplicate order fills. In general the probability of this is low but there is always this potential possibility. And you must be aware of this.</li>
+    </ol>
+
+     <p>If Sierra Chart has referred you to this section,   <em>do not ask us further questions</em> about the above or what happened in a particular situation when there was an  <em>incorrectly reported Trade Position</em>.  </p>
+
+     <p>We will not answer, and we cannot answer because we  do not know  all of the surrounding details of the situation,  the Chart Settings  of the  Chart or  Trading DOM you are using, the order fills you  have in Sierra Chart  and other details.</p>    
+     
+    <p> It is your responsibility to read the documentation understand how the functionality works, and   <em>answer  your own questions</em>.  <em>We simply cannot answer them for you.  You simply must answer your own questions</em>.   Only you will know the answers precisely based upon the information given in this section  and linked from this section.   It is not our responsibility   and it is not within our support services to answer these questions. <em>You must answer your own questions!</em>. </p>
+     
+     
+    
+</div>
+
+<div class="h2">
+    <h2 id="TechnicalSupport">Technical Support</h2>
+    <div class="member-link">[<a href="#TechnicalSupport">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Technical support for Sierra Chart is provided by Sierra Chart.  If you have any issues with your trading account or with orders, contact LMAX.  Sierra Chart cannot help with any urgent order issues.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="StopOrders">Modification of Stop Orders</h2>
+    <div class="member-link">[<a href="#StopOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The LMAX FIX server does support Stop orders. However, it <em>does not support the modification of stop orders</em>.</p>
+
+    <p> When you modify a stop order in Sierra Chart when using LMAX, the Stop order is first canceled and upon confirmation that Stop order is canceled,  a new order is submitted  with the specified quantity and price when the order was modified.</p>
+
+    <p> This cancellation and sending of an order is indicated in the Sierra Chart <b class = "menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Activity</b> tab.</p>
+</div>
+
+<section class="h2">
+    <h2 id="DifferencesLMAXLiveDemoDataFeeds">Differences Between LMAX Live and Demo Data Feeds</h2>
+    <div class="member-link">[<a href="#DifferencesLMAXLiveDemoDataFeeds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p> LMAX provides two different data feeds.</p>
+
+    <p> For Live trading accounts they provide a live data feed which is the actual market data.</p>
+
+    <p> For their Demo trading accounts, they provide a Demo data feed which is not actual market data and will not exactly reflect the Live market data update frequency as it is running under a pricing robot.</p>
+
+    <p> In our experience, when the market is active there are <em>significantly less price updates</em> with the Demo data feed compared to the Live data feed. When the market is less active,  the price updates could be the same or the Demo data feed could have a higher number of pricing updates compared to the Live data feed.</p>
+
+    <p> When using Sierra Chart with LMAX, the historical price data is downloaded from the Sierra Chart server and is based upon the Live data feed. Therefore, when you are looking at the volume per bar for the historical data downloaded from the server,  the volume will most of the time be much higher compared to the bars created in real time when using the Demo data feed. </p>
+
+    <p> After switching from a LMAX Demo account to a Live account, to  correct the data in the chart where there is lower volume, scroll the chart back to where the low volume begins, right-click on the chart before the chart bar where the low volume begins and select <b>Delete and Download Data</b>.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="AccessingOrdersThroughLMAXTradingInterfaces">Accessing Orders through LMAX Trading Interfaces</h2>
+    <div class="member-link">[<a href="#DifferencesLMAXLiveDemoDataFeeds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Orders entered from Sierra Chart when using one of the supported LMAX trading Services in Sierra Chart, whether a DTC or direct connection, will be visible through the LMAX trading interfaces and can be modified and canceled through those interfaces. The only exception to this is <a href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders</a>. </p>
+
+    <p> In the case of Attached Orders, they will not be visible in the LMAX trading interfaces until the parent/main order has filled. At that time they will be visible and can be modified and canceled.</p>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="OpeningAccountBalanceRequirement">Opening Account Balance Requirement</h2>
+    <div class="member-link">[<a href="#OpeningAccountBalanceRequirement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+      <p> The following are the minimum account balance requirements for opening an account with LMAX.  </p>
+      
+    <p>2000 USD for LMAX New Zealand if you are not in New Zealand or the  EEA.</p>
+    <p> 5000 USD for LMAX. </p>
+
+</section>
+
+<hr><p>*Last modified Thursday, 23rd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/LMAX.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:09 GMT -->
+</html>  

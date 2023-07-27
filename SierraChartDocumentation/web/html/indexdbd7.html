@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/RelayServer.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1679731006') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/RelayServer.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Relay Server -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexdbd7.html?page=doc/RelayServer.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ExternalInterfaces">(Table of Contents) External Interfaces</a> &gt;&gt; <a  href="indexdbd7.html?page=doc/RelayServer.php">Relay Server</a></h4> </div>     <h1 class="PageName">Relay Server</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Usage">Usage</a></li>
+    <li><a href="#SupportedMessages">Supported Messages</a>
+		<ul>
+			<li><a href="#Messages-SECURITY_DEFINITION_RESPONSE">DTC::SECURITY_DEFINITION_RESPONSE</a></li>
+			<li><a href="#Messages-MARKET_DATA_UPDATE_TRADE_COMPACT">DTC::MARKET_DATA_UPDATE_TRADE_COMPACT</a></li>
+			<li><a href="#Messages-MARKET_DATA_UPDATE_BID_ASK_COMPACT">DTC::MARKET_DATA_UPDATE_BID_ASK_COMPACT</a></li>
+			<li><a href="#Messages-MARKET_DATA_UPDATE_DAILY_SETTLEMENT">DTC::MARKET_DATA_UPDATE_DAILY_SETTLEMENT</a></li>
+			<li><a href="#Messages-MARKET_DATA_UPDATE_DAILY_HIGH">DTC::MARKET_DATA_UPDATE_DAILY_HIGH</a></li>
+			<li><a href="#Messages-MARKET_DATA_UPDATE_DAILY_LOW">DTC::MARKET_DATA_UPDATE_DAILY_LOW</a></li>
+			<li><a href="#Messages-MARKET_DATA_UPDATE_DAILY_OPEN">DTC::MARKET_DATA_UPDATE_DAILY_OPEN</a></li>
+			<li><a href="#Messages-MARKET_DATA_UPDATE_DAILY_VOLUME">DTC::MARKET_DATA_UPDATE_DAILY_VOLUME</a></li>
+			<li><a href="#Messages-MARKET_DATA_FEED_STATUS">DTC::MARKET_DATA_FEED_STATUS</a></li>
+			<li><a href="#Messages-MARKET_DATA_SNAPSHOT">DTC::MARKET_DATA_SNAPSHOT</a></li>
+			<li><a href="#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">DTC::MARKET_DEPTH_SNAPSHOT_LEVEL</a></li>
+			<li><a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS">DTC::MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS</a></li>
+			<li><a href="#Messages-HEARTBEAT">DTC::HEARTBEAT</a></li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart provides a  <em>Relay Server</em>, which relays all of the market data that is received from the connected Data or Trading services.  This is a TCP/IP socket based server.</p>
+
+    <p> The only data relayed is the streaming real-time data. Historical data is not relayed. </p>
+
+
+
+    <p>  By default the data uses the DTC Binary Encoding data structure format. Refer to the <b> /DTC/DTCProtocol.h </b> header file in the folder that Sierra Chart is installed to for these data structures.  Other encodings are available  and can be selected. Refer to the documentation below.</p>
+
+    <p>  Only the data for the symbols that Sierra Chart is currently tracking based upon symbols used in Quote Boards, Charts, Trade DOMs,  and symbols listed in the   <b class= "menu_item">Global Settings &gt;&gt; Intraday File Update List</b>, will be relayed.  </p>
+
+    <p> The protocol does not support a Relay Server Client making market data requests. </p>
+
+    <p> Market depth data is only relayed if it is supported by the connected Data or Trading service and if Sierra Chart has subscribed to that data for a particular symbol. Sierra Chart will only subscribe to market depth data, if it is used by market depth features currently active for a particular symbol. </p>
+
+    <p>It is possible to cause market depth data to be subscribed for a symbol if you have appended <b>|MDD </b> to the symbol in the  <b class= "menu_item">Global Settings &gt;&gt; Intraday File Update List</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Usage">Usage</h2>
+    <div class="member-link">[<a href="#Usage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to use the Sierra Chart Relay Server.</p>
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings </b>.</li>
+
+        <li>Press the <b>SC Server Settings</b> button.</li>
+
+        <li>Enable <b>DTC Protocol Server &gt;&gt; Enable  DTC Protocol Server</b> option.</li>
+
+        <li>In the <b>Listening Port</b> box, specify the port number for the server to listen on.</li>
+
+        <li>Establish a TCP/IP network connection to <b>127.0.0.1</b> using the specified port number.</li>
+        
+        <li> If you want to  change the encoding from the default, then follow the  <a href = "indexe379.html?page=doc/DTCMessageDocumentation.php#EncodingRequest">Encoding Request Procedure</a> procedure. </li>
+
+        <li> Send a <a href="index7c96.html?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php#Messages-LOGON_REQUEST">LOGON_REQUEST</a>  message with the  <b> LOGON_REQUEST::Integer_1 </b> field set to <em>0x2</em>. This causes the second bit of the integer to be true. It is this message with this flag which puts the DTC Protocol Server connection into Relay Server mode. </li>
+        <li>Once connected it is necessary to send a <a href="index7c96.html?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php#Messages-LOGOFF#Messages-HEARTBEAT" >DTC::HEARTBEAT</a> message at the interval according to the  <b> LOGON_REQUEST::HeartbeatIntervalInSeconds</b> field you have set. Otherwise, the connection will be closed after a short period of time by Sierra Chart.</li>
+
+        <li> The program you write which uses the  Relay Server needs to support DTC Binary Encoding messages (data structures) if you have not changed the encoding from the default.</li>
+
+        <li>Multiple connections to the DTC Protocol server are supported.</li>
+
+        <li>After logging on, other than sending a <b>DTC::HEARTBEAT</b> message, there are no messages that a client program connected to the server will need to send.</li>
+
+        <li>The below messages are sent from the Relay Server.   The most important message is the Security Definition Response message. </li>
+        
+        <li>  When Sierra Chart reconnects to the external data feed, new security definitions will be sent  for each symbol subscribed.  Therefore, the RequestID  can change for a particular symbol.
+         <br> <br>
+        It is  necessary that when a DTC::MARKET_DATA_FEED_AVAILABLE  status is received through a DTC::MARKET_DATA_FEED_STATUS message, that you  clear any stored data related to any prior received security definitions because  the prior received security definition data is out of date. </li>
+        
+        <li> Additional Notes:   There can be market data update messages for a particular SymbolID before a security definition for that SymbolID  has been sent. In this case you need to ignore  those messages until the security definition is received.
+        <br> <br>
+        Unless there is an  Intraday chart open for the symbol  or the  symbol is in the  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#IntradayFileUpdateList">Intraday File Update List</a>, no security definition for the symbol will be sent. </li>
+
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SupportedMessages">Supported Messages</h2>
+    <div class="member-link">[<a href="#SupportedMessages">Link</a>] - [<a href="#top">Top</a>]</div> 
+
+    <p>The following are descriptions for the supported messages. For complete documentation for these messages, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php">DTC Messages and Procedures</a>.</p>
+
+    <section class="h3">
+        <h3 id="Messages-SECURITY_DEFINITION_RESPONSE">DTC::SECURITY_DEFINITION_RESPONSE</h3>
+        <div class="member-link">[<a href="#Messages-SECURITY_DEFINITION_RESPONSE">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When connected to and after logging on to the Relay Server, and data is available for a particular symbol, then this message will be sent to the Client for each symbol available.  It is not necessarily sent at the beginning of the connection. </p>
+
+        <p>When connected to the Relay Server and data for a symbol becomes available, at that time this message will be sent for that symbol.</p>
+
+        <p>This message is used to identify what Symbol a particular SymbolID is associated with in the MARKET_DATA_* and MARKET_DEPTH* messages.</p>
+
+        <p> The relevant fields set in this message are as follows: <b>RequestID </b> (equivalent to SymbolID), <b>Symbol</b>, <b>Exchange</b>. </p>
+        
+         <p> When Sierra Chart reconnects to the external data feed, new security definitions will be sent  for each symbol subscribed.  Therefore, the RequestID  can change for a particular symbol. </p>
+         <p> It is  necessary that when a DTC::MARKET_DATA_FEED_AVAILABLE  status is received through a  DTC::MARKET_DATA_FEED_STATUS message, that you  clear any stored data related to any prior received security definitions because  the prior received security definition data is out of date.  </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_TRADE_COMPACT">DTC::MARKET_DATA_UPDATE_TRADE_COMPACT</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_TRADE_COMPACT">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DATA_UPDATE_TRADE">MARKET_DATA_UPDATE_TRADE_COMPACT</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_BID_ASK_COMPACT">DTC::MARKET_DATA_UPDATE_BID_ASK_COMPACT</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_BID_ASK_COMPACT">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DATA_UPDATE_BID_ASK">MARKET_DATA_UPDATE_BID_ASK_COMPACT</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_DAILY_SETTLEMENT">DTC::MARKET_DATA_UPDATE_DAILY_SETTLEMENT</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_DAILY_SETTLEMENT">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#Messages-MARKET_DATA_UPDATE_DAILY_SETTLEMENT">MARKET_DATA_UPDATE_DAILY_SETTLEMENT</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_DAILY_HIGH">DTC::MARKET_DATA_UPDATE_DAILY_HIGH</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_DAILY_HIGH">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#Messages-MARKET_DATA_UPDATE_DAILY_HIGH">MARKET_DATA_UPDATE_DAILY_HIGH</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_DAILY_LOW">DTC::MARKET_DATA_UPDATE_DAILY_LOW</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_DAILY_LOW">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#Messages-MARKET_DATA_UPDATE_DAILY_LOW">MARKET_DATA_UPDATE_DAILY_LOW</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_DAILY_OPEN">DTC::MARKET_DATA_UPDATE_DAILY_OPEN</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_DAILY_OPEN">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#Messages-MARKET_DATA_UPDATE_DAILY_OPEN">MARKET_DATA_UPDATE_DAILY_OPEN</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_UPDATE_DAILY_VOLUME">DTC::MARKET_DATA_UPDATE_DAILY_VOLUME</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_UPDATE_DAILY_VOLUME">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#Messages-MARKET_DATA_UPDATE_DAILY_VOLUME">MARKET_DATA_UPDATE_DAILY_VOLUME</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_FEED_STATUS">DTC::MARKET_DATA_FEED_STATUS</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_FEED_STATUS">Link</a>] - [<a href="#top">Top</a>]</div>
+         <p>  It is  necessary that when a DTC::MARKET_DATA_FEED_AVAILABLE  status is received through a  DTC::MARKET_DATA_FEED_STATUS message, that you  clear any stored data related to any prior received security definitions because  the prior received security definition data is out of date. </li>
+ </p>
+
+        <p>Also refer to <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DATA_FEED_STATUS">MARKET_DATA_FEED_STATUS</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DATA_SNAPSHOT">DTC::MARKET_DATA_SNAPSHOT</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DATA_SNAPSHOT">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DATA_SNAPSHOT">MARKET_DATA_SNAPSHOT</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">DTC::MARKET_DEPTH_SNAPSHOT_LEVEL</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DEPTH_SNAPSHOT_LEVEL">MARKET_DEPTH_SNAPSHOT_LEVEL</a>.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="Messages-MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS">DTC::MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS</h3>
+        <div class="member-link">[<a href="#Messages-MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="indexf205.html?page=doc/DTCMessages_MarketDataMessages.php#Messages-MARKET_DEPTH_UPDATE_LEVEL">MARKET_DEPTH_UPDATE_LEVEL_FLOAT_WITH_MILLISECONDS</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-HEARTBEAT">DTC::HEARTBEAT</h3>
+        <div class="member-link">[<a href="#Messages-HEARTBEAT">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Refer to <a href="index7c96.html?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php#Messages-LOGOFF#Messages-HEARTBEAT">HEARTBEAT</a>.</p>
+    </section>
+</section>
+
+<hr><p>*Last modified Saturday, 25th March, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/RelayServer.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:57 GMT -->
+</html>  

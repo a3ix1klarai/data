@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SpreadsheetExampleFormulasAndUsage.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:54:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105658') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SpreadsheetExampleFormulasAndUsage.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Spreadsheet Example Formulas and Usage -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index7f0c.html?page=doc/SpreadsheetExampleFormulasAndUsage.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#UsingSpreadsheets">(Table of Contents) Spreadsheets</a> &gt;&gt; <a  href="index7f0c.html?page=doc/SpreadsheetExampleFormulasAndUsage.php">Spreadsheet Example Formulas and Usage</a></h4> </div>     <h1 class="PageName">Spreadsheet Example Formulas and Usage</h1>
+
+<section class="h2">
+    <h2>Related Documentation</h2>
+
+    <ul>
+        <li><a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php">Overview of Spreadsheet Studies</a></li>
+        <li><a href="indexbc7b.html?page=doc/UsingTheSpreadsheetStudy.php">Using Spreadsheet Studies</a></li>
+        <li><a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet Systems, Alerts and Automated Trading</a></li>
+        <li><a href="index2192.html?page=doc/SpreadsheetStudyInputs.html">Spreadsheet Study Inputs</a></li>
+        <li><a href="index41e0.html?page=doc/Spreadsheets_ReferencingOtherChartsInFormulas.php">Referencing Other Charts in Spreadsheet Study Formulas</a></li>
+        <li><a href="index0c2c.html?page=doc/SpreadsheetStudiesSpecialTasks.php">Spreadsheet Studies Special Tasks</a></li>
+        <li><a href="index56f7.html?page=doc/Sharing_Spreadsheet_Study.html">Sharing Your Spreadsheet Study With Another User</a></li>
+        <li><a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php">Working with Spreadsheets</a></li>
+        <li><a href="index8e89.html?page=doc/SpreadsheetFunctions.html">Spreadsheet Functions</a></li>
+        <li><b>Spreadsheet Example Formulas and Usage</b></li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#CommonFormulasAndUsage">Common Formulas and Usage</a>
+			<ul>
+			    <li><a href="#DeterminingSlopeOrDirection">Determining Slope or Direction</a>
+					<ul>
+						<li><a href="#FormulaThatMatchesTheColoringOfUpAndDownPriceBars">Formula that Matches the Coloring of Up and Down Price Bars</a></li>
+						<li><a href="#FormulaThatMatchesTheSlopeColoringOfAStudySubgraphLine">Formula that Matches the Slope Coloring of a Study Subgraph Line</a></li>
+					</ul>
+				</li>
+			    <li><a href="#MovingAverages">Moving Averages</a>
+					<ul>
+				        <li><a href="#SimpleMovingAverage">Simple Moving Average</a></li>
+				        <li><a href="#ExponentialMovingAverage">Exponential Moving Average</a></li>
+				        <li><a href="#SimpleMovingAverageSkipZeros">Simple Moving Average - Skip Zeros</a></li>
+					</ul>
+				</li>
+			    <li><a href="#UsingDateTime">Using Date Time</a>
+					<ul>
+				        <li><a href="#FormulaEquivalentsOfSerialDateTimeValues">Formula Equivalents of Serial Date Time Values</a></li>
+				        <li><a href="#RoundingDateTimeValues">Rounding Date Time Values</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+        <li><a href="#TradingFormulas">Trading Formulas</a>
+			<ul>
+				<li><a href="#DisableTradingFromSpreadsheetStudyForTrading">Disable Trading From Spreadsheet Study for Trading</a>
+					<ul>
+				        <li><a href="#DisableAutotradingOutsideOfRegularTradingHours">Disable Autotrading Outside of Regular Trading Hours</a></li>
+				        <li><a href="#DisableTradingOutsideOfRegularTradingHoursAnd2HoursMidday">Disable Trading Outside of Regular Trading Hours and for 2 Hours Midday</a></li>
+					</ul>
+				</li>
+				<li><a href="#CancelUnfilledWorkingOrderNMinutesAfterEntry">Cancel Unfilled Working Order n Minutes After Entry</a></li>
+				<li><a href="#CalculateDailyNetClosedProfitLossAfterCommissions">Calculate Daily Net Closed Profit/Loss After Commissions</a></li>
+			</ul>
+		</li>
+        <li><a href="#PersistentAndIncrementingVariables">Persistent and Incrementing Variables</a>
+			<ul>
+				<li><a href="#CountBarsSinceAnEvent">Formula to Count Bars Since An Event</a></li>
+				<li><a href="#CancelUnfilledOrderAfterNBars">Cancel an Unfilled Order After n Bars</a></li>
+				<li><a href="#CancelUnfilledOrderAfterNBars-ResetCounterOnNewOrderInSameDirection">Cancel Unfilled Orders After n Bars - Reset Counter on New Order in Same Direction</a></li>
+				<li><a href="#BuyOnFirstSignalAndIgnoreMultipleSignals">Buy on First Signal and Ignore Multiple Signals</a></li>
+				<li><a href="#CountEventsSinceFirstOccurrence">Count Events Since First Occurrence</a></li>
+			</ul>
+		</li>
+        <li><a href="#DataManipulation">Data Manipulation</a>
+			<ul>
+				<li><a href="#RemovingFloatingPointImprecision">Removing Floating Point Imprecision</a></li>
+				<li><a href="#SpreadsheetStudyEquivalentsOfSimpleAlertsAndMainPriceGraphIdentifiers">Spreadsheet Study Equivalents of Simple Alerts and Main Price Graph Identifiers</a></li>
+				<li><a href="#OtherExamples">Other Examples</a>
+					<ul>
+						<li><a href="#ReturnLastTwoZigZagReversalValues">Return Last Two Zig Zag Reversal Values</a></li>
+						<li><a href="#UsingTheForecastFunction">Using the FORECAST Function</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+    </ul>
+</section>
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page provides some common formulas to be used with the <a href="index3372.html?page=doc/OverviewOfSpreadsheetStudies.php">Spreadsheet Studies</a> to accomplish specific tasks and explains the particular usage in those cases.</p>
+
+    <p>The examples on this page are formatted for entry into the <b>Spreadsheet Study</b>, the <b>Spreadsheet Study for Trading</b>, or the <b>Spreadsheet System/Alert</b>. The concepts in the formulas can be applied to the <b>Spreadsheet Formula</b> using the <a href="#SpreadsheetStudyEquivalentsOfSimpleAlertsAndMainPriceGraphIdentifiers">Spreadsheet Study Equivalents of Simple Alerts and Main Price Graph Identifiers</a> section. For example, if the entry in the <b>Spreadsheet Study</b> is <span class="SpreadsheetFormula">=B3 - E3</span> (Open - Last/Close), then this would be entered in the <b>Spreadsheet Formula</b> as <span class="SpreadsheetFormula">=O - C</span> or alternatively it could be entered as <span class="SpreadsheetFormula">=ID0.SG1 - ID0.SG4</span> where ID0 is the main price graph.</p>
+</section>
+
+<section class="h2">
+    <h2 id="CommonFormulasAndUsage">Common Formulas and Usage</h2>
+    <div class="member-link">[<a href="#CommonFormulasAndUsage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="DeterminingSlopeOrDirection">Determining Slope or Direction</h3>
+        <div class="member-link">[<a href="#DeterminingSlopeOrDirection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4 id="FormulaThatMatchesTheColoringOfUpAndDownPriceBars">Formula that Matches the Coloring of Up and Down Price Bars</h4>
+            <div class="member-link">[<a href="#FormulaThatMatchesTheColoringOfUpAndDownPriceBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This example formula would be entered in any available  Formula Column at row 3. Although the formula is coded to rely on it being entered in the T column. </p>
+            
+            
+            <p>It returns a <b>1</b> if price bar is <b>up-colored</b> or a <b>-1</b> if price bar is <b>down-colored</b>.</p>
+
+            <p><span class="SpreadsheetFormula">=IF(OR(E3>B3,AND(B3>E4,B3=E3)),1, IF(OR(E3&lt;B3,AND(B3&lt;E4,B3=E3)),-1,T4))</span></p>
+            
+        </section>
+
+        <section class="h4">
+            <h4 id="FormulaThatMatchesTheSlopeColoringOfAStudySubgraphLine">Formula that Matches the Slope Coloring of a Study Subgraph Line</h4>
+            <div class="member-link">[<a href="#FormulaThatMatchesTheSlopeColoringOfAStudySubgraphLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This example formula would be entered in any available  Formula Column at row 3. Although the formula is coded to rely on it being entered in the Z column.</p>
+
+            <p>It returns a <b>1</b> if the line is sloped <b>up</b>, or if the current segment is flat and the previous segment was up.   </p>
+            
+            
+            <p>It returns a <b>-1</b> if the line is sloped <b>down</b>, or if the current segment is flat and the previous segment was down.</p>
+
+            <p><span class="SpreadsheetFormula">=IF(OR(ID1.SG1@3>ID1.SG1@4,AND(ID1.SG1@5>=ID1.SG1@4,ID1.SG1@3>ID1.SG1@4)),1,IF(OR(ID1.SG1@3&lt;ID1.SG1@4,AND(ID1.SG1@5&lt;=ID1.SG1@4,ID1.SG1@3&lt;ID1.SG1@4)),-1,Z4))</span></p>
+            
+            
+            <p> <b> ID1</b> needs to be changed to the particular study ID number it will actually reference. <b>SG1  </b> needs to be  changed to the particular Subgraph number within the particular study it will reference.   For more information, refer to <a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php#ReferencesStudySubgraphColumnsSpreadsheetStudy" >References to Study Subgraph Columns</a>.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="MovingAverages">Moving Averages</h3>
+        <div class="member-link">[<a href="#MovingAverages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4 id="SimpleMovingAverage">Simple Moving Average</h4>
+            <div class="member-link">[<a href="#SimpleMovingAverage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Any of the following formulas will return a Simple Moving Average of the Last price, where the Length is in cell H2. A formula would be entered into row 3 of any Formula Column.</p>
+
+            <p><span class="SpreadsheetFormula">=AVERAGE(OFFSET(E3,0,0,$H$2,1))</span></p>
+
+            <p><span class="SpreadsheetFormula">=AVERAGE(OFFSET(ID0.SG4@3,0,0,$H$2,1))</span></p>
+
+            <p><span class="SpreadsheetFormula">=SUM(OFFSET(E3,0,0,$H$2,1))/$H$2</span></p>
+
+            <p><span class="SpreadsheetFormula">=AVERAGE(E3:INDEX(E3:OFFSET(E3,$J$30-1,0),$H$2,1))</span></p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ExponentialMovingAverage">Exponential Moving Average</h4>
+            <div class="member-link">[<a href="#ExponentialMovingAverage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This formula gives an Exponential Moving Average of the Last/Close price. The Length is defined in cell <b>H2</b>. The formula would be entered in cell P3, a Formula Column.</p>
+
+            <p><span class="SpreadsheetFormula">=(E3 - P4) * (2 / (1 + $H$2)) + P4</span></p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SimpleMovingAverageSkipZeros">Simple Moving Average - Skip Zeros</h4>
+            <div class="member-link">[<a href="#SimpleMovingAverageSkipZeros">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This set of formulas gives a Simple Moving Average skipping over any zero values. The Length is defined in cell <b>H2</b>. The input data is in column <b>P</b>, and the output is in column <b>S</b>.</p>
+
+            <ul>
+                <li><b>Cell Q3</b>: <span class="SpreadsheetFormula">=P3 > 0</span></li>
+
+                <li><b>Cell R3</b>: <span class="SpreadsheetFormula">=SUM(OFFSET(Q3, 0, 0, $H$2, 1))</span></li>
+
+                <li><b>Cell S3</b>: <span class="SpreadsheetFormula">=SUM(OFFSET(P3, 0, 0, $H$2, 1)) / R3</span></li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="UsingDateTime">Using Date Time</h3>
+        <div class="member-link">[<a href="#UsingDateTime">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following sections contain information on how to work with Date and Time values in the Spreadsheets.</p>
+
+        <p>Internally, Sierra Chart Spreadsheets store the Date and Time in the same manner as Microsoft Excel. As such, the Date is stored as the number of integer days since January 1, 1900. The hours are then the decimal portion of the number and represent the fractional amount of the day. For example, the Date and Time for August 18, 2018 at 16:32:00 would be 43330.68889. This also means that a value of 1 represents 1 full day.</p>
+    
+        <section class="h4">
+            <h4 id="FormulaEquivalentsOfSerialDateTimeValues">Formula Equivalents of Serial Date Time Values</h4>
+            <div class="member-link">[<a href="#FormulaEquivalentsOfSerialDateTimeValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><b>1 millisecond</b>: <span class="SpreadsheetFormula">=1 / 86400000</span></p>
+
+            <p><b>1 second</b>: <span class="SpreadsheetFormula">=1 / 86400</span></p>
+
+            <p><b>1 minute</b>: <span class="SpreadsheetFormula">=1 / 1440</span></p>
+
+            <p><b>1 hour</b>: <span class="SpreadsheetFormula">=1 / 24</span></p>
+
+            <p><b>1 day</b>: <span class="SpreadsheetFormula">=1</span></p>
+
+            <p><b>Simple Alert: Bar at Specific Time</b>: <span class="SpreadsheetFormula">BARTIME = FRACTIME(A3)</span></p>
+
+            <p><b>Simple Alert: Bar at Specific Date</b>: <span class="SpreadsheetFormula">BARDATE = INT(A3)</span></p>
+
+            <p><b>Simple Alert: Bar at Specific Date and Time</b>: <span class="SpreadsheetFormula">BARDATETIME = A3</span></p>
+        </section>
+
+        <section class="h4">
+            <h4 id="RoundingDateTimeValues">Rounding Date Time Values</h4>
+            <div class="member-link">[<a href="#RoundingDateTimeValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This section gives examples of how to round the Date and Time to achieve a desired result.</p>
+
+            <p><b>Round to the Nearest Millisecond to remove floating point imprecision to the nearest millisecond</b>: <span class="SpreadsheetFormula">=MROUND(A3, 1 / 86400000)</span></p>
+
+            <p><b>Round to the Nearest Second to remove floating point imprecision to the nearest second</b>: <span class="SpreadsheetFormula">=MROUND(A3, 1 / 86400)</span></p>
+        
+            <p><b>Round Down to the Nearest Second to remove any millisecond increments</b>: <span class="SpreadsheetFormula">=FLOOR(A3, 1 / 86400)</span></p>
+
+            <p><b>Round Down to Midnight of the referenced date</b>: <span class="SpreadsheetFormula">=FLOOR(A3, 1)</span></p>
+        </section>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TradingFormulas">Trading Formulas</h2>
+    <div class="member-link">[<a href="#TradingFormulas">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="DisableTradingFromSpreadsheetStudyForTrading">Disable Trading From Spreadsheet Study for Trading</h3>
+        <div class="member-link">[<a href="#DisableTradingFromSpreadsheetStudyForTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following sections give examples of formulas to be used to control when trading can occur with the <b>Spreadsheet System for Trading</b> study.</p>
+
+        <section class="h4">
+            <h4 id="DisableAutotradingOutsideOfRegularTradingHours">Disable Autotrading Outside of Regular Trading Hours</h4>
+            <div class="member-link">[<a href="#DisableAutotradingOutsideOfRegularTradingHours">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The following formula disables the <b>Spreadsheet System for Trading</b> study from creating new open positions outside of the specified times. The <b>Spreadsheet System for Trading</b> can still exit from Open Positions during all hours with this formula.</p>
+
+            <p>This formula should be entered into cell <b>J28</b>.</p>
+
+            <p><span class="SpreadsheetFormula">=AND(J8 = 0, OR(FRACTIME(J41) &lt; TIMEVALUE("09:30:00"), FRACTIME(J41) &gt; TIMEVALUE("16:00:00")))</span></p>
+
+            <p>In this example, it will allow the <b>Spreadsheet System for Trading</b> to open new Positions between the hours of 09:30:00 and 16:00:00. Change these values in the formula as needed.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="#DisableTradingOutsideOfRegularTradingHoursAnd2HoursMidday">Disable Trading Outside of Regular Trading Hours and for 2 Hours Midday</h4>
+            <div class="member-link">[<a href="#DisableTradingOutsideOfRegularTradingHoursAnd2HoursMidday">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The following formula disables the <b>Spreadsheet System for Trading</b> study from creating new open positions outside the specified times along with disabling a period in the middle of the day from 11:30:00 to 13:30:00. The <b>Spreadsheet System for Trading</b> can still exit from Open Positions during all hours with this formula.</p>
+
+            <p>This formula should be entered into cell <b>J28</b>.</p>
+
+            <p><span class="SpreadsheetFormula">=AND(J8 = 0, OR(OR(FRACTIME(J41) &lt; TIMEVALUE("09:30:00"), FRACTIME(J41) &gt; TIMEVALUE("16:00:00")), AND(FRACTIME(J41) &gt; TIMEVALUE("11:30:00"), FRACTIME(J41) &lt; TIMEVALUE("13:30:00"))))</span></p>
+
+            <p>In this example, it will allow the <b>Spreadsheet System for Trading</b> to open new positions between the hours of 09:30:00 and 11:30:00 and again between 13:30:00 and 16:00:00. Change these values in the formula as needed.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="CancelUnfilledWorkingOrderNMinutesAfterEntry">Cancel Unfilled Working Order n Minutes After Entry</h3>
+        <div class="member-link">[<a href="#CancelUnfilledWorkingOrderNMinutesAfterEntry">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section lists a set of formulas to be entered in the <b>Spreadsheet System for Trading</b> that will automatically cancel an unfilled order some number of minutes after the close of the entry signal bar.</p>
+
+        <p>Adjust the value in Cell H4 as needed to change the number of minutes to wait between the Close of the Entry Bar and Cancelling the Order.</p>
+
+        <ul>
+            <li><b>Cell Y3</b>: <span class="SpreadsheetFormula">=IF(AND (K5 = 0, K4), FRACTIME(A3), Y4)</span>
+                <br>
+                This formula returns the closing timestamp of a Buy Entry signal in Column K.
+            </li>
+
+            <li><b>Cell Z3</b>: <span class="SpreadsheetFormula">=IF(AND(M5 = 0, M4), FRACTIME(A3), Z4)</span>
+                <br>
+                This formula returns the closing timestamp of a Sell Entry signal in Column M.
+            </li>
+
+            <li><b>Cell H4</b>: <span class="SpreadsheetFormula">3</span>
+                <br>
+                This is the number of minutes to wait before canceling an unfilled working order.
+            </li>
+
+            <li><b>Cell J27</b>: <span class="SpreadsheetFormula">=OR(AND(J4 &gt; 0, FRACTIME(J41) - Y3 &gt;= H4 / 1440), AND(J4 &lt; 0, FRACTIME(J41) - Z3 &gt;= H4 / 1440))</span>
+                <br>
+                This formula will cancel an unfilled working order 3 minutes after the close of the entry bar. If bars are not time-based, it can occur intrabar.
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="CalculateDailyNetClosedProfitLossAfterCommissions">Calculate Daily Net Closed Profit/Loss After Commissions</h3>
+        <div class="member-link">[<a href="#CalculateDailyNetClosedProfitLossAfterCommissions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following formulas give ways to calculate the net Profit or Loss and how to display that information when using the <b>Spreadsheet System for Trading</b>.</p>
+
+        <p>Calculate the net Profit or Loss including Commissions, not including any Open Positions:</p>
+
+        <ul>
+            <li><b>Cell H2</b>: Enter the round-trip commission cost.</li>
+
+            <li><b>Cell H45</b>: <span class="SpreadsheetFormula">=J45 - J53 / 2 * H2</span></li>
+        </ul>
+
+        <p>Alternatively, the following formulas will calculate the net Profit or Loss including Commissions, and including any Open Positions, once they are closed.</p>
+
+        <ul>
+            <li><b>Cell H2</b>: Enter the round-trip commission cost.</li>
+
+            <li><b>Cell H45</b>: <span class="SpreadsheetFormula">=J10 + J45 - (ABS(J8) + J53) / 2 * H2</span></li>
+        </ul>
+
+        <p>If desired, the results of these formulas can be displayed on the Chart by using the <b>Text Display for Study</b> study using these settings:</p>
+
+        <ul>
+            <li>Spreadsheet System for Trading <b>Cell R3</b>: <span class="SpreadsheetFormula">=IF(ROW()=3, $H$45, 0)</span></li>
+
+            <li>Text Display for Study <b>Study and Subgraph to Display</b>: Spreadsheet System for Trading - <b>R (SG8)</b></li>
+        </ul>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="PersistentAndIncrementingVariables">Persistent and Incrementing Variables</h2>
+    <div class="member-link">[<a href="#PersistentAndIncrementingVariables">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following sections describe ways to create Persistent Variables or Incrementing Variables that can then be used for specific purposes.</p>
+
+    <section class="h3">
+        <h3 id="CountBarsSinceAnEvent">Formula to Count Bars Since An Event</h3>
+        <div class="member-link">[<a href="#CountBarsSinceAnEvent">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following formula will count the number of bars since a Buy Entry event occurred (cell K3). This will also stop counting if a Sell Entry event occurs (cell M3). This could be used to cancel an unfilled Order at some number of bars.</p>
+
+        <p>The formula below would be entered in cell P3.</p>
+        
+        <p><span class="SpreadsheetFormula">=IF(M3, 0,IF(OR(K3, P4 &gt; 0), P4 + 1, P4))</span></p>
+
+        <p>The above formula can also be reversed so that it counts bars since a Sell Entry event (M3) and stops counting if a Buy Entry event occurs (cell K3). The formula below would be entered in cell Q3.</p>
+
+        <p><span class="SpreadsheetFormula">=IF(K3, 0,IF(OR(M3, Q4 &gt; 0), Q4 + 1, Q4))</span></p>
+    </section>
+
+    <section class="h3">
+        <h3 id="CancelUnfilledOrderAfterNBars">Cancel an Unfilled Order After n Bars</h3>
+        <div class="member-link">[<a href="#CancelUnfilledOrderAfterNBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following formulas will cancel an unfilled order after some number of bars have passed. This builds on the formulas from <b>Count Bars Since an Event</b> above, which are repeated here.</p>
+
+        <p>These formulas only reset the count when the opposing event occurs (a Sell event for a Buy Position, or a Buy even for a Sell Position).</p>
+
+        <p>The number of bars (n) is a value stored in cell H4.</p>
+
+        <p>These formulas check at the <b>close</b> of a bar because row 4 is referenced in columns P and Q.</p>
+
+        <ul>
+            <li><b>Cell P3</b>: <span class="SpreadsheetFormula">=IF(M3, 0,IF(OR(K3, P4 &gt; 0), P4 + 1, P4))</span>
+                <br>
+                This counts the bars since a Buy Entry event occurred (see <b>Formula to Count Bars Since An Event</b> above).
+            </li>
+
+            <li><b>Cell Q3</b>: <span class="SpreadsheetFormula">=IF(K3, 0,IF(OR(M3, Q4 &gt; 0), Q4 + 1, Q4))</span>
+                <br>
+                This counts the bars since a Sell Entry event occurred (see <b>Formula to Count Bars Since An Event</b> above).
+            </li>
+
+            <li><b>Cell J27</b>: <span class="SpreadsheetFormula">=OR(AND(P4 &gt;= H4 + 1, J4 > 0), AND(Q4 &gt;= H4 + 1, J4 &lt; 0))</span>
+                <br>
+                This cancels the unfilled orders after n bars.
+            </li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="CancelUnfilledOrderAfterNBars-ResetCounterOnNewOrderInSameDirection">Cancel Unfilled Orders After n Bars - Reset Counter on New Order in Same Direction</h3>
+        <div class="member-link">[<a href="#CancelUnfilledOrderAfterNBars-ResetCounterOnNewOrderInSameDirection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following formulas will cancel unfilled orders after some number of bars have passed. This builds on the formulas from <b>Cancel an Unfilled Order After n Bars</b> above, which are repeated here. In this case, however, the counting of the bars will reset if a new Order is placed.</p>
+
+        <p>The number of bars (n) is a value entered in cell H4.</p>
+
+        <p>These formulas check at the <b>close</b> of a bar because row 4 is referenced in columns P and Q.</p>
+
+        <ul>
+            <li><b>Cell P3</b>: <span class="SpreadsheetFormula">=IF(BuyZeroingEvent, 0,IF(OR(K3, P4 &gt; 0), P4 + 1, P4))</span>
+                <br>
+                This counts the bars (in cell P4) since a Buy Entry event occurred (see <b>Formula to Count Bars Since An Event</b> above). The term <b>BuyZeroingEvent</b> should be replaced by an appropriate formula that will reset the count to 0.
+            </li>
+
+            <li><b>Cell Q3</b>: <span class="SpreadsheetFormula">=IF(SellZeroingEvent, 0,IF(OR(M3, Q4 &gt; 0), Q4 + 1, Q4))</span>
+                <br>
+                This counts the bars (in cell Q4) since a Sell Entry event occurred (see <b>Formula to Count Bars Since An Event</b> above). The term <b>SellZeroingEvent</b> should be replaced by an appropriate formula that will reset the count to 0.
+            </li>
+
+            <li><b>Cell J27</b>: <span class="SpreadsheetFormula">=OR(AND(P4 &gt;= H4 + 1, J4 > 0), AND(Q4 &gt;= H4 + 1, J4 &lt; 0))</span>
+                <br>
+                This cancels the unfilled orders after n bars.
+            </li>
+        </ul>
+
+        <p>Alternatively, the following formulas can be used to simply reset the count to 1 on a new order in the same direction, but does not reset otherwise.</p>
+
+        <p>The number of bars (n) is a value entered in cell H4.</p>
+
+        <ul>
+            <li><b>Cell P3</b>: <span class="SpreadsheetFormula">=IF(K3, 1, P4 + 1)</span>
+                <br>
+                This counts the bars in P4 since a Buy Entry event occurred.
+            </li>
+
+            <li><b>Cell Q3</b>: <span class="SpreadsheetFormula">=IF (M3, 1, Q4 + 1)</span>
+                <br>
+                This counts the bars in Q4 since a Sell Entry event occurred.
+            </li>
+
+            <li><b>Cell J27</b>: <span class="SpreadsheetFormula">=OR(AND(P4 &gt;= H4 + 1, J4 > 0), AND(Q4 &gt;= H4 + 1, J4 &lt; 0))</span>
+                <br>
+                This cancels the unfilled orders after n bars.
+            </li>
+        </ul>
+    </section>
+        
+
+    <section class="h3">
+        <h3 id="BuyOnFirstSignalAndIgnoreMultipleSignals">Buy on First Signal and Ignore Multiple Signals</h3>
+        <div class="member-link">[<a href="#BuyOnFirstSignalAndIgnoreMultipleSignals">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following set of formulas creates a Buy order per a set of Buy Conditions and then ignores additional Triggers until the corresponding Sell Order is placed.</p>
+
+        <ul>
+            <li><b>Cell P3</b>: <span class="SpreadsheetFormula">=IF(BuyConditions, 1, IF(SellConditions, 0, P4))</span>
+                <br>
+                In the above formula <b>BuyConditions</b> would be replaced with a desired Buy formula, and the <b>SellConditions</b> would be replaced with a desired Sell formula.
+            </li>
+
+            <li><b>Cell K3</b>: <span class="SpreadsheetFormula">=AND(P4 = 0, P3)</span>
+
+            <li><b>Cell M3</b>: <span class="SpreadsheetFormula">=AND(P4, P3 = 0)</span>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="CountEventsSinceFirstOccurrence">Count Events Since First Occurrence</h3>
+        <div class="member-link">[<a href="#CountEventsSinceFirstOccurrence">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following set of formulas will count the number of events that occur since a first event triggered the start of the count.</p>
+
+        <p>In this example the Spreadsheet System for Trading is used and the number of Buy Entry events is counted since a Sell Entry event occurred. Additionally, the number of Sell Entry events is counted since a Buy Entry event occurred.</p> 
+
+        <p>There is also a limit set in cell H4 that will prevent any Buy or Sell trades from occurring if the count is larger than this value. This can be used to limit the number of open positions</p>
+
+        <ul>
+            <li><b>Cell P3</b>: <span class="SpreadsheetFormula">=IF(M3, 0, IF(K3, P4 + 1, P4))</span>
+                <br>
+                This counts the number of Buy Events from cell K3 and is reset if a Sell Event is detected in cell M3.
+            </li>
+
+            <li><b>Cell Q3</b>: <span class="SpreadsheetFormula">=IF(K3, 0, IF(M3, Q4 + 1, Q4))</span>
+                <br>
+                This counts the number of Sell Events in cell K3 and is reset if a Buy Event is detected in cell K3.
+            </li>
+
+            <li><b>Cell K3</b>: <span class="SpreadsheetFormula">=AND(BuyEntryConditions, P4 &lt; $H$4)</span>
+                <br>
+                This defines the Buy Entry conditions, but limits the ability to enter the position if the counter in cell P4 is not less than the value in H4. In the above formula <b>BuyEntryConditions</b> would be replaced with a desired Buy Entry formula.
+            </li>
+
+            <li><b>Cell M3</b>: <span class="SpreadsheetFormula">=AND(SellEntryConditions, Q4 &lt; $H$4)</span>
+                <br>
+                This defines the Sell Entry conditions, but limits the ability to enter the position if the counter in cell Q4 is not less than the value in H4. In the above formula <b>SellEntryConditions</b> would be replaced with a desired Sell Entry formula.
+            </li>
+
+            <li><b>Cell H4</b>: Enter a value to limit the number of Buy or Sell events.</li>
+        </ul>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="DataManipulation">Data Manipulation</h2>
+    <div class="member-link">[<a href="#DataManipulation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following sections give formulas and information on how to manipulate the data that is being used in the Spreadsheet Studies.</p>
+
+    <section class="h3">
+        <h3 id="RemovingFloatingPointImprecision">Removing Floating Point Imprecision</h3>
+        <div class="member-link">[<a href="#RemovingFloatingPointImprecision">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following formulas can be used to remove floating point imprecision from various items in the Spreadsheet Studies.</p>
+
+        <ol>
+            <li>Remove Floating Point Imprecision of the Tick Size in cell J21. Place this formula in cell H21:
+                <ul>
+                    <li><span class="SpreadsheetFormula">=1 / ROUND(1 / J21, 0)</span></li>
+                </ul>
+            </li>
+
+            <li>Remove Floating Point Imprecision of a Calculated Value to a Multiple of the Tick Size (see above formula):
+                <ul>
+                    <li><span class="SpreadsheetFormula">=MROUND(CalculatedValue,$H$21)</span>
+                        <br>
+                        In this case the CalculatedValue could be any formula or another cell.
+                    </li>
+                </ul>
+            </li>
+            
+            <li>Remove Floating Point Imprecision of the OHLC Values to a Multiple of the Tick Size (see above formula):
+                <ul>
+                    <li><span class="SpreadsheetFormula">=MROUND(B3, $H$21)</span></li>
+                    <li><span class="SpreadsheetFormula">=MROUND(C3, $H$21)</span></li>
+                    <li><span class="SpreadsheetFormula">=MROUND(D3, $H$21)</span></li>
+                    <li><span class="SpreadsheetFormula">=MROUND(E3, $H$21)</span></li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="SpreadsheetStudyEquivalentsOfSimpleAlertsAndMainPriceGraphIdentifiers">Spreadsheet Study Equivalents of Simple Alerts and Main Price Graph Identifiers</h3>
+        <div class="member-link">[<a href="#SpreadsheetStudyEquivalentsOfSimpleAlertsAndMainPriceGraphIdentifiers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following table gives different ways to reference data, or to calculate values.</p>
+
+        <table class="doc center">
+            <tr>
+                <td><b>Common Name</b></td>
+                <td><b>Main Price Graph Identifier</b></td>
+                <td><b>Spreadsheet Equivalent</b></td>
+                <td><b>Alternative</b></td>
+            </tr>
+
+            <tr>
+                <td>Date of the Bar</td>
+                <td>BARDATE</td>
+                <td><span class="SpreadsheetFormula">=INT(A3)</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Time of the Bar</td>
+                <td>BARTIME</td>
+                <td><span class="SpreadsheetFormula">=FRACTIME(A3)</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Date and Time of the Bar</td>
+                <td>BARDATETIME</td>
+                <td><span class="SpreadsheetFormula">=A3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Bar Open</td>
+                <td>O</td>
+                <td><span class="SpreadsheetFormula">=B3</span> or <span class="SpreadsheetFormula">=ID0.SG1@3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Bar High</td>
+                <td>H</td>
+                <td><span class="SpreadsheetFormula">=C3</span> or <span class="SpreadsheetFormula">=ID0.SG2@3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Bar Low</td>
+                <td>L</td>
+                <td><span class="SpreadsheetFormula">=D3</span> or <span class="SpreadsheetFormula">=ID0.SG3@3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Bar Close/Last</td>
+                <td>C</td>
+                <td><span class="SpreadsheetFormula">=E3</span> or <span class="SpreadsheetFormula">ID0.SG4@3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Bar Volume</td>
+                <td>V</td>
+                <td><span class="SpreadsheetFormula">=F3</span> or <span class="SpreadsheetFormula">=ID0.SG5@3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Open Interest (Historical Only)</td>
+                <td>OI</td>
+                <td><span class="SpreadsheetFormula">G3</span> or <span class="SpreadsheetFormula">=ID0.SG6@3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Number of Trades (Intraday Only)</td>
+                <td>NT</td>
+                <td><span class="SpreadsheetFormula">=G3</span> or <span class="SpreadsheetFormula">=ID0.SG6@3</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Average of Open, High, Low, and Close</td>
+                <td>OHLC</td>
+                <td><span class="SpreadsheetFormula">=AVERAGE(B3, C3, D3, E3)</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Average of High, Low, and Close</td>
+                <td>HLC</td>
+                <td><span class="SpreadsheetFormula">=AVERAGE(C3, D3, E3)</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Average of High and Low</td>
+                <td>HL</td>
+                <td><span class="SpreadsheetFormula">=AVERAGE(C3, D3)</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Bid Volume</td>
+                <td>BV</td>
+                <td></td>
+                <td>Add the Bid Volume study and reference SG1</td>
+            </tr>
+
+            <tr>
+                <td>Ask Volume</td>
+                <td>AV</td>
+                <td></td>
+                <td>Add the Ask Volume study and reference SG1</td>
+            </tr>
+
+            <tr>
+                <td>Open Value for Renko</td>
+                <td>ID0.SG22</td>
+                <td></td>
+                <td>Add the Renko Visual Open/Close Values study and reference SG1</td>
+            </tr>
+
+            <tr>
+                <td>Close Value for Renko</td>
+                <td>ID0.SG23</td>
+                <td></td>
+                <td>Add the Renko Visual Open/Close Values study and reference SG2</td>
+            </tr>
+
+            <tr>
+                <td>Daily High</td>
+                <td>DAILYHIGH</td>
+                <td><span class="SpreadsheetFormula">=J17</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Daily Low</td>
+                <td>DAILYLOW</td>
+                <td><span class="SpreadsheetFormula">=J18</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Last Trade</td>
+                <td>LASTTRADE</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Last Trade Size</td>
+                <td>LASTTRADESIZE</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Bid Price</td>
+                <td>BID</td>
+                <td><span class="SpreadsheetFormula">=J12</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Ask Price</td>
+                <td>ASK</td>
+                <td><span class="SpreadsheetFormula">=J14</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Previous Day Close</td>
+                <td>PREVIOUSDAYCLOSE</td>
+                <td></td>
+                <td>Add the Daily OHLC study and reference SG4 (Set 'Reference Days Back' to 1)</td>
+            </tr>
+
+            <tr>
+                <td>Tick Size</td>
+                <td>TICKSIZE</td>
+                <td><span class="SpreadsheetFormula">=J21</span></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Volume At Price</td>
+                <td>VAP</td>
+                <td></td>
+                <td>Set 'Output Volume at Price Data' to Yes on the Spreadsheet Study Inputs</td>
+            </tr>
+
+            <tr>
+                <td>Bid Volume at Price</td>
+                <td>BVAP</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Ask Volume at Price</td>
+                <td>AVAP</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="OtherExamples">Other Examples</h3>
+        <div class="member-link">[<a href="#OtherExamples">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section contains examples of formulas to perform tasks that do not fit into the other categories.</p>
+
+        <section class="h4">
+            <h4 id="ReturnLastTwoZigZagReversalValues">Return Last Two Zig Zag Reversal Values</h4>
+            <div class="member-link">[<a href="#ReturnLastTwoZigZagReversalValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The following set of formulas can be used with the Spreadsheet Study in order to obtain the values of the three most recent Zig Zag reversals. The concept can be continued on to obtain however many Zig Zag reversal points are desired.</p>
+
+            <p>This example assumes that the Zig Zag study is ID1 and that the Zig Zag Input Option for <b>Additional Output for Spreadsheets</b> is set to <b>Yes</b>.</p>
+
+            <ul>
+                <li><b>Cell O3</b>: <span class="SpreadsheetFormula">=IF(ID1.SG3@3 > 0, ID1.SG1@3, O4)</span>
+                    <br>
+                    This sets cell O3 to the Price of the most recent Zig Zag reversal point.
+                </li>
+
+                <li><b>Cell P3</b>: <span class="SpreadsheetFormula">=IF(ID1.SG3@3 > 0, O4, P4)</span>
+                    <br>
+                    This sets cell P3 to the Price of the second most recent Zig Zag reversal point.
+                </li>
+
+                <li><b>Cell Q3</b>: <span class="SpreadsheetFormula">=IF(ID1.SG3@3 > 0, P4, Q4)</span>
+                    <br>
+                    This sets cell Q3 to the Price of the third most recent Zig Zag reversal point.
+                </li>
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="UsingTheForecastFunction">Using the FORECAST Function</h4>
+            <div class="member-link">[<a href="#UsingTheForecastFunction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The spreadsheet <b>FORECAST</b> function returns the Y-Value for a give X-Value based on a simple linear regression of a set of X and Y values. This can be used to predict (forecast) a value in the future based on existing information.</p>
+
+            <p>A linear regression takes the existing data and does a best fit straight line to the data. This line can then be extrapolated to determine where the data would be expected to be at some point in the future.</p>
+
+            <p>This is only a prediction of the future data based on the existing data. It is not possible to know exactly what will happen as future bars are added to the chart.</p>
+
+            <p>The following example uses the Open data for the most recent 60 bars in order to predict the Open value of the 5th bar forward in time.</p>
+
+            <ul>
+                <li><b>Cell K3</b>: <span class="SpreadsheetFormula">=FORECAST(A3 + 5 * (A3 - A4), B3:B62, A3:A62)</span></li>
+            </ul>
+
+            <p>The first parameter of the FORECAST() function is the X value for which the predicted value is desired. In this case, we want 5 bars in the future. Therefore, we use the difference in time between bars and multiply that by 5. This allows for the timeframe of the chart to change without having to update the spreadsheet. For more information on how time is handled in Sierra Chart Spreadsheets, refer to <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#SerialDateTimeValues">Serial Date Time Values</a>.</p>
+
+            <p>The second parameter of the FORECAST() function is the range of Y values (or outcomes). These are the values for which you want to get the forecasted value. In this case, the Open data (Column B) for the previous 60 bars is used.</p>
+
+            <p>The third parameter of the FORECAST() function is the range of X values. These are inputs to the equation that results in the set of Y values. The time values will often be used for this parameter, since the charts are time-based, but it is not required. In this case, the time (Column A) for the previous 60 bars is used. It is important that the number of rows being referenced for both the X and the Y ranges is the same. If there are not the same number of values for both of these parameters then the spreadsheet will return a <b>#NUM!</b> error.</p>
+        </section>
+    </section>
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SpreadsheetExampleFormulasAndUsage.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:54:14 GMT -->
+</html>  

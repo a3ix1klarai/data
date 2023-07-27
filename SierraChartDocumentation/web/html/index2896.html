@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1670594223') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/RealTimeDataFeedsAvailableFromSierraChart.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Real Time Exchange Data Feeds Available From Sierra Chart -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real Time Exchange Data Feeds Available From Sierra Chart</a></h4> </div>     <h1 class="PageName">Real-Time Exchange Data Feeds Available From Sierra Chart</h1>
+
+
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Included">What is Included</a></li>
+    <li><a href="#IntegrationWithTradingServices">Integration with Trading Services</a>
+        <ul>
+            <li><a href="#ConnectingOnlyOnceAMonthToTradingAccount">Connecting Only Once a Month to Trading Account to Support CME Group Exchange Fees</a></li>
+        </ul>
+    </li>
+    <li><a href="#UnderstandingSierraChartExchangeDataFeedCostsAndAutomaticRenewal">Understanding Sierra Chart Data Feeds Pricing and Automatic Renewal</a>
+		<ul>
+            <li><a href="#SierraChartUsageTimeIsSeparateFromExchangeDataFeedCosts">Sierra Chart Usage Time is Separate from Exchange Data Feed Costs</a></li>
+		</ul>
+	</li>
+    <li><a href="#TwoConnectionsMaximumForNonProfessionalsForCMEGroupData">Two Connections Maximum for Non-Professionals for CME Group Data</a></li>
+    <li><a href="#UsingTradingServiceProvidedDataFeed">Using Trading Service Provided Data Feed</a></li>
+    <li><a href="#BehaviorWhenLostConnectionToTradingServiceWhenUsingExchangeDataFeed">Behavior When Lost Connection to Trading Service When Using A Sierra Chart Data Feed</a></li>
+    <li><a href="#RestartingSierraChart">Restarting Sierra Chart for Updated Settings</a></li>
+    <li><a href="#AutomaticManualDeactivation">Automatic or Manual Deactivation of Data Feed</a></li>
+    <li><a href="#UnderstandingAccessingDataFromCME">Understanding and Accessing Data From the CME, CBOT, NYMEX, COMEX Exchanges</a></li>
+    <li><a href="#AddingCMEMarketDepth">Adding Support for CME Market Depth Data</a></li>
+    <li><a href="#ActivatedFeaturesMessageLog">Viewing Activated Data Feed Features within Message Log</a></li>
+    <li><a href="#CashIndexes">Cash Indexes</a>
+		<ul>
+			<li><a href="#HistoricalCashIndexCharts">Historical Cash Index Charts</a></li>
+			<li><a href="#DelayedIntradayCashIndexCharts">Delayed Intraday Cash Index Charts</a></li>
+			<li><a href="#RealTimeIntradayCashIndexCharts">Real-Time Intraday Cash Index Charts</a></li>
+			<li><a href="#UsingCashIndexSymbolsDirectFromDataTradingService">Using Cash Index Symbols Direct from Data/Trading Service</a></li>
+		</ul>
+	</li>
+    <li><a href="#ExchangeTradedSpreads">Exchange Traded Spreads</a></li>
+    <li><a href="#FuturesOptions">Futures Options</a></li>
+    <li><a href="#DeterminingProblemDataFeedNotReceived">Determining Problem of Data Feed Not Being Received through Message Log Analysis</a></li>
+    <li><a href="#LowBandwidthOption">Low Bandwidth Option</a></li>
+    <li><a href="#Notes">Additional Notes</a></li>
+    <li><a href="#ControllingNumberOfMarketDepthLevels">Controlling Number of Market Depth Levels</a></li>
+    <li><a href="#UsingBothDenaliExchangeDataFeedAndSierraChartExchangeDataFeed">Using Both Denali Exchange Data Feed and Sierra Chart Exchange Data Feed</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart offers two Real-Time Exchange data feeds - the <a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php" target="_blank" rel="noopener noreferrer">Sierra Chart Exchange Data Feed</a> and the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a>. Either of these data feeds can be used with or without the Trading services that Sierra Chart supports, and both support historical market data.</p>
+
+    <p>The <b>Sierra Chart Exchange Data Feed</b> supports Real-Time data for the exchanges listed in the <a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php#SupportedExchanges" target="_blank" rel="noopener noreferrer">Sierra Chart Exchange Data Feed Supported Exchanges</a> section.</p>
+
+    <p>The <b>Denali Exchange Data Feed</b> supports Real-Time data for the CME Group of exchanges  (CME, CBOT, NYMEX, and COMEX) and EUREX.</p>
+
+    <p>The choice of which data feed to use is only about the required exchanges. If the only exchanges required are those that are part of the CME Group and EUREX, then the <b>Denali Exchange Data Feed</b>  needs to be used. When any real-time data is required for any exchange either in addition to, or instead  of the CME Group  or EUREX, then the <b>Sierra Chart Exchange Data Feed</b>  needs to be used.   <a href = "#UsingBothDenaliExchangeDataFeedAndSierraChartExchangeDataFeed">Both data feeds</a> can be used at the same time.</p>
+
+
+    <p>These data feeds should only be used if you require real-time data. If you only require historical data, then use the <a href="index765f.html?page=doc/SierraChartHistoricalData.php">Sierra Chart Historical Data Service</a> instead.  </p>
+    
+    <p>Additionally, when using any Sierra Chart Service Package, the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> is provided at no extra cost.</p>
+    
+    <p> All Sierra Chart data feeds are high quality and low latency data feeds that provide tick by tick data.</p>
+
+    <p>For CME Group  and EUREX futures data, these data feeds set a very high standard for market data because  they provide unfiltered data and provides 100% accurate Bid Volume and Ask Volume.</p>
+
+    <p>For more information on the <b>Denali Exchange Data Feed</b>, including <b>Setup Instructions</b>, refer to the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a> page.</p>
+        
+    <p>For more information on the <b>Sierra Chart Exchange Data Feed</b>, including <b>Setup Instructions</b> refer to the <a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php" target="_blank" rel="noopener noreferrer">Sierra Chart Exchange Data Feed</a> page.</p>
+
+    <p>The rest of the information on this page is relevant to both the <b>Sierra Chart Exchange Data Feed</b> and the <b>Denali Exchange Data Feed</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Included">What is Included</h2>
+    <div class="member-link">[<a href="#Included">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>Streaming Real-Time Data: <b>Yes.</b></li>
+
+        <li>Market Depth Data: <b>For futures markets only.</b> In the case of the CME, to receive market depth data, you need to activate an exchange which includes market depth data. If you activate the Full CME Group without market depth, then you will not receive market depth data for any CME symbols within Sierra Chart.</li>
+
+        <li>Historical Intraday Data: <b>Yes.</b> Tick by tick data for popular futures contracts on the CME begins at 2011.
+            <br> <br>
+            Prior to this the CME data is in 1 minute units and begins at June 2008.
+            <br> <br>
+            Tick by tick data for popular futures contracts on the ICE begins at 2013. Prior to this the ICE data is in 1 minute units and begins at June 2009.
+            <br> <br>
+            Tick by tick data for popular futures contracts on the EUREX begins at 2013. Prior to this the EUREX data is in 1 minute units and begins at 2010.
+            <br> <br>
+            At least 1 Year of historical tick by tick data is provided for US stocks. Prior to this the US stock data is in 1 minute units and begins in 2008.
+            <br> <br>
+            For other futures contracts and cash index symbols, tick by tick data begins at 2013. Unless otherwise noted, the amount of historical data available in 1 Minute units depends upon the symbol and is at least back to 2010 so long as the symbol traded back that far in time. For some symbols there is more historical data available.</li>
+
+        <li>Historical Daily Data: <b>Yes.</b> The number of years available depends upon the symbol. At a minimum there is going to be 15 years of data so long as the symbol traded back that far in time.</li>
+
+        <li>Historical Bid Trade Volume and Ask Trade Volume: <b class="GeneralBackgroundHighlightLight">Yes.</b>. 100% accurate for CME futures markets. The amount of historical data that has Bid Trade Volume and Ask Trade Volume depends upon if the historical data is tick by tick. Refer to <b>Historical Intraday Data</b> above.</li>
+
+        <li>Historical Futures Spread Data: <b>Yes for the CME.</b> This data begins September 2015.</li>
+
+        <li>Options Data: Futures options data available for the CME.</li>
+
+        <li>Combining of Sub-trades into Exchange Reported Original Summary Trade: Supported for the CME futures symbols.</li>
+
+        <li>Tick by tick unfiltered data feed.</li>
+
+        <li>Full unfiltered market depth data direct from the exchanges. Market depth data is not provided for US equities. Up to 500 levels for CME markets (to be released in August 2019).</li>
+        
+        <li>High precision market depth data delivery with millisecond time stamping for CME markets.  This is necessary for advanced market depth analysis within Sierra Chart.  This is not supported with any other data feed.</li>
+
+        <li>Low latency. Data servers are located in the <a href="http://www.equinix.com/locations/united-states-colocation/chicago-data-centers/" target="_blank" rel="noopener noreferrer">Equinox Cermak Road Chicago data center</a>.</li>
+
+        <li>Direct CME FIX data feed integration at our backend.</li>
+
+        <li>Our own high-performance hardware using Solid State Drives for rapid historical data delivery.</li>
+
+        <li>Seamless integration with the trading service you are using. There is no need to run a second copy of Sierra Chart or use any special settings.</li>
+
+        <li>Exchange traded spreads for CME markets are supported.</li>
+
+        <li>Uses <a href="index107a.html?page=doc/DTCProtocol.php" target="_blank" rel="noopener noreferrer">DTC Protocol</a>.</li>
+        <li>Efficient Market Data with Processing on Background Thread: Yes.</li>
+    </ul>
+</section>
+
+<section class="h2" >
+    <h2 id="IntegrationWithTradingServices">Integration with Trading Services</h2>
+    <div class="member-link">[<a href="#IntegrationWithTradingServices">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php" target="_blank" rel="noopener noreferrer">Sierra Chart Exchange Data Feed</a> and <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a> support full and seamless integration with all supported Trading services:</p>
+
+    <ul id="SupportedTradingServices">
+        <li>Interactive Brokers Live account</li>
+        <li>Rithmic Live account</li>
+        <li><a href = "#/index.php?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a></li>
+        <li>CQG Live account</li>
+    </ul>
+
+    <p class="GeneralBackgroundHighlightLight">This seamless integration means that when you activate one of the Sierra Chart Exchange Data Feeds on your Sierra Chart account, the charts and Trade DOM windows <em>will receive this data feed for any symbol that this data feed provides data for</em>, if you have activated the exchange the symbol trades on and if Sierra Chart has defined symbol remapping for that symbol for the particular Trading service you are using.</p>  
+
+    <p><em>Therefore, when using your Trading account with Sierra Chart, the market data will come from the Sierra Chart provided data feed.</em></p>
+
+    <p class="GeneralBackgroundHighlightLight">In the case of real-time CME Group data,  you either need to follow the instructions below or the <a href="#ConnectingOnlyOnceAMonthToTradingAccount">Connecting Only Once a Month to Trading Account to Support CME Group Exchange Fees</a> instructions in order to receive data at the reduced exchange fee for non-professionals. For more information, refer to  <a href="#UnderstandingAccessingDataFromCME">Understanding Accessing Data From CME</a>. </p>
+
+    <p>Follow the instructions below for this Trading service integration:</p>
+
+    <ol id="IntegrationWithTradingServices_Instructions">
+        <li>Within Sierra Chart, select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu.</li>
+
+        <li>Ensure that the <b>Current Selected Service</b> is set to the Trading service that you are using. It can be one of the  <a href="#SupportedTradingServices">supported Trading services</a>
+            <br>
+            <div style="text-align: center;"><a href="../images/tradingservice.png" rel="lightbox"><img  class="screenshot" loading="lazy"  src="../images/tradingservice.png" width="500" alt=""></a></div>
+            <br>
+            <br>
+        </li>
+        
+        <li> In the list of  <b>Service Settings</b> for the selected Service, make sure they are all configured according to the set up instructions for the selected Service. Refer to <a href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices" target="_blank" rel="noopener noreferrer">Data and Trading Services</a> for instructions for each service. </li>
+        
+        <li> Sierra Chart must be connected to a  <em>Live</em> funded futures trading account to authorize the CME, CBOT, NYMEX, COMEX  real-time data if you are using  one or more of the CME, CBOT, NYMEX, COMEX nonprofessional exchange fees. </li>
+        
+        
+        <li> Select  <b class="menu_item">Common Settings</b>  from the menu.</li>
+        <li>Set the <b>Allow Support for Sierra Chart Data Feeds</b> option to Yes.</li>
+
+        <li>Press <b>OK</b>.</li>
+
+        <li>Reconnect to the data feed with <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect To Data Feed</b> commands on the menu. </li>
+        
+        <li> To change symbols of existing charts in your open Chartbooks to the symbols used by the connected Trading service, select  <a href = "indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService">Edit &gt;&gt; Translate Symbols to Current Service</a>.  This command requires an up-to-date version of Sierra Chart.</li>
+    </ol>
+
+    <p>There is no other special configuration required and no need to use a separate copy of Sierra Chart on your system. The symbols you will use to receive market data are the <em>same symbols</em> that your Trading service uses (<b class="menu_item">File &gt;&gt; Find Symbol</b>).</p>
+
+    <p>For proper data feed mapping it is <em>necessary to use</em> the symbols you see listed in the <b>Find Symbol</b> window for the connected Trading service. There is an automatic internal mapping between the Trading service symbols and the Sierra Chart data feeds.</p>
+
+
+    <p>You will know that a Sierra Chart data feed is being used when you see an <b class="GeneralBackgroundHighlight">[M]</b> indicator after the <em>Symbol</em> on the top line of the chart or Trade DOM. Refer to the image below.
+
+    <div style="text-align: center;"><a href="../images/alternatemappeddatafeedindicator.png" rel="lightbox"><img class="screenshot" loading="lazy" src="../images/alternatemappeddatafeedindicator.png" alt=""></a></div>
+        
+    <p>When using a sub-instance of Sierra Chart through <b class="menu_item">File &gt;&gt; New Instance</b>, you will <em>not</em> see the <b class="GeneralBackgroundHighlight">[M]</b> indicator, but this data feed is still being used for the symbol as long as <em>you do see</em> the <b class="GeneralBackgroundHighlight">[M]</b> indicator for the same symbol in the <em>main instance</em> of Sierra Chart.</p>
+
+    <p>If you do not see the <b class="GeneralBackgroundHighlight">[M]</b> indicator, then <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>. <em>Also be aware that to receive CME data at reduced exchange fees for non-professionals, you must be connected to a <em>live funded</em> trading account</em>. This is another reason why you may not see the <b class="GeneralBackgroundHighlight">[M]</b>.</p>
+
+    <p>Another possibility for not seeing the <b class="GeneralBackgroundHighlight">[M]</b> indicator is that the internal mapping has not been set up for the symbol. If you expect to see the <b class="GeneralBackgroundHighlight">[M]</b> and do not, then contact <a href="https://www.sierrachart.com/SupportBoard.php" Target="_blank" rel="noopener noreferrer">Sierra Chart Support</a>.</p>
+
+    <p>For symbols which are not supported by the Sierra Chart Exchange Data Feed or for symbols on an exchange you have <em>not activated</em> on your Sierra Chart account, the data will be received from the Trading service you are connected to.</p>
+
+    <p>If you pay separately to your Trading service for market data, you can unsubscribe from the market data that you are now receiving through the Sierra Chart data feed.</p>
+
+    <section class="h3" >
+        <h3 id="ConnectingOnlyOnceAMonthToTradingAccount">Connecting Only Once a Month to Trading Account to Support CME Group Exchange Fees</h3>
+        <div class="member-link">[<a href="#ConnectingOnlyOnceAMonthToTradingAccount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section explains connecting Sierra Chart  <em>once a month</em> to your live Trading service to meet  <a href = "#UnderstandingAccessingDataFromCME" >CME Group market data rules for non-professionals</a>.  </p>
+        
+        <p>If you <em>always</em> want Sierra Chart to be connected to your Trading service and want to have the  Denali Exchange Data Feed integrated with that service, then it is   <em>not necessary</em> to perform  the steps in this subsection. In this last case, follow the <a href = "#IntegrationWithTradingServices">Integration with Trading Services</a> instructions instead.</p>
+
+        <p>If you are considered a non-professional by the CME Group and want to take advantage of the lower-priced CME Group exchange fees and setting the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b>&gt;&gt; Current Selected Service</b> in Sierra Chart to <b>SC Data - All Services</b>, <em>or you want to connect to a simulated Trading account instead of your live Trading account</em>,  then at least once a month you need to connect Sierra Chart to your <em>Live</em> Trading account just for a few seconds and then change the <b>Current Selected Service</b> back to your previous setting.</p>
+        
+       <p>If you are using services like Top Step Trader, Earn 2 Trade, One Up Trader, LeeLoo, UProfit, Apex, and other trading evaluator accounts, these are not considered a Live funded trading account according to CME Group rules.  You must use the <a href = "index8a6a.html?page=doc/EasySolutionToCMEFundedTradingAccountRequirement.php">Easy Solution</a> method to authorize the CME Group real-time data.</p>
+        
+        <p> This check is necessary one time each month to verify you have a Live funded trading account which is required by the CME to receive the real-time CME data at the lower-priced exchange fees for non-professionals.</p>
+
+        <p>You will then be able to receive the real-time CME Group data for the next 30 days.  This check can be any time during the month  to authorize the data for 30 days and then it needs to be done 30 days later.</p>
+        
+
+        <p>Follow the instructions below to perform this check:</p>
+
+        <ol id="ConnectingOnlyOnceAMonthToTradingAccount_Instructions">
+            <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</li>
+
+            <li>Set the <b>Current Selected Service</b> setting to your Trading service. Refer to the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services" target="_blank" rel="noopener noreferrer">Supported Data and Trading Services</a> section for links to complete instructions for connecting to each of the supported Trading services. Make sure you are connecting Sierra Chart to your <em>Live</em> Trading account.</li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. It is normal due to symbol differences that the charts will show a <b>Symbol is Unknown</b> message and will not update.  It is important to <em>not</em> change the symbols of the charts.</li>
+
+            <li>Wait for 10 seconds, then select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</li>
+
+            <li>Set the <b>Current Selected Service</b> back to <b>SC Data - All Services</b>, or the  <b>Trading Evaluator</b> service.</li>
+
+            <li>Press <b>OK</b>.</li> 
+
+            <li>Make sure Sierra Chart is connected to the data feed with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+        </ol>
+
+        <p>The symbols of the charts and Quote Boards must use the symbols in <b class="menu_item">File &gt;&gt; Find Symbol</b> for them to update. To change the symbol of an existing chart, refer to <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#ChangingChartSymbol" target="_blank" rel="noopener noreferrer">Changing The Symbol of a Chart or Trade DOM</a>.</p>
+
+        <p>You will now be able to receive the real-time CME Group data.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2  id="UnderstandingSierraChartExchangeDataFeedCostsAndAutomaticRenewal">Understanding Sierra Chart Data Feeds Pricing and Automatic Renewal</h2>
+    <div class="member-link">[<a href="#UnderstandingSierraChartExchangeDataFeedCostsAndAutomaticRenewal">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are 2 components to the costs for the Sierra Chart Data Feeds.</p>
+
+    <ol>
+        <li>The <b>Market Data Feed</b> itself which is prorated based upon when the data feed is activated within the month. Therefore, if you activate the market data feed in the middle of the month, then the cost will be 50% of the standard cost for the market data feed.</li>
+
+        <li>The <b>Exchange Fees</b>. <em class="GeneralBackgroundHighlight">These are billed in full each month no matter when they are activated</em>. If you activated an exchange on the last day of the month, you will be billed for a full month for it. Therefore, if the exchange fee is 115.50 USD and you activated it on the last day of the month, you will be billed 115.50 on that last day of the month and billed 115.50 on the next day when the new month begins (as long as the exchange is still activated). Be sure to keep this in mind before activating an exchange near the end of the month.</li>
+    </ol>
+
+    <p>Right at the end of the current month, any of the data feed options that you have activated, will be automatically renewed as long as your <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit" target="_blank" rel="noopener noreferrer">Services Balance</a> is high enough to cover all of the data feed options you have activated on your account. Therefore, you will be billed in full for the market data feed and exchange fees for that month.</p>
+
+    <p>If the <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit" target="_blank" rel="noopener noreferrer">Services Balance</a> on your account is not high enough to cover these costs, then all of the data feed options will be <em>canceled and your data feed will be deactivated just before the beginning of the next month</em>. There is no harm if this happens. </p>
+    
+    <p>In this case you just need to add additional funds to your Services Balance  and reactivate the real-time data feed connection and Exchanges you had previously on the <a href="https://www.sierrachart.com/UserControlPanel.php?page=RecurringServices" target="_blank" rel="noopener noreferrer">Recurring Services</a>  page. </p>
+
+    <p>Near the end of each month, if you have any data feed options for one of the <b>Sierra Chart Data Feeds</b> set to automatically renew, including exchanges, and there is an insufficient balance on your Sierra Chart account, you will be notified by email and also through a notification message when you start Sierra Chart, indicating the amount of money that needs to be added to your <b>Services Balance</b> to cover those services for the next month.</p>
+
+    <p>In the case of when the data feed has been deactivated at the end of the current month, and you no longer need it, Sierra Chart will automatically receive the updated settings as long as you are running a current version. Although you may have to restart Sierra Chart to prevent Sierra Chart from trying to use the Sierra Chart Data Feed which it will not be able to access. Otherwise, this will prevent the real-time data from being used from your Trading service if you are using a supported Trading service.</p>
+
+    <p>To add additional funds/money to your account, go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit" target="_blank" rel="noopener noreferrer">Additional Services  Payment</a> page.</p>
+
+    <section class="h3">
+		<h3 id="SierraChartUsageTimeIsSeparateFromExchangeDataFeedCosts">Sierra Chart Usage Time is Separate from Exchange Data Feed Costs</h3>
+		<div class="member-link">[<a href="#SierraChartUsageTimeIsSeparateFromExchangeDataFeedCosts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The costs for the Sierra Chart Data Feeds, <em>are separate from Sierra Chart <a href="index2a8e.html?page=doc/PurchaseInformation.php#RenewingAccess" target="_blank" rel="noopener noreferrer">usage time</a></em>. We do not earn any money on the data feed. It is provided at cost.</p>
+
+        <p>Therefore, you also need to <a href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a> which allows you to use Sierra Chart itself.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="TwoConnectionsMaximumForNonProfessionalsForCMEGroupData">Two Connections Maximum for Non-Professionals for CME Group Data</h2>
+    <div class="member-link">[<a href="#TwoConnectionsMaximumForNonProfessionalsForCMEGroupData">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>  The CME Group only allows someone paying the   nonprofessional exchange fees to be able  to receive the  real-time CME market data feed, on no more than two  computer systems/devices at the same time.  Exchange fees have to be paid for each system you are receiving data on at the same time.  You can receive data on two systems at the same time with the  <b>Denali Exchange Data Feed</b>  by paying the exchange fees twice.     This has to be requested through an  <a href = "https://www.sierrachart.com/UserControlPanel.php?page=SupportTickets">account support ticket</a>. </p>
+     
+     <p> To receive data on more systems means that you are considered a professional and you have to pay exchange fees for each system (3 or more).  </p>
+     
+     <p>  If you are receiving the CME  Group data from different vendors,  as a nonprofessional you can receive  data on  up to two systems from each vendor and still be considered a nonprofessional. So you could receive data on four systems at the same time and still be considered a nonprofessional by using two different vendors.  In this case if you are using two different vendors and receiving data from them on two systems each, you will be paying a total of four exchange fees. </p>
+    
+</section>
+
+<section class="h2">
+    <h2 id="UsingTradingServiceProvidedDataFeed">Using Trading Service Provided Data Feed</h2>
+    <div class="member-link">[<a href="#UsingTradingServiceProvidedDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To use the data feed provided by your Trading service and not a Sierra Chart Data Feed, you need to   set <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> to No.</p>
+
+    <p>After changing the <b>Allow Support for Sierra Chart Data Feeds</b> setting, reconnect to the data feed with the <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect To Data Feed</b> commands on the menu.</p>
+
+    <p>It is also possible to share the data from the Trading service to another instance of Siera_Chart. For more information refer to the <a href="index9bbd.html?page=doc/NewInstance.php#UsingDTCServerForDataAndTradingInAnotherSCInstance">Using DTC Server for Data and Trading in Another Sierra Chart Instance</a> feature.</p>
+</section>
+
+<section class="h2">
+    <h2 id="BehaviorWhenLostConnectionToTradingServiceWhenUsingExchangeDataFeed">Behavior When Lost Connection to Trading Service When Using A Sierra Chart Data Feed</h2>
+    <div class="member-link">[<a href="#BehaviorWhenLostConnectionToTradingServiceWhenUsingExchangeDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When Sierra Chart is connected to a Trading service as explained in the <a href="#IntegrationWithTradingServices">Integration with Trading Services</a> section and you are using one of the Sierra Chart Data Feeds, then this section explains the behavior when Sierra Chart loses the connection to the external Trading service.</p>
+
+    <p>When the connection is lost to the external Trading service, this is going to be indicated in the <b class="menu_item">Window &gt;&gt; Message Log</b>. The Message Log may or may not open in this case. So long as <a href="index2c7f.html?page=doc/DataSourceSettings.php#ReconnectOnFailure">Reconnect on Failure</a> is enabled in <b>Global Settings &gt;&gt; Data/Trade Service Settings</b>, Sierra Chart will try to automatically reconnect to the Trading service.</p>
+
+    <p>The charts and the other symbols like on Quote Board which are receiving data from one of the Sierra Chart Data Feeds will continue to receive data from the Sierra Chart Data Feed even when the connection to the external Trading service has been lost so long as <b>Reconnect on Failure</b> is enabled.</p>
+
+    <p>Do not select <b class = "menu_item">File &gt;&gt; Disconnect</b>. Otherwise, this will completely disconnect from all of the data feeds including the Sierra Chart Data Feeds. When you try to connect again and there is not a successful connection to the external Trading service, then data will still not be received from the Sierra Chart Data Feeds. You first need to get a successful connection to the external Trading service.</p>
+
+    <p>If Sierra Chart is not able to reestablish a connection to the Trading service, the Message Log may periodically open. If this gets in your way, simply drag it to a corner of your visible screen. Do not minimize it because otherwise it will reopen.</p>  
+    
+    <p> A solution to the problem of losing the  connection to the Trading service  for an extended time is to use the   <a href = "index6880.html?page=doc/SierraChartOrderRoutingServiceWithData.php">Sierra Chart  Order Routing Service</a>  which has very reliable connectivity and multiple servers.  </p>
+
+    <p>Or use the configuration which is described in <a href="#ConnectingOnlyOnceAMonthToTradingAccount">Connecting Only Once a Month to Trading Account to Support CME Group Exchange Fees</a>. Basically you need to set the  <b>Service</b> in Sierra Chart to  <b>SC Data-All Services</b> and <a href="indexa20c.html?page=doc/EditMenu.html#TranslateSymbolsToCurrentService">Translate Symbols To Current Service</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="RestartingSierraChart">Restarting Sierra Chart for Updated Settings</h2>
+    <div class="member-link">[<a href="#RestartingSierraChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When there are changes to any of the Sierra Chart Data Feed options for your account, which includes activation or deactivation of data connections or Exchanges, Sierra Chart will automatically detect these account changes. If, however, the updated information is not reflected in Sierra Chart within about 3 minutes, it might be <em>necessary to restart Sierra Chart to receive the updated settings</em>.</p>
+
+    <p>Otherwise, Sierra Chart will not be aware of those changes, and that will cause a problem with being able to use the data feed. Or, the data feed may be used when it has been canceled at the end of the month and the charts which have previously received this data feed will not update in real time until Sierra Chart is restarted.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AutomaticManualDeactivation">Automatic or Manual Deactivation of Data Feed</h2>
+    <div class="member-link">[<a href="#AutomaticManualDeactivation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If there are insufficient funds to automatically renew the Sierra Chart Exchange Data Feed on your account at the beginning of the new month, then it will be automatically deactivated. </p>
+
+    <p>You can manually deactivate the data feed at any time and prevent further billing by going to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeDataFeedFeatures" target="_blank" rel="noopener noreferrer">Exchange Data Feed Features</a> page.</p>
+
+    <p>There will be <b>Deactivate</b> buttons beside the Real-time data connections and Exchanges to deactivate those.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="UnderstandingAccessingDataFromCME">Understanding and Accessing Data From the CME, CBOT, NYMEX, COMEX Exchanges</h2>
+    <div class="member-link">[<a href="#UnderstandingAccessingDataFromCME">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Like most exchanges, the CME,  CBOT, NYMEX, COMEX, which are part of the CME Group, charge fees for accessing their real-time market data. There are <em>no fees for delayed historical data</em>.</p>
+
+    <p>If you are a non-professional trader and do <em>not</em> have an account with a <a href="#IntegrationWithTradingServices">Trading Service</a> that Sierra Chart directly supports, you cannot access streaming real-time data for the CME, CBOT, NYMEX, and/or COMEX exchanges unless you pay substantially higher exchange fees.</p> 
+
+    <p>The supported trading services are as follows.</p>
+    
+    <ul>
+        <li>Interactive Brokers Live account</li>
+        <li>Rithmic Live account</li>
+        <li><a href = "#/index.php?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a></li>
+        <li>CQG Live account</li>
+    </ul>
+    
+    
+    <p>The exchange fees range from approximately 1.50 USD to 30.00 USD per month for real-time data if you are considered a <em>Non-Professional and have a funded trading account</em> with a <em>supported Trading service</em>.</p>
+
+    <p>If you do not have a funded trading account with a supported Trading service, or you are considered a Professional by the CME Group, then the fees for accessing real-time data from any one of these exchanges is 115.50 USD per month. For all four exchanges in full, the total price would be 462 USD per month. Or if you just require the CME E-mini and E-micro contracts, it is 62.40 USD per month.</p>
+    
+    <p class="GeneralBackgroundHighlight">Trading accounts from funding evaluator services like Top Step Trader, Earn 2 Trade, One Up Trader, LeeLoo, UProfit, and other trading evaluator accounts, do <em>not</em> qualify to use the CME reduced price   <em>nonprofessional</em> exchange fees. </p>
+
+    <p>Therefore, to access the CME, CBOT, NYMEX, and/or COMEX real-time data from one of the Sierra Chart Data Feeds at the reduced fees, it is necessary to set the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service</b> in Sierra Chart to use one of the  supported futures Trading services or just connect for 10 seconds <a href="#ConnectingOnlyOnceAMonthToTradingAccount">once a month</a> then back to <b>SC Data-All Services</b> (or the service for your Simulated trading account).</p> 
+
+    <p>So not only is it necessary to have a funded futures trading account, it is necessary that it is with one of the <em>supported Trading services</em>. For the list of supported Trading services and for instructions, refer to the <a href="#IntegrationWithTradingServices">Integration with Trading Services</a> section. <em class="GeneralBackgroundHighlight">Otherwise, the real-time CME, CBOT, NYMEX, and COMEX data is <b>not</b> accessible unless you pay the higher priced exchange fees</em>.</p>
+    
+    <p class="GeneralBackgroundHighlight">If you do not have a trading account with one of the supported trading services, the recommended solution is to follow   <a href = "index8a6a.html?page=doc/EasySolutionToCMEFundedTradingAccountRequirement.php">Easy Solution to CME Funded Trading Account Requirement Introduction</a>.</p>
+
+    <p>If you require only historical data for CME,  CBOT, NYMEX, COMEX, then use the <a href="index765f.html?page=doc/SierraChartHistoricalData.html" target="_blank" rel="noopener noreferrer">Sierra Chart Historical Data Service</a> instead.</p>
+
+    <p>So you might ask, how would one begin to practice trading  CME Group futures before you have a trading account?  In this case what you can do is use the  <a href = "indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a>. This is what we recommend.   This data feed is included with all Sierra Chart Service Packages at this time.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AddingCMEMarketDepth">Adding Support for CME Market Depth Data</h2>
+    <div class="member-link">[<a href="#AddingCMEMarketDepth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have activated the <em>Full CME Group (CME, CBOT, COMEX, NYMEX) for nonprofessional Trading accounts</em> exchange which does  <em>not include  <a href = "index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow">market depth</a> data</em> and later in the month require market depth data, then it is necessary  to follow the steps below.</p>
+    
+    <p> Also understand,  <em>no refunds</em> are provided for exchange fees.  We have to remit all collected exchange fees to the exchange once they are activated. </p>
+    
+    <ol>
+        <li>Go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeed" target="menu_blank">Denali Data Feed Exchanges</a> page.</li>
+
+        <li>Deactivate the  <em>Full CME Group (CME, CBOT, COMEX, NYMEX) for nonprofessional Trading accounts</em> exchange. This exchange will still be active until the end of the month.
+        <br> <br>
+        If you do not need Market Depth for the entire CME Group, then you could instead add the exchange options that include market depth individually. For example, if you just need market depth for the E-Mini S&P 500 (ES) then you could just activate the "CME with Market Depth for nonprofessional Trading accounts", which would only add another $10.40 (instead of the "Full CME Group with Market Depth" which is $31.20). </li>
+
+        <li>Activate the <em>Full CME Group (CME, CBOT, COMEX, NYMEX) with <b>Market Depth</b> for nonprofessional Trading accounts</em>.  Or alternatively, the individual exchanges that you require market depth for.  You will be required to pay the full exchange fee no matter when it is activated within the month. For the current exchange fee, refer to <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php#SupportedExchanges">Supported Exchanges</a>.
+         <br> <br>
+         If we are near the end of the month when you want to activate the exchange fee with market depth, it may be best to wait until the next month since you have to pay this exchange fee in full. For example, if you activate  an exchange fee on March 26, you would pay the full amount just for the remainder of March and then again on April 1 for April.
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="ActivatedFeaturesMessageLog">Viewing Activated Data Feed Features within Message Log</h2>
+    <div class="member-link">[<a href="#ActivatedFeaturesMessageLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The real-time data connections and exchanges you have activated for the Sierra Chart Exchange Data Feed are referred to as data feed features on your account.</p>
+
+    <p>Within the Sierra Chart <b class="menu_item">Window &gt;&gt; Message Log</b>, you can view what data feed features you have activated.</p>
+
+    <p>After changing any of the data feed features Sierra Chart will automatically receive the updated settings but you will not see them in the Message Log until you press the <b>Clear Log</b> button on the Message Log window.</p>
+
+    <p>Open the Message Log through <b class="menu_item">Window &gt;&gt; Message Log</b>. Go to the top of the Message Log.</p>
+
+    <p>You will see the data feed features listed at the top. Here is an example:</p>
+
+    <div class="MessageLog">
+        <br>Enabled for: Sierra Chart Real-Time Exchange Data Feed.
+        <br>Enabled for: CME, CBOT, NYMEX, COMEX exchanges for trading accounts.
+        <br>Enabled for: US EQUITIES exchanges. 
+        <br>Allow Support for Sierra Chart Data Feeds is enabled.
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="CashIndexes">Cash Indexes</h2>
+    <div class="member-link">[<a href="#CashIndexes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart offers access to a number of Cash Indexes, some of which offer Real-Time updates and some that do not have Real-Time updates.<p>
+
+    <p>When accessing the symbols for these Cash Indexes in <b class="menu_item"> File &gt;&gt; Find Symbol</b>, there will be two categories of symbol data. One that is denoted as <b>Indexes (Real-Time)</b> and one that is denoted as <b>Indexes</b>. These index symbols begin with a <b class="GeneralBackgroundHighlight">$</b>.</p>
+
+    <p>The index symbols listed under <b>Indexes (Real-Time)</b> update in Real-Time when subscribed to the appropriate exchange for the symbol.</p>
+
+    <p>The index symbols listed under <b>Indexes</b> do <em>not</em> update in Real-Time and therefore do not require a subscription to an exchange.</p>
+
+    <p>All users which  are using a Sierra Chart Service Package which includes unrestricted access to the <a href="index765f.html?page=doc/SierraChartHistoricalData.php" target="_blank" rel="noopener noreferrer">Sierra Chart Historical Data Service</a>, can get Historical and delayed Intraday data for these indexes.</p>
+
+    <p>Some accounts that are sold through a reseller do not include this unrestricted access and therefore are not eligible to receive data for the cash indexes without having one of the Sierra Chart Exchange Data Feeds active along with the appropriate exchange for the index.</p>
+
+    <section class="h3">
+        <h3 id="HistoricalCashIndexCharts">Historical Cash Index Charts</h3>
+        <div class="member-link">[<a href="#HistoricalCashIndexCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In order to open a Historical chart for a cash index symbol, follow these instructions:</p>
+
+        <ul>
+            <li>Select <b class="menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+            <li>Find the desired symbol and select that symbol from the list.</li>
+
+            <li>Select the <b>Open Historical Chart</b> button.</li>
+
+            <li>Select the <b>Close</b> button to close the Find Symbol window.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="DelayedIntradayCashIndexCharts">Delayed Intraday Cash Index Charts</h3>
+        <div class="member-link">[<a href="#DelayedIntradayCashIndexCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you are not using one of the Sierra Chart Exchange Data Feeds, or if you have not subscribed to the exchange for which a particular Index is associated, then it is still possible to get delayed (not Real-Time) Intraday data for that symbol.</p>
+
+        <p>In the following instructions, it requires that  the selected Data/Trade Service be set to <b>SC Data - All Services</b>. If this service is not already being used in Sierra Chart, then  in order to prevent you from using the current selected   Data or Trading   which would interrupt the current data feed you are using, you will need to install a second copy of Sierra Chart to receive historical Intraday data for cash indices.  </p>
+        
+        <p>For instructions to do this, refer to the <a href="index6ebd.html?page=doc/MultipleServices.html#StepByStep">Step-By-Step Instructions to Install Multiple Copies of Sierra Chart</a>.</p>
+
+        <p>In order to open a delayed Intraday chart for an Index symbol, follow these instructions:</p>
+
+        <ul>
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> to open the Data/Trade Service Settings window.</li>
+
+            <li>Set the <b>Service</b> to <b>SC Data - All Services</b>, if not already set to this service.</li>
+
+            <li>Select <b>OK</b> to close the Data/Trade Service Settings window.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+            <li>Find the desired cash index symbol and select that symbol from the list.</li>
+
+            <li>Select the <b>Open Intraday Chart</b> button.</li>
+
+            <li>Select the <b>Close</b> button to close the  <b>Find Symbol</b> window.</li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="RealTimeIntradayCashIndexCharts">Real-Time Intraday Cash Index Charts</h3>
+        <div class="member-link">[<a href="#RealTimeIntradayCashIndexCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For <em>Real-Time updating</em> cash index charts, it is necessary to subscribe to the <b>Sierra Chart Exchange Data Feed</b> and activate the exchange the cash index originates from. For complete instructions, refer to the <a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php#SetupInstructions">Sierra Chart Exchange Data Feed Setup Instructions</a>.</p>
+
+        <p>You can determine the exchange for the Index by looking at the end of the description for the symbol in the <b class="menu_item">File &gt;&gt; Find Symbol</b> window. You will see the particular exchange that needs to be activated after the <b class="GeneralBackgroundHighlight">-</b> character. Refer to the image below.</p>
+
+        <div style="text-align: center;"><a href="../images/findsymbolwithcashindexes.png" rel="lightbox"><img src="../images/findsymbolwithcashindexes.png" class="screenshot" loading="lazy" width="500" alt=""></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="UsingCashIndexSymbolsDirectFromDataTradingService">Using Cash Index Symbols Direct from Data/Trading Service</h3>
+        <div class="member-link">[<a href="#UsingCashIndexSymbolsDirectFromDataTradingService">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For some Data/Trading Services like Interactive Brokers, they provide their own cash index symbols.</p>
+
+        <p>If you want to use the symbols provided by the service you are using, then you need to locate them through <b class="menu_item">File &gt;&gt; Find Symbol</b>. In the case of Interactive Brokers, for example, they will be listed in <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; IB Indexes</b>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="ExchangeTradedSpreads">Exchange Traded Spreads</h2>
+    <div class="member-link">[<a href="#ExchangeTradedSpreads">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Sierra Chart Data Feeds support Historical and Real-Time data for the CME Group futures spread and strategy contracts. Follow the instructions below to get data for and chart exchange traded futures spreads and strategies.</p>
+
+    <p>Historical data support for CME Group exchange traded spreads begins in September 2015. </p>
+
+    <ol>        
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</li>
+
+        <li>The <b>Service</b> needs to be set to  <b><em>SC Data - All Services</em></b>, <b><em>SC/TT Futures Order Routing</em></b>, or <b><em>Teton CME Order Routing</em></b>.</li>
+
+        <li>Press <b>OK</b> to close the <b>Data/Trade Service Settings</b> window.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu.</li>         
+        
+        <li>Find the actual underlying futures contract top level list  in <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Futures - (exchange)</b>.  </li>
+    
+        <li>Once that is selected, then press the  <b>Get Spreads</b> button.   Refer to the instructional image below.</li>
+    
+        <li>The spread contracts will be requested, and be listed within 5 seconds or less typically. If there are a lot of spreads,  it will take longer. They are sent at a regulated pace from the server for performance reasons.</li>
+
+        <li>Among the listed spreads symbols, select the one that you require and  press  <b>OK</b>. </li>
+        
+         <li>  Press the <b>Open Intraday Chart</b>, <b>Open Historical Chart</b> or <b>Open Trading DOM</b> button.</li>
+    </ol>
+
+       
+    <div style="text-align: center;"><a href="../images/findsymbols_getfuturesspreads.png" rel="lightbox"><img src="../images/findsymbols_getfuturesspreads.png" alt=""  class="screenshot" loading="lazy" width="500"></a></div>
+    
+    <p>  <b>Expired Spread Symbols</b>:    To access historical data  for  <em>expired</em> spread symbols, requires that you manually type the symbol into the  <b class="menu_item">File &gt;&gt; Find Symbol&gt;&gt;   Selected Symbol</b> box and then open  either a Historical or and Intraday chart. </p>
+
+    <p>You can  determine what the symbol is for an expired spread symbol by getting a listing of the current contract symbols as explained above and adjusting the month codes and the two digit years accordingly.  Example:  <em><b>ZCH19-ZCK19.FUT_SPREAD.CBOT</b></em></p>
+</section>
+
+
+<section class="h2">
+    <h2 id="FuturesOptions">Futures Options</h2>
+    <div class="member-link">[<a href="#FuturesOptions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a> supports historical Intraday, historical Daily and Real-time data for the CME futures option contracts. Follow the instructions below to access data for CME futures options.</p>
+
+    <p>Historical Intraday data support for CME futures options begins in September 2017.</p>
+    
+     <p> There no longer is futures options support with the  <b>Sierra Chart Exchange Data Feed</b>.   Futures options are only supported with the  <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a>.</p>
+
+    <ol>
+        <li>An up-to-date version of Sierra Chart is required for proper support for  futures options. To update, refer to <a href="indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate" target="_blank" rel="noopener noreferrer">Fast Update</a>.</li>
+
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. </li>
+
+        <li>The <b>Service</b> needs to be set to  <b><em>SC Data - All Services</em></b>, <b><em>SC/TT Futures Order Routing</em></b>, or <b><em>Teton CME Order Routing</em></b>.</li>
+
+        <li>Press <b>OK</b> to close the <b>Data/Trade Service Settings</b> window.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu.</li>
+
+        <li>In the list of categories locate the particular futures contract for which you want to get options. Press <b>+</b> to expand the lists as necessary.</li>
+
+        <li>Press the <b>Get Options</b> button. The option contracts will be requested, and be listed within 10 seconds or less typically. Allow time for the data to be received. 
+         <br> <br>
+            Only options which have an open interest greater than 0 will be provided for efficiency reasons since the number of options available is enormous.
+            <br> <br>
+            If you want to know the symbol of an unlisted options contract, you can always deduce it from the format of existing listed option contracts.
+            <br> <br> 
+            Due to the fact that the futures options symbols are discovered from the <em>instrument replay</em> data from the exchange data feeds, option symbols might not be available over the weekend because these feeds from the exchange are not always running at that time. In this case you will need to wait until Sunday evening to obtain the options symbols.
+        </li>
+
+        <li>You can see in the image below, the open interest numbers after each options contract.</li>
+
+        <li>Among the listed option symbols, select the one that you require and press the <b>OK</b> button. After this the symbol will be set in the <b>Find Symbol</b> window and you can open a Historical or an Intraday chart or a Trading DOM.</li>
+    </ol>
+
+    <div style="text-align: center;"><a href="../images/exchangedatafeedoptionsymbolslist.png" rel="lightbox"><img src="../images/exchangedatafeedoptionsymbolslist.png" alt=""  class="screenshot" loading="lazy" width="700"></a></div>
+</section>
+
+
+<section class="h2">
+    <h2 id="DeterminingProblemDataFeedNotReceived">Determining Problem of Data Feed Not Being Received through Message Log Analysis</h2>
+    <div class="member-link">[<a href="#DeterminingProblemDataFeedNotReceived">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the Sierra Chart Exchange Data Feed is not providing data for a particular symbol, follow the procedure below to determine the source of this problem by analyzing the Message Log. To open the Message Log, select <b class="menu_item">Window &gt;&gt; Message Log</b>. This is the very same procedure that Sierra Chart Support uses.</p>
+
+    <ol>
+        <li>At the top of the Message Log there needs to be the following line:
+            <div class="MessageLog">Enabled for: Sierra Chart Real-Time Exchange Data Feed.</div>
+            If this line does not exist, then <a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeDataFeedFeatures">activate a Real-time Data Connection</a>.
+        </li>
+
+        <li> At the top of the Message Log, there needs to be a line indicating the particular exchange the symbol trades on, is enabled. Example:
+            <div class="MessageLog">Enabled for: CBOT (Trading Account Required)</div>
+            If this line does not exist, then  activate the  Exchanges that you require. 
+
+             <br> <br>
+            In the case of when using the  <a href = "index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php">Sierra Chart Exchange Data Feed</a> go to <a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeDataFeedFeatures">Exchange Data Feed Features</a>.
+             <br> <br>
+             In the case of when using the   <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> go to <a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeed">Denali Data Feed Exchanges</a>.           
+        </li>
+
+        <li>At the top of the Message Log, there needs to be this line indicating <b>Allow Support for Sierra Chart Data Feeds</b> is enabled:
+            <div class="MessageLog">Allow Support for Sierra Chart Data Feeds is enabled.</div>
+           
+           If this option is not enabled, then  set <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt;  Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> to Yes.
+        </li>
+
+        <li> If there is a line like this in the Message Log, best to search from the bottom up, then activate an additional real-time data connection on the  <a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeDataFeedFeatures">Exchange Data Feed Features</a> page:
+            <div class="MessageLog">SC Exchange Data - Limited to one connection per username for the requested data source.</div>
+        </li>
+
+        <li> If there is a line like this in the Message Log, best to search for the bottom up, then update Sierra Chart to the current version by following the <a href="indexc97d.html?page=doc/SoftwareDownload.php#FastUpdate" target="_blank" rel="noopener noreferrer">Fast Update</a> instructions:
+            <div class="MessageLog">SC Exchange Data - Logon error from server : Unsupported client protocol version number.</div>
+        </li>
+
+        <li>If this message is in the Message Log, then you need to connect to your <em>live</em> trading account. For instructions, refer to <a href="#IntegrationWithTradingServices">Integration with Trading Services</a>: 
+            <div class="MessageLog">NOTICE: Not connected to Live trading account to receive CME real-time futures data.</div>
+        </li>
+
+        <li>If you do <em>not</em> see a line like the following for the particular symbol in the Message Log, then Sierra Chart is not receiving data for it from the Sierra Chart Data Feed.
+         <br> <br>
+        In this case follow the instructions to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>. 
+         <br> <br>
+        And make sure that <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt;  Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> is <em>set to Yes</em>. 
+         <br> <br>
+        This setting must be enabled in any running instance of Sierra Chart you want to use one of the Sierra Chart Data Feeds in.
+            <div class="MessageLog">Mapping GCZ15-COMEX to GCZ15. Service code: comex</div>
+        </li>
+
+        <li>If you do see a line like the following in the Message Log for the particular symbol, then this indicates the Symbol Settings are not found. Follow the instructions to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.
+            <div class="MessageLog">SC Data - All Services | Subscribing to streaming market data in the service client is not supported. Symbol: SPY</div>
+        </li>
+        
+        <li>If you see a line like the following in the Message Log for the particular symbol, then this indicates the symbol is either expired or is not valid. <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.
+            <div class="MessageLog">SC DTC Delayed Exchange Data | Real-time data for symbol  [symbol] is currently unavailable. </div>
+            
+        Make sure you are using the correct symbols.  For complete details, refer to the  <a href = "indexf71c.html?page=doc/helpdetails1.html#Symbols" target="_blank" rel="noopener noreferrer">Symbols</a> section. 
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="LowBandwidthOption">Low Bandwidth Option</h2>
+    <div class="member-link">[<a href="#LowBandwidthOption">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Sierra Chart  Exchange Data Feeds no longer have a low bandwidth option.</p>
+
+    <p>  That low bandwidth setting has been replaced with a  <a href = "index2c7f.html?page=doc/DataSourceSettings.php#UseRealTimeDataCompression">Real-time Data Compression</a> setting.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Notes">Additional Notes</h2>
+    <div class="member-link">[<a href="#Notes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section provides various notes related to the <b>Sierra Chart Data Feeds</b> when you have activated one of them for your Sierra Chart account.</p>
+
+    <ul>
+        <li>When Sierra Chart is not connected to your Trading account, and you open a chart, historical data will be downloaded for the symbol into the chart with a 10-15 minute delay unless you pay an exchange fee for the exchange the symbol is on, in which case there will be no delay. The only exception is CME data which will still have a 10 to 15 minute delay if you do not pay the higher CME exchange fees.
+            <br> <br>
+            For this historical data downloading to be performed it is necessary that <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt;  Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> is set to Yes.      
+            <br> <br>
+            This is a very good feature because if you cannot connect to your Trading service server over the weekend (which is common), you will still be able to get up-to-date historical data.</li>
+
+        <li>After discontinuing use of the <b>Sierra Chart Data Feeds</b>, any historical data that has already been downloaded will still remain and you will be able to use it at any later time.</li>
+
+        <li>Once Sierra Chart gets a successful connection to your Trading service, then the charts will receive historical data to the current time and then after they will begin receiving real-time data for the exchanges that have been activated through the Sierra Chart Exchange Feed.</li>
+
+        <li>The <b>Sierra Chart Data Feeds</b> provide more than one server. If you are ever not receiving data from a particular server for whatever reason (this is a very unlikely case), reconnect with <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> to jump to the other server. The servers are accessed in sequence. This is the same with historical data downloads, for every download, each download goes to the next server.</li>
+
+        <li>When Sierra Chart is set to use the <b>SC Data - All Services</b> Service in <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> and you have activated one of the Sierra Chart Data Feeds on your Sierra Chart account, then you will be able to receive historical data for any symbol even if you do not pay the exchange fee for the exchange that the symbol is on.
+            <br> <br>
+            However, Sierra Chart will <em>not</em> receive streaming real-time data for the symbol or delayed streaming data if the exchange fee has not been paid for the exchange the symbol is on. Although the charts will periodically update. The update interval is controlled through <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b>&gt;&gt; Service Setting &gt;&gt; Intraday Download Interval for Non-Real Time Symbols</b>.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="ControllingNumberOfMarketDepthLevels">Controlling Number of Market Depth Levels</h2>
+    <div class="member-link">[<a href="#ControllingNumberOfMarketDepthLevels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Unlike other data feeds, Sierra Chart provided data feeds allow you to control the number of market depth levels subscribed  to from the server, assuming the particular symbol provides market depth data.</p>
+    
+    <p>The advantage of this that you can reduce the amount of   network bandwidth  usage based upon the number of market depth levels that you actually require.</p>
+   
+    <p>The setting for this is  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; SC Server Settings</b>  <b>&gt;&gt; Max Depth Levels</b>. After changing this setting it is necessary to <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">reconnect to the data feed</a>. A setting of 0 means the default which is all available market depth levels.</p>
+    
+    <p>For complete documentation, refer to <a href="index2c7f.html?page=doc/DataSourceSettings.php#MaxDepthLevels">Max Depth Levels</a> on the Data/Trade Service Settings page.</p>
+    
+    <p>It is also supported to control the number of market depth levels displayed within each individual chart and its associated Market Depth Window.  For instructions, refer to <a href="index4cf4.html?page=doc/ChartSettings.html#MaximumMarketDepthLevels">Maximum Market Depth Levels</a> in the Chart Settings documentation.</p>
+</section>
+
+<section class="h2">
+    <h2 id="UsingBothDenaliExchangeDataFeedAndSierraChartExchangeDataFeed">Using Both Denali Exchange Data Feed and Sierra Chart Exchange Data Feed</h2>
+    <div class="member-link">[<a href="#UsingBothDenaliExchangeDataFeedAndSierraChartExchangeDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>As noted above, there are two different Exchange Data Feeds that are available from Sierra Chart. The <b>Denali Exchange Data Feed</b> offers real-time futures data.  The other data feed is the  <b>Sierra Chart Exchange Data Feed</b> which offers real-time data for indices and the Hong Kong Futures Exchange.</p>
+
+    <p>Therefore, in order to get data from Sierra Chart from both the CME Group and from another exchange (such as CBOE Indices), it is necessary to use both the Denali Exchange Data Feed and the Sierra Chart Exchange Data Feed.</p>
+    
+    <p>Both of these data feeds can be used within a single installation/instance of Sierra Chart at the same time. There is nothing special to do and the use of both of these feeds at the same time is fully automatic.</p>
+
+    <p>In order to activate both data feeds, it is simply a matter of following the Setup Instructions for each one. Select a link below to open the Setup Instructions for the specific data feed:</p>
+
+    <ul>
+        <li><a href="index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed Setup Instructions</a></li>
+
+        <li><a href="index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php" target="_blank" rel="noopener noreferrer">Sierra Chart Exchange Data Feed Setup Instructions</a></li>
+    </ul>
+</section>
+
+<hr><p>*Last modified Friday, 09th December, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:12 GMT -->
+</html>  

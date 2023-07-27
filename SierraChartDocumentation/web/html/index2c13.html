@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_OrderEntryModificationMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1643306841') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DTCMessages_OrderEntryModificationMessages.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Order Entry and Modification Messages -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2c13.html?page=doc/DTCMessages_OrderEntryModificationMessages.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ExternalInterfaces.DTCProtocol">(Table of Contents) Data and Trading Communications (DTC) Protocol</a> &gt;&gt; <a  href="indexe379.html?page=doc/DTCMessageDocumentation.php">DTC Messages and Procedures</a> &gt;&gt; <a  href="index2c13.html?page=doc/DTCMessages_OrderEntryModificationMessages.php">Order Entry and Modification Messages</a></h4> </div>     <h1 class="PageName">Order Entry and Modification Messages</h1>
+
+<ul>
+    <li><a href="#Messages-SUBMIT_NEW_SINGLE_ORDER">SUBMIT_NEW_SINGLE_ORDER</a></li>
+    <li><a href="#Messages-SUBMIT_NEW_SINGLE_ORDER_INT">SUBMIT_NEW_SINGLE_ORDER_INT</a></li>
+    <li><a href="#Messages-SUBMIT_NEW_OCO_ORDER">SUBMIT_NEW_OCO_ORDER</a></li>
+    <li><a href="#Messages-SUBMIT_NEW_OCO_ORDER_INT">SUBMIT_NEW_OCO_ORDER_INT</a></li>
+    <li><a href="#Messages-SUBMIT_FLATTEN_POSITION_ORDER">SUBMIT_FLATTEN_POSITION_ORDER</a></li>
+    <li><a href="#Messages-CANCEL_REPLACE_ORDER">CANCEL_REPLACE_ORDER</a></li>
+    <li><a href="#Messages-CANCEL_REPLACE_ORDER_INT">CANCEL_REPLACE_ORDER_INT</a></li>
+    <li><a href="#Messages-CANCEL_ORDER">CANCEL_ORDER</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+
+    <section class="h3">
+        <h3 id="Messages-SUBMIT_NEW_SINGLE_ORDER">SUBMIT_NEW_SINGLE_ORDER [s_SubmitNewSingleOrder structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-SUBMIT_NEW_SINGLE_ORDER">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This message is used to submit a new single order into the market from the Client to the Server.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>    
+                    <p>The symbol for the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>    
+                    <p>The optional exchange for the symbol.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID</b></td>
+                <td>    
+                    <p>This is the Client supplied order identifier. The Server will maintain this order identifier throughout  the life of the order and always provide it back through the  <b>ClientOrderID</b> field in the <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a>  messages for the order.</p>
+
+                    <p>This identifier cannot be an identifier used for a currently  <em>open</em> order and it cannot be an identifier previously  used in the current trading session. The trading session typically will be a 24-hour period defined by the Server. The Server shall reject an order  with a client order identifier that is for a currently open order or which has already been used during the current trading session.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">[OrderTypeEnum]</a> <b>OrderType</b></td>
+                <td>    
+                    <p>The order type. For list of order types, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">OrderTypeEnum</a>. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#BuySellEnum">[BuySellEnum]</a> <b>BuySell</b></td>
+                <td>    
+                    <p>The side of the order. Either Buy or Sell.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price1</b></td>
+                <td>    
+                    <p>This is the price of the order. This is the limit price for a  <b>Limit</b> order, the stop price for a <b>Stop</b> order, or the trigger price for a Market if Touched order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price2</b></td>
+                <td>    
+                    <p>For a  <b>Stop-Limit</b> order, this is the limit price. This only applies to <b>Stop-Limit</b> orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum">[TimeInForceEnum]</a>  <b>TimeInForce</b></td>
+                <td>    
+                     <p>The Time in Force for the order or orders (in the case of an OCO order).</p>
+                    
+                     <p>For more information, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum" >TimeInForceEnum</a>. </p>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>GoodTillDateTime</b></td>
+                <td>    
+                    <p>In the case of when the <b>TimeInForce</b> is <b>TIF_GOOD_TILL_DATE_TIME</b>, this specifies the expiration  Date-Time of the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>The quantity of the order. The exact meaning of this will be specified by the Server implementation.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>TradeAccount</b></td>
+                <td>    
+                    <p>This is the trade account as a text string that the order belongs to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>IsAutomatedOrder</b></td>
+                <td>    
+                    <p>This is set 1 to signify the order has been submitted by an automated trading process.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>IsParentOrder</b></td>
+                <td>    
+                    <p>The Client will set this to 1 when the order is part of a bracket order. This indicates that this is the parent order. A bracket order will consist of a <a href="#Messages-SUBMIT_NEW_SINGLE_ORDER">SUBMIT_NEW_SINGLE_ORDER</a>   message followed by a <a href="#Messages-SUBMIT_NEW_OCO_ORDER">SUBMIT_NEW_OCO_ORDER</a>  message. The Server will use <b>IsParentOrder</b> as a flag to know that this message is a parent order. The Server will hold onto this order until it  receives the subsequent <a href="#Messages-SUBMIT_NEW_OCO_ORDER">SUBMIT_NEW_OCO_ORDER</a>  message  and then process all of the orders as one complete set.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>FreeFormText</b></td>
+                <td>    
+                    <p>Optional: This is an optional text string which can be set by the Client to associate text with the order. The Server is not under any obligation to use this text and it may place a limitation on the length of this text.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">[OpenCloseTradeEnum]</a> <b>OpenOrClose</b></td>
+                <td>    
+                    <p>For the description for this field, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">OpenCloseTradeEnum</a>.</p>
+                </td>
+            </tr>            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>MaxShowQuantity</b></td>
+                <td>    
+                    <p>This field is provided to the exchange and represents the maximum quantity to show in the limit order book for the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Price1AsString</b></td>
+                <td>    
+                    <p> This is an optional field which may be used by the Server.</p>
+                    <p> This field is the order price 1 as a string.</p>
+                </td>
+            </tr>            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Price2AsString</b></td>
+                <td>    
+                    <p> This is an optional field which may be used by the Server.</p>
+                    <p> This field is the order price 2 as a string.</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-SUBMIT_NEW_SINGLE_ORDER_INT">SUBMIT_NEW_SINGLE_ORDER_INT [s_SubmitNewSingleOrderInt structure] Client &gt;&gt; Server</h3>
+
+        <div class="member-link">[<a href="#Messages-SUBMIT_NEW_SINGLE_ORDER_INT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The <b>SUBMIT_NEW_SINGLE_ORDER_INT</b>  message is identical to <a href="#Messages-SUBMIT_NEW_SINGLE_ORDER">SUBMIT_NEW_SINGLE_ORDER</a> except that the order prices are as integers.</p>
+
+        <p>The Client will only send this message to the Server if  <b>UseIntegerPriceOrderMessages</b> is set in the <a href="index7c96.html?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php#Messages-LOGON_RESPONSE">LOGON_RESPONSE</a>  message.</p>
+
+        <p>When setting the <b>Price1</b>  and  <b>Price2</b>  fields, multiply the order price by the <b>FloatToIntPriceMultiplier</b>  value provided in the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message for the Symbol being traded.</p>
+
+        <p>This message also contains the <b>Divisor</b> field. This is the <b>FloatToIntPriceMultiplier</b>  value provided in the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message for the symbol being traded.  The Server needs to divide the <b>Price1</b> and <b>Price2</b> fields by this Divisor to get the prices as float values.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>    
+                    <p>The symbol for the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>    
+                    <p>The optional exchange for the symbol.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID</b></td>
+                <td>    
+                    <p>This is the Client supplied order identifier. The Server will maintain this order identifier throughout  the life of the order and always provide it back through the  <b>ClientOrderID</b> field in the <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a>  messages for the order.</p>
+
+                    <p>This identifier cannot be an identifier used for a currently  <em>open</em> order and it cannot be an identifier previously  used in the current trading session. The trading session typically will be a 24-hour period defined by the Server. The Server shall reject an order  with a client order identifier that is for a currently open order or which has already been used during the current trading session.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">[OrderTypeEnum]</a> <b>OrderType</b></td>
+                <td>    
+                    <p>The order type. For list of order types, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">OrderTypeEnum</a>. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#BuySellEnum">[BuySellEnum]</a> <b>BuySell</b></td>
+                <td>    
+                    <p>The side of the order. Either Buy or Sell.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price1</b></td>
+                <td>    
+                    <p>This is the price of the order. This is the limit price for a  <b>Limit</b> order, the stop price for a <b>Stop</b> order, or the trigger price for a Market if Touched order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price2</b></td>
+                <td>    
+                    <p>For a  <b>Stop-Limit</b> order, this is the limit price. This only applies to <b>Stop-Limit</b> orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum">[TimeInForceEnum]</a>  <b>TimeInForce</b></td>
+                <td>    
+                     <p>The Time in Force for the order or orders (in the case of an OCO order).</p>
+                    
+                     <p>For more information, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum" >TimeInForceEnum</a>. </p>
+                   
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a>  <b>GoodTillDateTime</b></td>
+                <td>    
+                    <p>In the case of when the <b>TimeInForce</b> is <b>TIF_GOOD_TILL_DATE_TIME</b>, this specifies the expiration Date-Time of the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>Divisor</b></td>
+                <td>    
+                    <p>This is the <b>FloatToIntPriceMultiplier</b>  value provided in the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message for the symbol being traded.  The Server needs to divide the <b>Price1</b> and <b>Price2</b> fields by this Divisor to get the prices as float values.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>The quantity of the order. The exact meaning of this will be specified by the Server implementation.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>TradeAccount</b></td>
+                <td>    
+                    <p>This is the trade account as a text string that the order belongs to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>IsAutomatedOrder</b></td>
+                <td>    
+                    <p>This is set 1 to signify the order has been submitted by an automated trading process.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>IsParentOrder</b></td>
+                <td>    
+                    <p>The Client will set this to 1 when the order is part of a bracket order. This indicates that this is the parent order. A bracket order will consist of a <a href="#Messages-SUBMIT_NEW_SINGLE_ORDER">SUBMIT_NEW_SINGLE_ORDER</a> message followed by a <a href="#Messages-SUBMIT_NEW_OCO_ORDER">SUBMIT_NEW_OCO_ORDER</a>  message. The Server will use <b>IsParentOrder</b> as a flag to know that this message is a parent order. The Server will hold onto this order until it  receives the subsequent <a href="#Messages-SUBMIT_NEW_OCO_ORDER">SUBMIT_NEW_OCO_ORDER</a>  message  and then process all of the orders as one complete set.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>FreeFormText</b></td>
+                <td>    
+                    <p>Optional: This is an optional text string which can be set by the Client to associate text with the order. The Server is not under any obligation to use this text and it may place a limitation on the length of this text.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">[OpenCloseTradeEnum]</a> <b>OpenOrClose</b></td>
+                <td>    
+                    <p>For the description for this field, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">OpenCloseTradeEnum</a>.</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-SUBMIT_NEW_OCO_ORDER">SUBMIT_NEW_OCO_ORDER [s_SubmitNewOCOOrder structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-SUBMIT_NEW_OCO_ORDER">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is a message from the Client to the Server for submitting an order cancels order (OCO) pair into the market. What this means is when one of the orders is filled or canceled, the other order will be canceled. If one order partially fills, the other order will be reduced in quantity by the fill amount  of the order that partially filled.</p>
+
+        <p>A service provider must implement OCO orders on the server so that they can independently be modified (Cancel/Replace) and canceled independently using each order's distinct <b>ServerOrderID</b>.  Although, if one of the orders is canceled by the Client, the other order will be canceled as well unless they have a parent order, as specified through the  <b>ParentTriggerClientOrderID</b> field, in which case the other order should remain open.</p>
+
+        <p>If the OCO order pair is rejected, this must be communicated through two separate <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> messages, 1 for each order, with the OrderUpdateReason  set to <b>NEW_ORDER_REJECTED</b>.</p>
+
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>    
+                    <p>The symbol for the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>    
+                    <p>The optional exchange for the symbol.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID_1</b></td>
+                <td>    
+                    <p>The Client supplied order identifier for the first order. The Server will remember this for the life of the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">[OrderTypeEnum]</a> <b>OrderType_1</b></td>
+                <td>    
+                   <p>The order type for the first order. For list of order types, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">OrderTypeEnum</a>. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#BuySellEnum">[BuySellEnum]</a> <b>BuySell_1</b></td>
+                <td>    
+                    <p>The side for the first order. Either Buy or Sell. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price1_1</b></td>
+                <td>    
+                    <p>This is the price of the first order. This is the limit price for a  <b>Limit</b> order, the stop price for a <b>Stop</b> order, or the trigger price for a Market if Touched order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price2_1</b></td>
+                <td>    
+                    <p>This is the second price for the first order. For a  <b>Stop-Limit</b> order, this is the limit price.  <b>Price2_1</b>  only applies to <b>Stop-Limit</b> orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Quantity_1</b></td>
+                <td>    
+                    <p>The quantity for the first order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID_2</b></td>
+                <td>    
+                    <p>The Client supplied order identifier for the second order. The Server will remember this for the life of the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">[OrderTypeEnum]</a> <b>OrderType_2</b></td>
+                <td>    
+                  <p>The order type for the second order. For list of order types, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">OrderTypeEnum</a>. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#BuySellEnum">[BuySellEnum]</a> <b>BuySell_2</b></td>
+                <td>    
+                    <p>The side for the second order. Either Buy or Sell.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price1_2</b></td>
+                <td>    
+                    <p>This is the price of the second order. This is the limit price for a  <b>Limit</b> order, the stop price for a <b>Stop</b> order, or the trigger price for a Market if Touched order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price2_2</b></td>
+                <td>    
+                    <p>This is the second price for the second order. For a  <b>Stop-Limit</b> order, this is the limit price.  <b>Price2_2</b> only applies to <b>Stop-Limit</b> orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Quantity_2</b></td>
+                <td>    
+                    <p>The quantity for the second order.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum">[TimeInForceEnum]</a>  <b>TimeInForce</b></td>
+                <td>    
+                    <p>The Time in Force for the order or orders (in the case of an OCO order).</p>
+                    
+                     <p>For more information, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum" >TimeInForceEnum</a>. </p>
+                    
+                    
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a>  <b>GoodTillDateTime</b></td>
+                <td>    
+                    <p>In the case of when the <b>TimeInForce</b> is <b>TIF_GOOD_TILL_DATE_TIME</b>, this specifies the expiration Date-Time of the order. This applies to both of the orders in the OCO pair.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>IsAutomatedOrder</b></td>
+                <td>    
+                    <p>Set to 1 for an order submitted by an automated trading system.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>TradeAccount</b></td>
+                <td>    
+                    <p>This is the trade account as a text string that the orders belong to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ParentTriggerClientOrderID</b></td>
+                <td>    
+                    <p>Optional: This field supports the submission of an OCO order pair which has a parent. This is known as a Bracket order.</p>
+
+                    <p>For complete documentation for bracket orders, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#BracketOrderProcedures">Bracket Order Procedures</a>.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>FreeFormText</b></td>
+                <td>    
+                    <p>Optional: This is an optional text string which can be set by the Client to associate text  with each of the  OCO orders. The Server is not under any obligation to use this text and it may place a limitation on the length of this text.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">[OpenCloseTradeEnum]</a> <b>OpenOrClose</b></td>
+                <td>    
+                    <p>For the description for this field, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">OpenCloseTradeEnum</a>.</p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#PartialFillHandlingEnum">[PartialFillHandlingEnum]</a> <b>PartialFillHandling</b></td>
+                <td>    
+                
+               <p> Specifies how partial fills should be handled when when one of the orders  in the OCO  order set partially fills. </p>
+               
+                <p>For the possible values, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#PartialFillHandlingEnum">PartialFillHandlingEnum</a>.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a> <b>UseOffsets</b></td>
+                <td>    
+                    <p>  This field is only relevant to a  Bracket order which is the case  when the <b>ParentTriggerClientOrderID</b> field is set. </p>
+                   
+                    <p> <b>UseOffsets</b>  can be set to 1 and indicates  that the <b>OffsetFromParent1</b> and   <b>OffsetFromParent2</b>  fields  specify the two OCO order prices  as a price offset from the parent order   <b>Price1</b>  field, rather than an absolute price.  In this case  <b>Price1_1</b> and   <b>Price1_2</b> are not used.</p>
+                     
+                    <p> When <b>UseOffsets</b>  is set to 0, the default,  then the OCO order prices are specified with <b>Price1_1</b> and   <b>Price1_2</b>. </p>
+                    
+                    <p> When  <b>UseOffsets</b> is set to 1 and the <b>OffsetFromParent1</b> and  <b>OffsetFromParent2</b>  fields  are set, it is necessary that   the parent order   <b>Price1</b>  field be set even in the case of a  Market order type. In the case of a Market order type use the current order price. This is so that the server has a reference price for the offsets in case it needs to translate them to actual prices. </p>
+                    
+                    <p>When the parent order fills,  it is expected the  Server will maintain the specified offsets to the parent order fill price for the Target and Stop orders.   </p>
+                     
+                    <p>A Server is not required to support this field.</p>
+                </td>
+            </tr>         
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>OffsetFromParent1</b></td>
+                <td>    
+                    <p> When <b>UseOffsets</b> is set to  1,  then this field specifies the <b>Price1_1</b>  price as an offset from the parent order. In this case    <b>Price1_1</b>  will not be set in the message. Instead the Server calculates that price from this offset and parent order price.</p>
+                    
+                     <p>This needs to always be set to a positive price value which is an offset from the parent order price.   The  Server will make the correct calculation based upon the Side and  Order Type. </p>
+                    
+                    <p>A Server is not required to support this field.</p>
+                </td>
+            </tr>  
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>OffsetFromParent2</b></td>
+                <td>    
+                     <p> When <b>UseOffsets</b> is set to  1,  then this field specifies the <b>Price1_2</b>  price as an offset from the parent order. In this case    <b>Price1_2</b>  will not be set in the message. Instead the Server calculates that price from this offset and parent order price.</p>
+                    
+                     <p>This needs to always be set to a positive price value which is an offset from the parent order price.   The  Server will make the correct calculation based upon the Side and  Order Type. </p>
+                     
+                    <p>A Server is not required to support this field.</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-SUBMIT_NEW_OCO_ORDER_INT">SUBMIT_NEW_OCO_ORDER_INT [s_SubmitNewOCOOrderInt structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-SUBMIT_NEW_OCO_ORDER_INT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The <b>SUBMIT_NEW_OCO_ORDER_INT</b>  message is identical to <a href="#Messages-SUBMIT_NEW_OCO_ORDER">SUBMIT_NEW_OCO_ORDER</a> except that the order prices are as integers.</p>
+
+        <p>The Client will only send this message to the Server if  <b>UseIntegerPriceOrderMessages</b> is set in the <a href="index7c96.html?page=doc/DTCMessages_AuthenticationConnectionMonitoringMessages.php#Messages-LOGON_RESPONSE">LOGON_RESPONSE</a>  message.</p>
+
+        <p>When setting the <b>Price1</b>  and  <b>Price2</b>  fields, multiply the order price by the <b>FloatToIntPriceMultiplier</b>  value provided in the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message for the Symbol being traded.</p>
+
+        <p>This message also contains the <b>Divisor</b> field. This is the <b>FloatToIntPriceMultiplier</b>  value provided in the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message for the symbol being traded.  The Server needs to divide the <b>Price1</b> and <b>Price2</b> fields by this Divisor to get the prices as float values.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>    
+                    <p>The symbol for the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>    
+                    <p>The optional exchange for the symbol.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID_1</b></td>
+                <td>    
+                    <p>The Client supplied order identifier for the first order. The Server will remember this for the life of the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">[OrderTypeEnum]</a> <b>OrderType_1</b></td>
+                <td>    
+                     <p>The order  type for the first order. For list of order types, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">OrderTypeEnum</a>. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#BuySellEnum">[BuySellEnum]</a> <b>BuySell_1</b></td>
+                <td>    
+                    <p>The side for the first order. Either Buy or Sell.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price1_1</b></td>
+                <td>    
+                    <p>This is the price of the first order. This is the limit price for a Limit order, the stop price for a Stop order, or the trigger price for a Market if Touched order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price2_1</b></td>
+                <td>    
+                    <p>This is the second price for the first order. For a Stop-Limit order, this is the limit price.  This only applies to Stop-Limit orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a>  <b>Quantity_1</b></td>
+                <td>    
+                    <p>The quantity of the first order. The exact meaning of this will be specified by the Server implementation.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>ClientOrderID_2</b></td>
+                <td>    
+                    <p>The Client supplied order identifier for the second order. The Server will remember this for the life of the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">[OrderTypeEnum]</a>  <b>OrderType_2</b></td>
+                <td>    
+                     <p>The order type of the second order. For list of order types, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OrderTypeEnum">OrderTypeEnum</a>. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#BuySellEnum">[BuySellEnum]</a>  <b>BuySell_2</b></td>
+                <td>    
+                    <p>The side of the second order. Either Buy or Sell.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price1_2</b></td>
+                <td>    
+                    <p>This is the price of the second order. This is the limit price for a Limit order, the stop price for a Stop order, or the trigger price for a Market if Touched order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price2_2</b></td>
+                <td>    
+                    <p>This is the second price for the second order. For a Stop-Limit order, this is the limit price.  This only applies to Stop-Limit orders.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a>  <b>Quantity_2</b></td>
+                <td>    
+                    <p>The quantity of the second order. The exact meaning of this will be specified by the Server implementation.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum">[TimeInForceEnum]</a>  <b>TimeInForce</b></td>
+                <td>    
+                    <p>The Time in Force for the order or orders (in the case of an OCO order).</p>
+                    
+                     <p>For more information, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum" >TimeInForceEnum</a>. </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a>  <b>GoodTillDateTime</b></td>
+                <td>    
+                    <p>In the case of when the <b>TimeInForce</b> is <b>TIF_GOOD_TILL_DATE_TIME</b>, this specifies the expiration Date-Time of the order. This applies to both of the orders in the OCO pair.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>TradeAccount</b></td>
+                <td>    
+                    <p>This is the trade account as a text string that the orders belong to.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>IsAutomatedOrder</b></td>
+                <td>    
+                    <p>Set to 1 for an order submitted by an automated trading system.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>ParentTriggerClientOrderID</b></td>
+                <td>    
+                    <p>Optional: This field supports the submission of an OCO order pair which has a parent. This is known as a Bracket order.</p>
+
+                    <p>For complete documentation for bracket orders, refer to <a href="#BracketOrderProcedures">Bracket Order Procedures</a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>FreeFormText</b></td>
+                <td>    
+                    <p>Optional: This is an optional text string which can be set by the Client to associate text with each of the OCO orders. The Server is not under any obligation to use this text and it may place a limitation on the length of this text.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>Divisor</b></td>
+                <td>    
+                    <p>This is the <b>FloatToIntPriceMultiplier</b>  value provided in the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message for the Symbol being traded.  The Server needs to divide the <b>Price1_*</b> and <b>Price2_*</b> fields by this Divisor to get the prices as float values.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">[OpenCloseTradeEnum]</a> <b>OpenOrClose</b></td>
+                <td>    
+                    <p>For the description for this field, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#OpenCloseTradeEnum">OpenCloseTradeEnum</a>.</p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#PartialFillHandlingEnum">[PartialFillHandlingEnum]</a> <b>PartialFillHandling</b></td>
+                <td>
+                    <p>Specifies how partial fills should be handled when when one of the orders  in the OCO  order set partially fills. </p>
+                    
+                    <p>For the possible values, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#PartialFillHandlingEnum">PartialFillHandlingEnum</a>.</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-SUBMIT_FLATTEN_POSITION_ORDER">SUBMIT_FLATTEN_POSITION_ORDER [s_SubmitFlattenPositionOrder structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-SUBMIT_FLATTEN_POSITION_ORDER">Link</a>] - [<a href="#Messages-SUBMIT_FLATTEN_POSITION_ORDER">Top</a>]</div>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Symbol</b></td>
+                <td>
+                    <p>The symbol of the  Trade Position to flatten.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>Exchange</b></td>
+                <td>
+                    <p>The optional exchange for the Symbol.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>TradeAccount</b></td>
+                <td>
+                    <p>The trade account as a text string of the  Trade Position to flatten.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>ClientOrderID</b></td>
+                <td>
+                    <p>The Client supplied order identifier for the order which will be created to flatten the Trade Position.   </p>
+                    
+                    <p>The Server will remember this for the life of the order.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a>  <b>FreeFormText</b></td>
+                <td>
+                    <p>Optional: This is an optional text string which can be set by the Client to associate text with the order which will be created to flatten the Trade Position. </p>
+                    
+                    <p>The Server is not under any obligation to use this text and it may place a limitation on the length of this text.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>IsAutomatedOrder</b></td>
+                <td>
+                    <p>Set to 1 for an order submitted by an automated trading system.</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-CANCEL_REPLACE_ORDER">CANCEL_REPLACE_ORDER [s_CancelReplaceOrder structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-CANCEL_REPLACE_ORDER">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This message is sent by the Client to the Server to cancel and replace an existing order. This is also known as an order modification.</p>
+        
+        <p>When the cancel and replace operation is completed, an  <a href = "index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">OrderUpdate</a> message is sent by the Server with the   <b>OrderUpdateReason</b>field set to  <b>ORDER_CANCEL_REPLACE_COMPLETE</b>. If the cancel and replace operation cannot be completed, an OrderUpdate message is sent by the Server with the <b>OrderUpdateReason</b> set to  <b>ORDER_CANCEL_REPLACE_REJECTED</b>. </p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ServerOrderID</b></td>
+                <td>    
+                    <p>This is the order identifier for the order to  modify. The Client needs to set this to the  <b>ServerOrderID</b> field received back  in the most recent <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a>  message for the order.</p>
+
+                    <p>The Server will rely upon this <b>ServerOrderID</b>  and only this order identifier to identify the order to be canceled and replaced. Although the given <b>ClientOrderID</b>  by the Client must not change.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID</b></td>
+                <td>    
+                    <p>This is the Client's own order identifier for the order.</p>
+
+                    <p>This must be the same throughout the life of the order.  If the Server sees that this order identifier has changed in relation to the <b>ServerOrderID</b>, then it should reject this  message  with a <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the <b>OrderUpdateReason</b>  set to <b>ORDER_CANCEL_REPLACE_REJECTED</b></p>
+
+                    <p>In the case where the order modification cannot be performed because the <b>ServerOrderID</b> does not exist, the Server will send a <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the OrderUpdateReason set to <b>ORDER_CANCEL_REPLACE_REJECTED</b> and <b>ClientOrderID</b> set to the given ClientOrderID in this message. <b>ServerOrderID</b> will be unset because an invalid server order identifier was given.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price1</b></td>
+                <td>    
+                    <p>For orders that require a price, this is the new order price.</p>
+
+                    <p>This value can be left unset indicating to the Server that Price1 must not change and only the Quantity. In this case it is necessary to set <b>Price1IsSet</b> to a 0 value.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a> <b>Price2</b></td>
+                <td>    
+                    <p>For Stop-Limit orders this is the new Limit price. For other order types it is not used.</p>
+
+                    <p>This value can be left unset indicating to the Server that Price2 must not change and only the Quantity. In this case it is necessary to set <b>Price2IsSet</b> to a 0 value.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#double">[double]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>This is the new order quantity.  It this is 0, then this means the order quantity must not be changed by the Server.</p> 
+
+                    <p>If the order has partially filled, then this is going to be the order quantity which also includes the amount which has partially filled.</p>
+
+                    <p>For example, if the original quantity was 10  and there has been a partial fill of 3, the Client wants a fill of 2 more making a total of 5, then the Client will set this to 5.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>Price1IsSet</b></td>
+                <td>    
+                    <p>When this field is set to a nonzero value, it indicates that <b>Price1</b> is set and the server should use the value, if it applies to the order type.</p>
+
+                    <p>The default value is 1.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>Price2IsSet</b></td>
+                <td>    
+                    <p>When this field is set to a nonzero value, it indicates that <b>Price2</b> is set and the server should use the value, if it applies to the order type.</p>
+
+                    <p>The default value is 1.</p> 
+                </td>
+            </tr>
+
+			<tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum">[TimeInForceEnum]</a>  <b>TimeInForce</b></td>
+                <td>    
+                     <p>The Time in Force for the order. For a list of Time in Force values, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum" >TimeInForceEnum</a>.</p>
+                     
+                      <p>The default value is <b> TIF_UNSET</b>.</p>
+                     
+                     <p>When this field is set to a value other than <b> TIF_UNSET</b>, it indicates that the <b>TimeInForce</b> is being changed.</p>
+
+                    <p> If the server does not support changing  the Time in Force of the order, it needs to reject this <b>CANCEL_REPLACE_ORDER</b> message and send an <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the OrderUpdateReason set to <b>ORDER_CANCEL_REPLACE_REJECTED</b>. </p>
+                    
+                    <p>The server is under no obligation to support changing the Time in Force. </p>
+                </td>
+			</tr>
+			<tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>GoodTillDateTime</b></td>
+                <td>    
+                    <p>In the case of when the <b>TimeInForce</b> field is <b>TIF_GOOD_TILL_DATE_TIME</b>, this specifies the expiration Date-Time of the order.</p>
+                    
+                </td>
+			</tr>			
+            
+            </tr>
+            
+			<tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[uint8_t]</a> <b>UpdatePrice1OffsetToParent</b></td>
+                <td>    
+                    <p>This is an optional field.  If modifying a child order which is part of a Server managed bracket order, then  when this variable is set to 1 it provides an indication to the Server to update the internal server managed price offset to the parent order that this child order has to the parent.</p>
+                    
+                    <p> This will ensure the Server  will maintain the proper offset of the child order to the fill price of the parent order when the parent order fills.</p>
+                    
+                </td>
+			</tr>
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-CANCEL_REPLACE_ORDER_INT">CANCEL_REPLACE_ORDER_INT [s_CancelReplaceOrderInt structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-CANCEL_REPLACE_ORDER_INT">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>The <b>CANCEL_REPLACE_ORDER_INT</b> is a message from the Client to Server to cancel and replace (modify) an order.</p>
+
+        <p>It is identical to <a href="#Messages-CANCEL_REPLACE_ORDER">CANCEL_REPLACE_ORDER</a> except the prices are as integers.</p>
+        
+        <p>When the cancel and replace operation is completed, an  <a href = "index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">OrderUpdate</a> message is sent by the Server with the   <b>OrderUpdateReason</b>field set to  <b>ORDER_CANCEL_REPLACE_COMPLETE</b>. If the cancel and replace operation cannot be completed, an OrderUpdate message is sent by the Server with the <b>OrderUpdateReason</b> set to  <b>ORDER_CANCEL_REPLACE_REJECTED</b>. </p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ServerOrderID</b></td>
+                <td>    
+                    <p>This is the order identifier for the order to  modify. The Client needs to set this to the  <b>ServerOrderID</b> field received back  in the most recent <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a>  message for the order.</p>
+
+                    <p>The Server will rely upon this <b>ServerOrderID</b>  and only this order identifier to identify the order to be canceled and replaced. Although the given <b>ClientOrderID</b>  by the Client must not change.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID</b></td>
+                <td>    
+                    <p>This is the Client's own order identifier for the order.</p>
+
+                    <p>This must be the same throughout the life of the order.  If the Server sees that this order identifier has changed in relation to the <b>ServerOrderID</b>, then it should reject this  message  with a <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the <b>OrderUpdateReason</b>  set to <b>ORDER_CANCEL_REPLACE_REJECTED</b></p>
+
+                    <p>In the case where the order modification cannot be performed because the <b>ServerOrderID</b> does not exist, the Server will send a <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the OrderUpdateReason set to <b>ORDER_CANCEL_REPLACE_REJECTED</b> and <b>ClientOrderID</b> set to the given ClientOrderID in this message. <b>ServerOrderID</b> will be unset because an invalid server order identifier was given.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price1</b></td>
+                <td>    
+                    <p>For orders that require a price, this is the new order price. </p>
+
+                    <p>This is an integer value.   This is calculated by multiplying the actual order price by the  <b>FloatToIntPriceMultiplier</b> field from the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message  for the Symbol of the order.</p>
+
+                    <p>This value can be left unset indicating to the Server that Price1 must not change and only the Quantity. In this case it is necessary to set <b>Price1IsSet</b> to a 0 value.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a> <b>Price2</b></td>
+                <td>
+                    <p>For Stop-Limit orders this is the new Limit price. For other order types it is not used.</p>
+
+                    <p>This is an integer value.   This is calculated by multiplying the actual order price by the  <b>FloatToIntPriceMultiplier</b> field from the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message  for the Symbol of the order.</p>
+
+                    <p>This value can be left unset indicating to the Server that Price2 must not change and only the Quantity. In this case it is necessary to set <b>Price2IsSet</b> to a 0 value.</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#float">[float]</a>  <b>Divisor</b></td>
+                <td>    
+                    <p>This is the <b>FloatToIntPriceMultiplier</b> field received from the <a href="index55ec.html?page=doc/DTCMessages_SymbolDiscoverySecurityDefinitionsMessages.php#Messages-SECURITY_DEFINITION_RESPONSE">SECURITY_DEFINITION_RESPONSE</a> message  for the Symbol of the order.</p>
+
+                    <p>The Server needs to divide the <b>Price1</b> or <b>Price2</b> fields by this Divisor to arrive at the original floating-point value.  </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#int64">[int64]</a>  <b>Quantity</b></td>
+                <td>    
+                    <p>This is the new order quantity.  It this is 0, then this means the order quantity must not be changed by the Server.</p> 
+
+                    <p>If the order has partially filled, then this is going to be the order quantity which also includes the amount which has partially filled.</p>
+
+                    <p>For example, if the original quantity was 10  and there has been a partial fill of 3, the Client wants a fill of 2 more making a total of 5, then the Client will set this to 5.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>Price1IsSet</b></td>
+                <td>    
+                    <p>When this field is set to a nonzero value, it indicates that <b>Price1</b> is set and the server should use the value, if it applies to the order type.</p>
+
+                    <p>The default value is 1.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsignedint8">[unsigned int8]</a>  <b>Price2IsSet</b></td>
+                <td>    
+                    <p>When this field is set to a nonzero value, it indicates that <b>Price2</b> is set and the server should use the value, if it applies to the order type.</p>
+
+                    <p>The default value is 1.</p> 
+                </td>
+            </tr>
+
+			<tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum">[TimeInForceEnum]</a>  <b>TimeInForce</b></td>
+                <td>    
+                     <p>The Time in Force for the order. For a list of Time in Force values, refer to <a href="indexe379.html?page=doc/DTCMessageDocumentation.php#TimeInForceEnum" >TimeInForceEnum</a>.</p>
+                     
+                      <p>The default value is <b> TIF_UNSET</b>.</p>
+                     
+                     <p>When this field is set to a value other than <b> TIF_UNSET</b>, it indicates that the <b>TimeInForce</b> is being changed.</p>
+
+                    <p> If the server does not support changing  the Time in Force of the order, it needs to reject this <b>CANCEL_REPLACE_ORDER_INT</b> message and send an <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the OrderUpdateReason set to <b>ORDER_CANCEL_REPLACE_REJECTED</b>. </p>
+                    
+                      <p>The server is under no obligation to support changing the Time in Force. </p>
+                </td>
+			</tr>
+			<tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[t_DateTime]</a> <b>GoodTillDateTime</b></td>
+                <td>    
+                    <p>In the case of when the <b>TimeInForce</b> field is <b>TIF_GOOD_TILL_DATE_TIME</b>, this specifies the expiration Date-Time of the order.</p>
+                </td>
+			</tr>   
+			<tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#t_DateTime">[uint8_t]</a> <b>UpdatePrice1OffsetToParent</b></td>
+                <td>    
+                    <p>This is an optional field.  If modifying a child order which is part of a Server managed bracket order, then  when this variable is set to 1 it provides an indication to the Server to update the internal server managed price offset to the parent order that this child order has to the parent.</p>
+                    
+                    <p> This will ensure the Server  will maintain the proper offset of the child order to the fill price of the parent order when the parent order fills.</p>
+                    
+                </td>
+			</tr>            
+        </table>
+    </section>
+
+    <section class="h3">
+        <h3 id="Messages-CANCEL_ORDER">CANCEL_ORDER [s_CancelOrder structure] Client &gt;&gt; Server</h3>
+        <div class="member-link">[<a href="#Messages-CANCEL_ORDER">Link</a>] - [<a href="#DTCMessageDescriptions">Top</a>]</div>
+
+        <p>This is a message from the Client  to the Server requesting a previously sent order to be canceled.</p>
+
+        <table class="doc">
+            <tr>
+                <th>Field Name</th>
+                <th>Field Description</th>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Size</b></td>
+                <td>
+                    <p>The standard message size field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#unsigned_int16">[unsigned int16]</a> <b>Type</b></td>
+                <td>    
+                    <p>The standard message type field. Automatically set by constructor.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ServerOrderID</b></td>
+                <td>    
+                    <p>This is the order identifier for the order to  cancel. The Client needs to set this to the  <b>ServerOrderID</b> field received back  in the most recent <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a>  message for the order. The only case in which a <b>ServerOrderID</b> would change is in the case of a successful order Cancel and Replace operation.</p>
+
+                    <p>The Server will rely upon this <b>ServerOrderID</b>  and only this order identifier to identify the order to be canceled. Although the given <b>ClientOrderID</b> from the Client must not change.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="indexe379.html?page=doc/DTCMessageDocumentation.php#char">[char]</a> <b>ClientOrderID</b></td>
+                <td>    
+                    <p>This is the Client's own order identifier for the order.</p> 
+
+                    <p>This must be the same throughout the life of the order.  If the Server sees that this order identifier has changed in relation to the <b>ServerOrderID</b> , then it should reject this  message  with a <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the <b>OrderUpdateReason</b>  set to <b>ORDER_CANCEL_REJECTED</b>.</p>
+                    
+                    <p>In the case where the order   cancellation cannot be performed because the <b>ServerOrderID</b> does not exist, the Server will send a <a href="index522b.html?page=doc/DTCMessages_TradingRelatedMessages.php#Messages-ORDER_UPDATE">ORDER_UPDATE</a> message with the OrderUpdateReason set to <b>ORDER_CANCEL_REJECTED</b> and <b>ClientOrderID</b> set to the given ClientOrderID in this message. <b>ServerOrderID</b> will be unset because an invalid server order identifier was given.</p>
+
+                </td>
+            </tr>
+
+        </table>
+    </section>
+</section>
+
+  
+
+<hr><p>*Last modified Thursday, 27th January, 2022.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DTCMessages_OrderEntryModificationMessages.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:54 GMT -->
+</html>  

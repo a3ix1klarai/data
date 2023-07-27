@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GettingStarted.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:29:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1681722698') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/GettingStarted.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Getting Started, Opening Charts and Basic Trading -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index03a9.html?page=doc/GettingStarted.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#GettingStarted">(Table of Contents) Getting Started</a> &gt;&gt; <a  href="index03a9.html?page=doc/GettingStarted.php">Getting Started, Opening Charts and Basic Trading</a></h4> </div>     <h1 class="PageName">Getting Started, Opening Charts and Basic Trading</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#AppearanceSettings">Appearance Settings</a></li>
+    <li><a href="#ConnectingtoData">Connecting to a Data or Trading Service and Opening Charts</a>
+        <ul>
+            <li><a href="#OpenChart">Open Chart</a></li>
+        </ul>
+    </li>
+    <li><a href="#AdditionalSteps">Additional Steps</a></li>    
+    <li><a href="#WorkingWithSierraChartWindows">Working with Sierra Chart Settings Windows</a></li>
+    <li><a href="indexe6e0.html?page=doc/SettingsWindowsInterface.php" target="_blank" rel="noopener noreferrer">Settings Windows Interface</a> (Opens a new page)</li>
+    <li><a href="#NotesAboutCharts">Notes About Charts</a></li>
+    <li><a href="#SubmittingAnOrderforTrading">Submitting An Order for Trading</a></li>
+    <li><a href="#NeedMoreHelp">Need More Help?</a></li>
+    <li><a href="#OnlineDocumentation">Online Documentation</a></li>
+    <li><a href="#Notes">Notes</a></li>
+    <li><a href="#AlternativeMethodOfOpeningCharts">Alternative Method of Opening Charts</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Welcome to Sierra Chart. Sierra Chart is an advanced financial market charting and trading application. It is a full-featured and complete application to meet your requirements. This page contains important step-by-step instructions for getting started with Sierra Chart, opening charts and introducing you to Trading from Sierra Chart. If you only want to read one page on this website, then this <em>should be the page to read</em>. </p>
+
+    <p>If Sierra Chart is not already running then press the <b>Start</b> button on your desktop and select <b>Programs &gt;&gt; Sierra Chart &gt;&gt; Sierra Chart</b> to run it. If the Login window displays prompting you for an Account Name and password, then read the <a href="index878d.html?page=LoginInstructions.php">Software Login Instructions</a> page for further instructions. When Sierra Chart is started, the main Sierra Chart window <em>will be blank</em>. This is normal since no charts or other windows will be open.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="AppearanceSettings">Appearance Settings</h2>
+    <div class="member-link">[<a href="#AppearanceSettings">Link</a>] - [<a href="#top">Top</a>]</div> 
+
+    <p>The colors and font sizes within Sierra Chart are fully customizable. Due to your preferences and also your  computer monitor resolution,  adjustments may be necessary. Select  <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> to adjust the colors and font sizes.</p>
+
+    <p>For additional information, refer to  <a href = "index5795.html?page=doc/GraphicsSettings.html" target="_blank" rel="noopener noreferrer">Graphics Settings</a>.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="ConnectingtoData">Connecting to a Data or Trading Service and Opening Charts</h2>
+    <div class="member-link">[<a href="#ConnectingtoData">Link</a>] - [<a href="#top">Top</a>]</div>
+    <ol class="Zebra">
+        <li>
+            <p>Sierra Chart supports many Data and Trading services. To learn all about the Data and Trading services which are supported and to become set up with one of the services, go to the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php" target="_blank" rel="noopener noreferrer">Data and Trading Services</a> page.</p>
+
+            <p>Be sure to follow all the setup instructions for the Data or Trading service you will be working with.  Sierra Chart is configured to work with a Data or Trading service through  the <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>   settings window  (see image below). </p>
+
+            <p>By <em>default</em>,  Sierra Chart  is set to work with the  <b>SC Data - All Services</b> service which unifies multiple Sierra Chart  provided   Data services into a single connection.</p>
+
+            <p><a href="index7904.html?page=doc/helpdetails59.php" target="_blank" rel="noopener noreferrer">Free Trials</a> will have access to the <b>SC Data - All Services</b> service, unless your account requires activation. If your account requires activation, refer to the <a href="indexb31d.html?page=doc/TrialAccountsAndActivations.php" target="_blank" rel="noopener noreferrer">Sierra Chart Trial Account and Account Activation</a> page.</p>
+
+            <p>The easiest way to get started with Sierra Chart  is to use the following provided  market Data services: </p>
+             
+             <ul>
+                
+                 <li><a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> </li>
+                 <li> <a href="indexc82f.html?page=doc/SCRealTimeFOREX.php" target="_blank" rel="noopener noreferrer">Real-Time and Historical Forex / CFD Data Service</a> </li>                                  
+                 <li><a href="index765f.html?page=doc/SierraChartHistoricalData.php">Sierra Chart Historical Data Service</a> </li>
+                 <li><a href="index6fe4-2.html?page=doc/SCMarketStatistics.php">Market Statistics Data Feed</a> </li>
+             </ul>
+             
+            <p>The market data for all of these services  is available when Sierra Chart is set to use the <b>SC Data - All Services</b> service which Sierra Chart   <em>is already set to use by default</em>. Therefore, by default there is nothing you need to do to access the data from these services. You just need to open a chart  for the  symbols for these services.</p>
+
+            <p>For example, you can use the symbol   <em><b>EURUSD</b></em>   to get a real-time updating chart for the Euro  currency versus the  US dollar.  How to open a chart for a symbol is explained further down in these instructions. </p> 
+            
+            <p>Or you could open the chart for the current  Mini S&P 500  futures contract on the CME.  The current symbol we will be listed under  <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Futures - CME</b>. The symbol begins with  <em>ES</em>. The data will be delayed according to exchange rules.  Real-time data is available and  explained on the  <a href = "index9a78.html?page=doc/FuturesData.php">Is Historical and Real-time Futures Data Available</a> page.</p>
+
+            <div style="text-align: center;"><a href="../images/datatradeservicesettingswindow_dropdown.png" rel="lightbox"><img alt="" src="../images/datatradeservicesettingswindow_dropdown.png" width="455" class="screenshot" loading="lazy" ></a></div>
+
+            <p class="GeneralBackgroundHighlightLight">For an understanding of what symbols provide real-time data and how to obtain real-time data for other symbols, refer to <a href="indexff94.html?page=doc/RealtimeData.php" Target="_blank" rel="noopener noreferrer">Real-Time Data</a>.</p>
+            
+            <p>Another available service which is included in the Sierra Chart trial and paid Service Packages is the  <a href = "index7ada.html?page=doc/SimulatedFuturesTradingService.php">Simulated Trading Service</a>  which provides simulated trading for futures,  Forex and crypto currencies using a server-based environment for the simulated trading. </p>
+        </li>
+
+        <li>Set the <b class = "menu_item">Global Settings &gt;&gt;<a href="index219e.html?page=doc/TimeZone.html" target="_blank" rel="noopener noreferrer">Time Zone Settings</a></b>  to the Time Zone you want times in Sierra Chart displayed in.
+        </li>
+        
+        <li>Select <b>Global Settings &gt;&gt; Data/Trade Service Settings</b></li>
+
+
+        <li>Set <b>Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> to  Yes so that when data can be downloaded or received from Sierra Chart Data Services, that this will be done.
+        <br> <br>
+        When using a Sierra Chart provided  Data service, this this option is always implied to be enabled. This setting is only relevant under certain conditions and with certain external Trading services.</li>
+
+        <li>Set the <b>Common Settings &gt;&gt; Intraday Data Storage Time Unit </b> to what you require. If you will be using <b> Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</b>, then set this to <b>1 Tick</b> or  <b>1 Second</b> (1 Second is less precise).  For complete details for this setting, refer to <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" target="_blank" rel="noopener noreferrer">Intraday Data Storage Time  Unit</a>.
+         <br> <br>
+         If you want charts to load  <em>superfast</em>, use  <b>1 Minute</b>.   For more details, refer to <a href = "index5017.html?page=doc/ChangingPeriodOfBars.php#ImprovingPerformanceOfLoadingChartData">Improving Performance of Loading Chart Data</a>
+        
+        </li>
+        
+        
+        <li>Set the <a href="index2c7f.html?page=doc/DataSourceSettings.php#MaxHistoricalIntradayDaysToDownload" Target="_blank" rel="noopener noreferrer">Common Settings &gt;&gt; Maximum Historical Intraday Days to Download</a> settings to the number days of historical Intraday data that you want to have available  for the symbols to be charted. 
+        <br> <br>
+        In the case of futures contracts,  <em>it is not necessary and not recommended</em> to increase this beyond 186 days because that setting only applies to an individual contract month and not the overall amount of data to load into a Continuous Futures Contract chart which you will be using for long-term futures contract charts.</li>
+
+        <li>Press <b>OK</b>.  </li>
+
+        <li>
+            <p>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu (or press the <b>Con</b> button on the Control Bar) to connect to the Data server and Trade server (if applies to the service you are using) if Sierra Chart is not already connected.</p>
+
+            <p>If <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> and the  <b>Con</b> button are disabled, then  this  indicates Sierra Chart is already connected to the data feed.   In this case, go on to the next step.</p>
+
+            <p>If there is a problem connecting to the data feed, then the   Sierra Chart  Message Log ( <b class = "menu_item">Window &gt;&gt; Message Log</b>) will display and indicate this. In this case, refer to <a href="indexf71c.html?page=doc/helpdetails1.html" target="_blank" rel="noopener noreferrer">help topic # 1</a> for instructions to resolve the problem.</p>
+
+            <p>When Sierra Chart is connected to the external server, then <span class = "YellowHighlightNoBorder" ><b>DF:</b></span > followed by a number will be displayed in the status window on the Control Bar below the   Sierra Chart  menu indicating this. Refer to the image below.</p>
+
+            <p>A connection to the server is also indicated by <b> Con: #</b> on the title bar of the main  Sierra Chart  window. The number after  <b>Con:</b> is the data feed sequence number.  And upon a successful connection to the server, a message will be added to the   Sierra Chart  Message Log indicating a successful connection.</p>
+
+
+            <div style="text-align: center;"><a href="../images/connection.png" rel="lightbox"><img alt="" src="../images/connection.png"  class="screenshot" loading="lazy"></a></div>
+
+            <div style="text-align: center;"><a href="../images/titlebarconnectionstatus.png" rel="lightbox"><img alt="" src="../images/titlebarconnectionstatus.png" class="screenshot" loading="lazy" width="560"></a></div>
+        </li>
+
+        <section class="h3">
+			<h3 id = "OpenChart">Open Chart</h3>
+			<div class="member-link">[<a href="#OpenChart">Link</a>] - [<a href="#top">Top</a>]</div>		
+		
+            <p id="Step3"> To open a chart or a Trade DOM, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. </p>
+
+            <p>Locate and select the symbol in the list of available symbols, or manually enter one in the <b>Selected Symbol</b> box and press either <b>Open Historical Chart</b>, <b>Open Intraday Chart</b>, or <b>Open Trading DOM</b>. </p>
+
+            <p>In the case of stock symbols, they are not listed and have to manually be typed in the  <b>Selected Symbol</b> box. Or if there is a particular symbol that is provided by the Data or Trading service you are using and it is not listed, then manually type it.</p>
+
+            <div style="text-align: center;"><a href="../images/findsymbolwindow.png" rel="lightbox"><img alt="" src="../images/findsymbolwindow.png" class="screenshot" loading="lazy" width="400"></a></div>
+
+            <p>In the unlikely case, where the  <b>Find Symbol</b> window is empty, you will need to follow the instructions to <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update Symbol Settings</a>. Refer to the image below.</p>
+
+            <div style="text-align: center;"><a href="../images/updatesymbolsettings.png" rel="lightbox"><img src="../images/updatesymbolsettings.png" class="screenshot" loading="lazy" alt="" width="450" ></a></div>
+
+            <p>A  <em>symbol</em> is a short abbreviation for a particular Stock, Futures contract, Forex market,  CFD, Index or Option contract.</p>
+            
+           <p> Recommended symbols for new users to get started with Sierra Chart: </p>
+           
+           <ul>
+            <li><b>EURUSD</b> </li>
+            <li><b>XAUUSD</b> </li>
+            <li><b>SPX500</b> </li>
+            <li><b>XBTUSD-BMEX</b> </li>
+            <li><b>ESH21-CME</b>  (need to update month code and year appropriately) </li>
+            <li><b>MMM</b> (will only update periodically, approximately every 20 minutes) </li>
+           </ul> 
+
+            <p><b class = "GeneralBackgroundHighlight">Historical</b> charts have a bar period of <em>1 Day and greater</em>. They can also be Weekly, Monthly, Quarterly and Yearly charts. A Historical chart with a period per bar of 1 Day, is called a <em>Historical Daily</em> chart. The underlying data in the data file are daily data records containing data for a single day.</p>
+
+
+            <p><b class = "GeneralBackgroundHighlight">Intraday</b> charts can have any bar period. Usually the bar period is <b>less than 1 day</b> and are based on  a fixed time frame down to 1 second or <b> Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</b>.  </p>
+
+            <p>Although you can specify a period per bar of 1 Day or greater with Intraday chart data types, it is usually not practical to create long-term Historical charts from Intraday data with a 1 Day or greater  bar period because they will take a longer time to load  and usually do not go back far in time.</p>
+			</section>
+        <li>
+            <p>In the case when you have opened a <b>Trading DOM</b>, go to the <a href="indexf915.html?page=doc/Trading.html" target="_blank" rel="noopener noreferrer">Overview of Trading</a> page to get started with trading.</p>
+        </li>
+        <li>
+            <p>If you use an <em>unknown or improperly formatted</em> symbol, you will not get any data in the chart window and it will remain blank. In the case of a Trade DOM, the center price will be 0. You will also see a message  on the chart or Trade DOM that says <b>Symbol is Unknown</b>. If you receive this message or do not get a chart make sure you are using the correct symbol, and   also refer to <a href="indexf71c.html?page=doc/helpdetails1.html#Symbols" target="_blank" rel="noopener noreferrer">Help Topic 1.3 (Symbols)</a>.</p>
+
+            <div style="text-align: center;"><a href="../images/symbolunknown.png" rel="lightbox"><img alt="" src="../images/symbolunknown.png" class="screenshot" loading="lazy"></a></div>
+
+        </li>
+
+        <li>  Multiple charts can be open through  <b class = "menu_item">File &gt;&gt; Find Symbol</b> by selecting the symbol and pressing the appropriate button. The chart  windows can be arranged using the commands on the   <b class = "menu_item">Window</b> menu.   The open charts can be selected through the   <b class = "menu_item">CW</b>  menu at the top of   Sierra Chart.</li>
+
+        <li> It is strongly recommended that you prevent the scanning of the Intraday data chart files with a file extension of <em><b>scid</b></em> by anti-malware software on your system.  Many systems run Microsoft Security Essentials and it needs to be set to prevent the scanning of these <em><b>scid</b></em> files.  If this step is not performed, anti-malware programs will have a significant impact upon the performance of Sierra Chart. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="AdditionalSteps">Additional Steps</h2>
+    <div class="member-link">[<a href="#AdditionalSteps">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol class="Zebra">
+        <li>
+            <p>To adjust the settings for the chart, make sure the chart is active and select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the main menu. </p>
+
+            <p>Each chart has its own Chart Settings which are specific to that individual chart. Some settings can be shared among charts through the  <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking" >Chart Linking</a> feature.</p>
+
+            <div style="text-align: center;"><a href="../images/chartsettingsmenu.png" rel="lightbox"><img alt="" src="../images/chartsettingsmenu.png" class="screenshot" loading="lazy" width="280"></a></div>
+        </li>
+
+        <li>
+            <p>The number of days of data loaded in the chart can be changed with the <b>Use Number of Days to Load &gt;&gt; Days to Load</b> setting on the <b>Chart Settings</b> window. When increasing this setting for Intraday charts, if additional historical Intraday data needs to be downloaded you will be prompted for that after pressing <b>OK</b>. For detailed instructions to increase the amount of data in Intraday charts, refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DownloadingViewingMoreHistoricalIntradayData" target="_blank" rel="noopener noreferrer">Downloading/Viewing More Historical Intraday data</a>.</p>
+
+            <p>The bar period or timeframe of the bars in the chart can be changed to based upon numerous available bar periods. All of which are fully customizable.</p>
+
+            <p>For Intraday charts, the available settings are in the <b>Intraday Chart Bar Period  &gt;&gt; Bar Period Type</b> list on the <b>Chart Settings</b> window. Refer to the image below.</p>
+
+            <p>For Historical charts, the available settings are in the <b>Historical Chart Bar Period</b> frame on the  <b>Chart Settings</b> window. Refer to the image  below.</p>
+
+            <p>Refer to the <a href="index4cf4.html?page=doc/ChartSettings.html" target="_blank" rel="noopener noreferrer">Chart Settings</a> page for the complete documentation for the Chart Settings window.</p>
+
+            <p>  Press the <b> OK</b> button to close the Chart Settings window.</p>
+
+            <div style="text-align: center;"><a href="../images/gettingstartedchartsettings.png" rel="lightbox"><img alt="" src="../images/gettingstartedchartsettings.png" class="screenshot" loading="lazy" width="400"></a></div>
+        </li>
+
+        <li>In the case of a futures contract symbol, like <b>ESM18</b>, to increase the amount of historical data in these charts where at every bar the active contract month at that time is displayed, refer to the  <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html"  target="_blank" rel="noopener noreferrer">Continuous Futures Contract Charts</a> page for instructions. </li>
+
+        <li>
+            <p><b class = "GeneralBackgroundHighlight">To Quickly Change the Timeframe Per Bar in a Chart</b>: Go to the chart. You can then type the  timeframe per bar directly into the chart window.</p>
+            <p>For example, type the number of Minutes you want per bar into the chart window followed by the letter <b>m</b> for Minutes.  </p>
+
+            <p>The chart window will capture the keystrokes as you type them.  After doing that, press the <b>Enter</b> key on your keyboard to change the timeframe. Example: <b>30m</b> </p>
+
+            <p>If the chart is already based upon Minutes, you can leave the <b>m</b>  out and just enter the number of Minutes and press the <b>Enter</b> key.  </p>
+
+            <div style="text-align: center;"><a href="../images/quicklychangetimeframe.png" rel="lightbox"><img alt="" src="../images/quicklychangetimeframe.png" class="screenshot" loading="lazy"></a></div>
+
+            <p>For complete instructions, including changing between the available <b>Bar Period Types</b>, refer to the <a href="index5017.html?page=doc/ChangingPeriodOfBars.php" target="_blank" rel="noopener noreferrer">Changing Chart Bars Period</a> documentation page. </p>
+
+            <p>Additionally, there are many Control Bar buttons that can be pressed to change between common chart bar periods.  You can also add custom Control Bar buttons configured for a specific period per bar. For complete documentation, refer to  <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar" target="_blank" rel="noopener noreferrer">Customize Control Bar</a>.</p>
+        </li>
+
+        <li>
+            <p>Select <b class="menu_item">Window &gt;&gt; Chart Values Window</b>  or <b class="menu_item">Window &gt;&gt; Tool Values Window</b> to display the two primary Values windows which display the data for the graphs in the chart. There is also the <a href="indexb844.html?page=doc/Tools.html#CompactToolValuesWindow" target="_blank" rel="noopener noreferrer">Compact Tool Values Window</a>.</p>
+
+            <p>One of the most useful tools is the <a href="indexb844.html?page=doc/Tools.html#ChartValues" target="_blank" rel="noopener noreferrer">Tools &gt;&gt; Chart Values</a> tool which displays a crosshair on the chart. With the Chart Values tool, the associated values for the chart column you are pointing to are displayed in the <b>Tool Values Window</b>.</p>
+        </li>
+
+        <li>
+            <p>You can right click with the Pointer over a chart window to display a menu of commonly used commands. If the chart is in Chart Trade Mode, you will see trading commands listed on the menu as well. </p>
+
+            <p> Select any of the <b class="menu_item">Global Settings  &gt;&gt; Customize Chart Shortcut Menu  | Chart Trade Menu | Chart Drawing Menu</b>  commands on the  main menu to customize this menu.  </p>
+            
+            <p> Keyboard shortcuts are also fully supported for all menu commands. For instructions, refer to  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts">Keyboard Shortcuts</a>.</p>
+
+            <div style="text-align: center;"><a href="../images/chartshortcutmenu.gif"><img alt="" src="../images/chartshortcutmenu.gif" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>
+            <p><b class = "GeneralBackgroundHighlight">Scrolling Chart:</b> The chart can be scrolled back and forward in time by using the scroll bar located at the bottom of the chart.</p>
+
+            <div style="text-align: center;"><a href="../images/scrollbaratthebottomofthechart.png" rel="lightbox"><img alt="" src="../images/scrollbaratthebottomofthechart.png" class="screenshot" loading="lazy" width="575"></a></div>
+            <p> To add space to the right side of the  chart after the last bar in the chart, refer to <a href = "index69b6.html?page=doc/WorkingWithCharts.html#FillSpace" target="_blank" rel="noopener noreferrer">Right Side Fill Space</a>.</p>
+        </li>
+
+        <li>
+            <p><b class = "GeneralBackgroundHighlight">Horizontal Scaling:</b> To change the bar spacing in a chart use the <b>Up Arrow, Down Arrow, Page Up, and Page Down</b> keys on your keyboard. Drag the timescale along the bottom of the chart left or right. Or use the Control Bar buttons shown below.</p>
+
+            <div style="text-align: center;"><a href="../images/barspacingcontrolbarbuttons.png" rel="lightbox"><img alt="" src="../images/barspacingcontrolbarbuttons.png" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>
+            <p><b class = "GeneralBackgroundHighlight">Vertical Scaling:</b> The vertical scale can be expanded or compressed, or moved up and down. To do this click and drag on the Values Scale numbers on the right side of the chart. Right-click on those numbers to get a menu of Scale related commands. For complete instructions, refer to  <a href="index981f.html?page=doc/Scaling.html#Scaling" target="_blank" rel="noopener noreferrer">Interactive Scaling</a>.</p>
+        </li>
+
+        <li>
+            <p><b class = "GeneralBackgroundHighlight">Adjusting the Height of Chart Regions:</b> Refer to the image below.</p>
+
+            <div style="text-align: center;"><a href="../images/adjustingregionsinvaluesscale.png" rel="lightbox"><img alt="" src="../images/adjustingregionsinvaluesscale.png" width="300" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>
+            <p>Refer to the <a href="index69b6.html?page=doc/WorkingWithCharts.html" target="_blank" rel="noopener noreferrer">Working With Charts</a> documentation page for additional information on working with a chart.</p>
+        </li>
+
+        <li>
+            <p>To display a study like <b>Volume</b> or a <b>Moving Average</b> or put another study on the chart: Select <b class="menu_item">Analysis &gt;&gt; Studies</b> on the menu. Search for Volume in list of <b>Studies Available</b> or whatever study you need. Click on the study name. Press the <b>Add</b> button. Press the <b>Settings</b> button to adjust study settings and Inputs such as the Length of a moving average, colors and draw styles. Press <b>OK</b>. Press <b>OK</b> again to close the <b>Chart Studies</b> window. Refer to the <a href="index9099.html?page=doc/ChartStudies.html" target="_blank" rel="noopener noreferrer">Chart Studies</a> documentation page for complete instructions on using chart studies.</p>
+
+            <div style="text-align: center;"><a href="../images/chartstudieswindow.png" rel="lightbox"><img alt="" src="../images/chartstudieswindow.png" class="screenshot" loading="lazy" width="560"></a></div>
+        </li>
+
+        <li>
+            <p>Select <b class="menu_item">File &gt;&gt; Save</b> on the menu. Type a name in the <b>Filename</b> box for your Chartbook. All of the open charts are grouped into a Chartbook. Press the <b>Save</b> button to save the Chartbook.</p>
+
+            <p>Select <b class="menu_item">File &gt;&gt; Close Chartbook</b> on the menu to close all visible charts. Select <b class="menu_item">File &gt;&gt; Open Chartbook</b> on the menu, select the chartbook from the list and press <b>Open</b> to open your charts. Your saved chartbook will also be listed on the <b class="menu_item">File</b> menu for easy selection and opening. Refer to the <a href="index7674.html?page=doc/Chartbooks.html" target="_blank" rel="noopener noreferrer">Chartbooks</a> documentation page for complete information on <b>saving</b> charts and how they are organized.</p>
+
+            <div style="text-align: center;"><a href="../images/filemenuwithchartbookoptions.png" rel="lightbox"><img alt="" src="../images/filemenuwithchartbookoptions.png" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>
+            <p>Sierra Chart provides a large set of professional Drawing Tools to draw various types of objects and lines on charts to perform analysis. To use a chart drawing tool, select <b>Tools</b> on the menu and select a tool from the menu. Refer to the <a href="indexb844.html?page=doc/Tools.html" target="_blank" rel="noopener noreferrer">Chart Drawing Tools</a> documentation page for complete instructions for all of the available Tools and to learn about configuring tools.</p>
+        </li>
+
+        <li>
+            <p>To replay an Intraday chart, select <b class="menu_item">Chart &gt;&gt; Replay</b> on the menu.  Scroll the chart back to where you want to begin the replay, and press <b>Play</b> on the Replay control panel window.</p>
+
+            <div style="text-align: center;"><a href="../images/replayinstructions.png" rel="lightbox"><img alt="" src="../images/replayinstructions.png" class="screenshot" loading="lazy" width="560"></a></div>
+        </li>
+        <li>
+            <p>Select <b class="menu_item">Global Settings &gt;&gt; General Settings</b> on the menu. Set the <a href="index899f.html?page=doc/GeneralSettings.html#ChartUpdateInterval">Chart Update Interval</a> to the time rate at which you want your charts updated. Typically  500 to 800 milliseconds is reasonable.  </p>
+
+            <p>Using a higher value will reduce CPU usage.  However, the chart will update slower. Using a lower value will increase CPU usage.  However, the chart will update faster. It is not recommended to use a setting less than 100 milliseconds.
+                <br><br>
+                        Press <b>OK</b> when done. This setting does <b>not</b> affect the speed at which data is stored. It is stored tick by tick without any gaps.
+                <br> <br>
+                    The Chart Update Interval can also be set individually for each  Chart/Trade DOM and can be set lower when you require faster updating.  Refer to the chart specific <a href="index4cf4.html?page=doc/ChartSettings.html#ChartUpdateInterval" Target="_blank" rel="noopener noreferrer">Chart Update Interval</a> setting.
+            </p>
+        </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="WorkingWithSierraChartWindows">Working with Sierra Chart Settings Windows</h2>
+    <div class="member-link">[<a href="#WorkingWithSierraChartWindows">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>For information to work with the new Sierra Chart Settings Windows, refer to  <a href = "indexe6e0.html?page=doc/SettingsWindowsInterface.php">Settings Window Interface</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="NotesAboutCharts">Notes About Charts</h2>
+    <div class="member-link">[<a href="#NotesAboutCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>Data for each symbol is stored in its own file. The filename is the symbol itself plus a file extension.  The file extension depends upon whether the data file is for a Historical Daily or an Intraday chart. These files are called Chart Data Files.  Charts are created from these files. You can freely <a href="index2d36.html?page=doc/ChartDataFiles.html" target="_blank" rel="noopener noreferrer" >Delete and Rename these files</a>.</li>
+
+        <li>When you enter a <em>new symbol</em> in the <b class="menu_item">File &gt;&gt; New/Open Historical/Intraday Chart</b> window <b>Filename </b> box or the <b class="menu_item">File &gt;&gt; Find Symbol</b> window and press the <b>Open</b> button, a new file will be created and data will be downloaded for the symbol, if available.</li>
+
+        <li>The same chart data file can be opened more than once.  This is if you want to have charts with different configurations for the same symbol. You can open as many charts as you require at the same time. It is possible to select multiple existing chart data files in the  <b class="menu_item">File &gt;&gt; New/Open Historical</b> or <b class="menu_item">File &gt;&gt; Intraday Chart </b> windows to open multiple charts at the same time. Simply press and hold the <b>Control</b> key on your keyboard and select the chart data files one by one with your mouse pointer.</li>
+
+        <li>
+            When you open a chart and are connected to the market data feed server, then data download status will be displayed directly on the chart window in the center. In the case of Intraday chart data, when the download is complete, then the real-time data will be written to the data file as trades occur and is accumulated in the file. 
+            <br>
+            <br>
+            After 6 months you will have an additional 6 months of data on top of what was initially downloaded. 
+            <br> <br>
+            For instructions to access more historical Intraday data, refer to <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#DownloadingViewingMoreHistoricalIntradayData">Downloading/Viewing More Historical Intraday Data</a>.
+            <br> <br>
+            In the case of Historical charts, all available data will be downloaded, up to 50 years. While connected to the market data feed, Historical charts are updated in real-time with the current prices.
+        </li>
+    </ul>
+
+    <div style="text-align: center;">
+        <a href="../images/downloadinghistoricaldata.png" rel="lightbox"><img src="../images/downloadinghistoricaldata.png"   alt="DownloadingHistoricalData" class="screenshot" loading="lazy"></a> 
+        
+        <a href="../images/historicaldownloadcomplete.png" rel="lightbox"><img src="../images/historicaldownloadcomplete.png"  alt="HistoricalDownloadComplete" class="screenshot" loading="lazy"></a> 
+    </div>
+</section>
+
+<section class="h2">
+    <h2 id="SubmittingAnOrderforTrading">Submitting An Order for Trading</h2>
+    <div class="member-link">[<a href="#SubmittingAnOrderforTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="10.html" rel="lightbox"><img src="10.html" alt="" class="MediumFloatRight"></a>
+
+    <p>To submit an order for trading, you first need to have a chart or a Trading DOM open for the symbol that you want to trade. For instructions, refer to <a href="#OpenChart">Step 3</a> on this page. </p>
+
+    <p>All of the Trading functionality in Sierra Chart is accessed through the  <b class="menu_item">Trade</b> menu and the various windows opened by the available commands on that menu. Trading from charts and Trade DOMs is performed through the trading interfaces on the chart or Trade DOM (which is a special type of chart), and the  <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Trade Window</a>.</p>
+
+    <p>Sierra Chart  has a simulated trading mode   where  Orders and Positions  are simulated. And a  non-simulated trading mode where  Orders are submitted to an external trading service. It is important to understand the difference between these two. Refer to <a href="indexf915.html?page=doc/Trading.html#DifferenceBetweenSimAndNonSim"  Target="_blank" rel="noopener noreferrer">Difference between Simulated and Non-Simulated Trading Modes</a>. It is recommended to enable Trade Simulation Mode initially when getting familiar with the trading functionality. And then <em>disable Trade Simulation Mode</em>, when you want to perform non-simulated/live trading.</p>
+
+    <p>For information for all of the Trading functionality, including chart trading, refer to <a href="indexf915.html?page=doc/Trading.html" target="_blank" rel="noopener noreferrer">Overview of Trading</a>.</p>
+
+    <p><b>Quick/Simple Order Entry:</b> Go to an already open chart or Trade DOM window and select  <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart </b>  on the menu to open the Trade Window for the chart if it is not already open.  Follow the instructions in the <a href="index9473.html?page=doc/TradeWindow.html#TradeWindow" target="_blank" rel="noopener noreferrer">Entering an Order from the Trade Window</a> section to submit the order.</p>
+
+    <p>For a list of all of the Trading Related documentation pages, refer to the  <a href="indexc0ca.html?page=doc/Contents.php#Trading" target="_blank" rel="noopener noreferrer">Trading</a> section on the  <b>Table of Contents</b> page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="NeedMoreHelp">Need More Help?</h2>
+    <div class="member-link">[<a href="#NeedMoreHelp">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you are having any kind of problem, refer to the <a href="indexef11.html?page=doc/help.php" target="_blank" rel="noopener noreferrer">Help and Frequently Asked Questions Page</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="OnlineDocumentation">On-line Documentation</h2>
+    <div class="member-link">[<a href="#OnlineDocumentation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p><a href="../images/websitenavigation.png" rel="lightbox"><img src="../images/websitenavigation.png" alt="" class="WideFloatRight"></a>At the top of every website page there is a menu that links to all of our main website pages.</p>
+
+    <p>This on-line documentation system is the complete up to date documentation for Sierra Chart.</p>
+
+    <p>Pressing <b>F1</b> in Sierra Chart will display the documentation page associated with the active window.</p>
+
+    <p>Each page in this documentation is called a documentation page. Every page is listed on the <a href="indexc0ca.html?page=doc/contents.html" target="_blank" rel="noopener noreferrer">Table of Contents</a> page.</p>
+
+    <p>The website documentation is updated and improved almost daily. It is designed to be simple and complete. </p>
+
+    <p>The Sierra Chart <a href="indexc0ca.html?page=doc/contents.html" target="_blank" rel="noopener noreferrer">Table of Contents</a> page lists and categorizes every single page on this website including the documentation pages. This is for easy reference. You will notice how the website has a very simple and logical organization to it.   </p>
+
+    <p>Even though you see within a page many links to other pages or sections on that page, you are simply navigating through a single list of pages.</p>
+
+    <p>You will also notice at the top of every webpage, a series of links indicating where you are on the website. Using those links you can easily navigate back one level or to the Home page. </p>
+</section>
+
+<section class="h2">
+    <h2 id="Notes">Notes</h2>
+    <div class="member-link">[<a href="#Notes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Stocks, bonds, futures, options, market indexes, statistics, mutual funds, are referred to as <em>symbols</em> in Sierra Chart. </p>
+    
+    <p>A symbol is a symbolic representation of one of these types of securities/markets/indexes/statistics/instruments. A symbol is used for charts, trading windows,  and quote lines on a Quote Board.</p>
+
+    <p>The time shown on the title bar of the main Sierra Chart window is based upon your computer's clock and adjusted to the <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Time Zone</b> setting you have specified in Sierra Chart.</p>
+
+    <p>This documentation uses the word <em>Pointer</em> to refer to the human interface pointing device on your computer. This could be a tablet, touchpad, mouse, or touchscreen. </p>
+</section>
+
+
+<section class="h2">
+    <h2 id="AlternativeMethodOfOpeningCharts">Alternative Method of Opening Charts</h2>
+    <div class="member-link">[<a href="#AlternativeMethodOfOpeningCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <div style="text-align: center;"><a href="../images/openchartdatafilewindow.png" rel="lightbox"><img src="../images/openchartdatafilewindow.png" class="screenshot" loading="lazy" alt=""></a></div>
+
+    <section class="h3">    
+    <h3 id = "AlternateMethodOpenChart_Historical">Historical Charts</h3> 
+    <div class="member-link">[<a href="#AlternateMethodOpenChart_Historical">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+
+        <p>Historical charts have a bar period of 1 Day and greater. They can also be Weekly, Monthly, Quarterly and Yearly charts. A Historical chart with a period per bar of 1 Day, is called a Historical Daily chart. The underlying data in the data file are daily data records containing data for a single day. </p>
+
+        <p>Select <b class="menu_item">File &gt;&gt; New/Open Historical Chart</b> on the menu to create or open a Historical Daily / Weekly / Monthly / Quarterly / Yearly  chart. The default file extension for Historical Daily data files is   <em><b>dly</b></em>.  </p>
+        
+        <p>In the <b>New/Open File</b> window, type a <em>new</em> or existing symbol in the <b>File Name</b> box or select one from the list of files, then press the <b>Open</b> button.   </p>
+        
+        <p> When manually typing a symbol in the <b>File Name</b> box, there is  <em>no</em> need to enter the file extension.</p>
+
+        <p>Refer to the image above. The symbol needs to follow the format required by the Data or Trading service you are using.  </p>
+        
+        <p>For symbol lists and formats, use the  <b Class = "menu_item">File &gt;&gt; Find Symbol</b> window.  </p>
+    </section>
+
+    <section class="h3">
+    
+    <h3 id = "AlternateMethodOpenChart_Intraday">Intraday Charts</h3>
+    <div class="member-link">[<a href="#AlternateMethodOpenChart_Intraday">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+
+        <p><b class = "GeneralBackgroundHighlight">Intraday</b> charts can have any bar period. Usually the bar period is <b>less than 1 day</b> and are based on  a fixed time frame down to 1 second or <b> Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars</b>.  </p>
+
+        <p>Although you can specify a period per bar of 1 Day or greater with Intraday chart data types, it is usually not practical to create long-term Historical charts from Intraday data with a 1 Day or greater bar period because they will take a longer time to load and usually do not go back far in time. </p>
+        
+        <p>Select <b class="menu_item">File &gt;&gt; New/Open Intraday Chart</b> on the menu to create or open an  Intraday chart. The default file extension for Intraday chart data files is <em><b>scid</b></em>.</p>
+         
+        <p>In the <b>New/Open File</b> window, type a <em>new</em> or existing symbol in the <b>File Name</b> box or select one from the list of files, then press the <b>Open</b> button.</p>
+        
+        <p> When manually typing a symbol in the <b>File Name</b> box, there is  <em>no</em> need to enter the file extension.</p>
+
+        <p>Refer to the image above. The symbol needs to follow the format required by the Data or Trading service you are using.</p>
+        
+        <p>For symbol lists and formats, use the  <b Class = "menu_item">File &gt;&gt; Find Symbol</b> window.</p>
+    </section>
+</section>
+
+<hr><p>*Last modified Monday, 17th April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/GettingStarted.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:30:10 GMT -->
+</html>  

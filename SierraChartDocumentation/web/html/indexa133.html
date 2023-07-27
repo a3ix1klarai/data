@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SierraChartServerSettings.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686042418') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/SierraChartServerSettings.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Sierra Chart Server Settings -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexa133.html?page=doc/SierraChartServerSettings.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SettingsWindows">(Table of Contents) Settings Windows</a> &gt;&gt; <a  href="indexa133.html?page=doc/SierraChartServerSettings.php">Sierra Chart Server Settings</a></h4> </div>     <h1 class="PageName">Sierra Chart Server Settings</h1>
+
+<ul>
+    <li><a href="#General">General</a>
+        <ul>
+            <li><a href="#GeneralSection">General</a>
+                <ul>
+                    <li><a href="#DetailedHeartbeatLogging">Detailed Heartbeat Logging</a></li>
+                    <li><a href="#UsePort80">Use Port 80 for Historical Data</a></li>
+                    <li><a href="#AlwaysUsePort443">Always Use Port 443 For Real-time Data</a></li>
+                    <li><a href="#UDPPort">UDP Port</a></li>
+                    <li><a href="#EncryptionForHistoricalDataDownloads">Use Encryption For Historical Data Downloads</a></li>
+                    <li><a href="#MaxDepthLevels">Max Depth Levels</a></li>
+                    <li><a href="#SupportDownloadingHistoricalMarketDepthData">Support Downloading Historical Market Depth Data</a></li>
+                    <li><a href="#MaximumHistoricalMarketDepthDaysToDownload">Maximum Historical Market Depth Days to Download</a></li>
+                    <li><a href="#SubscribeMarketByOrderDataWhenMarketDepthSubscribe">Subscribe Market By Order Data When Market Depth Subscribe</a></li>
+                    <li><a href="#UseSeparateConnectionForMarketByOrderData">Use Separate Connection For Market By Order Data</a></li>
+                    <li><a href="#UseRealTimeDataCompression">Use Real-Time Data Compression</a></li>
+                    <li><a href="#RemoteBufferDelaySendTimeInMilliseconds">Remote Buffer Delay Send Time In Milliseconds</a></li>
+                    <li><a href="#MaximumHistoricalOrderFillsDaysToDownload">Maximum Historical Order Fills Days to Download</a></li>
+                </ul>
+            </li>
+            <li><a href="#HistoricalDataClientSection">Historical Data Client</a>
+                <ul>
+                    <li><a href="#TimeoutInSeconds">Timeout In Seconds</a></li>
+                    <li><a href="#NumRetriesAfterTimeout">Num. Retries After Timeout</a></li>
+                    <li><a href="#LogHistoricalPriceDataFieldsInDTCHDServiceClient">Log Historical Price Data Fields in DTC HD Service Client</a></li>
+                </ul>
+            </li>
+            <li><a href="#SpecialSection">Special</a>
+                <ul>
+                    <li><a href="#UseInternalLANIPforCMEDataAndOrderRouting">Use Internal LAN IP for CME Data and Order Routing</a></li>
+                </ul>
+            </li>
+            <li><a href="#NetworkSocket">Network Socket</a>
+                <ul>
+                    <li><a href="#OperatingSystemReceiveBufferSize">Operating System Receive Buffer Size</a></li>
+                    <li><a href="#OperatingSystemSendBufferSize">Operating System Send Buffer Size</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<ul>
+    <li><a href="#DTCProtocolServer_Tab">DTC Protocol Server</a>
+		<ul>
+		    <li><a href="#DTCProtocolServerSection">DTC Protocol Server Section</a>
+				<ul>
+					<li><a href="#EnableDTCProtolServer">Enable DTC Protol Server</a></li>
+					<li><a href="#UseDelayedSends">Use Delayed Sends</a></li>
+					<li><a href="#ListeningPort">Listening Port</a></li>
+					<li><a href="#DTCProtocolServerIsListening">DTC Protocol Server is Listening (Read only)</a></li>
+					<li><a href="#HistoricalDataPort">Historical Data Port</a></li>
+					<li><a href="#DTCProtocolClients">DTC Protocol Clients (Read only)</a></li>
+					<li><a href="#HistoricalDataClients">Historical Data Clients (Read only)</a></li>
+					<li><a href="#InterprocessSynchronyzationServers">Interprocess Synchronyzation Servers (Read only)</a></li>
+					<li><a href="#AccessAllTradeAccountsIndividualServers">Access All Trade Accounts Individual Servers (Read only)</a></li>
+					<li><a href="#AutoSendSecurityDefinitionForNewSymbols">Auto Send Security Definition for New Symbols</a></li>
+					<li><a href="#AllowTrading">Allow Trading</a></li>
+					<li><a href="#RequireAuthentication">Require Authentication</a></li>
+					<li><a href="#RequireTLS">Require TLS</a></li>
+					<li><a href="#AutomaticallyUseJSONCompactEncodingForWebSocketConnections">Automatically use JSON Compact Encoding for Web Socket connections</a></li>
+					<li><a href="#Encoding">Encoding (List)</a></li>
+					<li><a href="#DisconnectClients">Disconnect Clients (Button)</a></li>
+					<li><a href="#AllowedIncomingIPs">Allowed Incoming IPs (List)</a></li>
+					<li><a href="#TLSHistoricalDataPort">TLS Historical Data Port</a></li>
+					<li><a href="#EnableJSONLogging">Enable JSON Logging</a></li>
+					<li><a href="#NetworkSocketDelayedSendIntervalInMilliseconds">Network Socket Delayed Send Interval in Milliseconds</a></li>
+				</ul>
+			</li>
+		</ul>
+    </li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="General">General (Global Settings &gt;&gt; Sierra Chart Server Settings)</h2>
+    <div class="member-link">[<a href="#General">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="GeneralSection">General (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#GeneralSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains general settings for when this installation of Sierra Chart is being used as a Server.</p>
+
+        <section class="h4">
+            <h4 id="DetailedHeartbeatLogging">Detailed Heartbeat Logging (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#DetailedHeartbeatLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then additional information is entered in the Message Log that can be used to help determine network inefficiencies. This option should typically only be enabled when requested to do so by Sierra Chart Support Staff.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UsePort80">Use Port 80 for Historical Data (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#UsePort80">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Normally this option should be set to <b>No</b>. Only set this option to <b>Yes</b> when the standard port for downloading historical data from the Sierra Chart historical data server, which is 10149, is blocked or throttled on your network. When this option is set to <b>Yes</b>, then port 80 will be used instead.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="AlwaysUsePort443">Always Use Port 443 For Real-time Data (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#AlwaysUsePort443">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Set this option to <b>Yes</b> to always use Internet port 443 for real-time market data for Sierra Chart provided data services.</p>
+            
+            <p>Set this option to <b>Yes</b> if you notice a significant number of lost connections to the data servers used by Sierra Chart real-time data feeds. This may or may not help. If it makes no difference, then set this option to <b>No</b>.</p> 
+
+            <p>This setting has no effect upon the streaming delayed data feeds. Those do not support port 443.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UDPPort">UDP Port (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#UDPPort">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the port number that is used when interfacing to this instance of Sierra Chart using a <a href="index1d53.html?page=doc/UDPAPI.html">UDP Interface</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="EncryptionForHistoricalDataDownloads">Use Encryption For Historical Data Downloads (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#EncryptionForHistoricalDataDownloads">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then the historical data downloads are encrypted.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MaxDepthLevels">Max Depth Levels (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#MaxDepthLevels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This option sets the maximum number of <a href="index8793.html?page=doc/FileMenu.html#OpenMarketDepthWindow">market depth</a> levels which are requested from the server and transmitted by the server when using any of the Sierra Chart data services which provide market depth data.</p>
+            
+            <p>This only applies to Sierra Chart market data services. It does not apply to any other external service. It does apply to the <b>Sierra Chart Exchange Data Feed</b> and <b>Denali Exchange Data Feed</b>.</p>
+            
+            <p>Setting this to 0 causes the server to send all market depth levels available.</p>
+             
+            <p>It is important to reconnect to the data feed after changing this setting for it to go into effect and for the management of the number of levels of depth to function properly. Select <b class="menu_item">File &gt;&gt; Disconnect</b> and then <b>File &gt;&gt; Connect to Data Feed</b> to do this.</p>
+
+            <p>There is also the ability to control the number of market depth levels which are requested from the server on a per symbol basis, rather than using this setting for all symbols. Refer to the information on the <b>Number of Depth Levels to Subscribe</b> setting in the <a href="index4404.html?page=doc/GlobalSymbolSettings.php#SymbolSettings">Symbol Settings</a> documentation.</p>
+             
+            <p>Within each chart you also have the ability to control the number of levels of market depth displayed. Refer to <a href="index4cf4.html?page=doc/ChartSettings.html#MaximumMarketDepthLevels">Maximum Market Depth Levels</a>in the Chart Settings documentation. In charts you can only reduce the depth further from the global setting which affects the number of levels actually subscribed to. You cannot display more depth than what has been set in this setting.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SupportDownloadingHistoricalMarketDepthData">Support Downloading Historical Market Depth Data (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#SupportDownloadingHistoricalMarketDepthData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then it is possible to download Historical Market Depth Data for symbols that are part of the Denali Exchange Data Feed and the Delayed Exchange Data Feed.</p>
+
+            <p>Otherwise, if this option is set to <b>No</b>, then historical Market Depth data will not be downloaded.</p>
+            
+            <p>For complete detailed information, refer to <a href = "index0cc3.html?page=doc/StudiesReference.php&amp;ID=375#DownloadingOfHistoricalMarketDepthData">Downloading Of Historical Market Depth Data</a>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MaximumHistoricalMarketDepthDaysToDownload">Maximum Historical Market Depth Days to Download (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#MaximumHistoricalMarketDepthDaysToDownload">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>Sierra Chart supports downloading historical market depth data from the <a href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a> and the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a>.</p>
+
+            <p>This data is used by the <a href="index0cc3.html?page=doc/StudiesReference.php&amp;ID=375#Market_Depth_Historical_Graph">Market Depth Historical Graph</a> study. And also used during chart replays when replaying market depth data.</p>
+
+            <p>This setting controls the maximum number of days of historical market depth data to download. It is recommended to keep this number as small as possible because it does take a lot of time to download historical market depth data.</p>
+
+            <p>To enable the downloading of historical market depth data, it is necessary to enable <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General    &gt;&gt; General &gt;&gt; Support Downloading Historical Market Depth Data</b>.</p>
+
+            <p>When this setting is set to <b>0</b>, then the maximum amount of days of available historical market depth data is downloaded.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SubscribeMarketByOrderDataWhenMarketDepthSubscribe">Subscribe Market By Order Data When Market Depth Subscribe (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#SubscribeMarketByOrderDataWhenMarketDepthSubscribe">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then for those symbols that are part of the Denali Exchange Data Feed that are able to receive Market Depth Data (the activated exchange(s) support Market Depth), then the Market by Order data will also be downloaded and can be displayed in the appropriate Chart/Trade DOM columns for the Market Orders.</p>
+
+            <p>Otherwise, if this option is set to <b>No</b>, then the Market by Order data will not be downloaded along with the Market Depth data.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseSeparateConnectionForMarketByOrderData">Use Separate Connection For Market By Order Data (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#UseSeparateConnectionForMarketByOrderData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this option is set to <b>Yes</b>, then a separate connection is used to request and receive the <a href="index288e.html?page=doc/MarketByOrder.php">Market by Order</a> data.</p> 
+
+            <p>This option must be set to <b>Yes</b> because a separate connection is definitely required. The server will not provide data on the primary connection for market by order data.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="UseRealTimeDataCompression">Use Real-Time Data Compression (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#UseRealTimeDataCompression">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting enables compression of the real-time data stream for Sierra Chart provided data feeds. It does not apply to any external supported data feed.</p> 
+
+            <p>The choices are <b>No Compression</b>, <b>Standard Compression</b>, and <b>High Compression</b>. The default is <b>Standard Compression</b>.</p>
+
+            <p>It is definitely not recommended to use <b>No Compression</b>. Compression only provides a benefit. It reduces the amount of bandwidth usage, and it also reduces latency. <b>No Compression</b> is only an option for troubleshooting and should only be changed when requested by Sierra Chart Support Staff.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="RemoteBufferDelaySendTimeInMilliseconds">Remote Buffer Delay Send Time In Milliseconds (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#RemoteBufferDelaySendTimeInMilliseconds">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>This setting only affects Sierra Chart data feeds. It controls the transmission interval of data from the server, specified in milliseconds. Using a value of 0 uses the default.</p>
+               
+            <p>Any changes to this setting requires that you <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">reconnect</a> to the data feed.</p>
+            
+            <p>For more information about this setting, refer to <a href="index0054.html?page=doc/helpdetails4.html#SierraChartExchangeDataFeeds">Sierra Chart Exchange Data Feeds</a>.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="MaximumHistoricalOrderFillsDaysToDownload">Maximum Historical Order Fills Days to Downloads (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; General)</h4>
+            <div class="member-link">[<a href="#MaximumHistoricalOrderFillsDaysToDownload">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>This setting is only for Sierra Chart Order Routing services, server-based trade simulation services, and other DTC based services.</p>
+            
+            <p> This setting controls the maximum number of days that historical trade order fills are downloaded from the server.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="HistoricalDataClientSection">Historical Data Client (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#HistoricalDataClientSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains settings related to the historical data client.</p>
+
+        <section class="h4">
+            <h4 id="TimeoutInSeconds">Timeout in Seconds (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; Historical Data Client)</h4>
+            <div class="member-link">[<a href="#TimeoutInSeconds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This controls the timeout time, in seconds, for the historical data client.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="NumRetriesAfterTimeout">Num. Retries After Timeout (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; Historical Data Client)</h4>
+            <div class="member-link">[<a href="#NumRetriesAfterTimeout">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This defines the number of retries that will be attempted to download historical data if there is a connection failure.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="LogHistoricalPriceDataFieldsInDTCHDServiceClient">Log Historical Price Data Fields in DTC HD Service Client (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; Historical Data Client)</h4>
+            <div class="member-link">[<a href="#LogHistoricalPriceDataFieldsInDTCHDServiceClient">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> </p>
+        </section>
+		
+    </section>
+
+    <section class="h3">
+        <h3 id="SpecialSection">Special (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#SpecialSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This sub-section contains settings that are special to the Sierra Chart server.</p>
+
+        <section class="h4">
+            <h4 id="UseInternalLANIPforCMEDataAndOrderRouting">Use Internal LAN IP for CME Data and Order Routing (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; Special)</h4>
+            <div class="member-link">[<a href="#UseInternalLANIPforCMEDataAndOrderRouting">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p>In almost all cases this setting must be set to <em>No</em>.</p>
+               
+            <p>In the rare condition, that you are using a server colocated with Sierra Chart order routing servers for the CME and on the same internal network, then this can be set to Yes for CME order routing and market data.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="NetworkSocket">Network Socket (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General)</h3>
+        <div class="member-link">[<a href="#NetworkSocket">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> </p>
+
+        <section class="h4">
+            <h4 id="OperatingSystemReceiveBufferSize">Operating System Receive Buffer Size (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; Network Socket)</h4>
+            <div class="member-link">[<a href="#OperatingSystemReceiveBufferSize">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+        <section class="h4">
+            <h4 id="OperatingSystemSendBufferSize">Operating System Send Buffer Size (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; General &gt;&gt; Network Socket)</h4>
+            <div class="member-link">[<a href="#OperatingSystemSendBufferSize">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+    </section>
+	
+</section>
+
+<section class="h2">
+    <h2 id="DTCProtocolServer_Tab">DTC Protocol Server (Global Settings &gt;&gt; Sierra Chart Server Settings)</h2>
+    <div class="member-link">[<a href="#DTCProtocolServer_Tab">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="DTCProtocolServerSection">DTC Protocol Server (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h3>
+        <div class="member-link">[<a href="#DTCProtocolServerSection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>For complete documentation for the DTC Protocol server, refer to <a href="indexedef.html?page=doc/DTCServer.php">DTC Protocol Server</a>.</p>
+		
+		
+        <section class="h4">
+            <h4 id="EnableDTCProtolServer">Enable DTC Protol Server (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#EnableDTCProtolServer">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="UseDelayedSends">Use Delayed Sends (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#UseDelayedSends">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="ListeningPort">Listening Port (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#ListeningPort">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="DTCProtocolServerIsListening">DTC Protocol Server is Listening (Read only) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#DTCProtocolServerIsListening">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="HistoricalDataPort">Historical Data Port (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#HistoricalDataPort">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="DTCProtocolClients">DTC Protocol Clients (Read only) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#DTCProtocolClients">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="HistoricalDataClients">Historical Data Clients (Read only) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#HistoricalDataClients">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="InterprocessSynchronyzationServers">Interprocess Synchronyzation Servers (Read only) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#InterprocessSynchronyzationServers">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="AccessAllTradeAccountsIndividualServers">Access All Trade Accounts Individual Servers (Read only) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#AccessAllTradeAccountsIndividualServers">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="AutoSendSecurityDefinitionForNewSymbols">Auto Send Security Definition for New Symbols (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#AutoSendSecurityDefinitionForNewSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="AllowTrading">Allow Trading (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#AllowTrading">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="RequireAuthentication">Require Authentication (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#RequireAuthentication">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="RequireTLS">Require TLS (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#RequireTLS">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="AutomaticallyUseJSONCompactEncodingForWebSocketConnections">Automatically use JSON Compact Encoding for Web Socket connections (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#AutomaticallyUseJSONCompactEncodingForWebSocketConnections">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="Encoding">Encoding (List) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#Encoding">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="DisconnectClients">Disconnect Clients (Button) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#DisconnectClients">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="AllowedIncomingIPs">Allowed Incoming IPs (List) (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#AllowedIncomingIPs">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="TLSHistoricalDataPort">TLS Historical Data Port (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#TLSHistoricalDataPort">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="EnableJSONLogging">Enable JSON Logging (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#EnableJSONLogging">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+        <section class="h4">
+            <h4 id="NetworkSocketDelayedSendIntervalInMilliseconds">Network Socket Delayed Send Interval in Milliseconds (Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; DTC Protocol Server)</h4>
+            <div class="member-link">[<a href="#NetworkSocketDelayedSendIntervalInMilliseconds">Link</a>] - [<a href="#top">Top</a>]</div>
+            
+            <p> </p>
+        </section>
+		
+    </section>
+</section>
+
+<hr><p>*Last modified Tuesday, 06th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/SierraChartServerSettings.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:10 GMT -->
+</html>  

@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/RenkoCharts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105661') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/RenkoCharts.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Renko Bar Charts -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2885.html?page=doc/RenkoCharts.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index2885.html?page=doc/RenkoCharts.html">Renko Bar Charts</a></h4> </div>     <h1 class="PageName">Renko Bar Charts</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#UsingRenkoBars">Using Renko Bars</a></li>
+    <li><a href="#RenkoNewBarMode">Renko New Bar Mode</a>
+		<ul>
+		    <li><a href="#RenkoNewBarMode_NewTrendBarWhenRangeExceeded">New Trend Bar When Range Exceeded</a></li>
+		    <li><a href="#RenkoNewBarMode_NewTrendBarWhenRangeMet">New Trend Bar When Range Met</a></li>
+		    <li><a href="#RenkoNewBarMode_NewTrendBarAfterRangeMet">New Trend Bar After Range Met</a></li>
+		    <li><a href="#RenkoNewBarMode_NewReversalBarWhenReversalAmountMet">New Reversal Bar When Reversal Amount Met</a></li>
+		    <li><a href="#RenkoNewBarMode_NewBarWhenOpenCrossed">New Bar When Open Crossed (for potential reversals)</a></li>
+		    <li><a href="#RenkoNewBarMode_NewReversalBarWhenReversalAmountMetPlus1TickAndReferencesPriorClose">New Reversal Bar When Reversal Amount Met Plus 1 Tick and References Prior Close</a></li>
+		    <li><a href="#RenkoNewBarMode_AllowChangeOfDirectionOfCurrentBar">Allow Change of Direction of Current Bar</a></li>
+		</ul>
+	</li>
+    <li><a href="#RenkoOHLCValues">Renko Open, High, Low, Close Values</a>
+		<ul>
+			<li><a href="#OpenPriceFirstRenkoBar">Opening Price for First Renko Bar and Alignment (Aligned Renko Bars)</a></li>
+		</ul>
+	</li>
+    <li><a href="#SplittingOfRenkoBars">Splitting of Renko Bars</a></li>
+    <li><a href="#FillingInOfHighOrLowBarValuesToMatchRenkoBarOpenAtReversals">Filling in of High or Low Bar Values to Match Renko Bar Open at Reversals</a></li>
+    <li><a href="#FlexRenko">Flex Renko Bars</a>
+		<ul>
+		    <li><a href="#BarSize">Bar Size</a></li>
+		    <li><a href="#TrendOffset">Trend Offset</a></li>
+		    <li><a href="#ReversalOffset">Reversal Offset</a></li>
+		    <li><a href="#Examples">Examples</a></li>
+		</ul>
+	</li>
+    <li><a href="#FillingPriceGaps">Filling of Price Gaps with Renko Bars</a></li>
+    <li><a href="#OverlappingBricks">Overlapping Bricks</a></li>
+    <li><a href="#UsingNumbersBarsStudyOnRenkoCharts">Using Numbers Bars Study on Renko Charts</a></li>
+    <li><a href="#FlexRenkoInverseSettingBars">Flex Renko Inverse Setting Bars</a></li>
+    <li><a href="#RenkoEducation">Renko Education</a></li>
+    <li><a href="#RenkoReversalBarAlertFormula">Renko Reversal Bar Alert Formula</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Intro">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/renkobars.png" rel="lightbox"><img src="../images/renkobars.png" class="WideFloatRight"  alt="" ></a>
+
+
+    <p class = "GeneralBackgroundHighlight"> The information on this page applies to version 1647 and higher.  </p>
+
+    <p>Sierra Chart offers  three different types of Renko chart bars. These are <em>Standard Renko</em> bars and <a href="#FlexRenko">Flex (flexible) Renko Bars</a>, and   <a href="#FlexRenkoInverseSettingBars">Flex Renko Inverse Setting Bars</a>.  </p>
+
+    <p>These types of chart bars only work with <em>Intraday</em> chart data.</p>
+
+    <p>In a standard price bar there are four values. The Open, High, Low, and Close/Last. The Open is the first price traded for a bar. The High is the highest price traded. The Low is the lowest price traded. The Close is the final price traded.  If the bar is still forming, then the Close of the bar is last price traded.</p>
+
+    <p>A Standard Renko chart is made up of bars, also known as <em>bricks</em>, which are always the same price range from the Open price to the Close price. The distance between the Open to the Close is specified  in price ticks.  </p>
+
+    <p>For example, if the Tick Size  for the symbol of the chart is .25, and the Renko Bar/Brick Size is specified as 4, the Renko Bar will have a price range of 1.0 from its Open to Close prices. This is known as the <em>Bar/Brick Size</em> of the Renko Bar.   It always is the Open to Close price range and <em>does not include</em> the High to Low price range.</p>
+
+    <p>The High and Low of a Renko bar can be optionally displayed based upon the <b>Graph Draw Type</b> setting. The High and Low represent the true high and low of the  prices which make up the Renko bar.</p>
+
+    <p>The Renko Bar can be cut short if <b>New Bar At Session Start</b> is enabled in  <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>.  In which case you will see a Renko Bar less than the specified number of price ticks.  This can also result in overlapping bars/bricks. For additional information, refer to  <a href="#OverlappingBricks">Overlapping Bricks</a>.</p>
+
+    <p> There are Up Renko bars and Down Renko bars, and each bar either continues or reverses the direction/trend of the previous Renko bar. A bar continues the direction of the previous bar when the price movement of the symbol moves the Bar Size in the <em>same direction</em>  from the most recent completed Renko bar Close price.     <em>A completed  Renko bar is considered a bar where the Open to Close difference is equal to the Bar Size</em>. </p>
+
+    <p>  A reversal occurs when there is  price movement of the symbol  which is twice the Bar Size, the  Close to the Open range, in the  <em>opposite direction</em>. In the case of a currently forming incomplete Renko bar, the   comparison to determine a reversal is to the   Close of the previous Renko bar.   So there must be price movement twice the  Bar Size from that  Close price.  In the case of the current Renko bar being complete, the  comparison to determine a reversal is to its own  Close price. </p>
+
+    <p> If the current Renko bar is not complete, then there is a reversal in place on that same bar. If the current Renko bar is complete,  which is the case when its Open to Close range is equal to the Bar Size, then a new reversal bar is created.  </p>
+
+    <p> However, in the case  of when <a href="#RenkoNewBarMode">Renko New Bar Mode</a> has been set to  <b>New Trend Bar When Range Exceeded | New Bar When Open Crossed</b> or <b>New Trend Bar When Range Met | New Bar When Open Crossed</b>, then a new bar will be started before an actual reversal occurs  when the  Open price is crossed.  Refer to  <a href="#RenkoNewBarMode">Renko New Bar Mode</a> for details.
+
+
+    <p> The current forming Renko bar will continue to accumulate data   and can continue the current trend, or  can  reverse.</p>
+
+    <p>When the direction/trend of the previous bar is continued with a new bar, the open of the new bar is equal to the close of the previous bar. When the direction/trend of the previous bar is reversed, the open of the new bar is equal to the open of the prior bar. </p>
+
+    <p>Sierra Chart Renko bars are Candlesticks which include tracking of the  High and Low values that are outside of the classic brick.  These are called wicks. To ensure that you see the wicks, set the <b> Graph Draw Type </b> in <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> to <b>Renko Bricks with Wicks</b>  which is the default.  </p>
+
+    <p>Sierra Chart Renko bars also update the last bar closing/last price as real-time data is received. The last  bar in the chart could be either an Up or Down Renko Bar, and is not determined until the bar is complete. The final  bar is never removed, but the Open value of the bar can change when the bar is closed. Refer to the image below.</p>
+    <div style="text-align: center;"><a href="../images/renkolastbar.png" rel="lightbox"><img src="../images/renkolastbar.png" alt="" class="screenshot" loading="lazy" ></a></div>
+
+    <p> Once a Renko Bar/Brick (Open to Close) becomes equal to the  <b>Bar Size </b> setting in ticks, any trading above that brick in the case of an up Renko bar or below that brick in the case of a down Renko bar, immediately starts a new bar and that new bar begins to form a new Renko bar according to the Renko bar rules depending upon the  specific   Renko <b>Bar Period Type</b>.  </p>
+</section>
+
+<section class="h2">
+    <h2 id="UsingRenkoBars">Using Renko Bars</h2>
+    <div class="member-link">[<a href="#UsingRenkoBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li>Follow the instructions of the <a href="index6d53.html?page=doc/TickbyTickDataConfiguration.php">Tick by Tick Data Configuration</a> page to make sure you have tick by tick data.</li>
+
+        <li>To set the chart bars to Renko bars, select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu.</li>
+
+        <li> In the <b >Intraday Bar Period &gt;&gt; Bar Period Type</b> list, select <b> Renko Bar (in ticks)</b> or <b> Aligned Renko Bar (in ticks)</b>. For information about Aligned Renko Bars, refer to <a href="#OpenPriceFirstRenkoBar">Opening Price for First Renko Bar</a>.</li>
+
+        <li>Specify the number of ticks per Renko bar in the box below. This is also known as the <em>Bar Size</em>.  Each 1 tick is equivalent to the  <b>Tick Size</b> setting in <b>Chart Settings</b>. Therefore, if the <b> Tick Size</b> is .25 and you specify 4 ticks, then this is equivalent to <b>1.0</b> as an actual value. This will mean that each Renko bar body will have a length of 1.0. This <em>Bar Size</em> always applies to the body. Not from the High to the Low of the Renko bar.</li>
+        
+        <li> Verify the <a href="index4cf4.html?page=doc/ChartSettings.html#PriceDisplayFormat"   target="_blank" rel="noopener noreferrer">Price Display Format</a> is set correctly. The building of Renko bars has a dependency on this setting when performing a comparison of values. It needs to be set to the same precision as the Tick  Size.  For example, if the tick size is .25, then the Price Display Format needs to be .01.</li>
+
+        <li>The  <b>Session Times &gt;&gt; New Bar At Session Start</b> option applies when using Renko bars. We recommend keeping this option enabled, so that the Renko bars always start from a consistent point in time. However, keep in mind that  this can also result in the Renko bricks overlapping. Refer to <a href="#OverlappingBricks">Overlapping Bricks</a>. </li>
+
+        <li>Verify the correct <b>Tick Size</b> is set for the symbol. If it is not correct, change it. This setting is also one the <b>Chart Settings</b> window. </li>
+
+        <li> There are several choices for the <b>Graph Draw Type</b> setting when using any of the <b> Renko Bar  </b> Bar Period Types:
+
+            <ul>
+                <li><b>CandleStick</b>: Uses the true Open and Close values to draw the bars.  The  High and Low are also displayed. The Candlestick bar color settings in <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> apply when using this Graph Draw Type.</li>
+
+                <li><b>CandleStick Body Only</b>: Uses the true Open and Close values to draw the bars.  The High and Low are not displayed. The Candlestick bar color settings in <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> apply when using this Graph Draw Type.</li>
+
+                <li><b>Renko Brick</b>: The <b>Renko Open</b> and <b>Renko Close</b> values are used to draw the bars.  The High and Low are not displayed. The Candlestick bar color settings in <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> apply when using this Graph Draw Type.</li>
+
+                <li><b>Renko Brick With Wicks</b>: The <b>Renko Open</b> and <b>Renko Close</b>  values are used to draw the bars.  The High and Low are also displayed. The Candlestick bar color settings in <b class="menu_item">Global Settings &gt;&gt; Graphics Settings</b> apply when using this Graph Draw Type.</li>
+            </ul>
+        </li>
+
+        <li>   Set the  <b>Intraday Chart Bar Period  &gt;&gt; Gap Fill - *</b> setting as required. When using a setting other than <b>Gap Fill - None</b>, the setting will fill the gaps between the chart bars. For complete details, refer to <a href="#FillingPriceGaps">Filling of Price Gaps with Renko Bars</a>. 
+        <br> <br>
+        <b>Gap Fill - Fill Bar Gap  at Start of Day  </b> is only valid  when you also have <b>New Bar At Session Start</b> enabled. <em>Otherwise, it has no effect.</em> 
+        <br> <br>
+        When the opening price of the new session for the day is outside of the range of the previous Renko bar, the range from the close of the prior bar to the open of the new bar (the gap) is filled  with Renko bars  if using the <b>Gap Fill - Fill All Bar Gaps | Gap Fill - Fill Bar Gap  at Start of Day  </b> setting. The Renko bars will have the same Date-Time  as the new Renko bar. The effect of this can easily be seen when looking at a chart with Day Session only data.</li>
+
+        <li>Press <b>OK</b> to close the  <b>Chart Settings  </b> window. </li>
+    </ol>
+    
+        
+    <div style="text-align: center;"><a href="../images/renkosettings.png" rel="lightbox"><img src="../images/renkosettings.png" width="700" class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="RenkoNewBarMode">Renko New Bar Mode</h2>
+    <div class="member-link">[<a href="#RenkoNewBarMode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b> &gt;&gt; Intraday Chart  Bar Period</b>, there is the Renko New Bar Mode setting. Each setting consists of two sub settings. They are listed below.  </p>
+    <ul>
+        <li><b>New Trend Bar When Range Exceeded | New Reversal Bar When Reversal Amount Met</b></li>
+        <li><b>New Trend Bar When Range Exceeded | New Bar When Open Crossed</b></li>
+        <li><b>New Trend Bar When Range Exceeded | New Reversal Bar When Reversal Amount Met Plus 1 Tick and References Prior Close</b></li>
+        <li><b>New Trend Bar When Range Met | New Reversal Bar When Reversal Amount Met</b></li>
+        <li><b>New Trend Bar When Range Met | New Bar When Open Crossed</b></li>
+        <li><b>New Trend Bar When Range Met | New Reversal Bar When Reversal Amount Met Plus 1 Tick and References Prior Close</b></li>
+        <li><b>New Trend Bar After Range Met | New Reversal Bar When Reversal Amount Met</b></li>
+        <li><b>New Trend Bar After Range Met | New Bar When Open Crossed</b></li>
+        <li><b>New Trend Bar After Range Met | New Reversal Bar When Reversal Amount Met Plus 1 Tick and References Prior Close</b></li>
+        <li><b>New Trend Bar After Range Met | Allow Change of Direction of Current Bar</b></li>
+         
+
+    </ul>
+    
+    <p>Among the two sub settings, there is one for a new trend bar and one for a reversal bar. A description of each of these individual sub settings is below.</p>
+
+    <p> The definition  of a <em>complete</em>  or <em>completed</em> Renko bar is where the Open to Close range is equal to the Bar Size setting. </p>
+
+    <section class="h3">
+        <h3 id="RenkoNewBarMode_NewTrendBarWhenRangeExceeded">New Trend Bar When Range Exceeded</h3>
+        <div class="member-link">[<a href="#RenkoNewBarMode_NewTrendBarWhenRangeExceeded">Link</a>] - [<a href="#top">Top</a>]</div>
+        <p>A  new trend bar will be started, when the current Renko bar is complete and the  <b>Bar Size </b> has been  exceeded and price is moving in the same direction as the current bar.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="RenkoNewBarMode_NewTrendBarWhenRangeMet">New Trend Bar When Range Met</h3>
+        <div class="member-link">[<a href="#RenkoNewBarMode_NewTrendBarWhenRangeMet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A new trend bar will be started, when the current Renko bar <b>Bar Size </b> has been  met. The volume of the trade that causes the bar size to be met, is not included in the existing bar, only the new bar.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="RenkoNewBarMode_NewTrendBarAfterRangeMet">New Trend Bar After Range Met</h3>
+        <div class="member-link">[<a href="#RenkoNewBarMode_NewTrendBarAfterRangeMet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A  new trend bar will be started,  after the current Renko bar is complete and the <b>Bar Size </b> has been met.  This means that the Intraday data record that causes the  Bar Size to be met, is added to that chart bar and the next Intraday Data record will start a new bar.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="RenkoNewBarMode_NewReversalBarWhenReversalAmountMet">New Reversal Bar When Reversal Amount Met</h3>
+        <div class="member-link">[<a href="#RenkoNewBarMode_NewReversalBarWhenReversalAmountMet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> A new reversal bar  will be established, when the reversal amount, normally two times the <b>Bar Size</b>  has been met by the price action.  </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="RenkoNewBarMode_NewBarWhenOpenCrossed">New Bar When Open Crossed (for potential reversals)</h3>
+        <div class="member-link">[<a href="#RenkoNewBarMode_NewBarWhenOpenCrossed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>In the case of a  <em>completed</em> Up Renko bar, once the price moves below the lower Open price, a new bar begins because a reversal  <em>potentially</em> can occur. But this new bar has no known direction until it is established.  </p>
+        
+        <p>In the case of a <em>completed</em> Down Renko bar, once the price moves above the higher Open price, a new bar begins because a reversal  <em>potentially</em> can occur. But this new bar has no known direction until it is established.</p>
+        
+        <p>The reason for this Renko Mode is to support the use of the  <a href="index5ee6.html?page=doc/NumbersBars.php"   Target="_blank" rel="noopener noreferrer">Numbers Bars</a> study on Renko bars so that the chart bar  where the reversal occurs, contains the volume at price data  for all of the levels of the reversal bar. Otherwise, this would not happen. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="RenkoNewBarMode_NewReversalBarWhenReversalAmountMetPlus1TickAndReferencesPriorClose">New Reversal Bar When Reversal Amount Met Plus 1 Tick and References Prior Close</h3>
+        <div class="member-link">[<a href="#RenkoNewBarMode_NewReversalBarWhenReversalAmountMetPlus1TickAndReferencesPriorClose">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A new reversal bar  will be established, when the reversal amount, normally two times the <b>Bar Size</b>  has been met plus one additional tick by the price action. </p>
+
+        <p>The calculation  for determining if a reversal takes place according to the  price range needed (normally two times the  Bar Size), will be in reference to the prior bar close.</p>
+        
+        <p>  Although one additional tick is required to trigger the reversal, the size of the reversal bar still will be according to the Bar Size and the distance between the prior close and the close of the reversal bar will be equal to twice the Bar Size. In the case of Flexible Renko bars, the offset will either increase or reduce this amount. However, because the additional tick is required, what happens is that a new trend bar of at least a length of 1 Tick is also started at the same time as a reversal.</p>
+        
+        <p>When using a Renko New Bar Mode which contains this method,  in some cases this will result in Renko bars where the high to low range either at the top of a down Renko bar, or at the bottom of an up Renko bar will be equal to the <b>Bar Size</b> and there will be a missing Renko bar/brick. Another effect of this, is that sometimes reversals are missed when they should actually exist.  Therefore, this method is questionable but it is supported to create Renko bars similar to another common implementation in another program. </p>
+
+    </section>
+    <section class="h3">
+        <h3 id="RenkoNewBarMode_AllowChangeOfDirectionOfCurrentBar"> Allow Change of Direction of Current Bar</h3>
+        <div class="member-link">[<a href="#RenkoNewBarMode_AllowChangeOfDirectionOfCurrentBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> With this particular mode,  the current building Renko bar can have  its trend change at any moment. This means that the closing price can be changed from being above the open price, to below the open price, or from below the open price to being above the open price. Normally this change is not allowed. This can happen whether the Renko bar is considered complete or not. </p>
+        
+        <p>Effectively what this means is that the normal logic of reversals never occurs.</p>
+
+    </section> 
+  
+
+    <div style="text-align: center;"><a href="../images/renkobarsnewbarmode.png" rel="lightbox"><img src="../images/renkobarsnewbarmode.png" alt="" width="600" class="screenshot" loading="lazy"></a></div>
+
+</section>
+
+<section class="h2">
+    <h2 id="RenkoOHLCValues">Renko Open, High, Low, Close Values</h2>
+    <div class="member-link">[<a href="#RenkoOHLCValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Renko bars maintain the actual true High and Low for each bar in addition to the <b>Renko Open</b> and <b>Renko Close</b> values. </p>
+    
+   <p> There are also the true Open and Close values from the underlying price data for each Renko bar. <em>The Renko Open and Renko Close values are the values that are used to draw the Renko body</em>. While the actual Open and Close values are based on the actual open and close prices which  occurred while building the Renko bar. </p>
+
+    <p>All six values are displayed in the <b class="menu_item">Window &gt;&gt; Chart Values Window</b> and the <b class="menu_item">Window &gt;&gt; Tool Values Window</b>.   To view these values for each chart bar in the Tool Values Window, refer to  <a href="indexb844.html?page=doc/Tools.html#ChartValues"  target="_blank" rel="noopener noreferrer">Chart Values Tool</a>. Refer to the image below. </p>
+
+    <div style="text-align: center;"><a href="../images/renkochartvalues.png" rel="lightbox"><img src="../images/renkochartvalues.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+
+    <p>When using ACSIL, all of the Renko bar data is accessed with the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseDataIn" >sc.BaseData[] arrays</a>. Use the <b>SC_OPEN, SC_HIGH, SC_LOW, SC_LAST, SC_RENKO_OPEN, SC_RENKO_CLOSE</b>  constants  with <b>sc.BaseData[] </b> to access these different arrays. The <b> SC_RENKO_OPEN, SC_RENKO_CLOSE</b> arrays hold the values for the displayed Renko bar candlestick body. </p>
+
+    <p>For <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Study and Chart Alert Formulas</a>, the Renko Open and Renko Close values are accessed  with the  <b>ID0.SG22 </b> (Renko Open)  and the  <b>ID0.SG23</b>  (Renko Close) identifiers.</p>
+
+
+    <p>The candlestick wicks, if visible on a Renko bar,  are based upon the true High and Low values of the Renko bar, which are based upon the actual underlying price data. In ACSIL these are accessed with the   <b>SC_HIGH  </b> and   <b>SC_LOW  </b>   <b>sc.BaseData[]  </b> arrays.   For Study Alert and Chart Alert Formulas, these are accessed  with the  <b>H</b> or <b>ID0.SG2</b> (High) and  <b>L</b> or <b>ID0.SG3</b> (Low) identifiers. </p>
+
+    <p> The last Renko bar in the chart, is a standard candlestick bar which represents the true  Open, High, Low, Last  of all of the trades which make up that bar. It is not possible to know  the final values of the Renko Open and Renko Close (ACSIL  <b>SC_RENKO_OPEN</b> and  <b>SC_RENKO_CLOSE </b> arrays) until the bar  closes and there is a new bar after it.   In the case of a Renko bar for a new trading day, and at the beginning of a chart when using the  <b>Aligned Renko </b> Bar Period Type,  Renko Open and Renko Close values  for this bar can be 0 until the alignment  price is encountered in the data.</p>
+
+    <p>The  actual true Close price ( ACSIL  <b>SC_LAST </b> array ) of a Renko bar will not necessarily equal the visual Renko Close price ( ACSIL  <b>RENKO_CLOSE  </b> array ), when a Renko bar is completed.</p>
+
+    <p>To output the Renko bar Open and Close values as you visually see on the chart to a Spreadsheet when using one of the <b>Spreadsheet</b> studies, add the  <a href="index2b43.html?page=doc/StudiesReference.php&amp;ID=335&amp;Name=Renko_Visual_Open_Close_Values" >Renko Visual Open/Close Values</a> study to the chart.</p>
+
+    <section class="h3">
+        <h3 id="OpenPriceFirstRenkoBar">Opening Price for First Renko Bar and Alignment (Aligned Renko Bars)</h3>
+        <div class="member-link">[<a href="#OpenPriceFirstRenkoBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> &gt;&gt; <b> Intraday Bar Period &gt;&gt; Bar Period Type </b> is set to <b> Aligned Renko</b>, then the first  bar in  a chart or the first bar of the new session for the day when  <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b> &gt;&gt; Session Times &gt;&gt; New Bar at Session Start</b> is enabled, is aligned based on the  <b>Bar Size </b> setting.</p>
+
+        <p>This is done by  waiting to build the first Renko bar   until there is a price encountered in the underlying data which has no remainder when divided by the actual   <b>Bar Size</b>. </p>
+
+        <p>For example, if the  chart <b>Tick Size </b> is .25 and the   <b>Bar Size </b> is 4 ticks, giving an actual  <b>Bar Size</b> of 1.0,  then the first Renko   bar/brick does not begin until there is a price which evenly divides by 1.0.</p>
+
+        <p>So in this example all  bars/bricks are aligned to 1.0 boundaries. </p>
+
+        <p>In other words, the opening price of a Renko bar will always  be an exact multiple of the   <b>Bar Size</b>.</p>
+
+        <p> To prevent the alignment of the first bar in a Renko bar chart or the first bar of the new session for the day, use the <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b>&gt;&gt; Intraday Bar Period &gt;&gt; Bar Period Type  &gt;&gt; Renko Bars (in ticks)</b> setting instead.</p>
+
+
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SplittingOfRenkoBars">Splitting of Renko Bars</h2>
+    <div class="member-link">[<a href="#SplittingOfRenkoBars">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When there are price gaps in the trading activity for symbol, or when the <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit">Intraday Data Storage Time Unit</a> for the underlying Intraday data records in the chart data file, are not of 1 Tick units, there will be splitting of Renko bars when there is excess range on the bar which is in the same direction of the bar.</p>
+    
+    <p>For example, a trade occurs which causes the current Renko bar  to become complete and this trade price is away from the closing price of the current Renko bar by more than the Bar Size. This will cause a new Renko bar and there will be a high or low value extending beyond that Renko bar to this trade price.</p>
+    
+    <p>The Renko close  to this high or low price, will be broken down into smaller Renko bars. As many Renko bars consisting of the Bar Size setting which can be added, will be added.   If only a single partial Renko bar can be split from it, that will be done as well.</p>
+    
+    <p>For example, if the Renko Bar Size is 5, the Tick Size is 1, and there is a Renko bar with a closing price of 100 and it is a complete 5 tick Renko bar  with an open at 95, but its high is at 105,  then the range from 100 to 105 will be split off into a new adjacent Renko bar just to the right of it. This process repeats as necessary until there is no longer any excess range.</p>
+    
+    <p>The opposite is true for down Renko bars.</p>
+</section>
+
+<section class="h2">
+    <h2 id="FillingInOfHighOrLowBarValuesToMatchRenkoBarOpenAtReversals">Filling in of High or Low Bar Values to Match Renko Bar Open at Reversals</h2>
+    <div class="member-link">[<a href="#FillingInOfHighOrLowBarValuesToMatchRenkoBarOpenAtReversals">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Still to be documented.</p>
+</section>
+
+<section class="h2">
+    <h2 id="FlexRenko">Flex Renko</h2>
+    <div class="member-link">[<a href="#FlexRenko">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <a href="../images/flexiblerenkochartsettings.png" rel="lightbox"><img src="../images/flexiblerenkochartsettings.png" class="MediumFloatRight" alt=""></a>
+
+    <p>In <b class="menu_item">Chart &gt;&gt; Chart Settings</b> there is a  <b>Bar Period  Type</b> named <b> Flex Renko</b>.  This is short for Flexible Renko. The edit box below this setting requires 3 separate parameters separated by a   <b>-</b> character. </p>
+
+    <p>Format: <b>BarSize-TrendOffset-ReversalOffset</b>. All 3 of these parameters must be specified in Ticks. If the <b>Tick Size</b> for the symbol is .25, then a setting  of <b>10</b> ticks will equal  <b>2.5</b>.</p>
+
+    <p>Refer to the <a href="#RenkoOHLCValues">Renko Open, High, Low, Close Values</a> section for details about Flex Renko Open, High, Low and Close  values.</p>
+
+    <section class="h3">
+        <h3 id="BarSize">Bar Size</h3>
+        <div class="member-link">[<a href="#BarSize">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Bar Size</b> specifies the Renko Bar size as a number of ticks. A tick is equivalent to the <b>Tick Size</b> setting  in  <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>. </p>
+
+        <p>A standard Renko chart requires that price moves the  <b>Bar Size</b> in the current trend direction in order to form a new bar in the direction of the trend. To form a reversal bar, price has to move two times the <b> Bar  Size</b>.</p>
+
+        <p>The Flex Renko allows the user to adjust the algorithm used to build a Renko Bar. Therefore, allowing different types of charts that capture different types of price action. The additional settings are the <b>Trend Offset</b> and <b>Reversal Offset</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TrendOffset">Trend Offset</h3>
+        <div class="member-link">[<a href="#TrendOffset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b> Trend Offset </b>: A standard Renko  bar has a <b> Trend Offset </b> of zero, which means that when a new bar is formed in the current trend direction, the Renko Open value of the new bar is equal to the Renko Close value of the prior bar.  </p>
+
+
+        <p>When you specify a non-zero value for the <b> Trend Offset </b>, the Renko Open value is offset inside the prior bar by the specified number of ticks. This means that  the price of the symbol no longer has to move as far to form a new  bar in the trend direction. Note: <b>Trend Offset</b> must be greater than or equal to zero and <em>less than</em> the <b>Bar Size</b>.  </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReversalOffset">Reversal Offset</h3>
+        <div class="member-link">[<a href="#ReversalOffset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> <b>Reversal Offset </b>: A standard Renko bar has a  <b>Reversal Offset</b> of zero, which means that when a new bar is formed that reverses the current trend direction, the Renko Open value of the new bar is equal to the Renko Open value of the prior bar.  </p>
+
+        <p>When you specify a non-zero value for the <b>Reversal Offset</b>, the Renko Open value is offset from the prior bar Open by the specified number of ticks. This offset causes the new Renko bar to overlap the prior Renko bar. This means that the price of the symbol no longer has to move as far to form a new bar to reverse the trend direction. Note: <b> Reversal Offset</b> must be greater than or equal to zero and <em>less than</em> the <b>Bar Size</b>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Examples">Examples</h3>
+        <div class="member-link">[<a href="#Examples">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A standard N-tick Renko Bar would be specified with N-0-0, which specifies that the trend and reversal bars are in the standard locations. A standard trending Renko Bar would have an Open equal to the prior Close, and a standard reversal Renko Bar would have an Open equal to the prior Open</p>
+
+        <p>A "Hybrid Renko" can be formed by using settings for <b>BarSize-TrendOffset-ReversalOffset</b> like N-N/2-N/2 (Example: 4-2-2).  With these settings you will see the  trend/reversal bar Open values are offset into the standard Renko bar by 50%. Refer to image below.</p>
+
+        <div style="text-align: center;"><a href="../images/flexhybridrenko.png" rel="lightbox"><img src="../images/flexhybridrenko.png" alt="" class="screenshot" loading="lazy" ></a></div>
+
+        <p>Another interesting combination for <b>BarSize-TrendOffset-ReversalOffset</b> is N-(N-1)-1 (Example: 10-9-1), which forms a "Trend Channel".  Refer to image below.</p>
+
+        <div style="text-align: center;"><a href="../images/flexrenkotrendchannel.png" rel="lightbox"><img src="../images/flexrenkotrendchannel.png" alt="" class="screenshot" loading="lazy" width="500" ></a></div>
+
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="FillingPriceGaps">Filling of Price Gaps with Renko Bars</h2>
+    <div class="member-link">[<a href="#FillingPriceGaps">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section explains how to fill or not to fill price gaps in trading, when using Renko bars.  By default price gaps in trading are <em>not</em> filled when using Renko bars. Although price gaps are filled in where reversals occur.</p>
+
+    <p>  When there are   price gaps in the chart, the gap is always going to be equivalent  to an amount which is evenly divisible by the  Renko  <b>Bar Size </b>. This means that each Renko bar  is always in alignment with the first Renko bar in the chart, or the trading day when  <b>New Bar at Session Start </b> is enabled in the Chart Settings for the chart.</p>
+
+    <p> To fill price gaps in trading when using Renko bars, select <b Class = "menu_item">Chart &gt;&gt; Chart Settings</b>. Refer to the image below for the relevant setting.</p>
+
+
+    <div style="text-align: center;"><a href="../images/intradaychartbargapfilloptions.png" rel="lightbox"><img src="../images/intradaychartbargapfilloptions.png" alt="" class="screenshot" loading="lazy" width="" ></a></div>
+
+    <p>From the list of gap fill options  in the  <b>Intraday Chart Bar Period</b> frame, select <b>Fill All Bar Gaps </b> or <b> Fill Bar Gap at Start of Session </b> to fill only the gap at the start of the trading day. Press <b>OK</b>. </p>
+
+
+    <p> To not fill price gaps in trading when using Renko bars, from the list of gap fill options  in the  <b>Intraday Chart Bar Period</b> frame, select  <b>None</b>.</p>
+
+
+    <p> The image below shows a filled in gap at the beginning of the trading day, according to the Session Times.</p>
+
+    <div style="text-align: center;"><a href="../images/renkochartgapfilled.png" rel="lightbox"><img src="../images/renkochartgapfilled.png" alt="" class="screenshot" loading="lazy" width="450" ></a></div>
+
+
+    <p> The image below shows the gap at the beginning of the trading day, according to the Session Times,  without being filled. </p>
+
+    <div style="text-align: center;"><a href="../images/renkochartpricegap.png" rel="lightbox"><img src="../images/renkochartpricegap.png" alt="" class="screenshot" loading="lazy" width="450" ></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="OverlappingBricks">Overlapping Bricks</h2>
+    <div class="member-link">[<a href="#OverlappingBricks">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> When <b>New Bar At Session Start</b> is enabled in  <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>,   and a new trading day session is encountered in the chart, then this can result in the Renko  open to close range  (brick) of the new bar at the start of the new trading session intersecting the previous bar brick. Refer to the image below for an example of this.</p>
+
+    <p>The last Renko bar brick of the prior session can also intersect the prior Renko bar brick.  This is because the final bar of the previous trading session is not complete, because a new bar was forced  at the start of the new trading session. So you are effectively seeing where the true closing price was when it completed due to end of the trading session versus a bar that completes normally according to the standard Renko bar rules. When there is a new trading session there is no way to really  complete the last bar without fabricating prices so it is left as is.</p>
+
+    <div style="text-align: center;"><a href="../images/renkochartoverlappingbars.png" rel="lightbox"><img src="../images/renkochartoverlappingbars.png" alt="" class="screenshot" loading="lazy" width="450" ></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="UsingNumbersBarsStudyOnRenkoCharts">Using Numbers Bars Study on Renko Charts</h2>
+    <div class="member-link">[<a href="#UsingNumbersBarsStudyOnRenkoCharts">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the  <a href="index5ee6.html?page=doc/NumbersBars.php" target="_blank" rel="noopener noreferrer">Numbers   Bars</a> study on a Renko bars chart, the Renko bars are replaced by the Numbers Bars. The number of bars and timestamps remains the same. The existing bars are just replaced with a numbers Bars display.</p>
+
+    <p>The Numbers Bars study will display the  true Open, High, Low and Close  values of each bar   showing the true price activity which make up the bar. The altered  Renko Open and Close values of Renko bars will not normally be visible unless you have set the <a href="index5ee6.html?page=doc/NumbersBars.php#Input_OpenAndCloseMarkerStyle" target="_blank" rel="noopener noreferrer">Open andClose Marker Style</a>Input to display the  Open and Close values through markers or through a Candlestick.</p>
+
+    <p> When using the <b>Numbers Bars</b> study, it is recommended to set the <a href="#RenkoNewBarMode">Renko New Bar Mode</a>, to one of the options with <b>New Bar When Open Crossed</b>.  This is so the chart bar  where the reversal occurs, contains the Volume at Price data  for all of the price levels of the reversal bar. Otherwise, this would not happen. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="FlexRenkoInverseSettingBars">Flex Renko Inverse Setting Bars</h2>
+    <div class="member-link">[<a href="#FlexRenkoInverseSettingBars">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class = "GeneralBackgroundHighlight"> The information in this section is effective as of Sierra Chart version 1645. </p>
+
+    <p> Flex Renko Inverse Setting Bars  are similar to Flex Renko bars but the parameters for them have an opposite/inverse implementation but effectively do the same thing. Flex Renko Inverse Setting  Bars are constructed using the very same code base as standard  Renko and Flex Renko bars. </p>
+
+
+    <p>To use these bars, select <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the menu. In the <b >Intraday Bar Period &gt;&gt; Bar Period Type</b> list, select <b> Flex Renko Inverse Set Bar (in ticks)</b>.  The parameters are described below.</p>
+
+    <ul>
+        <li><b>Bar Size</b>:  The size of the brick/bar in ticks.</li>
+
+        <li><b>Trend Bar Offset</b>:  New Renko bricks are offset from the prior brick by this amount in ticks.  In other words,  a new Renko bar is created  when price moves by this number of ticks or more from the last completed Renko bar. The comparison is done to the  Close of the prior Renko bar  to the  Close of the current Renko bar. The difference between these will be equal to this setting. 
+            <br> <br>
+            Set  <b>Trend Bar Offset</b> to the same as the Bar Size  to make a  standard Renko bar.  <b>Trend Bar Offset</b>  cannot be less than or equal to 0. The minimum is 1.</li>
+
+        <li><b>Reversal Bar Trigger</b>:   <b>Reversal  Bar Trigger </b> is specified  as a number of ticks. When there is a  reversal of the price by  this amount,  a new reversal bar is created.  
+            <br> <br>
+            When there is a reversal, calculating the difference between the Close of the prior completed Renko bar to the Close  of the current Renko bar,  the difference between these will be  <em>equal to</em>  this setting.
+            <br> <br>
+            <b>Reversal   Bar Trigger </b> cannot be less than 2  ticks.
+            <br> <br>
+            Set <b>Reversal Bar Trigger</b>  to be twice the  <b>Bar Size </b>  to make a standard Renko bar.   For example, if the  <b>Bar Size </b> is 8, then set this to 16.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="RenkoEducation">Renko Education</h2>
+    <div class="member-link">[<a href="#RenkoEducation">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you have any questions about the formation of Renko bars or the underlying  <a href="#RenkoOHLCValues" >True Open, High, Low and Close values</a>, then the first step is to educate yourself about Renko Bars. These are the relevant sections:</p>
+    
+    <ul>
+        <li><a href="#Introduction">Renko Introduction</a></li>
+        <li><a href="#RenkoNewBarMode">Renko New Bar Mode</a></li>
+        <li><a href="#FlexRenko">Flex Renko Bars</a></li>
+        <li><a href="index4cf4.html?page=doc/ChartSettings.html#IntradayChartBarPeriod_GapFill" >Intraday Chart Bar Period &gt;&gt; Gap Fill</a></li>
+        <li><a href="#FillingPriceGaps">Filling of Price Gaps with Renko Bars</a></li>
+        <li><a href="#SplittingOfRenkoBars">Splitting of Renko Bars</a></li>
+        <li><a href="#FillingInOfHighOrLowBarValuesToMatchRenkoBarOpenAtReversals">Filling in of High or Low Bar Values to Match Renko Bar Open at Reversals</a></li>
+    </ul>
+
+    <p>We believe this documentation is a very good definitive reference. Once you have understood and read that documentation about how Renko bars are built in Sierra Chart and all of the related aspects of them, at this point you need to go through an exercise on your own. The objective of this exercise is to gain an understanding about Renko bars and validate  all of the data Open, High, Low, and Close that Sierra Chart is providing with Renko bars and validate the appearance of the bars.</p>
+
+    <p>Here is the exercise. Open a chart and set the chart bars to 1 <a href="index4cf4.html?page=doc/ChartSettings.html#NumberOfTrades" >Number of Trades Per Bar</a>.  Set <b class = "menu_item">Chart &gt;&gt; Graph Draw Type</b> to <b>Line on Close</b>. Examine each and every single trade and begin to draw on graph paper or whatever method you find appropriate, Renko bars according to the specifications. Also draw draw another bar representing the true Open, High, Low and Close values.</p>
+
+    <p>Using the underlying tick by tick data, and following the relevant specifications based on the particular <b>Renko New Bar Mode </b> you are using and other relevant settings, do you get a different result than what Sierra Chart is providing? If not, and then you can see that with Sierra Chart provides does make sense.  Or if you see a difference, you have to understand why there is a difference and see where you are going wrong and verify what you are doing even makes sense.</p>
+
+    <p>You really only have to go through this process for a couple of bars to get an idea about Renko bar construction. It is not that difficult if you just simply take the time and have some patience for this. It really is an important exercise to gain a good understanding about Renko bar construction and all of the detailed aspects behind them.</p>
+
+    <p>It also is important to be very faithful with the handling of gaps. When there are price gaps, make sure the true Open, High, Low, Close do not represent those because those were price levels that never traded. Unless you are using one of the  Fill Gap options.</p>
+</section>
+
+<section class="h2">
+    <h2 id="RenkoReversalBarAlertFormula">Renko Reversal Bar Alert Formula</h2>
+    <div class="member-link">[<a href="#RenkoReversalBarAlertFormula">link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To get  a visual indication also an alert of where the Renko chart bars reverse direction, use the following formula with the  <a href = "index130f.html?page=doc/StudiesReference.php&amp;ID=245&amp;Name=Color_Bar_Based_on_Alert_Condition">Color Bar Based on Alert Condition</a> study: </p>
+
+
+ 
+    <p><span class="SpreadsheetFormula">OR(AND(ID0.SG23[-1] &gt; ID0.SG22[-1] , ID0.SG23 &lt; ID0.SG22), AND(ID0.SG23[-1] &lt; ID0.SG22[-1] , ID0.SG23 &gt;  ID0.SG22))</span> </p>
+    
+</section>
+
+
+
+  
+
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/RenkoCharts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:51 GMT -->
+</html>  

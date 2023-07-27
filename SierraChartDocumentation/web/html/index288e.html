@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/MarketByOrder.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:34:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686670913') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/MarketByOrder.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Market By Order Data -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index288e.html?page=doc/MarketByOrder.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index288e.html?page=doc/MarketByOrder.php">Market By Order Data</a></h4> </div>     <h1 class="PageName">Market By Order Data</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#StepByStepInstructions">Step-by-Step Instructions</a></li>
+    <li><a href="#QueueOrderingAndAlignment">Queue Ordering and Alignment</a></li>
+    <li><a href="#DeterminingYourOrderPositionInQueue">Determining Your Order Position in Queue</a></li>
+    <li><a href="#AdjustingMinimumQuantityToDisplayForMarketByOrderData">Adjusting Minimum Quantity to Display for Market by Order Data</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>  <a href = "indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> have available the Market by Order data from the CME Group, EUREX, and CBOE Futures exchanges. </p>
+    
+    <p>The Market by Order data shows the specific orders that make up the Market Depth at each price level and displays the relative position of these orders in the queue.</p>
+    
+    <p>Market by order data consists of Limit orders which have not yet executed.  </p>
+
+    <p>Access to this information is limited to  <a href = "indexa1cf.html?page=doc/Packages.php">Service Package 12</a>.</p>
+
+    <p>The Market by Order data is displayed in a separate column in the Trade/Chart DOM. Bid, and Ask, or Combined Bid and Ask columns can be added to display the information.</p>
+
+    <p> Currently only Market by Order data that has an order quantity greater than or equal to 3 is transmitted and displayed in the Trade/Chart DOM market orders columns. Therefore, this is not a full representation of the orders at each price level, but gives information for the larger orders. It is also possible to change the minimum order quantity to a larger value than 3 in the  <a href = "index4404.html?page=doc/GlobalSymbolSettings.php">Symbol Settings</a>.</p>
+
+    <p>The Market by Order data is displayed in the order that the data exists in the queue at each price level. The ordering of the data (from front of queue to back) is controlled by the alignment for each of the Market Order columns.</p>
+    
+     <p>  There is no support for recording market by order data or downloading of historical market by order data. </p>
+
+    <div style="text-align: center;"><a href="../images/mboexample.png" rel="lightbox"><img src="../images/mboexample.png" class="screenshot" loading="lazy" alt=""></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="StepByStepInstructions">Step-by-Step Instructions</h2>
+    <div class="member-link">[<a href="#StepByStepInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In order to receive and display the Market by Order data, follow these steps:</p>
+
+    <ol>
+        <li>Go to <b>Global Settings &gt;&gt; Sierra Chart Server Settings</b> and make sure that the option for <b>Subscribe Market by Order Data When Market Depth Subscribed</b> is set to <b>Yes</b> and that the option for <b>Use Separate Connection for Market by Order Data</b> is set to <b>Yes</b>.</li>
+
+        <li>Select <b>OK</b> to close the <b>Sierra Chart Server Settings </b> window.</li>
+       
+       <li>  <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettings" Target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>.</li>
+        
+        <li> After changing the settings, reconnect to the data feed by selecting   <b class="menu_item">File &gt;&gt;   Disconnect</b> and   <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+        
+        <li> Open an <em>Intraday</em> chart by selecting <b class="menu_item">File &gt;&gt; Find Symbol</b>. A chart needs to be open for the next step. For more information, refer to <a href = "index8793.html?page=doc/FileMenu.html#FileFindSymbol">Find Symbol</a>.</li>
+        
+
+        <li>Select <b>Trade &gt;&gt; Trading Chart DOM On</b> to enable the Trading Chart DOM for the active chart. If this is already enabled, then skip this step.
+            <br><br>
+            For the remainder of these steps the Trading Chart DOM will be used as the basis for the example. The same concepts apply to the Trade DOM and the Market Data Columns, although appropriate adjustments to the following steps will need to be made if applying these steps to the Trade DOM.</li>
+
+        <li>Select <b>Trade &gt;&gt; Customize Chart/Trade DOM Columns</b>.</li>
+
+        <li>Select any of the three Market by Order column options in the left pane :
+        <ul>
+            <li><b>Bid Market Orders Column</b> </li>
+            <li><b>Ask Market Orders Column</b> </li>
+            <li><b>Combined Bid Ask Market Orders Column</b> </li>
+        </ul>
+        <br> <br>
+        And select the <b>-></b> button to add the column to the right pane.
+            <br><br>
+            The <b>Combined Bid Ask Market Orders Column</b> can not be used at the same time as the <b>Bid Market Orders Column</b> or the <b>Ask Market Orders Column</b>. If it is added when either of these is already added, then the other columns will be removed.
+        </li>
+
+        <li>By default, the Market Data columns alignment is set to <b>Center</b>, this places the front of the queue quantities on the right side of the list. This can be modified by changing the alignment for the column. A <b>Right</b> alignment will keep the order the same as <b>Center</b> (front of queue to the right) and will align the data to the right side of the column. A <b>Left</b> alignment will change the order of the data such that the front of the queue is to the left and will also align the data to the left. Change the alignment setting for the column(s) as desired.</li>
+
+        <li>Adjust the position of the added column(s) as desired by selecting the column name in the <b>Visible Columns</b> list and pressing the  <b>Move Up</b> or  <b>Move Down</b> buttons  to move the column up or down in the list.</li>
+
+        <li>Select <b>OK</b> to close the <b>Customize Chart/Trade DOM Columns</b>.</li>
+
+        <li>Select <b>File &gt;&gt; Disconnect</b>.</li>
+
+        <li>Select <b>File &gt;&gt; Connect to Data Feed</b> to reconnect to the data feed  to start receiving the Market by Order data.</li>
+        <li> If you do not receive the market by order data, one thing to do is to disable use of   <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#DisablingCustomSymbolSettings" target="_blank" rel="noopener noreferrer">Custom Symbol Settings</a>.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="QueueOrderingAndAlignment">Queue Ordering and Alignment</h2>
+    <div class="member-link">[<a href="#QueueOrderingAndAlignment">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The data in the Market Order columns is ordered relative to the position in the queue (front of queue to back of queue). Data towards the front of the queue will fill prior to orders towards the back of the queue.</p>
+
+    <p>The specific order is determined by the <a href="index4451.html?page=doc/GlobalTradeSettings.html#Alignment">Alignment</a> of the column. The following settings apply:</p>
+
+    <ul>
+        <li><b>Left</b>: When a Market Data Column has the alignment set to <b>Left</b> then the data that is furthest to the left for a specific price in the Market Data Column is towards the front of the queue and the data that is furthest to the right for a specific price in the Market Data Column is towards the back of the queue.
+        <br><br>
+            In this alignment mode, the data will also be aligned to the left side of the column.
+        </li>
+
+        <li><b>Center</b>: When a Market Data Column has the alignment set to <b>Center</b> then the data that is furthest to the right for a specific price in the Market Data Column is towards the front of the queue and the data that is furthest to the left for a specific price in the Market Data column is towards the back of the queue.
+        <br><br>
+            In this alignment mode, the data will also be aligned in the center of the column.
+        </li>
+
+        <li><b>Right</b>: When a Market Data Column has the alignment set to <b>Right</b> then the data that is furthest to the right for a specific price in the Market Data Column is towards the front of the queue and the data that is furthest to the left for a specific price in the Market Data column is towards the back of the queue.
+        <br><br>
+            In this alignment mode, the data will also be aligned in the right side of the column.
+        </li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="DeterminingYourOrderPositionInQueue">Determining Your Order's Relative Position in the Queue</h2>
+    <div class="member-link">[<a href="#DeterminingYourOrderPositionInQueue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using the <a href="index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a>, any orders that are placed that have a quantity large enough to display in the Market Orders columns will show in the column with an asterisk (*) next to the quantity. The asterisk indicates that this is your order.</p>
+
+    <p>Since only orders that are greater than the set quantity for the columns are displayed, it is not possible to determine the absolute position in the queue for an order. But, the position relative to other large orders is easily determined by looking at the position of your order in relation to the other orders that are displayed in the column.</p>
+
+    <p>It is important to keep in mind the ordering of the data based on the alignment of the column data. Refer to the <a href="#QueueOrderingAndAlignment">Queue Order and Alignment</a> section for further information.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AdjustingMinimumQuantityToDisplayForMarketByOrderData">Adjusting Minimum Quantity to Display for Market by Order Data</h2>
+    <div class="member-link">[<a href="#AdjustingMinimumQuantityToDisplayForMarketByOrderData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The minimum value that is transmitted, and hence displayed, for the Market by Order data is 3. Therefore, any value less than 3 is not sent from the data server to the Sierra Chart software.</p>
+
+    <p>It is possible to change the minimum value to a number larger than 3 on a per symbol basis. This may be necessary if performance issues arise due to the amount of data that is being transmitted. Or it may be performed simply to identify larger orders in the DOM.</p>
+
+    <p>The following instructions walk through how to change the minimum value for a symbol:</p>
+
+    <ol>
+        <li>Select  <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b> on the menu.</li>
+
+        <li>On the  <b>Symbol Settings</b> window select the desired symbol in the Symbols  list on the left. 
+         <br> <br>
+        If you  are using a   <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> in the Chart or Trading DOM and you do not have  <a href = "index4cf4.html?page=doc/ChartSettings.html#UseAsTradeOnlySymbol">Use as Trade Only Symbol</a> enabled, then you must  select that particular  <b>Trade and Current Quote Symbol </b> in the  list in the <b>Symbol Settings</b> window.  Otherwise, there will be no effect on the minimum quantity displayed for Market by Order data.</li>
+
+        <li>In the Settings list on the right scroll down to find the entry for <b>Minimum Market by Order Quantity</b>. Select this entry.</li>
+
+        <li>Enter a value greater than 3 in the Custom field just below the Settings pane. Any value less than 3 will be treated as a value of 3.</li>
+
+        <li>Enable   <b>Use Custom Symbol Settings Values</b>.</li>
+        <li>Select the <b>OK</b> button to close the Symbol Settings window.</li>
+
+        <li>Select <b>File &gt;&gt; Disconnect</b> to disconnect from the data feed.</li>
+
+        <li>Select <b>File &gt;&gt; Connect to Data Feed</b> to reconnect to the data feed and have the Minimum Quantity for the Market by Order data updated for the adjusted symbol(s).</li>
+    </ol>
+</section>
+
+<hr><p>*Last modified Tuesday, 13th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/MarketByOrder.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:34:23 GMT -->
+</html>  

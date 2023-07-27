@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSInteractionWithMenusControlBarButtonsPointerEvents.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105672') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACSInteractionWithMenusControlBarButtonsPointerEvents.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Advanced Custom Study Interaction With Menus, Control Bar Buttons, Pointer Events -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index32a3.html?page=doc/ACSInteractionWithMenusControlBarButtonsPointerEvents.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index32a3.html?page=doc/ACSInteractionWithMenusControlBarButtonsPointerEvents.php">Advanced Custom Study Interaction With Menus, Control Bar Buttons, Pointer Events</a></h4> </div>     <h1 class="PageName">Advanced Custom Study Interaction With Menus, Control Bar Buttons, Pointer Events</h1>
+
+<ul>
+    <li><a href="#ACSMenuInteraction">Advanced Custom Study Menu Interaction</a>
+        <ul>
+            <li><a href="#scAddACSChartShortcutMenuItem">sc.AddACSChartShortcutMenuItem()</a></li>
+            <li><a href="#scRemoveACSChartShortcutMenuItem">sc.RemoveACSChartShortcutMenuItem()</a></li>
+            <li><a href="#scSetACSChartShortcutMenuItemDisplayed">sc.SetACSChartShortcutMenuItemDisplayed()</a></li>
+            <li><a href="#scSetACSChartShortcutMenuItemEnabled">sc.SetACSChartShortcutMenuItemEnabled()</a></li>
+            <li><a href="#scSetACSChartShortcutMenuItemChecked">sc.SetACSChartShortcutMenuItemChecked()</a></li>
+            <li><a href="#scPlaceACSChartShortcutMenuItemsAtTopOfMenu">sc.PlaceACSChartShortcutMenuItemsAtTopOfMenu</a></li>
+            <li><a href="#scAddACSChartShortcutMenuSeparator">sc.AddACSChartShortcutMenuSeparator()</a></li>    
+            <li><a href="#scChangeACSChartShortcutMenuItemText">sc.ChangeACSChartShortcutMenuItemText()</a></li>
+        </ul>
+    </li>
+    <li><a href="#AdvancedCustomStudyControlBarButtonsAndPointerEvents">Advanced Custom Study Control Bar Buttons and Pointer Events</a>
+        <ul>
+            <li><a href="#AdvancedCustomStudyControlBarButtonsAndPointerEventsIntroduction">Introduction</a></li>
+            <li><a href="#AdvancedCustomStudyControlBarButtons">Advanced Custom Study Control Bar Buttons</a></li>
+            <li><a href="#ReceivingPointerEvents">Receiving Pointer Events</a></li>
+            <li><a href="#scSetCustomStudyControlBarButtonText">sc.SetCustomStudyControlBarButtonText()</a></li>
+            <li><a href="#scSetCustomStudyControlBarButtonHoverText">sc.SetCustomStudyControlBarButtonHoverText()</a></li>
+            <li><a href="#scSetCustomStudyControlBarButtonEnable">sc.SetCustomStudyControlBarButtonEnable()</a></li>
+            
+            <li><a href="#scSetCustomStudyControlBarButtonColor">sc.SetCustomStudyControlBarButtonColor()</a></li>
+            
+            <li><a href="#scGetCustomStudyControlBarButtonEnableState">sc.GetCustomStudyControlBarButtonEnableState()</a></li>
+            
+            <li><a href="#ACSControlBarButtonKeyboardShortcuts">Advanced Custom Study Control Bar Button Keyboard Shortcuts</a></li>
+            <li><a href="#scBlockChartDrawingSelection">sc.BlockChartDrawingSelection</a></li>
+            <li><a href="#MaintainingMultipleOnStatesForAdvancedCustomStudyControlBarButtons">Maintaining Multiple On States  For Advanced Custom Study Control Bar Buttons</a></li>
+            <li><a href="#DisablingPreviouslySelectedAdvancedCustomStudyControlBarButton"> Disabling Previously Selected Advanced Custom Study Control Bar Button</a></li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="ACSMenuInteraction">Advanced Custom Study Menu Interaction</h2>
+    <div class="member-link">[<a href="#ACSMenuInteraction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="scAddACSChartShortcutMenuItem">sc.AddACSChartShortcutMenuItem()</h3>
+        <div class="member-link">[<a href="#scAddACSChartShortcutMenuItem">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>AddACSChartShortcutMenuItem</b>(long <b>ChartNumber</b>, const char * <b>MenuText</b>);</p>
+
+        <p>The <b>sc.AddACSChartShortcutMenuItem()</b> function is for adding a custom menu command to the Chart Shortcut menu that displays when you right-click on a chart.  The name of the command will be the text specified by the <b>MenuText</b> parameter.  The command is added to the chart specified by <b>ChartNumber</b>. The function returns a unqiue menu integer command ID when successful. </p>
+
+        <p>You should only add a particular menu command item only once.  Although when you add a menu item  with the same <b>MenuText</b>, it will not be added again and you will be returned the very same menu item ID previously returned for that text.</p>
+
+        <p>Once a menu item has been added, the study function instance is called when the user selects the menu item from the Chart Shortcut Menu which is displayed when right clicking on a chart.  The selected menu item identifier is obtained through the <b>sc.MenuEventID</b> ACSIL member given to the custom study function instance.</p>
+
+        <p>When a study is removed from a chart, the study should always remove any custom Chart Shortcut Menu commands by calling  <a href="#scRemoveACSChartShortcutMenuItem">sc.RemoveACSChartShortcutMenuItem()</a>. This can be done when  <b>sc.LastCallToFunction</b> is nonzero. </p>
+
+        <section class="h4">
+            <h4>Return Value</h4>
+
+            <p> The function returns a unqiue menu integer command ID when successful. </p>
+
+            <p>Returns -1 on an error.  An error can mean the <b>ChartNumber</b> parameter is not valid or the maximum limit of Chart Shortcut Menu custom commands has been reached.  A value of 0 is never returned.</p>
+        </section>
+
+        <section class="h4"><h4>Example</h4>
+            <p>The following code provides an example. For a complete working example, refer to the <b>scsf_ButtonAndMenuAndPointerExample()</b> function in the <b>/ACS_Source/studies.cpp</b> file in the folder where Sierra Chart is installed to.</p>
+
+            <pre class="Code FullLineHeight">
+int&amp; MenuID = sc.PersistVars-&gt;i1;
+
+if (sc.Index == 0)// Only do this when calculating the first bar.
+{
+    // Add chart short cut menu item
+    if (MenuID &lt;= 0)
+        MenuID = sc.AddACSChartShortcutMenuItem(sc.ChartNumber, "Menu Example Menu Item 1");
+
+    if (MenuID &lt; 0)
+        sc.AddMessageToLog("Add ACS Chart Shortcut Menu Item failed", 1);
+}
+
+if (sc.MenuEventID != 0 &amp;&amp; sc.MenuEventID == MenuID)
+    sc.AddMessageToLog("User selected ACS Chart Shortcut Menu Item", 1);
+            </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scRemoveACSChartShortcutMenuItem">sc.RemoveACSChartShortcutMenuItem()</h3>
+        <div class="member-link">[<a href="#scRemoveACSChartShortcutMenuItem">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">bool <b>RemoveACSChartShortcutMenuItem</b>(long <b>ChartNumber</b>, int <b>MenuID</b>);</p>
+
+        <p><b>sc.RemoveACSChartShortcutMenuItem()</b> is used to remove a custom chart shortcut menu command, associated with <b>MenuID</b> previously added with <b>sc.AddACSChartShortcutMenuItem()</b>, from the specified chart (<b>ChartNumber</b>). The function returns 1 when the menu item command was successfully removed. Or returns  0 on an error removing the menu item command.</p> 
+
+        <p>Chart shortcut items should always be removed when the study is removed. This can be done by calling this function when <b>sc.LastCallToFunction</b> is nonzero.</p>
+
+        <section class="h4">
+            <h4>Example</h4>
+            <p>The following code provides an example. For a working example, refer to the <b>scsf_MenuAndPointerExample()</b> function in the  <b>/ACS_Source/studies.cpp</b> file in the folder where Sierra Chart is installed to.</p>
+
+            <pre class="Code FullLineHeight">
+if (sc.LastCallToFunction)
+{
+    // Be sure to remove the menu command when study is removed
+    sc.RemoveACSChartShortcutMenuItem(sc.ChartNumber, MenuID);
+}
+            </pre>
+        </section>
+    </section>   
+
+    <section class="h3">
+        <h3 id="scSetACSChartShortcutMenuItemDisplayed">sc.SetACSChartShortcutMenuItemDisplayed()</h3>
+        <div class="member-link">[<a href="#scSetACSChartShortcutMenuItemDisplayed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>SetACSChartShortcutMenuItemDisplayed</b>(long <b>ChartNumber</b>, int <b>MenuItemID</b>, bool <b>DisplayItem</b>);</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetACSChartShortcutMenuItemEnabled">sc.SetACSChartShortcutMenuItemEnabled()</h3>
+        <div class="member-link">[<a href="#scSetACSChartShortcutMenuItemEnabled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>SetACSChartShortcutMenuItemEnabled</b>(long <b>ChartNumber</b>, int <b>MenuItemID</b>, bool <b>Enabled</b>);</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetACSChartShortcutMenuItemChecked">sc.SetACSChartShortcutMenuItemChecked()</h3>
+        <div class="member-link">[<a href="#scSetACSChartShortcutMenuItemChecked">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>SetACSChartShortcutMenuItemChecked</b>(long <b>ChartNumber</b>, int <b>MenuItemID</b>, bool <b>Checked</b>);</p>
+
+        <p>The  <b>sc.SetACSChartShortcutMenuItemChecked</b> function adds or removes  a checkmark beside the ACSIL menu command specified with <b>MenuItemID</b> for the chart specified with  <b>ChartNumber</b>. Set <b> Checked </b> to FALSE to remove the check mark . Set <b> Checked </b> to TRUE to add a check mark.</p> 
+    </section>
+
+    <section class="h3">
+        <h3 id="scPlaceACSChartShortcutMenuItemsAtTopOfMenu">sc.PlaceACSChartShortcutMenuItemsAtTopOfMenu</h3>
+        <div class="member-link">[<a href="#scPlaceACSChartShortcutMenuItemsAtTopOfMenu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL boolean variable</p>
+
+        <p>The <b>sc.PlaceACSChartShortcutMenuItemsAtTopOfMenu </b> variable can be set anywhere within the custom study function.</p>
+
+        <p>When it is set to TRUE, then all menu items added with sc.AddACSChartShortcutMenuItem(), will be listed at the top of the Chart Shortcut menu.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scAddACSChartShortcutMenuSeparator">sc.AddACSChartShortcutMenuSeparator()</h3>
+        <div class="member-link">[<a href="#scAddACSChartShortcutMenuSeparator">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>AddACSChartShortcutMenuSeparator</b>(long <b>ChartNumber</b>);</p>
+
+        <p>The  <b>sc.AddACSChartShortcutMenuSeparator</b> function will add a separator line to the Chart Shortcut menu below the last added ACSIL menu command.</p> 
+    </section>
+
+    <section class="h3">
+        <h3 id="scChangeACSChartShortcutMenuItemText">sc.ChangeACSChartShortcutMenuItemText()</h3>
+        <div class="member-link">[<a href="#scChangeACSChartShortcutMenuItemText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>ChangeACSChartShortcutMenuItemText</b>(int <b>ChartNumber</b>, int <b>MenuIdentifier</b>, const char * <b>NewMenuText</b>);</p>
+
+        <p>The  <b>sc.ChangeACSChartShortcutMenuItemText</b> function modifies the text of the menu item for the Chart Shortcut menu identified by the <b>MenuIdentifier </b> parameter. </p>
+
+        <p>The new text  is specified by the <b>NewMenuText</b> parameter.</p>
+
+        <p> The <b>ChartNumber</b> parameter specifies particular chart the menu is associated with.</p>
+
+        <p>The function returns TRUE if the menu item text was successfully changed.</p> 
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="AdvancedCustomStudyControlBarButtonsAndPointerEvents">Advanced Custom Study Buttons and Pointer Events</h2>
+    <div class="member-link">[<a href="#AdvancedCustomStudyControlBarButtonsAndPointerEvents">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="AdvancedCustomStudyControlBarButtonsAndPointerEventsIntroduction">Introduction</h3>
+        <div class="member-link">[<a href="#AdvancedCustomStudyControlBarButtonsAndPointerEventsIntroduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There are 150 Advanced Custom Study buttons available for custom studies to interact with on the <a href = "index6736.html?page=doc/ControlBar.php">Control Bar</a>.  </p>
+        
+        <p>These buttons can be added to any of the Control Bars.  </p>
+        
+        <p>These buttons serve 2 purposes.</p>
+
+        <p>They can be used to signal to an Advanced Custom Study, that is monitoring for them, whether a particular button is selected or not. In other words  whether the button is in a pushed in state or not (on/off).  </p>
+
+        <p>So this allows a study to monitor for an On/Off state using a particular Control Bar button. This provides a lot of useful functionality for a custom study including even one-time button events where the button does not remain in an On state, which is explained further in this section.</p>
+
+        <p>The second purpose of these Advanced Custom Study Control Bar buttons is that when one of them is selected (On state), the study function instances on the chart that have requested to receive Pointer events by setting <b>sc.ReceivePointerEvents  = ACS_RECEIVE_POINTER_EVENTS_WHEN_ACS_BUTTON_ENABLED</b>  in the study function, will receive those events as the Pointer is moved around or used on the chart that contains the study function instance.  These events include Pointer Button Down,  Pointer  Button Up, Pointer Move.</p>
+
+        <p>For a working example for all of this, refer to the <b>scsf_MenuAndPointerExample()</b> function in the  <b>/ACS_Source/studies.cpp</b> file in the folder where Sierra Chart is installed to.  </p>
+
+        <p>It is also supported to assign keyboard shortcuts to these Advanced Custom Study Control Bar buttons.  To do this, select <b Class = "menu_item">Global Settings &gt;&gt; Customize Keyboard Shortcuts</b>.   In the   <b>Commands  </b> list,    expand the <b>Custom Study Control Bar Button Keyboard Shortcuts</b>  list.  For complete documentation, refer to    <a href="indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeKeyboardShortcuts" target="_blank" rel="noopener noreferrer">Customizing Keyboard Shortcuts</a>. </p>
+        
+        <p>  The On/Off state of Advanced Custom Study Control Bar buttons is remembered per individual chart.  So depending upon what chart is active,  effects the on/off state of these buttons, depending upon their usage with that chart or how  an Advanced Custom Study study has set them. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AdvancedCustomStudyControlBarButtons">Advanced Custom Study Control Bar Buttons</h3>
+        <div class="member-link">[<a href="#AdvancedCustomStudyControlBarButtons">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To use the Advanced Custom Study Control Bar buttons, they need to be added to the Control Bar. To do this, select <b class = "menu_item"> Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar #</b> to add them to the Control Bar. </p>
+
+        <p>Look in the <b> Advanced Custom Study Buttons</b> list. You will find listed <b>Custom Study Button 1-150</b>.   Add any of these to the Control Bar that you require.</p>
+
+        <p> Once added to the Control Bar, these Advanced Custom Study Control Bar buttons  toggle between On and Off, and visually show the state by being pushed in or out on the Control Bar.</p>
+
+       <p> This has changed effective with version 2268: Only one Advanced Custom Study Control Bar button can be active at any time for a particular chart. Therefore,  selecting an Advanced Custom Study Control Bar button also effectively disables the currently active Advanced Custom Study Control Bar button. </p>
+       
+       <p>  Effective with version 2268 and higher, any number of Advanced Custom Study Control Bar buttons  can be in an On state at the same time.</p>
+
+        <p> The Advanced Custom Study Control Bar button state changes caused by pressing one of these buttons are sent to all of the studies on the active chart. This occurs by the study functions being called  and the setting of the ACSIL variable  <b>sc.PointerEventType</b>. </p>
+        
+        <p> The possible values for <b>sc.PointerEventType</b> are: <b>SC_ACS_BUTTON_ON</b>,  <b>SC_ACS_BUTTON_OFF</b>. The specific ACS Control Bar button that is toggled on or off is determined through  ACSIL variable <b>sc.MenuEventID</b>. The possible values for <b>sc.MenuEventID</b> are <b>ACS_BUTTON_1</b>  through <b>ACS_BUTTON_150</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReceivingPointerEvents">Receiving Pointer Events</h3>
+        <div class="member-link">[<a href="#ReceivingPointerEvents">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>An Advanced Custom Study on a chart can receive Pointer events (<b>SC_POINTER_BUTTON_DOWN</b>, <b>SC_POINTER_MOVE</b>, <b>SC_ POINTER_BUTTON_UP</b>) when the Pointer is moved around or clicked on the chart the study function instance is applied to.</p>
+
+        <p>To have the study function instance receive these events, set <b>sc.ReceivePointerEvents</b> to one of the following constants:  <b> ACS_RECEIVE_NO_POINTER_EVENTS, ACS_RECEIVE_POINTER_EVENTS_WHEN_ACS_BUTTON_ENABLED, ACS_RECEIVE_POINTER_EVENTS_ALWAYS, ACS_RECEIVE_POINTER_EVENTS_ALWAYS_FOR_ALL_TOOLS </b> anywhere within the study function. </p>
+
+        <p>If  <b>sc.ReceivePointerEvents</b> is set to ACS_RECEIVE_NO_POINTER_EVENTS, the Pointer events will  not be received by the study function instance. </p>
+
+        <p>If <b>sc.ReceivePointerEvents</b> is set to ACS_RECEIVE_POINTER_EVENTS_WHEN_ACS_BUTTON_ENABLED and one of the Advanced Custom Study Control Bar Buttons 1-150 is selected  (On state) for the chart, then the  Pointer events will be  received  by the study function .</p>
+
+        <p>If <b>sc.ReceivePointerEvents</b> is set to ACS_RECEIVE_POINTER_EVENTS_ALWAYS, then the Pointer events will be received by the  study function whether or not an Advanced Custom Study Control Bar Buttons 1-150 is selected  (On state) for the chart or not.</p>
+
+        <p>These Pointer events are only passed to custom studies on the chart when the active Tool is <b class="menu_item">Tools &gt;&gt; Pointer</b>, <b class="menu_item">Tools &gt;&gt; Chart Values</b>, or <b class="menu_item">Tools &gt;&gt; Hand</b>. Otherwise, they are not unless <b>sc.ReceivePointerEvents</b> is set to ACS_RECEIVE_POINTER_EVENTS_ALWAYS_FOR_ALL_TOOLS.</p>
+        
+         <p> Additionally, Pointer events into a custom study  will not be received when adjusting the size of a Chart Region. </p>
+
+        <p>Once a particular <b>Advanced Custom Study Control Bar Button 1-150</b>  is enabled (On state)  and <b>sc.ReceivePointerEvents</b>  is set to <b> ACS_RECEIVE_POINTER_EVENTS_WHEN_ACS_BUTTON_ENABLED </b>  or <b> ACS_RECEIVE_POINTER_EVENTS_ALWAYS / ACS_RECEIVE_POINTER_EVENTS_ALWAYS_FOR_ALL_TOOLS</b>, Pointer events will begin to be received into the custom study function instance as the events occur. </p>
+
+        <p>The custom study function instance will be called on an event and the <b>sc.PointerEventType</b> will be set with the particular event constant (<b>SC_POINTER_BUTTON_DOWN</b>, <b>SC_POINTER_MOVE</b>, <b>SC_POINTER_BUTTON_UP</b>).</p>
+
+        <p>The ACSIL variable <b>sc.MenuEventID</b> indicates which Advanced Custom Study Control Bar Button is currently selected.  The possible values  are the constants  <b>ACS_BUTTON_1</b>  through <b>ACS_BUTTON_150</b>. </p>
+
+        <p>The Pointer location  can be determined through the <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scActiveToolIndex" >sc.ActiveToolIndex</a> member, which indicates the chart bar index the Pointer is hovering over. And  <a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scActiveToolYValue" >sc.ActiveToolYValue</a> member, which indicates the vertical coordinate value of the Pointer position according to the scale  of the Chart Region the Pointer is currently in.</p>
+
+        <p>The <b>sc.ActiveToolIndex</b> and the  <b>sc.ActiveToolYValue</b> values are updated with Pointer movements and Pointer click operations. They are updated with the last movement  or operation received. When an Advanced Custom Study Control Bar button is pressed, these values  are not updated on that event and will be what they last were  when using the Pointer over the chart.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetCustomStudyControlBarButtonText">sc.SetCustomStudyControlBarButtonText()</h3>
+        <div class="member-link">[<a href="#scSetCustomStudyControlBarButtonText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>SetCustomStudyControlBarButtonText</b>(int <b>ControlBarButtonNum</b>, const char* <b>ButtonText</b>);</p>
+
+        <p>The <b>sc.SetCustomStudyControlBarButtonText()</b> function is used to change the text for the specified Advanced Custom Study Control Bar button to the <b>ButtonText</b> parameter.</p>
+
+        <p>There are 150 Advanced Custom Study Control Bar buttons (1-150), and <b>ControlBarButtonNum</b> specifies which is being changed. This function is typically paired with a call to <b>sc.SetCustomStudyControlBarButtonHoverText()</b> to also change the  the text displayed when hovering over the button with the Pointer.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetCustomStudyControlBarButtonHoverText">sc.SetCustomStudyControlBarButtonHoverText()</h3>
+
+        <div class="member-link">[<a href="#scSetCustomStudyControlBarButtonHoverText">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>SetCustomStudyControlBarButtonHoverText</b>(int <b>ControlBarButtonNum</b>, const char* <b>ToolTip</b>);</p>
+
+        <p>The <b>sc.SetCustomStudyControlBarButtonHoverText()</b> function is used to change the text displayed when hovering over the specified Advanced Custom Study Control Bar button with the Pointer, to the <b>ToolTip</b> text parameter. </p>
+
+        <p>There are 150 Advanced Custom Study Control Bar buttons (1-150), and <b>ControlBarButtonNum</b> specifies which is being changed. The <b>ToolTip</b> text parameter is also used to provide a description of the button in the Control Bar Customization window. This function is typically paired with a call to <b>sc.SetCustomStudyControlBarButtonText()</b> to also change the Advanced Custom Study Control Bar button text. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetCustomStudyControlBarButtonEnable">sc.SetCustomStudyControlBarButtonEnable()</h3>
+        <div class="member-link">[<a href="#scSetCustomStudyControlBarButtonEnable">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>SetCustomStudyControlBarButtonEnable</b>(int <b>ControlBarButtonNum</b>, int <b>Enable</b>);</p>
+
+        <p>The <b>sc.SetCustomStudyControlBarButtonEnable()</b> function is used to set state of the Advanced Custom Study Control Bar button specified by the <b>ControlBarButtonNum</b> parameter to the value of the <b>Enable</b> parameter. <b>Enable</b> can be <b>TRUE</b> or <b>FALSE</b>.  </p>
+
+        <p>There are 150 Advanced Custom Study Control Bar buttons (1-150), and <b>ControlBarButtonNum</b> specifies which is being changed.</p>
+
+        <p>The Control Bar buttons, 1 through 150, can be toggled On (enabled) and Off (disabled). Visually this state is shown for the Advanced Custom Study Control Bar button by the button being pushed in  (On/Enabled) or out (Off/Disabled) on the Control Bar.</p>
+
+        <p>Effective with version 2268, there can be multiple Advanced Custom Study Control Bar buttons on/enabled at the same time. </p>
+
+        <section class="h4">
+            <h4 id="UsingACSTBButtons1TimeEvents">Using Advanced Custom Study Control Bar Buttons for One-Time Events and Not Staying On</h4>
+            <div class="member-link">[<a href="#UsingACSTBButtons1TimeEvents">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> It is possible to use  Advanced Custom Study Control Bar buttons for one-time events  and for the button not to remain in an on or pushed in state. </p>
+            
+            <p>An Advanced Custom Study Control Bar button can be set to be On or Off with calls to <b>sc.SetCustomStudyControlBarButtonEnable()</b>,  or it can be  manually turned On or Off through the Control Bar itself by the user.</p>
+
+            <p>Therefore, when the user manually selects an Advanced Custom Study Control Bar button and therefore causing it to be in the On state  if it was previously Off, the study function instance will then be notified. After the study function has done its processing, then a call can be made to  <b>sc.SetCustomStudyControlBarButtonEnable()</b>  to set the state back to Off. Therefore, this allows a button to be used for a one-time event and the button will not remain On. </p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scSetCustomStudyControlBarButtonColor">sc.SetCustomStudyControlBarButtonColor()</h3>
+        <div class="member-link">[<a href="#scSetCustomStudyControlBarButtonColor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">void <b>SetCustomStudyControlBarButtonColor</b>(int <b>ControlBarButtonNum</b>, const uint32_t <b>Color</b>);</p>
+
+        <p>The <b>sc.SetCustomStudyControlBarButtonColor()</b> function is used to set the background color of the Custom Study Control Bar button specified by the <b>ControlBarButtonNum</b> parameter to the  color value specified by the <b>Color</b> parameter. <b>Color</b> is an <a href = "index1397.html?page=doc/ACSILDrawingTools.html#RGB">RGB color value</a>.</p>
+
+        <p>There are 150 Custom Study Control Bar buttons (1-150), and <b>ControlBarButtonNum</b> specifies which is being changed.</p>
+
+
+    </section>
+    
+            
+    <section class="h3">
+        <h3 id="scGetCustomStudyControlBarButtonEnableState">sc.GetCustomStudyControlBarButtonEnableState()</h3>
+        <div class="member-link">[<a href="#scGetCustomStudyControlBarButtonEnableState">Link</a>] - [<a href="#top">Top</a>]</div>
+
+         <p>ACSIL Function</p>
+
+        <p class="ACSILFunctionHighlighting">int <b>GetCustomStudyControlBarButtonEnableState</b>(int <b>ControlBarButtonNum</b>);</p>
+
+        <p>The <b>sc.GetCustomStudyControlBarButtonEnableState()</b> function returns the state of the Advanced Custom Study Control Bar button specified by the <b>ControlBarButtonNum</b> parameter.  </p>
+        
+        <p>1 is returned when the button is in the enabled or On state. 0 is returned when the button is in the not enabled or Off state. </p>
+
+        <p>There are 150 Advanced Custom Study Control Bar buttons (1-150), and <b>ControlBarButtonNum</b> specifies which is being changed.</p>
+
+
+
+    </section>
+
+    <section class="h3" id="ACSToolBarButtonKeyboardShortcuts">
+        <h3 id="ACSControlBarButtonKeyboardShortcuts">ACS Control Bar Button Keyboard Shortcuts</h3>
+        <div class="member-link">[<a href="#ACSControlBarButtonKeyboardShortcuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Keyboard shortcuts can be set up for any of the 150 Advanced Custom Study Control Bar buttons.</p>
+
+
+        <p>To set the keyboard shortcuts, select <b class="menu_item">Global Settings &gt;&gt; Customize Keyboard Shortcuts </b>.  The Control Bar buttons are listed in the <b>Custom Study Control Bar Button Keyboard Shortcuts</b> list. In that list you will see  <b>Custom Study Control Bar Button #</b> items listed. These correspond to each of the Advanced Custom Study Control Bar buttons 1 through 150.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="scBlockChartDrawingSelection">sc.BlockChartDrawingSelection</h3>
+        <div class="member-link">[<a href="#scBlockChartDrawingSelection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> The default value for this variable is 0.  </p>
+
+        <p>The <b>sc.BlockChartDrawingSelection </b> ACSIL variable when set to 1 will block Chart Drawing selection on the chart when  using your system Pointer. When set to 0, the normal behavior applies to Chart Drawing selection.  </p>
+
+        <p>Setting this to 1 may be useful when implementing support for Pointer events to prevent the selection of existing Chart Drawings when the user is interacting with the chart with the Pointer.</p>
+
+        <p>Be sure to set this variable to  0 when  your study function is done with handling chart Pointer events. </p>
+
+        <p>When using <a href="#AdvancedCustomStudyControlBarButtonsAndPointerEvents">Advanced Custom Study Control Bar Buttons and Pointer Events</a>  to implement a custom drawing tool when drawing a  user drawn drawing on the chart, you should set <b>sc.BlockChartDrawingSelection</b> to  1 when you start the drawing on the first SC_POINTER_BUTTON_DOWN event, and then set it to 0 when  user drawn drawing is complete after the final SC_POINTER_BUTTON_DOWN event. This will block the selection of the user drawn drawing that has been added, on the second SC_POINTER_BUTTON_DOWN event  and allow the mouse clicks to be properly routed to the custom study.</p>
+    </section>    
+    
+
+    <section class="h3">
+        <h3 id="MaintainingMultipleOnStatesForAdvancedCustomStudyControlBarButtons">Maintaining Multiple On States  For Advanced Custom Study Control Bar Buttons</h3>
+        <div class="member-link">[<a href="#MaintainingMultipleOnStatesForAdvancedCustomStudyControlBarButtons">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> This section is not directly relevant with version 2268 and higher but this technique can still be  useful and informative. </p>
+        
+        <p>As is documented, only one Advanced Custom Study Control Bar button can be active at any time for a particular chart. Therefore,  selecting an Advanced Custom Study Control Bar button also effectively disables the currently active Advanced Custom Study Control Bar button. </p>
+       
+       <p>  If you need to be able to support multiple control bar buttons to be enabled at the same time, an alternative is that when an  Advanced Custom Study Control Bar button is enabled, internally  invert a boolean state variable  in your custom study that the button is associated with, to remember the current state. After that  <a href = "#scSetCustomStudyControlBarButtonEnable">disable the button</a> so that it is no longer in an on and pushed in-state.</p>
+
+
+      <p>After this, <a href = "#scSetCustomStudyControlBarButtonText">change the text</a>  or the <a href = "#scSetCustomStudyControlBarButtonColor">background color</a>  of the Control Bar button to indicate the current state  (whether on or off). </p>
+
+    </section>
+    
+    <section class="h3">
+        <h3 id="DisablingPreviouslySelectedAdvancedCustomStudyControlBarButton">Disabling Previously Selected Advanced Custom Study Control Bar Button</h3>
+        <div class="member-link">[<a href="#DisablingPreviouslySelectedAdvancedCustomStudyControlBarButton">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> With version 2268 and higher, it is supported that multiple Advanced Custom Study Control Bar buttons can be active or in an On state at the same time. </p> 
+        
+       <p> Use the code below in your custom study function to use the old behavior to only support one button active or on at the same time.</p>
+       
+            <pre class="Code FullLineHeight">
+if (sc.MenuEventID >= ACS_BUTTON_1 && sc.MenuEventID <= ACS_BUTTON_150)
+{
+    sc.SetCustomStudyControlBarButtonEnable(sc.PriorSelectedCustomStudyControlBarButtonNumber, 0);
+
+}
+            </pre>
+    </section>
+    
+</section>
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSInteractionWithMenusControlBarButtonsPointerEvents.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:50 GMT -->
+</html>  

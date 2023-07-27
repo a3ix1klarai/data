@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DenaliExchangeDataFeed.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1688060651') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/DenaliExchangeDataFeed.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Denali Exchange Data Feed -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index2530.html?page=doc/DenaliExchangeDataFeed.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real Time Exchange Data Feeds Available From Sierra Chart</a> &gt;&gt; <a  href="index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a></h4> </div>     <h1 class="PageName">Denali Exchange Data Feed</h1>
+
+<img src="../images/denaliexchangedatafeed.jpg" alt=""  class="WideFloatRight">
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Pricing">Pricing</a></li>
+    <li><a href="#SupportedExchanges">Supported Exchanges (Exchange Fees)</a></li>
+    <li><a href="#ExchangeFeeTrials">Exchange Fee Trials</a></li>
+    <li><a href="#TechnicalInformation">Technical Information</a></li>
+    
+    <li><a href="#SetupInstructions_ActivatingServicePackage">*Setup Instructions: Activating Service Package*</a></li>
+    
+    <li><a href="#SetupInstructions_SierraChartSoftwareInstructions">*Setup Instructions:  Sierra Chart Software Instructions*</a></li>
+    
+    <li><a href="#SetupInstructions">*Setup Instructions: CME/CBOT/NYMEX/COMEX Exchanges*</a></li>
+    <li><a href="#SetupInstructions_AllOtherExchanges">*Setup Instructions: All Other Exchanges*</a>
+		<ul>
+			<li><a href="#SetupInstructions_SignTheAgreements_AllOtherExchanges">Sign the Agreements (All Other Exchanges)</a></li>
+			<li><a href="#SetupInstructions_ActivateTheExchanges_AllOtherExchanges">Activate the Exchanges</a></li>
+		</ul>
+	</li>    
+    <li><a href="#USEquitiesConsolidatedTapeDataFeedNotes">US Equities Consolidated Tape Data Feed Notes</a></li>
+    <li><a href="#NasdaqDataFeedNotes">Nasdaq TotalView Data Feed Notes</a></li>
+    
+    <li><a href="#NASDAQGlobalIndexDataFeed">Nasdaq Global Index Data Feed</a></li>
+    
+    <li><a href="#RealTimeDataTrial">Real-Time Data Free Trial and Alternatives</a></li>
+    
+    <li><a href="#Connections">Connections</a>
+        <ul>
+            <li><a href="#DenaliExchangeDataFeedConnectionsOnSameComputerSimultaneously">Denali Exchange Data Feed Connections on Same Computer Simultaneously</a></li>
+            <li><a href="#DenaliExchangeDataFeedOnTwoComputersSimultaneously">Denali Exchange Data Feed on Two Computers Simultaneously</a></li>
+        </ul>
+    </li>
+    <li><a href="#CancellingTheDenaliExchangeDataFeed">Canceling the Denali Exchange Data Feed</a></li>
+    <li><a href="#UsingDenaliFuturesOptionsDataWithTradingService">Using Denali Futures Options Data with Trading Service</a></li>
+    <li><a href="#UsingDenaliFuturesSpreadDataWithTradingService">Using Denali Futures Spread Data with Trading Service</a></li>
+    <li><a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#ControllingNumberOfMarketDepthLevels">Controlling Number of Market Depth Levels</a> (Opens a new page)</li>
+    <li><a href="index0054.html?page=doc/helpdetails4.html#SierraChartExchangeDataFeeds">Managing  Performance and Bandwidth Usage with the Denali Exchange Data Feed</a> (Opens a new page)</li>
+</ul>
+
+<hr style="  clear: both;" >
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Denali Exchange Data Feed provides real-time and historical data for the CME, CBOT, NYMEX, COMEX, EUREX, CFE, NASDAQ TotalView (also includes NYSE and AMEX), NASDAQ Global Indexes, and the US Equities Consolidated Tape (NYSE, AMEX, NASDAQ full volume. Top of book only) exchanges.   </p>
+    
+    <p>Up to 1400 levels of market depth data per side (bid/ask) is provided  for all exchanges.</p>
+    
+    
+    <p>Two simultaneous connections to this data feed are supported per device. </p>
+    
+    <p>Any number of instances of Sierra Chart on the same computer can use the data feed through the <a href="index6ebd.html?page=doc/MultipleServices.html#AccessingMarketDataFromOtherInstancesOfSierra%20Chart">Accessing Market Data from Other Instances of Sierra Chart</a>  or the  <a href="index9bbd.html?page=doc/NewInstance.php">Using DTC Server for Data and Trading in Another Sierra Chart Instance</a>  methods.</p>
+    
+    <p>Refer to <a href="#DenaliExchangeDataFeedOnTwoComputersSimultaneously">Denali Exchange Data Feed on Two Computers Simultaneously</a> for information about how to access this data feed on two computers at the same time.</p>
+    
+    <p>There are no symbol limits imposed as to how many symbols you can receive real-time data for concurrently.</p>
+
+    <p>This is a high quality and low latency data feed that provides tick by tick data.</p>
+
+    <p>The <b>Denali Exchange Data Feed</b> is  <em>not</em> specific to any particular broker or clearing firm or Trading service. It is a Sierra Chart data feed which you can subscribe to and pay for directly from your own Sierra Chart account without any involvement of a broker.  </p>
+    
+    <p>It provides market data only. It can be used with  <em>any Trading service</em> including the <a href="index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">  Teton Futures Order Routing Service</a>.  </p>
+    
+    <p>Refer to <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices" target="_blank" rel="noopener noreferrer">Integration with Trading Services</a> for setting up the Denali Exchange Data Feed with your Trading service.</p>
+
+    <p>If only historical and delayed data is required, then use the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> instead.</p>
+
+    <p>  For additional information, refer to the  <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available From Sierra Chart</a> page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Pricing">Pricing</h2>
+    <div class="member-link">[<a href="#Pricing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are 2 components to the cost for the Denali Exchange Data Feed.</p>
+
+    <ol>
+        <li> The cost of the Sierra Chart Service Package which includes the <b>Denali Exchange Data Feed</b>.  The Denali  Exchange Data Feed is included with  Service Packages 10, 11, and 12. Refer to the <a href="indexa1cf.html?page=doc/Packages.php" target="_blank" rel="noopener noreferrer">Service Packages</a> page for pricing for these packages.</li>
+
+        <li>The <b><a href="#SupportedExchanges">Exchange Fees</a></b>. <em class="GeneralBackgroundHighlight">These are billed in full each month no matter when they are activated</em>.  
+        <br> <br>
+        Some exchanges offer a trial until the end of the month in which it was activated. So it does make sense to wait until the start of a new month before activating exchanges to take advantage of the trial. 
+         <!-- br> <br>
+        When a trial is activated for one exchange, there is no longer the possibility of trials for other related exchanges. For example you cannot activate the CME exchange and get a free trial and in the same month activate the CBOT exchange and get a free trial. You are only entitled to a trial of one of them. --></li>
+    </ol>
+    
+    <p>Activating exchanges is essential when using the <b>Denali Exchange Data Feed</b> to be able to receive the real time data. Otherwise, data for the symbols an exchange fee is not active for, will still be delayed.</p>
+    
+    <p class="GeneralBackgroundHighlight">It must be understood that when you have activated and are using the lower-cost <em>nonprofessional</em> CME Group exchange fees that these require a verified funded trading account with a supported trading service. For more information, refer to <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#UnderstandingAccessingDataFromCME" target="_blank" rel="noopener noreferrer">Understanding and Accessing Data From the CME, CBOT, NYMEX, COMEX Exchanges</a>.</p>
+
+    <p>The Denali Exchange Data Feed can be used with any of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#SupportedTradingServices" target="_blank" rel="noopener noreferrer">Sierra Chart supported trading service providers</a> or on its own.</p>
+
+    <p>To get started using the Denali Exchange Data Feed, follow the <a href="#SetupInstructions">Setup Instructions</a> on this page.</p>
+
+    <p>For further information, refer to the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#UnderstandingSierraChartExchangeDataFeedCostsAndAutomaticRenewal">Understanding Sierra Chart Exchange Data Feeds Pricing and Automatic Renewal</a> section of the <b>Real-Time Exchange Data Feeds Available From Sierra Chart</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SupportedExchanges">Supported Exchanges (Exchange Fees)</h2>
+    <div class="member-link">[<a href="#SupportedExchanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The Denali Exchange Data Feed offers support for the exchange options listed in the table below.</p>
+    
+    <p><em class="GeneralBackgroundHighlight">Exchange fees are billed in full each month no matter when they are activated</em>.    Therefore, you will pay the entire exchange fee no matter when it is activated in a particular month. </p>
+
+    <p>The CME Group of exchanges have trials for the first month which means there will be no cost for that exchange during the month in which it is activated. The following month will be billed at the full price.</p>
+
+    <p>To activate any of these exchanges for the Denali Exchange Data Feed, go to one of the following pages: </p>
+    
+    <ol>
+     <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeed#Exchanges" target="_blank" rel="noopener noreferrer">Activate / Deactivate Denali Exchange Data Feed Exchanges [CME / CBOT / NYMEX / COMEX]</a> </li>
+     
+     <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedCFE"  target="_blank" rel="noopener noreferrer">Activate / Deactivate Denali Exchange Data Feed Exchanges [CFE]</a>  </li>
+    
+    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedNASDAQ"  target="_blank" rel="noopener noreferrer">Activate / Deactivate Denali Exchange Data Feed Exchanges [NASDAQ TotalView]</a>  </li>
+     
+     <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedEUREX"  target="_blank" rel="noopener noreferrer">Activate / Deactivate Denali Exchange Data Feed Exchanges [EUREX]</a>  </li>
+     
+     <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedSTOCKS"  target="_blank" rel="noopener noreferrer">Activate / Deactivate Denali Exchange Data Feed Exchanges [US Equities Consolidated Tape]</a>  </li>
+    </ol>
+    
+    <p>All  <a href = "#SetupInstructions_ActivatingServicePackage">required steps</a> prior to activating an exchange must be completed prior to activating an exchange.</p>
+    
+    <p class="GeneralBackgroundHighlight">It must also be understood that in order to use the lower-cost <em>nonprofessional</em> CME exchange fees that these require a verified live funded futures trading account with a supported Trading service and Sierra Chart needs to connect to that account or in the case of the Sierra Chart Order Routing Service have that account assigned to your Sierra Chart account. For more information, refer to <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#UnderstandingAccessingDataFromCME">Understanding and Accessing Data From the CME, CBOT, NYMEX, COMEX Exchanges</a>. Also, refer to <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices" target="_blank" rel="noopener noreferrer">Integration with Trading Services</a>. A recommended solution in cases where a trading account is not available through one of the supported services, is to use the <a href="index8a6a.html?page=doc/EasySolutionToCMEFundedTradingAccountRequirement.php">Easy Solution to CME Funded Trading Account Requirement</a>.</p>
+    
+    <p>If you are <em>not entitled</em> to use one of the nonprofessional exchange fees, then you must pay for the higher-priced <em>professional</em> exchange fees for real-time data. For more information, refer to <a href="index9a78.html?page=doc/FuturesData.php#CMEExchangeFeesForProfessionalsAndUsersWithoutASupportedTradingAccount">CME Exchange Fees for Professionals and Users Without a Supported Trading Account</a>.</p> 
+    
+     <p>In order to avoid paying exchange fees twice when using the Denali Exchange Data Feed with a supported <a href = "indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Trading</a> service, you will want to <em>cancel any exchange fees</em> that you pay to the Trading service since you will be using the Denali Exchange Data Feed for data.</p>
+
+    <table class="pure-table pure-table-striped pure-table-bordered">
+    <tr>
+        <th>Exchange</th>
+        <th>Price (USD/month)</th>
+        <th>Market Depth</th>
+        <th>Trading Account Required <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#UnderstandingAccessingDataFromCME"   target="_blank" rel="noopener noreferrer">(*Info*)</a></th>
+        <th>Symbol Link</th>
+    <tr>
+    <tr>
+    <td>Full CME Group (CME, CBOT, COMEX, NYMEX) with Market Depth for non-professional Trading accounts</td>
+    <td style="text-align:right;">34.25 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>Full CME Group (CME, CBOT, COMEX, NYMEX) for non-professional Trading accounts</td>
+    <td style="text-align:right;">3.50 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>CME non-professional top-of-book</td>
+    <td style="text-align:right;">1.25 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>CME with Market Depth for non-professional Trading accounts</td>
+    <td style="text-align:right;">11.50 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>CME, For professionals and users without a trading account</td>
+    <td style="text-align:right;">127.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CME, For professionals - Netting</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CME E-mini, For professionals and users without a trading account</td>
+    <td style="text-align:right;">69.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CBOT non-professional top-of-book</td>
+    <td style="text-align:right;">1.25 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>CBOT with Market Depth for non-professional Trading accounts</td>
+    <td style="text-align:right;">11.50 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>CBOT, For professionals and users without a trading account</td>
+    <td style="text-align:right;">127.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CBOT, For professionals - Netting</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CBOT E-mini, For professionals and users without a trading account</td>
+    <td style="text-align:right;">46.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>COMEX non-professional top-of-book</td>
+    <td style="text-align:right;">1.25 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>COMEX with Market Depth for non-professional Trading accounts</td>
+    <td style="text-align:right;">11.50 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>COMEX, For professionals and users without a trading account</td>
+    <td style="text-align:right;">127.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>COMEX, For professionals - Netting</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>NYMEX non-professional top-of-book</td>
+    <td style="text-align:right;">1.25 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>NYMEX with Market Depth for non-professional Trading accounts</td>
+    <td style="text-align:right;">11.50 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"><img src="../images/exclamation_mark.svg" style="width:1em;"></td>
+    <td></td>
+</tr><tr>
+    <td>NYMEX, For professionals and users without a trading account</td>
+    <td style="text-align:right;">127.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>NYMEX, For professionals - Netting</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>EUREX EOBI</td>
+    <td style="text-align:right;">25.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>EUREX EOBI for professionals</td>
+    <td style="text-align:right;">105.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CFE Top Of Book</td>
+    <td style="text-align:right;">3.00 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CFE Market Depth</td>
+    <td style="text-align:right;">5.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CFE Top Of Book for professionals</td>
+    <td style="text-align:right;">15.00 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>CFE Market Depth for professionals</td>
+    <td style="text-align:right;">40.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>NASDAQ TotalView US stock data</td>
+    <td style="text-align:right;">16.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>NASDAQ TotalView US Stock Data for professionals</td>
+    <td style="text-align:right;">85.00 USD / month</td>
+    <td style="text-align:center;"><img src="../images/accept.svg" style="width:1em;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>US Equities Consolidated Tape</td>
+    <td style="text-align:right;">10.00 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>US Equities Consolidated Tape for professionals</td>
+    <td style="text-align:right;">100.00 USD / month</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr><tr>
+    <td>Nasdaq Global Indexes</td>
+    <td style="text-align:right;"></td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"></td>
+    <td></td>
+</tr>
+</table>    
+</section>
+
+<section class="h2">
+    <h2 id="ExchangeFeeTrials">Exchange Fee Trials</h2>
+    <div class="member-link">[<a href="#ExchangeFeeTrials">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>The CME Group of exchanges (CME, CBOT, NYMEX and COMEX) offer a free exchange fee for one exchange for the remainder of the month in which the exchange is activated. EUREX does not have any free trial for their exchange.</p>
+
+    <p>In order to qualify for the free exchange fee, you need to have/do the following:</p>
+    <ul>
+        <li>Not used the Denali Exchange Data Feed with an exchange from the CME Group within the past year.</li>
+
+        <li>Only one exchange may be activated for the free exchange fee. Once a single exchange is activated, any other exchanges will be charged at the full price for the remainder of the month.</li>
+    </ul>
+
+    <p>In order to take advantage of this free exchange fee just follow through the <a href="#SetupInstructions">Setup Instructions for the CME Group</a> and when you activate the exchange it will be free for the remainder of the current month as long as you qualify per the above items.</p>
+
+    <p>Note that it is still necessary to be on Package 10, 11, or 12 in order to get the real-time data. The Denali Exchange Data Feed Fee that is supported with those packages does not have a free trial. But it is possible to change the package at any time. So if you only use the  Denali Exchange Data Feed for 10 days and are not going to continue to use it, then   you  could change your Service Package to any other  Service Package afterwards.</p>
+</section>
+
+<section class="h2">
+    <h2 id="TechnicalInformation">Technical Information</h2>
+    <div class="member-link">[<a href="#TechnicalInformation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following is the technical information for the Denali data feed.</p>
+
+    <ul>
+        <li>The connectivity for CME Group data is directly within the CME Aurora data center. A 10Gb connection is used directly to the CME MDP multicast exchange feeds within the same data center.</li>
+     
+        <li>Connectivity is to very high-performance servers.</li>
+      
+        <li>This data is very efficiently processed and normalized into the DTC Protocol.</li>
+    </ul>    
+    
+    <p>The EUREX data feed has the following features.  </p>
+
+     <p> It is recommended to use the Denali Exchange Data Feed  for historical and real-time EUREX data within Sierra Chart. EUREX data is not accessible from other sources, unless you are using  <a href="indexa1cf.html?page=doc/Packages.php">Service Package 10  or higher</a>.   When using Service Package 10 or higher, you just need to pay for the EUREX exchange fee to access the real-time EUREX from the Denali Exchange Data Feed.</p>
+
+    <ul>
+        <li>Provided out of <a href = "https://www.datacentermap.com/germany/frankfurt/ntt-frankfurt2.html" target="_blank" rel="noopener noreferrer">Frankfurt</a> Germany with servers colocated with Deutsche Börse. 10Gb fiber link to Deutsche Börse T7 multicast feeds.</li>
+
+        <li>Each Sierra Chart user uses a dedicated connection to the EUREX data feed no matter your location. And no matter what other exchanges you are using. So if you are using CME data, that data comes out of Chicago and EUREX originates out of Frankfurt. Sierra Chart maintains separate connections for CME and EUREX.
+         <br> <br>
+        Which also gives you the advantage, of not running into connection limits even though you would be using two separate connections.</li>
+
+       <li>Low latency data.</li>
+
+        <li> Direct connectivity to Deutsche Börse T7 Reference Data (RDI) and T7 Extended Order Book Interface (EOBI). Sierra Chart is the first to be offering this for retail traders.</li>
+
+        <li>Full order book. All levels of market depth will be provided. If there are 1000 levels of depth, there will be 1000 levels of depth visible.</li>
+
+        <li>High-quality Sierra Chart market data delivery.</li>
+
+        <li>100% accurate Bid Volume and Ask Volume based upon the exchange identification of the aggressor in the trade. There is no other data feed that Sierra Chart supports that has this 100% accurate. Even IQ Feed uses an estimation method.</li>
+
+        <li>Ability to recombine trades into the original summary trade based on actual exchange data. Supports the <a href="index4cf4.html?page=doc/ChartSettings.html#CombineTradesIntoOriginalSummaryTrade">Combine Trades into Original Summary Trade</a> feature.</li>
+
+        <li> <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed</a> version of data feed is provided without any additional fees.</li>
+
+        <li>Market by order data, supporting the new <a href="index288e.html?page=doc/MarketByOrder.php">Market by Order feature</a>. All orders with a quantity of 3 and greater are now provided.</li>
+
+        <li>Tick by tick data for futures contracts on the EUREX begins at 2013. Prior to this the EUREX data is in 1 minute units and begins at 2010.</li>       
+    </ul>
+</section> 
+
+
+<section class="h2">
+        <h2 id="SetupInstructions_ActivatingServicePackage">*Setup Instructions: Activating Service Package*</h2>
+        <div class="member-link">[<a href="#SetupInstructions_ActivatingServicePackage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If you already are using <a href="indexa1cf.html?page=doc/Packages.php">Service Package 10, Package 11, or Package 12</a> for your Sierra Chart Service Package, then skip this section as the Denali Exchange Data Feed is already included with those Service Packages.</p>
+
+        <p>This section is for changing  your Service Package to one that includes the Denali Exchange Data Feed.</p>
+
+        <p>When changing Service Packages only the remaining Usage Time is adjusted based on the daily cost of the old and new packages. No additional funds are deducted from   or credited to your account. In general,  this would mean that the number of days will be reduced, since packages 10, 11, and 12 are more expensive than  the  lower numbered Service Packages. Be sure to select the  Service Package time frame that is desired for the next renewal period.</p>
+
+        <div style="text-align: center;"><a href="../images/servicepackage_autorenewactivate.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/servicepackage_autorenewactivate.png" alt="Select Service" width="750"></a></div>
+
+        <ol>
+            <li>Go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation#AvailableServices" target="_blank" rel="noopener noreferrer">Activate Services</a> section of the <b>Services Activation</b> page.</li>
+
+            <li>Select the pulldown in this section and select the appropriate Service Package (10, 11, or 12) with the number of months for which you will want to renew Sierra Chart.
+                <div style="text-align: center;"><a href="../images/servicepackagelist.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/servicepackagelist.png" alt="Select Service Package List" width="750"></a></div>
+            </li>
+
+            <li>Select either the <b>Update/Set</b> or the <b>Update and Renew Now</b> button, as appropriate. The only reason to select the <b>Update and Renew Now</b> button is if you want to pay immediately for the selection in order to add the time to your account (such as when making a change from a Trial package).</li>
+            
+            <li>Add sufficient credit to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit" target="_blank" rel="noopener noreferrer">Services Balance</a> on your account to pay for the cost of  the chosen Service Package when it renews.
+             <br> <br>
+            You will need to <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login</a>  your account if you are not already. You can also login by selecting <b class="menu_item">Help &gt;&gt; Account Control Panel</b> from within Sierra Chart.
+            <br> <br>            
+            You also need to be sure your account has a sufficient credit balance before the beginning of the next month to cover the cost of the exchange fees for the next month. Otherwise, you will lose access to real-time data from that exchange.
+            <br> <br>
+                <div style="text-align: center;"><a href="../images/addaccountcredit.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/addaccountcredit.png" alt=" " width="750"></a></div></li>
+          
+          <li> Continue with the  <a href="#SetupInstructions_SignTheAgreements">Sign the Agreements: CME</a> and/or the   <a href="#SetupInstructions_SignTheAgreements_AllOtherExchanges">Sign the Agreements: All Other Exchanges</a>. </li>
+                       
+        </ol>
+</section>
+
+<section class="h2">
+        <h2 id="SetupInstructions_SierraChartSoftwareInstructions">*Setup Instructions:  Sierra Chart Software Instructions*</h2>
+        
+        <div class="member-link">[<a href="#SetupInstructions_SierraChartSoftwareInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li> Run the Sierra Chart software using the shortcut on your desktop, if it is not already running.</li>
+
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</li> 
+
+            <li>Select the <b>Common Settings</b> tab.</li>
+
+            <li>Ensure that the <b>Allow Support for Sierra Chart Data Feeds</b> option is set to <b>Yes</b>.  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">Reconnect</a> to the data feed if you have enabled this setting.
+        
+                <div style="text-align: center;"><a href="../images/datatradeservicesettings_allowsupportforsierrachartdatafeeds.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/datatradeservicesettings_allowsupportforsierrachartdatafeeds.png" alt=" " width="500"></a></div>
+            </li>
+            <li>Press <b>OK</b>.</li>
+
+            <li>If you will be using the Denali Exchange Data Feed integrated with the Trading service you will be using Sierra Chart with, follow the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices" target="_blank" rel="noopener noreferrer">Integration with Trading Service Instructions</a>.</li>
+
+            <li>If you will be using the Denali Exchange Data Feed independent of and not integrated with any particular supported Trading service, then select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> and set the <b>Service</b> to <b>SC Data - All Services</b>.</li>
+        
+            <li>If you are using one or more of the CME/NYMEX/CBOT/COMEX non-professional exchanges and you have your <b>Service</b> set to <b>SC Data - All Services</b>, then it is necessary to connect Sierra Chart at least once a month to your Trading account to qualify for the lower-priced fees. Otherwise, you will receive <em>delayed</em> data. 
+             <br> <br>
+            To do this, follow the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#ConnectingOnlyOnceAMonthToTradingAccount" target="_blank" rel="noopener noreferrer">Connecting Only Once a Month to Trading Account Instructions</a> instructions.</li>
+
+            <li>In Sierra Chart, select <b class="menu_item">Global Settings &gt;&gt; Symbol Settings</b>. Press the <b>Update From Server</b> button. Wait for the button to reenable and then press <b>OK</b>.  This step is not necessary, but it is just precautionary to make sure you have up-to-date symbol settings.</li>
+            
+            <li>Open your Chartbook(s) through  <b class="menu_item">File &gt;&gt; Open Chartbook</b>.</li>
+
+            <li>After they are open, select  <b class="menu_item">Edit &gt;&gt; Translate Symbols to Current Service</b> to translate the symbols to the currently selected Service.</li>
+            
+             <li> At this point you are all complete with the setup of the Denali Exchange Data Feed and real-time data.  You will know the Denali data feed is being used when you see an <b class="GeneralBackgroundHighlight">[M]</b> indicator after the Symbol on the top line of the chart or Trade DOM.
+             <br> <br>
+             
+            <div style="text-align: center;"><a href="../images/alternatemappeddatafeedindicator.png" rel="lightbox"><img  class="screenshot" loading="lazy" src="../images/alternatemappeddatafeedindicator.png" alt=" "></a></div>
+            <br> <br>
+            
+            If you do not see an <b class="GeneralBackgroundHighlight">[M]</b> indicator after the symbol on the chart and you have activated the exchange the symbol is on, then symbol mapping may need to be set up by Sierra Chart support. In this case, contact <a href="https://www.sierrachart.com/SupportBoard.php" target="_blank" rel="noopener noreferrer">Sierra Chart Support</a> and let us know the specific symbols for which you do not see this indicator.
+             </li>
+             
+             <li>If you have been using a different data feed compared to the Denali Exchange Data Feed, then  you should definitely re-download the data in your charts to get the best quality of data into the charts. You can do this by going to the chart and selecting <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. 
+              <br> <br> 
+              You only need to do this once for each symbol and chart type (Historical or Intraday). You should only do this for charts that have an <b class="GeneralBackgroundHighlight">[M]</b> after the symbol, since those are the ones that are using this new data feed. </li>
+              
+            <li>You are now all finished with the setup of the Denali Exchange Data Feed!  If you have any issues or questions, contact us on the <a href = "https://www.sierrachart.com/SupportBoard.php" target="_blank" rel="noopener noreferrer">Support Board</a>.</li>
+        </ol>
+
+
+</section>            
+
+<section class="h2">
+    <h2 id="SetupInstructions">*Setup Instructions: CME/CBOT/NYMEX/COMEX Exchanges*</h2>
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the Step-by-Step instructions below to activate  1 or more of the CME Group  of exchanges which are part of the  Denali Exchange Data Feed, for your account.</p>
+
+    <p class="GeneralBackgroundHighlight">It must be understood that in order to use the lower-cost <em>nonprofessional</em> CME exchange fees that these require a verified live funded futures trading account with a supported Trading service and Sierra Chart needs to connect to that account or in the case of the Sierra Chart Order Routing Service have that account assigned to your Sierra Chart account. For more information, refer to <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#UnderstandingAccessingDataFromCME"  target="_blank" rel="noopener noreferrer">Understanding and Accessing Data From the CME, CBOT, NYMEX, COMEX Exchanges</a>. Also, refer to <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices" target="_blank" rel="noopener noreferrer">Integration with Trading Services</a>. A recommended solution in cases where a trading account is not available through one of the supported services, is to use the <a href="index8a6a.html?page=doc/EasySolutionToCMEFundedTradingAccountRequirement.php"  target="_blank" rel="noopener noreferrer">Easy Solution to CME Funded Trading Account Requirement</a>.</p>
+
+    <p>At certain steps in the following instructions, depending on your browser, you may get a pop-up message asking the question <b>Are you sure that you wish to continue?</b>. When prompted with this, always select <b>OK</b>.</p>
+
+    <p>Be sure to go through the necessary sections below that are part of these Setup Instructions. If you are setting up the Denali Exchange Data Feed for the first time, then it is necessary to follow the instructions in every section below. If you already have the Denali Exchange Data Feed active for your account, then some of the sections below you do not need to complete because you already have them done.</p>
+
+    <ul>
+    
+        <li><a href="#SetupInstructions_ActivatingServicePackage">*Setup Instructions: Activating Service Package*</a></li>
+       
+        <li><a href="#SetupInstructions_SignTheAgreements">Sign the Agreements: CME</a></li>
+
+        <li><a href="#SetupInstructions_ActivateTheExchanges">Activate the Exchanges: CME</a></li>
+        
+       <li><a href="#SetupInstructions_SierraChartSoftwareInstructions">*Setup Instructions:  Sierra Chart Software Instructions*</a></li>
+   
+    </ul>
+
+    <div style="text-align: center;"><a href="../images/denaliexchangedatafeedcmegroupactivationlist.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denaliexchangedatafeedcmegroupactivationlist.png" alt="Denali Exchange Data Feed CME Group Activation" width="750"></a></div>
+
+    <section class="h3">
+        <h3 id="SetupInstructions_SignTheAgreements">Sign the Agreements (Denali Exchange Data Feed Setup Instructions)</h3>
+        <div class="member-link">[<a href="#SetupInstructions_SignTheAgreements">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section of the Setup Instructions for the Denali Exchange Data Feed has you complete and sign the data agreements. The required agreements must be completed in order for Real-Time data to be supplied to your Sierra Chart software.</p>
+
+        <div style="text-align: center;"><a href="../images/denaliexchangedatafeedcmegroupactivationlist-agreements.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denaliexchangedatafeedcmegroupactivationlist-agreements.png" alt="Denali Activation CME Group Exchange Agreements" width="750"></a></div>
+
+        <p>The data agreements have questions related to whether you are considered a Professional or a Non-Professional trader. If you have any questions, post them on the <a href="https://www.sierrachart.com/SupportBoard.php" Target="_blank" rel="noopener noreferrer">Sierra Chart Support Board</a>.</p>
+
+        <p>It is necessary to electronically sign both the <b>Uniform Market Data Subscriber Agreement</b> and the <b>CME Non Professional Certification</b> at the same time.</p>
+
+        <ol>
+            <li>Select the link for <a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements" target="_blank" rel="noopener noreferrer">CME / CBOT / NYMEX / COMEX Exchange Agreements</a>.</li>
+
+            <li>Go to the <b>Real-Time Data Agreements</b> section on that page.
+                <div style="text-align: center;"><a href="../images/denaliagreements.png" rel="lightbox"><img class="screenshot" loading="lazy" src="../images/denaliagreements.png" alt=""></a></div>
+            </li>
+
+            <li>Select the <b>Uniform Subscriber Agreement</b>.</li>
+
+            <li>Verify that the information at the top is correct. If any of it is incorrect, then exit from the agreement, go to <a href="https://www.sierrachart.com/UserControlPanel.php?page=ManageAccountInfo" target="_blank" rel="noopener noreferrer">Manage Account Information</a>, and update your information, then select the <b>Update Account Information</b> button. 
+            <br><br> 
+            Return to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements" target="_blank" rel="noopener noreferrer">CME / CBOT / NYMEX / COMEX Exchange Agreements</a> and select the <b>Uniform Subscriber Agreement</b>.</li>
+
+            <li>Enter the required information at the bottom of the form.
+                <br><br>
+                In order to qualify for the Non-Professional exchange fees, it is necessary that the <b>Uniform Subscriber Agreement</b> has the information for your funded futures trading account. Ensure that the information for the <b>Trading Account Number</b> and <b>Clearing Firm</b> has been entered if you are a non-professional. Otherwise, if you are a Professional, then these fields can be left blank.
+            </li>
+
+            <li>Select the <b>Submit</b> button.</li>
+
+            <li>Return to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements" target="_blank" rel="noopener noreferrer">CME / CBOT / NYMEX / COMEX Exchange Agreements</a> page.</li>
+
+            <li>Go to the <b>Real-Time Data Agreements</b> section on that page.</li>
+
+            <li>Select the <b>CME Non Professional Certification</b>.</li>
+
+            <li>At the bottom of the page enter your name and select either <b>I am a Nonprofessional</b> or <b>I *do not qualify* as a Nonprofessional</b> button as appropriate.</li>
+        </ol>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="SetupInstructions_ActivateTheExchanges">Activate the Exchanges (Denali Exchange Data Feed Setup Instructions)</h3>
+        <div class="member-link">[<a href="#SetupInstructions_ActivateTheExchanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section gives instructions to activate the specific exchanges for which Real-Time data is required.</p>
+
+
+        <p>You will <em>not</em> receive real-time data for symbols on exchanges that are not <b>activated</b>.</p>
+
+        <p>The CME Group of exchanges offers a trial for the remainder of the month in which an exchange is activated. This trial ends at the end of the month, so is not necessarily a full month.</p>
+
+        <p>When activating an exchange option that includes multiple Exchanges, it is <em>not</em> necessary to also activate the individual exchanges as well. The individual exchanges are an optional selection for those that only need symbols from up to two of the CME Group of Exchanges. Otherwise, it is cheaper to activate the entire CME Group.</p>
+
+        <ol>
+            <li>Go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeed" target="_blank" rel="noopener noreferrer"> Activate / Deactivate Denali Exchange Data Feed Exchanges [CME / CBOT / NYMEX / COMEX]</a> page.
+            
+            
+        <div style="text-align: center;"><a href="../images/denaliexchangedatafeedcmegroupactivationlist-activateexchanges.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denaliexchangedatafeedcmegroupactivationlist-activateexchanges.png" alt="Denali CME Group Activate Exchanges" width="750"></a></div>
+            </li>
+            
+            <li> Look at the cost of the exchange:
+             
+            
+            <div style="text-align: center;"><a href="../images/denaliexchanges.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denaliexchanges.png" alt="Exchange List" width="750"></a></div>
+        
+            Add sufficient credit to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit" target="_blank" rel="noopener noreferrer">Services Balance</a> on your account to if there is not a sufficient services balance already to pay for this exchange.
+             <br> <br>
+            You will need to <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login</a> to your account if you are not already. You can also login by selecting <b class="menu_item">Help &gt;&gt; Account Control Panel</b> from  within the Sierra Chart program.
+            <br> <br>            
+            You also need to be sure your account has a sufficient credit balance before the beginning of the next month to cover the cost of the exchange fees for the next month. Otherwise, you will lose access to the market data feed service.
+            <br> <br>
+             <div style="text-align: center;"><a href="../images/addaccountcredit.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/addaccountcredit.png" alt=" " width="750"></a></div>
+            </li>
+            
+            <li>Select the <b>Activate</b> button for the exchange(s) that are required.  An additional confirmation is required to complete this.  Make sure to confirm. </li>
+          
+          <li> Continue with the <a href="#SetupInstructions_SierraChartSoftwareInstructions">*Setup Instructions:  Sierra Chart Software Instructions*</a>. </li>
+        </ol>
+    </section>
+
+</section>
+
+
+<section class="h2">
+    <h2 id="SetupInstructions_AllOtherExchanges">*Setup Instructions: All Other Exchanges*</h2>
+    <div class="member-link">[<a href="#SetupInstructions_AllOtherExchanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the Step-by-Step instructions below to activate 1 or more of the exchanges which are part of the Denali Exchange Data Feed, for your account.</p>
+
+    <p>At certain steps in the following instructions, depending on your browser, you may get a pop-up message asking the question <b>Are you sure that you wish to continue?</b>. When prompted with this, always select <b>OK</b>.</p>
+
+    <p>Be sure to go through the necessary sections below that are part of these Setup Instructions. If you are setting up the Denali Exchange Data Feed for the first time, then it is necessary to follow the instructions in every section below. If you already have the Denali Exchange Data Feed active for your account, then some of the sections below you do not need to complete because you already have them done.</p>
+
+    <ul>
+    
+        <li><a href="#SetupInstructions_ActivatingServicePackage">*Setup Instructions: Activating Service Package*</a></li>
+        
+       <li><a href="#SetupInstructions_SignTheAgreements_AllOtherExchanges">Sign the Agreements (All Other Exchanges)</a></li>
+
+        <li><a href="#SetupInstructions_ActivateTheExchanges_AllOtherExchanges">Activate the Exchanges: Other Exchanges</a></li>
+        
+       <li><a href="#SetupInstructions_SierraChartSoftwareInstructions">*Setup Instructions:  Sierra Chart Software Instructions*</a></li>
+       
+   
+    </ul>
+    
+    <div style="text-align: center;"><a href="../images/denaliexchangedatafeedcfeactivationlist.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denaliexchangedatafeedcfeactivationlist.png" alt="Denali Exchange Data Feed Activation List" width="750"></a></div>
+
+    <section class="h3">
+        <h3 id="SetupInstructions_SignTheAgreements_AllOtherExchanges">Sign the Agreements (All Other Exchanges)</h3>
+        <div class="member-link">[<a href="#SetupInstructions_SignTheAgreements_AllOtherExchanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section of the Setup Instructions for the Denali Exchange Data Feed has you complete and sign the data agreements.  </p>
+        
+        <p>The required agreements must be completed in order for Real-Time data to be supplied to your Sierra Chart software.</p>
+
+        <div style="text-align: center;"><a href="../images/denaliexchangedatafeedcfeactivationlist-agreements.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denaliexchangedatafeedcfeactivationlist-agreements.png" alt="Denali Activation CFE Exchange Agreements" width="750"></a></div>
+
+        <p>The data agreements have questions related to whether you are considered a Professional or a Non-Professional trader. If you have any questions, post them on the <a href="https://www.sierrachart.com/SupportBoard.php" Target="_blank" rel="noopener noreferrer">Sierra Chart Support Board</a>.</p>
+
+        <p>It is necessary to electronically sign both the <b>Uniform Market Data Subscriber Agreement</b> and the <b>Non Professional Certification</b> at the same time.</p>
+
+        <ol>
+            <li>Select the link for:
+            <ul>
+                <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_CFE" target="_blank" rel="noopener noreferrer">CFE</a></li>
+                
+                <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_EUREX" target="_blank" rel="noopener noreferrer">EUREX</a></li>
+                
+                <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_NASDAQ" target="_blank" rel="noopener noreferrer">NASDAQ TotalView (US equities with market depth data)</a> </li>
+                
+                <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_STOCKS" target="_blank" rel="noopener noreferrer">US Equities Consolidated Tape</a> </li>
+                
+                <li>Exchange agreements not required for NASDAQ Global Indexes.</li>
+            </ul>
+
+            <li>Go to the <b>Real-Time Data Agreements</b> section on that page. Example:
+                <div style="text-align: center;"><a href="../images/denaliagreements_cfe.png" rel="lightbox"><img class="screenshot" loading="lazy" src="../images/denaliagreements_cfe.png" alt=""></a></div>
+            </li>
+            
+            <li>Select the <b>Uniform Subscriber Agreement </b>.</li>
+
+            <li>Verify that the information at the top is correct. If any of it is incorrect, then exit from the agreement, go to <a href="https://www.sierrachart.com/UserControlPanel.php?page=ManageAccountInfo" target="_blank" rel="noopener noreferrer">Manage Account Information</a>, and update your information, then select the <b>Update Account Information</b> button. 
+
+            <br><br> 
+            Return back to the Exchange Agreements page. Refer to the steps above.</li>
+
+            <li>Enter the required information at the bottom of the form.</li>
+
+            <li>Select the <b>Submit</b> button.</li>
+
+            <li>Return to the Agreements page:
+                <ul>
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_CFE" target="_blank" rel="noopener noreferrer">CFE</a></li>
+                    
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_EUREX" target="_blank" rel="noopener noreferrer">EUREX</a></li>
+                    
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_NASDAQ" target="_blank" rel="noopener noreferrer">NASDAQ TotalView (US equities with market depth data)</a>
+                    </li>
+                    
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=ExchangeAgreements_STOCKS" target="_blank" rel="noopener noreferrer">US Equities Consolidated Tape</a> </li>
+                    
+                     <li> Exchange agreements not required for NASDAQ Global Indexes. </li>
+                </ul>
+            </li>
+
+            <li>Go to the <b>Real-Time Data Agreements</b> section on that page.</li>
+
+            <li>Select the <b>Non Professional Certification</b>link.</li>
+
+            <li>At the bottom of the page enter your name and select either <b>I am a Nonprofessional</b> or <b>I *do not qualify* as a Nonprofessional</b> button as appropriate.</li>
+            
+            <li>Continue with the <a href="#SetupInstructions_ActivateTheExchanges_AllOtherExchanges">Activate the Exchanges: Other Exchanges</a> instructions.</li>
+        
+        </ol>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="SetupInstructions_ActivateTheExchanges_AllOtherExchanges">Activate the Exchanges</h3>
+        <div class="member-link">[<a href="#SetupInstructions_ActivateTheExchanges_AllOtherExchanges">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section gives instructions to activate the specific exchanges for which Real-Time data is required.</p>
+
+
+        <p>You will <em>not</em> receive real-time data for symbols on exchanges that are not <b>activated</b>.</p>
+        
+        <p>  The screenshots in this section are for the CFE exchange but are there just as a general guidance.  When working with other exchanges the user interface views are similar. </p>
+        
+        <div style="text-align: center;"><a href="../images/denaliexchangedatafeedcfeactivationlist-activateexchanges.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denaliexchangedatafeedcfeactivationlist-activateexchanges.png" alt="Denali CFE Activate Exchanges" width="750"></a></div>
+        <ol>
+            
+            <li>Go to the appropriate exchange page for activating exchanges:
+                <ul>
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedCFE" target="_blank" rel="noopener noreferrer">CFE</a></li>
+                    
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedeUREX" target="_blank" rel="noopener noreferrer">EUREX</a></li>
+                    
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedNASDAQ" target="_blank" rel="noopener noreferrer">NASDAQ TotalView</a>
+                    
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedSTOCKS" target="_blank" rel="noopener noreferrer">US Equities Consolidated Tape</a>
+                    
+                    <li><a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedNASDAQIndexes" target="_blank" rel="noopener noreferrer">NASDAQ Global Indexes</a>
+                    </li>
+                </ul>
+        
+            </li>
+            
+            <li> Look at the cost of the exchange:
+             
+
+            <div style="text-align: center;"><a href="../images/cfeactivateexchange.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/cfeactivateexchange.png" alt="Exchange List" width="750"></a></div>
+            
+            Add sufficient credit to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit" target="_blank" rel="noopener noreferrer">Services Balance</a> on your account to if there is not a sufficient services balance already to pay for this exchange.
+             <br> <br>
+            You will need to <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login</a> to your account if you are not already. You can also login by selecting <b class="menu_item">Help &gt;&gt; Account Control Panel</b> from  within the Sierra Chart program.
+            <br> <br>            
+            You also need to be sure your account has a sufficient credit balance before the beginning of the next month to cover the cost of the exchange fees for the next month. Otherwise, you will lose access to the market data feed service.
+            <br> <br>
+             <div style="text-align: center;"><a href="../images/addaccountcredit.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/addaccountcredit.png" alt=" " width="750"></a></div>
+            </li>
+                
+            <li>Select the <b>Activate</b> button for the exchange(s) that are required.  An additional confirmation is required to complete this.  Make sure to confirm.    </li>
+            
+            <li> Continue with the <a href="#SetupInstructions_SierraChartSoftwareInstructions">*Setup Instructions:  Sierra Chart Software Instructions*</a>.  </li>
+
+        </ol>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="USEquitiesConsolidatedTapeDataFeedNotes">US Equities Consolidated Tape Data Feed Notes</h2>
+    <div class="member-link">[<a href="#USEquitiesConsolidatedTapeDataFeedNotes">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>  For the US Equities Consolidated Tape Data feed, the Daily Session Open,  High, Low,  are   only maintained  during the regular trading hours from 9:30 AM to 16:00 US Eastern time.</p>
+</section>
+
+<section class="h2">
+    <h2 id="NasdaqDataFeedNotes">Nasdaq TotalView Data Feed Notes</h2>
+    <div class="member-link">[<a href="#NasdaqDataFeedNotes">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p> The  <a href = "https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedNASDAQ" target="_blank" rel="noopener noreferrer">NASDAQ Total View</a> data feed provides real-time data for NASDAQ, NYSE and AMEX/NYSE Market  stocks and ETFs. All of the US equities are included.  </p>
+    
+    <p>With the NASDAQ TotalView data feed, there is no official Open, High, Low, or  Settlement/Close prices provided.  </p>
+
+   <p> The Open price for a  symbol will be the open for the first trade at or after 4 AM US Eastern time   for that symbol.  You can validate this by going into  <b class="menu_item">Chart  &gt;&gt; Chart Settings</b> and enable  <a href = "index4ec1.html?page=doc/SessionTimes.php#EveningSession">Use Evening Session</a> to see the data at that time in the chart. </p>
+   
+   <p>NASDAQ TotalView symbols  use this format:  <em>[standard stock symbol]-NQTV</em> </p>
+   <p>Example: GM-NQTV </p>
+
+    <p>You can find common symbols and search for NASDAQ symbols through   <b class="menu_item">File &gt;&gt; Find Symbol  &gt;&gt; NASDAQ TotalView (NASDAQ/NYSE/AMEX Stocks)</b>. </p>
+
+     <p>We have listed several hundred common stock symbols in that list as well for easy selection. </p>
+
+    <p> To search for a symbol, refer to  <a href = "index8793.html?page=doc/FileMenu.html#FileFindSymbol_Search">Symbol Search</a>. </p>
+    
+    <p>You can only search by symbol and not descriptions. Support for searching by descriptions will come later. </p>
+    
+    <p>For a delayed version of the NASDAQ TotalView data feed, use the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a>. According to exchange rules, Sierra Chart is  <em>not</em> able to provide delayed streaming market depth data or market by order data for the NASDAQ TotalView data feed. </p> 
+    
+    <p>Historical market depth data is provided but it has a one-day delay with the Delayed Exchange Data Feed. There is no delay of historical market depth data when receiving real-time NASDAQ TotalView data.</p>
+    
+    <p>  The NASDAQ data feed is a consistently low latency data feed, provided direct out of New York direct from NASDAQ. There are no intermediaries at all.</p>
+
+    <p> You will not see all of the trades for a particular symbol when using NASDAQ TotalView. Only what is traded through NASDAQ. Therefore, the volumes will be less. This can result in fewer chart bars.  </p>
+    
+    <p>  The volume for NASDAQ TotalView symbols  is only the volume traded on NASDAQ for the symbol. This is only a fraction of the overall volume traded for a particular symbol among  the various exchanges/venues  it is traded on.  </p>
+    
+    <p>For the complete volume and trades, the full consolidated tape  data is required. This is offered through the  <a href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation#USEquities">US Equities Consolidated Tape Exchange</a>.  Use this exchange and symbols for the full trading volume and trades.</p>
+    
+    
+    <p>In the case of a  <a href = "index03a9.html?page=doc/GettingStarted.php#AlternateMethodOpenChart_Historical">Historical Daily Chart</a>  the chart bars  <em>other than</em> for the current day,  will show the full consolidated tape volume.  The current day volume will be showing the NASDAQ TotalView volume.  The NASDAQ TotalView volume is going to be lower since it only includes trading on NASDAQ for the stock.</p>
+    
+    <p> NASDAQ TotalView stocks usually trade in increments of .01 and that is what the  <b>Tick Size</b> in Sierra Chart is set to for these stock symbols.   However, sometimes there are trades  based upon an increment of .005. Here is a trade price example for SPY-NQTV: 382.275  </p>
+    
+   <p>NASDAQ TotalView data does  <em>not</em> support  the option  <a href="index4cf4.html?page=doc/ChartSettings.html#CombineTradesIntoOriginalSummaryTrade">Combine Trades into Original Summary Trade</a>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="NASDAQGlobalIndexDataFeed">Nasdaq Global Index Data Feed</h2>
+    <div class="member-link">[<a href="#NASDAQGlobalIndexDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p> Sierra Chart has a real time data feed for NASDAQ Global Indexes which covers the major US and world indexes and numerous other indexes. Approximately 10,000 indexes are available. </li>
+
+    <p>Indexes include: S&P 500 index, Dow Jones Industrials index, NASDAQ 100 index, Volatility index. </p>
+
+  <p>All of these indexes are calculated using the NASDAQ calculation method.  </p>
+
+ <p> NASDAQ Global indexes can be  activated through the  <a href = "https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeedNASDAQIndexes">NASDAQ Global Indexes</a> page. </p>
+
+ <p>  This data feed is available to all users on Service Package 10 or higher and has no cost. A delayed version of the data feed will be available soon for the base packages.</p>
+
+ <p>There are nearly 10,000 indexes available. </p>
+
+ <p>Symbols can be found and listed through  <b class="menu_item">File  &gt;&gt; Find Symbol  &gt;&gt; NASDAQ Global Indexes</b> from within Sierra Chart. </p>
+
+  <p> To use this data feed you need to be running version 2492 or higher.  Update through  <b class="menu_item">Help &gt;&gt;  Download Current Version</b>.</p>
+
+ <p>  Any of the symbols found through the  <a href = "https://indexes.nasdaqomx.com/Home/ExportGidsDirectory" target="_blank" rel="noopener noreferrer">Global Indexes Directory</a> can be used. You just need to add the following suffix to them:  <b> <em>-NQGI</em></b>. </p>
+
+ <p> In  <b class="menu_item">File &gt;&gt; Find Symbol  &gt;&gt; NASDAQ Global Indexes</b> from within Sierra Chart, you can select  <b>(Get All NASDAQ Global Indexes Symbols)</b> and then press the   <b>Get Symbols</b> button to get the approximately 10,000 symbols. It will take about 25 seconds to get the entire list of symbols.</p> 
+ 
+</section>
+
+<section class="h2">
+    <h2 id="RealTimeDataTrial">Real-Time Data Free Trial and Alternatives</h2>
+    <div class="member-link">[<a href="#RealTimeDataTrial">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The CME Group offers a free trial for their exchange(s) for up to one calendar month, for the first time a customer is using the Denali Exchange Data Feed.</p>
+
+    <p>To use the Free Trial follow the <a href="#SetupInstructions">Setup Instructions: CME/CBOT/NYMEX/COMEX Exchanges</a> on this page and activate the exchange(s). If this is the first time using the Denali Exchange Data Feed, then the remainder of the month in which the exchange(s) is activated will be at no cost. Unless deactivated, prior to the next month, the full amount for the exchange(s) will be billed on the first of the following month.</p>
+     
+    <p>A free real-time data trial is connected to the calendar month it is activated in. This means that when you activate an exchange which is free in the first month, it is free until the end of that calendar month. So if there are only 5 days remaining in the month you only have a free trial for the remaining 5 days. The next month you will be billed for the full amount of the exchange. It is advantageous <em>if it is near the end of the month to wait until the next month</em> to take advantage of the free trial.</p>
+
+    <p>There is only one free trial possible. After you use it, there is no further entitlement to a free trial.</p>
+    
+    <p>When activating exchanges, you are only able to activate the exchanges listed in the <a href="index9a78.html?page=doc/FuturesData.php#CMEExchangeFeesForProfessionalsAndUsersWithoutASupportedTradingAccount" target="_blank" rel="noopener noreferrer">CME Exchange Fees for Professionals and Users Without a Supported Trading Account</a> section if you do not have a funded trading account with a supported trading service.</p>
+
+    <p>As an alternative to real-time data, it is recommended to use the Delayed Data Feed which will perform the same as the real-time data except it is delayed by 10 minutes and 10 seconds. Refer to the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Connections">Connections</h2>
+    <div class="member-link">[<a href="#Connections">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <section class="h3">
+        <h3 id="DenaliExchangeDataFeedConnectionsOnSameComputerSimultaneously">Denali Exchange Data Feed Connections on Same Computer Simultaneously</h3>
+        <div class="member-link">[<a href="#DenaliExchangeDataFeedConnectionsOnSameComputerSimultaneously">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Up to 3 connections for the Denali Exchange Data Feed can be used on the <em>same computer/device</em> at the same time. This only applies to the same computer/device.</p>
+        
+         <p>  This connection limit applies per exchange and the number of devices are counted separately for each exchange.  For example, you can have a connection for CME Group on one computer, a connection on another computer to EUREX, and a connection to CFE or NASDAQ TotalView or US Equities Consolidated Tape on another computer. This is allowed. </p>
+
+        <p>When exceeding the connection limit on a single computer, Sierra Chart will not be able to connect to the data feed and you will see this message in the Sierra Chart Message Log:</p>
+        
+        <div class="MessageLog">SC Data - All Services | Logon error received from server: Connection limit exceeded.  | MaxConnectionsForSameDevice = 1, NumCurrentConnectionsForSameDevice = 2 | (Date-Time)</div>
+        
+         <p> The following is the message you would   receive in the Message Log, when connecting from different devices at the same time if that is not authorized for your account. </p>
+        
+        <div class="MessageLog">SC Data - All Services | Logon error received from server: Connection limit exceeded. | MaxConnectionsDifferentDevices = 1, NumCurrentConnectionsDifferentDevices = 2 | (Date-Time) </div>
+        
+        
+        <p> When receiving the above message  and you do  <em>not</em> have Sierra Chart connected from different devices but two instances  on the same device, then  update Sierra Chart to the latest version  with  <b class="menu_item">Help &gt;&gt; Download Current Version</b>. </p>
+        
+        <p> When receiving the above message  and you do  <em>not</em> have Sierra Chart connected from different devices but two instances  on the same device, then reconnect all of them with <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> to resolve this issue.   Although this should not occur in newer versions of Sierra Chart. </p>
+              
+        <p>If you want to disable the use of the Denali Exchange Data Feed in an instance of Sierra Chart, then disable the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt;  Common Settings &gt;&gt; Allow Support for Sierra Chart Data Feeds</b> option in that instance of Sierra Chart.</p>
+
+        <p>Reconnect to the data feed after changing that option, with <b class="menu_item">File &gt;&gt; Disconnect</b> and <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>. For additional information, refer to <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices" target="_blank" rel="noopener noreferrer">Integration with Trading Services</a>.</p>
+        
+        <p>It is possible to share this data feed to multiple installations of Sierra Chart on the same computer system. There are two ways this can be done.</p>
+        
+        <p>The easiest way and recommended way is to simply use the <b class="menu_item">File &gt;&gt; New Instance</b> functionality to start a new instance of Sierra Chart. For complete documentation, refer to <a href="index9bbd.html?page=doc/NewInstance.php">Using DTC Server for Data and Trading in Another Sierra Chart Instance</a>.</p>
+
+        <p>The other method which would need to be used by separate installations of Sierra Chart on the same computer (not started using File &gt;&gt; New Instance), is documented in the <a href="index6ebd.html?page=doc/MultipleServices.html#AccessingMarketDataFromOtherInstancesOfSierra%20Chart">Accessing Market Data from Other Instances of Sierra Chart</a> instructions.</p>     
+    </section>
+
+    <section class="h3">
+        <h3 id="DenaliExchangeDataFeedOnTwoComputersSimultaneously">Denali Exchange Data Feed on Two Computers Simultaneously</h3>
+        <div class="member-link">[<a href="#DenaliExchangeDataFeedOnTwoComputersSimultaneously">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When trying to access the Denali Exchange Data Feed on more than one computer/device at the same time,  <em>due to strict rules from the exchanges</em>  Sierra Chart will not be able to connect to the data feed and you will see this message in the Sierra Chart Message Log:</p>
+        
+        <div class="MessageLog">SC Data - All Services | Logon error received from server: Connection limit exceeded. | (Date-Time)</div>
+
+        <p>If you have a need to use the Denali Exchange Data Feed on a second computer <em>at the same time</em> as the first computer, then you can  <em>pay for a second set of exchange fees</em> as  <em>required by the exchange</em>.  </p>
+        
+        <p>To enable this option go to the <a href="https://www.sierrachart.com/UserControlPanel.php?page=DenaliDataFeed#Exchanges">Denali Exchange Data Feed Exchanges</a> webpage and set the option for <b>Number of Systems</b> to <b>2 Systems</b>.</p>
+
+        <div style="text-align: center;"><a href="../images/denalidatafeed-numberofsystems.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/denalidatafeed-numberofsystems.png" alt="Denali Exchange Data Feed - Number of Systems" width="500"></a></div>
+
+        <p>At the time that the <b>Number of Systems</b> is set to <b>2 Systems</b>, your account will be charged the full monthly exchange fees for all exchanges that are active, regardless of when in the month that this is activated. Note that only the exchange fees are charged, there is not an additional data feed fee.</p>
+        
+        <p>As an alternative to the above, you can use the <a href="indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Delayed Exchange Data Feed</a> on the second or more computers rather than paying the exchange fee.  To use the Delayed Exchange Data Feed, refer to <a href="index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php#UsingDelayedMarketData">Using Delayed Market Data</a>.  </p>
+        
+        <p>  If there have been other data  feeds you have used, which allow   2 connections at the same time to different computers/devices, to receive  real-time market data from an exchange  where an exchange fee is required and you only pay one exchange fee per month, then they are not following exchange rules.  We have  known this to be the case with Transact.   Sierra Chart cannot do the same thing as it would not be compliant.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="CancellingTheDenaliExchangeDataFeed">Canceling the Denali Exchange Data Feed</h2>
+    <div class="member-link">[<a href="#CancellingTheDenaliExchangeDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Canceling the Denali Exchange Data Feed is very straightforward and only requires a few steps. There are no refunds for unused usage time associated with the Denali Exchange Data Feed.</p>
+    
+    <ol>
+        <li>Go to the <a href="usercontrolpanla58c.html?page=ServicesActivation#AvailableServices" target="_blank" rel="noopener noreferrer">Activate Services</a> section of the Activate Services webpage.</li>
+
+        <li>If not already logged in, log in with the Sierra Chart account for which you want to cancel the data feed.</li>
+
+        <li>Select the pulldown menu that lists the Sierra Chart packages and change to the appropriate selection for either Package 3 or Package 5. Typically you would select the number of months for the package based on your currently selected package. But if you want to make a change to the number of months to pay for up-front at the next renewal, then this can be done at this time.</li>
+
+        <li>Select the <b>Update/Set</b> button.</li>
+
+        <li>Close the webpage if desired.</li>
+    </ol>
+
+    <p>Once the data feed has been canceled you will no longer be able to receive data. Since the exchange data is paid for a full month, it can be advantageous to end the data feed at the end of a calendar month.</p>
+</section>
+
+
+<section class="h2">
+    <h2 id="UsingDenaliFuturesOptionsDataWithTradingService">Using Denali Futures Options Data with Trading Service</h2>
+    <div class="member-link">[<a href="#UsingDenaliFuturesOptionsDataWithTradingService">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> It is supported to use the futures options market data from the  <a href = "#Introduction">Denali Exchange Data Feed</a>   and trade  options using the corresponding symbol through your Trading service.  Follow the below procedure to do this.</p>
+
+        <ol>
+            <li>Set Sierra Chart to connect to your Trading service. Refer to <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices" target="_blank" rel="noopener noreferrer">Integration with Trading Services</a>. </li>
+            
+            <li>Update the Symbol Settings by following the <a href = "index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update Symbol Settings</a> instructions. </li>
+            
+            <li> Select   <b class="menu_item">File &gt;&gt; Find Symbol</b>.  </li>
+
+            <li> In that list, locate and expand <b>Futures Options -  CME/CBOT/NYMEX (Denali Data)</b> item, for the particular exchange you want futures options for. Refer to the image below.
+            
+                  <div style="text-align: center;"><a href="../images/findsymbols_futuresoptions_externaltradingservices.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/findsymbols_futuresoptions_externaltradingservices.png" alt="Select Service"></a></div>
+
+            
+            </li>
+            
+            <li>  In that list select the particular underlying symbol you want to get futures options for.</li>
+
+            <li> Press the <b>Get Options</b> button to get a list of the available  option contracts.  The options will be requested and that may take about 10 seconds to receive them all. They are sent at a regulated pace  from the server and also cached locally for about 10 minutes.</li>
+            
+            <li> A new window will open displaying all of the futures options.   Select the particular one you want from the list.  Press OK.</li>
+            
+            <li>Open a chart or Trading DOM by using the <b>Open Historical/Intraday Chart</b> or   <b>Open Trading DOM</b> button.</li>
+            
+            <li> Select  <b class="menu_item">Chart &gt;&gt; Chart Settings</b>  from the main menu  for the chart or the Trading DOM menu. </li>
+            
+             <li> Set the  <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol" target="_blank" rel="noopener noreferrer">Trade and Current Quote Symbol</a>  to your  Trading service options symbol. This allows you to trade that symbol. 
+             <br>
+             <br>
+             
+              In the case of Interactive Brokers, refer to <a href = "indexa93b.html?page=doc/IBSymbols.html" target="_blank" rel="noopener noreferrer">Interactive Brokers Symbols</a>.
+              <br>
+              <br>
+              In some cases to get a listing of options symbol through your Trading service,  follow the  <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#FuturesOptions" target="_blank" rel="noopener noreferrer">Futures Options</a> instructions.  The general procedure described is also applicable to some Trading services as well. Although not Interactive Brokers.
+             </li>
+             
+              <li> Enable   the <a href = "index4cf4.html?page=doc/ChartSettings.html#UseAsTradeOnlySymbol" target="_blank" rel="noopener noreferrer">Use as Trade Only  Symbol</a> option.</li>
+              <li>  Press  <b>OK</b>.</li>
+        </ol>
+</section>
+
+<section class="h2">
+    <h2 id="UsingDenaliFuturesSpreadDataWithTradingService">Using Denali Futures Spread Data with Trading Service</h2>
+    <div class="member-link">[<a href="#UsingDenaliFuturesSpreadDataWithTradingService">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is supported to use the futures spread market data from the <a href="#Introduction">Denali Exchange Data Feed</a> and trade spreads using the corresponding symbol through your Trading service.  Follow the below procedure to do this.</p>
+
+    <ol>
+        <li>Set Sierra Chart to connect to your Trading service. Refer to <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#IntegrationWithTradingServices" target="_blank" rel="noopener noreferrer">Integration with Trading Services</a>. </li>
+        
+        <li>Update the Symbol Settings by following the <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update Symbol Settings</a> instructions. </li>
+        
+        <li>Select <b class="menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+        <li>In that list, locate and expand <b>Futures Spreads -  CME/CBOT/COMEX/NYMEX (Denali Data)</b> item, for the particular exchange you want futures spreads for. Refer to the image below.
+        
+              <div style="text-align: center;"><a href="../images/findsymbol_denalispreads.png" rel="lightbox"><img class="screenshot" loading="lazy"  src="../images/findsymbol_denalispreads.png" alt="Select Service"></a></div>
+        </li>
+        
+        <li>In that list select the particular underlying symbol you want to get futures spreads for.</li>
+
+        <li>Press the <b>Get Spreads</b> button to get a list of the available spread contracts. The spreads will be requested and that may take about 10 seconds to receive them all. They are sent at a regulated pace  from the server and also cached locally for about 10 minutes.</li>
+        
+        <li>A new window will open displaying all of the futures spreads. Select the particular one you want from the list. Press OK.</li>
+        
+        <li>Open a chart or Trading DOM by using the <b>Open Historical/Intraday Chart</b> or <b>Open Trading DOM</b> button.</li>
+        
+        <li> Select  <b class="menu_item">Chart &gt;&gt; Chart Settings</b>  from the main menu  for the chart or the Trading DOM menu. </li>
+        
+         <li>Set the  <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol" target="_blank" rel="noopener noreferrer">Trade and Current Quote Symbol</a>  to your Trading service spread symbol. This allows you to trade that symbol.
+         <br>
+         <br>
+         
+          In the case of Interactive Brokers, refer to <a href = "indexa93b.html?page=doc/IBSymbols.html" target="_blank" rel="noopener noreferrer">Interactive Brokers Symbols</a>.
+          <br>
+          <br>
+          In some cases to get a listing of options symbol through your Trading service, follow the <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php#ExchangeTradedSpreads" target="_blank" rel="noopener noreferrer">Exchange Traded Spreads</a> instructions.  The general procedure described is also applicable to some Trading services as well. Although not Interactive Brokers.
+        </li>
+         
+        <li>Enable the <a href = "index4cf4.html?page=doc/ChartSettings.html#UseAsTradeOnlySymbol" target="_blank" rel="noopener noreferrer">Use as Trade Only  Symbol</a> option.</li>
+
+        <li>Press <b>OK</b>.</li>
+    </ol>
+</section>
+
+<hr><p>*Last modified Thursday, 29th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/DenaliExchangeDataFeed.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:57:33 GMT -->
+</html>  

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/OrderAllocationToTradeAccounts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1683628816') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/OrderAllocationToTradeAccounts.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Order Allocation to Trade Accounts -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index56e2.html?page=doc/OrderAllocationToTradeAccounts.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index56e2.html?page=doc/OrderAllocationToTradeAccounts.html">Order Allocation to Trade Accounts</a></h4> </div>     <h1 class="PageName">Order Allocation to Trade Accounts</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Functionality">Functionality</a></li>
+    <li><a href="#SetupInstructions">Setup Instructions</a></li>
+    <li><a href="#OrderActionsNotPerformedInAllocatedAccounts">Order Actions Not Performed in Allocated Accounts</a></li>
+</ul>
+
+<hr>
+     <p class = "GeneralBackgroundHighlight">  <b>Important Notice:</b>  The Order Allocation to  Trade Accounts functionality has been developed in response to user requests.  It does work properly based upon its design. However, there is no guarantee it is going  to work as you would  want because oders can be rejected or not processed   or not fill or fill at different times for reasons  outside of the control of this functionality resulting in Inconsistencies among Trade Accounts. </p>
+     
+     <p class = "GeneralBackgroundHighlight">Sierra Chart support does <em>not</em> provide any trade analysis for problems when using  the Order Allocation to  Trade Accounts functionality.  We do not have the   <em>time or the interest</em> to be analyzing your trading activity, and the behavior of external trading services! Please understand that.   We care that the functionality works as it is designed and it does.   We do not care about all of the trading that you are doing. That is your responsibility. This analysis is your responsibility!  Your trading is  <em>your burden</em>. Not ours. We do not want to be burdened with your trading, and all of the issues which externally occur. You need to use the   <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Trade Activity Log</a>  to analyze all of the order activity  and resulting  Trade Positions. </p>
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     
+     
+     <p class = "GeneralBackgroundHighlightLight">  <b>Important Notice:</b> Since the release of version 2371, there are many  <a href = " #Functionality">enhancements</a> to the <b>Order Allocation to Trade Accounts</b> functionality. It is important to be running this version or higher.  Do not use this functionality in any older version of Sierra Chart. The new enhancements have been under development in versions approximately from 2364 to 2370,  and therefore are not fully supported in those versions.</p>
+     
+      <p class = "GeneralBackgroundHighlightLight">Version 2376 resolves a problem with the Order Allocation to Trade Accounts functionality when using the  <a href = "index0ef8.html?page=doc/AttachedOrders.html#ScalingIn">Scale In</a> functionality with Attached Orders.  When using that functionality you must run version 2376 or higher to avoid an issue with an improper increase in the quantities of the  Attached Orders.</p>
+
+    <p>The <b>Order Allocation to Trade Accounts</b> functionality allows for orders that are placed on one trading account to be copied exactly  to a set of other specified trading accounts.</p>
+
+    <p>The trade accounts to which the orders can be copied,  can only be those Trade Accounts that available on the username that is used to login to the  Trading service.  To  see what accounts are available on the logged in username, refer to   <a href = "index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Selecting Trade Account</a>.   All of the available accounts will be listed in that list. </p>
+    
+    <p>  This Order Allocation to Trade Accounts functionality can also be used in  <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a>. It is recommended to use this  mode for testing and evaluation of this feature.</p>
+    
+     <p>   However, Order Allocation to Trade Accounts cannot be used with the <a href = "indexe891.html?page=doc/Backtesting.php">Back Testing</a> functionality.  It will not function properly  and the orders allocated to the other accounts would always be entered and filled based upon the current price and time. </p>
+    
+    <p>When using   <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a>, additional <b>Sim</b> accounts can be added to be used within Sierra Chart by changing the value in the <a href="index4451.html?page=doc/GlobalTradeSettings.html#NumberSimulationAccounts">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Number of Simulation Accounts</a> setting.</p>
+
+    <p>The list of Trade Accounts to which the orders are copied is stored with the chart on which the  trade order allocations/copies are made. Changing the symbol of the chart does not change the Trade Account allocations that have been made or the status of the Order Allocations.</p>
+
+    <p>If a chart is duplicated, the settings for the <b>Order Allocation to Trade Accounts</b> are <em>not</em> copied to the new chart. Order allocations will have to be setup in the newly duplicated chart.</p>
+
+    <p>If the Trading Account on the   <a href = "index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow">Trade Window</a> is changed to a different Trading Account while the <b>Order Allocation to Trade Accounts</b> is active and orders  are subsequently placed, then copies of the orders from that trading account will be made to the accounts that are specified in the <b>Allocation Accounts</b> (Refer to screenshot below).</p>
+    
+    <div style="text-align: center;"><a href="../images/orderallocationtotradeaccountswindow.png" rel="lightbox"><img src="../images/orderallocationtotradeaccountswindow.png" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <p>If the Trading Account on the Trade Window is changed to a different  Trade Account while the <b>Order Allocation to Trade Accounts</b> is active, and if the Trade Account selected is one of the Trading Accounts already specified in the <b>Allocation Accounts</b>, then when orders are placed, the primary account order is placed as normal and copies of those orders are placed for the other Trade Accounts specified in the <b>Allocation Accounts</b>. A second order is not placed for the primary account, even though it is also found in the <b>Allocation Accounts</b>.</p>
+    
+     <p> It is only supported to copy trades among trading accounts on the same connection/Trading service being used within Sierra Chart. For example, it is not possible to copy trades between a Live account and a Simulated account  because these will be on different trading connections. </p>
+     
+     <p> In the case when performing <a href = "index2bf5.html?page=doc/ACSILTrading.html">automated   trading from ACSIL</a>, the  new orders, order modifications, and order cancellations from this automated trading system will automatically be applied to the other accounts specified through the  <b>Allocation Accounts</b> list for the chart the automated trading system is on. Assuming the <b>Order Allocation to Trade Accounts Enabled</b> option is set to Yes.  Refer to the <a href="#SetupInstructions">Setup Instructions</a>.</p>
+     
+     <p> An order confirmation is always shown when using the Order Allocation to accounts functionality.  It contains a line that says  <b>Additional Accounts:</b> showing the other accounts the orders will be sent to as well. This cannot be disabled. </p>
+</section>
+
+
+<section class="h2">
+    <h2 id="Functionality">Functionality</h2>
+    <div class="member-link">[<a href="#Functionality">Link</a>] - [<a href="#top">Top</a>]</div>
+     
+     <p>The following functionality is supported.  </p>
+     
+     <ol>
+       <li>Can specify a quantity multiplier for the additional accounts an order is allocated to. This is entered as a floating-point number and rounded to the nearest integer after the multiplier is applied. A quantity of less than 1 is rounded up to 1. This is specified through the  <b>Allocation Trade Account Multiplier</b> (refer to screenshot below).</li>
+       
+        <div style="text-align: center;"><a href="../images/orderallocationtotradeaccountswindow.png" rel="lightbox"><img src="../images/orderallocationtotradeaccountswindow.png" alt="" class="screenshot" loading="lazy" width="240"></a></div>
+
+       <li>When modifying or canceling  the order from the primary trade account which was allocated to other accounts, those orders allocated other accounts will also be modified and canceled in the identical way. When there are changes to the order quantity (<b>Allocation Trade Account Multiplier</b>), the quantity multiplier will be applied.  <br> <br>
+       One exception to this is when the parent order fills, the Attached Orders for the original order will not cause the Attached Orders for the identical orders allocated to other accounts, to be modified in the same way since that will happen automatically with their own  parent order. </li>
+
+       <li>  All  <a href = "index783f.html?page=doc/OrderTypes.html">Order Types</a>  are supported.  Including  <a href = "index0ef8.html?page=doc/AttachedOrders.html#ScalingIn">Scale In</a> and  <a href = "index0ef8.html?page=doc/AttachedOrders.html#ScalingOut">Scale Out</a> functionality.</li>
+       
+       <li> When an order is submitted from a  Chart or Trading DOM  (the controlling  Chart/Trading DOM) that is configured to use the  Order Allocation to Trade Accounts functionality, the orders that are submitted to the other  Trade Accounts are linked  to this controlling order.  Therefore, even  if the Order Allocation to Trade Accounts is subsequently <em>disabled</em>,  this controlling order if it still exists,   will continue to control the orders submitted to the other Trade Accounts.</li>
+     </ol>
+</section>
+
+<section class="h2">
+    <h2 id="SetupInstructions">Setup Instructions</h2>
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <div style="text-align: center;">
+        <a href="../images/tradewindowconfirmationsstep1.png" rel="lightbox"><img src="../images/tradewindowconfirmationsstep1.png" alt="" width="300" ></a>  
+        
+        <a href="../images/tradewindowsettings-orderallocationtotradeaccounts.png" rel="lightbox"><img src="../images/tradewindowsettings-orderallocationtotradeaccounts.png" alt="" width="515"  ></a>
+    </div>
+
+    <ol>
+        <li>On the Trade Window select <b class="menu_item">M/Menu &gt;&gt; Settings &gt;&gt; Order Allocation to Trade Account</b> to bring up the <b>Order Allocation to Trade Account</b> window.
+
+        <div style="text-align: center;"><a href="../images/orderallocationtotradeaccountswindow.png" rel="lightbox"><img src="../images/orderallocationtotradeaccountswindow.png" alt="" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>Select an account in the <b>Available Accounts</b>   list.</li>
+
+        <li>Press the <b>Add</b>  button twice to add the account to the <b>Allocation Accounts (List)</b>.</li>
+
+        <li>Repeat  the prior two steps as needed to add additional accounts to the <b>Allocation Accounts</b>  list. Note that it is not possible to  add the currently active trading account specified in the <a href="index9473.html?page=doc/TradeWindow.html#SelectingTradeAccount">Trade Account</a> dropdown box on the Trade Window.</li>
+
+        <li> Set the <b>Order Allocation to Trade Accounts Enabled</b> setting to  <b> Yes</b> which indicates that the Order Allocation is active and any order placed from this chart will have exact copies of those orders placed for the accounts in the <b>Allocation Accounts</b>   list.  Setting that option to  <b> No</b> will disable the action of copying the orders to the other accounts.</li>
+        
+          <li>A Trade Account can be removed by selecting it in the  <b>Allocation Accounts</b> list and pressing the <b>Remove</b> button twice. </li>
+
+        <li>Select <b>OK</b> to close the <b>Order Allocation</b> window.</li>
+        
+        <li>You can now submit an order as you normally do and it will automatically get copied to the  other specified Trade Accounts.</li>
+        
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="OrderActionsNotPerformedInAllocatedAccounts">Order Actions Not Performed in Allocated Accounts</h2>
+    <div class="member-link">[<a href="#OrderActionsNotPerformedInAllocatedAccounts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+
+   <p>An order action that you perform in the primary controlling account which includes a new order,  a flatten or reverse operation, an order modification or an order cancellation,   will be performed in the other allocated counts. However,  these actions can be rejected for one reason or another. </p>
+
+    <p>You have  to monitor the Positions  for the other allocated accounts through   <b class="menu_item">Trade &gt;&gt;  <a href = "index7cfb.html?page=doc/TradeStatusWindows.html#PositionsWindow">Trade Positions Window</a></b>.  </p>  
+
+
+    <p> Look at the <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Trade &gt;&gt; Trade Activity Log</a>  to determine the cause of any order   rejection or action failures.</p>
+    
+    <p> A particular order action that fails in one or more other allocated accounts, does not  indicate a problem with Sierra Chart. Instead it is a circumstance outside the control of Sierra Chart. </p>
+
+</section>
+
+<hr><p>*Last modified Tuesday, 09th May, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/OrderAllocationToTradeAccounts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:16 GMT -->
+</html>  

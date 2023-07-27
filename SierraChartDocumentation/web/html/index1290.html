@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeActivityLogAnalysis.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1682001757') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/TradeActivityLogAnalysis.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Trade Activity Log Analysis -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index1290.html?page=doc/TradeActivityLogAnalysis.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a> &gt;&gt; <a  href="index1290.html?page=doc/TradeActivityLogAnalysis.php">Trade Activity Log Analysis</a></h4> </div>     <h1 class="PageName">Trade Activity Log Analysis</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#DeterminingOriginOfOrder">Determining the Origin of a New/Modified Order</a></li>
+    <li><a href="#SupportAssistedTradeActivityLogAnalysis">Support Assisted Trade Activity Log Analysis</a></li>
+    
+    <li><a href="#PossibleReasonsForUnexpectedTradingIssues">Possible Reasons for Unexpected Trading Issues</a></li>
+     
+</ul>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page contains sections which describe various types of Trade Activity Log analysis procedures.</p>
+</section>
+
+<section class="h2">    
+    <h2 id="DeterminingOriginOfOrder">Determining the Origin of a New/Modified Order</h2>
+    <div class="member-link">[<a href="#DeterminingOriginOfOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If there is a question from an individual  user or the trading/broker service, about the origin  of either a non-simulated or simulated new order, which may or may not have filled, order modification, or order cancellation,  then follow these instructions to make that determination.</p>
+    
+     <p> These instructions will allow you to determine what particular  Chart, Trading DOM or Automated Trading Study the order originated from, was modified from, or was canceled from. </p>
+     
+     <p> In the case of <em>non-simulated trading</em>, these instructions will allow you to determine whether the order originated from Sierra Chart or not. </p>
+
+    <ol>
+        <li>Select <b Class = "menu_item">Trade &gt;&gt; Trade Activity Log</b> on the main Sierra Chart menu.</li>
+
+        <li>On the Trade Activity Log window, select  <b>Trade Activity</b>  from the top level menu.</li>
+
+        <li>At the top left select <b> All Activity</b> to list both Orders and Fills.</li>
+
+        <li>In the list of Symbols, select the symbol.</li>
+
+        <li>In the list of Trade Accounts, select the particular Trade Account the order was submitted to. If you are not sure of the particular Trade Account, select <b>All Accounts</b>. 
+        <br> <br>
+        In the case of simulated trading within Sierra Chart, these accounts will begin with <b Class = "GeneralBackgroundHighlight">Sim#</b>.</li>
+
+        <li>In the <b>Date Range to Display &gt;&gt; From Date</b> box, enter a date which is earlier than the date of the order being questioned.</li>
+
+        <li> Make sure <b>Date Range to Display &gt;&gt; To &gt;&gt; Today </b> is checked.</li>
+        <li>  In the list  of Internal  Order IDs make sure that <b> All Internal Order IDs</b> is selected.</li>
+        <li>  In the list of Notes, make sure <b>All Notes</b> is selected.</li>
+
+        <li>Press the <b>Apply</b> button.</li>
+
+        <li>Look at the <b>DateTime</b> column in the list on the  <b>Trade Activity</b> tab, the <b>OrderActionSource</b> column  and any other helpful columns,  to locate the first line of the particular order in question.   The time zone is going to be according to the global  <a href =  "index219e.html?page=doc/TimeZone.html"  target="_blank" rel="noopener noreferrer">Time Zone</a> setting in Sierra Chart.</li>
+
+        <li>   If you cannot find any evidence of the order in the log, then the order did not originate from Sierra Chart.</li>
+
+        <li> When you find one or more lines for the order, look at the <b>OrderActionSource</b> column. Find the line where the <b>OrderActionSource</b> field contains the text "<b>User order entry</b>". Example:  <em><b>ESM23-CME[C] 10 Min #2 | User order entry | Last: 4150.50. Attached Order</b></em>.
+                
+        <div style="text-align: center;"><a href="../images/tradeactivitylog_ordersource.png" rel="lightbox"><img src="../images/tradeactivitylog_ordersource.png" alt="" class="screenshot" loading="lazy" width="675"></a></div>
+        
+        
+        </li>
+        
+        <li>The line that contains the text "<b>User order entry</b>" in the <b>OrderActionSource</b> field, definitively indicates an order that has been submitted from Sierra Chart. This text also gives the particular Chart Number the order originated from.  In this case chart #2.     In the screenshot above, the order originated from chart #1. The Chartbook name is not given.</li>
+        
+        <li> If the order is from an automated trading study, then the study that submitted the order will be given as well. You will also see the text <em><b>Auto-trade:</b></em> in the  <b>OrderActionSource</b> field  which indicates that this was an automated trade. </li> 
+        
+        <li>Orders can also originate from sub-instances of Sierra Chart started through  <b>File &gt;&gt; New Instance</b>.  In this particular case, you will see the text 	<em><b>Order from DTC client #4. Sierra Chart. 127.0.0.1 | Client text: Tag:</b></em>  for the <b>OrderActionSource</b> field.  If the sub instance is not started, you can start it through <b>File &gt;&gt; New Instance</b>. You can then examine the Trade Activity Log in that sub instance for further details as to the origin of the order.
+         <br> <br>
+        In this particular case the #4 does not indicate the sub instance number  but a connection identifier  for the sub instance. It continuously increments with each DTC  Server connection with a client.</li> 
+        
+        <li>  The chart / Trading  DOM that an order modification  originated from is also given in the  <b>OrderActionSource</b>  field. If the order modification is from an automated trading study, then  this field will also indicate this. Example: <em><b>Auto-trade order modification: YMZ19[M]  1 Min   #1 | Trade Management by Study.</b></em>	 This indicates that  the order modification originated from chart #1 and it was the   <a href = "index0ef8.html?page=doc/AttachedOrders.html#StudyControlledTargetsStops">Trade Management by Study</a> study which modified the order.</li>
+        
+        <li> If you see an order line in the Trade Activity tab that contains the text   <em> <b>| New order originated from external service</b></em>, this indicates the first order line for an order received from an external trading service. This is an indication that the order originated from the external trading service and  <em>not</em> within Sierra Chart.
+        
+        <div style="text-align: center;"><a href="../images/tradeactivitylog_%20neworderoriginatedfromexternalservice.png" rel="lightbox"><img src="../images/tradeactivitylog_%20neworderoriginatedfromexternalservice.png" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="SupportAssistedTradeActivityLogAnalysis">Support Assisted Trade Activity Log Analysis</h2>
+    <div class="member-link">[<a href="#SupportAssistedTradeActivityLogAnalysis">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Under certain conditions Sierra Chart support can analyze the <a href="index509f.html?page=doc/TradeActivityLog.php" class = "menu_item" target="_blank" rel="noopener noreferrer">Trade &gt;&gt; Trade Activity Log</a> to explain a particular live trading related situation (issue) that a user has a question about or had a problem with.</p>
+    
+    <p>The procedure for this is explained below.</p>
+    
+    <p>This information must be provided by the actual trader themselves so there is no misunderstanding about any of the information provided.</p>
+
+    <ol>
+        
+        <li><em>Stop here</em> if you have a question about simulated trading as we do not provide simulated trading analysis. If you are using Sierra Chart Trade Simulation Mode (<b Class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b>) you may want to read the <a href="indexad24.html?page=doc/TradeSimulation.php#HowOrdersAreFilled" target="_blank" rel="noopener noreferrer">How Simulated Orders Are Filled</a> section.
+        <br><br>
+        If you believe Sierra Chart did not do something properly with Trade Simulation Mode, then contact us with a brief description  of the issue on the <a href="https://www.sierrachart.com/SupportBoard.php">Support Board</a> and we will take it from there and determine how best to help with it.</li>
+        
+        <li> Follow the instructions for <a href="index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity"  target="_blank" rel="noopener noreferrer"> Viewing Trade Historical Activity</a> to locate the order and fill activity related to the particular trading situation you have a question about.  
+        <br> <br>
+        <em>In most cases you will be able to determine the answer yourself</em> by looking at the Trade Activity data.  If this is the case, then <em>stop</em> here. 
+        
+        <br><br>
+        The Trade Activity Log is very useful to analyze precisely what has happened with a particular order and the source of all actions on that order. 
+        
+        <br><br>
+        To determine all of the actions on an order, be sure to select <b> All Activity </b> in the list box at the top of the Trade Activity Log, containing these options. In the log itself, the field <em><b>Order Action Source</b></em> indicates what the source of the action on the order was.  This field also provides other useful subfields of information.
+        </li>
+        
+        <li>There may be a cost for us to analyze this issue and it is billed at 60 USD per hour. Usually the analysis time will be about 20 minutes. If this is agreeable, put at least 20 USD  on your <a href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit" >Services Balance</a>.  The cost will also be waived if it is determined that the issue is related to some problem within Sierra Chart or related to an improvement that needs to be made within Sierra Chart. The cost is also waived  if Sierra Chart support told you there is no cost for this.
+        <br> <br>
+         <em> Otherwise, there is a cost.  Understand this type of analysis takes our time,  and it is very involved analysis. We really do not want to get involved in these types of  requests. Rarely is there anything found that would lead to any improvement in Sierra Chart. </em>
+        </li>
+
+
+        <li>Follow the procedure in the <a href="index509f.html?page=doc/TradeActivityLog.php#TradeActivityLogFileToSupport"  target="_blank" rel="noopener noreferrer">Providing Trade Activity  Log File to Support</a> section to provide the Trade Activity Log <em>file or files</em> to Sierra Chart support.
+         <br> <br>
+         These files are located in the \TradeActivityLogs subfolder in the Sierra Chart installation folder on your system.
+        <br> <br>
+        There is a separate file for each day and Trade Account. The file name format for non-simulated trading is as follows:   <b><em>TradeActivityLog_YYYY-MM-DD_UTC.[TradeAccount].data</em></b>. The file name format for simulated trading is as follows: <b><em>TradeActivityLog_YYYY-MM-DD_UTC.[TradeAccount].simulated.data</em></b>. 
+        <br> <br>       
+        You will need to provide the files which contain data for the particular dates that you have a question about or Sierra Chart has specifically requested.
+        <br><br>
+         <b>YYYY-MM-DD</b> in the file name indicates the date. The time range is 00:00:00 through 23:59:59 UTC time. So Sierra Chart support will need the files covering the particular date and time range of the trading question.
+        <br> <br>
+        These files can be attached as an email attachment or attached  <em>privately</em> to the Support Board if using a Support Board posting.  We do not keep these log files  and will delete them when we are done looking at them.</li>
+        
+        <li>Tell us the Symbol you are trading. It is <em>essential</em> that we are provided this.</li>
+        
+        <li> Tell us the trading account identifier with your trading service that the order was entered from (account number). It is <em>essential</em> that we are provided this.</li>
+        
+        <li>Tell us the specific  Date and Time of this trading related situation including the time zone. It is <em>essential</em> that we are provided this. We cannot be told a particular Date only.  We need to know the specific Date <em>and</em> Time  as precise as possible. We also need to know the Time Zone as well.</li>
+
+        <li> We will need to know the <b>Internal Order ID</b> of the order. You can determine the Internal Order ID from the Trade Activity Log.
+        <br> <br>
+        Go to the  <b Class = "menu_item">Trade &gt;&gt; Trade Activity Log &gt;&gt; Trade Activity</b> tab and look at the <b>Internal Order ID</b> field  for the order.  For complete documentation to use the Trade Activity Log, refer to <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity"  target="_blank" rel="noopener noreferrer">Viewing Historical Trade Activity</a>.
+        <br> <br>
+        Without this <b>Internal Order ID</b> we may not be able to answer the question because we will be unable to locate the order. As an alternative provide us the  <b>Service Order ID</b>.</li>
+
+        <li> Provide an accurate, brief and concise explanation of the particular trading related situation and your question.  It is <em>essential</em> that we are provided this. If we do not sufficiently understand the issue, then we cannot help with the issue .</li>
+        
+        <li>We <em>cannot change</em> what has happened. We can only explain what you have experienced, and indicate the source of the issue to the best of our ability. There can be various causes of a trading related issue.   A problem with the external trading service,  a problem with network connectivity, an unusual circumstance that Sierra Chart was not able to properly handle, user error,  or a user misunderstanding. Whatever the problem, we will do our best to identify it and explain what you have seen.</li>
+        
+        <li> Please allow up to 14 days for a response. This service should not be regarded as a service that can provide a fast answer.</li>
+    </ol>
+
+</section>
+
+
+
+<!--
+
+We have been contacted by your broker/trading service and been informed that you have experienced something unexpected  related to live trading while using Sierra Chart.
+
+We can schedule an interactive session with you to review the Sierra Chart Trade Activity Log and explain what you saw.
+
+We cannot change what has happened. We can only explain what you have experienced, and indicate the source of the problem.
+
+There can be various causes a problem. A problem with the external trading service,  a problem with network connectivity, an unusual circumstance that Sierra Chart was not able to properly handle, user error,  or user misunderstanding. Whatever the issue, we will do our best to identify it and explain what you have seen.
+
+Once again, we cannot change the outcome of what has happened, only explain it.
+
+If you would like to schedule a session, let us know. We only do these after the US market close and it has to be at a time when we are available. Based upon the nature of the problem, we may decline support for it if it is a standard clear and known issue which is out of our control.
+
+Let us know when you would be available after the US market close.
+
+
+
+-------------------------
+
+
+We understand you have experienced something unexpected  related to live trading while using Sierra Chart.
+
+We need to be provided the Trade Activity Log file. Here are instructions:
+http://www.sierrachart.com/index.php?page=doc/TradeActivityLog.php#TradeActivityLogFileToSupport
+
+Send it to support@SierraChart.com.
+
+Let us know the particular date-time this occurred, the time zone and the particular symbol. This information is <em>essential</em>.
+
+We cannot change what has happened. We can only explain what you have experienced, and indicate the source of the problem.
+
+There can be various causes of a trade problem. A problem with the external trading service,  a problem with network connectivity, an unusual circumstance that Sierra Chart was not able to properly handle, user error,  or user misunderstanding. Whatever the issue, we will do our best to identify it and explain what you have seen.
+
+Once again, we cannot change the outcome of what has happened, only explain it.
+
+-->
+
+
+<section class="h2">
+    <h2 id="PossibleReasonsForUnexpectedTradingIssues">Possible Reasons for Unexpected Trading Issues</h2>
+    <div class="member-link">[<a href="#PossibleReasonsForUnexpectedTradingIssues">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <ol>
+
+        <li><a href="index0ef8.html?page=doc/AttachedOrders.html#AttachedOrdersInLiveEnvironment">Potential Conditions Which Can Lead to Attached Orders Not Functioning As Expected in Live Trading</a>
+            <ul>
+                <li><a href="index0ef8.html?page=doc/AttachedOrders.html#MarketMovingQuicklyBeyondStopPriceMakingItInvalid">Market Moving Quickly Beyond Stop Price Causing It to Become Invalid</a></li>
+                <li><a href="index0ef8.html?page=doc/AttachedOrders.html#AutomaticReplacementMarketOrder">Automatic Replacement Market Order for Rejected Stop Attached Order</a></li>
+                <li><a href="index0ef8.html?page=doc/AttachedOrders.html#FailureToIncreaseQuantityDueToSimFillTargetStopOrderBeingAdjusted">Failure to Increase Quantity Due to Simultaneous Fill of Target/Stop Order Being Adjusted</a></li>
+                <li><a href="index0ef8.html?page=doc/AttachedOrders.html#FailureToIncreaseQuantityDueOrderModificationRejectionFromMarginPositionLimits">Failure to Increase Quantity Due Order Modification Rejection from Margin/Position Limits</a></li>
+                <li><a href="index0ef8.html?page=doc/AttachedOrders.html#SwitchingToTradeSimModeBeforeAttachedOrdersSent">User Switching to Trade Simulation Mode before Attached Orders Sent</a></li>
+            </ul>
+        </li>
+        
+         <li><a href = "index9473.html?page=doc/TradeWindow.html#RejectedMarketOrderWhenUsingFlatten">Rejected Market Order When Using Flatten or Reverse Because of Position Limit Exceeded</a> </li>
+         
+
+        <li>If you submitted order and it immediately cancels and does not fill, this can be because you set the   <a href = "index9473.html?page=doc/TradeWindow.html#TimeInForce">Time  in Force</a>  on the Trade Window to <b> Immediate or Cancel</b>. The solution is to use <b> Day</b> or <b> Good till Canceled</b> instead. </li>
+
+      
+        <li>There can be order  rejections of new orders, and also order modifications which result, and orders either not working  or the quantity or price of orders, not being as expected.
+        <br> <br>
+        You can see rejections in the Trade Activity Log. In the case of a new order, look at the Order Action Source field for the rejection text and the Status field will be Error.
+        <br> <br>
+        In the case of an order modification rejection status will still be Openbut look at the Order Action Source field for the description. Here is one such description:
+        <br> <br>
+
+        <b> <em>Reject text: Insufficient margin
+        Available margin: USD3121
+        Used margin: USD2000
+        Total portfolio margin including this order: USD3200
+        This order increases margin by USD1200 <em></b>
+        </li>
+    </ol>
+
+<hr><p>*Last modified Thursday, 20th April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TradeActivityLogAnalysis.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:55 GMT -->
+</html>  

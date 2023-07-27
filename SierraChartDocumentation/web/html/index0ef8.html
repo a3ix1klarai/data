@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/AttachedOrders.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105670') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/AttachedOrders.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Attached Orders Feature -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index0ef8.html?page=doc/AttachedOrders.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Trading">(Table of Contents) Trading</a> &gt;&gt; <a  href="index0ef8.html?page=doc/AttachedOrders.html">Attached Orders Feature</a></h4> </div>     <h1 class="PageName">Attached Orders</h1>
+
+<img class="UnScaledFloatRight" src="../images/tradewindowtargetstab.png" alt="Trade Window Tabs">
+<ul>
+    <li><a href="#Introduction">Introduction</a>
+        <ul>
+            <li><a href="#OCOManagement">General Management of Attached Orders</a></li>
+            <li><a href="#OCOManagementServersideOnly">Management of Attached Orders when Trading Service Supports Server Side OCO Only</a></li>
+            <li><a href="#ManagementOfAttachedOrdersWhenTradingServiceSupportsServerSideBracketOrders">Management of Attached Orders when Trading Service Supports Server Side Bracket Orders</a></li>
+            <li><a href="#HandlingOfAttachedOrdersWhenSierraChartIntermediaryServerIsUsed">Handling of Attached Orders when Sierra Chart Intermediary Server is Used</a></li>
+        </ul>
+    </li>        
+    <li><a href="#AttachedOrderWindowInterface">Using Attached Orders and Attached Order Settings</a>
+        <ul>
+            <li><a href="#Instructions">Step-By-Step Instructions</a></li>
+            <li><a href="#Rules">Attached Order Rules</a></li>
+            <li><a href="#AttachedOrderDisplayList">Attached Order Display List</a></li>
+            <li><a href="#Add">Add</a></li>
+            <li><a href="#Remove">Remove</a></li>
+            <li><a href="#OrderType">Order Type</a></li>
+            <li><a href="#OffsetValues">Offset Values</a></li>
+            <li><a href="#HowOffsetsareConverted">How Offsets are Converted</a></li>
+            <li><a href="#OCOGroup">OCO Group (Group)</a></li>
+            <li><a href="#GroupQuantity">Group Quantity</a></li>
+            <li><a href="#OrderQuantityMatching">Order Quantity Matching</a></li>
+            <li><a href="#MoveBreakevenForStop">Move to Breakeven for Stop</a></li>
+            <li><a href="#TimeInForce">Time In Force</a></li>
+            <li><a href="#UseAttachedOrdersforNewOrders">Use Attached Orders</a></li>
+            <li><a href="#PreconfiguredAttachedOrdersSet">Using a Preconfigured Attached Orders Set</a></li>
+        </ul>
+    </li>
+    <li><a href="#Functionality">Attached Orders Functionality</a>
+        <ul>
+            <li><a href="#Fills">Fills</a></li>
+            <li><a href="#Cancellations">Cancellations</a></li>
+            <li><a href="#Modifications">Modifications</a></li>
+        </ul>
+    </li>
+    <li><a href="#SendAttachedOrdersIndependent">Sending Attached Orders Independently</a></li>   
+    <li><a href="#ChangingAttachedOrdersConfigurationAfterParentOrderFilled">Changing Attached Orders Configuration After Parent Order Has Filled</a></li>
+    <li><a href="#UsingSingleCommonStop">Using Single Common Stop</a></li>
+    <li><a href="#ClosingReducingPositionWithAttachedOrderInteraction">Closing/Reducing Position with Attached Order Interaction</a></li>
+    <li><a href="#AttachedOrdersExamples">Attached Orders Examples</a>
+        <ul>
+            <li><a href="#AttachedOrdersExample1">Simple Bracket Example</a></li>
+            <li><a href="#AttachedOrdersExample2">Multiple-Bracket Example</a></li>
+            <li><a href="#AttachedOrdersExample3">Target with Move to Breakeven and Trail Stop Example</a></li>
+            <li><a href="#AttachedOrdersExample5">2 Targets and Common Stop with Move to Breakeven on First Target</a></li>
+            <li><a href="#OneTargetWith2StopsWithMoveToBreakEvenOnTarget1">One Target with 2 Stops with Move to BreakEven on Target 1</a></li>
+            
+            <li><a href="#TradeWindowConfigurationExamples">Trade Window Configuration File Examples</a></li>
+        </ul>
+    </li>
+    <li><a href="#ScalingOut">Scaling Out</a></li>
+    <li><a href="#ScalingIn">Scaling In</a></li>
+    <li><a href="#HidingAttachedOrders">Hiding Attached Orders on Chart Until Parent Fill</a></li>
+    <li><a href="#StudyControlledTargetsStops">Study Controlled Targets and Stops</a>
+        <ul>
+            <li><a href="#StudyControlledTargetsStops_Description">Description</a></li>
+            <li><a href="#StudyControlledTSInstructions">Instructions</a></li>
+            <li><a href="#TradeManagementByStudyInputSettings">Study Input Settings</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#AttachedOrdersInLiveEnvironment">Potential Conditions Which Can Lead to Attached Orders Not Functioning As Expected in Live Trading</a>
+        <ul>
+            <li><a href="#MarketMovingQuicklyBeyondStopPriceMakingItInvalid">Market Moving Quickly Beyond Stop Price Causing It to Become Invalid</a></li>
+            <li><a href="#AutomaticReplacementMarketOrder">Automatic Replacement Market Order for Rejected Stop Attached Order</a></li>
+            <li><a href="#FailureToIncreaseQuantityDueToSimFillTargetStopOrderBeingAdjusted">Failure to Increase Quantity Due to Simultaneous Fill of Target/Stop Order Being Adjusted</a></li>
+            <li><a href="#FailureToIncreaseQuantityDueOrderModificationRejectionFromMarginPositionLimits">Failure to Increase Quantity Due Order Modification Rejection from Margin/Position Limits</a></li>
+            <li><a href="#SwitchingToTradeSimModeBeforeAttachedOrdersSent">User Switching to Trade Simulation Mode before Attached Orders Sent</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#UsingAttachedOrdersWithAttachedOrders">Using Attached Orders with Attached Orders</a></li>
+    <li><a href="#UnableToModifyAttachedOrders">Unable to Modify Price of Attached Orders</a></li>
+    <li><a href="#ReversingOnStop">Reversing on Stop Attached Order</a></li>
+    <li><a href="#UsingDTCServerFeatureForReliableServerSideAttachedOrders">Using DTC Server Feature for Reliable Server Side Attached Orders</a></li>
+    <li><a href="#MoveToBreakevenStopReferencePriceCalculationAndUsage">Move to Breakeven Stop Reference Price Calculation and Usage</a></li>
+    <li><a href="#ManagingMultipleParentAndAttachedOrderSets">Managing Multiple  Parent and Attached Order Sets</a></li>
+    
+    <li><a href="#UnderstandingHowServerSideOCOAndBracketOrdersAreImplementedWithIntermediaryServer">Understanding How Server-Side OCO and Bracket Orders Are Implemented with Intermediary Server</a></li>
+
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Attached Orders are orders which are attached to the main order being submitted. These Attached Orders  function as price Targets and/or Stops. Most any combination of Attached Orders can be specified to be attached to the main order.</p>
+
+    <p>The primary order entered is known as a <em>Parent</em> order and all Attached Orders are known as <em>Child Orders</em> or <em>Attached Orders</em>.</p> 
+
+    <p>The Attached Orders are always the opposite Side compared to the  Parent order. For example, if the   Parent order is a <b>Buy</b> order, all the Attached Orders  associated with it will be <b>Sell</b> orders.</p>
+
+    <p>When there are Stop and Target Attached Orders attached to a Parent order, these orders are in an  Order  Cancels Order (OCO) group.</p>
+
+    <p>A simple example of a Parent order with an attached Stop and Target order is commonly known as a <em>bracket order</em>.</p>
+
+    <p>You can have as little as one Attached Order or many. The relationship between the Attached Orders or Child orders themselves are known as <em>siblings</em>.</p>
+
+    <p>When there are Attached Orders defined and active, on the Trade Window for a chart or Trade DOM, and you enter an order from that Trade Window or from the associated chart or Trade DOM, these Attached Orders will then be attached to the parent order if they are enabled to be used.</p>
+
+    <section class="h3" >
+        <h3 id="OCOManagement">General Management of Attached Orders</h3>
+        <div class="member-link">[<a href="#OCOManagement">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The information in this subsection explains the management of Attached Orders when the Trading service does not support server side OCO orders and server side  Bracket orders. This information also applies to orders entered when Sierra Chart Trade Simulation Mode is on.</p>
+
+        <p> In the case where the Trading service does support server-side OCO orders,  also refer to <a href="#OCOManagementServersideOnly">Management of Attached Orders when Trading Service Supports Server Side OCO Only</a>. </p>
+        
+        
+        <p>In the case where the Trading service does support server-side Bracket orders, also refer to <a href="#ManagementOfAttachedOrdersWhenTradingServiceSupportsServerSideBracketOrders">Management of Attached Orders when Trading Service Supports Server Side Bracket Orders</a>.</p>
+
+        <p><em>When a Parent order is submitted, the Attached Orders remain  inactive and have a Quantity of 0</em>.</p>
+
+        <p>When a parent order is filled, the Attached Orders will become <em>active</em> and at that time are sent to the connected Trading service if Trade Simulation Mode is disabled. Or are processed by the Sierra Chart Trade Simulation system, if Trade Simulation Mode is enabled. </p>
+
+        <p>Therefore, in the case of when Trade Simulation Mode is disabled, if you are trading a symbol which is an exchange listed symbol, then most likely the  Target and Stop orders are now going to be working at the exchange. </p>
+
+        <p>Although potentially the Trading service could be holding them.  This might only be the case in the case of a Stop order.  When using a Sierra Chart intermediary server for order routing,  the Attached Orders are always going to be sent to the exchange without being held on the intermediary server,  after the parent order fills.</p>
+        
+        
+        <p> The Attached Orders will only be submitted to the external trading service, or to the Sierra Chart Trade Simulation system if Trade Simulation Mode is enabled, when  there is a notification of a fill of the parent order. This would be considered a real time notification. The Attached Orders are not sent when there is some historical indication of a fill like   an order status update that is received later on the order after connecting to the  Trading service.   For example, if an order filled  when Sierra Chart is not connected to the Trading service, and there is some historical indication of a fill, then the Attached Orders will not become active on that type of indication.</p>
+        
+        <p>It is not regarded as safe, to submit Attached Orders other than from a real-time fill notification. Other notifications could be false in some way  based upon experience,  will be delayed, and it may not make sense for the orders to be submitted at that time because the  Position may not exist any longer, the price of the market will have changed, and Attached Orders may not even be at valid prices, and other numerous reasons.   Also in most cases there is not a way for Sierra Chart to know that a parent order filled other than from a real-time notification.  There simply is no definite other way to know  this which is reliable.</p>
+
+        <p>Once the Attached Orders are active, the  quantity of the Attached Orders will be equal to the quantity of the parent order unless there was a partial fill of the parent order in which case the  Attached Orders will have a quantity equal to the filled quantity of the parent order.</p>
+
+        <p>Until the parent fills, the Attached Orders will be <em>inactive and held within Sierra Chart</em>.  They will not be sent to the connected Trading service until there is a fill or partial fill of the parent order.</p>
+
+        <p>When the Attached Orders are held within Sierra Chart in the case when the server does not support server side Bracket orders or the option to use that is disabled, this is indicated in the Trade Activity Log.  In the  <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Trade Activity Log</a>, in the <b>Order Action Source</b> field for the order,  client-side managed Attached Orders will contain the text <b>Client side bracket order</b>. </p>
+ 
+
+        <p>When the Attached Orders are active and the Limit or Stop price for an Attached Order is reached and one of the orders is fully filled, then the other  Attached Order, if there is one, in the same OCO (Order Cancels Order) group will be  <em>canceled</em> by Sierra Chart.</p>
+
+        <p>Partial fills are managed as well. When the parent order partially fills, the Attached Orders will be activated to the quantity of the parent order fill. Likewise, if there is a partial fill of one of the Attached Orders, then the other Attached Order in the same OCO group will have its quantity adjusted down by the amount of the fill rather than being canceled.</p>
+
+        <p>Once the Attached Order set is sent to the connected Trading service, it will still be active even if Sierra Chart loses connectivity to the Trading service. In the case where your Trading service does not support server side OCO functionality and Sierra Chart is managing that functionality on your local computer, then those Attached Orders will not have OCO functionality if connectivity is lost to your Trading service.</p>
+
+        <p>It is also important to set the <b>Time in Force </b>  of the Attached Orders as you require. You can use either <b>Day</b> or <b>Good till Canceled</b>. Refer to  <a href=" #TimeInForce">Time in Force</a>.  If  the Time in Force for the Attached Orders is not set to <b>Good till Canceled</b>, then they will be canceled at the end of the day for both simulated and non-simulated trading.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OCOManagementServersideOnly">Management of Attached Orders when Trading Service Supports Server Side OCO Only</h3>
+        <div class="member-link">[<a href="#OCOManagementServersideOnly">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In the case of when the trading service you are using supports server side OCO, the  information in the <a href="#OCOManagement">General Management of Attached Orders</a> applies except for the following:</p>
+
+        <p>The Canceling and Quantity adjustment of the other Attached Order in an OCO Group is handled by the Trading service  and not Sierra Chart when the other Attached Order (sibling) fills or partially fills.</p>
+
+        <p>If a Trading service supports server side OCO orders, it is necessary to enable server side OCO functionality within Sierra Chart by enabling <b class="menu_item">Global Settings &gt;&gt;  General Trade Settings &gt;&gt; Use Server Side OCO Orders</b> for them to be managed on the server side.</p>
+
+        <p><b>How do you know whether your Trading service supports OCO functionality?</b> If your Trading service does not provide OCO functionality, then this functionality will be provided by Sierra Chart.  You will know if your Trading service supports OCO functionality when you submit an order.  In the Trade Activity Log, in the <b>Order Action Source</b> field for the order,  server-side managed OCO orders will contain the text  <b>Server side OCO order</b>. </p>
+
+        <p>You can also look at the service specific page linked from the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php" target="_blank" rel="noopener noreferrer">Data and Trading Services</a> page which states for each service whether the service provides <b>Server Managed OCO (Order Cancels Order)</b> in the  <b>What Is Included</b> section on that page.</p>
+    </section>
+
+    <section class="h3">
+        <h3  id="ManagementOfAttachedOrdersWhenTradingServiceSupportsServerSideBracketOrders">Management of Attached Orders when Trading Service Supports Server Side Bracket Orders</h3>
+        <div class="member-link">[<a href="#ManagementOfAttachedOrdersWhenTradingServiceSupportsServerSideBracketOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In the case of when the trading service you are using supports server side Bracket orders, the  information in the <a href="#OCOManagement">General Management of Attached Orders</a>  <em>does not apply in any way</em>.</p>
+
+        <p>If a Trading service supports server side Bracket orders, it is necessary to enable server side Bracket orders within Sierra Chart by enabling <b class="menu_item">Global Settings &gt;&gt;  General Trade Settings &gt;&gt; Use Server Side Bracket Orders</b> for them to be managed on the server side.</p>
+
+        <p>When using server side Bracket orders,  both the Parent and Attached Orders are sent at the same time to the Trading service and after that Sierra Chart has <em>no responsibility</em> for the management of them.</p>
+        
+        <p>Any action on those Attached Orders would only be in response to actions that you perform manually or through an automated trading system.</p>
+
+        <p>The sending of the orders to the exchange, the canceling of them, and Quantity adjustment of the orders is handled completely by the Trading service  and  <em>not</em> by Sierra Chart.  Normally,  this will be safer for the management of orders. However, it is not always advantageous to use server side  Bracket orders because the management of those  orders on the server side by the external Trading service might not be exactly as you would expect as compared to when Sierra Chart is managing them.</p>
+        
+        <p> However, if you are using a Trading service where there is an <a href="#HandlingOfAttachedOrdersWhenSierraChartIntermediaryServerIsUsed">Intermediary Server is Used</a> the management of the bracket order will be as you would expect. In this case the Attached Orders  will always be managed on the server side and cannot be disabled.</p>
+
+        <p>To know if the Trading service you are using  supports server side Bracket orders, refer to the service specific page linked on the <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php" target="_blank" rel="noopener noreferrer">Data and Trading Services</a> page which states for each service whether the service provides <b>Server Managed Bracket Orders</b> in the  <b>What Is Included</b> section on that page.</p>
+
+        <p> Also, in the  <a href = "index509f.html?page=doc/TradeActivityLog.php#ViewingHistoricalTradeActivity">Trade Activity Log</a>, in the <b>Order Action Source</b> field for the order, attached orders will contain the text  <b>Server Side Bracket Order</b> if  server-side bracket orders are supported.  So this is a way to determine whether server side bracket orders are being used.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="HandlingOfAttachedOrdersWhenSierraChartIntermediaryServerIsUsed">Handling of Attached Orders when Sierra Chart Intermediary Server is Used</h3>
+        <div class="member-link">[<a href="#HandlingOfAttachedOrdersWhenSierraChartIntermediaryServerIsUsed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> In the case of the following supported Trading services: LMAX and the   <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a>,  these Trading services use a server managed by Sierra Chart for order routing  and the management of OCO and bracket orders.</p>
+
+        <p> OCO orders are always managed on the server regardless of how <b class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server Side OCO Orders</b> is set.</p>
+
+        <p>  Therefore, all order quantity and cancellation management is done on the  server. The way in which these OCO orders are    managed on the server is exactly the same as Sierra Chart  would manage them on the client side. </p>
+        
+        <p>   Bracket orders always reside at the server and are managed on the server  regardless of how  <b class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server Side  Bracket Orders</b>  is set. </p>
+
+         <p> The Attached Orders are fully managed on the server. Before the  parent order  partially or fully fills, the Attached Orders are held on  the server and are sent to the exchange when there is a fill of the parent order.</p>
+        
+        <p>The way in which these Attached Orders are  managed on the  server is exactly the same as Sierra Chart manages  them on the client side.  Therefore, they work in a known and stable way. Sierra Chart has an excellent track record of managing OCO and Bracket orders on our intermediary servers. </p>
+        
+        Since this text is from an order update:
+Teton CME Order Routing (Order update). Info: Order from DTC client #8729. Sierra Chart. xxx.xxx.xxx.xxx | Client text: Attached order. Parent: 505. Tag: 1C_S02_T4.twconfig | Attached Order | Client side bracket order | Client side OCO order. Text: Attached order.
+It is showing that on the server, it is being managed as a client-side order. It is a server managed order.
+
+You can also tell by the status:
+Pending Child-Server 
+    </section>    
+
+</section>
+
+<section class="h2">
+    <h2 id="AttachedOrderWindowInterface">Using Attached Orders and Attached Order Settings</h2>
+    <div class="member-link">[<a href="#AttachedOrderWindowInterface">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="Instructions">Step-By-Step Instructions</h3>
+        <div class="member-link">[<a href="#Instructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The user interface in Sierra Chart for Attached Orders is designed to be very straightforward. The basic concept is that for each Target (Limit order) or Stop (Stop Order) that you want, this will be 1 Attached Order.</p>
+
+        <p>If you want to have 2  Targets  and a single Stop for the entire position, then this will be 3 Attached Orders.</p>
+
+        <p>Refer to the <a href="#UsingAttachedOrdersImages">images below</a> for a visual presentation.</p>
+
+        <ol>
+            <li>Attached Orders are configured through the Trade Window for a chart or Trade DOM.  Go to your chart or Trade DOM. Select <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b>.
+            <br><br>
+            It is important to understand that each Chart or Trade DOM has its own Trade Window. You need to make sure you are  <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" >opening</a> and using the Trade Window belonging to that particular chart or Trade DOM when configuring the Attached Order settings for it.
+            <br><br>
+            Also be aware  of the  <a href="index69b6.html?page=doc/WorkingWithCharts.html#ChartLinking" >Chart Linking</a> feature which also supports linking Trade Windows to keep  the settings the same among the linked ones.
+            </li>
+
+            <li>You will see the <b>Targets</b> tab on the Trade Window.  Select this tab.  This is the tab for Attached Orders. Although the tab is named <b>Targets</b>, it also applies to Stop Attached Orders as well.</li>
+
+            <li>If you want to start completely fresh with your own Attached Order configuration, then press the <b>Remove</b> button until all of the Attached Orders in the list box above are removed. Initially, you will normally see 2 Attached Orders already added which make up a simple bracket. There is one  <b>Target</b> order and <b>Stop</b> order. You can keep these Attached Orders and modify them as required and add additional ones.</li>
+
+            <li>Press the <b>Add</b> button  to add an Attached Order.  The Attached Order will be added to the list box above. 
+
+            <li>The controls on the   <b>Targets</b> tab control the selected Attached Order in the Attached Order list. To modify an existing Attached Order, simply select it from the list box at the top and modify the settings for it by using the controls below the list box.  We will explain this in more detail.</li>
+
+            <li>The first step is to set proper  <b>Order Type</b>. You can make it either a <b>Target</b> type or a <b>Stop</b> type. 
+                <br> <br>
+                For Stops you have many <a href="index783f.html?page=doc/OrderTypes.html">Stop Order Types</a> to choose from including Trailing Stops. 
+                <br> <br>
+                To make the first Attached order a Target, then select <b>Target: Limit</b> in the   <b>Type</b> list.</li>
+
+            <li>Each Attached order has one or more <a href="#OffsetValues">Offset</a> controls. The offsets can be specified as an actual <b>Price</b> value, a number of <b>Ticks</b>, or a <b>Percentage</b> of the last trade price. Select either <b>Price</b>, <b>Ticks</b>, or <b>% (Percentage)</b>.  The default setting is <b>Ticks</b>. For further details, refer to <a href="#OffsetValues">Offset Values</a>.</li>
+
+            <li>In the case of a Target, set the  <b>Limit Offset</b>, to the amount from the parent order where you want the Target order to be. 
+                <br> <br>
+                For example, if you are setting it in Ticks, and the tick size for the symbol is <b>.25</b> and you want the Target to be 2 points from your entry price, then set  <b>Limit Offset</b>  to 8.
+                <br> <br>
+                In the case of a Stop, set the <b>Stop Offset</b>, to the amount from the parent order where you want the Stop to be.</li>
+
+            <li>Set the <a href="#OCOGroup">OCO Group</a> for the selected Attached Order. By default this should be set correctly. In the case where there are multiple Targets and a single Stop  and you want the Stop to protect the entire position, then you will need to set the <b>OCO Group</b> for the Stop Attached Order, to <b>All OCO Groups</b>. In this case the Stop will act as a <em>common Stop for all Targets</em>.</li>
+
+            <li>Set the <b>Quantity</b> for each Attached Order. By default, the quantity should be set correctly.  If you are using a  single Target and Stop, then this needs to be set to the quantity of the Parent/main order.</li>
+
+            <li>If the <b>Type</b> is set to a <b>Stop</b> order type, and you want to move the Stop to break even  based on various conditions, then you need to set the  <b>Move to Breakeven for Stop</b> settings as required. Refer to <a href="#MoveBreakevenForStop">Move to Breakeven for Stop</a> for instructions.</li>
+
+            <li>Repeat the steps 4-11 for each Attached Order you want to add.</li>
+
+            <li>At the bottom of the <b>Targets</b> tab, set the <b>Time in Force</b> for the Attached Orders to either <b>Day</b> or <b>Good Till Canceled</b>.</li>
+
+            <li>To have the Attached Orders you have defined, attached to a new order that you submit,  select the <b>Main</b> or <b>C</b> tab and enable <b>Use Attached Orders</b>.</li>
+
+            <li>At this point you are all set and you can now submit  an order and the Attached Orders will be attached to it.</li>
+        </ol>
+
+        <section style="text-align: center;" id="UsingAttachedOrdersImages">
+            <a href="../images/usingattachedorders.png" rel="lightbox"><img src="../images/usingattachedorders.png" width="400" alt="Using Attached Orders"></a>
+            <a href="../images/useattachedorders.png" rel="lightbox"><img src="../images/useattachedorders.png" width="400" alt="Use Attached Orders"></a>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="Rules">Attached Order Rules</h3>
+        <div class="member-link">[<a href="#Rules">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When you are adding Attached Orders or modifying the controls for Attached Orders, there are certain rules that must be followed. The Attached Orders interface does not allow you to do something which does not follow the rules. If the rules are not  followed, you will notice that changing a setting for an Attached Order will not work. The following are the rules:</p>
+
+        <p>Attached Orders are grouped into <a href="#OCOGroup">OCO Groups</a>.  In the list of Attached Orders you will notice a number after <b>Target</b> or <b>Stop</b>, this will be 1 through 8 or <b>All</b>. This indicates the OCO Group number. </p>
+
+        <p>With this understanding, you can only have one Target and one Stop per OCO group, not more.  Likewise, there can also be only a maximum of 2 orders per group.  These two orders form an OCO pair.  </p>
+        
+       <p>If a Target or a Stop is in the <b>All Groups</b> OCO Group, this counts as one order for all of the other groups 1-8. So if you have a <b>Target 1</b> and a <b>Stop All</b> Attached Orders, then it will not be possible to add a Stop 1 because <b>Stop All</b> applies to OCO Group 1. There can only be one Attached Order set to <b>All Groups</b>.</p>
+
+        <p>For example, if you have 2 orders set to be a Stop and then you try to set the OCO Group for one of them to <b>All Groups</b>, this will not be allowed because each group cannot have more than one Stop order. <em>In this case what you need to do is first set one of the Stops to be a Target instead and then you can change the other Stop to <b>All Groups</b>.</em></p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachedOrderDisplayList">Attached Order Display List</h3>
+        <div class="member-link">[<a href="#AttachedOrderDisplayList">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This list box at the top of the Attached Orders (Targets) tab lists all of the attached or child orders that will be attached to a parent order.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Add">Add</h3>
+        <div class="member-link">[<a href="#Add">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Adds a new attached order. After you add this order, modify the settings using the various settings controls. You can have as little as one Attached Order, or many. Refer to the <a href="index783f.html?page=doc/OrderTypes.html">Order Types</a> page for a list of all of the Attached Orders available.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Remove">Remove</h3>
+        <div class="member-link">[<a href="#Remove">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Removes the Attached Order highlighted in the Attached Order list box.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OrderType">Order Type (Type)</h3><!--verified-->
+        <div class="member-link">[<a href="#OrderType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the order type of the Attached Order. See <a href="index783f.html?page=doc/OrderTypes.html">Order Types</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OffsetValues">Offset Values</h3><!--verified-->
+        <div class="member-link">[<a href="#OffsetValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Each Attached Order is specified with one or more offsets. An <em>offset</em> is how far away from the parent order price that the Attached Order price is.</p>
+
+        <p>There are different 4 different units to specify an offset (Price, Ticks, Percentage, Actual Price). These offsets are relative to the price of the parent order, unless you are using Actual Price in which case you specify the actual price value.  The parent order is the main order that you submit that the Attached Orders are attached to.</p>
+
+        <p>In the case where the parent order is a Market order, then these offsets are relative to the current market price (Last trade price).</p>
+
+        <p>When the parent order fills, these offsets are then always relative to the fill price since the Attached Orders will be adjusted upon a fill or partial fill of the parent order to maintain the specified offsets in the case when a server side bracket order is not being used and  <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt;  Adjust Attached Orders to Maintain Same Offset on Parent Fill</b> enabled.</p>
+
+        <p>The offsets always entered as positive numbers. The Attached Order feature will automatically convert the offset to the proper price value based upon whether the parent order is a Buy or Sell order and the Attached Order Type.</p>
+
+        <p>These are the different ways to specify an Offset value:</p>
+
+        <ul>
+            <li><b>Percentage (%)</b> from the parent order price.
+                <br> <br> 
+                In the case of when using a Percentage (%) for the Attached Order Offset value, the formula is as follows: <b> OffsetPrice =  SpecifiedOffsetAsPercent * 0.01 * BasePrice</b>. 
+                <br>
+                <br>
+                <b>BasePrice</b> is the main/parent order price in the case of a non-Market order.  In the case of when the main/parent order is a Market order, it is determined from  the Quote Data for the symbol. You can see the Quote Data through the   <b Class = "menu_item">Window &gt;&gt; Current Quote Window</b>. In the case of a Sell Market order the Bid price is used for the BasePrice. In the case of a Buy Market order the Ask price is used for the BasePrice. 
+                <br> <br>
+                If there is no Quote Data available and the values are zero, then BasePrice is the last trade price in the chart. The result is rounded to the nearest tick.
+            </li>
+            <li>Number of <b>Ticks</b> from the parent order price.</li> 
+
+            <li>A fixed <b>Price</b> from parent order price.</li>
+            
+            <li> <b>Actual Price(1), Price Offset(2-4)</b>: This option lets you specify an actual price for the first offset setting and a standard price offset for the second through fourth offset setting.</li>
+        </ul>
+
+        <div style="text-align: center;"><a href="../images/attachedorderoffsettype.png" rel="lightbox"><img src="../images/attachedorderoffsettype.png" alt="" class="screenshot" loading="lazy" width="270"></a></div>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="HowOffsetsareConverted">How Offsets are Converted</h3><!--verified-->
+        <div class="member-link">[<a href="#HowOffsetsareConverted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Limit, Stop and Trigger offsets are converted to a price based on the following rules:</p>
+
+        <ol>
+            <li>When the Attached Order type is Limit or Market if Touched  and the parent is a Buy: The Offset is added to the parent order price.</li>
+
+            <li>When the Attached Order type is Limit or Market if Touched  and the parent is a Sell: The Offset is subtracted from the parent order price.</li>
+
+            <li>When the Attached Order type is Stop, Stop-Limit, or Trailing Stop and the parent is a Buy: The Offset is subtracted from the parent order price.</li>
+
+            <li>When the Attached Order type is Stop, Stop-Limit, or Trailing Stop and the parent is a Sell: The Offset is added to the parent order price.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="OCOGroup">OCO Group (Group) </h3>
+        <div class="member-link">[<a href="#OCOGroup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Sierra Chart supports 8 different OCO (order canceled order) Groups and the <b>All OCO Groups</b> group.</p>
+
+        <p>An OCO (order cancels order) Group consists of 2 orders. This is a Target and a Stop.</p>
+
+        <p> When one fills or is canceled, the other will be canceled. If you have just a single target or a single stop and not a corresponding stop or target, then there is no OCO group.</p>
+
+        <p>  Although the <b>OCO Group</b> setting needs to be specified for each Attached Order regardless.</p>
+
+        <p> This setting is for associating Targets and Stops into pairs. Each pair will have its own OCO group unless you are just using a single Target or a single Stop.</p>
+
+        <p>  If you want to use a common Stop for multiple Targets, then you would set the <b>OCO Group</b> for that Stop order to <b>All OCO Groups</b> and this will split the Stop into more than one order and  place one order into each of the OCO Groups used by the other Attached Orders. </p>
+
+        <p> The number of orders created from an Attached Order  set to <b>All OCO Groups</b>  will be equal to the number opposite orders. For example if there is one Stop order  set to <b>All OCO Groups</b>, and there are two  <em>Target</em> orders set to OCO Group 1 and OCO Group 2 respectively, then there will be two Stop orders. Not more.</p>
+
+        <p>When an Attached Order in the <b>All OCO Groups</b>  OCO group is split up, the quantity of each of these individual split orders is equal to the quantity of the group that it is placed into. Examples of how this works is explained in the <a href="#AttachedOrdersExamples">OCO Group Examples</a> section.</p>
+
+        <p> The advantage of not using a common Stop when there are multiple Target orders is that the Stop orders can be adjusted independently. Otherwise, they cannot be unless you use the command   <b>Remove Link Between Stop Attached Orders</b> which can be added to the  <a href = "indexf01a.html?page=doc/GlobalSettingsMenu.html#CustomizeChartTradeMenu">Chart Trade Menu</a>.</p>
+
+        <p>If you are using more than one OCO Group, then the parent order quantity is split up into individual smaller orders that equal the number of OCO groups used (maximum of 8).</p>
+
+        <p> Therefore, if you are using 2 OCO groups, then the parent will be split into two independent orders, that are <em>linked</em> together.  The <em>sum of the order quantities for every  OCO group must be less than or equal to the parent order quantity. The Target and Stop orders in each OCO group need to have an identical quantity, which happens automatically.</em></p>
+
+        <p>The reason that parent orders and Stop orders for each OCO Group are split into individual orders and are not combined together is for two very important reasons:</p>
+
+        <p>1. In the case where there is server side OCO functionality, the orders in each OCO group must have identical quantities.</p>
+
+        <p>2. There is a more logical association between orders in an OCO Group when they are independent orders and the orders do not span more than 1 OCO group each.</p>
+        
+        <p>  When Attached Orders are sent to the external Trading service,  they are iterated through from top to bottom as they are listed in the Attached Orders list on the  <b>Targets</b> tab of the Trade Window. If an  Attached Order has a sibling order, the corresponding Target or Stop  in the same OCO Group, then  as  Attached Orders are processed from top to bottom in the list, the sibling order,  for the currently being processed Attached Order is located in the list and these  are sent at the same time.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="GroupQuantity">Group Quantity</h3>
+        <div class="member-link">[<a href="#GroupQuantity">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This is the quantity of the Attached Order. All Attached Orders within the same OCO Group must have the same quantity, so this setting specifies the quantity for the entire group.  </p>
+        
+         <p>When the  <b>OCO Group  </b>  setting is set to <b>All OCO Groups</b>  for an  Attached Order, then its Quantity is automatically set and is equal to the parent order quantity.</p>
+        
+        
+        <p>  When 2  Attached Orders are in the same OCO Group, changing the quantity of one of them will automatically change the quantity of the other to match.  </p>
+        
+        <p> When using a common Stop order  to be the Stop order for more than one Target order,  then the   <a href="#OCOGroup">OCO Group</a> setting   needs to be set to     <b>All OCO Groups</b>. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OrderQuantityMatching">Order Quantity Matching</h3>
+        <div class="member-link">[<a href="#OrderQuantityMatching">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is necessary that the sum of the Quantity for each of the  <b>Target</b> orders or the <b>Stop</b> orders, <em>whichever is greater</em>, must be equal to or less than the main order Quantity set on the <b>Main/C</b> tab. You can easily tell whether there is a match or not, by looking at the status text at the top of the Trade Window. Refer to the images below.  Even if there is not a match, as long as the main order quantity is greater, then you can still submit an order.</p>
+
+        <div style="text-align: center;">
+            <a href="../images/attachedordersmatch.png" rel="lightbox"><img src="../images/attachedordersmatch.png" alt="" ></a>
+            <a href="../images/attachedordersnomatch.png" rel="lightbox"><img src="../images/attachedordersnomatch.png" alt="" ></a>
+        </div>
+    </section>
+
+    <section class="h3">
+        <h3 id="MoveBreakevenForStop">Move to Breakeven for Stop</h3>
+        <div class="member-link">[<a href="#MoveBreakevenForStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/movetobreakevensettings.png" rel="lightbox"><img src="../images/movetobreakevensettings.png" class="MediumFloatRight"></a>
+
+        <p>The <b>Move to Breakeven for Stop</b> section on the  <b>Targets</b> tab of the Trade Window is to set move to breakeven functionality for the <b>Stop</b> Attached Order  <em>currently selected</em> in the Attached Order list at the top of the <b>Targets</b> tab.</p>
+
+        <p>The <b>Move to Breakeven for Stop</b> settings apply various Move to Breakeven functionality for the selected Attached Stop order.  This <b>Move to Breakeven</b> functionality works independently from and in addition to any other functionality the selected Stop order supports like Trailing Stop functionality.</p>
+
+        <p>The <b>Move to Breakeven for Stop</b>  settings support  <em>2 separate</em> Move to Breakeven actions. These are referred to as <b>Step 1</b> and  <b>Step 2</b>. First Step 1 is applied to the Stop and when that is complete, then  Step 2 Move to Breakeven settings are applied.</p>
+
+        <section class="h4">
+            <h4 id="MoveBEForStopsInstructions">Instructions</h4>
+            <div class="member-link">[<a href="#MoveBEForStopsInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <ol>
+                <li>Add a Stop Attached Order if you have not already and select in the list of Attached Orders at the top of the  <b>Targets</b> tab. You can use any Stop order type that you want. For example, you could apply  Move to Breakeven functionality to a  <b>Triggered Trail Stop-Limit</b> order type.</li> 
+
+                <li>Select <b>Step 1</b> in the <b>Move to Breakeven for Stop</b> frame. Refer to the image.</li>
+
+                <li>Set the <b>Type</b> setting in the <b>Move to Breakeven for Stop</b> frame to the type of move to breakeven action that you want.    Refer to the  <a href="#MoveBEForStopsType">Type</a> description. For the most basic type of move to breakeven action, choose <b>Offset in Ticks Triggered</b>.</li>
+
+                <li>Once you have selected the type that you want, then set the other controls in the <b>Move to Breakeven for Stop</b> frame as required.   Review the descriptions below. For the <b>Offset in Ticks Triggered</b> type, you will need to set the  <b>Breakeven (BE) Level Offset</b> and the <b>Trigger Offset</b> settings. The  Trigger Offset needs to be a positive number.</li>
+
+                <li>Once you have the Move to Breakeven settings as you require, then there is nothing further to do.</li>
+
+                <li>If you want to set a second Move to Breakeven action once the first step has completed, then select  <b>Step 2</b> in the <b>Move to Breakeven for Stop</b> frame and follow the instructions above again starting at step 3.</li>
+                
+                <li>For the <b>Move to Breakeven for Stop</b> functionality for  Stop Attached Orders to be able to be able to modify the order, it is necessary that the  Chart or Trading DOM  that the order originated from is still open as well as other conditions. For full details, refer to <a href = "index783f.html?page=doc/OrderTypes.html#ManagementOfTrailingStopOrders"></a>.</li>
+            </ol>
+        </section>
+
+        <section class="h4">
+            <h4>Step 1 / Step 2</h4>
+
+            <p>This setting controls what particular Step number, 1 or 2,  the current Move to Breakeven controls apply to. Once the first Moved to Breakeven step completes,  then Step 2 Moved to Breakeven settings apply, if the <b>Type</b> for <b>Step 2</b> is set to a setting other than <b>None</b>.</p>
+        </section>
+        
+        <section class="h4">
+            <h4 id="MoveBEForStopsType">Type</h4>
+            <div class="member-link">[<a href="#MoveBEForStopsType">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The following are the possible types of move to breakeven actions that can be performed on a Stop order type. Choose the one that you require.  Depending upon which one you have chosen determines what other settings are required.</p>
+
+            <ul>
+                <li><b>None</b>: When this option is selected, there is no Move to Breakeven action that will be applied to the selected Stop order.</li>
+               
+               <li><b>Offset in Ticks Triggered</b>: When this option is selected and the trigger price calculated from the <b>Trigger Offset</b> setting is reached, then the Stop order will be moved to the breakeven level.</li>
+               
+               <li><b>OCO Group Triggered</b>: When this option is selected and the Target order in the specified OCO Group has partially or fully filled, then the Stop order will be moved to the breakeven level.</li>
+               
+               <li><b>Trail to Breakeven</b>: When this option is selected, the Stop order will immediately begin to trail the market price  when the parent order fills or partially fills, and stop at the breakeven level.</li>
+               
+               <li><b>Trail to Breakeven Offset Triggered</b>: When this option is selected, and the trigger price calculated from the  <b>Trigger Offset</b> setting is reached, then the Stop order will begin to trail the market price and stop at the breakeven level.</li>
+               
+            </ul>
+        </section>
+
+        <section class="h4">
+            <h4 id="MoveBEForStopsLevelOffset">Breakeven (BE) Level Offset</h4>
+            <div class="member-link">[<a href="#MoveBEForStopsLevelOffset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The breakeven level is the parent order fill price. The parent order is the order that the Attached Orders are attached to.  This parent order fill price is the breakeven/reference price when the Stop order is moved to the breakeven level.  </p>
+
+            <p> When using the  <a href="#ScalingIn" >Scaling-In</a> functionality, this breakeven price is adjusted and uses the  weighted-average of the original parent price and the fill prices of the orders used for scaling in. The <b>Breakeven (BE) Level Offset</b> specifies the number of Ticks from this breakeven price that the Stop order will be moved to.  </p>
+
+            <p>If you specify 1 for the Breakeven Level Offset, the breakeven level price is 100 and the Tick Size is 1, then a Sell Stop will be moved to 101 when triggered.</p>
+
+           <p> In the case of a Trail to Breakeven Stop, the trailing action will end when the Stop order gets to 101.</p>
+           
+            <p>This level offset can be either a positive or negative number. With the preceding example, if you use a offset of -1, then the Stop order will be moved to 99.</p>
+            
+            <p>The move to breakeven action does not occur if the Stop order is moved beyond the calculated breakeven level.  For example, in the case of a Sell Stop order, the Stop order price has to be less than the breakeven level price plus the Breakeven Level Offset for the Stop order to be moved.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MoveBEForStopsTriggerOffset">Trigger Offset </h4>
+            <div class="member-link">[<a href="#MoveBEForStopsTriggerOffset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This specifies the offset <em>in Ticks</em> that the current market price needs to move to from the parent order fill price, to trigger the move to breakeven action.  For example if the parent order fills at 100, it is a Buy order, the Tick Size is 1, Trigger Offset is set to 5, then when the market reaches 105 the attached Sell Stop will be automatically moved to the breakeven level.</p>
+           
+           <p> This Trigger Offset  remains the same even after any modification to the Stop Attached Order. </p>
+        </section>
+
+        <section class="h4">
+            <h4 id="MoveBEForStopsTriggerOCOGroup">Trigger OCO Group</h4>
+            <div class="member-link">[<a href="#MoveBEForStopsTriggerOCOGroup">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This setting only applies when you have set the <b>Type</b> to <b>OCO Group Triggered</b>.  When the Target  order in the selected OCO Group fills, then the  Stop order, which will normally be in a different OCO Group, will be moved to the breakeven level. In order for this to work, there must be a Target order defined in the specified OCO Group.</p>
+            
+            <p>If you are using a single Target order  and there is just one  <b>  OCO Group</b> being used for the Attached Orders, then normally it would not make sense to be using the <b>Move to Break Even for Stop</b> functionality because once the   Target order fills,   the Stop order is going to be canceled. Although if the  Target order consists of  a quantity of more than 1,  then it can fill at more than one time. Therefore using <b>Move to Break Even for Stop</b> in this case may make sense.
+            <br> <br>
+             The more typical case,  is there are two or more  Target orders, and the Move to Breakeven functionality  is set on   the common Stop order, which is using  <b>All OCO Groups</b>, or set on a Stop order which uses a <em>different OCO Group</em>.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="TimeInForce">Time In Force</h3>
+        <div class="member-link">[<a href="#TimeInForce">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>It is necessary to set the <b>Time in Force</b> (TIF) for  Attached Orders.  The setting is at the bottom of the <b>Targets</b> tab of the <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" target="_blank" rel="noopener noreferrer">Trade Window</a> for the chart. Refer to the image below.</p>
+
+        <div style="text-align: center;"><a href="../images/attachedorderstimeinforce.png" rel="lightbox"><img src="../images/attachedorderstimeinforce.png" class="screenshot" loading="lazy" ></a> </div>
+    </section>
+
+    <section class="h3">
+        <h3 id="UseAttachedOrdersforNewOrders">Use Attached Orders</h3>
+        <div class="member-link">[<a href="#UseAttachedOrdersforNewOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The <b>Use Attached Orders</b> option is found on the <b>Main</b> tab of the Trade Window.  When this is enabled, then when you enter an order from the Trade Window, from the chart, from the Chart DOM, from the Trade DOM, or from a <b>Spreadsheet System for Trading</b> auto-trade system, the Attached Orders defined on the Trade Window will be attached to the submitted order.</p>
+
+        <p>Each chart or Trade DOM has its own Trade Window.  Make certain that you are enabling <b>Use Attached Orders</b> on the correct Trade Window.  Go to the chart or Trade DOM and select <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> to open or activate the correct Trade Window and then on the  <b>Main</b> tab, enable  <b>Use Attached Orders</b>. For further information about this, refer to <a href="index9473.html?page=doc/TradeWindow.html#TradeWindowSettingsNotApplyingToChartOrTradingDOM">Trade Window Settings not Applying to Chart or Trading DOM</a>.</p>
+
+        <p>Attached Orders will <em>not</em> be attached to the order  when using the <b>Flatten</b> command.</p>
+
+        <p>If an order is entered from an ACSIL (Advanced Custom Study Interface and Language) Auto Trade system, then that auto trade system controls whether or not Attached Orders will be used and the setting of this option is not relevant for those automated orders.</p>
+
+        <p>Attached Orders will <em>not</em> be attached to the order when reducing the size of your position and there is not a new resulting position, and <a href="#ScalingOut">Support Scale Out</a>  is enabled on the Trade Window menu accessed through the Menu/M button on the Trade Window.</p>
+
+        <p>If you disable <b class="menu_item">Menu/M &gt;&gt;  Support Scale Out</b> on the Trade Window, Attached Orders will be attached to the order even if you are reducing the size of your position or scaling out.</p>
+
+        <p>If  the <b>Use Attached Orders</b> option is not enabled, then in no case are the Attached Orders attached to any order.</p>
+
+        <section class="h4">
+            <h4 id="Reversing">Reversing Position and Attached Orders</h4>
+            <div class="member-link">[<a href="#Reversing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>If you are reversing your current Trade Position either by using the <b>Reverse</b> button on the Trade Window, which also cancels the current orders, or by using a <em>Market </em> order, Order Quantity and Side (Buy/Sell) which will reverse your Position, then the Attached Orders will be attached to the order which will establish a new Position in the opposite direction. The quantities of these Attached Orders will match the new resulting Position.</p> 
+
+            <p>For example, if your current position is +5, you enter a Sell Market order with a quantity of 8, then  a Sell order of 5 will be submitted   <em>without</em> Attached Orders to flatten the existing Position and a Sell Market order of 3 will be submitted with Attached Orders. <em>This only occurs if you are using a Market order</em>.</p>
+
+
+            <p>In the case of a reversal, you need to consider the quantity of the order that establishes a new Position.  If the quantity is 1 and your Attached Order configuration consists of 2 Targets, this is not going to work and you will receive an error message.</p>
+
+            <p>So you need to define another Attached Order configuration that consist of only a single Target and Stop and save it as a Trade Window Configuration.</p>
+
+            <p>You then need to switch to this before you do a reverse.  Refer to <a href="#PreconfiguredAttachedOrdersSet">Using a Preconfigured Attached Orders Set</a>.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="PreconfiguredAttachedOrdersSet">Using a Preconfigured Attached Orders Set</h3>
+        <div class="member-link">[<a href="#PreconfiguredAttachedOrdersSet">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To save a Trade Window configuration which includes your currently defined Attached Orders, select  <b class="menu_item">M &gt;&gt; Save Configuration</b> on the <b>Main</b> tab of the Trade Window for the chart. Enter or select a File Name and press  <b>Save</b>.</p>
+
+        <p >To use a saved Trade Window configuration which includes the Attached Orders set, select the name from the drop-down list of saved Trade Window configurations on the  Trade Window. Refer to the images below.</p>
+
+        <p>Trade Window configuration files are stored in the Sierra Chart <b>Data Files Folder</b>. They have the extension <b>twconfig</b>. You can easily share these files with other users. To find the location of this folder, select <b class="menu_item">Global Settings &gt;&gt; General Settings</b>. The <b>Data Files Folder</b> displays the path to the folder.</p>
+
+        <table class="center">
+            <tr>
+                <td> 
+                    <a href="../images/tradewindowconfiguration.png" rel="lightbox"><img src="../images/tradewindowconfiguration.png" class="screenshot" loading="lazy" alt="" ></a>
+                </td>
+                <td>
+                    <a href="../images/savetradewindowconfig.png" rel="lightbox"><img src="../images/savetradewindowconfig.png" class="screenshot" loading="lazy" alt="" width="400"></a>
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Functionality">Attached Orders Functionality</h2><!--verified-->
+    <div class="member-link">[<a href="#Functionality">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When Sierra Chart submits an order, it will first split up the order into the number of OCO Groups you are using. For example, if you are using 3 different OCO Groups, there will be 3 different parent orders (each with the quantity specified with the <a href="#GroupQuantity">Group Quantity</a> setting). For more information about OCO Groups,  see the <a href="#OCOGroup">OCO Group</a> section. Sierra Chart will manage all of the OCO Groups for you. So even though there are multiple parents due to splitting, you only need to modify or cancel one of them to modify or cancel all of the parents.</p>
+
+    <section class="h3">
+        <h3 id="Fills">Fills</h3><!--verified-->
+        <div class="member-link">[<a href="#Fills">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>After the parent order is submitted with Attached Orders, the Attached Orders go into a held state until the parent order is filled.</p>
+
+        <p>When the parent order fills or partially fills, the Attached Orders are adjusted so that the Attached Order offsets from the parent order  fill price are exactly the same as you have specified in the Attached Order settings, if <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt;  Adjust Attached Orders to Maintain Same Offset on Parent Fill</b> is enabled.</p>
+
+        <p>This adjustment does not occur in the case of Server side managed Bracket orders.</p>
+
+        <p>Once the  parent order is filled or partially filled, the  Attached Orders  activate with a quantity matching the filled quantity of the parent order. For example, if  a parent order has a quantity of 5, and it partially fills  to a quantity of 3 with 2 remaining, then the Attached Orders become active with a quantity of 3 each.</p>
+
+        <p>When an Attached Order completely fills, the other order (sibling order)  in the same OCO Group is automatically canceled.</p>
+
+        <p>If an Attached Order partially fills, then the other order   (sibling order) will have its quantity reduced by the amount of the fill.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Cancellations">Cancellations</h3><!--verified-->
+        <div class="member-link">[<a href="#Cancellations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>If the parent order is canceled, assuming it can be canceled, the Attached Orders for it are canceled as well.  </p>
+        
+        <p>If there are multiple parent orders that were split from an original parent order, then when one of those parent orders is canceled, the other parents are canceled along with the Attached Orders for it. </p>
+        
+         <p>If one of the Attached Orders is canceled, the  parent order will  <em>not</em> be canceled. The other order in the OCO Group (sibling) will  <em>not</em> be canceled either.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Modifications">Modifications</h3><!--verified-->
+        <div class="member-link">[<a href="#Modifications">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When the price of a parent order is modified, Sierra Chart will also modify all of the other parent orders that were split from the original order as well.</p>
+
+        <p> When the price of a parent order is modified, the Attached Orders for it are also modified to maintain the same offset they had to the parent order previously.</p>
+
+        <p>When an Attached Order is modified  and it still has a Pending Child status, then the offset that it has to that parent order is updated to the new offset. This offset  is used to adjust the Attached Order when the parent order fills so that the Attached Order maintains the identical offset it had to the parent order before the parent order filled.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="SendAttachedOrdersIndependent">Sending Attached Orders Independently</h2>
+    <div class="member-link">[<a href="#SendAttachedOrdersIndependent">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Normally, Attached Orders are submitted along with a new order that you enter from a chart, Trading DOM or the Trade Window. This occurs when <b>Use Attached Orders</b> is enabled on the <b>Trade Window</b> for the chart or Trading DOM. However, you may want to send the  Attached Orders independently without a parent order.</p>
+
+    <p>For instructions to Send Attached Orders independently, refer to  <a href="index783f.html?page=doc/OrderTypes.html#SendAttachedOrders">Send Attached Orders by Position/Price</a> in the Order Types documentation.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChangingAttachedOrdersConfigurationAfterParentOrderFilled">Changing Attached Orders Configuration After Parent Order Has Filled</h2>
+    <div class="member-link">[<a href="#ChangingAttachedOrdersConfigurationAfterParentOrderFilled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Follow the instructions below to change the configuration of  Attached Orders for a parent order after the parent order  has been submitted and filled.   If the parent order has not been filled,  then just simply cancel the parent order, which will cancel the Attached Orders, and  resubmit  the parent order along with the  Attached Orders configuration that you require.</p>
+    <ol>
+        <li>For the easy ability to switch among different Attached Order configurations, <em>save</em> each configuration as a <a href="index9473.html?page=doc/TradeWindow.html#SavingConfiguration" target="_blank" rel="noopener noreferrer">Trade Window Configuration</a>. </li>
+
+        <li> Cancel the existing Target and Stop orders. For instructions, refer to  <a href="index3c50.html?page=doc/ChartTrading.html#ModifyingOrdersOnTheChart" Target="_blank" rel="noopener noreferrer">Modifying and Canceling Orders on the Chart</a> on the Chart Trading page.</li>
+
+        <li>Select the particular <a href="index9473.html?page=doc/TradeWindow.html#SelectingConfiguration" Target="_blank" rel="noopener noreferrer">Attached Order configuration</a> you want to use and then use one of the <a href="index783f.html?page=doc/OrderTypes.html#SendAttachedOrders" Target="_blank" rel="noopener noreferrer">Send Attached Orders</a> Order types.</li>
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingSingleCommonStop">Using Single Common Stop</h2>
+    <div class="member-link">[<a href="#UsingSingleCommonStop">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To use a common  Stop order when there are multiple Target Attached Orders,  only add 1 Stop order and set the OCO Group for that Stop order to  <b>All OCO Groups</b>.</p>
+
+    <p>When this is done, there will be multiple Stop orders created, one for each Target order.  After modifying one of these stop  orders on a chart or Trade DOM after the are submitted, the other Stop orders in the Attached Order set will be automatically adjusted at the same time.</p>
+
+    <p>Refer to the image below.</p>
+
+    <div style="text-align: center;"><a href="../images/attachedorderscommonstop.png" rel="lightbox"><img src="../images/attachedorderscommonstop.png" alt="" class="screenshot" loading="lazy"></a></div>
+</section>
+
+
+<section class="h2">
+    <h2 id="ClosingReducingPositionWithAttachedOrderInteraction">Closing/Reducing Position with Attached Order Interaction</h2>
+    <div class="member-link">[<a href="#ClosingReducingPositionWithAttachedOrderInteraction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you want to immediately close an existing position and cancel the Attached Orders it is recommended to use the   <a href = "index9473.html?page=doc/TradeWindow.html#FlattenCancel">Flatten and Cancel</a> operation.</p>
+    
+    <p>  Another method by which you can close fully or partially a position that has a Target and Stop order is to simply  modify the price of the Target/Limit Attached Order towards the current market price and slightly beyond it. It will then immediately  fill at the current market price.</p>
+    
+    <p>  It is not necessary to move it to a precise price. Simply move it to the other side of the current market price. Opposite from the side the Limit order is on. </p>
+    
+    <p>  You cannot do this with the Stop  Attached Order because this type of Stop order modification will get rejected by the exchange.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AttachedOrdersExamples">Attached Orders Examples</h2>
+    <div class="member-link">[<a href="#AttachedOrdersExamples">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section documents examples of Attached Orders that you can use.</p>
+
+    <section class="h3">
+        <h3 id="AttachedOrdersExample1">Simple Bracket Example</h3>
+        <div class="member-link">[<a href="#AttachedOrdersExample1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li>Set the   <b>Quantity</b> on the Trade Window for the main  order, which is known as the parent order, to the required order quantity. For information about submitting an order, refer to <a href="index9473.html?page=doc/TradeWindow.html#TradeWindow" >Entering an Order from the Trade Window</a>.</li>            
+
+            <li>Set the <b>Order Type</b> for the main order.</li>
+
+            <li>Add a Target Attached Order in <b>OCO Group 1</b>.  The <b>Type </b>  needs to be set to  <b> Target: Limit</b>.  The Attached Order <b>Quantity</b> will be automatically set.</li>
+
+            <li>Add a Stop (Stop) Attached Order in <b>OCO Group 1</b>. The <b>Type </b> needs to be set to <b>Stop: Stop</b>. The Attached Order <b>Quantity</b> will be automatically set.</li>
+
+            <li>When submitting the parent order, either a Buy or Sell, the above two Attached Orders will be submitted with it. In total there are 3 individual orders linked together in a parent-child relationship. The 2 Attached Orders (Target and Stop) are in a single OCO Group.</li>
+        </ol>
+
+        <div style="text-align: center;"><a href="../images/simpleattachedordersexample.png" rel="lightbox"><img src="../images/simpleattachedordersexample.png" alt="" class="screenshot" loading="lazy" ></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachedOrdersExample2">Multiple-Bracket Example</h3>
+        <div class="member-link">[<a href="#AttachedOrdersExample2">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <ol>
+            <li> Go to the   <B>Main</B> tab of the Trade Window for the chart or Trading DOM.</li>
+            
+            <li>Set the <b>Quantity</b> on the Trade Window for the main  order, which is known as the parent order, to the required order quantity. In this case the order quantity must be at least 2.</li>  
+
+            <li>Set the <b>Order Type</b> for the main order.</li>
+            
+           <li>Go to the  <b>Targets</b> tab of the Trade Window.   For complete documentation to add Attached Orders, refer to <a href="#Instructions">Step-By-Step Instructions</a>.</li>
+
+            <li>Add a Target Attached Order in <b>OCO Group 1</b>.  The type needs to be  <b>Type: Limit</b>.  The Attached Order <b>Quantity</b> will be automatically set and can be manually modified to meet your requirements.</li>
+
+            <li>Add a Target Attached Order in <b>OCO Group 2</b>.  The type needs to be  <b>Type: Limit</b>.  The Attached Order <b>Quantity</b> will be automatically set and can be manually modified to meet your requirements.</li>
+
+            <li>Add a Stop (Stop) Attached Order in <b>All OCO Groups</b>. The type needs to be <b>Type: Stop</b>. The Attached Order <b>Quantity</b> will be automatically set and cannot be changed since the OCO Group is set to <b>All OCO Groups</b>.</li>
+
+            <li>Sierra Chart will send to your connected trading service or to the trade simulation system, 2 OCO group orders as follows:</li>
+
+            <li>The first OCO group order will have a parent order with approximately 50% of the order quantity. Attached to that parent order will be 2 Attached Orders, a Limit and Stop. Each having the same order quantity as the parent order.</li>
+
+            <li>The second OCO group order will have a parent order with the remaining order quantity. Attached to that parent order will be 2 Attached Orders, a Limit and Stop. Each having the same  order quantity as the parent order.</li>
+            
+            <li> For information about submitting an order, refer to <a href="index9473.html?page=doc/TradeWindow.html#TradeWindow"  target="_blank" rel="noopener noreferrer">Entering an Order from the Trade Window</a>.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="AttachedOrdersExample3">Target with Move to Breakeven and Trail Stop Example</h3> 
+        <div class="member-link">[<a href="#AttachedOrdersExample3">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <a href="../images/attachedordersexample3.png" rel="lightbox"><img src="../images/attachedordersexample3.png" class="UnScaledFloatRight"  alt="" ></a>
+
+        <p>This example provides detailed step-by-step instructions for both Target and Stop Attached Orders. The Stop will move to the breakeven level after a certain profit amount has been reached on the Trade Position and then trail the market after another set profit amount has been reached.</p>
+
+        <ol>
+            <li>Open the Trade Window for the chart or Trade DOM by selecting <b class="menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> on the menu.</li>
+
+            <li>Select the Targets tab.</li>
+
+            <li>In the list box at the top of the Targets tab that lists the Attached Orders, select the topmost order, if any and then press the <b>Remove</b> button as many times as is needed to remove all of the orders from the list.</li>
+
+            <li>Press the <b>Add</b> button. The added order will be a <b>Target</b>.</li>
+
+            <li>Set the <b>Limit Offset</b> to the number of ticks that you want to be filled that away from the entry order.</li>
+
+            <li>Set the <b>Quantity</b> to match the main order quantity. This already should be set properly and will not need to be changed.</li>
+
+            <li>Press to <b>Add</b> button again. The  added order will be a <b>Stop</b>.</li>
+
+            <li>Set the <b>Type</b> to <a href="index783f.html?page=doc/OrderTypes.html#StepTrailingStop">Stop: Triggered Trail Stop</a>.</li>
+
+            <li>Set the <b>Stop Offset</b> to the number of ticks that you want the initial stop price to be at.</li>
+
+            <li>Set the <b>Trigger Offset</b> to the number of ticks of profit that you want before the trailing stop action will begin.</li>
+
+            <li>Set the <b>Trail Offset</b> to the number of ticks away that you want to trail the current market price by once the Stop is triggered.</li>
+
+            <li>In the <b>Move to Breakeven for Stops</b> frame, set the Type to <b>Offset in Ticks Triggered</b>.</li>
+
+            <li>In the <b>BE Level Offset</b> box enter 0 to move the stop exactly to breakeven or 1 to move the stop to breakeven +1.</li>
+
+            <li>Set the <b>Trigger Offset (Ticks)</b> to the number of ticks that you want of profit before the stop is moved to the breakeven level.</li>
+        </ol>
+    </section>
+
+
+    <section class="h3">
+        <h3 id="AttachedOrdersExample5">2 Targets and Common Stop with Move to Breakeven on First Target</h3>
+        <div class="member-link">[<a href="#AttachedOrdersExample5">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The image below is an example of an <a href = "#Instructions">Attached Order configuration</a> where there are 2 Targets and 1  common  Stop.  When the first Target has been  filled or partially filled, the Stop will move to the breakeven level.</p>
+
+
+        <div style="text-align: center;"><a href="../images/attachedordermovetobreakevenexampleconfiguration.png" rel="lightbox"><img src="../images/attachedordermovetobreakevenexampleconfiguration.png" alt="" class="screenshot" loading="lazy" width="200" ></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="OneTargetWith2StopsWithMoveToBreakEvenOnTarget1">One Target with 2 Stops with Move to BreakEven on Target 1</h3>
+        <div class="member-link">[<a href="#OneTargetWith2StopsWithMoveToBreakEvenOnTarget1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The image below is an example of an Attached Order configuration where there is 1 Target and 2 separate Stop orders. When the first Target is filled, the first Stop order is automatically  canceled and the second stop order is moved to breakeven.</p>
+
+
+        <div style="text-align: center;"><a href="../images/1target_2stops_movetobeontarget1.png" rel="lightbox"><img src="../images/1target_2stops_movetobeontarget1.png" alt="" class="screenshot" loading="lazy" width="200" ></a></div>
+    </section>    
+
+    <section class="h3">
+        <h3 id="TradeWindowConfigurationExamples">Trade Window Configuration File Examples</h3>
+        <div class="member-link">[<a href="#TradeWindowConfigurationExamples">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section contains Trade Window Configuration files with Attached Order configurations requested by Sierra Chart users.  To use these files, follow the instructions in <a href="index9473.html?page=doc/TradeWindow.html#ConfigurationFileAnotherSource" target="_blank" rel="noopener noreferrer">Using a Trade Window Configuration File Provided to You</a>.</p>
+
+        <p>It is recommended that you test these Trade Window configurations in  <a href = "indexad24.html?page=doc/TradeSimulation.php">Trade Simulation Mode</a> before using them for  live trading.</p>
+        <ol>
+            <li><a href="../images/qty2_1_target_triggered_trail.twconfig">Qty2_1_Target_Triggered_Trail.twconfig</a></li>
+            <li><a href="../images/twotargetswithcommontrailingstop.twconfig">TwoTargetsWithCommonTrailingStop.twconfig</a></li>
+        </ol>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="ScalingOut">Scaling Out</h2>
+    <div class="member-link">[<a href="#ScalingOut">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When <b>Support Scale Out</b> is enabled, there are Attached Orders (child orders) or orders that are in an OCO (order cancels order) group  with an <b>Open</b> order Status, you then enter a new order of the same side (Buy/Sell) that is reducing the quantity of your position, and that order fills, then the Attached Orders or OCO orders for the same side will have their quantities reduced by the filled quantity of the new order you entered, or the Attached Orders or OCO orders will be canceled if they have the same or less quantity as the fill quantity of the new order you entered.</p>
+
+    <p>To enable <em>Scale Out</em> functionality,  select <b class = "menu_item">Trade &gt;&gt; Open Trade Window for Chart</b>. On the <b>Main</b> or <b>C</b> tabs press the <b>Menu/M</b> button and make sure there is a checkmark by  <b>Support Scale Out</b>. Refer to the  images below.</p>
+
+
+    <div style="text-align: center;"><a href="../images/tradewindowmenubutton.png" rel="lightbox"><img src="../images/tradewindowmenubutton.png" alt="" width="150"  class="screenshot" loading="lazy"></a></div>
+    
+    <div style="text-align: center;"><a href="../images/tradewindowmenuscaleinoutcommandoptions.png" rel="lightbox"><img src="../images/tradewindowmenuscaleinoutcommandoptions.png" alt="" width="500"  class="screenshot" loading="lazy"></a></div>
+
+
+    <p>You can set whether you want the <em>nearest</em> order or <em>furthest</em> order adjusted using the <b>Scale Out</b> setting in <b class="menu_item">Global Settings &gt;&gt; General Trade Settings</b>.</p>
+
+    <p>When <b>Support Scale Out</b> is enabled, and you are reducing the size of your position and not reversing, then Attached Orders will <b>not</b> be attached to the new order even if  <a href="#UseAttachedOrdersforNewOrders">Use Attached Orders</a> is enabled.</p>
+
+    <p>When <b>Support Scale Out</b> is <em>not</em> enabled, then Attached Orders will be attached to the new order that you enter if  <a href="#UseAttachedOrdersforNewOrders">Use Attached Orders</a> is enabled.</p>
+
+    <p>When an Attached Order (child order) or an order in an OCO group is canceled due to a detected Scaling Out condition, then the following message will be added to the <b class="menu_item">Trade &gt;&gt; Trade Service Log</b>: <i class ="GeneralBackgroundHighlight">Scale Out: Canceling Child or OCO order due to order fill of same side.</i></p>
+    
+    <p> The following two settings in  <b class="menu_item">Global Settings &gt;&gt; General Trade Settings</b>  affect Scaling Out functionality: <a href = "index4451.html?page=doc/GlobalTradeSettings.html#PerformImmediateScaleOutWithMarketOrder">Perform Immediate Scale Out with Market Order</a>, <a href = "index4451.html?page=doc/GlobalTradeSettings.html#SupportScaleOutWithoutExistingPosition">Support Scale Out Without Existing Position</a>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="ScalingIn">Scaling In</h2>
+    <div class="member-link">[<a href="#ScalingIn">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When <b>Support Scale In</b> is enabled on the Trade Window (<b class="menu_item">Menu/M &gt;&gt; Orders &gt;&gt; Support Scale In</b>),  there is an existing  <em>nonzero</em> Trade Position quantity for the Symbol and Trade Account of the  Chart or Trade DOM and there are Attached Orders already Open (not in a pending state), then when you increase the size of the Position with a new order either with a Market order or non-Market order, the existing Attached Orders will be  <em>increased in quantity</em> to match the quantity of this new order, when the new order fills and the Position is increased.</p>
+
+    <p>In this case, new Attached Orders are <em>not submitted</em> with the new order.</p>
+
+    <p>Scaling In  does still work even  in the case   where you have reduced the  Order Quantity on the Trade Window to a quantity less than the configured Attached Orders and there is the <b>NoMatch</b> error at the top of the Trade Window.  </p>
+
+    <p> In this case, that message can be ignored.  There is not a need that the new order quantity match the quantity of the Attached Orders since there is a   Scale In operation that will be performed.</p>
+
+    <p>To use the <b>Scale In</b> function, the following conditions need to be met:</p>
+
+    <ol> 
+        <li>The <em>Scale In</em> functionality needs to be enabled by selecting <b class = "menu_item">Trade &gt;&gt; Open Trade Window for Chart</b> (Refer to <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow"  target="_blank" rel="noopener noreferrer">Opening Trade Window for Chart or Trade DOM</a>). On the <b>Main</b> or <b>C</b> tabs press the <b>Menu/M</b> button and make sure there is a checkmark by  <b>Orders &gt;&gt; Support Scale In</b>. 
+         <br> <br>
+         
+        <em>Make sure you enable this option on the Trade Window associated with the chart or Trade DOM</em>. Refer to the documentation for opening the Trade Window for further information.</li>
+
+        <li>There are Attached Orders defined on the Trade Window for the chart.</li>
+        <li><b>Use Attached Orders</b> is enabled on the Trade Window for the chart.</li>
+        <li>You are <em>not</em> using Flatten or Reverse.</li>
+        <li>You are <em>not</em> using one of the OCO (Order Cancels Order)  <a href="index783f.html?page=doc/OrderTypes.html">order types</a>. Example: OCO Buy Stop Sell Stop.</li>
+        <li>There are already Attached Orders working on your trade account for the symbol. Attached Orders that are in a <b>Pending Child/Server</b> state are not considered.</li>
+       
+       <li>  There is an existing Long  Trade Position  for the same Symbol and Trade Account  the new order is submitted for and you are increasing the Long Trade Position quantity. <br> <br>
+       
+       If the Position Quantity is not correct  or is 0, then there will be a problem with the Scale In functionality. Refer to <a href = "index7cfb.html?page=doc/TradeStatusWindows.html#IncorrectlyReportedTradePositionQuantity">Incorrectly Reported Trade Position Quantity</a>.</li>
+        
+        <li>Or, there is an existing Short  Trade Position  for the same Symbol and Trade Account  the new order is submitted for and you are increasing the Short Trade Position quantity. <br> <br>
+        
+       If the Position Quantity is not correct  or is 0, then there will be a problem with  the Scale In functionality. Refer to <a href = "index7cfb.html?page=doc/TradeStatusWindows.html#IncorrectlyReportedTradePositionQuantity">Incorrectly Reported Trade Position Quantity</a>.</li>
+        
+        <li> To control the method of scale in, select   <b class="menu_item">Global Settings &gt;&gt; General Trade Settings</b>.  In the  <b>Scale  In</b>  setting, choose from one of the following:  <b>Nearest Orders, Furthest Orders, Even Distribution-Maintain Ratios, Even Distribution</b>. 
+        
+         <br> <br>
+         When using  <b>Even   Distribution</b>, the quantity of the new submitted order  which will increase the Trade Position,   upon a fill will be evenly distributed across the Attached Target and Stop orders until there is no further available quantity.</li>
+    </ol> 
+    
+    
+    <p>  The  <b>Scaling In</b> functionality  works under the conditions documented above and can be used no matter  how a new order is submitted. This functionality is also supported with automated trading systems including the   <a href = "indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet System for Trading</a> study. </p> 
+    
+    <p> When an order that meets the  scale in conditions  fills, the  scale in action will be performed. If this order  partially fills and there are therefore multiple fills, each one of those fills will cause the scale in action to be performed.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="HidingAttachedOrders">Hiding Attached Orders on Chart Until Parent Fill</h2>
+    <div class="member-link">[<a href="#HidingAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When a chart is in  <a href="index3c50.html?page=doc/ChartTrading.html#ChartTrading" >Chart Trade Mode</a>, Attached Orders displayed on the chart can be hidden until the parent order fills.</p>
+
+    <p>To do this, go to the Trade Window for the chart. For instructions, refer to <a href="index9473.html?page=doc/TradeWindow.html#OpeningTradeWindow" >Opening Trade Window for Chart or Trade DOM</a>.</p>
+
+    <p>Press  the <b class = "menu_item">M/Menu</b> button on the Trade Window. Enable the <b>Hide Pending Attached Orders</b> option on the menu and make sure there is a checkmark by it. When this is done, Attached Orders  will not be displayed on the chart until the parent order fills and they become working.</p>
+</section>
+
+<section class="h2">
+    <h2 id="StudyControlledTargetsStops">Study Controlled Targets and Stops</h2>
+    <div class="member-link">[<a href="#StudyControlledTargetsStops">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="StudyControlledTargetsStops_Description">Description</h3>
+        <div class="member-link">[<a href="#StudyControlledTargetsStops_Description">Link</a>] - [<a href="#top">Top</a>]</div> 
+
+        <p>Sierra Chart provides a study named  <b>Trade Management By Study</b>. This study will modify  an existing working Target or Stop <a href = "#Introduction">Attached Order</a> for the symbol of the chart to match the most recent value of a selected <em>Study Subgraph</em>  in a study.  </p>
+        
+        <p>This Study Subgraph is used to set the order price of the Target or Stop. An offset from this Study Subgraph is also supported.  The <a href = "index4604.html?page=doc/StudiesReference.php&amp;ID=17&amp;Name=Line">Line</a> study can also be referenced and you can set the level of the line  through is Study Input.</p>
+        
+        <p> The nearest Target or Stop order  is considered the one nearest to the current trade price.</p>
+
+        <p>The study monitors the chart for Open Attached Orders (Targets or Stops). These are Attached Orders that are currently  <b>Open</b> due to a parent order that was previously filled.  The orders must have a   <em>Status</em> of   <b>Open</b>  for them to be modified  by this study.  </p>
+
+         <p>If no orders exist,  the <b>Trade Management By Study</b> will not do anything.  These Target and Stop Attached Orders  can also have originated from a different chart.</p>
+
+        <p>Once an Open Target or Stop is found, then based on the most recent value of the selected Study Subgraph, the  <b>Trade Management By Study</b> study will continuously modify the order price to match.</p>
+        
+        <p>If you want to control both the Target and Stop according to a Study Subgraph, then you can add two <b>Trade Management By Study</b> studies to the chart and set one to control the Target and the other one the Stop. This is done through the <b>Order Types to Manage</b> Input with the study. </p>
+
+
+        <p>Full source code for the study can be found in <b>\ACS_Source\AutomatedTradeManagementBySubgraph.cpp</b> in the folder that Sierra Chart is installed to. This is an  <a href = "indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">ACSIL</a> study. You can <a href = "indexaeeb.html?page=doc/HowToBuildAnAdvancedCustomStudyFromSourceCode.html">modify</a> this study to meet your requirements.</p>
+    </section>   
+
+    <section class="h3">
+        <h3 id="StudyControlledTSInstructions">Instructions</h3>
+        <div class="member-link">[<a href="#StudyControlledTSInstructions">Link</a>] - [<a href="#top">Top</a>]</div> 
+
+        <ol>
+            <li>Select <b class = "menu_item">Analysis &gt;&gt; Studies</b> on the menu.</li>
+            <li><b>Add</b> the study named <b>Trade Management By Study</b>. For additional details to add a study to a chart, refer to <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Adding/Modifying studies</a>.</li>
+
+            <li>Press the <b>Settings</b> button.</li>
+            <li>Select the <b>Settings and Inputs</b> tab.</li>
+            <li>Set the <b>Enabled</b> input to Yes.</li>
+
+            <li>Set the  <b>Order Type To Manage</b> input to  <b>Stops</b> or <b>Targets</b> depending upon whether you want to adjust a Stop or Target order.</li>
+
+            <li>Set the <b>Controlling Subgraph Reference</b> input to the particular Study and Study Subgraph that will control the Target or Stop. The Study Subgraph is a particular line/plot within a Study. First select the Study and then the particular Study Subgraph within that study. The study must be on the same chart.</li>
+
+            <li>Set the   <b>Trailing Offset (in Ticks)</b> input, to the number of ticks away from the controlling <b>Study Subgraph</b> that the order should be when it is modified.</li>
+
+            <li>Set the  <b>ACS Control Bar Button # for Enable/Disable</b> Input to the   Control Bar Button number you can use to enable and disable the study. More details on this are explained in a further down step.  This step is optional.</li>
+
+            <li>Set the <b>Position Type</b> input to <b>All Positions, Long</b> or <b>Short</b> to indicate the type of positions you want to this study to be active on.</li>
+
+            <li>Press OK.  Press OK.</li>
+            
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar 1-8</b> on the menu.</li>
+
+            <li> Expand the <b>  Available Control Bar Commands &gt;&gt; Advanced Custom Study Buttons</b> sublist.    <b>Add</b> a Custom Study Button # to the     <b>Selected Control Bar Commands</b> list. The # after <b>Custom Study Button #</b> represents the number  that you set for the <b>ACS Control Bar Button # for Enable/Disable</b> Input.</li>
+
+            <li>If the Control Bar is not visible, select <b class="menu_item">Window &gt;&gt; Control Bars &gt;&gt; Control Bar 1-8</b>. There will be a button on the Control Bar named <b>TMS</b> which can be used to easily enable and disable this study.</li>
+
+            <li>When this study is enabled, and there is an open Target or Stop order, it will be modified to track the  controlling Study Subgraph.</li>
+            
+            <li>If a Target or Stop order is not modified, then  set the   <b>Detailed Logging (for debugging)</b> input to <b>Yes</b>. This will cause messages added to the <b class = "menu_item">Window &gt;&gt; Message Log</b> indicating the reason for the problem. Refer to the  <a href="#TradeManagementByStudyInputSettings" >Study Input Settings</a> section for further details.</li>
+
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="TradeManagementByStudyInputSettings">Trade Management by Study Input Settings</h3>
+        <div class="member-link">[<a href="#TradeManagementByStudyInputSettings">Link</a>] - [<a href="#top">Top</a>]</div> 
+
+        <ul>
+            <li><b>Enabled</b>: Enables or disables this study. When this is set to <b>No</b>, then the automatic modification of the found Stop or Target  order will not be performed.</li>
+
+            <li><b>Order Type To Manage</b>: Select to either manage Stops or Targets. If you need to manage both at once, add the study twice.</li>
+
+            <li><b>Controlling Subgraph Reference</b>: A reference to the Study and the Subgraph of that study which controls the order price.</li>
+
+            <li><b>Order Adjustment Timing</b>: Determines when or how often to modify the Target or Stop order. Supports two methods <b>On Bar Close</b> and <b>Every N Seconds</b>.
+                <ul>
+                    <li><b>On Bar Close</b>: Will use the referenced study Subgraph value at the previous bar in the chart.</li>
+                    <li><b>Every N Seconds</b>:  Will use the referenced study Subgraph value of the most recent bar in the chart at the frequency specified by <b>Adjustment Frequency (in Seconds)</b>.</li>
+                </ul>
+            </li>
+
+            <li><b>Adjustment Frequency (in Seconds)</b>: The minimum interval in seconds between order modifications. Only relevant if <b>Every N Seconds</b> is selected for the <b>Order Adjustment Timing</b> input.</li>
+
+            <li><b>Trailing Offset (in Ticks)</b>: The offset in Ticks (<b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Tick Size</b>) which the order trails the controlling Study Subgraph by.
+                <br> <br>
+                A positive or negative value can be used for <b>Trailing Offset</b>.
+                <br> <br>
+                For a Long position, the order being controlled would be a Sell order. In this case, the  <b>Trailing Offset</b> value is subtracted from the Study Subgraph value. As an example, if the Study Subgraph is a Moving Average, a positive value for the offset would trail the order N ticks below the Moving Average. A negative value would trail the order N ticks above the Moving Average.
+                <br>
+                <br>
+                For a Short position, the order being controlled would be a Buy order. In this case, the <b>Trailing Offset</b> value is added to the Study Subgraph value. As an example, if the Study Subgraph is a Moving Average, a positive value for the offset would trail the order N ticks above the Moving Average. A negative value would trail the order N ticks below the Moving Average.</li>
+                
+
+            <li><b>ACS Control Bar Button # for Enable/Disable</b>: This is the  Advanced Custom Study (ACS) Control Bar button number to be associated with this study to enable and disable the order modifications. To add this button to the Control  Bar, refer to <a href="index6736.html?page=doc/ControlBar.php#CustomizeControlBar" >Customize Control Bars</a>. 
+             <br> <br>
+            These buttons are listed under <b class="menu_item">Global Settings &gt;&gt; Customize Control Bars &gt;&gt; Control Bar # &gt;&gt;  Available Control Bar Commands &gt;&gt; Advanced Custom Study Buttons &gt;&gt; Custom Study Button #</b>. The # after <b>Custom Study Button #</b> represents the number that you set for this Input.</li>
+
+            <li><b>Position Type</b>:  This can be set to <b>All Positions, Long</b> or <b>Short</b> to indicate the type of Trade Positions you want this study to be active on.  In other words it will only modify Attached Orders, when the selected  Trade Position type is in existence  for the  Symbol and Trade Account of the chart.</li>
+
+            <li><b>Detailed Logging (for debugging)</b>: When this input is set to Yes, then any time an order adjustment does not occur, a message indicating the reason is added to the <b class = "menu_item">Window &gt;&gt; Message Log</b>. This is useful to determine the reason for the problem. A  message is only added once per reason. So if the same reason occurs again, a new message will not be added.</li>
+
+            <li><b>Only Modify Stops In One Direction</b>:  When this  Input is set to Yes and the  Attached Order being modified is a Stop order, then in the case of a Short Trade Position, the  Stop order will only be  modified to a lower price and not to a higher price.  In the case of a  Long Trade Position, the  Stop order will only be  modified to a  higher price and not to a  lower price.  When this   Input is set to  No, then a Stop order can be modified in either direction.</li>
+
+            <li><b>Allow Zero Values</b>:   When this  Input is set  to Yes,  then zero values will be used from the controlling  Subgraph to adjust the order. Otherwise, this is not the case.</li>
+
+            <li><b>Allow Negative Values</b>:  When this  Input is set  to Yes,  then negative values will be used from the controlling Study Subgraph to  adjust the order.  Otherwise, this is not the case.</li>
+
+            <li><b>Allow Custom 'Properties' for Control Bar Button</b>: When this  Input is set to Yes, then the ACS Control Bar  Button specified by the  <b>ACS Control Bar Button # for Enable/Disable </b> Input can use its own custom properties.
+            <br> <br>
+            Refer to <a href="index6736.html?page=doc/ControlBar.php#ControlBarButtonProperties">Control Bar Button Properties</a>.</li>
+            
+            <li><b> Attached Order to Manage</b>:  This Input controls what particular Attached Order  the Trade Management study will control. This can either be the Attached Order nearest the current price, or one in the specified OCO Group number.</li>
+
+        </ul>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="AttachedOrdersInLiveEnvironment">Potential Conditions Which Can Lead to Attached Orders Not Functioning As Expected in Live Trading</h2>
+    <div class="member-link">[<a href="#AttachedOrdersInLiveEnvironment">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section documents specific cases where Attached Orders may not always function as expected. Do know that these are uncommon conditions. In simulated trading, these conditions cannot occur.</p>
+
+    <section class="h3">
+        <h3 id="MarketMovingQuicklyBeyondStopPriceMakingItInvalid">Market Moving Quickly Beyond Stop Price Causing It to Become Invalid</h3>
+        <div class="member-link">[<a href="#MarketMovingQuicklyBeyondStopPriceMakingItInvalid">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Example Scenario</b>: You have an attached Sell Stop order that has been submitted with your main parent buy order.</p>
+
+        <p>The parent order that the attached Stop order is attached to, fills and then the market moves quickly against your resulting position.</p>
+
+        <p>When the Stop order is transmitted on a fill of this parent, the market price has already moved below the Sell Stop order price.</p>
+
+        <p>Normally exchanges will reject Sell Stop orders with a price which is at or above the current market price. Likewise in the case of a Buy Stop order.   A Buy Stop order can be rejected if it is at a price below the current market price.</p>
+        
+         <p> This is an example of the rejection: <b><em>Sell order stop price must be below last trade price (this is an exchange level rejection)</em></b>. </p>
+
+        <p> This type of scenario only happens when you use a tight Stop, the market is moving quickly against your entry order,  and the exchange has rejected your order.</p>
+        
+         <p> The first and primary solution to a problem like this is to use the  <a href = "index6880.html?page=doc/SierraChartOrderRoutingServiceWithData.php">Sierra Chart Order Routing Service</a> to have very low latency management  of your Attached  Orders, so they are sent to the exchange in less than 1-2  milliseconds after the parent fill, usually,  rather than a much longer delay when  they are managed on the Sierra Chart client side.  We cannot emphasize enough the benefit of using  this service compared to other services like CQG.</p> 
+
+        <p>  Another solution to this problem  is to use the <a href="#AutomaticReplacementMarketOrder">Automatic Replacement Market Order for Rejected Stop Attached Order</a> functionality.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AutomaticReplacementMarketOrder">Automatic Replacement Market Order for Rejected Stop Attached Order</h3>
+        <div class="member-link">[<a href="#AutomaticReplacementMarketOrder">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="GeneralBackgroundHighlightLight"> When <b class="menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Auto-Send Market Order On Rejected Stop Attached Order</b> is enabled and a Stop Attached Order is <b>Rejected</b> after being sent and originally had an <b>Order Sent</b> status, it will be resent as a Market order to offset the new position established by its parent order.</p> 
+
+        <p>There are many safeguards in place to ensure that this market order is only sent when there is a rejected Stop Attached Order and when there is an actual established Trade Position from the original parent order.</p>
+
+        <p>When this market order fills, any Target order that also exists will be canceled. This feature does not work with Interactive Brokers due to the proven uncertainty of order statuses with that service.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="FailureToIncreaseQuantityDueToSimFillTargetStopOrderBeingAdjusted">Failure to Increase Quantity Due to Simultaneous Fill of Target/Stop Order Being Adjusted</h3>
+        <div class="member-link">[<a href="#FailureToIncreaseQuantityDueToSimFillTargetStopOrderBeingAdjusted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Example Scenario: There are Attached Orders attached to a parent order. The parent order has a quantity of 10 for example.</p>
+
+        <p>The parents fills in 2 lots of quantities of 5 each. The Attached Orders are transmitted with an initial quantity of 5 each to match the first fill of 5.</p>
+
+        <p>These Attached Orders, then need to be modified to a quantity of 10 each due to the second parent fill of 5. Each of these order modifications are pending until the initial order transmission that they are trying to modify has been  acknowledged and the initial Attached Order goes into an Open state.</p>
+
+        <p>When an Attached Order goes into a Open state and there is a pending modification, that modification is then performed. So therefore the quantity of each Attached Order is increased to 10 individually at the time when the Attached Order has become Open.</p>
+
+        <p>However, say the market price moves and then fills one of  those Attached Orders that we are modifying and it fills before the modification is actually performed and that modification is rejected.</p> 
+
+        <p>For example, the Target order got filled before it could be increased to 10, then you no longer have a Target order in place since the modification to increase it to 10 failed.</p>
+
+        <p> The solution to this is to enable <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Reactivate Attached Order when Rejected Modification  During Fill</b>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="FailureToIncreaseQuantityDueOrderModificationRejectionFromMarginPositionLimits">Failure to Increase Quantity Due Order Modification Rejection from Margin/Position Limits</h3>
+        <div class="member-link">[<a href="#FailureToIncreaseQuantityDueOrderModificationRejectionFromMarginPositionLimits">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Example Scenario: There are Attached Orders attached to a parent order. The parent order has a quantity of 10 for example.</p>
+
+        <p>The parent  order fills  either all at once or in multiple fills. The Attached Orders are transmitted with an initial quantity equal to the first fill of the parent order.  If the parent order completely filled all at once, then the Attached Orders  will have the full quantity at this point in time. </p>
+        
+        
+        <p>If necessary, the  quantity of the Attached Orders are increased  to match any additional fills that may occur in the parent  order, assuming  the parent did not fully fill the first time.</p>
+
+        <p>However,  there is one potential problem. The initial transmission of the Attached Orders or the modification to increase the quantity of the Attached Orders, gets rejected due to a Position limit on your account,   or insufficient margin  to meet margin requirements.  These rejections will be logged in the   <a href = "index509f.html?page=doc/TradeActivityLog.php">Trade Activity Log</a>.</p>
+
+        <p> The solution to   is to contact the risk management of your trading service and have them increase your position limits, reduce margin requirements or increase your account balance to meet the margin requirements.</p>        
+        
+    </section>
+
+    <section class="h3">
+        <h3 id="SwitchingToTradeSimModeBeforeAttachedOrdersSent">User Switching to Trade Simulation Mode before Attached Orders Sent</h3>
+        <div class="member-link">[<a href="#SwitchingToTradeSimModeBeforeAttachedOrdersSent">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In the case of <em>non-simulated</em> trading, if Attached Orders are managed on the client-side and the Trading server does not provide server side OCO or bracket order support, then until the parent order fills, the Attached Orders are held on the client-side  within Sierra Chart.</p>
+
+        <p>For more information, refer to <a href="#OCOManagement">General Management of Attached Orders</a>.</p>
+
+        <p>Therefore, before the Attached Orders have been sent to the connected Trading server, if you were to enable <b Class = "menu_item">Trade &gt;&gt; Trade Simulation Mode On</b> before the parent order has filled, and the parent order fills while Trade Simulation Mode is enabled, the Attached Orders will  <em>not be sent</em> to the connected Trading server because Trade Simulation Mode prevents any non-simulated trading.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="UsingAttachedOrdersWithAttachedOrders">Using Attached Orders with Attached Orders</h2>
+    <div class="member-link">[<a href="#UsingAttachedOrdersWithAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> It is not supported to use Attached Orders which are attached to another Target or Stop Attached Order.</p>
+
+    <p>Instead what you need to do is submit a new independent order at the same price  and side as the existing Target or Stop order and that new order  needs to have its own Attached Orders.</p>
+
+    <p>This order can be entered using the <a href="index3c50.html?page=doc/ChartTrading.html#UsingTheChartDOMOrderEntryLadder">Chart DOM</a>, <a href="index3c50.html?page=doc/ChartTrading.html#EnteringOrdersFromTheChart">Chart Trading</a> or through the <a href="index9473.html?page=doc/TradeWindow.html#TradeWindow">Trade Window</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="UnableToModifyAttachedOrders">Unable to Modify Price of Attached Orders</h2>
+    <div class="member-link">[<a href="#UnableToModifyAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When modifying the Price or Quantity of an Attached Order before the Parent order  has filled and it does not change, then the usual case for this problem is that server side Bracket orders are being used and the Trading service Sierra Chart is connected to, is not allowing the modification.</p>
+
+    <p>The solution to this is to uncheck <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt;  Use Server Side OCO Orders</b> and <b>Use Server Side Bracket Orders</b>.</p>
+
+    <p>After unchecking this option, it is necessary to cancel the Parent order and Attached Orders and submit them again. You will then be able to modify the Attached Orders.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="ReversingOnStop">Reversing on Stop Attached Order</h2>
+    <div class="member-link">[<a href="#ReversingOnStop">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p> Follow the instructions below to reverse the position when the Stop Attached Order has been triggered. Make sure you are running version 2113 or higher for this functionality. </p>
+    <ol>
+        <li> <a href = "#Instructions">Set up the Attached Orders</a> as you require. A Stop Attached Order is required. </li>
+        
+        
+        <li>  For the Stop  Attached Order, it may be best to use a <a href = "index783f.html?page=doc/OrderTypes.html#TriggeredLimit">Triggered Limit</a> instead of a  basic Stop order,   to stop and reverse at a better price than the stop trigger price.</li>
+        
+        <li> Go to the <a href = "#">Trade Window</a> for the chart or Trading DOM. Press the   <b class="menu_item">Menu/M</b>> button. Uncheck/disable the <b> Orders &gt;&gt; Maintain Same Quantity for OCO Group Orders</b> setting.</li>
+        
+        <li>  Submit the parent order which will include the Attached Orders. </li>
+        <li>  Disable the <a href="#ScalingOut">Scaling Out</a>  functionality. </li>
+        
+        <li> Once the parent order  <em>fills</em>   and the  Attached Orders are active, then submit a new  Stop order at the same   Price level and Side as the Stop order using the  <a href = "index3c50.html?page=doc/ChartTrading.html">Chart Trading</a> functionality.  </li>
+    </ol>
+
+    
+</section>
+
+
+<section class="h2">
+    <h2 id="UsingDTCServerFeatureForReliableServerSideAttachedOrders">Using DTC Server Feature for Reliable Server Side Attached Orders</h2>
+    <div class="member-link">[<a href="#UsingDTCServerFeatureForReliableServerSideAttachedOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> Follow the instructions below to use the DTC Server feature in Sierra Chart for reliable server side Attached Orders.</p>
+
+    <ol>
+        <li>Set up a computer server in a reliable data center or location with reliable Internet connectivity. This can be a dedicated server or virtual server through a server hosting service.</li>
+
+        <li><a href="indexc97d.html?page=doc/SoftwareDownload.php#download" target="_blank" rel="noopener noreferrer">Install</a> a copy of Sierra Chart on that server.</li>
+
+        <li>Configure Sierra Chart to use the particular Trading service that you want. Refer to  <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services" target="_blank" rel="noopener noreferrer">Data and Trading Services</a> for the instructions for each of the supported services.</li>
+
+        <li>Disable <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server Side OCO Orders</b>  and <b>Use Server Side Bracket Orders </b> in the copy of Sierra Chart running on the server. You instead will want to rely upon the Sierra Chart managed functionality for this. This is overall going to be better if you have a highly reliable server with a reliable Internet connection.</li>
+
+        <li><a href="indexc97d.html?page=doc/SoftwareDownload.php#download" target="_blank" rel="noopener noreferrer">Install</a>  another copy of Sierra Chart on the computer you will be working from and connect to the instance of Sierra Chart running on the server using the  <a href="indexedef.html?page=doc/DTCServer.php" target="_blank" rel="noopener noreferrer">DTC Protocol Server</a> feature.</li>
+
+        <li>In the copy of Sierra Chart running on the computer you are working from, you will want to  enable <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server Side OCO Orders</b> and <b>Use Server Side  Bracket Orders</b> to use this functionality provided by the copy of Sierra Chart running on the server. </li>
+    </ol>
+
+</section>
+
+<section class="h2">
+    <h2 id="MoveToBreakevenStopReferencePriceCalculationAndUsage">Move to Breakeven Stop Reference Price Calculation and Usage</h2>
+    <div class="member-link">[<a href="#MoveToBreakevenStopReferencePriceCalculationAndUsage">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Stop Attached orders can be moved to the breakeven level using two different methods. By using the  <a href="#MoveBreakevenForStop">Move to Breakeven for Stop</a> functionality on the Attached Order itself, or by using the <a href = "index9473.html?page=doc/TradeWindow.html#BreakEvenButton">Breakeven Button</a> on the Trade Window.</p>
+
+    <p>The breakeven price is initially the parent order price. When the parent order fills, the breakeven price is the fill price.  If there are multiple fills, it is the quantity weighted average of the order   fills.    </p>
+    
+    <p>When using the  <a href="#ScalingIn">Scaling In</a> functionality, and the order quantity of the Stop Attached Order is increased,  the breakeven price is adjusted to be the quantity weighted average of all of the order fills  that increased the order quantity  of the Stop Attached Order during <b> Scaling In</b>. </p>
+    
+    <p>You can validate the calculation, by performing a   <a href="index9600.html?page=doc/ReplayChart.html" target="_blank" rel="noopener noreferrer">Chart Replay</a>.  Make sure the <a href="#ScalingIn">Scale In</a>  option is enabled on the Trade Window for the chart itself.</p>
+   
+    <p>Start a chart replay  and from a flat Position submit a new order  with Attached Orders which also includes a Stop.  Add to this  Position  at different prices.  You will notice that the Stop  Attached Order quantity increases.  After adding to the Position two or three times  you will notice the Position Average price change  to be the quantity weighted average of all of those order fills. </p> 
+    
+     <p>Use the <a href = "index9473.html?page=doc/TradeWindow.html#BreakEvenButton">Breakeven Button</a>  to move the Stop to the breakeven level.  It will move to the Position Average price.  You will want to make sure though that before you use the Breakeven button, that the market  is at a price level where the  Stop will not immediately fill. </p>
+    
+    
+</section>
+
+<section class="h2">
+    <h2 id="ManagingMultipleParentAndAttachedOrderSets">Managing Multiple  Parent and Attached Order Sets</h2>
+    <div class="member-link">[<a href="#ManagingMultipleParentAndAttachedOrderSets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+  <p> When you want to submit multiple parent orders each with their own independent Attached Order sets,  it may be confusing to use a single chart or Trading DOM to view and manage these. </p>
+  
+  <p>  The solution is to use multiple charts or Trading DOMs, one for each parent order and Attached Order set. </p>
+
+ <p> For each individual chart or Trading DOM, you will want to enable  <a href = "index96f7.html?page=doc/TradeMenu.html#OnlyOrdersFromChart">Trade &gt;&gt; Only Orders from Chart</a> to limit the display  to only those orders entered from that individual chart.   Therefore, only the orders entered from that chart or Trading DOM will be visible and you can manage them independently.</p>
+
+</section>
+
+
+
+
+<section class="h2">
+    <h2 id="UnderstandingHowServerSideOCOAndBracketOrdersAreImplementedWithIntermediaryServer">Understanding How Server-Side OCO and Bracket Orders Are Implemented with Intermediary Server</h2>
+    <div class="member-link">[<a href="#UnderstandingHowServerSideOCOAndBracketOrdersAreImplementedWithIntermediaryServer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+     
+    
+    <section class="h3">
+  
+    <h3 id="UnderstandingOCOBracketOrdersIntermediaryServer_Overview">Overview</h3>
+    <div class="member-link">[<a href="#UnderstandingOCOBracketOrdersIntermediaryServer_Overview">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+        <p>With services which include the <a href = "index6880.html?page=doc/SierraChartOrderRoutingServiceWithData.php">Sierra Chart Order Routing Service</a> and LMAX, server-side OCO (Order Cancels Order) and Bracket orders are supported when  <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server-Side OCO Orders</b> and <b Class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server-Side Bracket Orders</b> are enabled, respectively, in Sierra Chart.</p>
+
+        <p> The management of these orders is performed on the Sierra Chart trading server connected to the external trading gateway which would include TT or LMAX or direct to the exchange.</p>
+
+        <p> These types of orders are very reliably handled using the very same logic that the Sierra Chart instance you are using uses if it had a direct connection  to those trading gateways.  The reason is, the order routing server  to those trading gateways is Sierra Chart itself operating in a multiuser trading server mode. </p>
+    </section>
+     <section class="h3">
+  
+    <h3 id="UnderstandingOCOBracketOrdersIntermediaryServer_ReconnectedToDifferentServer">Reconnected to Different Server (Child Orders Disappear)</h3>
+    <div class="member-link">[<a href="#UnderstandingOCOBracketOrdersIntermediaryServer_ReconnectedToDifferentServer">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     
+        <p>In the event you encounter a scenario where you no longer see the child orders (Attached Orders) for a parent  order, then you may have been connected to another server  due  to some connectivity issue you had to the Primary server  you were previously connected to when  the parent and its Attached Orders  (Bracket order)  were submitted. This will be the case if the parent order has not yet filled.  You will only see the parent order.  When the parent order fills, you will then see the child orders on any of the available servers.</p>
+        
+        <p>Understand, the child orders are still working  and being  managed on the other server they were originally submitted  to even if you cannot see them,  assuming you know that they were actually submitted previously  which will be the case if you did previously see them  with the status of  <b> Child-Server</b> before the reconnection due to a connectivity problem you had.</p>
+
+       <p> In this case what you can do  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">reconnect to the data feed</a>  which should take you back  to the Primary server  if that was the server the  Bracket order  was submitted to.   </p>
+
+       <p>You will then see the child orders  reappear on the  Chart/Trading DOM and in the   <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>. Alternatively you could cancel the parent order which then causes the child orders on the other server to also be canceled. You would then need to resubmit the parent order with new Attached Orders  (Although this is going to be unnecessary unless there is a failure with the  Order Routing Server that is holding the child orders which would be very rare). </p> 
+   </section>
+   
+   <section class="h3">
+  
+    <h3 id="UnderstandingOCOBracketOrdersIntermediaryServer_OrderRoutingServerFailure">Order Routing Server Failure</h3>
+    <div class="member-link">[<a href="#UnderstandingOCOBracketOrdersIntermediaryServer_OrderRoutingServerFailure">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>However, it is important to understand that in the  <em>very rare  event</em> that the Sierra Chart trading server were to encounter a problem and  therefore lose connectivity  to the trading gateway, the transmission of the Attached Orders (child orders) of a parent order to the trading gateway server when the parent order fills, or the canceling  of one of the orders in an OCO order, or the reducing of the quantity of one of the orders in an OCO order if there is a partial fill of the other order,  <em>cannot happen</em>.  </p>
+        
+
+        <p> When the connectivity is restored  to the trading gateway server,  if an order that is in an OCO group no longer has its sibling order because that sibling order has either been filled or canceled, then it will be canceled. </p>
+
+        <p>And if the Attached Orders which are part of a bracket order (a parent order with Attached OCO Order) no longer have a working parent order, they will be canceled as well unless they were already transmitted to the  trading gateway server and put into a working state before the loss of connectivity.</p>
+
+        <p>  This above handling is identical to how Sierra Chart handles these conditions if it were to have a direct connection  to the trading gateway server.</p>
+    </section>
+    
+    <!-- p> In the rare event there is some connectivity issue with the server which connects to the trading gateway  which is holding active OCO orders, then you would want to cancel those OCO orders and resubmit new ones. This assumes, you are using server-side managed OCO orders.   In this last case, it really is not easy to tell that this scenario has occurred. It would be very very unlikely but we are just documenting it here for completeness. </p -->
+
+
+</section>
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/AttachedOrders.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:50:36 GMT -->
+</html>  

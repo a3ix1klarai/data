@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudyChartAlertsAndScanning.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1686060722') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/StudyChartAlertsAndScanning.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Study/Chart Alerts And Scanning -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index9fef.html?page=doc/StudyChartAlertsAndScanning.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Study/Chart Alerts And Scanning</a></h4> </div>     <h1 class="PageName">Study/Chart Alerts And Scanning</h1>
+
+<ul>
+    <li><a href="#GeneralInformation">General Information</a></li>
+    <li><a href="#MonitoringOfAlertFormulas">Monitoring of Alert Formulas</a></li>
+    <li><a href="#EnterAlertOnStudy">To Enter an Alert Condition on a Study</a></li>
+    <li><a href="#EnterAlertOnMainPriceGraph">To Enter an Alert Condition on the Main Chart/Price Graph</a></li>
+    <li><a href="#ColorBars">Historical and Visual Evaluation of Alert Condition</a></li>
+    <li><a href="#AlertOptions">Alert Options</a>
+		<ul>
+		    <li><a href="#AlertOptions_Enabled">Enabled</a></li>
+		    <li><a href="#AlertOptions_AlertOnlyOncePerBar">Alert Only Once Per Bar</a></li>
+		    <li><a href="#AlertOptions_EvaluateOnBarClose">Evaluate on Bar Close</a></li>
+		    <li><a href="#AlertOptions_ResetAlertConditionOnNewBar">Reset Alert Condition On New Bar</a></li>
+		    <li><a href="#AlertOptions_UseFullPrecisionWhenEvaluatingAlertFormula">Use Full Precision When Evaluating Alert Formula</a></li>
+		    <li><a href="#AlertOptions_LogEvaluatedFormulaAtEachEvaluation">Log Evaluated Formula at Each Evaluation</a></li>
+		</ul>
+	</li>
+    <li><a href="#SelectingSound">Selecting a Sound for the Alert and Email Notifications</a></li>
+    <li><a href="#AlertsLog">Alerts Log</a></li>
+    <li><a href="#CustomizingMessagesInAlertsLog">Customizing Messages in Alerts Log</a></li>
+    <li><a href="#ScanningForAlertConditionAcrossMultipleSymbols">Scanning for Alert Condition Across Multiple Symbols</a>
+        <ul>
+            <li><a href="#ScanningLargeNumberOfIntradayCharts">Scanning Large Number of Intraday Charts</a></li>
+            <li><a href="#ScanningLargeNumberOfHistoricalCharts">Scanning Large Number of Historical (Daily) Charts</a></li>
+            <li><a href="#UnderstandingScanningHistoricalDailyCharts">Understanding Scanning Historical Daily Charts</a></li>  
+        </ul>
+    </li>
+    <li><a href="#EvaluatingAlertConditionAcrossAllChartBars">Evaluating Alert Condition Across All Chart Bars</a></li> 
+    <li><a href="#AlertConditionStudyCollections">Applying your Alert Condition To Other Charts by Using Study Collections</a></li>
+    <li> <a href="#EvaluationOfAlertConditionFormulas">Evaluation of  Alert Condition Formulas</a></li>
+    <li><a href="#AlertConditionFormulaFormat">Alert Condition Formula Format</a>
+        <ul>
+            <li><a href="#FormulaFormatOverview">Formula Format Overview</a></li>
+            <li><a href="#Numbers">Numbers</a></li>
+            <li><a href="#Operators">Operators</a></li>
+            <li><a href="#ORANDFunctions">OR and AND Functions</a></li>
+            <li><a href="#BaseGraphIdentifiers">Available Main Price Graph Identifiers</a>
+				<ul>
+				    <li><a href="#BaseGraphIdentifiers_Examples">Examples</a></li>
+				</ul>
+			</li>
+            <li><a href="#SpecialFunctions">Special Functions</a>
+				<ul>
+				    <li><a href="#SpecialFunctions_VAP">VAP</a></li>
+				    <li><a href="#SpecialFunctions_BVAP">BVAP</a></li>
+				    <li><a href="#SpecialFunctions_AVAP">AVAP</a></li>
+				</ul>
+			</li>
+            <li><a href="#ReferencingSubgraphs">Referencing Study Subgraphs</a></li>
+            <li><a href="#ReferencingOtherStudies">Referencing Other Studies on the Chart</a></li>
+            <li><a href="#ReferencingOtherCharts">Referencing Studies on Other Charts</a></li>
+            <li><a href="#ReferencingChartDrawings">Referencing Chart Drawings</a>
+				<ul>
+				    <li><a href="#ReferencingChartDrawings-ReferenceByAnchor">Reference by Anchor</a></li>
+				    <li><a href="#ReferencingChartDrawings-ReferenceByBarValue">Reference by Bar Value</a></li>
+				</ul>
+			</li>
+            <li><a href="#ReferencingDataOtherLastBar">Referencing Data Other Than on the Last Bar/Column In the Chart</a>
+				<ul>
+				    <li><a href="#UsingPositiveBarOffsetsConsequences">Using Positive Bar Reference Offsets and Consequences</a></li>
+				</ul>
+			</li>
+            <li><a href="#ReferencingARangeOfData">Referencing A Range of Data</a></li>
+            <li><a href="#ReferencingDataBeyondTheLastBarInTheChart">Referencing Data Beyond the Last Bar in the Chart</a></li>          
+        </ul>
+    </li>
+    <li><a href="#EffectOfValueFormatOnIdentifierValues">The Effect of Value Format on Identifier Values</a></li>
+    <li><a href="#WritingFormulasForStudiesWithoutObviousValues">Writing Formulas for Studies without Obvious Values</a></li>
+    <li><a href="#WritingFormulasBasedOnColorSettings">Writing Formulas Based On Color Settings</a></li>
+    <li><a href="#SupportPolicyForAlertConditionFormulaProgrammingHelp" >** Support Policy For Alert Condition Formula Programming Help **</a></li>
+    <li><a href="#FormulaExamples">Alert Formula Examples</a></li>
+    <li><a href="#RepeatingAlertSoundUntilManuallyCanceled">Repeating Alert Sound Until Manually Canceled</a></li>
+    
+    <li><a href="index2ac2.html?page=doc/AlertsManager.html#SymbolAlerts">Related: Symbol Based Alerts</a> (Opens new page)</li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="GeneralInformation">General Information</h2>
+    <div class="member-link">[<a href="#GeneralInformation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This page has information on the <b>Simple Alerts</b> feature in Sierra Chart.  A more advanced alert and system feature is part of the <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet System/Alert</a> study.</p>
+
+    <p>How do you know which alert feature to use? Start with the <b> Simple Alert</b> feature, and if it does not meet  your requirements, then use the  <b>Spreadsheet System/Alert</b> study. The <b>Spreadsheet System/Alert</b> study allows for larger formulas and more advanced logic.</p>
+
+    <p>A <b>Simple Alert</b> Condition Formula can be specified on a chart study or the main chart graph that will be continuously monitored.  This alert Condition Formula can also be scanned for.</p>
+
+    <p>When an Alert Condition Formula becomes TRUE, an audible alert will be given if enabled, an exclamation mark (<span class="YellowHighlightNoBorder">!</span>) will be displayed in front of the study graph name, the study graph name will be <span class="RedHighlight NoBorder NoPadding">highlighted</span> as shown below, and a detailed message will be added to the <b class="menu_item">Window &gt;&gt;  Alerts Log</b>.  An email notification can also be sent.</p>
+
+    <div style="text-align: center;"><a href="../images/simplealerttrueexample.png" rel="lightbox"><img  alt="SimpleAlertTrueExample" src="../images/simplealerttrueexample.png" class="screenshot" loading="lazy"></a></div>
+
+    <p>The color of the highlight is controlled through the  <a href="index5795.html?page=doc/GraphicsSettings.html" >Graphics Settings</a> window. The specific color setting is <b>Colors and Widths &gt;&gt; Alert Highlight Color</b>.</p>
+
+    <p>When an Alert Condition Formula was TRUE on the previous formula evaluation, it is evaluated again and it continues to be TRUE, there will not be a new message added to the Alerts Log (<b class="menu_item">Window &gt;&gt;  Alerts Manager &gt;&gt; Alerts Log</b>) or a sound played, if enabled. Only when the formula result transitions from FALSE to TRUE will there be a new alert message and sound.  However, when the  Alert Condition Formula is in a TRUE state, you will still see the Study Name that it is associated with, highlighted on the chart.</p>
+
+    <p>When using one of the <b>Spreadsheet</b> studies, or when using an Advanced Custom Study that uses the <b>sc.SetAlert()</b> function, then a  Simple Alert Condition Formula entered directly on these studies is ignored. However, other studies on the chart and the main price graph can reference these studies in their Simple Alert  Condition Formula.</p>
+    <p>Each study on a chart can have a Simple Alert Condition Formula and the main price graph can also have a Simple Alert Condition Formula.</p>
+
+    <p>When writing and testing a Simple Alert Condition Formula, if it is not TRUE on the last bar in the chart, then it may be hard to know whether it is working correctly. What we recommend is to use either the  <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s252">Color Bar Based on Alert Condition</a>  study or the <b>Color Background Based on Alert Condition</b> study and have it reference the study that contains the Simple Alert Condition Formula you are working on.</p>
+
+    <p>In this way you can instantly and clearly see if your Alert Condition Formula works as expected because the bars will be colored at the bars where it is TRUE. Alert Condition Formulas can sometimes be complicated to resolve problems with.</p>
+
+    <p>It is recommended that you use a step-by-step process to create a formula whereby you start simple and then add to it. The very first formula you should use to simply see how formulas work is <b>=1</b> or <b>=TRUE</b>. This will color all of the bars in the chart, when using this study, and then you can go from there to a more advanced formula.</p>
+</section>
+
+<section class="h2">
+    <h2 id="MonitoringOfAlertFormulas">Monitoring of Alert Formulas</h2>
+    <div class="member-link">[<a href="#MonitoringOfAlertFormulas">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When an  Alert Condition Formula is entered on the main price graph of the chart or on a particular study on the chart, so long as the chart it is on is open and the study is on the chart, it will be monitored  for a TRUE condition, as the chart updates.</p>
+    
+    <p>The chart does not have to be visible, even if it is in another chartbook which is loaded but not visible. The chart only needs to be open but can be open in the background.</p>
+    
+    <p>Therefore, Sierra Chart needs to be running for the  Alert Condition Formulas to be monitored.</p>
+</section>
+
+<section class="h2">
+    <h2 id="EnterAlertOnStudy">To Enter an Alert Condition on a Study</h2>
+    <div class="member-link">[<a href="#EnterAlertOnStudy">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To enter an Alert Condition Formula on a study, you will need to create the Alert Condition Formula based upon the documented <a href="#AlertConditionFormulaFormat">Alert Condition Formula Format</a> and enter it into the <b>Condition</b> text box on the <b>Alerts</b> tab in the <b>Study Settings</b> window for the study. Refer to the image below.</p>
+
+    <p>Refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies">Modifying Study Settings</a> section on the  <b>Chart Studies</b> page for instructions to open the <b>Study Settings</b> window for a study.</p>
+
+    <p>For example Alert Condition Formulas, refer to the <a href="#FormulaExamples">Examples</a> section on this page.</p>
+
+    <p>The <b>Spreadsheet System/Alert</b> study and the <b>Spreadsheet System for Trading</b> study, do not support specifying an Alert Condition Formula or using the  Alert  options on the <b>Alerts</b> tab of the <b>Study Settings</b> window for these studies.  The reason for this, is that the studies themselves have advanced alert functionality which is separate from the <b>Alerts</b> tab.</p>
+
+    <div style="text-align: center;"><a href="../images/acas_studysettings.png" rel="lightbox"><img width="500" alt="Study Settings" src="../images/acas_studysettings.png" class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="EnterAlertOnMainPriceGraph">To Enter an Alert Condition on the Main Chart/Price Graph</h2>
+    <div class="member-link">[<a href="#EnterAlertOnMainPriceGraph">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To enter a Simple Alert Condition Formula on the main chart/price graph, select <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Alerts</b>  from the menu.  Enter the Alert Condition Formula using the documented <a href="#AlertConditionFormulaFormat">Alert Condition Formula Format</a> into the <b> Alert Condition</b> text box.</p>
+
+    <p>For an example alert condition, refer to the <b>Simple Price Alert</b> <a href="#FormulaExamples">Example</a>.</p>
+
+    <div style="text-align: center;"><a href="../images/chartsettingsalerttab.png" rel="lightbox"><img width="500" alt="Chart Settings Alerts tab" src="../images/chartsettingsalerttab.png"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="ColorBars">Historical and Visual Evaluation of Alert Condition</h2>
+    <div class="member-link">[<a href="#ColorBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is supported to color the chart bars themselves, the background behind the bars, or place an up arrow or a down arrow above or below a bar, when an Alert Condition Formula becomes TRUE  on the corresponding bar. </p>
+
+    <p>This will give you a visual indication of the Alert Condition Formula result and also allows you to see the Alert Condition Formula result applied to all of the historical bars in the chart, at least up until the   <b>Number of Bars to Calculate</b> Input setting with the  <b>Color Bar/Background Based on Alert Condition</b> study. </p>
+
+    <p> It is also supported to color a study Subgraph at the chart column, where a particular Condition Formula is true.</p>
+
+    <p>To do this, use the   <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s245" target="_blank" rel="noopener noreferrer">Color Bar Based on Alert Condition</a>  study or the <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s252" target="_blank" rel="noopener noreferrer">Color Background Based on Alert Condition</a> study.</p>
+
+    <div style="text-align: center;"><a href="../images/colorbaralertconditionexample.png" rel="lightbox"><img src="../images/colorbaralertconditionexample.png" alt="" width="400"  class="screenshot" loading="lazy"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="AlertOptions">Alert Options</h2>
+    <div class="member-link">[<a href="#AlertOptions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are the available options for Simple Alert Formulas.  </p>
+
+    <div style="text-align: center;"><a href="../images/studyalertoptions.png" rel="lightbox"><img width="460" alt="Study Settings" src="../images/studyalertoptions.png" class="screenshot" loading="lazy"></a></div>
+
+    <section class="h3">
+        <h3 id="AlertOptions_Enabled">Enabled</h3>
+        <div class="member-link">[<a href="#AlertOptions_Enabled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When the  <b>Enabled</b> option is enabled, then the Alert Condition Formula will be  evaluated and can trigger an alert signal. Otherwise, it is disabled.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AlertOptions_AlertOnlyOncePerBar">Alert Only Once Per Bar</h3>
+        <div class="member-link">[<a href="#AlertOptions_AlertOnlyOncePerBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When the <b>Alert Only Once Per Bar</b> option is enabled, then when the Alert Condition Formula becomes TRUE, goes back to FALSE and becomes TRUE more than once when a bar is forming, only one alert signal will be given.</p>
+
+        <p> Even when this option is disabled, if an Alert Condition Formula becomes TRUE and remains TRUE during the formation of a bar, then there  will only be one alert signal given.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AlertOptions_EvaluateOnBarClose">Evaluate on Bar Close</h3>
+        <div class="member-link">[<a href="#AlertOptions_EvaluateOnBarClose">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This option will cause the Alert Condition Formula to be only evaluated on a closed bar. When this option is enabled, effectively what happens is that the Alert Condition  formula is evaluated at every chart update, although it is <em>only on the bar before the last bar in the chart</em>.</p>
+        
+        <p>When an Alert Condition Formula is referencing data from other charts through studies which overlay that data to the chart containing the Alert Condition Formula,   <b>Evaluate on Bar Close</b> always applies to the chart containing the study this option is enabled on, or applies to the chart this is enabled on if enabled through the <b> Alerts</b> tab in the Chart Settings  of the chart. Whatever data is present at the  chart bar before the last bar in the chart, is the data that the formula evaluation is using.  </p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="AlertOptions_ResetAlertConditionOnNewBar">Reset Alert Condition On New Bar</h3>
+        <div class="member-link">[<a href="#AlertOptions_ResetAlertConditionOnNewBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This option will cause the Simple Alert Condition Formula result to be reset back to FALSE when a new bar is added to the chart. </p>
+
+        <p>What this means is that if an Alert Condition Formula is currently evaluated as being TRUE, there is a new bar added to the chart, and if it evaluates to TRUE on a new bar, then you will get a new Alert Message and sound played (if enabled).  </p>
+
+        <p>Otherwise, this will not occur because when an Alert Condition Formula is evaluated and the result is TRUE and the prior formula evaluation result was TRUE, there is no new Alert Message added or sound played.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="AlertOptions_UseFullPrecisionWhenEvaluatingAlertFormula">Use Full Precision When Evaluating Alert Formula</h3>
+        <div class="member-link">[<a href="#AlertOptions_UseFullPrecisionWhenEvaluatingAlertFormula">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The default for this option is disabled and it is recommended to keep it disabled.  In this particular case <a href="#EffectOfValueFormatOnIdentifierValues">The Effect of Value Format on Identifier Values</a> applies.</p>
+
+        <p>Otherwise, the full precision is used in evaluation of the numbers  in the Alert Condition Formula.</p>
+    </section>
+    
+    <section class="h3">
+        <h3 id="AlertOptions_LogEvaluatedFormulaAtEachEvaluation">Log Evaluated Formula at Each Evaluation</h3>
+        <div class="member-link">[<a href="#AlertOptions_LogEvaluatedFormulaAtEachEvaluation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The default for this option is disabled. When this option is enabled, then each time the Alert Condition Formula is evaluated,  the evaluated formula where the identifiers are converted to numeric values, is added through an Alert Log line in the  <b class = "menu_item">Window &gt;&gt; Alert Manager &gt;&gt; Alerts Log</b>.</p>
+
+        <p>This is useful for gaining a better understanding of how the alert formula is actually being evaluated either in real-time or during a <a href = "index9600.html?page=doc/ReplayChart.html">chart replay</a>.   You can use this option, during a chart replay, to see how the formula is evaluated at each chart update and at each chart bar. </p> 
+
+        <p>One potential problem you may encounter  when an alert formula on a study is referencing other studies on the chart is whether the calculation order of those studies is correct when one or more studies depends upon the results of another  study for its calculation. For further information about this, refer to <a href = "index9099.html?page=doc/ChartStudies.html#StudyCalculationPrecedence">Study Calculation Precedence</a>. </p>
+        
+        <p> This option is for debugging only and is not saved. It will cause higher CPU  usage during a higher-speed replay. </p>
+        
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2 id="SelectingSound">Selecting a Sound for the Alert and Email Notifications</h2>
+    <div class="member-link">[<a href="#SelectingSound">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>You can specify an Alert Sound to be played when the Alert Condition Formula becomes TRUE for a study, by selecting an Alert Number <b>1-150</b> or <b>No Alert Sound</b> from the <b>Alert Sound</b> list box on the <b>Alerts</b> tab of the <b>Study Settings</b> window.</p>
+
+    <p>Or, in the case of an Alert Condition Formula set in   <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Alerts</b>, select an Alert Number in the  <b>Alert Sound</b>  list box.</p>
+
+    <p>The specific sound file to play for a particular Alert Number is configured by selecting <b class="menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Alerts</b> from the menu.   </p>
+    
+     <p>An email notification can be optionally set for the different Alert Numbers as well. </p>
+    
+    <p>For complete documentation, refer to <a href="index899f.html?page=doc/GeneralSettings.html#Tab_Alerts" target="_blank" rel="noopener noreferrer">Alert Sound Settings</a>.</p>
+    
+    <p> It is not supported to use a different Alert Number for different parts of an Alert Formula within the same study. However, the  <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php"  target="_blank" rel="noopener noreferrer">Spreadsheet System/Alert Study</a> does support this through its Study Inputs by supporting different Alert Numbers for different Subgraphs. Or, as an alternative, it is necessary to use a different instance of a study for each Alert Number that you want to use for each formula.</p>
+    
+     <p>Below is an example of an alert message sent by email.  All of the details that are in the Alerts Log are also provided in the email message.</p>
+     
+    <div class="MessageLog">Alert - Chart: YMM18  Daily  #1 | Study: Aroon Indicator | Formula: =1 is TRUE. | Last Price: 25192 | Bar start date-time: 2018-06-07  00:00:00 | Alert:  [User-defined alert name] (8)</div>
+
+</section>
+
+<section class="h2">
+    <h2 id="AlertsLog">Alerts Log</h2>
+    <div class="member-link">[<a href="#AlertsLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>All alerts are added to the <b>Alerts Log</b>. To view the <b>  Alerts Log</b>, select <b class="menu_item">Window &gt;&gt;  Alerts Manager &gt;&gt; Alerts Log</b> on the menu.</p>
+
+    <p>An alert message in the Alerts Log contains detailed information about the origin of the alert. In the case of Simple Alerts, the Alert Condition Formula will be contained within the alert message. You can control whether this window is automatically opened when an alert message is added. Select <b class="menu_item">Global Settings &gt;&gt; General Settings</b>, and enable/disable the <b>Show Alerts Log on Study Alert</b> option.</p>
+</section>
+
+<section class="h2">
+    <h2 id="CustomizingMessagesInAlertsLog">Customizing Messages in Alerts Log</h2>
+    <div class="member-link">[<a href="#CustomizingMessagesInAlertsLog">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> To some extent it is possible to customize the   alert messages  from studies which are added to the <a href="#AlertsLog">Alerts Log</a>. This is done by setting the  <b>Short Name</b> for a study which is displayed on the  alert message line in the Alerts log.</p>
+
+    <p> To set the Short Name open the   <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Study Settings</a> window for the study.  On the <b> Settings and Inputs</b> tab set the <b>Short Name</b>.</p>
+
+    <p>If you want to have different custom alert messages for different alert conditions, you need to use separate studies, each with their own Alert Condition Formula.</p>
+</section>
+
+<section class="h2" id="Scanning">
+    <h2  id="ScanningForAlertConditionAcrossMultipleSymbols">Scanning for Alert Condition Across Multiple Symbols</h2>
+    <div class="member-link">[<a href="#ScanningForAlertConditionAcrossMultipleSymbols">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>With Sierra Chart you are able to scan a list of symbols to see which ones where your Alert Condition Formula is TRUE.  Follow the instructions below to do this.</p>
+
+    <section class="h3">
+        <h3>Step By Step Instructions</h3>
+
+        <ol>
+            <li>Enter the  Alert Condition Formula on a Study or the main price graph. Refer to the <a href="#EnterAlertOnStudy">To Enter an Alert Condition on a Study</a> section on this page for instructions to enter a Alert Condition Formula on a study.</li>
+
+            <li>Refer to the  <a href="#EnterAlertOnMainPriceGraph">To Enter an Alert Condition on the Main Chart/Price Graph</a> section on this page for instructions to enter a Alert  Condition Formula on the main price graph.</li>
+
+            <li>Enter or import a list of symbols into the <b>Associated Watch List</b>  (<b class="menu_item">Chart &gt;&gt; Associated Watch List</b>) for the chart containing your  Alert Condition Formulas.  These are going to be the symbols you want to perform the scan on.  
+                <br>
+                <br>Follow the instructions in the <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#AssociatedSymbolList" target="_blank" rel="noopener noreferrer">Associated Watch List</a> section.
+                <br> <br>
+                If you want to import a list of symbols into the Associated Watch List, then  refer to the <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#ListOfSymbols" target="_blank" rel="noopener noreferrer">Importing a List of Symbols</a> section.</li>
+
+            <li> Enable  <b class = "menu_item">Chart &gt;&gt; Only Symbols in Watch List</b>. You also have the ability to scan among  all of the symbols that you have chart data files for and not use the <b>Associated Watch List</b>.  If this is what you want to do, then skip this step and go on to the next step.</li>
+
+            <li>Enable <b class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Data &gt;&gt; Subscribe  Real-time (RT) Data and Download Historical Data During Scan</b> to ensure that the charts being scanned are up-to-date. In the case of Historical Daily charts, if a download has not been done  for the symbol of a Historical Daily chart currently being scanned, in the last 24 hours, it will be done with this option on but the most recent real-time price data will not be added to the chart during the scan.</li>
+
+            <li>To scan for symbols where the  Alert Condition Formula  is TRUE among the list of symbols in the  <b>Associated Watch List</b> for the chart or among all of the symbols you have data files for, refer to the <a href="indexfd56.html?page=doc/ChartMenu.html#ScanMenuCommands" target="_blank" rel="noopener noreferrer">Scan Menu Commands</a> section.</li>
+
+            <li>During the scan, when the Alert Condition Formula is true for a symbol,  a message will be added to the <a href="index2ac2.html?page=doc/AlertsManager.html#AlertsLog" Target="_blank" rel="noopener noreferrer">Alerts Log</a>.  This provides a complete list symbols where the Alert Condition Formula has become true.  From the <b>Alerts Log</b> you can jump back to the particular chart triggering the alert and also the symbol.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScanningLargeNumberOfIntradayCharts">Scanning Large Number of Intraday Charts</h3>
+        <div class="member-link">[<a href="#ScanningLargeNumberOfIntradayCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> These are additional steps to perform when scanning a large number of Intraday charts  for a TRUE condition returned from an Alert Condition Formula. </p>
+
+        <p> These instructions have two purposes. To ensure the most reliable  Data Service is being used and to ensure the Intraday chart data is up-to-date.</p>
+
+        <ol>
+
+            <li>Set <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service</b> to <b>SC Data - All Services</b>.
+                <br> <br>
+                When you do this, it is essential that the symbols of the charts match the symbols used for this Data Service. To change the symbol of a chart, refer to <a href="indexa1a5.html?page=doc/SwitchingSymbols.html">Changing the Symbol of a Chart</a>.
+                <br> <br>
+                Futures symbols are listed in <b class="menu_item">File &gt;&gt; Find Symbol</b>. For stock symbols, refer to the  <a href="index4bd9.html?page=doc/SierraChartHistoricalData.php&amp;SymbolsPage=Stocks" target="_blank" rel="noopener noreferrer">Sierra Chart Real-time and Historical Exchange Data Feed Symbols</a> page.</li>
+                
+            <li>Enable <b class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; General &gt;&gt; Data &gt;&gt; Subscribe  Real-time (RT) Data and Download Historical Data During Scan</b>.</li>
+
+            <li><a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" target="_blank" rel="noopener noreferrer">Reconnect to the data feed</a>.  This will reset the real-time symbol list. If you are subscribed to either of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> for the exchange of a symbol, then the symbols to be scanned will be up-to-date with the real-time data. Otherwise, the data will be delayed.
+                
+            </li>
+            
+            <li> Keep in mind that if the number of symbols being scanned goes over the real-time symbol limit of the Sierra Chart Exchange Data Feed, then those symbols will <em>not continue</em> to update in real-time once the scan begins on them.
+            <br> <br>
+            In this case select the   <b class="menu_item">Edit &gt;&gt; Download Data for Associated Watch List Symbols</b> to update them at any point in time later.</li>
+
+            <li>Perform the scan. Refer to the <a href="indexfd56.html?page=doc/ChartMenu.html#ScanMenuCommands" target="_blank" rel="noopener noreferrer">Scan Menu Commands</a> section.</li>
+
+            <li> For additional information, refer to <a href="#ScanningForAlertConditionAcrossMultipleSymbols">Scanning for Alert Condition Across Multiple Symbols</a>. </li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="ScanningLargeNumberOfHistoricalCharts">Scanning Large Number of Historical (Daily) Charts</h3>
+        <div class="member-link">[<a href="#ScanningLargeNumberOfHistoricalCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> The following instructions explain how to perform a scan of a large number of Historical Daily charts. In this case, it is not recommended that you first download the historical Daily data for them ahead of the scan, but instead rely upon the scanning procedure to download the data.</p>
+
+        <ol>   
+            <li>Restart Sierra Chart. This ensures that for each symbol, a Historical Daily data download will be done.</li>
+            <li> Adjust the   <b class = "menu_item">Chart &gt;&gt; Chart Settings</b> <b> &gt;&gt; Display &gt;&gt; Chart Update Interval</b> to the time interval in milliseconds that you want before changing to the next symbol during the scan. </li>
+
+            <li>Enter or import a list of symbols into the <b>Associated Watch List</b>  (<b class="menu_item">Chart &gt;&gt; Associated Watch List</b>) for the chart containing your  Alert Condition Formulas.  These are going to be the symbols you want to perform the scan on.  
+                <br>
+                <br>Follow the instructions in the <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#AssociatedSymbolList" target="_blank" rel="noopener noreferrer">Associated Watch List</a> section. </li>
+
+            <li>Disable <b class = "menu_item">Global Settings &gt;&gt; General Settings</b><b> &gt;&gt; General &gt;&gt; Data &gt;&gt; Subscribe  Real-time (RT) Data and Download Historical Data During Scan</b>  to prevent real-time data  from being subscribed to for the symbols being scanned.</li>
+
+            <li> Enable  <b class = "menu_item">Chart &gt;&gt; Only Symbols in Watch List</b>. </li>
+
+            <li>To scan for symbols where the  Alert Condition Formula  is TRUE among the list of symbols in the  <b>Associated Watch List</b> for the chart, refer to the <a href="indexfd56.html?page=doc/ChartMenu.html#ScanMenuCommands" target="_blank" rel="noopener noreferrer">Scan Menu Commands</a> section.</li>
+
+            <li>During the scan, when the Alert Condition Formula is true for a symbol,  a message will be added to the <a href="index2ac2.html?page=doc/AlertsManager.html#AlertsLog" Target="_blank" rel="noopener noreferrer">Alerts Log</a>.  This provides a complete list symbols where the Alert Condition Formula has become true.  From the <b>Alerts Log</b> you can jump back to the particular chart triggering the alert and also the symbol.</li>
+        </ol>
+    </section>
+
+    <section class="h3">
+        <h3 id="UnderstandingScanningHistoricalDailyCharts">Understanding Scanning Historical Daily Charts</h3>
+        <div class="member-link">[<a href="#UnderstandingScanningHistoricalDailyCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> When scanning through Historical Daily charts for a list of symbols, the evaluation of the Alert Condition Formula is always performed on the last  bar in the chart.  </p>
+        
+        <p>If a  historical data download has to be done for the chart,  the historical data will be then downloaded for the chart.   After the download finishes there will be an evaluation done for the last bar in the chart at that time. </p>
+
+
+        <p> When you look at the <b Class = "menu_item">Window &gt;&gt; Alerts Manager &gt;&gt; Alerts Log</b>, you can see what particular bar Date-Time the alert formula was evaluated on in the chart.  Look at the <b>Bar Start Date-Time</b> text in the alert line. </p>
+
+
+        <p> It may be best to first download Historical Daily data for all of the charts in the Associated Watch List and then perform the scan  after that is complete. Follow the procedure below to do this.</p>
+        
+        <p> During a scan,  the  <a href = "indexc5fd.html?page=doc/WindowMenu.html#CurrentQuoteWindow">Current Quote</a>  data from the real-time data feed  is not added to the last chart bar if <b class = "menu_item">Global Settings &gt;&gt; General Settings</b><b> &gt;&gt; General &gt;&gt; Data &gt;&gt; Subscribe  Real-time (RT) Data and Download Historical Data During Scan</b> is disabled. </p>
+        
+        
+        <p> Otherwise, the  Current Quote  data from the real-time data feed is added to the  Historical Daily chart, if the data is available.  Understand that this can change the last chart bar. However,  the Current Quote data still may not be added to the chart, because by the time the chart is advanced to the next symbol, the data may not have been received from the real-time data feed for the symbol.</p>
+        
+         <p> If the Current Quote data is not added to the chart, then when the scan is stopped,  and you manually set the chart to a particular symbol,  the Current Quote data will be added to the chart if connect to the data feed. This can mean an alert that was previously given is no longer given or an alert is given when it was previously not given during the scan.   This is something to be aware of.  </p>
+
+        <ol>
+            <li> Disable <b class = "menu_item">Global Settings &gt;&gt; General Settings</b><b> &gt;&gt; General &gt;&gt; Data &gt;&gt; Subscribe  Real-time (RT) Data and Download Historical Data During Scan</b> for the most stable outcome from scanning.  </li>
+            <li>Go to the Historical Daily Chart  you will be starting the scan on.</li>
+
+            <li> Add the symbols to the  <b>Associated Watch List</b>. Follow the instructions in the <a href="indexa1a5.html?page=doc/SwitchingSymbols.html#AssociatedSymbolList" target="_blank" rel="noopener noreferrer">Associated Watch List</a> section.</li>
+
+            <li>Select  <b Class = "menu_item">Edit &gt;&gt; Download Daily Data for Associated Watch List Symbols</b>.</li>
+            
+            <li>Wait for the downloads to finish. You can monitor the progress through the <b class = "menu_item">Window &gt;&gt; Message Log</b>.</li>             
+            
+
+            <li> After the historical data downloading is completed, then run the scan. Refer to the <a href="indexfd56.html?page=doc/ChartMenu.html#ScanMenuCommands" target="_blank" rel="noopener noreferrer">Scan Menu Commands</a> section for instructions. At this point in time, the scan will be performed on the most recent data. </li>
+
+            <li>Select <b Class = "menu_item">Window &gt;&gt; Alerts Manager &gt;&gt; Alerts Log</b> for the results.</li>
+        </ol>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="EvaluatingAlertConditionAcrossAllChartBars">Evaluating Alert Condition Across All Chart Bars</h2>
+    <div class="member-link">[<a href="#EvaluatingAlertConditionAcrossAllChartBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To visually see where an Alert Condition  Formula set on a study or on the main chart,  is true on the past and current bars, follow the instructions in the ><a href="#ColorBars">Historical and Visual Evaluation of Alert Condition</a>  section. </p> 
+
+    <p> If you want to be able  to evaluate  the Alert Condition Formula across all chart bars and have the  TRUE results added to the  <a href="index2ac2.html?page=doc/AlertsManager.html#AlertsLog">Alerts Log</a>, requires that you replay the chart.   This only works with Intraday charts.  Refer to the  <a href="index9600.html?page=doc/ReplayChart.html">Replay Chart</a> documentation. </p>
+</section>
+
+<section class="h2">
+    <h2  id="AlertConditionStudyCollections">Applying your Alert Condition Formulas To Other Charts by Using Study Collections</h2>
+    <div class="member-link">[<a href="#AlertConditionStudyCollections">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Once you have set up your studies and set up your Alert Condition Formulas on one or more of those studies, you can easily apply that configuration to other charts by using Study Collections. Save your set of studies which contain the Alert Condition Formulas, as a Study Collection. For instructions, refer to the <a href="indexc9c0.html?page=doc/StudyCollections.html">Study Collections</a> documentation.</p>
+
+    <p>If an Alert Condition Formula is entered on a study and that study is saved as part of a Study Collection, then every chart the Study Collection is applied to will use that same Alert Condition Formula.  To use unique Alerts on charts where you apply a Study Collection, then do not enter Alert Condition Formulas on the studies before you will be saving them as a Study Collection. Enter the Alert Condition Formulas on the study or studies after applying the  Study Collection to a chart.</p>
+</section>
+
+<section class="h2">
+    <h2 id="EvaluationOfAlertConditionFormulas">Evaluation of  Alert Condition Formulas</h2>
+    <div class="member-link">[<a href="#EvaluationOfAlertConditionFormulas">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Alert Condition Formulas set on a Chart or a Study are evaluated/calculated when the chart is updated. This is according to the <a href="index899f.html?page=doc/GeneralSettings.html#ChartUpdateInterval">Chart Update Interval</a>.  </p>
+
+    <p>Therefore, it is possible some very fast price movement can be skipped in between evaluations.</p>
+</section>
+
+<section class="h2">
+    <h2 id="AlertConditionFormulaFormat">Alert Condition Formula Format</h2>
+    <div class="member-link">[<a href="#AlertConditionFormulaFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <section class="h3">
+        <h3 id="FormulaFormatOverview">Formula Format Overview</h3>
+        <div class="member-link">[<a href="#FormulaFormatOverview">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The formatting and evaluation of a Simple Alert Condition Formula is designed to work similar to formulas you use in Sierra Chart Spreadsheets. This is like the <a href="indexdf54.html?page=doc/WorkingWithSpreadsheets.php#Formulas">Excel formula format</a>. This means you can use any of the same Spreadsheet formula operators and available <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#AvailableFunctions">Spreadsheet Functions</a> in your  Simple Alert Condition Formula.</p>
+
+        <p>With Simple Alerts, typically the only Spreadsheet Functions you would be using will be the <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#OR_Function">OR()</a> and the <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#AND_Function">AND()</a> functions.  If your  Simple Alert Condition Formula involves times and dates, then you may need to use the Time and Date related functions as well. Refer to the <a href="#FormulaExamples">Examples</a>.</p>
+
+        <p>The Simple Alert Condition Formula usually begins with an equals sign (<b>=</b>). Although it is not necessary to use the  <b>=</b>.  All of our examples will use the  =. Example:   <b>=[formula]</b>. <b>[formula]</b> is replaced with the actual formula.  Example: <span class="SpreadsheetFormula">=  C >100</span> .</p>
+
+        <p class="YellowHighlight NoBorder">When entering numbers and formulas, keep in mind to use the proper delimiters in your numbers and formulas, according to the <b>English (US)</b> region.   The numbers in the examples shown here, use the "." delimiter as the decimal separator. The delimiter used for parameters (arguments) for Spreadsheet functions is a ",". These are both based upon  the <b>English (US)</b> region.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="Numbers">Numbers</h3>
+        <div class="member-link">[<a href="#Numbers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>These are the possible formats for number constants:</p>
+
+        <ul>
+            <li><b>Integer</b>: Integer value.  Example: 10</li>
+            <li><b>Floating-point value</b>: Floating-point value.  Example: 10.5</li>
+            <li><b>Fractional Format</b>: Integer + numerator/denominator.  Example: <b>120+20.5/32</b></li>
+        </ul>
+    </section>
+
+    <section class="h3">
+        <h3 id="Operators">Operators</h3>
+        <div class="member-link">[<a href="#Operators">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The following standard operators can be used in the alert condition:</p>
+
+        <table class="doc">
+
+            <tr> <th colspan="3">Conditional Operators</th> </tr>
+            <tr> <th>Operator</th><th>Operation</th><th>Example</th> </tr>
+            <tr> <td><b>=</b></td> <td>equal to</td> <td><b><span class="SpreadsheetFormula">4 = 4</span></b></td> </tr>
+            <tr> <td><b>&lt;&gt;</b></td> <td>not equal to</td> <td><b><span class="SpreadsheetFormula">4 &lt;&gt; 6</span></b></td> </tr>
+            <tr> <td><b>&lt;</b></td> <td>less than</td> <td><b><span class="SpreadsheetFormula">4 &lt; 6</span></b></td> </tr>
+            <tr> <td><b>&lt;=</b></td> <td>less than or equal to</td> <td><b><span class="SpreadsheetFormula">6 &lt;= 6</span></b></td> </tr>
+            <tr> <td><b>&gt;</b></td> <td>greater than</td> <td><b><span class="SpreadsheetFormula">6 &gt; 4</span></b></td> </tr>
+            <tr> <td><b>&gt;=</b></td> <td>greater than or equal to</td> <td><b><span class="SpreadsheetFormula">4 &gt;= 4</span></b></td> </tr>
+
+            <tr> <th colspan="3">Logic Operators</th> </tr>
+            <tr> <th>Operator</th><th>Operation</th><th>Example</th> </tr>
+            <tr> <td><b>!</b></td> <td>Not</td> <td><b><span class="SpreadsheetFormula">!(1 = 2)</span></b></td> </tr>
+
+            <tr> <th colspan="3">Arithmetic Operators</th> </tr>
+            <tr> <th>Operator</th><th>Operation</th><th>Example</th> </tr>
+            <tr> <td><b>+</b></td> <td>addition</td> <td><b><span class="SpreadsheetFormula">6 + 2 = 8</span></b></td> </tr>
+            <tr> <td><b>-</b></td> <td>subtraction</td> <td><b><span class="SpreadsheetFormula">6 - 2 = 4</span></b></td> </tr>
+            <tr> <td><b>*</b></td> <td>multiplication</td> <td><b><span class="SpreadsheetFormula">6 * 2 = 12</span></b></td> </tr>
+            <tr> <td><b>/</b></td> <td>division</td> <td><b><span class="SpreadsheetFormula">6 / 2 = 3</span></b></td> </tr>
+            <tr> <td><b>^</b></td> <td>exponent (to the power of)</td> <td><b><span class="SpreadsheetFormula">6 ^ 2 = 36</span></b></td> </tr>
+        </table>
+
+        <p>All of the above examples return a TRUE value.</p>
+
+        <p>In addition to all of the above operators, remember that you are able to use all of the available <a href="index8e89.html?page=doc/SpreadsheetFunctions.html">Spreadsheet Functions</a> because Alert Condition Formulas are based upon the same formula evaluator which is used with Sierra Chart Spreadsheets.</p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="ORANDFunctions">OR and AND Functions</h3>
+        <div class="member-link">[<a href="#ORANDFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When you want to combine multiple Alert Condition formulas into a single formula, this can be done by using the OR an AND functions. The documentation linked to below shows examples.</p>
+
+        <ul>
+            <li><a href="index8e89.html?page=doc/SpreadsheetFunctions.html#OR_Function" target="_blank" rel="noopener noreferrer">OR Function</a></li>
+            <li><a href="index8e89.html?page=doc/SpreadsheetFunctions.html#AND_Function" target="_blank" rel="noopener noreferrer">AND Function</a></li>
+        </ul>
+
+        <p>An Alert Condition formula can refer to other studies on the same chart. Refer to <a href="#ReferencingOtherStudies">Referencing Other Studies on the Chart</a>.</p>
+
+        <p>An Alert Condition formula can indirectly refer  to studies in other charts. Refer to <a href="#ReferencingOtherCharts">Referencing Studies on Other Charts</a>. </p>
+
+        <p> In the case where there is a very elaborate and long Alert Condition formula that you require, you may want to consider using the <a href="indexf70c.html?page=doc/SpreadsheetSystemsAlertsAndAutomatedTrading.php">Spreadsheet System/Alert</a> study to break it up into multiple formulas and to overcome the formula length limitation for Simple Alert formulas.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="BaseGraphIdentifiers">Available Main Price Graph Identifiers/Variables</h3>
+        <div class="member-link">[<a href="#BaseGraphIdentifiers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To reference data from the main price graph (This is the price graph in Chart Region 1) and other related data for the symbol, use the following identifiers/variables:</p>
+
+        <ul>
+            <li><b>BARDATE</b> = The Date of the bar as a <a href="indexac34.html?page=doc/SCDateTime.html" target="_blank" rel="noopener noreferrer" >SCDateTime</a> type. For further information and for Spreadsheet functions which can be used with these Date-Time values, refer to  <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#SerialDateTimeValues">Serial DateTime Values</a>. </li>
+
+            <li><b>BARTIME</b> = The Time of the beginning (open) of a bar as an <a href="indexac34.html?page=doc/SCDateTime.html"  target="_blank" rel="noopener noreferrer">SCDateTime</a> type. For further information and for Spreadsheet functions which can be used with these Date-Time values, refer to  <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#SerialDateTimeValues">Serial DateTime Values</a>. It is recommended  to use the <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#TIME_Function" target="_blank" rel="noopener noreferrer">TIME</a> function when making comparisons to the <b>BARTIME</b> identifier.
+                <br><br>
+                However, making an equals comparison to a time value is imprecise and will not give a TRUE result.  This can be solved by  calculating the absolute value of the difference between BARTIME the other time value and checking if it is less than a certain value like 1 minute. Example: <span class="SpreadsheetFormula">ABS(BARTIME - TIME(10, 0, 0)) &lt; TIME(0, 0, 1)</span>.</li>
+
+            <li><b>BARDATETIME</b> = The Date and Time of the beginning (open) of a bar as an <a href="indexac34.html?page=doc/SCDateTime.html"  target="_blank" rel="noopener noreferrer">SCDateTime</a> type. For further information and for Spreadsheet functions which can be used with these Date-Time values, refer to  <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#SerialDateTimeValues">Serial DateTime Values</a>.</li>
+
+            <li><b>BARENDDATETIME</b> = The Date and Time of the end (close) of a bar as an <a href="indexac34.html?page=doc/SCDateTime.html"  target="_blank" rel="noopener noreferrer">SCDateTime</a> type. This is precise to the millisecond. For further information and for Spreadsheet functions which can be used with these Date-Time values, refer to  <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#SerialDateTimeValues">Serial DateTime Values</a>.</li>
+
+
+            <li><b>O</b> = Bar Open</li>
+            <li><b>H</b> = Bar High</li>
+            <li><b>L</b> = Bar Low</li>
+            <li><b>C</b> = Bar Close/Last</li>
+            <li><b>V</b> = Bar Volume</li>
+            <li><b>OI</b> = Open Interest of the bar</li>
+            <li><b>NT</b> = Number of Trades of the bar</li>
+            <li><b>OHLC</b> = Average of Open, High, Low, and Close of the bar</li>
+            <li><b>HLC</b> = Average of High, Low, and Close of the bar</li>
+            <li><b>HL</b> = Average of High and Low of the bar</li>
+            <li><b>BV</b> = Bid Volume of the bar</li>
+            <li><b>AV</b> = Ask Volume of the bar</li>
+
+            <li><b>SG22</b> = This is the Renko Open value for Renko bars and can be used in an Alert Condition Formula on the chart itself.   For an Alert Condition Formula for a study, the identifier needs to be <b>ID0.SG22</b> assuming there are no other studies acting as the base graph in the chart.
+            
+            <br> <br>
+            As of version 1734, when using <b>SG22</b>, if the chart is not a Renko  bar chart, this will refer to the standard bar Open price without causing any formula error.  This allows the use of this particular Subgraph identifier (SG22) even when the chart bars are not Renko and will always refer to the correct Open price.
+            </li>
+            
+
+            <li><b>SG23</b> = This is the Renko Close value  for Renko bars and can be used in an Alert Condition Formula on the chart itself.    For an Alert Condition Formula for a study, the identifier needs to be <b>ID0.SG23</b> assuming there are no other studies acting as the base graph in the chart.
+            
+                        
+            <br> <br>
+            As of version 1734, when using <b>SG23</b>, if the chart is not a Renko  bar chart, this will refer to the standard bar Close price without causing any formula error. This allows the use of this particular Subgraph identifier (SG23) even when the chart bars are not Renko and will always refer to the correct Close price.
+            
+            </li>
+
+            
+            <li><b>DAILYHIGH</b> = Daily High. Refer to Footnote 1.</li>
+            <li><b>DAILYLOW</b> = Daily Low. Refer to Footnote 1.</li>
+            <li><b>LASTTRADESIZE</b> = Last Trade Size. Refer to Footnote 1.</li>
+            <li><b>BID</b> = Bid Price. Refer to Footnote 1.</li>
+            <li><b>ASK</b> = Ask Price. Refer to Footnote 1.</li>
+            <li><b>LASTTRADE</b> = Last Trade Price. Refer to Footnote 1.</li>
+            <li><b>PREVCLOSE</b> = Previous Day Close. Refer to Footnote 1.</li>
+            <li><b>TICKSIZE</b> = This is equal to the Tick Size set in the Chart Settings window for the chart.</li>
+        </ul>
+
+        <p>By default these identifiers will be set to their value at the current/last bar in the chart.  They can reference any bar relative to the current bar.  To do this, refer to <a href="#ReferencingDataOtherLastBar">Referencing Data Other Than on the Last Bar/Column In the Chart</a>.</p>
+
+        <p><b>Footnote 1</b>: These identifiers will have values of zero unless the Symbol of the chart is valid and Sierra Chart is connected to the real-time data feed. When replaying a chart,  <b>LASTTRADESIZE, BID, ASK, LASTTRADE</b>  will be set and valid. During a chart replay <b>DAILYHIGH</b>, <b>DAILYLOW</b>, <b>PREVCLOSE</b> will be 0.  The data for all of these identifiers can be viewed in the <b class = "menu_item">Window &gt;&gt; Current Quote Window</b>. All of these identifiers reference current values only and do not support the [] array operator to reference previous values.</p>
+
+        <section class="h4">
+            <h4 id="BaseGraphIdentifiers_Examples">Examples</h4>
+            <div class="member-link">[<a href="#BaseGraphIdentifiers_Examples">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p><b><span class="SpreadsheetFormula">= C > 1000</span></b></p>
+            <p><b><span class="SpreadsheetFormula">= C[-1] > ID1.SG1</span></b></p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="SpecialFunctions">Special Functions</h3>
+        <div class="member-link">[<a href="#SpecialFunctions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h4">
+            <h4 id="SpecialFunctions_VAP">VAP</h4>
+            <div class="member-link">[<a href="#SpecialFunctions_VAP">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><span class="SpreadsheetFormula"><b>VAP</b>(Price, Offset)</span></p>
+
+            <p>Returns the total Volume at the given Price on the bar at the given Offset from the current calculation bar.  Returns #VALUE! if the given Price is not a number, or if the given Offset could not be interpreted as an integer value.  Returns #N/A if the given Offset is beyond the range of the bars.</p>
+
+            <p>For example, <span class="SpreadsheetFormula"><b>VAP</b>(1000.5, 0)</span> returns the Volume for the 1000.5 price at the chart bar index being evaluated. <span class="SpreadsheetFormula"><b>VAP</b>(1000.5, -1)</span> will return the Volume for the the prior chart bar from the one being evaluated.</p>
+
+            <p>Main price graph identifiers can be used within the parameters. For example: <span class="SpreadsheetFormula"><b>VAP</b>(H, 0)</span>. You can access other price levels relative to the high by using this formula: <span class="SpreadsheetFormula"><b>VAP</b>(H - (TICKSIZE * 1), 0)</span>. Change the * 1 any other number to reference additional price levels below the High.</p>
+
+            <p>When using a main price graph identifier together with an offset, like <span class="SpreadsheetFormula"><b>VAP</b>(L, -1)</span>, the offset <em>does not affect</em> how the main price graph identifier is evaluated. <span class="SpreadsheetFormula"><b>VAP</b>(L, -1)</span> will return the Volume of the prior bar at the low price of the current bar. To get the Volume of the prior bar at the low price of the prior bar, enter the formula <span class="SpreadsheetFormula"><b>VAP</b>(L[-1], -1)</span>.</p>
+
+            <p>The Total Volume at the given Price for the <b>Pullback Column</b> can also be referenced using this function. In order to do this, use an <b>Offset</b> value of <b>1</b>. For example, <span class="SpreadsheetFormula"><b>VAP</b>(1000.5, 1)</span> returns the Total Volume for the 1000.5 price in the Pullback Column.</p>
+
+            <p>This function is <em>not</em> supported by Sierra Chart Spreadsheets.</p>
+
+            <p>When using a <a href="#" >Volume at Price Multiplier</a> higher than 1 in <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>, and using one of the  volume at price functions, you need to use a formula like the following:</p>
+
+            <p><span class="SpreadsheetFormula">VAP(MROUND(H, TICKSIZE * 2),0)=[volume to compare to]</span></p>
+
+            <p>The 2 represents the <b>Volume at Price Multiplier</b>. Replace <b>[volume to compare to]</b> with the actual volume you want to compare to.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpecialFunctions_BVAP">BVAP</h4>
+            <div class="member-link">[<a href="#SpecialFunctions_BVAP">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><span class="SpreadsheetFormula"><b>BVAP</b>(Price, Offset)</span></p>
+
+            <p>Returns the Bid Volume at the given Price on the bar at the given Offset from the current calculation bar.  Returns #VALUE! if the given Price is not a number, or if the given Offset could not be interpreted as an integer value.  Returns #N/A if the given Offset is beyond the range of the bars.</p>
+
+            <p>For example, <span class="SpreadsheetFormula"><b>BVAP</b>(1000.5, 0)</span> returns the Bid Volume for the 1000.5 price at the chart bar index being evaluated.</p>
+
+            <p>Main price graph identifiers can be used within the parameters. For example: <span class="SpreadsheetFormula"><b>BVAP</b>(H, 0)</span>. You can access other price levels relative to the high by using this formula: <span class="SpreadsheetFormula"><b>BVAP</b>(H - (TICKSIZE * 1), 0)</span>. Change the * 1 any other number to reference additional price levels below the High.</p>
+
+            <p>The Bid Volume at the given Price for the <b>Pullback Column</b> can also be referenced using this function. In order to do this, use an <b>Offset</b> value of <b>1</b>. For example, <span class="SpreadsheetFormula"><b>BVAP</b>(1000.5, 1)</span> returns the Bid Volume for the 1000.5 price in the Pullback Column.</p>
+
+            <p>This function is <em>not</em> supported by Sierra Chart Spreadsheets.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="SpecialFunctions_AVAP">AVAP</h4>
+            <div class="member-link">[<a href="#SpecialFunctions_AVAP">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><span class="SpreadsheetFormula"><b>AVAP</b>(Price, Offset)</span></p>
+
+            <p>Returns the Ask Volume at the given Price on the bar at the given Offset from the current calculation bar.  Returns #VALUE! if the given Price is not a number, or if the given Offset could not be interpreted as an integer value.  Returns #N/A if the given Offset is beyond the range of the bars.</p>
+
+            <p>For example, <span class="SpreadsheetFormula"><b>AVAP</b>(1000.5, 0)</span> returns the Ask Volume for the 1000.5 price at the chart bar index being evaluated.</p>
+
+            <p>Main price graph identifiers can be used within the parameters. For example: <span class="SpreadsheetFormula"><b>AVAP</b>(H, 0)</span>. You can access other price levels relative to the high by using this formula: <span class="SpreadsheetFormula"><b>AVAP</b>(H - (TICKSIZE * 1), 0)</span>. Change the * 1 any other number to reference additional price levels below the High.</p>
+
+            <p>The Ask Volume at the given Price for the <b>Pullback Column</b> can also be referenced using this function. In order to do this, use an <b>Offset</b> value of <b>1</b>. For example, <span class="SpreadsheetFormula"><b>AVAP</b>(1000.5, 1)</span> returns the ASK Volume for the 1000.5 price in the Pullback Column.</p>
+
+            <p>This function is <em>not</em> supported by Sierra Chart Spreadsheets.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReferencingSubgraphs">Referencing Study Subgraphs</h3>
+        <div class="member-link">[<a href="#ReferencingSubgraphs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To reference the data of one of the study's own Subgraphs (These are the Subgraphs of the study the Alert Condition Formula is applied to), use the identifier <b>SG#</b> where the <b>#</b> is the number of the Subgraph.</p>  
+
+        <p>For example, <b>SG1</b> is the first Subgraph, and <b>SG4</b> is the 4th Subgraph. </p>
+
+        <p>The actual numbers of the Subgraphs that are available with the study, are displayed on the <b>Subgraphs</b> tab of the Study Settings Window for the study. Refer to the image below.</p>
+
+        <p>These identifiers will be set to the value of the Subgraph at the last bar/column in the chart. These Subgraph identifiers can make reference to other  bars/columns in the chart, refer to <a href="#ReferencingDataOtherLastBar">Referencing Data Other Than on the Last Bar/Column In the Chart</a>.   </p>
+
+        <p>If you reference a Subgraph (SG#) that is not used, the Alert Condition Formula will not be evaluated.</p>
+
+        <p>If you reference a Subgraph that has a non-zero value for its <a href="index9099.html?page=doc/ChartStudies.html#Displacement" target="_blank" rel="noopener noreferrer">Displacement</a>, then the value of that Subgraph at any particular bar, is the offset value at that bar.</p>
+
+        <div style="text-align: center;"><a href="../images/subgraphidentifiers.png" rel="lightbox"><img alt="Subgraph Identifiers" src="../images/subgraphidentifiers.png" width="600"></a></div>
+        <section class="h4">
+            <h4 id="ReferencingSubgraphs_Examples">Examples</h4>
+            <div class="member-link">[<a href="#ReferencingSubgraphs_Examples">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p><b><span class="SpreadsheetFormula">= SG1 > 40</span></b></p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReferencingOtherStudies">Referencing Other Studies on the Chart</h3>
+        <div class="member-link">[<a href="#ReferencingOtherStudies">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <img class="screenshot FloatRight" src="../images/alertcondandscan_img2.png" alt="Screenshot" width="450">
+
+        <p>To reference a Subgraph from another study on the same chart in an Alert Condition Formula, start the identifier with <b>ID#.</b> where the <b>#</b> is the unique identifier of the study.  Follow this with a "." and then the identifier of the Subgraph  (<b>SG#</b>. Example: <b>ID1.SG1</b>) you want to reference from that study.   </p>
+
+        <p>For example, <b>ID2.SG1</b> references the first Subgraph of the study with ID: 2.  The unique study IDs for all of the studies on the chart are displayed in the <b>Studies to Graph</b> list on the right side of the <a href="index9099.html?page=doc/ChartStudies.html#ChartStudiesWindow">Chart Studies window</a>. </p> 
+
+        <p>These identifiers can also be written as <b>ID:#.</b> <b>ID:2.SG1</b> is the same as <b>ID2.SG1</b>. If you reference the unique ID of a study that does not exist, the Alert Condition Formula will not be evaluated.</p>
+
+        <p>The delimiter used in these study Subgraph references is the ".". It will always be a ".".</p>
+
+        <p>It is possible to access the main underlying price graph in this way by using <b> ID0</b>.  So to access the closing price at the bar being processed by the Alert  Condition Formula, you would specify  <b>ID0.SG4</b>. Where SG1 = Open, SG2 = High, SG3 = Low, SG4= Last/Close.</p>
+
+        <p>One concept to understand is that If you require an Alert Condition which involves multiple studies, then you will put it on  <em>one</em> of the studies and that formula through Study Subgraph identifiers (Example: <b>ID2.SG1</b>) will make reference to the other studies.</p>
+
+        <section class="h4">
+            <h4 id="ReferencingOtherStudies_Example">Example</h4>
+            <div class="member-link">[<a href="#ReferencingOtherStudies_Example">Link</a>] - [<a href="#top">Top</a>]</div>
+			
+            <p><span class="SpreadsheetFormula">=AND(<b>ID3.</b>SG1 > 0 , C > <b>ID8.</b>SG1)</span></p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReferencingOtherCharts">Referencing Studies on Other Charts</h3>
+        <div class="member-link">[<a href="#ReferencingOtherCharts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To reference a study or the main price graph from another chart in an Alert Condition Formula, it is first necessary to overlay  that study or main price graph   from the other chart onto the chart where the Alert Condition Formula is located.  To do this, you need to use the <a href="indexc0f0.html?page=doc/StudyPriceOverlayStudy.php" rel="noopener noreferrer" target="_blank">Study/Price Overlay</a> study.  </p>
+        
+        <p>You can use multiple instances of the  <b>Study/Price Overlay</b> study for multiple overlays.</p>
+
+        <p>Once you have overlaid the the  study or main price graph on to the chart where the Alert Condition Formula is located, you then need to follow the method described in <a href="#ReferencingOtherStudies">Referencing Other Studies on the Chart</a>, to reference the data in the  <b>Study/Price Overlay</b> study in the Alert Condition Formula.</p>
+        
+        <p>If you are trying to overlay the results of the <b>Color Bar Based on Alert Condition</b> or the <b>Color Background Based on Alert Condition</b> study from one chart to another chart, inherently that is not reliable using the <b>Study/Price Overlay</b> study. There is a solution to this and the method is documented on the <a href="index2fb9.html?page=doc/StudiesReference.php&amp;ID=149&amp;Name=Study_Overlay_-_OHLC_-_Open_High_Low_Close"  target="_blank" rel="noopener noreferrer">Study Overlay - OHLC</a> study page.</p>
+    </section>    
+
+    <section class="h3">
+        <h3 id="ReferencingChartDrawings">Referencing Chart Drawings</h3>
+        <div class="member-link">[<a href="#ReferencingChartDrawings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> There are two ways to reference a  <a href = "indexb844.html?page=doc/Tools.html"> Chart Drawing</a> for an alert.<p>
+
+        <ul>
+            <li><b>Reference by Anchor</b>:  This references the price/study value of an anchor point for the  Chart Drawing, in the alert. The format is <b>UDID[x].Ay</b>, where <b>x</b> is the drawing identifier and <b>y</b> is the anchor number.</li>
+
+            <li><b>Reference by Bar Value</b>:  This references the price/study value of the Chart Drawing at a bar location, in the alert. The format is <b>UDID[x][z]</b>, where <b>x</b> is the drawing identifier and <b>z</b> is the bar  <em>offset</em>.  The bar offset is relative to the chart bar the alert formula is being evaluated on.  
+            <br> <br>
+            For the last bar in the chart, when the alert formula  is being evaluated, using an offset of 0 would return the price/study value of the Chart Drawing at that chart bar.  Using -1 would give the value of the Chart Drawing  at the bar prior to the last bar.</li>
+        </ul>
+
+        <p>In both cases, the first part of the format is identical and uses the chart drawing identifier. The Chart Drawing Identification Number can be found on the  <a href = "indexb844.html?page=doc/Tools.html#ChartDrawingProperties">Chart Drawing Properties</a> window under the <b>Anchors</b> tab. </p>
+        
+        <p>In this window there is text that states <b>Line ID: -#</b>. The number following the negative sign is the identifier to be used for the overall drawing (see image below). Note that the number should be entered as the positive value, and not as the negative value that is displayed.</p>
+
+        <section class="h4">
+            <h4 id="ReferencingChartDrawings-ReferenceByAnchor">Reference by Anchor</h4>
+            <div class="member-link">[<a href="#ReferencingChartDrawings-ReferenceByAnchor">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>To use a Chart Drawing Anchor Point in an Alert, enter the formula as <b>UDID[x]Ay</b> where <b>x</b> is the Chart Drawing Identification Number (as described above) and <b>y</b> is the number of the anchor point that is to be used.</p>
+
+            <p>The anchors associated with a drawing are shown on the <b>Chart Drawing Properties</b> window under the <b>Anchors</b> tab. Each anchor shows the name on the left side of the window. For anchors that are listed as <b>Ay</b> simply use this value in the alert formula.</p>
+
+            <p>For Chart Drawing anchors that use a different identifier format other than <b>Ay</b>, simply count the number of the anchors starting with number 1 at the top and moving down; enter this number after the <b>A</b> in the formula. For example, if the anchors are labeled as <b>A</b> and <b>B</b> on the Anchors tab, then enter <b>A1</b> for the <b>A</b> anchor and <b>A2</b> for the <b>B</b> anchor. See the image below for further clarification.</p>
+            
+            <p>The Anchor value that is used in the alert is the <b>Value</b> of the anchor, or the vertical axis coordinate on the Chart Scale for the Chart Region the Chart Drawing is in. The Date/Time of the anchor is not used in the alert condition.</p>
+
+            <p>For example, to set an alert condition when the Last price is higher than the second anchor point for the Chart Drawing in the image below, enter the following alert formula: <b>C > UDID[2].A2</b>.</p>
+        </section>
+
+        <section class="h4">
+            <h4 id="ReferencingChartDrawings-ReferenceByBarValue">Reference by Bar Value</h4>
+            <div class="member-link">[<a href="#ReferencingChartDrawings-ReferenceByBarValue">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>To use the value of a Chart Drawing at a specific bar position in an Alert, enter the formula as <b>UDID[x][z]</b> where <b>x</b> is the Chart Drawing Identification Number (as described above) and <b>z</b> is the Bar Index Offset that establishes which bar is to be used to determine the value of the drawing.</p>
+
+            <p>The Bar Index Offset is the number of bars before or after the current bar in the chart. To reference the current bar, use a value of <b>0</b>. To reference a bar that is 2 bars behind the current bar, use a value of <b>-2</b>. This is the same context as is used to generally <a href="referencingdataotherlastbar.html">Reference Data Other Than on the Last Bar/Column in the Chart</a>.</p>
+
+            <p>If the drawing does not have a presence at the bar being referenced, then the value of the drawing at that location is 0. This could lead to inappropriate True alert conditions depending on the setup of the alert. It is important to keep this in mind when defining the alert and the bar reference that is used.</p>
+
+            <p>For example, to set an alert condition for the drawing referenced in the image below when the Last price of the current bar is higher than the value of the drawing five bars prior to the current bar, enter the following alert formula: <b>C > UDID[2][-5]</b>.</p>
+        </section>
+
+        <div style="text-align: center;"><a href="../images/drawingproperties-drawingid.png" rel="lightbox"><img alt="DrawingProperties-DrawingID.png" src="../images/drawingproperties-drawingid.png" class="screenshot" loading="lazy"></a></div>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReferencingDataOtherLastBar">Referencing Data Other Than on the Last Bar/Column In the Chart</h3>
+        <div class="member-link">[<a href="#ReferencingDataOtherLastBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To access the data from a bar/column in the chart other than the current bar, with any of the Main Price Graph and Study Subgraph identifiers described in this section, you need to include an offset within square brackets after the Main Price Graph or Study Subgraph identifier.</p> 
+
+        <p>For example, <b>H[-1]</b> will be set to the High value <em>1 bar prior to the current bar</em>, <b>SG1[-3]</b> will be set to the value of the first Subgraph <em>three bars prior to the current bar</em>, and <b>ID2.SG1[-4]</b> will be set to the value of the first Subgraph of the study with ID 2 <em>four bars prior to the current bar</em>.</p> 
+
+        <p>If no offset is given for an identifier, that is equivalent to an offset of zero. For example, <b>SG1</b> is equivalent to <b>SG1[0]</b>.</p>  
+
+        <p>If the Alert Condition Formula references a bar that does not exist, the Alert Condition Formula will not be evaluated.</p>
+
+        <p>In the description above, <em>current bar</em> refers to the last bar in the chart when evaluating an Alert Condition Formula on a study other than the <a href="index315b.html?page=doc/StudiesReference.php&amp;ID=245#Color_Bar_Based_on_Alert_Condition">Color Bar Based on Alert Condition</a> / <a href="index9919.html?page=doc/StudiesReference.php&amp;ID=252#Color_Background_Based_on_Alert_Condition">Color Background Based on Alert Condition</a> studies. It will refer to the bar before the last bar the chart when  <a href="#AlertOptions">Evaluate on Bar Close</a> is enabled.</p>
+
+        <p>When using the <a href="index315b.html?page=doc/StudiesReference.php&amp;ID=245#Color_Bar_Based_on_Alert_Condition">Color Bar Based on Alert Condition</a> / <a href="index9919.html?page=doc/StudiesReference.php&amp;ID=252#Color_Background_Based_on_Alert_Condition">Color Background Based on Alert Condition</a> studies, <em>current bar</em>  refers to the bar currently being evaluated by this study. This study evaluates an  Alert Condition Formula on historical bars. </p>
+
+        <section class="h4">
+            <h4 id="UsingPositiveBarOffsetsConsequences">Using Positive Bar Reference Offsets and Consequences</h4>
+            <div class="member-link">[<a href="#UsingPositiveBarOffsetsConsequences">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>It is also possible to use a positive number within the square brackets (ID1.SG1[1]) to reference data for chart bars which are after the chart bar the Alert Condition Formula is being evaluated on.</p>
+
+            <p>For example, you could specify <b>H[1]</b> which will reference the bar High price one bar forward. This would only be meaningful if you are using the option <b>Evaluate on Bar Close</b> or you are using the <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s245">Color Bar/Background Based on Alert Condition</a> study, or a Subgraph that is being referenced has a positive <a href="index9099.html?page=doc/ChartStudies.html#Displacement" target="_blank" rel="noopener noreferrer">Displacement</a>.</p> 
+            
+            <p>  Use a positive bar reference  of [1]  in Subgraph references to reference the  <a href = "index5ee6.html?page=doc/NumbersBars.php#PullbackColumn">pullback  column</a> data of the  <a href = "index5ee6.html?page=doc/NumbersBars.php#NumericInformationBelowBars">Numbers Bars Calculated Values</a> study. <p>
+
+            <p>In any of these cases, the formula will be applied to bars other than the last bar in the chart. So using a positive reference would be useful. Otherwise, you would be referencing data beyond the end of the chart which normally does not exist. Although, there are consequences to using a positive reference.</p>
+
+            <p class="GeneralBackgroundHighlightLight">The consequence of using a positive offset within the square brackets to reference data after the last bar in the chart is that during real-time updating of the chart or during a replay, the data being referenced will not exist  and your Alert Condition Formula will evaluate to FALSE and you will not get an Alert or the new bars added to the chart will not be colored in the case of when using the <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s245">Color Bar/Background Based on Alert Condition</a> study.</p>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReferencingARangeOfData">Referencing A Range of Data</h3>
+        <div class="member-link">[<a href="#ReferencingARangeOfData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In order to reference a range of data within a specific Subgraph, use the format <span class="SpreadsheetFormula">IDx.SGy[b:e]</span> where <b>x</b> is the ID of the particular study, <b>y</b> is the Subgraph number of the study (or chart), <b>b</b> is the beginning data reference, and <b>e</b> is the ending data reference.</p>
+
+        <p>For example, to calculate the average of the last 10 bars for the Open of the Main Price Graph, the formula would be <span class="SpreadsheetFormula">AVERAGE(ID0.SG1[0:-10])</span>.</p>
+
+        <p>When the data being referenced is part of the given chart, then it is not necessary to use the ID portion of the formula. For example, if writing a Chart alert from the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Alerts tab</b>, and comparing the Average of the Open prices in the Main Price Graph against a constant, you could enter just the following: <span class="SpreadsheetFormula">=AVERAGE(SG1[0:-10]) &gt; 100</span> or <span class="SpreadsheetFormula">=AVERAGE(O[0:-10]) &gt; 100</span>.</p> 
+        
+        <p> It needs to be understood that you cannot compare a range of individual values using a comparison operator to a single value.  For example, this is  <em>not</em> valid: <span class="SpreadsheetFormula">=SG1[0:-10] &gt; 100</span> . It inherently makes no sense because 11 different values cannot be compared to a single value.  This requires an iteration which is not possible with Spreadsheet formulas. </p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ReferencingDataBeyondTheLastBarInTheChart">Referencing Data Beyond the Last Bar in the Chart</h3>
+        <div class="member-link">[<a href="#ReferencingDataBeyondTheLastBarInTheChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>There are cases where it does make sense to reference chart columns beyond the last bar in the chart. In particular, to be able to reference the data from the Pullback Column of the <a href="index5ee6.html?page=doc/NumbersBars.php#NumericInformationBelowBars" target="_blank" rel="noopener noreferrer">Numbers Bars Calculated Values</a> study; or to access data from a Subgraph that has a positive <a href="index9099.html?page=doc/ChartStudies.html#Displacement" target="_blank" rel="noopener noreferrer">Displacement</a>.</p>
+
+        <p>You need to be running the current version of Sierra Chart for support for this.</p>
+
+        <p>To reference the Pullback Column column data, simply use the study Subgraph identifier for the particular Subgraph you want to reference and follow it by [1]. Example:  <b>SG1[1]</b>.</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="EffectOfValueFormatOnIdentifierValues">The Effect of the Value Format on Identifier Values</h2>
+    <div class="member-link">[<a href="#EffectOfValueFormatOnIdentifierValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>All study and  main price graph identifiers <b>O, H, L, C,  SG1, ID1.SG1</b>, ... are converted to values which correspond to the <b> Price Display Format/Value Format</b>  setting on the main price graph or study that the identifier belongs to.</p>
+
+    <p>Therefore, the  <a href="index4cf4.html?page=doc/ChartSettings.html#PriceDisplayFormat" target="_blank" rel="noopener noreferrer">Price Display Format</a>  setting for the chart will affect the O, H, L, C identifiers. The <a href="index9099.html?page=doc/ChartStudies.html#ValueFormat"  target="_blank" rel="noopener noreferrer">Value Format</a> setting on a study will affect the <b>ID#.SG#</b> identifiers for that same study.</p>
+
+    <p>This conversion takes place before the formula is evaluated. In other words the value will be as you see it on the chart.</p>
+
+    <p>For example, if internally a Moving Average value at a chart bar is 841.2351 and the <b>Value Format</b> for that particular study is <b>.1</b>, then this will be converted to 841.2. So the value is rounded. So 841.25 would be rounded to 841.3 if the <b>Value Format</b> for the study is <b>.1</b>.</p>
+
+    <p> Another example,  if a Study Subgraph at a specific chart bar is <b>0.001</b>, at another chart bar  the Study Subgraph is <b>0.004</b>, in the <b>Value Format</b> for the study is <b>0.01</b>, then <b>0.001</b> and <b>0.004</b> will be considered <em>equal</em> because <b>0.001</b> rounds to <b>0.00</b> and <b>0.004</b> rounds to <b>0.00</b>. Therefore, you can see the importance of the <b>Value Format</b> setting on the evaluation of formulas.</p>
+
+    <p>Main price graph values are rounded according to the <b>Price Display Format</b> setting in <b class = "menu_item">Chart &gt;&gt; Chart Settings</b>. This is the main chart equivalent to the <b>Value Format</b> setting.</p>
+
+    <p>The application of the <b>Value Format</b> does not occur when using the <b>CROSSOVER(), CROSSFROMABOVE(), or the CROSSFROMBELOW()</b> functions. The numbers are represented as they actually internally are with full precision. The only way to see the full precision yourself of the identifier values is to set the <b> Value Format</b> setting for the study or the <b>Price Display Format</b> setting for the main price  graph to <b>.0000001</b> or more precise. Refer to <a href="indexa315.html?page=doc/helpdetails32.html" target="_blank" rel="noopener noreferrer">Changing the Price/Value Display Format</a>.</p>
+
+    <p class="GeneralBackgroundHighlightLight">If your <b>Alert Condition</b> formula is not giving an expected result, then it is possible that the <b>Value Format</b> setting is not correct. </p>
+
+    <p>You will need to <em>increase</em> the number of decimal places in the <b>Value Format</b> for greater precision. Be aware, that  a less precise <b>Value Format</b> setting can create unexpected comparison results which do not correspond to what you visually see on the chart with the Study Subgraph drawings.</p>
+</section>
+
+<section class="h2">
+    <h2 id="WritingFormulasForStudiesWithoutObviousValues">Writing Formulas for Studies without Obvious Values</h2>
+    <div class="member-link">[<a href="#WritingFormulasForStudiesWithoutObviousValues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are some Study Subgraphs like the <b>Candlestick Patterns Finder &gt;&gt; Pattern #</b> Subgraph and the <b>Zig Zag &gt;&gt; Text Labels</b> Subgraph which do not have obvious values because these are just displayed as text.</p>
+
+    <p>However, in each of these cases  the Study Subgraph which is used to control the color and Font Size contain values which correspond with the particular text displayed. </p>
+
+    <p>In the case of the <b>Zig Zag</b> study, it is necessary to set the   <b>Additional Output for Spreadsheets</b> study Input to <b> Yes</b>  for some of these additional study Subgraphs to contain values.</p>
+    
+     <p> Related to this, you may want to write an Alert Condition Formula based on changing colors  of a study Subgraph. In this particular case you need to base the formula on the actual values of the  Subgraph which is affecting the coloring. </p>
+
+    <p>To see these study Subgraph values you need to use the <a href="indexb844.html?page=doc/Tools.html#ChartValues"  target="_blank" rel="noopener noreferrer">Chart Values  Tool</a> and the  <a href="indexb844.html?page=doc/Tools.html#ViewingToolandChartData" target="_blank" rel="noopener noreferrer">Tool Values Window</a>.</p>
+
+    <p>When  you move the Pointer over a particular chart bar, you will see displayed in the Tool Values  Window the value for each of the Subgraphs at that chart bar.  Refer to the image below for this. </p>
+
+    <p>So this is a method that you can determine to values for a Study Subgraph that do not have obvious values.</p>
+
+    <p>You can then write a formula  to use these values.  For example <b>SG1&gt;0</b>.</p>
+
+    <div style="text-align: center;"><a href="../images/studysubgraphvaluesforalertformula.png" rel="lightbox"><img src="../images/studysubgraphvaluesforalertformula.png" alt="" class="screenshot" loading="lazy" width="550"></a></div>
+</section>
+
+<section class="h2">
+    <h2 id="WritingFormulasBasedOnColorSettings">Writing Formulas Based On Color Settings</h2>
+    <div class="member-link">[<a href="#WritingFormulasBasedOnColorSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are some studies that color a subgraph based on underlying information. In these cases, if a subgraph is available, it is only to allow for the user to change the color for that particular subgraph. As such, the actual data that drives the color is not available. When it is desired to use the color change as part of an alert, it is necessary to write the alert using the underlying algorithm, as the data that drives the color, and the color itself, are not available for use within an alert.</p>
+
+    <p>For example, the study <b>Volume - Colored Based on Closes</b> sets the color of the volume bar based on whether the close of the bar is higher or lower than the close of the previous bar. It is not possible to create an alert that is based on the color of these Volume Bars, but rather an alert can be created that is based on how the coloring is performed. In this case, the information for how the coloring is performed is given on the <a href="indexbc65.html?page=doc/StudiesReference.php&amp;ID=312&amp;Name=Volume_Colored_Based_on_Bar_Closes">Volume - Colored Based On Bar Closes</a> page, where it states that <b>A Volume bar is colored the Volume Subgraph Primary color if the closing price of the corresponding bar is higher or equal to the previous bar.</b> Therefore, the alert condition would be <b>C >= C[-1]</b>.</p>
+</section>
+
+<section class="h2">
+    <h2  id = "SupportPolicyForAlertConditionFormulaProgrammingHelp">** Support Policy For Alert Condition Formula Programming Help **</h2>
+    <div class="member-link">[<a href="#SupportPolicyForAlertConditionFormulaProgrammingHelp">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>   As a matter of  clear and firm policy, Sierra Chart support does not provide any formula programming help. </p>
+
+    <p> There are some exceptions to this,  like if it is a very simple formula or if something is not clear  in the documentation in relation to what the user wants to accomplish in the Alert Formula.  In this particular case we may provide some simple help and work to update the documentation to make it clear.</p>
+
+
+    <p>  However, in no case should there ever be a reliance on Sierra Chart support for formula programming or formula programming help.</p>
+
+    <p>  Users are most welcome and encouraged the  post their formula questions on the Support Board but just mark them as a  <b>User Discussion</b>  for others users to help. Or we will mark them as a User Discussion  or Programming Help for you. </p>
+    
+    <p> If you are interested in formula programming services we can offer that at 80 USD per hour. </p>
+</section>
+
+<section class="h2">
+    <h2  id="FormulaExamples">Alert Formula Examples</h2>
+    <div class="member-link">[<a href="#FormulaExamples">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Some of the examples below provide <b>Study Collection</b> files. To use a Study Collection file, refer to <a href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php#UsingStudyCollection" Target="_blank" rel="noopener noreferrer">Using a Study Collection</a> for step-by-step instructions.</p>
+
+    <p>When an example says to add a study to the chart, refer to the <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a>  documentation for instructions if needed.</p>
+
+    <p>The below Alert Condition Formulas can be used with studies or on the main price graph depending upon what they are designed to do.</p>
+
+    <p>To enter one of these formulas on a study, refer to <a href="#EnterAlertOnStudy">To Enter an Alert Condition on a Study</a>.</p>
+
+
+    <p>To enter one of these formulas on the main price  graph of the chart, refer to <a href="#EnterAlertOnMainPriceGraph">To Enter an Alert Condition on the Main Chart/Price Graph</a>.</p> 
+
+    <br>
+    <ol>
+        <li><b>Stochastic Alert</b>: Add the <b>Stochastic-Slow</b> study to the chart. Enter the <span class="SpreadsheetFormula">=CROSSOVER(SG1, SG2)</span> formula into the <b>Alert Condition</b> text box on the <b> Alerts</b> tab of the <b>Study Settings</b> window for the study.  When the %K line crosses the %D line an alert will be given.  Enter the <span class="SpreadsheetFormula">=AND(CROSSOVER(SG1, SG2) &lt;&gt; 0, SG1 &gt; 70)</span> formula into the <b>Alert Condition</b> text box on the <b> Alerts</b> tab of the <b>Study Settings</b> window for the study.   With this formula, when the %K line crosses the %D line <em>and</em> %K is above 70, then an alert will be given.</li>
+
+        <li><b>Simple Price Alert</b>: Enter <span class="SpreadsheetFormula">=C &gt; 50</span> into the <b>Alert Condition</b> text box on the <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Alerts</b> tab for the chart.  This formula means if the close is greater than 50, then give an alert.</li>
+
+        <li><b>Moving Average Crossover Alert</b>: Add the study <b>Moving Averages</b> to the chart. The study will display three moving averages. Open the   <b>Study Settings</b> window for the study.  Configure the <b>Inputs</b> as you require. On the  <b>Subgraphs</b> tab set the <b>Draw Style</b> moving averages you do not want to see to <b>Ignore</b>. In the <b >Alert Condition</b> text box on the <b>Alerts</b> tab enter: <span class="SpreadsheetFormula">=CROSSOVER(SG1, SG2)</span>.  This means if the first two moving averages cross, an alert will be given.</li>
+
+        <li><b>Moving Average Crossover Alert Using Separate Moving Averages</b>: Add 2 <b>Moving Average</b>  studies to the chart. Configure the studies as you require.  Take note of the ID number of each study as it is displayed in the <b> Studies to Graph</b> list box on the   <b>Study Settings</b> window.
+            <br>
+            <br>
+            Select one of the <b>Moving Average</b> studies and open the  <b>Study Settings</b> window for that study. In the <b >Alert Condition</b> text box on the <b>Alerts</b> tab, enter: <span class="SpreadsheetFormula">=CROSSOVER(ID1.SG1, ID2.SG1)</span>.  This means if the moving average with ID1 crosses the moving average with ID2, then an alert will be given. If you apply this formula to the study with ID1, then <b> ID1.</b> can be removed and instead you can just use <b>SG1</b>.</li>
+
+        <li><b>To Scan For Charts With Increasing Volume</b>: Add a <b>Moving Average</b> study to the chart.  Open the Study Settings window for the study.  Set the <b>Input Data</b> input to <b>Volume</b>.  Set the <b> Chart Region</b> setting to 2.  Enter <span class="SpreadsheetFormula">=SG1 &gt; SG1[-5]</span> into the <b>Alert Condition</b> text box on the <b>Alerts</b>  tab for the study.  This formula means if the Moving Average value on the last column/bar is greater than the Moving Average value five columns/bars prior, then give an alert.  Select <b class="menu_item">Chart &gt;&gt; Start Scan</b> on the menu to scan all your data for this condition.  The number 5 in the bars back operator (<b>[-5]</b>) can be set to whatever you require.</li>
+
+        <li><b>Alert at Specific Time</b>: If you want to get an alert at a specific time, use a formula like this: <span class="SpreadsheetFormula">=AND(BARTIME&gt;= TIME(9, 30, 0), BARTIME &lt;= TIME(9, 30, 59))</span>. This will give you an alert when the time 9:30:00 to 9:30:59 occurs on the last bar.</li>
+
+        <li><b>Highlighting the Evening Session Background</b>: If you want to highlight the background of the chart for the evening session trading, then use the <b>Color Background Based on Alert Condition</b> study and use the following Formula: <span class="SpreadsheetFormula">=OR(BARTIME &gt;= TIME(15, 30, 0), BARTIME &lt;= TIME(8, 30, 0))</span>, this will color the bars from 15:30 to 8:30.
+            <br>
+            <br>
+            There is a better way to perform the same function rather than using this formula.  Use the <a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php#s278">Time Range Highlight</a> study.</li>
+
+        <li><b>Simple Alert Condition Formula for Change of Slope of a Study Subgraph Line</b>: To  get an alert when a study Subgraph line changes its slope, then use this Simple Alert Condition Formula:  <span class="SpreadsheetFormula">=OR(AND(SG1[0] &gt; SG1[-1],SG1[-1] &lt; SG1[-2]), AND(SG1[0] &lt; SG1[-1],SG1[-1] &gt; SG1[-2]))</span>. This formula is meant for study Subgraph 1. This will work fine for any of the Sierra Chart Moving Average studies.
+        <br> <br>
+         In the case where this formula is used on another study other than the study being referenced, like in the case of <b>Color Bar Based on Alert Condition</b>, it is necessary to change <b>SG1</b> to include the study ID number. Refer to <a href = "#ReferencingOtherStudies">Referencing Other Studies</a> for complete details.
+        </li>
+
+        <li><b>Simple Alert Condition Formula for Change of Slope or New Slope of a Study Subgraph Line</b>: To get an alert when a study Subgraph line changes its slope or there is a new slope after a flatline, then use this Simple Alert Condition Formula:  <span class="SpreadsheetFormula">=OR(AND(SG1[0] &gt; SG1[-1] , SG1[-1] &lt;= SG1[-2]) , AND(SG1[0] &lt; SG1[-1], SG1[-1] &gt;= SG1[-2]))</span>. This formula is meant for study Subgraph 1.</li>
+
+        <li><b>Color Bar Formula To Color Bars Based On Whether Study Subgraph Is Above Or Below 0</b>: These formulas need to be used on the  <b>Color Bar Based on Alert Condition</b> study. You need two instances of this study. This formula assumes that the study we are referencing has an ID of 1 and we are referring to the first Subgraph of that study.   Simple Alert Condition Formulas: <span class="SpreadsheetFormula">=ID1.SG1 &gt; 0</span>, <span class="SpreadsheetFormula">=ID1.SG1 &lt; 0</span>.</li>
+
+        <li><b>Making an Alert Condition Formula Function During Certain Times</b>: In this example the alert will only function between 5:30:00 and 22:20:00. <span class="SpreadsheetFormula">=AND((<i>Your Alert Condition Formula</i>), BARTIME &gt;= TIME(5, 30, 0), BARTIME &lt;= TIME(22, 20, 0))</span></li>
+
+        <li><b>Alert for TICK-NYSE chart when it crosses these levels</b>: -600,  -1200 and +600, +1200. <span class="SpreadsheetFormula">=OR(CROSSOVER(C,-600) &lt;&gt; 0, CROSSOVER(C,-1200) &lt;&gt; 0, CROSSOVER(C,600) &lt;&gt; 0, CROSSOVER(C,1200) &lt;&gt; 0)</span>. Enter this alert in <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Alerts</b> in the <b>Alert Condition</b> box.</li>
+
+
+        <li><b>Alert for Commodity Channel Index (CCI) when it crosses -180,  -200 and +180, +200</b>: <span class="SpreadsheetFormula">=OR(CROSSOVER(SG1,-180) &lt;&gt; 0, CROSSOVER(SG1,-200) &lt;&gt; 0, CROSSOVER(SG1,180) &lt;&gt; 0, CROSSOVER(SG1,200) &lt;&gt; 0)</span>. Enter this alert in the <b>Study Settings</b> window for the  <b>Commodity Channel Index</b> study in the <b>Alert Condition</b> box.</li>
+
+        <li><b>Alert for Commodity Channel Index (CCI) when it crosses its Line 2 or Line 3 Subgraphs</b>: <span class="SpreadsheetFormula">=OR(CROSSOVER(SG1,SG3) &lt;&gt; 0, CROSSOVER(SG1,SG4) &lt;&gt; 0)</span>. Enter this alert in the <b>Study Settings</b> window for the  <b>Commodity Channel Index</b> study in the <b>Alert Condition</b> box.</li>
+
+        <li><b>Slow Stochastic Crossover</b>: This Study Collection file, when applied to a chart, will place a green up arrow at the price bar where the stochastic %K line crosses the stochastic %D from below. It will place a red down arrow at the price bar where the stochastic %K line crosses the stochastic %D from above. The Study Collection uses 2 <b>Color Bar Based on Alert Condition</b> studies. Study Collection file: <a href="../images/slowstochasticcrossoveralert.stdycollct">SlowStochasticCrossoverAlert.StdyCollct</a></li>
+
+        <li><b>Alert when Moving Average Crosses Bar Close Price</b>: This Study Collection file, when applied to a chart, will place a green up arrow at the price bar where the bar Close price crosses a Moving Average from below. It will place a red down arrow at the price bar where the bar Close price crosses a Moving Average from above. The Study Collection uses 2 <b>Color Bar Based on Alert Condition</b> studies. Click on the following link to download the Study Collection file: <a href="../images/movingaverageandlastcrossoveralert.stdycollct">MovingAverageAndLastCrossoverAlert.StdyCollct</a>. For complete instructions to use this Study Collection, refer to <a href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php#UsingStudyCollection" Target="_blank" rel="noopener noreferrer">Using Study Collections</a>.</li>
+
+        <li><b>Alert when New High or New Low of Day</b>: This Study Collection file, when applied to a chart, will provide you with an Alert when there is a new high or new low that has occurred during the trading day.  This Study Collection uses the Daily OHLC study. Click on the following link to download the Study Collection file: <a href="../images/new%20high%20new%20low%20alert.stdycollct">New High New Low Alert.StdyCollct</a>. For complete instructions to use this Study Collection, refer to <a href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php#UsingStudyCollection" Target="_blank" rel="noopener noreferrer">Using Study Collections</a>.</li>
+
+        <li><b>Alert When High or Low of a Chart Bar Intersects Keltner Bands</b>: This Study Collection file, when applied to a chart, will provide you with an Alert when the High or Low of a chart bar intersects or goes beyond the Keltner Bands. Click on the following link to download the Study Collection file: <a href="../images/keltner%20alert.stdycollct">Keltner Alert.StdyCollct</a>. For complete instructions to use this Study Collection, refer to <a href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php#UsingStudyCollection" Target="_blank" rel="noopener noreferrer">Using Study Collections</a>.</li>
+
+        <li><b>Alert When Moving Average Within Range of Price Bar</b>: Enter the following Alert Condition Formula on a Moving Average study: <span class="SpreadsheetFormula">AND (H &gt;= SG1,L &lt;= SG1)</span>.  This means if the moving average is less than or equal to the  High and greater than or equal to the  Low.</li>
+
+        <li><b>Alert When Moving Average Crosses over Close Price of Bar</b>: Enter the following Alert Condition Formula on a Moving Average study: <span class="SpreadsheetFormula">=CROSSOVER(SG1, C)</span>.</li>
+
+        <li><b>Alert When Moving Average Crosses over Price Bar</b>: Enter the following Alert Condition Formula on a Moving Average study: <span class="SpreadsheetFormula">=OR(CROSSOVER(SG1, H) &lt;&gt; 0, CROSSOVER(SG1, L) &lt;&gt; 0)</span>.</li>
+
+        <li><b>Alert When there is a gap between Close and Open of Price Bars</b> (Close of previous bar is different from next bar Open): Enter the following Alert Condition Formula on the Main Price Graph: <span class="SpreadsheetFormula">=C[-1] &lt;&gt; O</span>. The O is the letter 'O' for open and not zero.</li>
+
+        <li><b> Formula To Detect Chart Bar Within Study Bands</b>: The following Simple Alert Condition Formula can be used with studies like the <b>Moving Average Envelope</b> to detect when the chart bars enter within the bands of the study. :  <span class="SpreadsheetFormula">=OR(AND(H &lt;= ID1.SG1, H &gt;=  ID1.SG2)  , AND(L &lt;=  ID1.SG1, L &gt;=  ID1.SG2)   , AND(H &gt;  ID1.SG1, L &lt;  ID1.SG2))</span>.
+            <br> <br>
+            <div style="text-align: center;"><a href="../images/studybandscolorbar.png" rel="lightbox"><img src="../images/studybandscolorbar.png" width="375" class="screenshot" loading="lazy" alt=""></a></div>
+        </li>
+
+        <li><b>Alert Formula For When Difference Between All 3 Study Subgraph Lines is Less than Chart Tick Size</b>:  <span class="SpreadsheetFormula">=AND(ABS(SG1-SG2) &lt; TICKSIZE, ABS(SG2-SG3)  &lt; TICKSIZE)</span>.</li>
+
+        <li><b>Alert Formula For When Study Subgraph Crosses 0</b>: The following Simple Alert Condition Formula can be used for any study: <span class="SpreadsheetFormula">=CROSSOVER(SG1, 0)</span>. This checks for when the first study Subgraph crosses 0.</li>
+
+        <li><b>Alert Formula For When 2 Study Subgraphs Cross</b>: The following  Simple Alert Condition Formula needs to be entered on one of the studies: <span class="SpreadsheetFormula">=CROSSOVER(ID#.SG1, ID#.SG1,)</span>.   <b>ID#</b> needs to be changed to the study ID  of the study being referred to. For information about study IDs, refer to  <a href="#ReferencingOtherStudies">Referencing Other Studies on the Chart</a>.</li>
+
+        <li><b> Formula to Detect Swing High and Low</b>: The following Simple Alert Condition Formula is for the <b>Swing High and Low</b> study  when its <b>Length</b> input is set to 2. This will provide an alert whenever there is a Swing High or Low. Formula:  <span class="SpreadsheetFormula">=OR(SG1 &gt; 0, SG2 &gt; 0, SG1[-1] &gt; 0, SG2[-1] &gt; 0, SG1[-2] &gt; 0, SG2[-2] &gt; 0, SG1[-3] &gt; 0, SG2[-3] &gt; 0)</span>.</li>
+
+        <li><b>Alert Formula for When Bar Close Price Crosses over Top or Bottom Bollinger Band</b>: The following Simple Alert Condition Formula needs to be entered on the Bollinger Bands study:  <span class="SpreadsheetFormula">=OR( CROSSFROMBELOW(C, SG1), CROSSFROMABOVE(C, SG3))</span>. This formula will give an alert when the bar closing price crosses from below the Top Band to above the Top Band or crosses  from above the Bottom to below the Bottom Band. You may optionally want to enable the <b>Evaluate on Bar Close</b> option on the <b>Alerts</b> tab of the Study Settings window.</li>
+
+        <li> <b> Alert for Volume Greater Than Certain Volume</b>: Enter <span class="SpreadsheetFormula">=V &gt; 10000</span> into the <b>Alerts</b> tab of the <b>Chart Settings</b> window.  Change 10000 to the volume number that you require. Refer to <a href="#EnterAlertOnMainPriceGraph">To Enter an Alert Condition on the Main Chart/Price Graph</a>.</li>
+
+        <li><b>Alert for Bar Time Duration  Equal to Specific Time</b>: Enter the following formula into the  <b>Alerts</b> tab of the  <b>Bar Time Duration</b> study: 
+            <span class="SpreadsheetFormula">=AND(SG1 &gt; TIME(0, 4, 59), SG1 &lt; TIME(0, 5, 1))</span>. This will provide an alert when  the time of a bar is five minutes. Since Date and Time values are imprecise floating-point values requires that we check for a range of up to one second on either side of five minutes. For this formula to work correctly it is necessary the <b>Value Format</b> setting for the study is set to <b>Time</b>. Reference: <a href="index8e89.html?page=doc/SpreadsheetFunctions.html#TIME_Function">TIME Spreadsheet Function</a>.</li>
+
+        <li><b>Moving Average Crossover With Arrows</b>: This is an example which uses Alert Condition Formulas and  <b>Color Bar Based on Alert Condition</b> studies to draw Up and Down arrows on the price bars  when long and short length <b>Moving Average-Exponential</b> studies cross. Click the following link to download the Study Collection file: <a href="../images/movingaveragecrossoverwitharrows.stdycollct">MovingAverageCrossoverWithArrows</a>. For complete instructions to use this Study Collection, refer to <a href="indexe791.html?page=doc/UsingAdvancedCustomStudies.php#UsingStudyCollection" target="_blank" rel="noopener noreferrer">Using Study Collections</a>. </li>
+
+        <li><b>Ask Volume Bid Volume Difference Alert</b>: Enter the following formula into the <b>Alerts</b> tab of the <b>Bid Volume versus Ask Volume</b> study: <span class="SpreadsheetFormula">OR(SG5 &lt; -100, SG5 &gt; 100)</span>.  This formula will provide an Alert when the difference between Ask Volume and Bid Volume is greater than 100 or less than -100. Modify the number 100 to use a different trigger value.</li>
+
+        <li><b>Alert when Chart Bar is Within Specified Ticks of Touching Bollinger Bands</b>: Enter the following Alert Condition Formula on a Bollinger Bands study: <span class="SpreadsheetFormula">=OR(H &gt;= SG1 - (4 * TICKSIZE), L &lt;= SG3 + (4 * TICKSIZE))</span>. In this particular case the specified number of ticks is 4 and can be modified as required.</li>
+
+        <li><b>Alert when High Crosses  Upper Bollinger Band or Low Crosses  Lower Bollinger Band</b>: Enter the following Alert Condition Formula on a Bollinger Bands study: <span class="SpreadsheetFormula">OR( CROSSFROMBELOW(H, SG1), CROSSFROMABOVE(L, SG3))</span>. </li>
+
+        <li><b>Alert when Close Within 25 Percent of Bottom of Chart Bar</b>: Enter the following Alert Condition Formula on a <b>Color Bar Based on Alert Condition</b> study: <span class="SpreadsheetFormula">AND(C &gt;= L, C &lt;= ((H - L) * .25 + L) )</span>.</li>
+
+        <li><b>Alert for where  Body of Candlestick Bar is Less Than 50 Percent of the High to Low Range of the Bar</b>: <span class="SpreadsheetFormula">(ABS(O - C) / (H - L) &lt; .50)</span>. This formula can either be entered on the main price graph or on a study.</li>
+
+        <li><b>Alert when High of the Current Bar Goes Higher than a Chart Drawing</b>: The Chart Drawing has a line ID of -40. Formula: <span class="SpreadsheetFormula"> H &gt; UDID[40][0]</span>.</li>
+        
+        <li> <b>Alert for when Last Trade Price is Within the High or Low of TPO Profile By 4 Ticks</b>: <span class="SpreadsheetFormula">OR (C &gt;= H-TICKSIZE*4, C &lt;= L+TICKSIZE*4)</span>. Set this formula on the TPO Profile Chart study. <a href="#EnterAlertOnStudy " >Instructions</a>. </li>
+
+        <li><b>Alert for When Close Crosses Into a Rectangle/Extending Rectangle Chart Drawing</b>: This formula is entered on the  <a href="#EnterAlertOnMainPriceGraph" >Main Price Graph</a>. The  Alert Formula checks for a cross from above for the first point (top value), and a cross from below for the second point (bottom value) of the Rectangle Chart Drawing. This assumes that the Rectangle Chart Drawing was entered with the first point higher than the second; if the Rectangle Chart Drawing was entered with the first point lower than the second, then the points would need to be reversed in the formula. Refer to <a href="#ReferencingChartDrawings">Referencing Chart Drawings</a> for more information. In this example, the Chart Drawing has an ID of 40 and is compared to the Close price: <span class="SpreadsheetFormula">OR(CROSSFROMABOVE(C, UDID[40].A1), CROSSFROMBELOW(C, UDID[40].A2))</span>.</li>
+
+        <li><b>Alert when Last price crosses over a Pivot Point study line</b>: <span class=SpreadsheetFormula>OR(CROSSOVER(C, SG13), CROSSOVER(C, SG1), CROSSOVER(C, SG2), CROSSOVER(C, SG3), CROSSOVER(C, SG4))</span>. This formula is entered on a Pivot Points study to alert when the Last price has crossed over any of the R2, R1, Pivot Point, S1, or S2 lines. The option <b>Reset Alert Condition on New Bar</b> should be selected in order to force the alert into a negative state when the next bar starts.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="RepeatingAlertSoundUntilManuallyCanceled">Repeating Alert Sound Until Manually Canceled</h2>
+    <div class="member-link">[<a href="#RepeatingAlertSoundUntilManuallyCanceled">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following gives instructions on how to create an Alert sound that will repeat many times, which can then be shut off by creating a Custom Control Bar Button to <b>Clear Alert Sound Queue</b>.</p>
+
+    <ol>
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; General Settings</b> and select the <b>Alerts &gt;&gt; Alert Settings</b>.</li>
+
+        <li>Select the desired Alert number.</li>
+
+        <li>Set the value for <b>Number of Times to Play this Alert</b> to a large number such as 100 or 1000. The total length of time that the Alert sound will play is this value multiplied by the length of the .wav file that is used for the alert.</li>
+
+        <li>Set the other Alert values as desired for this alert. Ensure that there is a valid .wav file selected for the alert by selecting the <b>Test Sound</b> button .</li>
+
+        <li>Select OK to close this window.</li>
+
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Customize Control Bar</b> and select a Control Bar number to which the <b>Cancel Alert Sound</b> button will be added.</li>
+
+        <li>Select and expand <b>Global Settings</b> in the <b>Available Control Bar Commands</b> section.</li>
+
+        <li>Select the option <b>Clear Alert Sound Queue</b> and select the <b>Add</b> button to add it to the <b>Selected Control Bar Commands</b>.</li>
+
+        <li>Select OK to close the Customize Control Bar Buttons Window.</li>
+
+        <li>If necessary, add the Control Bar that has been updated to the Main window by selecting <b class="menu_item">Window &gt;&gt; Control Bars &gt;&gt; Control Bar #</b>.</li>
+    </ol>
+</section>
+
+<hr><p>*Last modified Tuesday, 06th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudyChartAlertsAndScanning.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:33:46 GMT -->
+</html>  

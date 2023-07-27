@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_CustomChartBars.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105672') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ACSIL_CustomChartBars.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>ACSIL Interface - Custom Chart Bars -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index6c82.html?page=doc/ACSIL_CustomChartBars.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#AdvancedCustomStudySystemInterfaceandLanguage">(Table of Contents) Advanced Custom Study/System Interface and Language (ACSIL)</a> &gt;&gt; <a  href="index6788.html?page=doc/ACSIL_Members.html">ACSIL Interface Members - Introduction</a> &gt;&gt; <a  href="index6c82.html?page=doc/ACSIL_CustomChartBars.html">ACSIL Interface - Custom Chart Bars</a></h4> </div>     <h1 class="PageName">ACSIL Interface - Custom Chart Bars</h1>
+<section class="h2">
+    <h2>Related Documentation</h2>
+
+    <ul>
+        <li><a href="index6788.html?page=doc/ACSIL_Members.html">ACSIL Interface Members - Introduction</a></li>
+        <li><a href="index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html">ACSIL Interface Members - Variables and Arrays</a></li>
+        <li><a href="index0fb1.html?page=doc/ACSIL_Members_scInputs.html">ACSIL Interface Members - sc.Input Array</a></li>
+        <li><a href="index40e9.html?page=doc/ACSIL_Members_scSubgraph.html">ACSIL Interface Members - sc.Subgraph Array</a></li>
+        <li><a href="indexb9b8.html?page=doc/ACSIL_Members_Functions.html">ACSIL Interface Members - Functions</a></li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2>On This Page</h2>
+    <ul>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#ACSILInterfaceMembersForCustomChartBars">ACSIL Interface Members for Custom Chart Bars</a></li>
+        <li><a href="#InterfaceMembersForCustomBarFunction">s_CustomChartBarInterface Interface Members for Custom Bar Function</a></li>
+        <li><a href="#DetectingWhenChartNeedsToBeReloaded">Detecting when Chart Needs to be Reloaded</a></li>
+        <li><a href="#CompleteCodeExample">Complete Code Example</a></li>
+        
+        
+    </ul>
+</section>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p>It is supported to create custom chart bars using the <a href = "index513e.html?page=doc/AdvancedCustomStudyInterfaceAndLanguage.php">Advanced Custom Study Interface and Language</a>.   You will create a custom chart bars study. So it is a study which then creates custom chart bars. </p>  
+    
+    <p>These custom chart bars are implemented in the same way as the different <b>Bar Period Types</b>  for  Intraday charts in <b class="menu_item">Chart &gt;&gt; Chart Settings  &gt;&gt; Intraday Chart Bar Period</b> are implemented. </p>
+    
+    
+    <p>To programmatically determine  if custom chart bars are being used on a chart, use the function <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetBarPeriodParameters">sc.GetBarPeriodParameters</a>.  The  <b>s_BarPeriod::ACSILCustomChartStudyName</b> string variable  will contain the name of the custom chart bars. </p>
+    
+    <p> When a instance of the study is added to the chart the  <a href = "index9099.html?page=doc/ChartStudies.html#HideStudy">Hide Study</a>  setting is automatically enabled. It is not possible to disable this.  </p>
+
+
+</section>
+
+<section class="h2">
+    <h2  id="ACSILInterfaceMembersForCustomChartBars">ACSIL Interface Members for Custom Chart Bars</h2>
+    <div class="member-link">[<a href="#ACSILInterfaceMembersForCustomChartBars">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <section class="h3">
+        <h3 id="scUsesCustomChartBarFunction">sc.UsesCustomChartBarFunction</h3>
+        <div class="member-link">[<a href="#scUsesCustomChartBarFunction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>:  Read/write integer variable.</p>
+
+        <p><b>sc.UsesCustomChartBarFunction</b>  when set to 1  or a nonzero value, specifies that the study function is using a custom bar building function which will set the custom study to become a custom chart bar study.  When this is set to 0, the study function is a normal study that does not build custom chart bars.</p>
+
+
+        <p>For complete working example, refer to <a href="#CompleteCodeExample">Complete Code Example</a>.</p>
+
+        <section class="h4">
+            <h4>Example</h4>
+
+            <pre class="Code FullLineHeight">
+            if (sc.SetDefaults)
+            {   
+                sc.UsesCustomChartBarFunction = 1;
+               sc.fp_ACSCustomChartBarFunction = CustomChartBarBuildingFunction;
+            }
+           </pre>
+        </section>
+    </section>
+
+    <section class="h3">
+        <h3 id="scfp_ACSCustomChartBarFunction">sc.fp_ACSCustomChartBarFunction</h3>
+        <div class="member-link">[<a href="#scfp_ACSCustomChartBarFunction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p><b>Type</b>:  Read/write integer variable.</p>
+
+        <p><b>sc.fp_ACSCustomChartBarFunction</b> needs to be set to the custom study function which builds the custom  chart bars for the study. This function is called from  a separate thread.</p>
+
+        <p>For complete working example, refer to <a href="#CompleteCodeExample">Complete Code Example</a>.</p>
+
+        <section class="h4">
+            <h4>Example</h4>
+
+            <pre class="Code FullLineHeight">
+            if (sc.SetDefaults)
+            {   
+               sc.UsesCustomChartBarFunction = 1;
+               sc.fp_ACSCustomChartBarFunction = CustomChartBarBuildingFunction;
+            }
+           </pre>
+        </section>
+    </section>
+
+</section>
+
+<section class="h2">
+    <h2  id="InterfaceMembersForCustomBarFunction">s_CustomChartBarInterface Interface Members for Custom Bar Function</h2>
+    <div class="member-link">[<a href="#InterfaceMembersForCustomBarFunction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>All of the following are <em>Input</em>  members of the <b>ChartBarInterface</b>  structure of type <b>s_CustomChartBarInterface</b>, for use by the custom bar building function to access the underlying chart data for building chart bars.   </p>
+    
+    <p> The following is an example declaration of this function which  receives a reference to the ChartBarInterfacesstructure. </p>
+
+     <p><b>SCSFExport CustomRangeChartBarBuildingFunction(SCCustomChartBarInterfaceRef ChartBarInterface).</b>  </p>
+
+    <ul>
+        <li><b>ChartDataTypeEnum ChartDataType</b>: Indicates if this chart is based on historical Daily data or Intraday data. Possible values: <b>DAILY_DATA</b> = 1, <b>INTRADAY_DATA</b> = 2.</li>
+        
+        <li><b>unsigned char IsDeterminingIfShouldStartNewBar</b>: Set to 1 if the custom bar building function needs to indicate if should start a new chart bar. Otherwise, it is 0.</li>
+        
+        <li><b>unsigned char IsFinalProcessingAfterNewOrCurrentBar</b>: Set to 1 if the custom bar building function is being called after data has been added to a chart bar, whether it is a new chart bar or not. Otherwise, it is 0. </li>
+        
+        <li><b>unsigned char IsInsertFileRecordsProcessing</b>: 
+
+		   When the custom bar building function is called and this flag is true when there is a new intraday file record read and it has not yet been processed.  That new intraday file record is not provided, but this is an opportunity to perform a "split" operation on the most recent chart bar and break it up into smaller records by reducing its size and putting the excess into ChartBarInterface.NewRecordToInsert. 
+        <br><br>
+		  Set ChartBarInterface.InsertNewRecord to 1 if ChartBarInterface.NewRecordToInsert has been filled out with a new record. In this case, it will be processed normally which means that this function will be called first with ChartBarInterface.IsDeterminingIfShouldStartNewBar set to 1, and again with ChartBarInterface.IsFinalProcessingAfterNewOrCurrentBar set to 1.
+		<br><br>
+		When the normal processing is done, this function will be called again with ChartBarInterface.IsInsertFileRecordsProcessing set to 1. If there is no further processing to do, then just return without doing anything further.
+        <br><br>
+		 Generally the purpose of ChartBarInterface.IsInsertFileRecordsProcessing is to split bars which have been created from Intraday data records that are greater than 1 tick and also to perform splitting for Renko and Range bars when there are price gaps.
+        <br><br>
+		Splitting is a multi-iteration process. It is not done all at once. For example, if there is an existing chart bar with a range of 10, and it needs to be broken up into 9 additional bars with a range of 1 each, then the first step is to set its range to 1 and insert a new file record through <b>ChartBarInterface.NewRecordToInsert</b> with a range of 9. 
+        <br> <br>
+        When the standard  record processing is complete, this function is called again with  ChartBarInterface.IsInsertFileRecordsProcessing set to 1, and this process continues by putting the excess range, 8, back into ChartBarInterface.NewRecordToInsert until the process is complete. 
+		<br><br>
+		Internally Sierra Chart is going to divide up the volume among each chart bar evenly during the splitting process.
+
+        </li>
+        <li><b>s_IntradayRecord NewFileRecord</b>: This is the currently being processed Intraday data file record.</li>
+        
+        <li><b>uint32_t CurrentBarIndex</b>: The zero-based  array index of the current chart bar being built. </li>
+        
+        <li><b>uint32_t ValueFormat</b>:  The  <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scBaseGraphValueFormat">Price Display  Format</a> of the chart. </li>
+        <li><b>unsigned char IsNewFileRecord</b>:  A variable indicating whether <b>NewFileRecord</b>  is a new record during  the bar building process.  1 is true. 0 is false. </li>
+        <li><b>unsigned char BarHasBeenCutAtStartOfSession</b>:  A variable indicating whether the current chart bar has just been started because of the start of the trading session based on the Session Times of the chart.  1 is true. 0 is false.</li>
+        <li><b>unsigned char IsNewChartBar</b>:  A variable indicating whether the current chart bar is a newly started chart bar.  1 is true. 0 is false.</li>
+        <li><b>unsigned char IsFirstBarOfChart</b>: A variable indicating if the current bar is the first bar of the chart. 1 is true. 0 is false. </li>
+        <li><b>float TickSize</b>: The minimum price increment the chart is set to. </li>
+        
+        <li><b>float BidPrice</b>: The bid price associated with the most recent trade in the  <b>NewFileRecord</b> data structure.</li>
+       
+       <li><b>float AskPrice</b>: The ask price associated with the most recent trade in the  <b>NewFileRecord</b> data structure.</li>
+        
+        <li><b>c_VAPContainer VolumeAtPriceForBars</b>:  <b>VolumeAtPriceForBars</b>  is a pointer to a c_VAPContainer  object, which is a high-performance data container containing the volume at price data for the chart bar.  For further details, refer to <a href = "index49ba.html?page=doc/ACSIL_Members_Variables_And_Arrays.html#scVolumeAtPriceForBars">sc.VolumeAtPriceForBars</a>.  This has been added in version 1793.</li>
+
+    </ul>
+
+
+    <p>The following are the s_CustomChartBarInterface <em>Output</em> members, meaning they are set by the custom bar building function.</p>
+
+    <ul>
+        <li><b>unsigned char StartNewBarFlag</b>: Set to 1 to start a new chart bar. In this case  <b>NewFileRecord</b> becomes part of the new chart bar. A new bar will also be started  if  <a href = "index4cf4.html?page=doc/ChartSettings.html#NewBarSessionStart">Chart  &gt;&gt; Chart Settings  &gt;&gt; New Bar at Session Start</a> is enabled, and according to the conditions as defined for that option.</li>
+       
+       <li><b>unsigned char InsertNewRecord</b>: This variable is used with  <b>IsInsertFileRecordsProcessing</b>.</li>
+       
+       <li><b>s_IntradayRecord NewRecordToInsert</b>: This variable is used with  <b>IsInsertFileRecordsProcessing</b>.</li>
+    </ul>
+
+    <p>s_CustomChartBarInterface Functions</p>
+
+    <ul>
+        <li><b>float& GetChartBarValue(int SubgraphIndex, int BarIndex)</b>:   For accessing the bar values at each bar index. The returned value is a reference and is read/write.</li>
+        <li><b>const SCDateTime& GetChartBarDateTime(int BarIndex)</b>:  For accessing the Date-Time of the chart bar at the specified  bar index. The returned value is a constant reference. To modify this Date-Time you need to perform a const cast to remove the constant attribute.  We make no guarantee whether modifying the Date-Time would cause a problem or not.  At the time of this writing it is believed to not cause an issue.</li>
+        <li><b>SCInputRef& GetInput(int InputIndex)</b>:  This function is used to return a reference  to the study <a href = "index0fb1.html?page=doc/ACSIL_Members_scInputs.html">Input</a> at the specified InputIndex.</li> 
+        <li><b>int& GetPersistentInt(int Key)</b>:  Refer to <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">sc.GetPersistentInt</a>.</li>
+        <li><b>float& GetPersistentFloat(int Key)</b>: Refer to <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">sc.GetPersistentInt</a>.</li>
+        <li><b>double& GetPersistentDouble(int Key)</b>: Refer to <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">sc.GetPersistentInt</a>.</li>
+        <li><b>int64_t& GetPersistentInt64(int Key)</b>: Refer to <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">sc.GetPersistentInt</a>.</li>
+        <li><b>SCDateTime& GetPersistentSCDateTime(int Key)</b>: Refer to <a href = "indexb9b8.html?page=doc/ACSIL_Members_Functions.html#scGetPersistentInt">sc.GetPersistentInt</a>.</li>
+    </ul>
+
+    <p>Additional Input members</p>
+
+    <ul>
+        <li><b>float BidPrice</b>: The bid price associated with the last trade in NewFileRecord.</li>
+        <li><b>float AskPrice</b>: The ask price associated with the last trade in NewFileRecord.</li>
+    </ul>
+
+</section>
+
+<section class="h2">
+    <h2 id="DetectingWhenChartNeedsToBeReloaded">Detecting when Chart Needs to be Reloaded</h2>
+    <div class="member-link">[<a href="#DetectingWhenChartNeedsToBeReloaded">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p></p>
+</section>
+
+<section class="h2">
+    <h2 id="CompleteCodeExample">Complete Code Example</h2>
+    <div class="member-link">[<a href="#CompleteCodeExample">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following series of functions are a complete example for  building custom Range bars.  The   Range bar building is more simplified than the actual  Range  bar construction within Sierra Chart.</p>
+    
+    
+    <section class="h3">
+        <h3>Example</h3>
+
+        <pre class="Code FullLineHeight">
+        
+/*============================================================================
+Returns 1 for an up bar, and -1 for a down bar.  If the direction can not
+be determined within the past 10 bars, this function will return 1 (up)
+as the direction.
+----------------------------------------------------------------------------*/
+ int GetRangeBarDirection(SCCustomChartBarInterfaceRef ChartBarInterface, int BarIndex) 
+{
+	int LastIndex = BarIndex;
+	int NumIterations = 0;
+	while (NumIterations < 10)
+	{
+		float& BarOpen = ChartBarInterface.GetChartBarValue(SC_OPEN, LastIndex);
+		float& BarLast = ChartBarInterface.GetChartBarValue(SC_LAST, LastIndex);
+		
+		// If the close is below the open, then the bar is down.
+		if (BarLast < BarOpen)
+		{
+			// Down
+			return -1;
+		}
+
+		// If the close is above the open, then the bar is up.
+		if (BarLast > BarOpen)
+		{
+			// Up
+			return 1;
+		}
+
+		// If the close is the same as the open, then we need to look at the
+		// difference between the current close and the prior close.
+
+		if (LastIndex < 1)
+			break;
+
+		float&  PriorBarLast = ChartBarInterface.GetChartBarValue(SC_LAST, LastIndex - 1);
+
+		// If the current close is below the prior close, then the bar is
+		// down.
+		if ( BarLast < PriorBarLast)
+		{
+			// Down
+			return -1;
+		}
+
+		// If the current close is above the prior close, then the bar is up.
+		if ( BarLast > PriorBarLast )
+		{
+			// Up
+			return 1;
+		}
+
+		// If the current close is the same as the prior close, repeat the
+		// algorithm using the previous bar.
+		--LastIndex;
+		++NumIterations;
+	}
+
+	// Direction could not be determined, so always use up.
+	return 1;
+}
+/*============================================================================
+
+----------------------------------------------------------------------------*/
+SCSFExport CustomRangeChartBarBuildingFunction(SCCustomChartBarInterfaceRef ChartBarInterface)
+{
+	ChartBarInterface.StartNewBarFlag = 0;
+
+	SCInputRef RangeInput = ChartBarInterface.GetInput(0);
+	float NeededRangeAsFloat = RangeInput.GetInt() * ChartBarInterface.TickSize;
+
+	if (ChartBarInterface.IsDeterminingIfShouldStartNewBar)
+	{
+
+		if (ChartBarInterface.BarHasBeenCutAtStartOfSession)
+		{
+			// This will be true when 'Chart >> Chart Settings >> New Bar at Session Start' is enabled and that condition has been met.
+		}
+
+		int Direction = GetRangeBarDirection(ChartBarInterface, ChartBarInterface.CurrentBarIndex);
+
+
+		float BarHigh = ChartBarInterface.GetChartBarValue(SC_HIGH, ChartBarInterface.CurrentBarIndex);
+		float BarLow = ChartBarInterface.GetChartBarValue(SC_LOW, ChartBarInterface.CurrentBarIndex);
+		
+		if (Direction == 1)
+		{
+			BarHigh = max(BarHigh, ChartBarInterface.NewFileRecord.GetHigh());
+
+			float Range = BarHigh - BarLow;
+
+			if (Range > NeededRangeAsFloat)
+				ChartBarInterface.StartNewBarFlag = 1;
+		}
+		else if (Direction == -1)
+		{
+			BarLow = min(BarLow, ChartBarInterface.NewFileRecord.GetLow());
+
+			float Range = BarHigh - BarLow;
+
+			if (Range > NeededRangeAsFloat)
+				ChartBarInterface.StartNewBarFlag = 1;
+		}
+	}
+	else if (ChartBarInterface.IsFinalProcessingAfterNewOrCurrentBar)
+	{
+		if (ChartBarInterface.IsNewChartBar && ChartBarInterface.CurrentBarIndex > 0)
+		{
+			int Direction = GetRangeBarDirection(ChartBarInterface, ChartBarInterface.CurrentBarIndex - 1);
+
+			if (Direction == 1)
+			{
+				float& r_BarHigh = ChartBarInterface.GetChartBarValue(SC_HIGH, ChartBarInterface.CurrentBarIndex - 1);
+				float& r_BarLast = ChartBarInterface.GetChartBarValue(SC_LAST, ChartBarInterface.CurrentBarIndex - 1);
+
+				r_BarLast = r_BarHigh;
+
+			}
+			else if (Direction == -1)
+			{
+				float& r_BarLow = ChartBarInterface.GetChartBarValue(SC_LOW, ChartBarInterface.CurrentBarIndex - 1);
+				float& r_BarLast = ChartBarInterface.GetChartBarValue(SC_LAST, ChartBarInterface.CurrentBarIndex - 1);
+
+				r_BarLast = r_BarLow;
+			}
+		}
+	}
+	else if (ChartBarInterface.IsInsertFileRecordsProcessing)
+	{
+
+		// If the range of the last bar is greater than the range setting when
+		// there is a new record.
+
+		int Direction = GetRangeBarDirection(ChartBarInterface, ChartBarInterface.CurrentBarIndex);
+
+		float& r_BarHigh = ChartBarInterface.GetChartBarValue(SC_HIGH, ChartBarInterface.CurrentBarIndex);
+		float& r_BarLow = ChartBarInterface.GetChartBarValue(SC_LOW, ChartBarInterface.CurrentBarIndex);
+		float& r_BarOpen = ChartBarInterface.GetChartBarValue(SC_OPEN, ChartBarInterface.CurrentBarIndex);
+		float& r_BarLast = ChartBarInterface.GetChartBarValue(SC_LAST, ChartBarInterface.CurrentBarIndex);
+
+		float Range = r_BarHigh - r_BarLow;
+
+		if (Range <= NeededRangeAsFloat)
+		{
+			ChartBarInterface.InsertNewRecord = 0;
+			return;
+		}
+
+		// Create a new overflow record to take everything from the last bar that
+		// does not fit in the range setting, depending on the direction of the
+		// last bar.
+
+		ChartBarInterface.InsertNewRecord = 1;
+
+		if (Direction == 1)// Up
+		{
+			ChartBarInterface.NewRecordToInsert.High = r_BarHigh;
+			ChartBarInterface.NewRecordToInsert.Close = r_BarLast;
+
+			// Lower the high of the last bar so that the range of the last bar
+			// is equal to the range setting.
+
+			float NewHigh = r_BarLow + NeededRangeAsFloat;
+			r_BarHigh = NewHigh;
+
+			if (r_BarLast > r_BarHigh)
+			{
+				r_BarLast = r_BarHigh;
+			}
+
+			if (r_BarOpen > r_BarHigh)
+			{
+				r_BarOpen = r_BarHigh;
+			}
+
+			ChartBarInterface.NewRecordToInsert.Low = r_BarHigh;
+			ChartBarInterface.NewRecordToInsert.Open = r_BarHigh + ChartBarInterface.TickSize;
+
+			if (ChartBarInterface.NewRecordToInsert.Close < ChartBarInterface.NewRecordToInsert.Low)
+				ChartBarInterface.NewRecordToInsert.Close = ChartBarInterface.NewRecordToInsert.Low;
+		}
+		else// Down
+		{			
+
+			ChartBarInterface.NewRecordToInsert.Low = r_BarLow;
+			ChartBarInterface.NewRecordToInsert.Close = r_BarLast;
+
+			// Raise the low of the last bar so that the range of the last bar is
+			// equal to the range setting.
+
+			float NewLow = r_BarHigh - NeededRangeAsFloat;
+
+			r_BarLow = NewLow;
+
+
+			if (r_BarLast < r_BarLow)
+			{
+				r_BarLast = r_BarLow;
+			}
+
+			if (r_BarOpen < r_BarLow)
+			{
+				r_BarOpen = r_BarLow;
+			}
+
+			ChartBarInterface.NewRecordToInsert.High = r_BarLow;
+			ChartBarInterface.NewRecordToInsert.Open = r_BarLow - ChartBarInterface.TickSize;
+
+			if (ChartBarInterface.NewRecordToInsert.Close > ChartBarInterface.NewRecordToInsert.High)
+				ChartBarInterface.NewRecordToInsert.Close = ChartBarInterface.NewRecordToInsert.High;
+		}
+	}
+}
+
+/*============================================================================
+
+----------------------------------------------------------------------------*/
+SCSFExport scsf_CustomRangeChartBarsExample(SCStudyInterfaceRef sc)
+{
+	SCInputRef Input_RangePerBar = sc.Input[0];
+
+	if (sc.SetDefaults)
+	{
+		// Set the configuration and defaults
+		sc.GraphRegion = 0;
+		sc.GraphName = "Custom Range Chart Bars Example";
+		sc.UsesCustomChartBarFunction = 1;
+
+		// This function is called from another thread.
+		sc.fp_ACSCustomChartBarFunction = CustomRangeChartBarBuildingFunction;
+
+		sc.AutoLoop = 0;//Always use manual looping.
+
+		//sc.MaintainAdditionalChartDataArrays = 1;
+		//sc.AllocateAndNameRenkoChartBarArrays = 1;
+
+
+		Input_RangePerBar.Name = "Range Per Bar in Ticks";
+		Input_RangePerBar.SetInt(10);
+		Input_RangePerBar.SetIntLimits(1, INT_MAX);
+
+		return;
+	}
+
+
+	int& r_ChartDataReloadedFlag = sc.GetPersistentInt(CUSTOM_CHART_BAR_RELOAD_FLAG_KEY);
+
+	if (r_ChartDataReloadedFlag == 0)
+	{
+		sc.FlagToReloadChartData = true;
+		r_ChartDataReloadedFlag = 1;
+	}
+
+	// It is necessary for the study function which creates custom chart bars to detect changes with its own input settings and flag to reload data.
+
+	const int RangePerBar = Input_RangePerBar.GetInt();
+
+	int& r_PriorRangePerBar = sc.GetPersistentInt(1);
+
+	if (r_PriorRangePerBar != 0 && r_PriorRangePerBar != RangePerBar)
+		sc.FlagToReloadChartData = true;
+
+	r_PriorRangePerBar = RangePerBar;
+
+	// Set the graph name for this custom bar type.
+	if (sc.IsFullRecalculation)
+		sc.GraphName.Format("Custom Range Bar = %d", RangePerBar);
+}
+
+
+/*============================================================================
+This function can take a well commented description of the relevant variables of the ChartBarInterface structure and how to use them 
+----------------------------------------------------------------------------*/
+
+
+SCSFExport CustomChartBarBuildingFunction(SCCustomChartBarInterfaceRef ChartBarInterface)
+{
+    // This is the bar building function which is used along with
+    // scsf_CustomChartBarsExample to build custom chart bars. This
+    // function tells Sierra Chart when to start a new bar and allows
+    // the custom study to make any necessary bar modifications and
+    // insert its own file records. 
+	
+	// It is Sierra Chart itself, which will combine the Intraday
+	// data records into bars and set the Date-Time, Open, High, 
+	// Low, Last, Volume, Bid Volume, Ask Volume, and Volume at 
+	// Price data for the chart bars.
+
+	//This is set to 0 by Sierra Chart upon each entry into this 
+	// function, but just setting it here for clarity.
+    
+	ChartBarInterface.StartNewBarFlag = 0;
+
+	if (ChartBarInterface.IsDeterminingIfShouldStartNewBar)
+	{
+        // This flag is set to 1 and this function is called after 
+        // the initial processing of the intraday file record but
+        // before it is added to the most recent chart bar. Set
+        // ChartBarInterface.StartNewBarFlag to 1 to indicate to
+        // start a new bar or 0 to indicate not to start a new
+        // chart bar.
+
+        // Below is an example of how a volume-based chart bar is
+        // built. Once the volume is equal to or greater than the
+        // volume specified through the study Input, then a new
+        // chart bar is indicated to be started. After a new bar
+        // is added, then ChartBarInterface.NewFileRecord is
+        // added to that bar.
+
+		if (ChartBarInterface.BarHasBeenCutAtStartOfSession)
+		{
+            // This will be true when 'Chart >> Chart Settings
+            // >> New Bar at Session Start' is enabled and that
+            // condition has been met.
+		}
+
+		SCInputRef VolumeInput = ChartBarInterface.GetInput(0);
+		const uint64_t CurrentBarVolume = (uint64_t)ChartBarInterface.GetChartBarValue(SC_VOLUME, ChartBarInterface.CurrentBarIndex);
+
+		if (CurrentBarVolume >= VolumeInput.GetInt())
+		{
+			ChartBarInterface.StartNewBarFlag = 1;
+
+			return;
+		}
+
+	}
+	else if (ChartBarInterface.IsFinalProcessingAfterNewOrCurrentBar)
+	{
+        // This function is called and this flag is true after and
+        // Intraday file record is fully processed. This gives the
+        // custom study the ability to make any modifications to
+        // the most recent chart bar. Or theoretically any chart
+        // bar through the ChartBarInterface.GetChartBarValue()
+        // function.
+		
+		//This will be true when the first bar is added to the chart
+		if (ChartBarInterface.IsFirstBarOfChart)
+		{
+			//perform initialization.
+		}
+
+        // Example to set the last trade price of the bar to the high
+        // of the bar after the bar is finished building.
+
+		if (ChartBarInterface.IsNewChartBar)
+		{
+			if (ChartBarInterface.CurrentBarIndex >= 1)
+			{
+				ChartBarInterface.GetChartBarValue(SC_LAST, ChartBarInterface.CurrentBarIndex - 1) = ChartBarInterface.GetChartBarValue(SC_HIGH, ChartBarInterface.CurrentBarIndex - 1);
+			}
+		}
+
+		return;
+	}
+	else if (ChartBarInterface.IsInsertFileRecordsProcessing)
+	{
+		
+
+
+		
+		return;
+	}
+}
+
+       </pre>
+    </section>
+</section>
+
+
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ACSIL_CustomChartBars.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:51:49 GMT -->
+</html>  

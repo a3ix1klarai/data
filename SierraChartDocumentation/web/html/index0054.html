@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105651') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/helpdetails4.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Help topic 4: Prices / Data Falling Behind -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index0054.html?page=doc/helpdetails4.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#HelpFAQ">(Table of Contents) Help/Frequently Asked Questions</a> &gt;&gt; <a  href="index0054.html?page=doc/helpdetails4.html">Help topic 4: Prices / Data Falling Behind</a></h4> </div>     <h1 class="PageName">Prices / Data Falling Behind</h1>
+
+<p>This help topic explains various reasons for prices/data to fall behind or lag. And solutions for this issue. Sierra Chart displays all data from the server immediately  as it is received without delay.</p>
+
+<ul>
+    <li><a href="#DifferentServers">4.1 - Different Servers</a></li>
+    <li><a href="#ChartUpdateIntervalTooHigh">4.2 - Chart Update Interval Too High</a></li>
+    <li><a href="#DataProcessingNotKeepingUpWithDataFeed">4.3 - Data Processing Not Keeping up with Data Feed</a></li>
+    <li><a href="#DelayedData">4.4 - Delayed Data</a></li>
+    <li><a href="#ProblemWithDataServer">4.5 - Problem With Data Server</a></li>
+    <li><a href="#DeterminingTheSourceOfTheLag">4.6 - Determining the Source of the Lag</a></li>
+    <li><a href="#LimitedBandwidth_WirelessConnections">4.7 - Limited Bandwidth / Wireless Connections</a></li>
+    <li><a href="#DataTradingServiceSpecific">4.8 - Data/Trading Service Specific</a></li>
+    <li><a href="#ReducingNetworkBandwidthRequirementsForSierraChart">4.9 - Reducing Network Bandwidth Requirements for Sierra Chart</a></li>
+    <li><a href="#MarketNotActive">4.10 - Market Not Active</a></li>
+    <li><a href="#IncorrectDeterminationOfDataDelay">4.11 - Incorrect Determination of Data Delay</a></li>
+    <li><a href="#SierraChartExchangeDataFeeds">4.12 - Sierra Chart Exchange Data Feeds</a></li>
+    <li><a href="#DelayedDataCausesDelayWithOrderFillMarkers">4.13 - Delayed Data Causes Delay with Order Fill Markers</a></li>
+    <li><a href="#FirewallSoftwareCanCauseDelays">4.14 - Firewall Software Can Cause Delays</a></li>
+    <li><a href="#TradeAndCurrentQuoteSymbol">4.15 - Trade and Current Quote Symbol</a></li>
+    <li><a href="#MonitoringSierraChartDataFeedPerformanceFromPerspectiveOfServer">4.16 - Monitoring Sierra Chart Data Feed Performance from Perspective of Server</a></li>
+
+    <li><a href="#ProvidingHeartbeatMessagesToSierraChartSupport">4.17 - Providing Heartbeat Messages to Sierra Chart Support</a></li>
+    <li><a href="#TooManyChartsOpenInSingleInstance">4.18 - Too Many Charts Open in Single Instance</a></li>
+</ul>
+<hr>
+
+<section class="h2">
+    <h2 id="DifferentServers">4.1 - Different Servers</h2>
+    <div class="member-link">[<a href="#DifferentServers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you notice a difference between the data displayed in Sierra Chart compared to your Data or Trading service software or another service, then this may be because that software program is connected to a different server compared with the server Sierra Chart is connected to.</p>
+
+    <p> The reason for this is that the Data/Trading service may have many servers. The server you are connected to with the Data/Trading service software may be different than the server you are connected to with  Sierra Chart and this could be <em>one</em> of the reasons for any difference. </p>
+
+    <p>Prices could be ahead of what you see or behind. Try disconnecting  with <b class="menu_item">File &gt;&gt; Disconnect</b> and reconnecting to the data feed  with <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> to get a different server. </p>
+
+    <p>Reconnecting may not necessarily give you a different server, it all depends upon the Data/Trading service you are using. In many cases reconnecting will not help.</p>
+</section>
+
+<section class="h2">
+    <h2  id="ChartUpdateIntervalTooHigh">4.2 - Chart Update Interval Too High</h2>
+    <div class="member-link">[<a href="#ChartUpdateIntervalTooHigh">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The <b class = "menu_item">Global Settings &gt;&gt; General Settings &gt;&gt; Chart Update Interval</b> setting may be set too high.   For complete details about this setting, refer to  <a href="index899f.html?page=doc/GeneralSettings.html#ChartUpdateInterval" >Chart Update Interval</a>. </p>
+
+    <p> If you make the <b>Chart Update Interval</b> too low, like under 100 ms, then you can actually introduce a lag because you may overwhelm your CPU with processing. Sierra Chart does not recommend using a Chart Update Interval less than 100 milliseconds.</p>
+
+    <p>Each individual Chart/Trade DOM can override the global <b>Chart Update Interval</b>. The chart specific setting is in <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Display</b>.  Change the <b>Chart Update Interval in Milliseconds</b> setting to what you require or set it to 0 to use the global setting in the <b>General Settings</b> window.</p>
+    
+    <p> When you want to use a fast Chart Update Interval (a low value), it is best to set it directly on the individual Chart/Trade DOM  rather than globally. This is so you do not  create a high CPU condition within Sierra Chart. </p>
+
+    <p> Set the <b>Chart Update Interval</b> as you require  and it can be set individually for those particular charts that you want to have update at a faster interval.</p>
+    
+    <p> Additionally it is recommended to use sub instances of Sierra Chart to distribute processing load and to use for charts which have studies  which have a significant amount of processing time. This helps to increase the update frequency when using a lower Chart Update Interval,  in the main instance of Sierra Chart. For more information, refer to  <a href = "indexf915.html?page=doc/Trading.html#SierraChartConfigurationForMostLowResponseTimeTrading">Sierra Chart Configuration for Most Low Response Time Trading</a>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="DataProcessingNotKeepingUpWithDataFeed">4.3 - Data Processing Not Keeping up with Data Feed</h2>
+    <div class="member-link">[<a href="#DataProcessingNotKeepingUpWithDataFeed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If market data prices are falling behind or lagging, then this may be due to the fact that your computer is not processing  the market data received fast enough. There are various reasons for this.  </p> 
+
+    <p>There could be a problem caused by antivirus/anti-malware/anti-spyware software causing slow file processing which can impact the speed at which data is processed.  This may not necessarily cause high CPU usage. To quickly rule out your antivirus/anti-malware/anti-spyware software as being a problem,   completely disable it and restart your computer and see if the lagging issue is gone.  If you are running an up-to-date version of Sierra Chart,  >= 1053,  then Sierra Chart is much less affected by this kind of potential issue.</p>
+
+    <p>The next step is to determine the source of the lag by following the instructions in <a href="#DeterminingTheSourceOfTheLag">Determining the Source of the Lag</a>.</p>
+
+    <p>Due to how Sierra Chart processes incoming market data and the method by which the user interface is updated, slow data processing on your computer at best typically only will cause data lagging issues that are less than a second.  Although, antivirus/anti-malware/anti-spyware software could create longer lags. Generally this is uncommon though. Unless there is a large amount of data coming into Sierra Chart and the processing of that data is time-consuming.</p>
+
+    <p>For instructions to determine if the main thread of execution in Sierra Chart is using all of the available CPU time and this is contributing to the lag problem and how to solve this, refer to <a href="index4f96.html?page=doc/helpdetails30.html#DeterminingCPULoadfromSierraChart" >30.37 - Determining CPU Load from Sierra Chart</a>.
+
+    <p>If you do determine that prices are falling behind/lagging because your computer is not processing data fast enough and you have followed all of the suggestions in  <a href="index4f96.html?page=doc/helpdetails30.html" >help topic 30</a> and continue to notice a problem, then you may need a faster CPU or increase your computers memory.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DelayedData">4.4 - Delayed Data</h2>
+    <div class="member-link">[<a href="#DelayedData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you notice prices are behind the current time by 10, 20, or 30 minutes, this means you are receiving delayed data. </p>
+    
+    <p>Contact your Data service for assistance with receiving real time data.</p>
+    
+    <p> When using the  <a href = "indexbbf6.html?page=doc/DelayedExchangeDataFeed.php">Sierra Chart Delayed Exchange Data Feed</a>, the data will be delayed by 10 to 15 minutes. </p>
+    
+     <p> To determine the exact amount of the delay, set your computer clock precisely.   Refer to  <a href = "index3e87.html?page=doc/helpdetails38.html">help topic 38</a>  for instructions. </p>
+     
+      <p> Add the  <b>Data Delay (DD:)</b>   field to the  <a href = "index69b6.html?page=doc/WorkingWithCharts.html#RegionDataLine">Chart Header</a> Line.</p>
+      
+     <p>  While the market is open and active, look at the time after the Data Delay field. This will be the delay time.  The format is Hours:Minutes:Seconds.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ProblemWithDataServer">4.5 - Problem With Data Server</h2>
+    <div class="member-link">[<a href="#ProblemWithDataServer">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Prices may be lagging or falling behind because the data server is not providing you the latest prices.  This is not an issue with Sierra Chart.  It is an issue with the service you are using.  As as stated above, Sierra Chart displays all data immediately as it is received.  There is no delay whatsoever. </p>
+    
+    
+    <p>Although, we do explain some issues in the  the other subsections on this page which could create a lag other than a problem with the data server from the Data/Trading service you are using.</p>
+</section>
+
+<section class="h2">
+    <h2 id="DeterminingTheSourceOfTheLag">4.6 - Determining the Source of the Lag</h2>
+    <div class="member-link">[<a href="#DeterminingTheSourceOfTheLag">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If the file processing is slow on your system due to antivirus/anti-malware or related software or there are other high CPU load issues related to charts, then follow the instructions below to rule these out as problems.  If you still notice a lag similar to when you had charts open, then the issue is definitively with the data server (4.5), a connectivity or limited bandwidth problem (4.7).:</p>
+    <ol>
+
+        <li>Restart Sierra Chart. Do not open any charts or other windows. If there are charts or windows open, then close them. The Sierra Chart software should not be tracking any symbols at this time. To confirm this you will see <b>ST: 0</b> or <b>Not Connected</b> in the  Status Bar window below the main menu. Make sure the Status Bar is enabled through <b class="menu_item">Window &gt;&gt; Status Bar </b>.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+
+        <li>Connect to the data feed, by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; New Quote Board</b> on the menu.</li>
+
+        <li>On the Quote Board menu, select <b>Settings &gt;&gt; Set Symbols</b>. </li>
+
+        <li>In the  edit box beside the <b>Find</b> button on the <b> Symbol List </b> window, enter one of the main symbols you follow. Or press the <b>Find</b> button to select one.</li>
+
+        <li>Press the <b>Close </b> button.</li>
+
+
+        <li>You will see various fields of data for the symbol. Watch the <b> Last </b> price and possibly the  <b>Last Time</b> of the last trade, to still see if you notice the data lag.</li>
+
+        <li>If you do not notice a lag compared to when you had charts open, then this clearly indicates there is some inefficiency on your computer or with your Sierra Chart set up.  For solutions to this problem, refer to <a href="index4f96.html?page=doc/helpdetails30.html">help topic 30</a>  and most specifically be sure to follow  30.8  in addition to the other help topics.</li>
+
+        <li>If you continue to notice a data lag, then the issue will be explained in help topic 4.5 or 4.7 on this page.</li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="LimitedBandwidth_WirelessConnections">4.7 - Limited Bandwidth / Wireless Connections</h2>
+    <div class="member-link">[<a href="#LimitedBandwidth_WirelessConnections">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>A lag can also be caused by limited bandwidth between your computer and the Data/Trading service data server. </p>
+    
+    <p> Reduce the number of symbols being used in Sierra Chart to reduce the bandwidth. Refer to <a href = "index2d36.html?page=doc/ChartDataFiles.html#ReducingNumberOfSymbolsBeingTracked">Reducing Number of Symbols Being Tracked by Sierra Chart</a>.</p> 
+
+    <p>You can  see how many symbols Sierra Chart is tracking by looking at the number after <b>ST:</b> in the   <a href = "index2422.html?page=doc/StatusBar.html">Status Bar</a> on the <a href = "index6736.html?page=doc/ControlBar.php">Control Bar</a>.</p>
+    
+    <p> Wireless connections also can reduce the amount of available bandwidth and also increase  transmission latency from the server. It is recommended to always use a wired connection when possible. </p>
+</section>
+
+<section class="h2">
+    <h2 id="DataTradingServiceSpecific">4.8 - Data/Trading Service Specific</h2>
+    <div class="member-link">[<a href="#DataTradingServiceSpecific">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  In the case of when using the Interactive Brokers Trading service, if <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service Settings &gt;&gt; Record True Real-Time Data in Intraday Charts</b> is set to True, then chart bars themselves will update at most every 5 seconds.   </p>
+
+    <p>However, you will see the last trade price box on the right side Values Scale move more frequently. For more information, refer to <a href="index1f4a.html?page=doc/IB.php#TrueRealTimeData">True Real-Time Data</a> on the Interactive Brokers page.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ReducingNetworkBandwidthRequirementsForSierraChart">4.9 - Reducing Network Bandwidth Requirements for Sierra Chart</h2>
+    <div class="member-link">[<a href="#ReducingNetworkBandwidthRequirementsForSierraChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>To reduce the network bandwidth requirements for Sierra Chart do the following two things:</p>
+
+    <ul>
+        <li>Set the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Intraday Data Storage Time Unit</b> to <b>1 Minute</b>.</li>
+
+        <li>Enable Data feed compression.  Set  <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; Use Real-time Data Compression</b>  to  <b>Standard Compression</b>.  
+         <br> <br>
+        This setting only applies to Sierra Chart provided data feeds   (For example: Crypto currency data, Forex data, CFD data, Delayed Exchange Data Feed, Denali Exchange Data Feed, Sierra Chart Exchange Data Feed). It does not apply to external data feeds from other services.</li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2  id="MarketNotActive">4.10 - Market Not Active</h2>
+    <div class="member-link">[<a href="#MarketNotActive">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>One reason for an apparent delay with data for a particular symbol is that when you expect trading activity to occur, it is not actually occurring.</p>
+    
+    <p> It must be understood, that symbols do not continuously update.  They will only update when data is received from the data feed for the symbol. Updates will only occur when  a trade occurs or an update with bid/ask data.  </p>
+    
+     <p> In the case of a <em>micro</em> futures contract,   it will often have less trading activity than the  larger sized contract. </p>
+    
+    <p> It <em>cannot be expected</em> that there is trading activity occurring every single second or even multiple times a second.  Even in an active market, there can be several seconds between trades  at times. </p>
+
+    <p>For example, at the start of a new minute, you will not necessarily see a new 1 minute bar if the chart bars are set to 1 Minute per bar if there is not a trade at the very first second of the minute.</p> 
+
+    <p>If the first trade of the minute occurs 3 seconds into the minute, then a new bar will appear 3 seconds after the start of the new minute.  The bar in this case will be considered complete 57 seconds later.  The Start Time set for this bar will be at the zero seconds time assuming the  <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt;Session Times &gt;&gt; Start Time</b> for the chart has the seconds set to  <em>:00</em> like   <em>09:00:00</em>.</p>
+    
+    <p>One way to determine that the market was not active for a period of time when you are not seeing updating for a particular symbol,  is to open a  <a href = "indexc3ee.html?page=doc/TimeandSalesWindow.html">Time and Sales Window</a>  for the chart of that symbol.   If you see there is no updating of the chart for the symbol for about 10 seconds and when you look at the trades at that time,  you do not see any trades with a timestamp during that time, then there was no trading. </p>
+    
+   <p> The image below of a Time and Sales  window shows a pause of nearly 10 seconds where there were no trades  or best Bid/ Ask  updates. This is simply not unusual.  Markets do not continuously trade. </p>
+   
+   <p>If you are a new user, and you have been referred to this section, then understand, there is not any problem and you are seeing all of the market activity for the symbol.  </p>
+   
+   <div style="text-align: center;"><a href="../images/marketnotactive.png" rel="lightbox"><img src="../images/marketnotactive.png" class="screenshot" loading="lazy" width=""></a></div>
+     
+   <p> Another section related to what is described here, is <a href="#TradeAndCurrentQuoteSymbol">4.15 - Trade and Current Quote Symbol</a>. </p>
+</section>
+
+<section class="h2">
+    <h2 id="IncorrectDeterminationOfDataDelay">4.11 - Incorrect Determination of Data Delay</h2>
+    <div class="member-link">[<a href="#IncorrectDeterminationOfDataDelay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you are determining that data is delayed for a particular symbol by comparing the Time at the top line of the chart to the local system derived time on the title bar of Sierra Chart, then you may notice an apparent delay because your computer's clock is ahead of the actual time.</p>
+
+    <p>This is also true if you have the <a href="index296a.html?page=doc/StudiesReference.php&amp;ID=201#Countdown_Timer">Countdown Timer</a> study on the chart and the <b>Display Continuous Time Countdown Based on Real-Time Clock </b> Input is set to Yes, and you are comparing the chart bars to this countdown timer.</p>
+
+    <p> For example, if you notice that the countdown timer starts a new Minute and 1 Minute chart bars  consistently start later, this is an indication that your computer's clock is probably not set correctly.  Otherwise, the <a href="#h4.10">4.10 - Market Not Active</a> subsection applies.</p>
+
+    <p>To correct the computer's clock, refer to  <a href="index3e87.html?page=doc/helpdetails38.html" Target="_blank" rel="noopener noreferrer">help topic 38</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="SierraChartExchangeDataFeeds">4.12 - Sierra Chart Exchange Data Feeds</h2>
+    <div class="member-link">[<a href="#SierraChartExchangeDataFeeds">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>  When using the <a href = "index97ee.html?page=doc/SierraChartRealTimeFuturesStockDataFeed.php">Sierra Chart Exchange Data Feed</a> or the  <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>,  there are things that you can do to reduce the amount of bandwidth the data feed uses and also increase/decrease the transmission speed.</p>
+   
+   <p> The Sierra Chart  provided data feeds are very advanced  and provide configuration  capabilities not available with any other data feed. And there is also detailed performance monitoring information available.</p>
+    
+     <p> Select  <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings</b>. </p>
+     
+      <p> Set the  <b>Use Real-time Data Compression</b> setting to   <b>Standard Compression</b>. Or for higher compression use   <b>High Compression</b>.  When using  <b>High Compression</b> make sure you are running an up-to-date version of Sierra Chart. Using compression, reduces transmission delay.  Since there  is less data transmitted over the network.  The compression and decompression times are very tiny,  usually about 2-3 microseconds.  It is not recommended to  use <b>No Compression</b>.</p>
+      
+
+     <p>Set   <b>Remote Buffer Delay Send Time in Milliseconds</b> somewhere between 100 to 200. The higher the number the more efficient the data transfer. It results in a higher compression ratio and fewer packets and therefore fewer return acknowledgment packets and less chance for packet retransmission. </p>
+
+     <p>When packet retransmission occurs, this causes delays, and the data feed can temporarily or momentarily stop.  This will happen due to poor quality connectivity, between your computer and the server.  This poor connectivity can be anywhere along the entire path. This is not an issue on the server side.  </p>
+     
+     <p> This setting can be as low as 10-20 ms for the fastest updates. Using too low of a setting can also potentially cause a problem  with packet retransmission and therefore data delays and pauses.  It depends upon the quality of your Internet connection. </p>
+     
+     <p>It is perfectly fine  to set  <b>Remote Buffer Delay Send Time in Milliseconds</b> to a value of   500 milliseconds or   1000 milliseconds or even higher.  If you are fine with updates every second (which includes all of the trading and market depth activity within that timeframe), then use 1000 milliseconds.</p>
+     
+     
+     <p> Reduce the amount of Market Depth levels subscribed to through the  <b class="menu_item">Maximum Depth Levels </b> setting.   For complete details, refer to <a href = "index2c7f.html?page=doc/DataSourceSettings.php#MaxDepthLevels">Max Depth Levels</a>. </p>
+     
+      <p> Press OK  to close this settings window.</p>
+      
+     <p>  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" Target="_blank" rel="noopener noreferrer">Reconnect to the data feed</a>  after making changes. </p>   
+      
+      
+     <p>Even if you do not want to make these changes, do them temporarily to see if you notice an improvement. The purpose of these changes  is in part to help diagnose the source of the issue you are having related to data delays or stopping data. </p>
+     
+     <p>A tool  to better help understand connectivity problems is the detailed heartbeat logging which is available.  Refer to <a href="#MonitoringSierraChartDataFeedPerformanceFromPerspectiveOfServer">4.16 - Monitoring Sierra Chart Data Feed Performance from Perspective of Server</a> this page. </p>
+    
+   
+</section>
+
+
+<section class="h2">
+    <h2 id="DelayedDataCausesDelayWithOrderFillMarkers">4.13 - Delayed Data Causes Delay with Order Fill Markers</h2>
+    <div class="member-link">[<a href="#DelayedDataCausesDelayWithOrderFillMarkers">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p>When using the feature to <a href = "index3c50.html?page=doc/ChartTrading.html#DisplayingOrderFills" >Display Order Fills on the Chart</a>,  if market data is delayed, not intentionally delayed, but due to a lag for the different reasons explained on this page, then until there are chart bars in the chart which contain the time of the order fill, an order fill marker is not going to display on the chart, even if the actual fill execution report is received before the market data.  When the market data is received which creates the chart bar which contains the time of the fill, then at that time the order fill will appear assuming the order fill execution report has already been received.</p>
+    
+     <p>  So therefore a data lag causing a delay with the display of the chart bars containing the time of the order fill, can cause a delay with the display of the order fill. </p>
+    
+    <p>However, there is another potential problem. Even if there is already a chart bar displayed which contains    the time of the order fill, if the fill execution report is delayed because  of lagging market data, then the order fill is not going to be displayed until that  execution report  is received. This will be the case with services  which use the same  connection for market data and trading. When using CQG, this is the case. </p>
+       
+    <p> The solution to the above problem is to use a service that does not use the same connection for market data and trading.  The  <a href = "index6880.html?page=doc/SierraChartOrderRoutingServiceWithData.php">Sierra Chart Order Routing Service</a> uses a separate connection for market data and trading. </p>
+</section>
+    
+    
+<section class="h2">
+    <h2 id="FirewallSoftwareCanCauseDelays">4.14 - Firewall Software Can Cause Delays</h2>
+    <div class="member-link">[<a href="#FirewallSoftwareCanCauseDelays">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p>When using firewall software other than the Windows Firewall  which block network connections or examine network data, these programs have been known to to sometimes cause delays with received data and certainly connection problems.   If you are noticing data is delayed or lagging  or historical data is downloading slowly, other than a standard exchange  required delay,  try disabling your firewall software and restarting your computer.</p>   
+
+
+
+</section>  
+  
+<section class="h2">
+    <h2 id="TradeAndCurrentQuoteSymbol">4.15 - Trade and Current Quote Symbol</h2>
+    <div class="member-link">[<a href="#TradeAndCurrentQuoteSymbol">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+     <p>When you have set a  <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol">Trade and Current Quote Symbol</a> on the  Chart or Trading DOM    and <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b> <b> &gt;&gt; Use As Trade Only Symbol</b> is not enabled, then the last trade price and the current  Bid and Ask prices are only going to be updating according to this symbol and not the main symbol of the chart.</p> 
+
+    <p> The market depth data and other market data columns for the Chart/Trade DOM will also be based upon the   <b>Trade and Current Quote Symbol</b> when  <b>Use As Trade Only Symbol</b>  is   set to  No. </p>    
+    
+     <p>This is another reason why you can notice what seems to be a data "lag"  if the  <b>Trade and Current Quote  Symbol</b> is a lesser  traded symbol than the  main symbol of the chart. </p>
+     <p> The solution to the problem  is to set <b class="menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b> <b> &gt;&gt; Use As Trade Only Symbol</b> to Yes.</p>
+</section>  
+
+<section class="h2">
+    <h2 id="MonitoringSierraChartDataFeedPerformanceFromPerspectiveOfServer">4.16 - Monitoring Sierra Chart Data Feed Performance from Perspective of Server</h2>
+    <div class="member-link">[<a href="#MonitoringSierraChartDataFeedPerformanceFromPerspectiveOfServer">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+      <p> When there are problems with the data feed lagging, or if the data feed stops, it helps to see  performance and communication related data from the server related to the connection. This is supported with Sierra Chart provided data feeds.  </p>
+      
+      <p>Overall the feedback of the Sierra Chart provided data feeds including the Denali Exchange Data Feed is very good and these data feeds do solve problems that users encounter with other services.</p>
+
+
+    <p>However, since the public Internet is involved, there can be lagging data and other issues. All data feeds are affected by this. The Sierra Chart data feeds are not immune from this. They simply cannot be.</p>
+
+     <p>Data feed lagging or stopping issues are due to the quality of connectivity between the server and Sierra Chart on the users computer, and the available bandwidth. </p>
+
+     <p>We have developed a method for you to monitor the performance of the data feed from the perspective of the server.</p>
+
+  <p>You need to be running  an up-to-date version of Sierra Chart which supports this logging. </p>
+
+  <p>To enable this logging,  you need to set <b class="menu_item">Global Settings  &gt;&gt;  Sierra Chart Server Settings  &gt;&gt; Detailed Heartbeat Logging</b> to Yes.  </p>
+  
+    <p>Here is an example of the log lines added to the  <b class="menu_item">Window &gt;&gt; Message Log</b>:
+     <br> <br>
+    <div class="MessageLog">SC Data - All Services | Heartbeat from server | ServerReceivedClientHeartbeatSecondsAgo=7, NumberOfOutstandingSendBuffers=1, TransmissionDelayInMilliseconds=15, ServerSendBufferSizeInBytes=50, ActualMessageDelay=0.8 seconds | (Date-Time)</div> </p>
+
+     <p>Description of available fields:</p>
+ <ul>
+    <li> <b>ServerReceivedClientHeartbeatSecondsAgo</b>: you do not want this number to exceed 20. If it exceeds 22, it indicates a degraded connection quality going from the client back to the server which is going to cause data lags or stopping data with a high probability.</li>
+
+    <li> <b>NumberOfOutstandingSendBuffers</b>: This number should be low and should not exceed 5. This also indicates a degraded connection quality if it is a high number. When the market is very active, the number can go up but it should stay under 10 (Although in our experience this is even high). If this is high, that means the network connectivity between your server and the computer is not able to handle the data rates or is degraded in some way. Try  <a href = "index0054.html?page=doc/helpdetails4.html#SierraChartExchangeDataFeeds">reducing bandwidth</a>  if this is the case.
+     <br> <br>
+    If the number is over 10, it generally will indicate the TCP acknowledgment packets are not getting through to our server. This can be the result of degraded Internet connectivity between your computer and the server. This would be outbound connectivity from your computer.  What happens in this case is that at the operating system level on our server, the TCP protocol will stop the data flow. This is normal TCP behavior. 
+    </li>
+
+    <li> <b>TransmissionDelayInMilliseconds</b>: This indicates the amount of time to allow data to be buffered up into a larger packet before being sent. This is necessary to maintain connection efficiency and overall performance.</li>
+
+    <li> <b>ServerSendBufferSizeInBytes</b>: This indicates how much data is being held on the server still pending to be sent to the user. If this starts exceeding 100 K you likely are receiving lagging data.</li>
+
+    <li> <b>ActualMessageDelay</b>: First, this number is likely inaccurate. It is imprecise and can be off by several seconds. It requires a very accurate clock on the server, which is not assured and a very accurate clock on the client side which is not assured and they both have to be in sync with each other which is next to impossible. So at best it is just an "interesting" number which may be simply wrong. However, and general you want to see this less than 1.</li>
+
+
+    <li> <b>DataCompRatio</b>: The compression ratio when data compression is being used.</li>
+	<li> <b> UncompressedBytes</b>: The number of bytes transmitted during the connection before compression.</li>
+    
+	<li> <b>CompressionTime</b>:  The total  compression time of  <em>all</em> compressions during the connection.  You can determine the number of compressions with the <b>NumCompressions</b> field.  This is in seconds. .000001  represents one microsecond. So the average compression time can be determined as: <b>CompressionTime</b> / <b>NumCompressions</b>. </li>
+			
+    <li> <b>NumCompressions</b>: The number of compressions during the connection. </li>
+</ul>	
+
+
+</section>
+
+<section class="h2">
+    <h2 id="ProvidingHeartbeatMessagesToSierraChartSupport">4.17 - Providing Heartbeat Messages to Sierra Chart Support</h2>
+    <div class="member-link">[<a href="#ProvidingHeartbeatMessagesToSierraChartSupport">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+      <p> If Sierra Chart Support requests the heartbeat messages from you, then follow the instructions below.</p>
+
+
+
+<ul>
+    <li> Set   <b class="menu_item">Global Settings &gt;&gt; Sierra Chart Server Settings &gt;&gt; Detailed Heartbeat Logging</b>  to  <b>Yes</b> and then press <b>OK</b>. </li>
+
+     <li> At the time there is some connectivity issue requiring sending of the heartbeat messages, then at that time open  <b class="menu_item">Window &gt;&gt; Message Log</b>. </li>
+     
+     <li>Scroll all the way to the bottom of the Message Log and provide the last  50 lines or so of the Message Log by selecting the first of the 50 lines and then hold the <b>Shift</b> key  and then scroll to the last line and select it and release the  <b>Shift</b> key.   
+     </li>
+
+    <li>On the <b class="menu_item">Edit</b> menu of the Message Log, select <b class="menu_item">Copy Selection</b>.</li>
+     <li>In the message box area for the message to send the Sierra Chart support, right click and select  <b>Paste</b>.</li>
+</ul>	
+
+</section>
+
+
+<section class="h2">
+    <h2 id="TooManyChartsOpenInSingleInstance">4.18 - Too Many Charts Open in Single Instance</h2>
+    <div class="member-link">[<a href="#TooManyChartsOpenInSingleInstance">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+      <p> The more charts that are open in a single instance of Sierra Chart, the slower the chart updates  within an individual chart will be. </p>
+      
+      <p> It does make a difference, if a chart is visible. If it is visible, it takes more processing time, related to chart drawing, and slows down the updates of other charts and itself. Therefore, you can keep a chart open and keep it in a Chartbook which is not the active Chartbook or you can minimize the chart window. Or you can hide it through   <b class="menu_item">Window &gt;&gt; Hide Window</b>. </p>
+      
+       <p>You can also distribute processing  load of your charts,  among different instances of Sierra Chart as a solution to this issue.  Refer to <a href = "index9bbd.html?page=doc/NewInstance.php">New Instance</a>. </p>
+
+
+
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/helpdetails4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:11 GMT -->
+</html>  

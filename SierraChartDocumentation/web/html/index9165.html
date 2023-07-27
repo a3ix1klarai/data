@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/BitMEX_Trading.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105669') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/BitMEX_Trading.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>BitMEX Trading Service -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index9165.html?page=doc/BitMEX_Trading.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="index9165.html?page=doc/BitMEX_Trading.php">BitMEX Trading Service</a></h4> </div>     <h1 class="PageName">BitMEX Trading Service</h1>
+
+<div style="text-align: center;">
+    <img border="0" src="../images/bitmex.png" alt="BitMEX">
+</div>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <!-- li><a href="#Included">What is Included</a></li>
+    <li><a href="#SetupInstructions">Setup Instructions</a></li>
+    <li><a href="#DifferenceBetweenBitMEXTestnetDataAndLiveTradingData">Difference  Between BitMEX Testnet Data and Live  Trading Data</a></li>
+    <li><a href="#SettingOrderExecutionInstructions">Setting Order Execution Instructions</a></li>
+    <li><a href="#UsingMultipleBitMEXAccounts" >Using Multiple BitMEX Accounts</a></li>
+    <li><a href="#BitmexConnectionProblems" >Bitmex Connection Problems</a></li>
+    <li><a href="#SettingBitmexLeverage" >Setting BitMEX Leverage</a></li>
+    <li><a href="#HistoricalDailyData" >Historical Daily Data</a></li>
+    <li><a href="http://status.bitmex.com/"  target="_blank" rel="noopener noreferrer">BitMex  System Status</a> (Not status of Sierra Chart systems)</li -->
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>Sierra Chart still maintains integration for BitMex for trading in current versions of Sierra Chart. At some point this may be removed. There is no technical support provided. And there is no documentation provided any longer. The BitMex trading integration should not be used by new users. </p>
+    
+    <p> Sierra Chart supports  market data  for crypto currencies from various exchanges. Refer to <a href="index8ba3.html?page=doc/CryptocurrencyDataServices.php">Cryptocurrency Data Services</a>.   </p>
+     
+    <p>  There are no plans for trading support on crypto currency  exchanges. They do not meet our technical requirements and we have no interest in providing technical support for them.  Sierra Chart has its plan to develop our own exchange. Additionally we are looking to support decentralized trading.</p>
+
+    <!-- p>Sierra Chart fully  supports trading and market data from the BitMEX exchange.</p>
+
+    <p>BitMEX is a trading platform that gives retail investors access to the global financial markets using Bitcoin, the Blockchain, and financial derivatives. Ultimately BitMEX uses digital currencies as a common form of collateral to allow anyone, anywhere, to trade anything. Currently clients can trade Bitcoin and other digital currency based derivatives with up to 100x leverage. To date, over US$2.0 billion worth of digital currency financial products have been traded on the BitMEX platform. </p>
+
+    <p>  You are now able to trade on BitMEX using the powerful Sierra Chart trading platform. </p>
+
+    <p>Historical Daily, historical Intraday, market depth and streaming real-time data is  provided.</p>
+    
+     <p> The interface Sierra Chart provides to BitMex is <em>not considered</em> a beta.  It is stable and fully supported. </p -->
+</section>
+
+<!-- section class="h2">
+    <h2 id="Included">What is Included</h2>
+    <div class="member-link">[<a href="#Included">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>Streaming Real-Time Data: <b>Yes.</b></li>
+        <li>Market Depth Data: <b>Yes.</b></li>
+        <li>Historical Intraday Data: <b>Yes.</b>  Detailed tick by tick with Bid Volume and Ask Volume.</li>
+        <li>Historical Daily Data: <b>Yes.</b></li>
+        <li>Historical BidVolume and AskVolume: <b>Yes.</b> </li>
+        <li>Live Trading: <b>Yes.</b></li>
+        <li>Simulated Trading: <b>Yes.</b></li>
+        <li>Order Types Supported: <b>All order types supported</b>.</li>
+        <li>Server Managed OCO (Order Cancels Order): <b>No. </b>  </li>
+        <li>Server Managed Bracket Orders: <b>No. </b> </li>
+        <li>Automated Trading (applies to Live or Simulated): <b>Yes.</b> </li>
+    </ul>
+</section>
+
+<section class="h2">
+    <h2 id="SetupInstructions">Setup Instructions</h2>
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li>Update Sierra Chart to the current version. Refer to the <a href="/index.php?page=doc/SoftwareDownload.php#FastUpdate" Target="_blank" rel="noopener noreferrer">Fast Update</a> instructions.   You will need to be on version 1781 or higher. <em>This is essential.</em></li>
+
+        <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.
+        
+        <div style="text-align: center;"><a href="/images/BitMexTradingServiceSettings.png " rel="lightbox"><img src="/images/BitMexTradingServiceSettings.png " alt="BitMex Trading Service Settings" width="700" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>Set the <b>Service</b> to <b>BitMEX Trading Direct</b>.</li>
+
+        <li> Set   <b>Service Setting &gt;&gt; Server </b> to   <b>Live</b> or  <b>Testnet</b> depending upon whether you want to use your  Live or Testnet BitMEX account. </li>
+
+        <li> Obtain an API  Key and Secret for your BitMEX account.  For instructions to do this  for your Live account, go to the <A href="https://www.bitmex.com/app/dtcIntegration"  Target="_blank" rel="noopener noreferrer"> DTC Integration</a>  page on the BitMEX website.
+            <br> <br>
+            For instructions to do this  for your  Testnet account, go to the <A href="https://testnet.bitmex.com/app/dtcIntegration"  Target="_blank" rel="noopener noreferrer"> DTC Integration</a>  page on the BitMEX  Testnet website.</li>
+
+        <li>  Enter your API key and API Secret you have obtained  from the BitMEX website into the corresponding  <b>Service Settings</b>   fields within Sierra Chart. </li>
+
+
+        <li> You will have a different API key and secret for your Live account as compared to Testnet. So you do not have to keep reentering these when you change between Live or Testnet, use the ability to  <a href="/index.php?page=doc/DataSourceSettings.php#SavingLoadingSettings " target="_blank" rel="noopener noreferrer">save and load Service Settings</a>  configurations. </li>
+
+        <li>Press <b>OK</b> to close the <b>Data/Trade Service Settings</b> window.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+
+        <li>If there any connection problems, they will be displayed in <b class="menu_item">Window &gt;&gt;  Message Log</b>. In this case, refer to <a href="/index.php?page=doc/helpdetails1.html#NetworkCommunicationOrServerProblem">Help Topic 1.2</a>.</li>
+
+        <li>To open a chart select <b class="menu_item">File &gt;&gt; Find Symbol</b> from the main menu. In the list, select <b>BitMEX &gt;&gt; Get BitMEX Symbols </b> to access the Live data and trading symbols. Or, select <b>BitMEX  Testnet &gt;&gt; Get BitMEX Symbols </b> to access the  Testnet data and trading symbols. </li>
+
+        <li> Press the <b>Get Symbols</b> button.  The available symbols will then be automatically listed.</li>
+
+
+        <li> Select one of the symbols from the list and press the appropriate button to open a chart or Trading DOM. </li>
+
+
+        <li> This connection to BitMEX supports both the market data from the Live server and the Testnet server no matter how the Server is set above.    Whether  Live or Testnet market data is used  depends upon the exchange suffix at the end of the symbol.   Testnet symbols end with a  <b><em>T</em></b>. </li>
+
+
+        <li> You can use either BitMEX Live and/or Testnet symbols. However, when trading if you are using the Live  Server, you can only trade from a chart that uses the BitMEX Live symbols. If  you are using the BitMEX Testnet Server, you can only trade from a chart that uses the BitMEX Testnet symbols. Otherwise, an error will occur on order submission.  </li>
+
+        <li>Continue with <a href="/index.php?page=doc/GettingStarted.php#OpenChart"  target="_blank" rel="noopener noreferrer">Step 3</a> in the Getting Started instructions.</li>
+
+        <li> For trading instructions, refer to <a href="/index.php?page=doc/Trading.html" Target="_blank" rel="noopener noreferrer">Overview of Trading</a>. </li>
+
+        <li> For non-simulated trading where the orders are routed to BitMEX, make sure that <b class = "menu_item">Trade &gt;&gt;  Trade Simulation Mode On</b> is disabled. </li>
+
+        <li>  Make sure your computer's Date-Time is set correctly.  Refer to <a href="/index.php?page=doc/helpdetails38.html#SettingComputerSystemDateTimeAndTimeZone"  Target="_blank" Rel="noopener Noreferrer">Setting Computer System Date-Time and Time Zone</a>. If it is not set correctly, you could encounter this error with orders:   <em>New order rejected - BitMEX Trading Direct error: This request has expired - `expires` is in the past. Current time:  #.  Internal Order ID: #.  Service Order ID: #. Symbol: XBTUSD-BMEX</em>. </li>
+
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="DifferenceBetweenBitMEXTestnetDataAndLiveTradingData">Difference Between BitMEX Testnet Data and Live Trading Data</h2>
+    <div class="member-link">[<a href="#DifferenceBetweenBitMEXTestnetDataAndLiveTradingData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>With the BitMEX exchange, there is a significant difference between BitMEX  Testnet  data and Live data. The Testnet data has dramatically less trading and is more sparse compared to the   BitMEX Live trading data.</p>
+
+    <p> Below are two charts.   Both of these charts are for the symbol  <em>XBTUSD-</em>.  The first one is using Live trading data. And the second one uses Testnet   data.  Notice how the Testnet symbol ends with an extra  <b><em>T</em></b>.</p>
+
+
+    <div style="text-align: center;"><a href="/images/XBTUSD-BMEX_Live.png" rel="lightbox"><img src="/images/XBTUSD-BMEX_Live.png" width="700" alt="" class="screenshot" loading="lazy"></a></div>
+
+    <div style="text-align: center;"><a href="/images/XBTUSD-BMEX_TestNet.png" rel="lightbox"><img src="/images/XBTUSD-BMEX_TestNet.png" width="700" alt="" class="screenshot" loading="lazy"></a></div>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="SettingOrderExecutionInstructions">Setting Order Execution Instructions</h2>
+    <div class="member-link">[<a href="#SettingOrderExecutionInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are various order execution instructions which can be globally set to use with orders sent to BitMEX. Make sure you are running  Sierra Chart version 1711 or higher for these settings. Refer to <a href="/index.php?page=doc/SoftwareDownload.php#FastUpdate" target="_blank" rel="noopener noreferrer">Fast Update</a> for instructions to update. </p>
+
+    <p> To set these, select  <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.  In the list of Service Settings on the left you can set any of the following settings as required:</p>
+
+    <ul>
+        <li><b>Specify 'ParticipateDoNotInitiate' for Limit and Stop-Limit Orders</b>:  Refer to BitMEX API documentation for further information about this particular execution instruction. This applies only to Limit and Stop-Limit orders.</li>
+
+        <li><b>Additional 'execInst' for Limit Orders (comma separated)</b>: Text field to specify BitMEX execution instructions.  This applies to Limit orders only. Separate the execution instructions with a , (comma) if there is more than one. Refer to BitMEX API documentation for specific instructions.</li>
+
+        <li><b>Additional 'execInst' for Stop Orders (comma separated)</b>: Text field to specify BitMEX execution instructions. This applies to Stop orders only.  Separate the execution instructions with a , (comma) if there is more than one. Refer to BitMEX API documentation for specific instructions.</li>
+
+        <li><b>Stop Order Price Reference</b>: This can be set to one of the following: <b>LastPrice, MarkPrice, IndexPrice</b>. We recommend using LastPrice (the default).</li>
+        
+        <li><b>Specify ReduceOnly for Limit Attached Orders</b>: Refer to BitMEX API documentation for further information about this particular execution instruction. This applies only to Limit Attached Orders.</li>
+                
+        <li><b>Specify ReduceOnly for Stop Attached Orders</b>: Refer to BitMEX API documentation for further information about this particular execution instruction. This applies only to Stop type Attached Orders.</li>
+                
+    </ul> 
+
+    <p> Press OK when done changing the settings. These settings go into effect immediately for any new orders. They will not affect existing orders. </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="UsingMultipleBitMEXAccounts">Using Multiple BitMEX Accounts</h2>
+    <div class="member-link">[<a href="#UsingMultipleBitMEXAccounts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> The method by which you can use multiple BitMex trading accounts is to install multiple Sierra Chart instances.  Use one for each separate trading account.  For the documentation, refer to <a href = "/index.php?page=doc/MultipleServices.html">Multiple Services</a>.</p>
+
+
+</section>
+
+<section class="h2">
+    <h2 id="BitmexConnectionProblems">Bitmex Connection Problems</h2>
+    <div class="member-link">[<a href="#BitmexConnectionProblems">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There can be different reasons why you may have trouble connecting  to the BitMex system from Sierra Chart. One common reason is that the BitMex system is not allowing the connection due to too many previous connection attempts  which were unsuccessful for whatever reason.  </p>
+    
+    <p>In this case you need to wait a period of time and then try connecting again. How long that period of time is, we do not know.</p>
+    
+    <p>  To prevent Sierra Chart from connecting to BitMex, select <b class="menu_item">File &gt;&gt; Disconnect</b>. </p>
+    
+     <p>If you have trouble connecting to BitMex, you may need to create a new API key and secret. Therefore, go through the <a href="#SetupInstructions">Setup Instructions</a> again and be sure to generate a new key.  </p>
+     
+     <p>After creating a new API key  and secret, it is also essential that you  <em>delete the old keys</em> which are not used any longer. This is an essential step in order to solve the connection problem.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="SettingBitmexLeverage">Setting BitMEX Leverage</h2>
+    <div class="member-link">[<a href="#SettingBitmexLeverage">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Effective with Sierra Chart version  <em>1839</em> and higher, it is possible  to control the leverage for a symbol being traded on BitMex from within Sierra Chart.  </p>
+    
+    <p> The way that BitMex supports doing this is that the leverage has to be controlled  for an existing  Position for the symbol. There is no other way to do this.</p>
+    
+    <p>   The setting to control this is in   <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. It is   <b>Service Setting &gt;&gt;  Leverage</b>.</p>
+    
+     <p>When this is set to a nonzero value, then the leverage is set to the specified setting, for each and every Symbol there is a current Position for.  From the Sierra Chart perspective this is the only reasonable way that this can be implemented. If this is not what you require, then  <em>do not use this setting as it can have unintended consequences!</em> </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="HistoricalDailyData">Historical Daily Data</h2>
+    <div class="member-link">[<a href="#HistoricalDailyData">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>   Historical Daily data which is used for historical charts opened with  <b class="menu_item">File &gt;&gt; Find Symbol &gt;&gt; Open  Historical Chart</b>, are built from the trading data that goes from 00:00:00 UTC to 23:59:59.999 UTC.</p> 
+</section  -->
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/BitMEX_Trading.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:07 GMT -->
+</html>  

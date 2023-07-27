@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TextCSVDataFormat.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1677105674') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/TextCSVDataFormat.html',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Text/CSV Data Format -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="indexbbda.html?page=doc/TextCSVDataFormat.html" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#ManagingData">(Table of Contents) Managing Symbol Data</a> &gt;&gt; <a  href="indexbbda.html?page=doc/TextCSVDataFormat.html">Text/CSV Data Format</a></h4> </div>     <h1 class="PageName">Text/CSV Data Format</h1>
+
+<ul>
+    <li><a href="#General">General</a></li>
+    <li><a href="#Creating">Manually Creating a Data File</a></li>
+    <li><a href="#Formats">Supported Data Line Formats</a>
+        <ul>
+            <li><a href="#DateFormat">Date Format</a></li>
+            <li><a href="#TimeFormat">Time Format</a></li>
+            <li><a href="#UNIXDateTimeFormat">UNIX Date Time Format</a></li>
+            <li><a href="#ExampleDaily">Example for Daily Data</a></li>
+            <li><a href="#ExampleIntraday">Example for Intraday Data</a></li>
+        </ul>
+    </li>
+    <li><a href="#Notes">Notes</a></li>
+    <li><a href="#BidVolumeAndAskVolume">Bid Volume and Ask Volume</a></li>
+    
+    <li><a href="#UsingYourOwnDataAndNotConnectingToExternalDataService">Using Your Own Data and Not Connecting to External Data Service</a></li>
+    
+</ul>
+<hr>
+
+<section class="h2">
+    <h2 id="General">General</h2>
+    <div class="member-link">[<a href="#General">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart can read data in a Text/CSV format.  This data can be Daily or Intraday data. The Text/CSV format is a plain text readable file format that can be viewed, edited, or created with any text editor or Spreadsheet program.</p>
+
+    <p>This is the most widely used format for market price data. Each symbol has its own file.  Sierra Chart Daily data for Historical charts is stored in a Text/CSV format.  </p>
+    
+    <p>For Intraday data, Sierra Chart has its own non-text format.  However, it is also possible to open Text/CSV Intraday data files directly.</p>
+
+    <p>All chart data files that you want to open in Sierra Chart, must be located in the  <b>Data Files Folder</b> specified in <b class="menu_item">Global Settings &gt;&gt; General Settings</b>.</p>
+
+    <p>A Text/CSV data file contains lines of data for a symbol. The various supported formats for the data lines in the file are specified in the <a href="#Formats">Supported Data Line Formats</a> section. The order of the data must be from earliest to latest. A data line can be data for one day, one minute or a single tick.</p>
+
+    <p>Each field of data on a data line needs to have a delimiter between them. This can be a comma, tab character or semi-colon.</p>
+    
+     <p> The end of line terminator needs to be either a carriage return line feed (CRLF), or just a line feed (LF).  Either one will work. </p>
+
+    <p>When Sierra Chart reads a chart data file in a text format, it will check to see if the file format is valid. If the file format is not valid, then there will be an error when reading it. The first line is always assumed to be the header.</p>
+
+    <p>Intraday data contains data lines that have a time period less than one day. For example, the period of the data lines could be 1 Minute, 1 Second or 1 Tick. For the required data line format, refer to the <a href="#Formats">Supported Data Line Formats</a> section. <span class="YellowHighlight NoBorder">To open an Intraday <b>Text/CSV</b> file you must use <b class="menu_item">File &gt;&gt; New / Open <em>Historical</em> Chart</b></span> and the file must be in the Sierra Chart <a href="index899f.html?page=doc/GeneralSettings.html#DataFilesFolder" Target="_blank" rel="noopener noreferrer">Data Files Folder</a>.</p>
+
+    <p>Although it is possible to open Intraday data in a Text/CSV format, it is recommended you <a href = "index0cb7.html?page=doc/ImportExport.html" Target="_blank" rel="noopener noreferrer">Import</a > the data so that replays of the Intraday data are possible.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Creating">Manually Creating a Data File</h2>
+    <div class="member-link">[<a href="#Creating">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Run a Text Editor like Windows Notepad. Enter or paste data into the editor following the Text/CSV format as documented in the <a href="#Formats">Supported Data Line Formats</a> section. </p>
+    
+    <p>Save the file using a .dly (standard Daily data file extension) or .txt extension. To open this chart in Sierra Chart, select <b class="menu_item">File &gt;&gt; New/Open Historical Chart</b> on the menu.  </p>
+    
+    <p>Select <b class="menu_item">Edit &gt;&gt; Edit Data - Historical</b> on the menu to open the file for editing to add to the file or edit the data at any other time after initially creating the data file.</p>
+
+    <p>All chart data files that you want to open in Sierra Chart, must be located in the  <b>Data Files Folder</b> specified in <b class="menu_item">Global Settings &gt;&gt; General Settings</b>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Formats">Supported Data Line Formats</h2>
+    <div class="member-link">[<a href="#Formats">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The  lines listed below are called <em>Headers</em>.  The very first line of the data file it is assumed to be the Header.</p>
+
+    <p>Each line after the Header line is called a  <em>Data Line</em>. The following formats for the Data Lines are supported.</p>
+
+    <p><em>Depending upon the format of the  Data Line, the Header may be required. It is required if the Header is specified to be required.</em>  If it is not required, then it does not have to be present.</p>
+
+    <p>The letters in a Header are  <em>not case-sensitive</em>.</p>
+
+    <p>The field delimiter can be a comma, tab character or semi-colon.</p>
+
+    <ul>
+        <li><b>Date, Open, High, Low, Close</b> (Header is optional.)</li>
+        <li><b>Date, Open, High, Low, Close, Volume</b> (Header is optional.)</li>
+        <li><b>Date, Open, High, Low, Close, Volume, Open Interest</b> (Header is optional.)</li>
+        <li><b>Date, Time, Open, High, Low, Close, Volume</b> (Header is required.)</li>
+        <li><b>Date, Time, Open, High, Low, Close, Volume, Open Interest</b> (Header is required.)</li>
+        <li><b>Date, Close</b> (Header is optional.)</li>
+        <li><b>Date, Close, Volume</b> (Header is optional.)</li>
+        <li><b>Symbol, Date, Open, High, Low, Close, Volume</b> (Header is required.)</li>
+        <li><b>Symbol, Date, Open, High, Low, Close, Volume, OpenInterest</b> (Header is required.)</li>
+        <li><b>Symbol, Date, Time, Open, High, Low, Close, Volume</b> (Header is required.)</li>
+        <li><b>Symbol, Date, Time, Open, High, Low, Close, Volume, Open Interest</b> (Header is required.)</li>
+    </ul>
+    <br><br>
+    <ul>
+        <li><b>Date, Time, Open, High, Low, Close</b> (Header is optional for Intraday data.)</li>
+        <li><b>Date, Time, Open, High, Low, Close, Volume</b> (Header is optional for Intraday data)</li>
+        <li><b>Date, Time, Open, High, Low, Close, Volume, Number of Trades, Bid Volume, Ask Volume</b> (Header is optional. Intraday data only.)</li>
+
+        <li><b>Date, Time, Unused,  Ask, Bid, Close, Volume, Number of Trades, Bid Volume, Ask Volume</b> (Header is required. Intraday data only. "Unused" values need to be set to 0 and be present.)</li>
+
+        <li><b>Symbol, Date, Time, Open, High, Low, Close</b> (Header is required.)</li>
+        <li><b>Symbol, Date, Time, Open, High, Low, Close, Volume</b> (Header is required.)</li>
+        <li><b>Symbol, Date, Time, Open, High, Low, Close, Volume, Number of Trades, Bid Volume, Ask Volume</b> (Header is required. Intraday data only.)</li>
+        <li><b>Date, Time, Close</b> (Header is optional. Intraday data only.)</li>
+        <li><b>Date, Time, Close, Volume</b> (Header is optional. Intraday data only.)</li>
+        <li><b>Symbol, Date, Time, Close</b> (Header is required. Intraday data only.)</li>
+        <li><b>Symbol, Date, Time, Close, Volume</b> (Header is required. Intraday data only.)</li>
+
+        <li><b>UNIXDateTime, Price/Close, Volume</b> (Header is required. Supported when importing Intraday data only. Refer to <a href="#UNIXDateTimeFormat">UNIX Date Time Format</a>.)</li>
+
+        <li><b>UNIXDateTime, Price, VolumeAsFloat</b> (Header is required. Supported when importing Intraday data only. Refer to <a href="#UNIXDateTimeFormat">UNIX Date Time Format</a>.)</li>
+
+        <li><b>UNIXDateTime, Open, High, Low, Close, Volume</b> (Header is required. Supported when importing Intraday data only. Refer to <a href="#UNIXDateTimeFormat">UNIX Date Time Format</a>.)</li>
+    </ul>
+
+    <section class="h3">
+        <h3 id="DateFormat">Date Format</h3>
+        <div class="member-link">[<a href="#DateFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Date format can be any of the following:</p>
+
+        <ul>
+            <li><b>MM/DD/YY</b> - Example: 1/14/07 or 01/14/07.</li>
+            <li><b>YYYY/MM/DD</b> - Example: 2007/1/14 or 2007/01/14.</li>
+            <li><b>YYYY-MM-DD</b> - Example: 2015-01-01.</li>
+            <li><b>YYYYMMDD</b> - Example: 20070114.</li>
+            <li><b>YYMMDD</b> - Example: 070114.</li>
+        </ul>
+
+        <p>Year can be either 2 or 4 digits. 2 digit years with values from 00 to at least 49 will be interpreted as beyond the year 2000 and not 1900.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="TimeFormat">Time Format</h3>
+        <div class="member-link">[<a href="#TimeFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Time Zone of the times in a text file must be in UTC (Coordinated Universal Time).</p>
+
+        <p>The time format can be any of the following:</p>
+
+        <ul>
+            <li><b>HH:MM:SS</b> (Hours:Minutes:Seconds)</li>
+            <li><b>HH:MM</b> (Hours:Minutes)</li>
+            <li><b>HH:MM:SS.MSS</b> (Hours:Minutes:Seconds.Milliseconds)</li>
+
+            <li><b> HHMM</b> (HoursMinutes)</li>
+            <li><b> HHMMSS</b> (HoursMinutesSeconds)</li>
+            <li><b> HHMMSSMSS</b> (HoursMinutesSecondsMilliseconds)</li>
+        </ul>    
+
+        <p>The time field is only required for Intraday chart data. It is optional for  historical Daily data.</p>
+
+        <p><b>HH</b> = Hours. <b>MM</b> = Minutes. <b>SS</b> = Seconds. <b>MSS</b> = Milliseconds.</p>
+
+        <p>When colons are used, the Hours, Minutes and Seconds can be single digits. If colons are not used, only the hour can be a single digit but it is always recommended to use two digits anyway.</p>
+    </section>   
+
+    <section class="h3">
+        <h3 id="UNIXDateTimeFormat">UNIX Date Time Format</h3>
+        <div class="member-link">[<a href="#UNIXDateTimeFormat">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>A UNIX Date-Time format  is an integer <a href="https://en.wikipedia.org/wiki/Unix_time" target="_blank" rel="noopener noreferrer">UNIX time value</a> with a GMT/UTC time zone. The UNIX time values used  in text files <em>do not contain milliseconds</em>.</p>
+
+        <p>For example, the human time: Thursday, 01 Jan 2015 00:00:00 GMT in the UNIX time format is "1420070400".</p> 
+
+        <p>An example data line in the format <b>UNIXDateTime, Price/Close, Volume </b> is <em>1420070400, 110.5,  2500</em>.</p>
+
+        <p>A good website to convert  to/from UNIX times is <a href="http://www.epochconverter.com/" target = "blank">www.epochconverter.com</a>.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="ExampleDaily">Example for Daily Data</h3>
+        <div class="member-link">[<a href="#ExampleDaily">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Date, Open, High, Low, Close, Volume, OpenInterest<br>
+            2013/07/01, 97.625, 98.625, 97.375, 98.375, 1344600, 0<br>
+            2013/07/02, 98.25, 99.375, 98.125, 99.125, 1209600, 0<br>
+            2013/07/03, 98.75, 98.875, 98.125, 98.125, 967100, 0<br>
+            2013/07/04, 98.125, 99.25, 97.875, 98.625, 785000, 0</p>
+    </section>
+    <section class="h3">
+        <h3 id="ExampleIntraday">Example for Intraday Data</h3>
+        <div class="member-link">[<a href="#ExampleIntraday">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Date, Time, Open, High, Low, Close, Volume<br>
+            2013/06/10, 09:45, 19.17, 19.18, 19.16, 19.17, 5000<br>
+            2013/06/10, 09:46, 19.16, 19.16, 19.13, 19.16, 2600<br>
+            2013/06/10, 09:47, 19.17, 19.17, 19.13, 19.14, 8400<br>
+            2013/06/10, 09:48, 19.13, 19.14, 19.05, 19.08, 8400<br>
+            2013/06/10, 09:49, 19.08, 19.08, 19.04, 19.04, 8100</p>
+    </section>
+</section>
+
+<section class="h2">
+    <h2 id="Notes">Notes</h2>
+    <div class="member-link">[<a href="#Notes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ol>
+        <li>A chart data file is determined to contain Intraday data if there are repeating dates within the first 30 lines of the file. Otherwise, it is assumed to be a historical Daily data file. If you have any problems with a Daily data file being detected as an Intraday data file, then be sure you do not have repeating dates within the first 30 lines of the file.</li>
+
+        <li>There can be &quot; (quotation) marks around field names.</li>
+
+        <li>All fields on a line <em>must</em> be separated with a comma or a tab character.</li>
+
+        <li>Each line of data in a data file can be weekly or monthly data as well. Or any time period. Daily records are best because you can create any time period per bar, Daily or greater, in the chart and easily change between time periods per bar.</li>
+
+        <li>Use the symbol for the name of the file. Example: IBM would have the filename IBM.dly . The file extension needs to be <b>dly</b>, <b>txt</b> or <b>prn</b>.</li>
+
+        <li>When importing Intraday data, it is necessary for there to be the  <b>Number of Trades</b> field to be able to set the chart bars to be based on a Number of Trades, unless the text data specifies the Date, Time, Price, Volume fields only. Volume in this case is optional and Date and Time can be as a UNIX time value.</li>
+
+        <li> Importing historical Bid and Ask prices is supported with this format: <b>Date, Time, Unused,  Ask, Bid, Close, Volume, Number of Trades, Bid Volume, Ask Volume</b>. Close is the last trade price at the time of the Ask and Bid prices. </li>
+        
+        <li>When opening Intraday data directly as a text file through <b class = "menu_item">File &gt;&gt; Open Historical Chart</b>, the timestamps in the data file are not adjusted to the Time Zone setting in Sierra Chart. They are just displayed as they actually are.
+        <br> <br>
+        To have them adjusted to the time zone setting in Sierra Chart,  the Date-Times the file need to be in UTC time, and you need to <a href = "index0cb7.html?page=doc/ImportExport.html" Target="_blank" rel="noopener noreferrer">Import</a >  the Intraday data. </li>
+    </ol>
+</section>
+
+<section class="h2">
+    <h2 id="BidVolumeAndAskVolume">Bid Volume and Ask Volume</h2>
+    <div class="member-link">[<a href="#BidVolumeAndAskVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+   
+</section>
+
+<section class="h2">
+    <h2 id="UsingYourOwnDataAndNotConnectingToExternalDataService">Using Your Own Data and Not Connecting to External Data Service</h2>
+    <div class="member-link">[<a href="#UsingYourOwnDataAndNotConnectingToExternalDataService">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>   If you are opening charts using your own data that you have  in Text/CSV data  files, or if you have imported this data, and you want to prevent Sierra Chart from connecting to an external Data service under any condition and  performing a historical  data download for the symbol, then select  <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> on the menu.</p>
+    
+   <p> Set the <b>Service </b> to  <b>No Service</b>.  Press <b>OK</b>.</p>
+
+   <p> You should install a separate installation of Sierra Chart  for this, separate from the installation  of Sierra Chart  you use for the other Data and Trading Service you are using. For instructions, refer to  <a href = "index6ebd.html?page=doc/MultipleServices.html#StepByStep">Multiple Services</a>. </p>
+    
+</section>
+
+<hr><p>*Last modified Wednesday, 22nd February, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/TextCSVDataFormat.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:55:52 GMT -->
+</html>  

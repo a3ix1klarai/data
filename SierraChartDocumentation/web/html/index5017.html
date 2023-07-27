@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChangingPeriodOfBars.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1681100959') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/ChangingPeriodOfBars.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Changing Chart Bars Period -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index5017.html?page=doc/ChangingPeriodOfBars.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#Charting">(Table of Contents) Charting</a> &gt;&gt; <a  href="index5017.html?page=doc/ChangingPeriodOfBars.php">Changing Chart Bars Period</a></h4> </div>     <h1 class="PageName">Changing Chart Bars Period</h1>
+
+<ul>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Period_Keyboard">Fast Changing by Keyboard</a></li>
+    <li><a href="#Period_ControlBar">Changing the Period of the Chart Bars Through Control Bar Buttons</a></li>
+    <li><a href="#Period_Menu">Changing the Period of the Chart Bars Through the Chart Menu</a></li>
+    <li><a href="#Period_ChartSettings">Changing the Period of the Chart Bars Through Chart Settings</a></li>
+    <li><a href="#ChangingPeriodOfChartBarsUsesLocalDataFile">Changing the Period of Chart Bars Uses Only Local Data File</a></li>
+    <li><a href="#ImprovingPerformanceOfLoadingChartData">Improving Performance of Loading Chart Data</a></li>
+</ul>
+
+<hr>
+
+<section class="h2">
+    <h2 id="Introduction">Introduction</h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Sierra Chart provides numerous ways to change the period of the bars in a chart.   You are able to specify any time period per bar that you require.</p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Period_Keyboard">Fast Changing by Keyboard</h2>
+    <div class="member-link">[<a href="#Period_Keyboard">Link</a>] - [<a href="#top">Top</a>]</div>
+    <a href="../images/changebarperiod.png" rel="lightbox"><img src="../images/changebarperiod.png" class="WideFloatRight"  alt="" ></a>
+
+    <p>To change the period of the chart bars through the keyboard, make the chart with the bars that you want to change the active chart, if it is not already active,  by selecting it with a single left click using the mouse pointer anywhere on the chart window, with a single left click on the title bar of the chart, by selecting it from the chart tabs along the top or bottom of the main window (if displayed), or by selecting it from the <b class="menu_item">Window</b> menu.</p>
+
+    <p>Type the new period from the keyboard and press the <b>ENTER</b> key on your keyboard. As you type, the characters will appear in the title area of the window, assuming the title bar is wide enough to see the standard text and the additional characters being typed. The window captures the keys as you press them. </p>
+
+    <p> Example: With an Intraday chart, type <b>10</b> and press the <b>ENTER</b> key to change the bars to 10 minutes, assuming it is a Minute based chart currently. If it were currently a Range bar chart, then this would change to a 10 Tick Range per bar. With a Historical Daily chart, type <b>5</b> and press the <b>ENTER</b> key to change to a 5 Day bar period.</p>
+
+    <p>You can also change the Bar Period Type by entering the abbreviation for the Bar Period Type at the end of the period number. This is described in more detail below. </p>
+
+    <p><span class="GeneralBackgroundHighlight">When a chart drawing modification function on the <b>Tools</b> menu, like the <b>Erase Drawing Mode</b> or <b>Move Drawing</b>, is selected, changing the period of the chart bars through the keyboard may not work. To solve this problem, select a different tool like  <b class = "menu_item">Tools &gt;&gt; Chart Values</b>.</span></p>
+
+
+    <p>The following are the supported Bar Period Type abbreviations:</p>
+    <ul>
+        <li><b class="LightGreenNoBorder">s</b>: Seconds Per Bar</li>
+        <li><b class="LightGreenNoBorder">m</b>: Minutes Per Bar</li>
+        <li><b class="LightGreenNoBorder">h</b>: Hours Per Bar</li>
+        <li><b class="LightGreenNoBorder">t</b>: Trades Per Bar</li>
+        <li><b class="LightGreenNoBorder">v</b>: Volume Per Bar</li>
+        <li><b class="LightGreenNoBorder">r</b>: Range Per Bar (Standard range bars)</li>
+        <li><b class="LightGreenNoBorder">rm</b>: Range Per Bar (New bar on range <b class="LightGreenNoBorder">m</b>et)</li>
+        <li><b class="LightGreenNoBorder">rt</b>: Range Per Bar (<b class="LightGreenNoBorder">T</b>rue range bars)</li>
+        <li><b class="LightGreenNoBorder">rf</b>: Range Per Bar (<b class="LightGreenNoBorder">F</b>ill gaps)</li>
+        <li><b class="LightGreenNoBorder">ro</b>: Range Per Bar (<b class="LightGreenNoBorder">O</b>pen = close)</li>
+        <li><b class="LightGreenNoBorder">rmo</b>: Range Per Bar (New bar on range <b class="LightGreenNoBorder">M</b>et and <b class="LightGreenNoBorder">O</b>pen = close)</li>
+        <li><b class="LightGreenNoBorder">rv</b>: Re<b class="LightGreenNoBorder">v</b>ersal Bar</li>
+        <li><b class="LightGreenNoBorder">rk</b>: Ren<b class="LightGreenNoBorder">k</b>o Bar</li>
+        <li><b class="LightGreenNoBorder">fr</b>: Flex Renko Bar (BoxSize, TrendOffset, RevOffset with a comma, dash, or space delimiting the period components. This abbreviation suffix  <em>must always</em> be typed when changing the Flex Renko Bar settings by the keyboard.)</li>
+        <li><b class="LightGreenNoBorder">ar</b>: Aligned Renko</li>
+        <li><b class="LightGreenNoBorder">dv</b>: Delta Volume Per Bar</li>
+        <li><b class="LightGreenNoBorder">pc</b>: Price Changes Per Bar</li>
+        <li><b class="LightGreenNoBorder">d</b>: Days Per Bar</li>
+        <li><b class="LightGreenNoBorder">w</b>: Weeks Per Bar</li>
+        <li><b class="LightGreenNoBorder">mn</b>: Months Per Bar</li>
+        <li><b class="LightGreenNoBorder">q</b>: Quarters Per Bar </li>
+        <li><b class="LightGreenNoBorder">y</b>: Years Per Bar</li>
+        <li><b class="LightGreenNoBorder">fri</b>: Flex Renko Inverse Setting Bar (BarSize, TrendBarOffset, ReversalBarTrigger with a comma, dash, or space delimiting the period components. This abbreviation suffix  <em>must always</em> be typed when changing the Flex Renko Inverse Setting Bar settings by the keyboard.)</li>
+        <li><b class="LightGreenNoBorder">pf</b>: Point and Figure (BoxSize, ReversalSize)</li>
+        <li><b class="LightGreenNoBorder">pnf</b>: Point and Figure (BoxSize, ReversalSize)</li>
+    </ul>
+
+    <p>If the chart is an Intraday chart:</p>
+    <ul>
+        <li> To switch to Minute based chart bars, type the number of Minutes followed by the letter <b class="LightGreenNoBorder">m</b> (for example: <b>15m</b>).</li>
+
+        <li>To switch to Seconds based chart bars, type the number of  Seconds followed by the letter <b class="LightGreenNoBorder">s</b> (for example: <b>10s</b>).</li>
+
+        <li>To switch to Number of Trades based chart bars, type the number of Number of Trades per bar followed by the letter <b class="LightGreenNoBorder">t</b> (for example: <b>100t</b>).</li>
+
+        <li>To switch to Volume based chart bars, type the number of Shares or Contracts per bar followed by the letter <b class="LightGreenNoBorder">v</b> (for example: <b>100000v</b>).</li>
+
+        <li>To switch to Range based chart bars, type the Range in Ticks followed by the letter <b class="LightGreenNoBorder">r</b> (for example: <b>4r</b> for 4 Ticks per bar).</li>
+
+        <li>To switch to Reversal based chart bars, type the Reversal Amount, and the Minimum Length followed by the abbreviation <b class="LightGreenNoBorder">rv</b> (for example: <b>5-10rv</b>, <b>10,15rv</b>, <b>5 10rv</b>).</li>
+
+        <li>To switch to Days based chart bars, type the number of Days followed by the letter <b class="LightGreenNoBorder">d</b> (for example: <b>1d</b>).</li>
+
+        <li>To switch to Flex Renko bars, type the BoxSize, TrendOffset, and RevOffset separated by dashes, followed by the abbreviation <b class="LightGreenNoBorder">fr</b> (for example: <b>4-2-2fr</b>).</li>
+
+        <li>To switch to Point and Figure bars, type the BoxSize and ReversalSize separated by a dash, followed by the abbreviation <b class="LightGreenNoBorder">pf</b> or <b class="LightGreenNoBorder">pnf</b> (for example: <b>1-5pf</b>).</li>
+    </ul>
+
+    <p>It is possible to quickly change the symbol of the chart through the keyboard.  Refer to <a href="indexa1a5.html?page=doc/SwitchingSymbols.html">Changing the Symbol of a Chart</a>  for instructions.</p>
+</section>
+
+<section class="h2">
+    <h2 id="Period_ControlBar">Changing the Period of the Chart Bars Through Control Bar Buttons</h2>
+    <div class="member-link">[<a href="#Period_ControlBar">Link</a>] - [<a href="#top">Top</a>]</div>
+   
+   <p><a href="../images/controlbarchangebarperiod.png" rel="lightbox"><img src="../images/controlbarchangebarperiod.png" alt="" class="MediumFloatRight"></a></p>
+    
+    
+    <p>Select <b class="menu_item">Global Settings &gt;&gt; Customize Control Bar 1-8</b>. In the <b>Customize Control Bar</b> window you can add buttons for common Historical and Intraday bar periods.  </p>
+    
+    
+    <p>These are listed in the <b>  Available Control Bar Commands &gt;&gt;  Chart Bar Period</b>   list. For Historical charts these will be: Daily, Weekly, Monthly, Quarterly, Yearly.  </p>
+    
+    
+    <p>For Intraday charts these will begin with <b>Intraday Bar Period</b>. Once these are added, you can press these buttons directly on the Control Bar. 
+    
+    
+    <p>To make the Control Bar visible if it is not already, select <b class="menu_item">Window &gt;&gt; Control Bars &gt;&gt; Control Bar 1-8</b>.</p>
+    
+    <p> It is supported  to customize 20 Control Bar buttons to set a specific time period per bar for Intraday charts.  For complete documentation, refer to <a href="index6736.html?page=doc/ControlBar.php#CustomButtonsChartBarPeriod" Target="_blank" rel="noopener noreferrer">Custom Buttons for Intraday Chart Bar Period</a>.    Custom Control   Bar buttons are also supported for Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars.</p>
+    
+    
+    <p>For complete documentation for the Control Bar,  refer to  <a href="index6736.html?page=doc/ControlBar.php" Target="_blank" rel="noopener noreferrer">Control Bar</a>.  </p>
+</section>
+
+<section class="h2">
+    <h2 id="Period_Menu">Changing the Period of the Chart Bars Through the Chart Menu</h2>
+    <div class="member-link">[<a href="#Period_Menu">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are several commands on the <b class="menu_item">Chart &gt;&gt; Bar Periods</b> menu to change the period  of chart bars.  They are as follows: <b>Daily, Weekly, Monthly, Quarterly, Yearly</b> and many common Intraday chart bar periods </p>
+
+</section>
+
+<section class="h2">
+    <h2 id="Period_ChartSettings">Changing the Period of the Chart Bars Through Chart Settings</h2>
+    <div class="member-link">[<a href="#Period_ChartSettings">Link</a>] - [<a href="#top">Top</a>]</div>
+    <p>You can also change the chart bars period through the <b>Chart Settings</b>  window by selecting <b class="menu_item">Chart &gt;&gt; Chart Settings</b> on the Sierra Chart menu. You can set the period with the controls in the <b>Intraday Chart Period</b> or the <b>Historical Chart Period</b> frames.  For more information,  refer to <a href="index4cf4.html?page=doc/ChartSettings.html#TimePeriodPerBar">Chart Settings</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ChangingPeriodOfChartBarsUsesLocalDataFile">Changing the Period of Chart Bars Uses Only Local Data File</h2>
+    <div class="member-link">[<a href="#ChangingPeriodOfChartBarsUsesLocalDataFile">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When changing the period/timeframe of chart bars by using any of the methods documented on this page, the chart bars are rebuilt by using data from the chart data file for the symbol held on your local computer.</p>
+
+    <p> There is <em>no downloading  of historical data</em> from the remote data server which occurs while the chart bars are being rebuilt from the chart data file held on your computer. Downloading of historical data does not occur immediately after the chart bars are built either.</p>
+
+    <p>If it appears to be taking a long time reading the data from the local data file, then this could be caused by antivirus/anti-malware software. For more information about this, refer to  <a href="index4f96.html?page=doc/helpdetails30.html#AntivirusAntiMalwareSoftware" Target="_blank" rel="noopener noreferrer">help topic 30.8</a>.</p>
+</section>
+
+<section class="h2">
+    <h2 id="ImprovingPerformanceOfLoadingChartData">Improving Performance of Loading Chart Data</h2>
+    <div class="member-link">[<a href="#ImprovingPerformanceOfLoadingChartData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When changing the period/timeframe of  Intraday chart bars by using any of the methods documented on this page, if the chart takes longer than you want to load, then follow any or all of the below methods to improve performance.</p>
+
+    <ol>
+        <li> Reduce the Days to Load  setting in the Intraday chart. Refer to <a href="index4cf4.html?page=doc/ChartSettings.html#DaysToLoad" target="_blank" rel="noopener noreferrer">Days to Load</a>. </li>
+        
+        <li>Avoid changing the time period of the chart bars and instead open separate charts for the different time periods that you want to look at. Refer to <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart" target="_blank" rel="noopener noreferrer">Opening Charts</a>.</li>
+
+        <li> Increase the <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" target="_blank" rel="noopener noreferrer">Intraday Data Storage Time Unit</a> setting from  <b>1 Tick</b> to a higher setting.
+        <br> <br>
+        If you are using Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars  in your charts, then normally this needs to be set to  <b>1 Tick</b> for 100% precision. For slightly less precision you can use  <b>1  Second</b>. It is not recommended to go to a higher value in the case of when using Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars.
+        <br> <br>
+        In the case of when changing the  <b>Intraday Data Storage Time Unit</b>, you need to re-download the data  by going to an Intraday chart for each symbol and select <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>.  You will need to do this once for each symbol and not each chart. This will cause the data in the Intraday chart data files to be replaced with the higher timeframe per record.
+        </li>
+        
+        <li>If you do not want to increase the <b>Intraday Data Storage Time Unit</b> setting because you require that  more detailed precision  for charts which use Number of Trades, Volume, Range, Reversal, Renko, Delta Volume, Price Change, Point and Figure Bars,  then for charts which do not require the lower Intraday Data Storage Time Unit,  run a  <a href="index9bbd.html?page=doc/NewInstance.php"  target="_blank" rel="noopener noreferrer">New Instance</a> of Sierra Chart  and open those charts in that instance.
+        <br> <br>
+        In that instance,  increase the <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" target="_blank" rel="noopener noreferrer">Intraday Data Storage Time Unit</a> for better performance for the charts running in that sub instance. We recommend using <b>10 Seconds</b>, <b>30 Seconds</b>, or <b>  1 Minute</b>. 
+        
+         <br> <br>
+          In the case of chart bars which are only based upon   <em>1 Minute time frames</em>, use <b>  1 Minute</b> for the  <b>Intraday Data Storage Time Unit</b>. This will massively reduce the time to load Intraday charts and make them nearly instantaneous.
+        <br> <br>
+        For more details, refer to <a href="index4f96.html?page=doc/helpdetails30.html#IntradayDataStorageTimeUnit_HistoricalDataRecordTimeFrame" target="_blank" rel="noopener noreferrer" >Intraday Data Storage Time Unit. Historical Data Record Time Frame</a>.
+        </li>
+    </ol>    
+    
+    
+</section>
+
+
+<hr><p>*Last modified Monday, 10th April, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/ChangingPeriodOfBars.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:31:18 GMT -->
+</html>  

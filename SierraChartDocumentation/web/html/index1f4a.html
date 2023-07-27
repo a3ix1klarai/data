@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/InteractiveBrokers.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1687947392') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/InteractiveBrokers.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title>Interactive Brokers Trading Service -  Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index1f4a.html?page=doc/InteractiveBrokers.php" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#SupportedDataAndTradingServices">(Table of Contents) Supported Data and Trading Services</a> &gt;&gt; <a  href="index1f4a.html?page=doc/InteractiveBrokers.php">Interactive Brokers Trading Service</a></h4> </div>     <h1 class="PageName">Interactive Brokers Trading Service</h1>
+
+<div style="text-align: center;"><a target="_blank" rel="noopener noreferrer" href="http://www.interactivebrokers.com/"><img border="0" src="../images/ib-logo.jpg" alt="Interactive Brokers Logo"></a></div>
+
+
+ <!-- p class="GeneralBackgroundHighlight"> 2023-01-29: **Warning**:  When using  Interactive Brokers, expect issues with their market data, and trading issues.  It is <em>guaranteed</em> you will have issues  and you will have absurd issues that should never be occurring.   You will waste plenty of time with these issues.  These issues are not with Sierra Chart. You have been warned!  We absolutely do not recommend the use of Interactive Brokers unless you need to use them for some reason.   And furthermore Sierra Chart support will not help with these issues!  If you decide to use Sierra Chart with Interactive Brokers you are on your own without help from us.
+ 
+  <br> <br> What we can help you with is using Sierra Chart for  <em>charting only</em> and not using Interactive Brokers data or for trading. For market data you need to use the  <a href = "/index.php?page=doc/DenaliExchangeDataFeed.php">Denali Data Feed</a>.  To use this data completely independent from Interactive Brokers, set the  <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Main Settings &gt;&gt;  Current Selected Service</b>  to  <b>SC Data-All Services</b>. And translate the symbols with  <b class="menu_item">Edit &gt;&gt; <a href = "/index.php?page=doc/EditMenu.html#TranslateSymbolsToCurrentService">Translate Symbols to Current Service</a></b>. 
+ </p --> 
+
+<ul> 
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#SierraChartDoesNotProvideSupportForInteractiveBrokersSymbolsOrDataIssues">Notice: Sierra Chart Does Not Provide Support for Interactive Brokers Symbols or Data Issues</a></li>
+    <li><a href="#Included">What is Included</a></li>
+    <li><a href="#SetupInstructions">Setup Instructions</a></li>
+    <li><a href="#IBResolvingConnectionIssue">Setup Instructions: Resolving Connection Issue</a></li>
+    <li><a href="indexa93b.html?page=IBSymbols.html">Interactive Brokers Symbol Formats and Common Symbols</a> (Opens a new page)</li>
+    <li><a href="#MarketDataNotSubscribed">Market Data Not Subscribed Through Interactive Brokers</a></li>
+    <li><a href="#MarketDataProblems">Interactive Brokers Market Data Problems</a></li>
+    <li><a href="#AutomaticallyLogin">Automatically Logging Into TWS</a></li>
+    <li><a href="#MultipleTWSInstances">Running Multiple TWS Instances</a></li>
+    <li><a href="#UsingMultipleSCInstancesWithTWS">Using Multiple Sierra Chart Instances with TWS</a></li>
+    <li><a href="#MarketDepth">Market Depth Data</a></li>
+    <li><a href="#AccessingLevel2_MarketDepthDataForStocks">Accessing Level 2 / Market Depth Data for Stocks</a></li>
+    <li><a href="#TrueRealTimeData">Using Interactive Brokers True Real-Time Bar Data</a></li>
+    <li><a href="#AboutInteractiveBrokers">About Interactive Brokers</a></li>
+    <li><a href="#UsingFinancialAdvisorAccounts">Using Financial Advisor Accounts</a></li>
+    <li><a href="#CurrentHighLowForexData">Current Daily High and Low for Forex Data</a></li>
+    <li><a href="#TradingErrorMessages">Trading Related Error Messages</a></li>
+    <li><a href="#TradingRelatedIssues">Trading Related Issues</a>
+        <ul>
+            <li><a href="#OrderNotTransmitted">Order Not Transmitted</a></li>
+            <li><a href="#OrdersEnteredTWSNotAppearSierraChart" >Orders Entered from Trader Workstation do Not Appear in Sierra Chart</a></li>
+            <li><a href="#OrdersNotRespondedToFromTraderWorkstation">Orders Not Responded to from Trader Workstation</a></li>
+            <li><a href="#TradePositionLineQuantityDisappearingDisplayingZero" >Trade Position Line or Quantity Disappearing or Displaying Zero</a>
+				<ul>
+				    <li><a href="#SymbolDifferencesForPositions">Symbol Differences for Positions</a></li>
+				    <li><a href="#RecentReviewOfTWSNotProvidingTradePositionData">Recent Review of TWS Not Providing Trade Position Data</a></li>
+				</ul>
+			</li>
+        </ul>
+    </li>
+    <li><a href="#IBHistoricalDataIssues">Interactive Brokers Historical Data Issues and Solutions</a><br>
+        <ul>
+            <li><a href="#IBHDGeneralInformation">General Information</a></li>
+            <li><a href="#PacingViolations">Pacing Violations</a></li>
+            <li><a href="#IBHDTimeOuts">No Response When Downloading Historical Data and Timeouts</a></li>
+            <li><a href="#SlowDownloading">Slow Historical Data Downloading</a></li>
+            <li><a href="#UsingSierraChartHistoricalData">Using Sierra Chart Historical Data</a></li>
+            <li><a href="#DownloadingMoreDaysOfHistoricalDataDirectlyFromInteractiveBrokers">Downloading More Days of Historical Data Directly from Interactive Brokers</a></li>
+            <li><a href="#SupportPolicyIBHistoricalData">Support Policy Regarding Interactive Brokers Historical Data</a></li>
+        </ul>
+    </li>
+    <li><a href="#IncorrectTimeZone">Missing Data Due to Incorrect Time Zone Settings</a></li>
+    <li><a href="#IBErrorStatusMessages">Interactive Brokers Market Data Error/Status Messages</a></li>
+    <li><a href="#IBDailyHistoricalData">Interactive Brokers Historical Daily Data</a></li>
+    <li><a href="#TimeAndSalesData">Time and Sales Window Data</a></li>
+    <li><a href="#OrdersDisappear">Orders Disappear after Being Submitted Although They Are Still Open</a></li>
+    <li><a href="#IBStopOrderTriggerMethod">Interactive Brokers Stop Order Trigger Method</a></li>
+    <li><a href="#ProvidingTWSLogFiles">Procedure for Providing TWS Log Files</a></li>
+    <li><a href="#HistoricalRealTimeEquitiesDataVolumeDifferences">Historical and  Real-time Stock/Equities Data Volume Differences</a></li>
+    <li><a href="#UsingSCForexDataAndTradeThroughIBAccount">Using Sierra Chart Historical and Real-time Forex Data and Trade through Interactive Brokers Account</a></li>
+
+   <li><a href="#InteractiveBrokersModificationOfLimitPriceOfStopLimitOrders">Interactive Brokers Modification of Limit Price of Stop-Limit Orders</a></li>
+</ul>
+
+
+<hr>
+
+<div class="h2">
+    <h2 id="Introduction">Introduction </h2>
+    <div class="member-link">[<a href="#Introduction">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    
+    <p class="GeneralBackgroundHighlightLight">Notice: Sierra Chart technically supports Interactive Brokers but no technical help is provided when using Interactive Brokers with Sierra Chart.   It is fine to use Interactive Brokers  if there are no other choices for what you are trading or based upon your country of residency. However, if you have technical issues,  you need to be self-sufficient and rely upon this documentation  for help and other documentation on the Sierra Chart website.</p>
+    
+    <p class="GeneralBackgroundHighlightLight">In regards to the above, if we become aware  of an integration issue between Sierra Chart  and Interactive Brokers Trader Workstation  reported to us by a competent source, or that we are able to  determine based upon a support request,  we will in good faith resolve this to the best of our ability.  However, 99.9% of reported problems are not integration issues but just due to a poorly designed and problematic API provided by Interactive Brokers.</p>
+    
+     <p> Furthermore, technical integration to  Interactive Brokers  will always be maintained. </p>
+
+    <p>Sierra Chart works with the  <a target="_blank" rel="noopener noreferrer" href="http://www.interactivebrokers.com/">Interactive Brokers (Interactive Brokers)</a> Trading service. </p>
+
+    <p>The Interactive Brokers trading service provides the Sierra Chart software  with full access to  <span class="YellowHighlightNoBorder">complete trading services</span> for all types of markets around the world.</p>
+
+    <p>The Sierra Chart trading interface fully supports trading with Interactive Brokers. To use Interactive Brokers with Sierra Chart, follow the <a href="#SetupInstructions">Setup Instructions</a> below.</p>
+    
+    <p> Market data which includes historical Daily, historical Intraday data,  and streaming real-time data  is provided either by Interactive Brokers or the   <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-time Exchange Data Feeds Available from Sierra Chart</a>.   If you are using one of the  Sierra Chart provided data feeds, then  Historical Daily Data comes from Sierra Chart sources when using Interactive Brokers  for exchanges that  Sierra Chart sources provide data for.</p>
+
+
+    <p class = "GeneralBackgroundHighlight">We <em>only recommend the use of Interactive Brokers for experienced traders, those who are  <em>technically competent with computers and software</em>, and are willing to accept  technical issues</em>. The <em>large length</em> of this page confirms the complexity and issues that you   will definitely face when using Interactive Brokers. Interactive Brokers does provide many advantages and can be a good choice for many traders,   but does have technical challenges as well. </p>
+
+    <p>Please do not blame Interactive Brokers problems on Sierra Chart or burden us with technical questions related to their problems or problems encountered when using them. </p>
+
+    <p> Even though you may see a particular problem in Sierra Chart when using Interactive Brokers and possibly do not see it in another program,  <em>still means the problem is on the Interactive Brokers side</em>. The reason has to do with differences in the way that Sierra Chart may interact with the API, and other specific differing circumstances surrounding the particular interaction and request and response messages, which then results in particular problems encountered with TWS or Interactive Brokers which the other programs may not be encountering because the interaction and circumstances are different.  Sierra Chart will interact with TWS in the most reliable and redundant way. </p>
+
+    <p><b> Support policy:</b>  Support from Sierra Chart for technical issues encountered when using Interactive Brokers, is within the discretion of Sierra Chart.  There are some complex technical issues that a user may encounter when using Interactive Brokers, that can have various causes which are on the side of Interactive Brokers and therefore are outside of the control of Sierra Chart.  Therefore these will be hard for us to understand and assist with because they are not within Sierra Chart and the Interactive Brokers system is a highly complex system with many reasons  why things may not always work as expected.</p>
+
+     <p>Therefore, <em>we will not hesitate to decline support for some issues reported to us involving Interactive Brokers</em>. Be aware of this when making a decision as to whether you should be using Interactive Brokers.  What we want to avoid is where you waste a significant amount of your own time because of Interactive Brokers issues and our time gets wasted as well and then you end up giving up. <em>So consider this carefully because we do not want you to get into trouble with Interactive Brokers</em>. </p>
+
+     <p Class = "GeneralBackgroundHighlight">If you are trading CME, CBOT, NYMEX, COMEX futures, then as a matter of policy we do not provide any technical help for trading these futures through Interactive Brokers. We instead recommend using the  <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a> for trading these futures markets.  This service is supported by many clearing firms.  Interactive Brokers is a very substandard and problematic system. </p>
+
+    <p>When using Sierra Chart for the first time you should not judge the performance of Sierra Chart  using Interactive Brokers since it provides a substandard market data system.  When evaluating the charting performance of Sierra Chart both historically and in real-time we recommend using the  <a href="indexc82f.html?page=doc/SCRealTimeFOREX.php" target="_blank" rel="noopener noreferrer">Sierra Chart Real Time and Historical Forex and CFD Data Service</a> which is provided with all Service Packages.</p>
+
+    <p>This may not be the best introduction for a Trading service, but it is absolutely necessary all of this is communicated upfront. </p>
+    
+     <p class = "GeneralBackgroundHighlight">It must be stressed that the integration that Sierra Chart has to the Interactive Brokers Trader Workstation API is superb and of the best engineering. Sierra Chart Engineering has very very high standards, we are perfectionists,  and continuously strive towards perfection and top-quality  and perfect code.  We do not think anyone else has better integration to the TWS API than Sierra Chart does.   Based on user feedback, this is confirmed.  Sierra Chart uses a direct connection to the TWS socket and there is no use of any external  DLL component. It is rocksolid integration but if the TWS or  Interactive  Brokers system has an issue or due to the complexities of those  Interactive Brokers systems, there  can potentially be a problem.</p>
+
+</div>
+
+
+<div class="h2">
+    <h2 id="SierraChartDoesNotProvideSupportForInteractiveBrokersSymbolsOrDataIssues">Notice: Sierra Chart Does Not Provide Support for Interactive Brokers Symbols or Data Issues</h2>
+    <div class="member-link">[<a href="#SierraChartDoesNotProvideSupportForInteractiveBrokersSymbolsOrDataIssues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>Interactive  Brokers symbology is very complicated, and there is not one set   text string for a symbol that can be looked up, and used universally within TWS and Sierra Chart.  This is a major design flaw with Interactive Brokers.</p>
+
+     <p>Instead    there are multiple parts of a complex Contract structure which have to be filled out in order to get a match to a particular instrument or security  for market data or trading. Some of these fields are optional. All of the documented  <a href = "indexa93b.html?page=doc/IBSymbols.html">Symbol Formats</a> allow you to specify  each required and optional part of the  Contract structure  for the particular security type (each part is separated by a hyphen '-' character).  So you do have full control over the symbol  Contract parts being specified to TWS.</p>  
+     
+     <p>For symbols that are not listed in Sierra Chart,  determining exactly what symbol is going to be correct, we do not know and it is not something we can help with. However, you do have full control over specifying the different parts of the Contract structure  through the Sierra Chart specified symbol formats for each security type.</p>
+    
+    <p> Therefore, Sierra Chart generally does not provide any support for Interactive Brokers symbol questions. </p>
+    
+    <p>Additionally when Sierra Chart is requesting historical data from Interactive Brokers TWS, there  is a separate request for  each block of data. You can look in the <b>Window &gt;&gt; Message  Log</b> and see these requests and the responses from TWS. To increase the amount of historical data downloaded directly from Interactive Brokers  in the case where the historical data is only coming from Interactive Brokers, refer to <a href="#DownloadingMoreDaysOfHistoricalDataDirectlyFromInteractiveBrokers">Downloading More Days of Historical Data Directly from Interactive Brokers</a>.  </p>
+    
+    <p>To change the particular type of data whether trades or the Bid  and Ask average which is requested from TWS, refer to  <a href = "indexb482.html?page=doc/RecordingModes.php">Data Recording Modes</a>.</p>
+    
+     <p> So you do have full control and monitoring of historical data  requests to   Interactive Brokers TWS from within Sierra Chart.  You can redo the download  by going to the chart and selecting  <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. If you are not getting the historical data that you expect, once again we cannot provide any help with this. It is simply out of our control and knowledge.  </p> 
+     
+      <p class="GeneralBackgroundHighlight">Additionally, Sierra Chart provides no technical support at all for any  historical or real-time market data received from Interactive Brokers Trader Workstation.  Therefore, even if you get the symbol correct you may   not receive any historical or real-time data, or incomplete  historical data is received, or not as much historical data as you want is received.  Whatever the cause of these problems, there is  <em>no support provided by Sierra Chart Support</em>.</p>
+      
+      
+      <p class="GeneralBackgroundHighlight"> For reliable market  data we recommend using the   <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-time Data feeds  Available from Sierra Chart</a>.  These data feeds we provide   technical support for.</p>
+
+     <p>Finally, if you think that Sierra Chart should  be providing support for the above and we have referred you to this section, then we would recommend discontinuing the use of Interactive Brokers with Sierra Chart if you are unable to resolve the problem yourself with the help of Interactive Brokers technical support.</p>
+</div>
+
+<div class="h2">
+    <h2 id="Included">What is Included</h2>
+    <div class="member-link">[<a href="#Included">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <ul>
+        <li>Streaming Real-Time Data: <b>Yes.</b></li>
+
+        <li>Historical Intraday Data: <b>Yes.</b> Limited amount from Interactive Brokers.   It is strongly recommended to use the  <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Sierra Chart Real-time Data Feeds</a>  for complete and reliable data when using Interactive Brokers.</li>
+
+        <li>Historical Daily Data: <b>Yes.</b> 1 year if from Interactive Brokers.  Historical Daily data for major futures contract, cash index and US  stock symbols is provided by the Sierra Chart Historical Data service when using one of the  <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Sierra Chart Real-time Data Feeds</a>. In this case 10+ years are available.</li>
+
+        <li>Historical BidVolume and AskVolume: <b>No from Interactive Brokers</b>. Yes when using the <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Sierra Chart Real-time Data Feeds</a>. </li>
+
+        <li>Live Trading Services: <b>Yes.</b></li>
+        <li>Simulated Trading: <b>Yes.</b></li>
+        <li>Order Types Supported: <b>All.</b></li>
+        <li>Server Managed OCO (Order Cancels Order):  <b>Yes</b> when <b class="menu_item">Global Settings &gt;&gt;  General Trade Settings &gt;&gt; Use Server Side OCO Orders</b> is enabled.</li>
+        <li>Server Managed Bracket Orders: <b>Yes</b> when <b class="menu_item">Global Settings &gt;&gt;  General Trade Settings &gt;&gt; Use Server Side Bracket Orders</b> is enabled.  
+         <br> <br>
+        However, we have heard that it is not possible to modify the child Target and Stop orders before the parent order fills. For a solution to this  in the case where you are trading futures, is to use the <a href = "index35f0.html?page=doc/SierraChartDirectOrderRoutingService.php">Teton Order Routing Service</a>  or disable the <b>Use Server Side Bracket Orders</b> option.</li>
+        
+        <li>Automated Trading (applies to Live or Simulated): <b>Yes.</b></li>
+        
+        <li> Supports Negative Offset for Stop-Limit Orders: <b> Yes. </b> </li>
+    </ul>
+
+    <p><b>Amount of Historical Data Available</b>:  For historical data downloaded from  Interactive Brokers directly and not when using the  <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Sierra Chart Real-time Data Feeds</a>, Interactive Brokers provides 1 year of Historical Daily  and a very limited amount of historical Intraday data.  </p>
+    
+     <p>Sierra Chart will always download the full 1 year of Historical Daily data for Historical charts. For Intraday charts, it is not very practical to download a large amount of historical Intraday data all at once from Interactive Brokers. Normally the download will fail and it will take a very long before it completes. Downloading 30 days is more practical. The instructions below explain how to specify the number of historical Intraday days to download.</p>
+</div>
+
+<div class="h2">
+    <h2 id="SetupInstructions">Setup <span id="Set-upInstructions">Instructions</span></h2>
+
+    <div class="member-link">[<a href="#SetupInstructions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class="GeneralBackgroundHight" >If you are having a problem connecting to the Interactive Brokers  Trading service, then be sure to follow through all of the steps below.</p>
+
+    <ol>
+        <li>To use the Interactive Brokers trading service, you need an account with Interactive Brokers. Go to the <a href="http://www.interactivebrokers.com/" target="_blank" rel="noopener noreferrer">Interactive Brokers website</a> and open an account with them if you do not already have one.
+            <br> 
+            <br>
+            It is possible to use an Interactive Brokers demo account.  At the Interactive Brokers  Login window   from Trader Workstation, there is a way to  log into a demo account associated with your email address. This should only be used for test purposes though.</li>
+
+        <li>Run the Interactive Brokers Trader Workstation (TWS) software  or the Interactive Brokers Gateway program. The Gateway is also acceptable to use and everywhere there is a reference to TWS in this documentation, that is acceptable to substitute with the IB Gateway. It is highly recommended that you use the stand alone TWS software when using TWS,  rather than the browser based TWS. Or use the IB Gateway.</li>
+
+        <li>Select <b class="menu_item">File &gt;&gt; Global Configuration</b> on the Interactive Brokers TWS software menu. Or go to the equivalent in the IB Gateway software. </li>
+        
+        <li>Go to <b>API &gt;&gt; Settings</b>. </li>
+
+        <li>Enable the <b>Enable ActiveX and Socket Clients</b> option.</li>
+
+        <li>Set the <b>Socket Port</b>  to <b>7496</b>. </li>
+        
+        <li>Disable the <b>Read-only API</b> option.</li>
+        
+        <li>Make sure the <b>Component Exchange Separator</b> setting is set to a <b>/</b>.</li>
+
+        <li>If you will be running Sierra Chart and Trader Workstation on the same computer, then enable <b>Allow connections from localhost only</b>. If they will be on different computers, you would need to add the local IP Address of the computer that will be running Sierra Chart within the Trusted IPs list.
+
+            <div style="text-align: center;"><a href="../images/ibtwssettings.png" rel="lightbox"><img src="../images/ibtwssettings.png" alt="Interactive Brokers TWS Settings" class="screenshot" loading="lazy"></a> </div>
+        </li>
+
+        <li>Go to <b>API &gt;&gt; Precautions</b> in the TWS Configuration window.</li>
+        
+        <li>It is essential that you enable <b>Bypass Order Precautions for API Orders</b>.</li>
+        
+        <li>Press <b>OK</b> to save the Interactive Brokers API settings. </li>
+
+        <li>Go to Sierra Chart. Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>  on the menu.
+
+            <div style="text-align: center;"><a href="../images/datatradeservicesettingsmenu.png" rel="lightbox"><img src="../images/datatradeservicesettingsmenu.png" alt="Data Trade Service Settings Menu"  class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li>Click on the <b>Service</b> list box arrow. Select <span class="YellowHighlightNoBorder"><b>Interactive Brokers</b></span> from the list.
+
+            <div style="text-align: center;"><a href="../images/ibservicesettingswindow.png" rel="lightbox"><img src="../images/ibservicesettingswindow.png" alt="Interactive Brokers Service Settings Window" width="550" class="screenshot" loading="lazy"></a></div>
+        </li>
+
+        <li> Select the  <b> Service Setting   &gt;&gt; Server Address and Port</b>  setting.  It needs to be set to <span class="YellowHighlightNoBorder"><b> 127.0.0.1:7496</b></span>. If the TWS software is running on a computer different than Sierra Chart, then the <b> Server Address</b> can be set to the IP address where TWS is running.   </li>
+
+        <li>Enable the <b>Connect On Program Startup</b> option.  </li>
+
+        <li>Enable the <b>Reconnect On Failure</b> option. </li>
+
+        <li> For the downloading of historical data to work correctly, your computer's Date and Time need to be set correctly. The last Date and Time in the chart also needs to be correct for that bar. Otherwise, some or all of the data received from Interactive Brokers may be filtered out.
+            <br> 
+            <br>
+            If you have problems with historical data, like <span style="background-color: #FFFF00"><b>pacing violations</b></span>, refer to <a href="#IBHistoricalDataIssues">Interactive Brokers Historical Data Issues and Solutions</a>.</li>
+
+        <li><b>Multiple Concurrent Connections to TWS:</b> To have multiple copies of Sierra Chart connected to Interactive Brokers Trader Workstation (TWS), then each  copy of  Sierra Chart needs to be set to a different <b>Instance Client ID</b> number, set with the <b>Service Setting &gt;&gt; Instance Client ID</b>  setting in the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> window.  You can use any of the listed  <b>Instance Client ID</b> numbers.  It does not matter. You only need to be certain that each copy of Sierra Chart uses a different  <b>Instance Client ID </b> number.
+        <br><br>
+            This Instance Client ID number is given to TWS when Sierra Chart connects to TWS.</li>
+
+       <li id="AccessingAllTradeOrders"><b>Accessing All Trade Orders from TWS</b> [<a href="#AccessingAllTradeOrders">link</a>]: If you want to have access to all trade orders entered from TWS  as well as orders entered from   Sierra Chart, then you will need to set the <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b> &gt;&gt; Service Setting &gt;&gt; Instance Client ID</b> setting to <b>0</b>.  After changing  this particular setting,  <a href = "index8793.html?page=doc/FileMenu.html#ProcedureToReconnect">reconnect to the data feed</a>.</li>
+
+
+        <li>Set the <a href="index219e.html?page=doc/TimeZone.html" target="_blank" rel="noopener noreferrer">Time Zone</a> setting to the time zone that you want times displayed in.</li>
+
+        <li>Set the <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" target="_blank" rel="noopener noreferrer">Intraday Data Storage Time Unit</a>  to what you require. </li>
+
+
+        <li> Set the <b>Service Setting &gt;&gt; Default Currency Code</b>   to the currency  code that will be specified with stock symbols when a currency code or exchange is not specified with the symbol. This currency code will be used in cases where the exchange is automatically set to SMART.</li>
+
+
+
+        <li> Press <b>OK</b> to close the <b>Data/Trade Service Settings</b> window.</li>
+
+        <li>Uncheck the  <b class = "menu_item">Global Settings &gt;&gt; General Trade Settings &gt;&gt; Use Server Side OCO  Orders  | Use Server Side Bracket Orders</b>    options if you want to have Sierra Chart provide the OCO  and Bracket order management rather than relying upon what Interactive Brokers provides.
+            <br>
+            <br>
+
+            The Interactive Brokers provided bracket order functionality may not work well. Therefore, we recommend keeping   these options  disabled.
+            <br>
+            <br>
+            However, for the ultimate safety, you may want to   enable   these options and rely on the Interactive Brokers functionality because if you lose connectivity to Interactive Brokers, then Sierra Chart cannot properly manage OCO orders.</li>
+
+        <li>Make sure TWS is running. To connect to the data and trading server, select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu.</li>
+
+        <li id="IBResolvingConnectionIssue"><b>Resolving Connection Issue</b> [<a href="#IBResolvingConnectionIssue">link</a>]: If the <b class = "menu_item">Window &gt;&gt; Message Log</b> window opens and displays messages indicating there was an error connecting to TWS, then perform the following steps:
+            <ol>
+                <li> Select <b class="menu_item">File &gt;&gt; Disconnect</b> to prevent further connection attempts.</li>
+
+                <li>Restart TWS  (Interactive Brokers Trader Workstation) and make certain TWS is running. It should be running on the same computer where Sierra Chart  is installed to.</li>
+                <li> Select  <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> to review the Service Settings.</li>
+
+                <li>Carefully review the setup steps above again to be certain all of the settings are correct.  <em class = "GeneralBackgroundHighlightLight">The most important steps to follow are 2 through  19 above</em>. </li>
+                <li> If the Message Log displays  the following   message when attempting to connect to Trader Workstation:
+                    <div class="MessageLog"> Message from IB: Unable connect as the client id is already in use. Retry with a unique client id. IB Error Code: 326. Request ID: -1. </div>
+
+                    Then set the <b>Service Setting &gt;&gt; Instance Client ID  </b> to a different number. This will solve the problem. </li>
+
+
+                <li> Make sure the <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Server</b> in Sierra Chart is set to <b> 127.0.0.1:[port number]</b>.  The port number can be any port number and further information about this is below.</li>
+
+                <li>Be sure to follow the step above to add a <b> Trusted IP Address</b>  in the TWS  API settings (step 9). </li>
+
+                <li> <em>Disable any firewall software you are running</em>. The built-in operating system firewall can be kept enabled, but you may want to try disabling it as well or make sure  it is not blocking TWS or the specified Socket Port.</li>
+
+                <li> If one of the messages in the Message Log says <b>Failed to connect to the data and trade server. Winsock error: (10061) No connection could be made because the target machine actively refused it.</b>, then try using a different socket port. To change the socket port, select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. 
+                    <br> <br>
+                    In the <b>Server Address and Port</b> box enter <b>127.0.0.1:7497</b> (You can use any port number. The port number is after the colon and in this case is 7497). 
+                     <br> <br>
+                    In Interactive Brokers TWS, select <b class="menu_item">Edit &gt;&gt; Global Configuration &gt;&gt; API  &gt;&gt; Settings &gt;&gt; Socket Port</b> and enter 7497 (use the same  port number you have set in Sierra Chart). </li>
+
+
+                <li>Try connecting to the Data and Trading server again in Sierra Chart by selecting <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> on the menu. </li>
+            </ol>
+        </li>
+
+        <li>If there still is an error connecting, then review <a href="indexf71c.html?page=doc/helpdetails1.html#ContactingSupportForConnectionHelp">help topic 1.5</a>.</li>
+
+        <li>To open a <b>Historical Chart</b>, an <b>Intraday Chart</b> or a <b>Trading DOM</b>, select <b class="menu_item">File &gt;&gt; Find Symbol</b> on the menu. Locate the symbol in the lists and press the appropriate button.  Stock symbols are not listed  and have to be manually entered.
+            <br> <br>
+            If you do not see the symbol listed that you want to use, refer to the <a href="indexa93b.html?page=IBSymbols.html"  target="_blank" rel="noopener noreferrer">Interactive Brokers Symbols</a> page to determine the proper symbol format and <em>manually type</em> the properly formatted symbol into the  <b>Selected Symbol</b> box on the <b>Find Symbol</b> window  and then open a chart or Trade DOM.
+            <br>
+            <br>
+            In the case of stock symbols, some of them will require the format which  <em>specifies both the exchange and primary exchange</em>. This is true in the case of MSFT and many other symbols. Refer to <a href="indexa93b.html?page=doc/IBSymbols.html#Stock"  target="_blank" rel="noopener noreferrer">Interactive Brokers Stock Symbol Format</a>.
+            <br> <br>
+            You can also yourself add symbols which will be listed in the <b>Find Symbol</b>  window, through the  <a href="index4404.html?page=doc/GlobalSymbolSettings.php" target="_blank" rel="noopener noreferrer">Global Symbol Settings</a>.
+        </li>
+
+
+
+        <li><b>Symbol Limits</b>: Interactive Brokers may limit the number of symbols you can receive data on at the same time. This limit may be increased based on your trading volume. 
+         <br>
+         <br>If you encounter this limit, then refer to <a href = "index2d36.html?page=doc/ChartDataFiles.html#ReducingNumberOfSymbolsBeingTracked">Reducing Number of Symbols Being Tracked</a>.
+        </li>
+
+        <li><b> Historical Order Fills</b>: Upon a connection to the Interactive Brokers Trader Workstation, Sierra Chart  will request 10 days of historical order fills for all of the accounts available on the logged in instance of Trader Workstation.  This is to insert any missing order fills into the Sierra Chart Trade Activity Log for trade reporting.  However, you may not receive 10 days of historical order fills upon the connection.  If you do not, then open the Trade Log in Trader Workstation (TWS) and while the Trade Log is displayed, reconnect to TWS from Sierra Chart by selecting <b class = "menu_item">Disconnect</b> and <b class = "menu_item">Connect to Data Feed</b> on the <b class = "menu_item">File</b> menu.
+            <br>
+            <br>
+            To receive historical order fills, you also need to have   <b class = "menu_item">Global Settings  &gt;&gt; Data/Trade Service Settings &gt;&gt;  Service Setting &gt;&gt; Download Historical Order Fills on Connect</b> set  to True.</li>
+
+        <li> If you require EUREX data, it is important to refer to <a href = "indexa1cf.html?page=doc/Packages.php#EUREXHistoricalAndRealtimeData">EUREX Historical and Real-time Data</a>.</li>
+        
+        <li>Continue with step number 3 on the <a href="index03a9.html?page=doc/GettingStarted.php#OpenChart">Getting Started</a> documentation page.</li>
+    </ol>
+</div>
+
+<div class="h2">
+    <h2 id="MarketDataNotSubscribed">Market Data Not Subscribed Through Interactive Brokers</h2>
+    <div class="member-link">[<a href="#MarketDataNotSubscribed">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In order to receive market data for charts and quote lines within Sierra Chart, it is necessary you are subscribed to the exchange that the Symbol is listed on. If market data is not subscribed, you will see error messages similar to the following in the Sierra Chart Message Log and you will not receive historical and/or real-time data for the symbol:</p>
+
+    <div class="MessageLog">Message from Interactive Brokers: Requested market data is not subscribed.Error&amp;DTB/IND/Top&DTB/IND/Top. Interactive Brokers Error Code: 354. Request ID: 1. Symbol: DAX-I-DTB.</div>
+    <div class="MessageLog">Message from Interactive Brokers: Requested market data is not subscribed.YM SEP'15/TOP/ALL. Interactive Brokers Error Code: 354. Request ID: 1. Symbol: YM-201509-ECBOT.</div>
+    <div class="MessageLog">HD Request # 2 | Message from Interactive Brokers: Historical Market Data Service error message:No market data permissions for DTB IND. Interactive Brokers Error Code: 162. Request ID: 2.</div>
+    <div class="MessageLog">HD Request # 3 | Message from Interactive Brokers: Historical Market Data Service error message:No market data permissions for NASDAQ IND. Interactive Brokers Error Code: 162. Request ID: 27.</div>
+    <div class="MessageLog">HD Request # 3 | Message from Interactive Brokers: Requested market data is not subscribed. Interactive Brokers Error Code: 354. Request ID: 28.</div>
+    <div class="MessageLog">Message from Interactive Brokers: Invalid Real-time Query:No market data permissions for GLOBEX FUT. Interactive Brokers Error Code: 420.</div>
+    <div class="MessageLog">Message from IB: Requested market data is not subscribed. Delayed market data is not enabled. IB Error Code: 10168. Request ID: 1. Symbol: ES-201706-GLOBEX.</div>
+
+    <p>In this case you will need to contact Interactive Brokers and subscribe to market data from the particular exchanges mentioned in these messages.</p>
+
+    <p>After this is done, restart Trader Workstation. Sierra Chart will establish a new connection  and you should then receive market data.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="MarketDataProblems">Interactive Brokers Market Data Problems</h2>
+    <div class="member-link">[<a href="#MarketDataProblems">Link</a>] - [<a href="#top">Top</a>]</div>    
+
+    <p>There are a wide array of issues you will and can potentially have with Interactive Brokers market data. They are as follows:</p>
+
+    <ol>
+        <li> Missing historical data (moderately common) </li>
+        <li> Slow historical data downloading (common)</li>
+        <li>Real-time data not updating (uncommon)</li>
+        <li> Incomplete price and volume data ( Completely normal and routine. Happens all the time.)</li>
+        <li> Confusing and complex symbology which can change from time to time (moderately common)</li>
+        <li> No real-time data (Moderately common and depends upon symbol. In particular CFD symbols.)</li>
+
+        <li>  Inaccurate Bid Volume and Ask Volume  which will affect studies  which depend upon these which  includes the   <a href="indexc289.html?page=doc/StudiesReference.php&amp;ID=292&amp;Name=Cumulative_Delta_Bars_-_Volume"  target="_blank" rel="noopener noreferrer">Cumulative Delta Bars</a> studies (100% occurrence all the time).</li>
+    </ol>
+
+    <p>These issues will be solved by using either of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> which integrates with Interactive Brokers trading services. Not all of the exchanges Interactive Brokers supports, do the Sierra Chart Data Feeds provide data for, but they do cover the most common ones.</p>
+
+    <p>If you are using the Sierra Chart <a href="index5ee6.html?page=doc/NumbersBars.php"  target="_blank" rel="noopener noreferrer">Numbers Bars</a>  or the  <a href="indexc289.html?page=doc/StudiesReference.php&amp;ID=292&amp;Name=Cumulative_Delta_Bars_-_Volume"  target="_blank" rel="noopener noreferrer">Cumulative Delta Bars</a> studies, then the Interactive Brokers data feed is <em>completely unacceptable</em> for these particular studies and they will be totally inaccurate to the point where it is completely silly to look at the results. Instead, for accuracy, you must use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> rather than the Interactive Brokers data feed and provide these studies accurate data.</p>
+</div>
+
+
+<div class="h2">
+    <h2 id="MultipleTWSInstances">Running Multiple TWS Instances</h2>
+    <div class="member-link">[<a href="#MultipleTWSInstances">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>This section is relevant if you want to run multiple TWS instances when you have two or more Interactive Brokers accounts that you wish to use at the same time. If you simply want to connect multiple copies of Sierra Chart to a single TWS instance,  then you only need to configure each copy of Sierra Chart to work with Interactive Brokers and connect them to the single copy of TWS that is running.  In this case, follow the <a href="#SetupInstructions">Setup Instructions</a> above for each copy of Sierra Chart.</p>
+
+    <p>It is possible to use multiple TWS (Interactive Brokers Trader Workstation) instances and have multiple copies of Sierra Chart using those instances. For example, you can have two instances of TWS running and have two copies of Sierra Chart also running where one is connected to one instance and the other one to the other instance.</p>
+
+    <p>The way this is accomplished is by using different port numbers for each TWS instance.</p> 
+    
+    <p>Select <b class="menu_item">Edit &gt;&gt; Global Configuration &gt;&gt; API &gt;&gt; Settings</b> from the Interactive Brokers TWS software menu. Set a different <b>Port</b> number for each TWS instance. </p>
+    
+    <p>You need to use the same Port number in the Sierra Chart copy that will be connected to  that instance. To set the port number in Sierra Chart,  select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.  </p>
+    
+    <p>In the  <b>Server Address and Port</b> box change the number after the colon ":". This is the port number. Example: <em><b>127.0.0.1:7494</b></em></p>
+</div>
+
+<section class="h2">
+    <h2 id="UsingMultipleSCInstancesWithTWS">Using Multiple Sierra Chart Instances with TWS</h2>
+    <div class="member-link">[<a href="#UsingMultipleSCInstancesWithTWS">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p> This section discusses connecting multiple Sierra Chart copies/installations to Trader Workstation.  </p>
+
+    <p> To have multiple copies of Sierra Chart connected to Interactive Brokers Trader Workstation (TWS),  each  copy of  Sierra Chart needs to be set to a different <b>Instance Client ID</b> number, set with the <b>Instance Client ID</b>  setting in the <b>Service Settings</b> section  of the <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> window.   </p>
+
+
+    <p>You can use any of the listed  <b>Instance Client ID</b> numbers except for 0 which should only be used if you want to access all orders   submitted from any  copy   of Sierra Chart or TWS, in the other instances of Sierra Chart.</p>  
+    
+    <p>Normally you will not want to use 0 unless you have a special requirement for that. If you do use 0 for the  <b>Instance Client ID</b>, only one instance of Sierra Chart  can use 0. If you are not using   0 for the  <b>Instance Client ID </b>, each copy of Sierra Chart   will need to use a <em>different</em>  <b>Instance Client ID </b> number.  </p>
+
+    <p>This Instance Client ID number is given to TWS when Sierra Chart connects to TWS. </p>
+
+    <p>  When each copy of Sierra Chart is connected to TWS, the orders submitted from a particular copy of Sierra Chart are separate from other copies of Sierra Chart.  When an order fills, only that fill execution will be sent to the copy of Sierra Chart that submitted that order.  This keeps trading from different copies of Sierra Chart isolated from each other.  Although they will share Common Trade Position data for each Symbol and Trade Account.</p>
+
+    <p>  If you want to have each copy of Sierra Chart report a different Position for the same Symbol and Trade Account for trading you are doing from that particular copy of Sierra Chart,  then it is necessary to use the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#OrderFillCalculatedPosition">Order Fill Calculated Trade Positions</a>.    This can be set for individual charts/ Trading DOMs or globally.   </p>
+
+    <p> To keep trading isolated   from each copy of Sierra Chart, you may also want to  disable  <b Class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b> <b> &gt;&gt;  Service Settings &gt;&gt; Download Historical Order Fills on Connect</b>. </p>
+
+</section>
+
+<div class="h2">
+    <h2 id="MarketDepth">Market Depth Data</h2>
+    <div class="member-link">[<a href="#MarketDepth">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>There are several features in Sierra Chart which require market depth data. These  include the chart DOM, when it has the Bid Size and  Ask Size columns (<b class = "menu_item">Trade &gt;&gt; Customize Chart/Trade DOM Columns</b>), the <b class="menu_item">Trade &gt;&gt; Draw DOM Graph On Chart</b>feature,  and other features. </p>
+
+    <p>When using any of these features that require market depth, the market depth updates will be automatically started for the symbol of the chart. </p>
+
+    <p>There may be a limit on the number of symbols that can receive market depth data from Interactive Brokers at a time.  This is an Interactive Brokers limitation.  If such a limitation is encountered, you will not get market depth beyond the best Bid and Ask on the additional symbols. </p>
+
+    <p>After you reduce the use of market depth features to a smaller number of charts, then reconnect to the data feed with <b class = "menu_item">File &gt;&gt; Disconnect</b> and <b  class = "menu_item">File &gt;&gt; Connect to Data Feed</b>.</p>
+
+
+</div>
+
+
+<section class="h2">
+    <h2 id="AccessingLevel2_MarketDepthDataForStocks">Accessing Level 2 / Market Depth Data for Stocks</h2>
+    <div class="member-link">[<a href="#AccessingLevel2_MarketDepthDataForStocks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>To access Level  2 data for stocks in Sierra-Chart when connected to  Interactive Brokers Trader Workstation, it is necessary that the symbol the chart is set to  specifies the specific  exchange code  the symbol trades on.  You <em>cannot</em> use  <b>SMART</b> for the exchange code. </p>
+
+    <p>Refer to the <a href="indexa93b.html?page=doc/IBSymbols.html#Stock" target="_blank" rel="noopener noreferrer">stock symbol format</a>. </p>
+
+    <p>For example, if the symbol trades on  ISLAND, then  you can use ISLAND   if that exchange is supported for the symbol.  Refer to the images below  for an example.</p>
+
+
+    <div style="text-align: center;"><a href="../images/interactivebrokersmarketdepthforstocksinsc.png" rel="lightbox"><img src="../images/interactivebrokersmarketdepthforstocksinsc.png" alt="" class="screenshot" loading="lazy" width="400" ></a></div>
+
+
+    <div style="text-align: center;"><a href="../images/interactivebrokersmarketdepthforstocksintws.png" rel="lightbox"><img src="../images/interactivebrokersmarketdepthforstocksintws.png" alt="" class="screenshot" loading="lazy" width="600" ></a></div>
+
+
+
+</section>
+
+<div class="h2">
+    <h2 id="TrueRealTimeData">Using Interactive Brokers True Real-Time Bar Data</h2>
+    <div class="member-link">[<a href="#TrueRealTimeData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <p>The standard Interactive Brokers data feed is a substandard data feed which provides <em>incomplete</em> price and volume data. You may want to use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a> with your Interactive Brokers account as an alternative.</p>
+
+    <p>However, Interactive Brokers provides another data feed that updates every 5 seconds which provides the accurate Open, High, Low, Last, Volume values for a 5 second timeframe.  Sierra Chart supports this data feed. This data is transmitted at the end of the 5 second  timeframe.</p>
+
+    <p>To use this data feed, enable <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service Setting &gt;&gt; Record True Real-Time Data in Intraday Charts</b>. After <em>enabling or disabling</em> this option, it is necessary to select <b class="menu_item">File &gt;&gt; Disconnect</b>  and then <b class="menu_item">File &gt;&gt; Connect to Data Feed</b> for the change to go into effect. </p>
+
+    <p>When <b>Record True Real-Time Data in Intraday Charts</b> is enabled, then  Interactive Brokers True Real-time Bar data will be recorded in all Intraday charts no matter what the symbol, if this type of data is available for the symbol. </p>
+
+    <p>The way that the recording of the True Real-Time Bar data works is that the chart bars will update every 5 seconds using this true real-time data feed. Interactive Brokers transmits these 5 second updates even if there is  <em>no trading activity</em>, so this can be a problem because it can provide misleading information.  </p>
+
+    <p>The Time and Sales data, market depth data, Current Quote data, and the last trade price box on the right side of the chart are updated as the standard Interactive Brokers market data feed provides data. So you will have fast updates with  Time and Sales data, market depth data, Current Quote data, and the last trade price box, and 5 second updates with the chart bars themselves. </p>
+
+    <p> When using the True Real-time Data and this data feed is available for a symbol, the Intraday Chart bars are no longer updated with the standard data feed and instead only from this 5 second data feed.</p>
+
+    <p>The advantage of enabling <b>Record True Real-Time Data in Intraday Charts</b>  is that the Open, High, Low, Close, and Volume values for each bar in the chart are now very accurate. Whereas when this option is disabled, all of these values are less accurate. </p>
+
+    <p>Bid Volume and Ask Volume data are <em>not accurate</em> when using the <b> Record True Real-Time Data in Intraday Charts</b>  option.  However, in the case of Interactive Brokers,  Bid Volume and Ask Volume are not very accurate when not using this option either.</p>
+
+    <p>When using the <b> Record True Real-Time Data in Intraday Charts</b>  option  and a true 5 second data record is received from Interactive Brokers, then you will see 4 trades listed in the Time and Sales window for the symbol. They will have a volume of 0. This represents the Open, High, Low and Last trade prices for a True Real-Time Data record. The timestamps of these trades will be at the beginning of the 5 second timeframe. The including of these trades in the updating of the Time and Sales is necessary for trade order related processing. If you do not wish to see these trades within the Time and Sales window, then select the <b> Settings</b>  menu. Set the <b>Volume >=</b>  setting to 1. Press OK.</p>
+
+    <p><b>Charts Stop Updating</b>: When using True Real-time Bar Data and you notice that the charts stop updating, then you will need to reconnect to the data feed by selecting <b class="menu_item">File &gt;&gt; Disconnect</b>  and then <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.  </p>
+
+    <p>Based on feedback, we have heard that sometimes the true real-time data feed stops  and the only way to restart it is by a reconnection. We have no other solution for this because it is outside of Sierra Chart control.</p>
+
+    <p>When using this True Real-time Data Feed it does not matter what the  <a href="index2c7f.html?page=doc/DataSourceSettings.php#IntradayDataStorageTimeUnit" >Intraday Data Storage Time Unit</a> is set to. The data will always be stored in 5 second units.</p>
+
+    <p> As of version 1473 true real-time data is not used to fill simulated orders and  it is not used for trailing stop orders.  The reason for this is that the data is delayed and can cause unexpected behavior when  trailing stop Attached Orders become active. The basic problem is that five second old data is used to adjust an order which became active at a particular moment in time  using price action which occurred before the order became active. In many cases this will not cause a problem but could be a problem in a fast-moving market.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="AboutInteractiveBrokers">About Interactive Brokers</h2>
+    <div class="member-link">[<a href="#AboutInteractiveBrokers">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Interactive Brokers, a global electronic brokerage firm, provides professional traders, financial advisors, Brokers and institutions low cost execution and clearing services for stocks, options, futures, forex, and bonds. For Interactive Broker's current commissions and information, visit the <a href="http://www.interactivebrokers.com/en/p.php?f=commission" target="_blank" rel="noopener noreferrer" >Interactive Brokers Commissions page</a>. The Interactive Brokers Universal Account allows customers to trade stocks, options, futures, forex, and bonds on over 50 market centers in 14 countries from a single account.</p>
+</div>
+
+<div class="h2">
+    <h2 id="UsingFinancialAdvisorAccounts">Using Financial Advisor Accounts</h2>
+    <div class="member-link">[<a href="#UsingFinancialAdvisorAccounts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p class =  "GeneralBackgroundHighlightLight"> Below is information about using an Interactive Brokers Financial Advisor account with  Sierra Chart. Other than the information here, Sierra Chart support does not provide any support for these types of accounts.  </p>
+
+    <p>The functionality is provided as is and you have to evaluate whether the functionality is useful and whether it works properly for you. Due to the interface provided by Interactive Brokers for Financial Advisor accounts, Sierra Chart cannot have reliable integration to these types of accounts.  Sierra Chart can submit orders  to a Financial Advisor account, but the tracking of Orders and Trade Positions cannot be regarded as reliable. </p>
+
+
+    <p>Sierra Chart supports using an Interactive Brokers Financial Advisor account.  You are able to submit orders from Sierra Chart to your Financial Advisor account.</p>
+
+    <p>To configure Sierra Chart for this, select <b class="menu_item">Global Settings  &gt;&gt; Data/Trade Service Settings</b>. </p>
+
+    <p>Enable the <b>Service Setting &gt;&gt; Enable Financial Advisor Account Settings for Trading</b> option. Fill in the  <b>Service Setting &gt;&gt; Financial Advisor Group/Method/Percentage/Profile</b> fields as you require.  </p>
+
+    <p>These fields  are provided exactly as you have specified, with all orders submitted from Sierra Chart to TWS (Trader Workstation).</p>
+
+    <p>To disable the use of the Financial Advisor account functionality, disable the  <b>Service Setting &gt;&gt; Enable Financial Advisor Account Settings for Trading</b> option.</p>
+
+    <p>The specific text or values to use for the <b>Financial Advisor Group/Method/Percentage/Profile</b> fields are beyond the scope of this document and of Sierra Chart support.  Consult with Interactive Brokers documentation and their support department.</p>
+
+
+    <p>The following are the list  of the fields that are submitted with orders when using a Financial Advisor Account: </p>
+    <ul>
+
+        <li><b>Group</b> </li>
+        <li><b>Method</b> </li>
+        <li><b>Percentage</b> </li>
+        <li><b>Profile</b> </li>
+    </ul>
+
+
+    <p>When using a Financial Advisor account, most likely you will need to rely upon the Sierra Chart calculated Trade Position data instead of the Trade Position data provided by  Interactive Brokers because there may not be  Trade Position data for the particular Trade Account you have selected to trade from within Sierra Chart. To do this, refer to the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#OrderFillCalculatedPosition">Using Order Fill Calculated Positions</a> documentation.</p>
+
+    <p>Based on user feedback, when using a Financial Advisor account you may want to disable <b  class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service Setting &gt;&gt; Download Historical Order Fills on Connect</b>.</p>
+
+</div>
+
+<div class="h2">
+    <h2 id="CurrentHighLowForexData">Current Daily High and Low for Forex Data</h2>
+    <div class="member-link">[<a href="#CurrentHighLowForexData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The current daily High and Low data for the <b>IDEALPRO</b> Forex markets from Interactive Brokers on the real-time data feed may not represent the High and Low for the current date, but instead from a prior day.  </p>
+    
+     <p>This will be most obvious in a Historical Daily chart. To avoid this issue in a Historical Daily chart, go to that chart and select <b class ="menu_item"> Chart &gt;&gt; Chart Settings &gt;&gt; Chart Data</b>  and disable <b> Allow Real-Time Updating of Historical Chart</b>.   </p>
+    
+     <p>This is an Interactive Brokers issue and we have no control over it. Avoid contacting Sierra Chart support about this.</p>
+    
+    <p> A similar issue can also happen with other Interactive Brokers symbols where the low price may be wrong. In this case also disable  <b>Allow Real-time Updating of Historical Chart</b> as explained above. </p>
+</div>
+
+<div class="h2">
+    <h2 id="TradingErrorMessages">Trading Related Error Messages</h2>
+    <div class="member-link">[<a href="#TradingErrorMessages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The following are common error messages that you may see reported in the <b class = "menu_item"> Trade &gt;&gt; Trade Service Log</b> , when making trades through Interactive Brokers from Sierra Chart and their meanings.</p>
+    <ol >
+        <li><b><em>Order Event Warning:Attribute 'Outside Regular Trading Hours' is ignored based on the order type and destination. PlaceOrder is now being processed. Error Code: 2109.</em></b> : This message means that the order will be immediately processed and submitted into the market even if the current time is outside of the Regular Trading Hours for the market.</li>
+
+        <li><b><em>Notice: An overfill UpdateOrder call has occurred.</em></b>: This error message will occur when  using an Interactive Brokers Financial Advisor account.  It is harmless.  While Sierra Chart does have some support for Financial Advisor accounts.  Due to the inherent complexity of these types of accounts, Sierra Chart cannot handle all aspects of them perfectly.  The reason this occurs is that when you   submit an order in a Financial Advisor account, that account may be configured  to submit the order into more than one subaccount. Therefore, there is going to be more than one fill reported for the order.  These additional fills are from the sub accounts.</li>
+
+        <li><b><em>Message from IB: API client has been unsubscribed from account data. IB Error Code: 2100.</em></b>: This message means that the Trade Position data updates have been unsubscribed. It is normal to see this message because Sierra Chart has to unsubscribe and resubscribe to the Trade Position data updates in order to force an update of Trade Position data and when there are multiple trading accounts a user may have. Interactive Brokers has a <em>very poorly</em> designed API when it comes to providing Trade Position data updates.</li>
+
+
+    </ol>
+</div>
+
+<section class="h2">
+    <h2 id="TradingRelatedIssues">Trading Related Issues</h2>
+    <div class="member-link">[<a href="#TradingRelatedIssues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>When using Interactive Brokers you could potentially encounter any of the following trading related issues:</p>
+
+    <ul>
+        <li> Canceled order stays in a Pending Cancel state.</li>
+        <li> Submitted order stays in an Order Sent state.  This usually happens when the symbol itself is not fully specified according to TWS requirements. For example, some stock symbols require a much more <a href="indexa93b.html?page=doc/IBSymbols.html" Target="_blank" rel="noopener noreferrer">complete specification</a> rather than the simple three or four letter stock symbol.  </li>
+        <li> Submitted and accepted order disappears from chart even though it is still working.</li>
+        <li> Current Trade Position is not displayed on chart, Trade Window, or on the <b class = "menu_item">Trade &gt;&gt;  Trade Positions Window</b>. For information about this issue and possible solutions, refer to <a href="#TradePositionLineQuantityDisappearingDisplayingZero">Trade Position Line or Quantity Disappearing or Displaying Zero</a>.</li>
+
+        <li> A  filled order remains in an Open state on the chart.</li>
+
+        <li> A Trade Position Quantity displayed in Sierra Chart does not update and is displaying a wrong Position Quantity. This can also be a problem if you are using the <a href="index7cfb.html?page=doc/TradeStatusWindows.html#OrderFillCalculatedPosition">Order Fill Calculated Position</a> in Sierra Chart.</li>
+        <li> A request for  Open orders  from TWS does not provide the actual open orders and  then the orders  in Sierra Chart are put into a locally canceled state since they are determined to not exist. The orders are not actually canceled though.</li>
+    </ul>
+
+    <p>There are various causes of these issues. From the perspective of Sierra Chart, the general cause is that Interactive Brokers  does not provide the necessary  order data feedback  to maintain a proper state of an order, uses inconsistent symbols, or does not provide the necessary Trade Position data feedback for Positions.</p>
+
+    <p>If you encounter one of these problems, then you will need to contact Interactive Brokers technical support for help with these. They will need to review your Trader Workstation log file. They may not be able to help you with these kinds of issues. Therefore, please consider carefully whether  using Sierra Chart with Interactive Brokers is appropriate.</p>
+
+
+    <p> You could also encounter a condition where a submitted order gets rejected and the Status goes to <b>Error</b> for reasons which are not apparent and not stated by the Trader Workstation API. You will need to contact Interactive Brokers about this. </p>
+
+    <section class="h3">
+        <h3 id="OrderNotTransmitted">Order Not Transmitted</h3>
+        <div class="member-link">[<a href="#OrderNotTransmitted">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p> When an order is submitted from Sierra Chart to Trader Workstation, it is <em>always flagged</em> to be transmitted by Trader Workstation. There never is any other possibility.  </p>
+
+        <p> Therefore, if you see an order in Trader Workstation submitted by  Sierra Chart with a "Transmit" button next to it, then this means that Trader Workstation is set to not transmit the order automatically. Contact Interactive Brokers support for help with this.</p>
+    </section>
+
+    <section class="h3">
+        <h3 id="OrdersEnteredTWSNotAppearSierraChart">Orders Entered from Trader Workstation do Not Appear in Sierra Chart</h3>
+        <div class="member-link">[<a href="#OrdersEnteredTWSNotAppearSierraChart">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>When an order is submitted from Trader Workstation, in order for it to appear within Sierra Chart, it is necessary that <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Service Setting  &gt;&gt; Instance Client ID</b> be set to  <b>0</b>.</p>
+
+        <p> After changing this particular setting <a href="index8793.html?page=doc/FileMenu.html#ProcedureToReconnect" >reconnect to the data feed</a>. </p>
+
+        <p> However, there can be a  difference with the Symbol between a chart and the Symbol in the <b  class = "menu_item">Trade &gt;&gt; Trade Orders Window</b> which will cause both order fills and working orders not to appear in a chart or Trade DOM. </p>
+
+        <p>This is due to the very complex and inconsistent symbology from Interactive Brokers.</p>
+
+    </section>
+    
+    <section class="h3">
+        <h3 id="OrdersNotRespondedToFromTraderWorkstation">Orders Not Responded to from Trader Workstation</h3>
+        <div class="member-link">[<a href="#OrdersNotRespondedToFromTraderWorkstation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> If you submit an order from Sierra Chart and Trader Workstation does not respond to it, the   <b class="menu_item">Trade &gt;&gt; Trade Activity Log</b>   <b>Order Action Source</b> field for the order will indicate   <em><b>Trading server did not acknowledge new order</b></em>, then you need to contact Interactive Brokers about this and give them the exact date, time and time zone of the order submission.   </p>
+        
+        <p>They will need to check the  <a href = "#ProvidingTWSLogFiles">TWS  Log</a> to see what the problem is.  Sierra Chart is not able to know what the issue is in this case. </p>
+
+    </section>
+
+    <section class="h3">
+        <h3 id="TradePositionLineQuantityDisappearingDisplayingZero">Trade Position Line or Quantity Disappearing or Displaying Zero</h3>
+        <div class="member-link">[<a href="#TradePositionLineQuantityDisappearingDisplayingZero">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p class="GeneralBackgroundHighlightLight">If you are an Interactive Brokers user, and you do not see the Trade Position for a particular Symbol and Trade Account listed on the <b class = "menu_item">Trade &gt;&gt; Trade Positions Window</b>  when the Trade Position actually exists for a particular Symbol and Trade Account, or the  Position Quantity is incorrect,  or the Position is <em>displayed temporarily and disappears</em> on a chart, then this section explains why this can happen.</p>
+
+
+
+        <p> There are two reasons why these issues can happen.  One reason is that TWS did not send the position update to Sierra Chart.</p>
+
+        <p> The other reason is that the symbol of the position as it exists in <b class = "menu_item">Trade &gt;&gt; Trade Positions Window</b> is different to the symbol in the chart. If you are using the  <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol" target="_blank" rel="noopener noreferrer">Trade and Current Quote Symbol</a>  in the chart, you need to compare the symbol  in the Trade Positions Window to this particular symbol.  Otherwise, compared to the main symbol of the chart.</p>
+
+        <p>On the  <b class="menu_item">Trade &gt;&gt; Trade Positions Window</b> tab which displays the Positions, you will see <b>Quantity</b> and <b>Service Position Quantity</b> fields.  Normally these will match but could be different for up to 8 seconds.  If the <b>Service Position Quantity</b> remains at 0 when there is actually a nonzero Trade Position for a particular Symbol and Trade Account, then the  Trader Workstation is not transmitting any Trade Position data to Sierra Chart. </p>
+
+        <p>For more information about this subject in general, refer to  <a href="index7cfb.html?page=doc/TradeStatusWindows.html#IncorrectlyReportedTradePositionQuantity" target="_blank" rel="noopener noreferrer">Incorrectly Reported Trade Position Quantity</a>.</p>
+        
+        <p> Also refer to  <a href = "#SymbolDifferencesForPositions">Symbol Differences for Positions</a>. </p>
+
+        <p> Another solution is to use the  <a href="index7cfb.html?page=doc/TradeStatusWindows.html#OrderFillCalculatedPosition" target="_blank" rel="noopener noreferrer">Order Fill Calculated Position</a>. Although with this method you must be very diligent to make sure you have all of the order fills for the Symbol and Trade Account being traded.</p>
+       
+
+        <p>Sierra Chart development and support cannot solve these numerous problems from Interactive Brokers.</p>
+
+        <section class="h4">
+            <h4 id="SymbolDifferencesForPositions">Symbol Differences for Positions</h4>
+            <div class="member-link">[<a href="#SymbolDifferencesForPositions">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Interactive Brokers has inconsistent and complex symbology specifications. It is the position of Sierra Chart, that this is a major fault of the  Interactive Brokers system. There is also the problem where it is possible to use SMART order routing but a Trade Position update will specify the specific exchange  the   symbol was filled on and this creates an inconsistency.  </p> 
+
+            <p>Therefore, based upon the security type, it often is not possible  to match up the symbol provided with a Trade Position update from Interactive Brokers to the symbol of the chart which can be different but essentially the same symbol.  You can see the symbols received from the Position updates in  <b Class = "menu_item">Trade &gt;&gt; Trade Positions Window</b>.</p>
+
+            <p>Therefore, when looking at the symbols on the Trade Positions Window,  you may see a slightly different symbol as compared to the chart. You may also see two symbols listed for the same security. This can be a problem and could potentially be the source of the problem where  you do not see the current Position Quantity on a Chart or Trade DOM. </p>
+            
+             <p> Set the  <a href = "index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol" target="_blank" rel="noopener noreferrer">Trade and Current Quote Symbol</a> setting for the chart to use the same symbol you see on the Trade Positions Window in order to see the  Position on the chart. </p>
+             
+             <p>  Regarding the prior paragraph,  to automatically have a particular  <b>Trade and Quote Symbol</b>  set in the Chart Settings for a  Symbol, then add that  Symbol to the <a href = "index4404.html?page=doc/GlobalSymbolSettings.php">Global Symbol Settings</a> if it is not already listed there. And set the <b>Trade and Quote Symbol</b> setting to the particular <b>Trade and Quote Symbol</b> you want to use for that Symbol.   In this case the <b>Trade and Quote Symbol</b>  will automatically be set in the   <b class="menu_item">Chart &gt;&gt; Chart Settings</b> window when the symbol of the chart is changed to that Symbol.</p>
+
+            <p>Also, due to the substandard and complex design of the TWS API,  you may see the Symbol for a particular Trade Position display as a number only on the <b>Trade Positions Window</b>. This should only be for a short period of time. Less than about 10 seconds. </p>
+        </section>
+
+
+        <section class="h4">
+            <h4 id="RecentReviewOfTWSNotProvidingTradePositionData">Recent Review of TWS Not Providing Trade Position Data </h4>
+            <div class="member-link">[<a href="#RecentReviewOfTWSNotProvidingTradePositionData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p> Recently, back sometime in 2016, there was a very detailed review performed in the case where Trader Workstation was not providing any  Trade Position updates related to order fills and when the Trade Position in general changes for a symbol.</p>
+
+            <p>  The TWS log files were examined and showed that Sierra Chart did request Position and Account updates.  However, TWS just simply was not sending Position updates any  time there was an order fill. This was confirmed by Interactive Broker Technical support as well. </p>
+
+            <p>They recommended that we delay  the starting of Position and Account   updates after connecting to Trader Workstation  and they indicated that the delay only needed to be about half a second. As is standard procedure, Sierra Chart always waits 5 seconds   before the requesting and starting of   Account updates.   So even with this  long of a delay, it has been shown  in many instances, that TWS simply just will not process the Account updates and  fails to send any Trade Position  updates when they should be  sent as they occur. </p> 
+
+            <p>And in any case, there should not be a reason for any delay.   If TWS for whatever reason cannot handle  the Account  updates request immediately,  it just has to remember the request and process it when it can.  </p>
+
+            <p>  Finally, for us to even have to write this  information for our users after a decade   or more of this problem, is beyond belief.  And even if in the rare hypothetical case, we have made some kind of mistake with the requesting or processing of Trade Position  data  in relation  to the TWS API, the very fact that we cannot even get this right after more than   15 years, shows just how poorly designed the TWS API is.  Do you see this documentation written for any other supported Trading service? Of course you do not since they do not have this kind of problem.</p>
+
+            <p> We want to make it clear though, that we ourselves have not experienced the problem of not receiving Trade Position updates from Trader Workstation through a demo account. It consistently has worked properly. And we estimate the incidence rate of this problem, is less than 5% based on user feedback.</p>
+        </section>        
+    </section>
+</section>
+
+
+<div class="h2">
+    <h2 id="IBHistoricalDataIssues">Interactive Brokers Historical Data Issues and Solutions</h2>
+    <div class="member-link">[<a href="#IBHistoricalDataIssues">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+    <div class="h3">
+        <h3 id="IBHDGeneralInformation">General Information</h3>
+        <div class="member-link">[<a href="#IBHDGeneralInformation">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>When using Interactive Brokers, the required historical chart data is downloaded  either entirely from Interactive Brokers or from <a href = "index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Sierra Chart Real-time Data Feeds</a>. It is either completely from one or the other source.</p>
+
+        <p>You can experience many problems when this historical data is downloaded from the Interactive Brokers system. The Interactive Brokers historical data system is not always reliable and works as you would expect.  This historical data is also called <em>backfill</em>. </p>
+
+
+        <p>You may experience a problem where the Interactive Brokers backfill system does respond, but does <em>not</em> give you data and this is known as a  <span style="background-color: #FFFF00"><b>pacing violation</b></span>  or possibly the data is just not available.  For information about pacing violations, refer to the <a href="#PacingViolations">Pacing Violations</a> section.</p>
+
+
+        <p>You may experience a problem where historical data is not downloaded at all because  the Interactive Brokers  historical data system  does not respond resulting in both a delay with chart updating and missing data.  This is called a Timeout and how to deal with it is explained in the <a href="#IBHDTimeOuts">No Response When Downloading Historical Data  and Timeouts</a> section.</p>
+
+        <p>Avoid making postings on our Support Board about the possibility that the problems are with Sierra Chart. <em>They are not</em>, unless Interactive Brokers has made changes to their historical data system that require us to make changes. Also, do not assume that just because you see a problem with one Sierra Chart version and not in another, that somehow it is a Sierra Chart problem. The problem is simply intermittent and what you see is simply coincidental, or the relevant settings are different.</p> 
+
+        <p>Interactive Brokers is a broker and not a data provider. Review the information in this section about historical data issues from Interactive Brokers.  We have done our best to handle the limitations of Interactive Brokers data, however you still will encounter issues.</p> 
+
+        <p>If you require very reliable and complete historical and real-time data, then the very best choice is to use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> which is fully integrated with Interactive Brokers trading.</p>
+
+        <p>Although you may see a chart in  TWS and you may not get a chart in Sierra Chart,  does <em>not</em> at all imply there is something wrong with Sierra Chart. Their API simply is not delivering the data being requested for various reliability and technical reasons such as differences with request parameters.  </p>
+
+        <p>Sierra Chart also employs special methods to filter out bad data to ensure reliable charts.  It is for this reason (although very unlikely in almost all cases) that you may not see data in Sierra Chart compared with other programs.</p>
+    </div>
+
+    <div class="h3">
+        <h3 id="PacingViolations">Pacing Violations</h3>
+        <div class="member-link">[<a href="#PacingViolations">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Interactive Brokers has limits on the amount of historical data you can download during a short period of time. In the Sierra Chart Message Log opened with <b class="menu_item">Window&gt;&gt;  Message Log</b>,  you may see messages that contain the words <span style="background-color: #FFFF00"><b>pacing violation</b></span>. </p>
+
+        <p>This  message is from Interactive Brokers and it indicates the limit has been exceeded.  There are several different pacing violation rules that Interactive Brokers has.  If you get this error, it means you have violated one of their rules.  When you get this error, there are some things you can do to minimize it. Follow these instructions:</p>
+
+        <ol>
+
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Intraday File Update List</b> and remove  any symbols that are expired or you are no longer interested in, from that  list.</li>
+
+            <li>Close any charts you have open in open chartbooks for expired futures contracts, so there is not any unnecessary downloading. Interactive Brokers will still give you a <span style="background-color: #FFFF00"><b>pacing violation</b></span> for historical data requests that return no data.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Data/Trade Service Settings</b>.</li>
+
+            <li>In the list of Service specific settings on the left, set the <b>Service Setting &gt;&gt; Maximum Historical Intraday Days to Download Limit</b> to 15 days or less. <em>The higher this number is set to, the longer historical data will take to download.</em>.  You must keep it to a small number to minimize pacing violations and avoid a long time to download historical data. </li>
+
+            <li>Enable <b>Allow Support for Sierra Chart Data Feeds</b> to use Sierra Chart Historical Data for major futures contract symbols and US stock symbols for Intraday charts.  Sierra Chart Service Package 3 or higher is required for this. Data for Historical Daily charts for major futures contract symbols,  major  index symbols, and US stocks symbols, will always be downloaded from the Sierra Chart Historical Data service if on Service Package 3 or higher.</li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b> and wait a few minutes for the pacing violation condition to be removed by Interactive Brokers.</li>
+
+
+            <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b></li>
+
+            <li>In the case of Intraday charts, follow the  <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#RetryDownloadDataInChart">Retrying the Download When There is Data in the Chart</a> instructions to re-download the data in the chart to recover missing data.</li>
+
+            <li> In the case of Historical Daily charts, follow the instructions in <a href="index5713.html?page=doc/helpdetails6.html#h6.3">Help Topic 6.3</a> to re-download the data in the chart to recover missing data.</li>
+        </ol>
+
+    </div>
+
+    <div class="h3">
+        <h3 id="IBHDTimeOuts">No Response When Downloading Historical Data and Timeouts</h3>
+        <div class="member-link">[<a href="#IBHDTimeOuts">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>This section explains some things you can do to handle a problem where Interactive Brokers Trader Workstation (TWS) does not respond to historical data requests. Eventually this leads to the historical data request timing out and results in missing data in the chart. In the Sierra Chart Message Log, you will see a phrase that says  <b>The download timed out</b> in a line for the Historical data requests. </p>
+
+        <p>The first thing that you should do is to make certain that you have the minimum amount of charts open and that the symbols of all of those charts are valid and current Interactive Brokers symbols.  If you are using an incorrect symbol, then potentially this can lead to this problem.  After you have closed some charts for symbols that you do not need or with invalid or expired symbols, then it is necessary to reconnect to the data and trade server by selecting <b  class="menu_item">File &gt;&gt; Disconnect</b> and then <b  class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</p>
+
+
+        <p>Make sure the <b> Historical Data Timeout Time In Minutes</b> in <b class="menu_item">Global Settings &gt;&gt; Data / Trade Service Settings</b> is set to a reasonable time. We recommend 3 minutes. </p>
+
+        <p>When you see your charts say <b> <em>Waiting to Download</em> </b> or <b><em>Downloading Historical Data</em></b>, and there is no response for a while, then <em>restart Interactive Brokers Trader Workstation (TWS)</em>. Be sure you do this within 3 minutes (default) before the timeout occurs.  After restarting TWS, Sierra Chart will then reconnect to TWS. <p>
+
+
+        <p>When a download timeout does occur, the  historical data download will fail for the symbol currently having historical data downloaded and all the other symbols will have the download canceled for them.  This occurs if <b>Cancel Active Backfill Requests on Timeout</b> in <b class="menu_item">Global Settings &gt;&gt; Data / Trade Service Settings</b> is checked. If it is unchecked, then the remaining symbols will not have their pending downloads canceled and the historical data downloads will continue.  However, this may be an excessively long time if the Interactive Brokers system does not respond, which is the reason why we recommend keeping that option enabled. </p>
+
+
+        <p>If you are missing historical data in your charts,  refer to the <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html">Retrying Downloading of Intraday Data</a> section and help topic <a href="index5713.html?page=doc/helpdetails6.html#h6.3">number 6.3</a> for instructions to retry the download for Intraday and Historical charts respectively.</p>
+
+    </div>
+
+    <div class="h3">
+        <h3 id="SlowDownloading">Slow Historical Data Downloading</h3>
+        <div class="member-link">[<a href="#SlowDownloading">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>Downloading historical data from Interactive Brokers is a slow process to avoid <a href="#PacingViolations" >Pacing Violations</a>. Also the Interactive Brokers system may respond slowly to historical data requests.</p>
+
+
+        <p>If you see <b> <em>Waiting to Download</em></b>  or <b> <em>Downloading Historical Data. Bars may not appear until done.</em></b> displayed on a chart or charts for an extended time, then follow these instructions:</p>
+
+        <ol>
+            <li> Follow the instructions to <a href="#UsingSierraChartHistoricalData">Use the Sierra Chart Historical Data Service</a>. </li>
+
+            <li>Go to each chart you have open in each of the open Chartbooks and make sure the symbol of it is a valid and actively trading symbol. If it is not a valid symbol, then close the chart by selecting <b class="menu_item">File &gt;&gt; Close Active Window</b>. 
+                <br> <br>
+                The easiest way to go through all of the charts in all of the open Chartbooks is to use  <b Class = "menu_item">Window &gt;&gt; Windows and Chartbooks</b>.</li>
+
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>.</li>
+
+            <li>In the list of settings on the left, set the <b>Service Setting &gt;&gt; Maximum Historical Intraday Days to Download Limit</b> to  <em>15 days or less</em>.</li>
+
+            <li> Set <b>Service Setting &gt;&gt; Download 5 Seconds Historical Intraday Data </b> to <b>False</b>. </li>
+
+            <li>Press <b>OK</b>.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+            <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+        </ol>
+
+
+    </div>
+
+    <div class="h3">
+        <h3 id="UsingSierraChartHistoricalData">Using Sierra Chart Historical Data</h3>
+        <div class="member-link">[<a href="#UsingSierraChartHistoricalData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+
+        <p>When using Interactive Brokers, in order for the historical data in a chart to come  from the Sierra Chart Historical Data servers  which provide very fast and reliable historical data, it is necessary to use the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php">Denali Exchange Data Feed</a>.</p>
+
+        <p> Follow the instructions below to use Sierra Chart provided historical data in your charts for supported symbols.</p>
+
+        <ol>
+
+            <li>Go to the <a href = "index2530.html?page=doc/DenaliExchangeDataFeed.php" target="_blank" rel="noopener noreferrer">Denali Exchange Data Feed</a> page and read through the information and follow the set up instructions on that page for the exchange or exchanges you want to use. Not all exchanges are supported but the most common ones are.</li>
+         
+
+            <li>Follow the instructions to  <a href="index4404.html?page=doc/GlobalSymbolSettings.php#UpdateSettingsSteps" target="_blank" rel="noopener noreferrer">Update the Symbol Settings</a>. This is an important step to ensure Sierra Chart has the correct Symbol Settings to route data requests to the <b>Denali Exchange Data Feed</b>.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Disconnect</b>.</li>
+
+            <li>Select <b class="menu_item">File &gt;&gt; Connect to Data Feed</b>.</li>
+
+            <li> Open a chart through  <b Class = "menu_item">File &gt;&gt; Find Symbol</b>. In the case of futures contracts, you must use one of the listed symbols to use the historical and real-time data provided by the <b>Denali Exchange Data Feed</b>.  Not all of the listed symbols support this data feed. However, if the  futures symbol is not listed, then definitely the symbol does not support  using the Denali Exchange  Data feed</b>. 
+                <br> <br>
+                If the symbol in an existing  futures contract chart is not using one of the symbols listed in <b Class = "menu_item">File &gt;&gt; Find Symbol </b>, then to change the symbol follow the  <a href="indexa1a5.html?page=doc/SwitchingSymbols.html" Target="_blank" rel="noopener noreferrer">Changing the Symbol of a Chart</a> instructions. </li>
+
+            <li>Retry downloading the Intraday chart data again.  To do this, go to the Intraday chart and select  <b class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b>. This only needs to be done once per symbol. For further details, refer to the <a href="indexcf3b.html?page=doc/HistoricalIntradayData.html#RetryDownloadDataInChart" Target="_blank" rel="noopener noreferrer">Retrying the Download When There is Data in the Chart</a> section.</li>
+        </ol>
+    </div>
+    
+    <section class="h3">
+        <h3 id="DownloadingMoreDaysOfHistoricalDataDirectlyFromInteractiveBrokers">Downloading More Days of Historical Data Directly from Interactive Brokers</h3>
+        <div class="member-link">[<a href="#DownloadingMoreDaysOfHistoricalDataDirectlyFromInteractiveBrokers">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+         <p>Follow the instructions below to download more historical Intraday data from Interactive Brokers for symbols where historical data  is obtained only from Interactive Brokers rather than the Sierra Chart Historical Data Service. </p>
+
+        <ol>
+
+            <li>Select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>. </li>
+            <li> Increase the   <b>Service Setting &gt;&gt;  Maximum Historical Intraday Days to Download Limit</b> setting to a reasonable number.   The higher this number is set, the longer historical data will take to download. </li>
+            <li>Press OK.</li>
+            <li> Re-download the data in the Intraday chart by selecting  <b class="menu_item">Edit &gt;&gt; Delete All Data and Download</b>. This only needs to be done once per symbol. </li>
+       </ol>
+
+    </section>
+    
+  
+    <div class="h3">
+        <h3 id="SupportPolicyIBHistoricalData">Support Policy Regarding Interactive Brokers Historical Data</h3>
+        <div class="member-link">[<a href="#SupportPolicyIBHistoricalData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>Depending upon the symbol and your Sierra Chart service package, historical data may come partially from the <b>Sierra Chart Historical Data Service</b> and  <em>partially</em> from the Interactive Brokers historical data system. Or fully from the Interactive Brokers historical data system.  </p>
+
+        <p>In the case where data is partially coming  from the Interactive Brokers data system, usually this is only about 10 to 15 minutes of data. The majority of data will come from the Sierra Chart Historical Data Service.</p>
+
+        <p> Only data for major futures contracts, US stocks and some index symbols comes from the Sierra Chart Historical Data service. </p>
+
+        <p>If you are encountering a historical data problem involving data from the Interactive Brokers historical data system and you have received at least 15 days  of current historical Intraday data  or 6 months of historical Daily data, then as a matter of policy Sierra Chart support will <em>not provide any help</em> for the problem you are having. </p>
+
+        <p>There are several choices you have in this particular case. Use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> if it provides data for the particular symbol you are having Interactive Brokers market data problems with. Live with the problem. Use another <a href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">supported Trading service</a>. Or discontinue use of Sierra Chart.</p>
+
+        <p>Also keep in mind that only major futures contracts have Continuous Futures Contract Rollover rules defined for them. Therefore, the  <a href="index5c14.html?page=doc/ContinuousFuturesContractCharts.html" >Continuous Futures Contract Chart</a> feature will not work with all futures markets unless the rollover rules are defined for them.</p>
+    </div>
+</div>
+
+<div class="h2"> 
+    <h2 id="IncorrectTimeZone">Missing Data Due to Incorrect Time Zone Settings</h2>
+    <div class="member-link">[<a href="#IncorrectTimeZone">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>If you find that you are consistently missing historical data from your charts or the timestamps of chart bars are not correct, then you may have incorrect Time Zone settings.  You need to have the correct Time Zone setting in Sierra Chart and in the operating system. It is also imperative that your computer's clock is accurately set.  For complete information, refer to <a href="index3e87.html?page=doc/helpdetails38.html">help topic 38</a>.
+    </p>
+
+</div>
+
+<div class="h2">
+    <h2 id="IBErrorStatusMessages">Interactive Brokers Market Data Error/Status Messages</h2>
+    <div class="member-link">[<a href="#IBErrorStatusMessages">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Data Feed Messages from Interactive Brokers with error codes 2104, 2106, 2107 displayed in the Sierra Chart Message Log indicate the status of market data connections to their servers.  They are informational messages from Interactive Brokers.  Below are examples of these messages and descriptions.</p>
+
+    <p><b>Message from Interactive Brokers: Market data farm connection is broken:usfuture. Interactive Brokers Error Code: 2103. Request ID: -1.</b> (This message indicates the connection to the US future market data farm is broken.)</p>
+
+    <p><b>Message from Interactive Brokers: Market data farm connection is OK:usfuture. Interactive Brokers Error Code: 2104. Request ID: -1.</b> (This message indicates the connection to the US future market data farm is now OK. If this message follows the message above, then the connection is now OK.)</p>
+
+    <p><b>Message from Interactive Brokers: Market data farm connection is inactive but should be available upon demand.usfarm.us. Interactive Brokers Error Code: 2108. Request ID: -1.</b></p>
+
+</div>
+
+<div class="h2">
+    <h2 id="IBDailyHistoricalData">Interactive Brokers Historical Daily Data</h2>
+    <div class="member-link">[<a href="#IBDailyHistoricalData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In Sierra Chart, you have the  option of downloading historical Daily data from Interactive Brokers as 24 hour bars or regular trading session only bars.   </p>
+
+    <p>However, this option will not work when the symbol is mapped to the <a href="index765f.html?page=doc/SierraChartHistoricalData.php" >Sierra Chart Historical Data Service</a>. The data from that service will always contain the full 24 hour of trading for each Daily bar unless the symbol is a stock.</p>
+
+    <p>To change the setting to download regular trading hours Daily bars, select <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings</b>  on the menu. If the option <b>Service Setting &gt;&gt;  Download Regular Trading Hours Bars (Daily Bars Only)</b> is set to <b>True</b>, Sierra Chart will only request the regular trading hours  Daily bar data. </p> 
+
+    <p>Otherwise, a request for the standard 24-hour Daily bar data will be made.</p>
+
+    <p> If you made a change to the <b>Download Regular Trading Hours Bars (Daily Bars Only)</b> setting, then you need to re-download the data in the Historical Daily charts  to get the regular trading hours bars. You need to do this only <em>once</em> for each symbol. To do this go to a Historical Daily chart and select <b Class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b>. This only needs to be done once for each symbol.</p>
+
+
+</div>
+
+
+<div class="h2">
+    <h2 id="TimeAndSalesData">Time and Sales Window Data</h2>
+    <div class="member-link">[<a href="#TimeAndSalesData">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>The data that you see for a symbol in the Time and Sales window when using Interactive Brokers consists of 3 categories of data.</p>
+
+
+    <p>The first category of data are normal  Interactive Brokers trade messages for a symbol. There is no assurance that this data is complete from Interactive Brokers and <em>we cannot help with it</em>.</p>
+
+    <p>The second category of data is trades which are inserted by Sierra Chart   in order to make the volume for chart bars match the total Daily Volume for the symbol. This is documented in the <a href="index2d36.html?page=doc/ChartDataFiles.html#SimulateTradesMatchDailyVolume">Simulate Trades to Match Daily Volume</a> section.</p>
+
+    <p>The third category of data is prices which are from the  <a href="#TrueRealTimeData" >True Real Time Data Feed</a>.</p>
+
+    <p>If Sierra Chart support has referred you to this section, please do not ask us further about discrepancies. We cannot help with them.  And please do not use the argument that you do not see the problem in another program. Such a statement is not relevant to the limitations of the Interactive Brokers substandard data feed. We explain the origin of the data above. You are welcome to use whatever program that meets your requirements. </p>
+
+    <p>One solution to the problem is to use one of the <a href="index2896.html?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php">Real-Time Exchange Data Feeds Available from Sierra Chart</a> instead of the substandard Interactive Brokers data feed.</p>
+</div>
+
+<div class="h2">
+    <h2 id="OrdersDisappear">Orders Disappear after Being Submitted Although They Are Still Open</h2>
+    <div class="member-link">[<a href="#OrdersDisappear">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>In the case when you submit an order from a chart or Trade DOM and the order disappears within about 10 seconds after being submitted, even though the order is still working and has not yet been filled, follow this procedure for help with this:</p>
+
+
+    <ol>
+
+        <li>For the order that disappears, locate the order in the <b class="menu_item">Trade &gt;&gt; Trade Orders Window</b>. Get the <b>Service Order ID</b> for it.</li>
+
+        <li>Send an email to API@interactivebrokers.com and ask them why when a reqOpenOrders call is made through the API, why is there not a response for the order ID ( tell Interactive Brokers the ID you got from the Service Order ID field in Sierra Chart). The fact that there is no response indicates the order is no longer open.</li>
+
+        <li>Interactive Brokers may need to see your TWS log file. They will give you instructions on how to provide that.</li>
+    </ol>
+</div>
+
+<div class="h2">
+    <h2 id="IBStopOrderTriggerMethod">Interactive Brokers Stop Order Trigger Method</h2>
+    <div class="member-link">[<a href="#IBStopOrderTriggerMethod">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>It is possible to specify how Interactive Brokers Simulated Stop and Stop-Limit orders are triggered. This setting can be changed in <b class="menu_item">Global Settings &gt;&gt; Data/Trade Service Settings &gt;&gt; Interactive Brokers Stop Order Trigger Method</b>.</p>
+
+    <p>Changing this setting has no effect upon Stop orders entered directly from TWS.</p>
+
+    <p>The valid values are as follows: </p>
+
+    <ul>
+        <li>0 = The default value. The "double bid/ask" function will be used for orders for OTC stocks and US options. All other orders will used the "last" function.</li>
+
+        <li>1 = use "double bid/ask" function, where stop orders are triggered based on two consecutive bid or ask prices.</li>
+
+        <li>2 = "last" function, where stop orders are triggered based on the last price.</li>
+
+        <li>3 = double last function.</li>
+
+        <li>4 = bid/ask function.</li>
+
+        <li>7 = last or bid/ask function.</li>
+
+        <li>8 = mid-point function.</li>
+
+    </ul>
+</div>
+
+
+<section class="h2">
+    <h2 id="ProvidingTWSLogFiles">Procedure for Providing TWS Log Files</h2>
+    <div class="member-link">[<a href="#ProvidingTWSLogFiles">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below which are based on instructions from Interactive Brokers to provide the Trader Workstation (TWS) log files. </p>
+
+    <ol>
+        <li>In TWS, navigate to <b>Edit &gt; Global Configuration &gt; Settings &gt; API &gt; Settings</b>.</li>
+
+        <li>Then within <b>Setting</b> change the Logging Level to <b>Detail</b>.</li>
+
+        <li>Check the box <b>Create API message log file</b> and hit <b>Apply</b> and <b>OK</b>.
+
+            <div style="text-align: center;"><a href="../images/tws_api_settings.png" rel="lightbox"><img src="../images/tws_api_settings.png" alt="" width="450" class="screenshot" loading="lazy"></a></div>     
+        </li>
+
+        <li>Once the logging levels have been adjusted please restart TWS.</li>
+
+        <li>Now that the adjustments has been made, replicate the issue again.</li>
+        
+        <li>Send by email to Interactive Brokers support a copy of both the TWS and API Log file attached as well as details the specific issue encountered. Both log files are located within C:\JTS folder and it is named log.Day.txt (TWS Log File) and api.clientId.Day.Log (API Log File).</li>
+
+    </ol>
+    
+</section>
+
+<section class="h2">
+    <h2 id="HistoricalRealTimeEquitiesDataVolumeDifferences">Historical and Real-time Stock/Equities Data Volume Differences</h2>
+
+    <div class="member-link">[<a href="#HistoricalRealTimeEquitiesDataVolumeDifferences">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p class="GeneralBackgroundHighlightLight">As of approximately version 2033, the information  in this  particular section is no longer applicable. The volume  data downloaded from Interactive Brokers for  stock/equities  symbols is now actual with this version and higher.   </p>
+    
+    <p>Update with <b class="menu_item">Help &gt;&gt; Download Current Version</b>. </p>
+     
+    <p>To re-download the data in your Intraday charts to get the correct  historical volume data, go to the chart and select  <b class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b>. </p>
+    
+    <p> Update:  There was a problem with the historical volume data not getting multiplied  by the specified multiplier  in the TWS contract data  in a version after 2033 but this has been resolved in version 2062 and higher. Make sure you are running  version 2062 or higher. </p>
+    
+    <p> The Volume field for all trades received from Interactive Brokers TWS, is multiplied by the  volume multiplier value from the security definition data from Interactive Brokers for the symbol.</p>
+
+    <p> Also be aware of the <a href="index2d36.html?page=doc/ChartDataFiles.html#SimulateTradesMatchDailyVolume">Simulate Trades to Match Daily Volume</a> setting.  </p>
+
+  
+    <!-- p>The volume data for equities/stocks from Interactive Brokers is in units of 100s. Therefore, a trade of 100 shares will be reported with the volume of 1. As a general rule Sierra Chart does not alter price or volume data from a Data or Trading service. </p>
+
+    <p>In the past, Sierra Chart was modifying stock volume data from Interactive Brokers by multiplying it by 100.  There have been problems associated with this. And newer versions of Sierra Chart do not do this any longer.</p>
+
+    <p>When the <a href="#UsingSierraChartHistoricalData">Sierra Chart Historical Data</a> is set to be used when using the Interactive Brokers trading service, the historical equity/stock data is downloaded from the <b>Sierra Chart Historical Data Service</b> which has volume as actual values. Therefore, the volume values from the Sierra Chart Historical Data Service are higher by 100 times the amount of the Interactive Brokers volume data.</p>
+
+    <p>Not only is there a problem with the volume numbers being too low from Interactive Brokers but the real-time data as well <em>when not using</em> one of the <a href="/index.php?page=doc/RealTimeDataFeedsAvailableFromSierraChart.php" target="_blank" rel="noopener noreferrer">Real-Time Exchange Data Feeds Available from Sierra Chart</a> is incomplete.</p>
+
+    <p>To multiply the volume for stock symbols by 100 so you see the actual volume in <a href="/index.php?page=doc/GettingQuotes.html" >Quote Boards</a>, change the <b>Volume Multiplier</b> to 100 for the stock symbol patterns in the <a href="/index.php?page=doc/GlobalSymbolSettings.php" target="_blank" rel="noopener noreferrer">Global Symbol Settings</a>.</p>
+
+    <p> The solutions for <em>Intraday charts</em> for the above-described problems are as follows:</p>
+    <ol>
+        <li>Activate one of the <a href="/index.php?page=doc/SierraChartRealTimeFuturesStockDataFeed.php"  target="_blank" rel="noopener noreferrer">Sierra Chart Exchange Data Feed</a> on your Sierra Chart account and activate the <b>US Equities</b> exchange. As of this writing the cost of this is 45.50 USD per month which includes the exchange fees. With this data feed, both the historical and real-time data will be used from this data feed  instead of the Interactive Brokers data. Obviously this is a huge improvement and provides you a reliable data feed. This solves the volume inconsistency and provides you very accurate tick by tick data which is necessary for accurate chart bars. The real-time data  is completely matched with the historical data.</li>
+
+        <li>The second solution is to not use the <b>Sierra Chart Historical Data Service</b> and rely completely upon the Interactive Brokers historical data. To do this:
+            <ol>
+                <li>Select <b class = "menu_item">Global Settings &gt;&gt; Data/Trade Service Settings </b>.</li>
+
+                <li>Uncheck <b>Allow Support for Sierra Chart Data Feeds</b>. (This setting only applies to Intraday Charts)</li>
+
+                <li>Press <b>OK</b>.</li>
+            </ol>
+        </li>
+
+        <li>When not using the <b>Sierra Chart Historical Data Service</b>, in the stock charts you will want to multiply the volume by 100. To do this select <b class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; </b>. Set the <b>Volume/Open Interest Multiplier</b> to <b>100</b>. Do this for each stock chart. 
+            <br> <br>
+            This <b>Volume Multiplier</b> will be reset back to the default of 1 when changing the symbol of the chart. To prevent this, change the <b>Volume Multiplier</b> to 100 for the stock symbol patterns in the  <a href="/index.php?page=doc/GlobalSymbolSettings.php" >Global Symbol Settings</a>.
+        </li>
+
+        <li> After performing either of the above steps, it is necessary to re-download the data in your Intraday charts to make the historical volume data completely consistent. To do this, go to the chart and select  <b class = "menu_item">Edit &gt;&gt; Delete All Data and Download</b>. This only needs to be done <em>once</em> per symbol.</li>
+
+        <li>Do not contact Sierra Chart support wanting some other solution to the problem because we have no other solution to offer. If you have any questions about the above, let us know.</li>
+    </ol>
+-->
+</section>
+
+<section class="h2">
+    <h2 id="UsingSCForexDataAndTradeThroughIBAccount">Using Sierra Chart Historical and Real-time Forex Data and Trade through Interactive Brokers Account</h2>
+    <div class="member-link">[<a href="#UsingSCForexDataAndTradeThroughIBAccount">Link</a>] - [<a href="#top">Top</a>]</div>
+
+    <p>Follow the instructions below to use the Sierra Chart   <a href = "indexc82f-2.html?page=doc/SCRealTimeFOREX.php">Historical and Real-time Forex Data</a>  and send trade orders to your Interactive Brokers account. </p>
+
+    <p>The real-time data which updates the chart will be from the Sierra Chart Forex data feed. The real-time data which updates the last trade price box on the chart and the current Bid and  Ask data will come from Interactive Brokers Trader Workstation.  </p>
+    
+    <p>This way you will always  see the accurate current pricing from IB but have the chart bars based upon a better data feed.</p>
+
+    <ol>
+        <li>Follow the <a href="#SetupInstructions">Setup Instructions</a> on this page to connect Sierra Chart to your Interactive Brokers account.  Skip this step if this has already been done.</li>
+
+        <li>Select  <b Class = "menu_item">File &gt;&gt; Find Symbol</b>.</li>
+
+        <li> In the  <b>Find Symbol</b> window expand the <b>Forex - FXCM</b> list. <em>Not</em> the IB Forex (For Trading) list.</li>
+
+
+        <li>Select the particular Forex symbol that you want to chart and trade  and open a  chart for it by pressing the <b> Open Intraday Chart</b> or <b>Open  Historical Chart</b> button.</li>
+        <li> Select  <b Class = "menu_item">Chart &gt;&gt; Chart Settings &gt;&gt; Symbol</b>. </li>
+        <li> Select the <b>Trade and Current Quote Symbol</b> field.  It should then be in edit mode. </li>
+        <li>Press the <b>Find</b> button beside the <a href="index4cf4.html?page=doc/ChartSettings.html#TradeAndCurrentQuoteSymbol" target="_blank" rel="noopener noreferrer">Trade and Current Quote Symbol</a> edit box. </li>
+        <li> Expand the <b>IB Forex (For Trading)</b> list. Choose the corresponding Interactive Brokers symbol. For example: <b>CAD.JPY-CASH-IDEALPRO</b> corresponds to <b>CADJPY</b>. </li>
+        <li> Press  <b>OK</b>.</li>
+        <li> Press  <b>OK</b> to close the Chart Settings window.</li>
+        
+        <li> When you submit orders from the chart, they will use the Interactive Brokers symbol specified in the  <b>Trade and Current Quote Symbol</b> edit box.</li>
+
+    </ol>
+</section>
+
+
+<section class="h2">
+    <h2 id="InteractiveBrokersModificationOfLimitPriceOfStopLimitOrders">Interactive Brokers Modification of Limit Price of Stop-Limit Orders</h2>
+    <div class="member-link">[<a href="#InteractiveBrokersModificationOfLimitPriceOfStopLimitOrders">Link</a>] - [<a href="#top">Top</a>]</div>
+    
+    <p>When submitting a <a href = "index783f.html?page=doc/OrderTypes.html#StopLimit">Stop-Limit</a> order from Sierra Chart,  and you find that the Limit price of that order  no longer has an offset to the Stop price matching the offset that you specified when the order was submitted,  then this means that it was modified by Interactive Brokers.</p>
+    
+    <p>  <em>We cannot provide any help with this condition</em>.  If you have been referred to this section, then you need to contact Interactive Brokers about this  or consider using another  <a href = "indexfda3.html?page=doc/SupportedDataAndTradingServices.php">supported Trading service</a> other than Interactive Brokers.  </p>
+    
+</section>
+
+<hr><p>*Last modified Wednesday, 28th June, 2023.</p>
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/InteractiveBrokers.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:56:33 GMT -->
+</html>  

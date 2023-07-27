@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+    
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudiesReference.php&ID=133 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Sierra Chart is a professional Trading platform for the financial markets. Supporting Manual, Automated and Simulated Trading." >
+        <meta name="keywords" content="online trading platform, charting software, futures, stock, forex, discretionary trading, automated trading, trade simulator, trading system development, trading strategy development" >         
+
+        <link rel="stylesheet" type="text/css" href="../images/minified.css" >
+        
+        <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <script type="text/javascript" src="../images/jquery-2.2.4.min.js"></script>
+        
+        <script type="text/javascript">
+
+    function HasPageBeenModified(filemtime = '1546897603') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasPageBeenModified',
+              'filemtime': filemtime,
+              'FileName': 'doc/StudiesReference.php',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+        <title> Sierra Chart</title>
+    </head>               
+    <body>
+        <div id="container">
+            <div id="banner" class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <a href="index.html"><img src="../images/sierrachartlogo.png" alt="Sierra Chart - Financial Market Charting and Trading Software" class="logo"></a>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align: right;">
+            <div class="pure-form CSSDarkMode">
+    <form method="GET">
+        <input type="hidden" name="DarkMode" value="1">
+        <button type="submit" class="pure-button pure-button-primary">Toggle Dark Mode</button>
+    </form>
+</div>
+            </div>            
+            <div class="pure-u-1-2">
+            <div class="pure-form SearchBar">
+    <form action="https://search.sierrachart.com/" method="GET">
+        <input name="Query" value="" type="text" placeholder="Find" size="25">
+        <input type="hidden" name="submitted" value="true">
+        <input type="submit" value="Search" class="pure-button">
+    </form>
+</div>
+            </div>
+            <div class="pure-u-1">
+                <h2 class="title">Sierra Chart</h2> 
+                <p class="tagline">Financial Markets Charting and Trading Platform</p>    
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="pure-menu pure-menu-horizontal top-nav-bar">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Main</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index.html">Home</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa55d.html?page=doc/Whats_New.php">What Is New</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0b8.html?page=doc/Features.php">Features</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index15fc.html?page=doc/Image_gallery.php">User Image Gallery</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index079e.html?page=doc/AdditionalFiles.php">Additional Files</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9cbb.html?page=doc/AboutUs.php" >About Us</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3367.html?page=doc/OtherSitesLinks.php">Other Websites</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Documentation</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc0ca.html?page=doc/Contents.php">Table of Contents</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexef11.html?page=doc/help.php">Frequently Asked Questions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa2db.html?page=doc/VideoLibrary.php">Video Library</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php#Services">Symbols</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index3d0c.html?page=doc/DevelopingCustomStudiesAndSystems.php">Developing for Sierra Chart</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index648b.html?page=doc/BrokerServices.html">Services for Brokers</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Getting Started</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexd7a4.html?page=doc/setup.php">Sierra Chart Setup Instructions</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index7904.html?page=doc/helpdetails59.php">What Is Included in Free Trial</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index9a78.html?page=doc/FuturesData.php">Understanding Real-time  Futures Data</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Account Management</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="passwordreset.html">Account Password Reset</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="registerstep1.html">Create Account</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=AddAccountCredit">Make a Payment</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=ServicesActivation">Activate Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index2a8e.html?page=doc/PurchaseInformation.php">License and Purchase Info</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexa1cf.html?page=doc/Packages.php">Pricing</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexc97d.html?page=doc/SoftwareDownload.php">Software Download</a></li>
+            </ul>
+        </li><li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link" href="#">Support</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index1c87.html?page=doc/support.html">Contact</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/SupportBoard.php">* Support Board *</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index8727.html?page=doc/SelfHelp.php&amp;Source=Ticket">Self Help/Account Support Tickets</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexfda3.html?page=doc/SupportedDataAndTradingServices.php">Data/Trade Services</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php">Account Control Panel</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="indexeb88.html?page=doc/SierraChartStudyAndSystemProgrammers.php">Study &amp; System Programmers</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.sierrachart.com/UserControlPanel.php?page=StudyStore">Custom Studies Store/List</a></li>
+                <li class="pure-menu-item"><a class="pure-menu-link" href="index6fe4.html?page=doc/BlockedDomains.php">Blocked Email Domains for Alerts</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        
+<form action="https://www.sierrachart.com/UserControlPanel.php" method="post" style="margin-top:3.1em;" class="SmallLoginLogOutForm" title="Enter your Sierra Chart Account Name and Password.">
+    <input class="TextInput" name="username" placeholder="SC Account Name">
+    <input class="TextInput" name="password" type="password">
+    <input type="submit" value="Login" >
+    <input type="hidden" name="RedirectTo" value="index003e.html?page=doc/StudiesReference.php&amp;ID=133" >
+    <a href="https://www.sierrachart.com/UserControlPanel.php" target="_blank" rel="noopener noreferrer">Login Page</a>
+     - <a href="registerstep1.html">Create Account</a>
+    
+</form>
+
+            <div class="content">
+<div class="HierarchyLinks"> <h4 id="top"><a href="index.html">Home</a> &gt;&gt; <a  href="indexc0ca.html?page=doc/Contents.php#StudiesIndicators">(Table of Contents) Studies and Indicators</a> &gt;&gt; <a  href="indexeb8c.html?page=doc/TechnicalStudiesReference.php">Technical Studies Reference</a> &gt;&gt; <a href="index003e.html?page=doc/StudiesReference.php&amp;ID=133">Zig Zag</a></h4> </div> <h1 class="PageName">Technical Studies Reference</h1>
+
+<section class="h2">
+    <ul>
+        <li><a href="indexeb8c.html?page=doc/TechnicalStudiesReference.php">Technical Studies Reference</a></li>
+        <li><a href="index2db8.html?page=doc/StudiesReference_CommonStudyInputs.php" target="_blank" rel="noopener noreferrer">Common Study Inputs</a> (Opens a new page)</li>
+        <li><a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Using Studies</a> (Opens a new page)</li>
+    </ul>
+</section>
+<hr>
+
+<h1 class="PageName">Zig Zag</h1>
+
+<section class="h3">
+    <a href="https://www.sierrachart.com/images/TechnicalStudies_ZigZag.png" rel="lightbox"><img src="https://www.sierrachart.com/images/TechnicalStudies_ZigZag.png" class="WideFloatRight" alt="Adding and Modifying a Study"></a>
+
+    <p>The Zig Zag study draws lines from Highs and Lows in the main price graph according to the documented  <a href="#ZigzagCalculationMode1">calculation methods</a>. A new line will start where prices have reversed by the specified amount.</p>
+
+    <p>The High and Low values of a bar are used in the calculations. These can be changed with the <b>Input Data</b> Inputs in case you want to base the study on another study.</p>
+
+    <p>The Sierra_Chart Zig Zag study has three calculation modes. Each calculation mode is described here so you understand exactly how they work.</p>
+
+    <p>This documentation also applies to the <b>Zig Zag Cumulative Volume</b> study which calculates and draws the cumulative volume across each Zig Zag line. The volume is drawn as volume bars in its own graph region. The volume resets at the start of a new Zig Zag line.</p>
+
+    <p>The Zig Zag line does not always extend to the very last bar in the chart unless the last chart bar is the start of a reversal. This is something to keep in mind when viewing the Zig Zag data in a Spreadsheet, when using one of the Spreadsheet studies because the most recent rows outputted for the study Subgraph will be 0 if the Zig Zag line does not extend to the end of the chart.</p>
+
+    <section class="h4">
+		<h4 ID="ZigzagCalculationMode1">Calculation Modes 1 and 3</h4>
+        <div class="member-link">[<a href="#ZigzagCalculationMode1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>This section describes Calculation Modes 1 and 3.</p><!-- Verified -->
+
+        <p>When the Zig Zag study is called for the first time, it determines the initial trend direction. The Low and High of the first bar in the chart are compared to the following bars.</p>
+
+        <p>If following bars Low and High are higher than those of the first bar, then the trend is considered Up. There is a trend line drawn from the Low of the first bar in the chart to the High of the bar that determined the direction.</p>
+
+        <p>If the following bars Low and High are lower than those of the first bar, then the trend is considered Down. There is a trend line drawn from the High of the first bar in the chart to the Low of the bar that determined the direction.</p>
+
+        <p>The High and Low values from the bar that determined the trend are remembered. These are named <b>LastHigh</b> and <b>LastLow</b>.</p>
+
+        <p>Next, the study function begins to iterate through bars in the chart. A <b>ReversalPrice</b> variable is calculated for determining if trend direction should change. The calculation of <b>ReversalPrice</b> differs for an Up or Down trend and for calculation modes 1 and 3 as follows:</p>
+
+        <ul>
+            <li>Mode 1 with Up trend: ReversalPrice = LastHigh - (LastHigh * <b>Reversal % for Calculation Mode 1</b>)</li>
+            <li>Mode 3 with Up trend: ReversalPrice = LastHigh - <b>Reversal Amount for Calculation Mode 2,3</b></li>
+            <li>Mode 1 With Down trend: ReversalPrice = LastLow + (LastLow * <b>Reversal % for Calculation Mode 1</b>)</li>
+            <li>Mode 3 With Down trend: ReversalPrice = LastLow + <b>Reversal Amount for Calculation Mode 2,3</b></li>
+        </ul>
+
+        <p>If there currently is an Up trend (Up line) and the calculated <b>ReversalPrice</b> is <em>exceeded</em> downwards by the low of a bar during the iteration of the bars, then the trend changes its direction to Down. The Low of the bar that changed the direction is stored as the <b>LastLow</b>. If the trend does not change directon at a bar during the iteration, then we check if the High of the bar is higher than the <b>LastHigh</b>. If this is true, then we set <b>LastHigh</b> value to High of the bar and make this high the endpoint for the Up trend line.</p>
+
+        <p>If there currently is a Down trend (Down line) and the calculated <b>ReversalPrice</b> is <em>exceeded</em> upwards by the high of a bar during the iteration of the bars, then the trend changes its direction to Up. The High of the bar that changed the direction is stored as the <b>LastHigh</b>. If the trend does not change directon at a bar during the iteration, then we check if the Low of the bar is lower than the <b>LastLow</b>. If this is true, then we set <b>LastLow</b> value to Low of the bar and make this low the endpoint for the Down trend line.</p>
+
+        <p>To gain an understanding of the above description, it is recommended to  <a href="index9600.html?page=doc/ReplayChart.html">Replay</a> the chart to see the formation of the Zig Zag lines as the chart bars are built.</p>
+
+        <p>In the case of when using any type of <a href="index2885.html?page=doc/RenkoCharts.html">Renko</a> bars, make sure you are understanding for each chart bar what are the actual High and Low values  when evaluating the bar data according to the explanation above, in case they are not actually visible based upon the values and the  <b>Graph Draw Type</b>. You will need to use the <a href="indexb844.html?page=doc/Tools.html#ChartValues" Target="_blank" rel="noopener noreferrer">Chart Values</a> tool to determine the High and Low values for each chart bar. This is essential in order to make sure you are not being misled by making an assumption about what the High and Low Values are.</p>
+
+    </section>
+
+    <section class="h4">
+        <h4 id= "ZigzagCalculationMode2">Calculation Mode 2</h4><!-- Verified -->
+        <div class="member-link">[<a href="#ZigzagCalculationMode2">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>When the Zig Zag study is called for the first time, it determines the initial trend direction. The Low and High of the first bar in the chart are compared to the following bars.</p>
+
+        <p>If following bars Low and High are higher than those of the first bar, then the trend is considered Up. There is a trend line drawn from the Low of the first bar in the chart to the High of the bar that determined the direction.</p>
+
+        <p>If the following bars Low and High are lower than those of the first bar, then the trend is considered Down. There is a trend line drawn from the High of the first bar in the chart to the Low of the bar that determined the direction.</p>
+
+        <p>The High and Low values from the bar that determined the trend are remembered. These are named <b>LastHigh</b> and <b>LastLow</b>.</p>
+
+        <p>Next, the Zig Zag study begins to iterate through the bars in the chart. </p>
+
+        <p><b>For a current Uptrend</b>:  If the next bar's High is equal or greater than <b>LastHigh</b>, then <b>LastHigh</b> is set to the new High and the Up trend line is adjusted to the high of this next bar.</p>
+
+        <p>If the next bar's High is lower than <b>LastHigh</b>, then the trend may become Down starting from this bar. The following conditions are checked at this point:</p>
+
+        <p>1. If the <b>Reversal Amount for Calculation Mode 2,3</b> Input value has been exceeded by the difference between <b>LastHigh</b> to the Low of the next bar, and the number of bars since the <b>LastHigh</b> for the Up trend line equals or exceeds the <b>Number of Bars Required for Reversal</b> study Input, the Trend is changed to Down and new Zig Zag Down trend line is started. The Low of the bar that changed the direction is stored as the <b>LastLow</b>.</p>
+
+        <p>2. If the above condition has not been met and the next bar's Low is lower than the low of the current Up trend line, then trend is changed to Down immediately, without waiting for <b>Number of Bars Required for Reversal</b> to be satisfied.</p>
+
+        <p><b>For a current Downtrend</b>:  If the next bar's Low is equal or less than <b>LastLow</b>, then <b>LastLow</b> is set to the new Low and the Down trend line is adjusted to the low of this next bar.</p>
+
+        <p>If the next bar's Low is higher than <b>LastLow</b>, then the trend may become Up starting from this bar. The following conditions are checked at this point:</p>
+
+        <p>1. If the <b>Reversal Amount for Calculation Mode 2,3</b> Input value has been exceeded by the difference between the High of the next bar and the <b>LastLow</b>, and the number of bars since the <b>LastLow</b> for the Down trend line equals or exceeds the <b>Number of Bars Required for Reversal</b> study Input, the Trend is changed to Up and new Zig Zag Up trend line is started. The High of the bar that changed the direction is stored as the <b>LastHigh</b>.</p>
+
+        <p>2. If the above condition has not been met and the next bar's High is higher than the high of the current Down trend line, then trend is changed to Up immediately, without waiting for <b>Number of Bars Required for Reversal</b> to be satisfied.</p>
+
+        <p>To gain an understanding of the above description, it is recommended to  <a href="index9600.html?page=doc/ReplayChart.html">Replay</a> the chart to see the formation of the Zig Zag lines as the chart bars are built.</p>
+
+        <p>In the case of when using any type of <a href="index2885.html?page=doc/RenkoCharts.html">Renko</a> bars, make sure you are understanding for each chart bar what are the actual High and Low values  when evaluating the bar data according to the explanation above, in case they are not actually visible based upon the values and the  <b>Graph Draw Type</b>. You will need to use the <a href="indexb844.html?page=doc/Tools.html#ChartValues" Target="_blank" rel="noopener noreferrer">Chart Values</a> tool to determine the High and Low values for each chart bar. This is essential in order to make sure you are not being misled by making an assumption about what the High and Low Values are.</p>
+    </section>
+
+    <section class="h4">
+        <h4 id="TextLabelsSubgraphDescription">Text Labels Subgraph Description</h4>
+        <div class="member-link"> [<a href="#TextLabelsSubgraphDescription">Link</a>] - [<a href="#top">Top</a>]</div>
+        
+        <p>The <b>Text Labels</b> study Subgraph contains numeric values representing the text labels describing the peaks and valleys of the Zig Zag lines, at the chart bars where these peaks and valleys occur.   This Subgraph is only set with these  numeric values when the <b>Display HH,HL,LL,LH Labels</b> Input is set to Yes.</p>
+
+        <p>Definitions:</p>
+        <ul>
+            <li>LH (Lower High) = 1</li>
+            <li>HH (Higher High) = 2</li>
+            <li>HL (Higher Low) = 3</li>
+            <li>LL (Lower Low) = 4</li>
+            <li>(no text label) = 10.  This value is used when the Zig Zag study resets at the start of the day. It is used at the initial Zig Zag point. </li>
+            <li>(no text label) = 11. This value is used when the Zig Zag study resets at the start of the day. It is used at the end of the first Zig Zag line for the trading day  when it is sloping down (low). </li>
+            <li>(no text label) = 12.  This value is used when the Zig Zag study resets at the start of the day. It is used at the end of the first Zig Zag line for the trading day  when it is sloping up (high). </li>
+        </ul>
+
+        <p>When viewing this column of data on a Spreadsheet when using one of the Spreadsheet studies, you can can see the actual high or low value by looking at the cell at the same row to the left in the Zig Zag column.</p>
+
+        <p>To change the text size for the Zig Zag labels, go to the <a href = "index9099.html?page=doc/ChartStudies.html#SubgraphsTab">Subgraphs</a> tab of the Study Settings window. Select the <b>Text Labels</b> Subgraph. Change the <b>Size</b> setting.</p>
+
+        <p>Set it to 0 to make the size automatic and the same as the <b>Chart Text Font</b> size. The font face for Zig Zag labels is the same as the <a href="indexb844.html?page=doc/Tools.html#ChangingTheFontSizeForTextDisplayedWithToolDrawings" Target="_blank" rel="noopener noreferrer">Drawing Tools</a> Font.</p>
+
+        <p>The study Subgraph containing the Text Labels can be programmatically accessed using ACSIL. This is Subgraph 2.  The zero-based Subgraph index in this case will be 1.   Using this Subgraph  data in your study function is useful to know exactly where a Zig Zag line changes direction. For instructions, refer to <a href="indexd011.html?page=doc/ACSILProgrammingConcepts.html#UsingStudyData">Using or Referencing Study/Indicator Data in an ACSIL Function</a>.</p>
+        
+         <p>  This Subgraph can also be referenced by  <a href = "index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Simple Alert Formulas</a>. In this case it would be referenced as <b>SG2</b> in the formula. </p>
+
+    </section>
+
+    <section class="h4">
+        <h4 id="ZigZagReversesAtWrongBar">Zig Zag Reverses at Wrong Bar</h4>
+        <div class="member-link">[<a href="#ZigZagReversesAtWrongBar">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>In the case of a chart bar where it creates a new low or new high for the current Zig Zag line and also triggers a reversal to start a new Zig Zag line, there can be a difference between the bar where the Zig Zag line reverses direction at, between real-time updating of a chart and when a chart is fully recalculated like when selecting <b class="menu_item">Chart &gt;&gt; Recalculate</b> or modifying Study Settings.</p>
+
+        <p>This is inherently just a limitation of the study working with complete chart bars because the Zig Zag study does not know how the chart bar formed within during a full recalculation whereas it can during real-time updating.</p> 
+        
+        <p>The solution to this is to set the <a href = "#Inputs_CalculateNewValuesOnBarClose">Calculate New Values on Bar Close</a> Input to Yes.</p>
+        
+    </section>
+
+    <section class="h4">
+        <h4 id="DisplayingTheZigZagMidPoint">Displaying the Zig Zag Mid-Point</h4>
+        <div class="member-link">[<a href="#DisplayingTheZigZagMidPoint">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p> To display the the Mid-Point Subgraph line  with the Zig Zag study, go to the  <a href="index9099.html?page=doc/ChartStudies.html#SubgraphsTab">Subgraphs</a> tab of the Study Settings window. Set the <b>Draw Style </b> for the  <b>Zig Zag Mid-Point </b> Subgraph to  <b>Line</b> instead of <b>Ignore</b>. </p>
+
+        <p>  This Zig Zag Mid-Point line is also outputted to  a Sheet when using the Spreadsheet study.</p>
+    </section>
+
+    <section class="h4">
+        <h4 id="DisplayingTheZigZagOscillator">Displaying the Zig Zag Oscillator</h4>
+        <div class="member-link">[<a href="#DisplayingTheZigZagOscillator">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>The Zig Zag oscillator can be displayed. The Zig Zag  oscillator at each chart bar is the difference between the most recent Zig Zag  line endpoint, relative to a particular chart bar  and the close/last price of that same bar.  Therefore, this is the Zig Zag  line length at each chart bar.  </p>
+
+        <p>Follow the instructions below to display the Zig Zag Oscillator.</p>
+        <ol>
+            <li>Add the <b>Zig Zag</b> study to the chart following the  <a href="index9099.html?page=doc/ChartStudies.html#AddingModifyingStudies" target="_blank" rel="noopener noreferrer">Adding/Modifying Studies</a> documentation. </li>
+            <li>Open the Study Settings  window for the study and select the <a href="index9099.html?page=doc/ChartStudies.html#SubgraphsTab" target="_blank" rel="noopener noreferrer">Subgraphs</a> tab. </li>
+            <li>Set the <b>Subgraph &gt;&gt; Zig Zag &gt;&gt; Draw Style</b> to <b>Ignore</b>.</li>
+            <li>Set the <b>Subgraph &gt;&gt; Zig Zag  Oscillator &gt;&gt; Draw Style</b> to <b>Bar</b>. </li>
+            <li>Select the <b>Settings and Inputs </b> tab. </li>
+            <li>Set the <b>Chart Region</b> to 2.</li>
+            <li>Press OK.</li>
+            <li>Press OK.</li>
+        </ol>
+    </section>
+
+    <section class="h4">
+        <h4 id="ZigZagReversalAlert">Zig Zag Reversal Alert</h4>
+        <div class="member-link">[<a href="#ZigZagReversalAlert">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <p>To receive an alert when the Zig Zag study changes direction and displays a new label, follow the instructions below.</p>
+
+        <ol>
+            <li>Open the   <a href="index9099.html?page=doc/ChartStudies.html#TechnicalStudySettingsWindow">Study Settings</a> window for the Zig Zag  study already added to the chart.</li>
+
+            <li> On the <b>Settings and Inputs  </b> tab, set the <b>Display HH,HL,LL,LH Labels</b> Input to <b>Yes</b>.</li>
+            <li> On the  <b>Alerts </b> tab  in the <b>Alert Condition</b> box enter the following formula:  <b><em>SG2 &gt; 0</em></b>. For further information, refer to  <a href="index9fef.html?page=doc/StudyChartAlertsAndScanning.php">Study/Chart Alerts And Scanning</a>.</li>
+
+            <li>Press <b>OK</b>.</li>
+        </ol>
+    </section>
+
+    <section class="h4">
+        <h4 id="Inputs">Inputs</h4>
+        <div class="member-link">[<a href="#Inputs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+        <section class="h5" id="Inputs_InputDataForHigh">
+            <h5>Input Data for High</h5>
+            <div class="member-link">[<a href="#Inputs_InputDataForHigh">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><a href="index2db8.html?page=doc/StudiesReference_CommonStudyInputs.php#InputData" target="_blank" rel="noopener noreferrer">Input Data for High</a>. This Input applies to all Calculation Modes. The default is High.  It sets the data array to use for the High  values in the calculation. </p>
+            
+             <p>In the case of when the Zig Zag study is used on the main price graph and not based on any other study, this must be set to <b>High</b>. Otherwise, when a chart is fully recalculated, there may be different results compared to real-time updating because if you are not using a value which stays the same or goes higher when a bar is being formed but instead sometimes goes lower, then you will get an unstable result.</p>
+             
+             <p>These different results with the calculations can also become apparent when Sierra_Chart is downloading historical data compared to a full recalculation. </p>
+             
+             <p>The solution to the above is to set <a href = "#Inputs_CalculateNewValuesOnBarClose">Calculate New Values on Bar Close</a> Input  Yes. </p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_InputDataforLow">Input Data for Low</h5>
+            <div class="member-link">[<a href="#Inputs_InputDataforLow">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p><a href="index2db8.html?page=doc/StudiesReference_CommonStudyInputs.php#InputData" target="_blank" rel="noopener noreferrer">Input Data for Low</a>. This Input applies to all Calculation Modes. The default is Low.  It sets the data array to use for the  Low  values  in the calculation. </p>
+            
+            <p>In the case of when the Zig Zag study is used on the main price graph and not based on any other study, this must be set to <b>Low</b>. Otherwise, when a chart is fully recalculated, there may be different results compared to real-time updating because if you are not using a value which stays the same or goes lower when a bar is being formed but instead sometimes goes higher, then you will get an unstable result.</p>
+            
+             <p>These different results with the calculations can also become apparent when Sierra_Chart is downloading historical data compared to a full recalculation. </p>
+
+             <p>The solution to the above is to set <a href = "#Inputs_CalculateNewValuesOnBarClose">Calculate New Values on Bar Close</a> Input  Yes. </p>
+
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_CalculationMode">Calculation Mode (1,2,3)</h5>
+            <div class="member-link">[<a href="#Inputs_CalculationMode">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input selects the calculation mode. The calculation modes are described above.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_ReversalPercentageForCalculationMode1">Reversal % for Calculation Mode 1</h5>
+            <div class="member-link">[<a href="#Inputs_ReversalPercentageForCalculationMode1">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The percentage change of the price values that must occur to begin a new Zig Zag line when using Calculation Mode 1.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_ReversalValueForCalculationMode2And3">Reversal Value for Calculation Mode 2 and 3</h5>
+            <div class="member-link">[<a href="#Inputs_ReversalValueForCalculationMode2And3">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The price change of the price values that must occur to begin a new Zig Zag line when using Calculation Mode 3.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_NumberOfBarsRequiredForReversal">Number of Bars Required for Reversal (Calculation Mode 2)</h5>
+            <div class="member-link">[<a href="#Inputs_NumberOfBarsRequiredForReversal">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>Refer to the <a href=" #ZigzagCalculationMode2" >Zig Zag Calculation Mode 2</a> description above.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_VolumeToAccumulate">Volume To Accumulate</h5>
+            <div class="member-link">[<a href="#Inputs_VolumeToAccumulate">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this set to a setting other than <b>None</b>, the volume across each Zig Zag line is calculated using one of the below formulas:</p>
+            <ul>
+                <li><b>None</b>: No volume is calculated.</li>
+                <li><b>Total Volume</b>: The total volume for the Zig Zag line is calculated.</li>
+                <li><b>Bid Volume</b>: Only the total Bid Volume for the Zig Zag line is calculated.</li>
+                <li><b>Ask Volume</b>: Only the total Ask Volume for the Zig Zag line is calculated.</li>
+                <li><b>Ask Bid Volume Difference</b>: The difference between Ask Volume and Bid Volume at each chart bar the Zig Zag line spans across is calculated.</li>
+            </ul>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_ResetZigZagAtStartOfTradingDay">Reset Zig Zag at Start of Trading Day</h5>
+            <div class="member-link">[<a href="#Inputs_ResetZigZagAtStartOfTradingDay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, then the Zig Zag is reset at the start of the trading day.</p>
+
+            <p>The start of the trading day is determined from the <a href="index4ec1.html?page=doc/SessionTimes.php">Session Times</a> in <b class="menu_item">Chart &gt;&gt; Chart Settings</b>. This will be the <b>Start Time</b>, or if the <b>Evening Session</b> option is enabled, then it will be the <b>Evening Start Time</b>.</p>
+
+            <p><b>Note</b>: When enabling this option, changing the <b>Draw Style</b> from <b>Line</b> to <b>Line - Skip Zeros</b> will remove the plots from the final swing of a trading day to the first swing of the next trading day. So this is something you may want to do.</p>
+
+            <p>When <b>Reset Zig Zag at Start of Trading Day</b> is set to <b>Yes</b>, at the start of the trading day, there will not be any labels displayed. And at the first reversal, there will not be any <b>HH,HL,LL,LH Labels</b>.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_CalculateNewValuesOnBarClose">Calculate New Values on Bar Close</h5>
+            <div class="member-link">[<a href="#Inputs_CalculateNewValuesOnBarClose">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, the Zig Zag study will always ignore the last bar in the chart and only perform calculations on the completed chart bars.</p>
+
+            <p>It is useful to set this to <b>Yes</b> if you have set <b>Input Data for High/Low</b> both to <b>Last</b>.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_AdditionalOutputForSpreadsheets">Additional Output for Spreadsheets</h5>
+            <div class="member-link">[<a href="#Inputs_AdditionalOutputForSpreadsheets">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, then there are additional columns of data outputted for the Zig Zag study to the Spreadsheet Sheet being used by one of the <a href="indexbc7b.html?page=doc/UsingTheSpreadsheetStudy.php" target="_blank" rel="noopener noreferrer">Spreadsheet Studies</a> if you have applied one of the Spreadsheet Studies to the chart. The data is outputted beginning and column AA in the Sheet.</p>
+            
+            <p>The additional Subgraphs outputted to the Sheet used by the Spreadsheet Study include the following: <b>Reversal Price, Zig Zag Line Length, Zig Zag Number of Bars</b>. The <b>Zig Zag Line Length</b> Subgraph only has a value at each Zig  Zag line end point. Therefore, it may also be helpful to set the  <b>Display HH,HL,LL,LH Labels</b> Input to <b>Yes</b>  to also have the corresponding HH,HL,LL,LH label value.</p>
+
+            <p>The default <a href="index9099.html?page=doc/ChartStudies.html#DrawStyle" target="_blank" rel="noopener noreferrer">Draw Style</a>  for each of these study Subgraphs is set to <b>Ignore</b>. Therefore, to see them on the Spreadsheet Sheet, make sure the <b>Do Not Output Subgraphs Set to Ignore</b> Input with the <b>Spreadsheet Study</b> is set to <b>No</b>.</p>
+
+            <p>If this Input is set to <b>Yes</b>, but the data is still not being displayed in the Spreadsheet, then ensure that the option for <b>Include in Spreadsheet</b> is enabled for each Subgraph on the Subgraph tab of the Study window.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_Display_HH_HL_LL_LH_Labels">Display HH,HL,LL,LH Labels</h5>
+            <div class="member-link">[<a href="#Inputs_Display_HH_HL_LL_LH_Labels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to Yes, then HH (Higher High), LH (Lower High), LL (Lower Low), HL (Higher Low) labels will be displayed. The colors of these labels is controlled with the <b>Text Labels (SG2)</b> Subgraph Primary and Secondary color settings. The font size is controlled with the <b>Text Labels</b> Subgraph <b>Size</b> setting.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayReversalPrice">Display Reversal Price</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayReversalPrice">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to Yes, then at each bar where the Zig Zag line reverses direction, the price value of the High or Low of the bar the Zig Zag lines are drawn to, is displayed. This price value is not the actual reversal price trigger which caused the line to reverse.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayLengthOfZigZagLine">Display Length of Zig Zag Line</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayLengthOfZigZagLine">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to a value other than <b>None</b>, the price difference between the endpoints of each Zig Zag line will be displayed at the Zig Zag endpoints in the specified value.</p>
+
+            <p>The options are:</p>
+
+            <ul>
+                <li><b>Points</b>: This displays the length of the Zig Zag line in points (actual numerical difference).</li>
+
+                <li><b>Ticks</b>: This displays the length of the Zig Zag line in ticks (based on the Tick Size setting for the chart).</li>
+
+                <li><b>Percent</b>: This displayes the length of the Zig Zag line as a percent difference using the most recent value as the denominator.</li>
+            </ul>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayZigZagVolume">Display Zig Zag Volume</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayZigZagVolume">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, the volume for the Zig Zag line as calculated according to the <b>Volume To Accumulate</b> Input and is displayed at each Peak or Valley of the Zig Zag line.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_FormatVolumeUsingLargeNumberSuffix">Format Volume Using Large Number Suffix</h5>
+            <div class="member-link">[<a href="#Inputs_FormatVolumeUsingLargeNumberSuffix">Link</a>] - <a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, the volume displayed at the Peak or Valley is displayed in units of 1000. For example, if the Total Volume is accumulated and has a value of 28,872, this would be displayed as 28.8K.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayTimeLabels">Display Time Labels</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayTimeLabels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to Yes, labels indicating the time of the Zig Zag line endpoints will be displayed at the Zig Zag endpoints.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_IncludeSecondsInTimeDisplay">Include Seconds in Time Display</h5>
+            <div class="member-link">[<a href="#Inputs_IncludeSecondsInTimeDisplay">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this input is set to <b>Yes</b> and the <b>Display Time Labels</b> is also set to <b>Yes</b> then the time displayed includes seconds.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayZigZagTimeDuration">Display Zig Zag Time Duration</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayZigZagTimeDuration">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b> the duration of time over which the Zig Zag segment covers is displayed at the Peak or Valley. The duration is prefaced with the display <b>D:</b>.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayZigZagNumberOfBars">Display Zig Zag Number of Bars</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayZigZagNumberOfBars">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b> the number of bars over which the Zig Zag segment covers is displayed at the Peak or Valley. The Number of Bars is prefaced with the display <b>B:</b>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayZigZagVolumeDividedByLengthInTicks">Display ZigZag Volume / Length in Ticks</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayZigZagVolumeDividedByLengthInTicks">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>, the Volume / Length in Ticks is calculated according to the <b>Volume to Accumulate</b> Input and is displayed at each Peak or Valley of the Zig Zag line. This information is prefaced with the label <b>V/L:</b>, unless the <b>Omit Label Prefixes</b> is set to <b>Yes</b>.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_UseMultiLineLabels">Use Multi-line Labels</h5>
+            <div class="member-link">[<a href="#Inputs_UseMultiLineLabels">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b> each of the labels that is displayed at the Peak or Valley is displayed on individual lines.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_OmitLabelPrefixes">Omit Label Prefixes</h5>
+            <div class="member-link">[<a href="#Inputs_OmitLabelPrefixes">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b> the label designations are not displayed.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_TextLabelOffsetSpecifiedAs">Text Label Offset Specified As</h5>
+            <div class="member-link">[<a href="#Inputs_TextLabelOffsetSpecifiedAs">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This defines what value type is used for the <b>Text Label Offset</b>. The following options are available:</p>
+
+            <ul>
+                <li><b>Percentage of Bar</b>: The <b>Text Label Offset</b> is the percentage of the bar height away from the high or low of the bar.</li>
+
+                <li><b>Tick Offset</b>: The <b>Text Label Offset</b> is the number of ticks away from the high or low of the bar.</li>
+            </ul>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_TextLabelOffset">Text Label Offset</h5>
+            <div class="member-link">[<a href="#Inputs_TextLabelOffset">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This is the value represented by the <b>Text Label Offset Specified As</b> that you want to offset the text labels from the bar highs or lows.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_ColorZigZagLineUsing">Color Zig Zag Line Using</h5>
+            <div class="member-link">[<a href="#Inputs_ColorZigZagLineUsing">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>The Zig Zag Subgraph can be colored based on one of the following settings:</p>
+
+            <ul>
+                <li><b>Slope</b>: When the Zig Zag line has positive slope it is colored with the primary color. Otherwise, it is colored with the secondary color when the Zig Zag line has negative slope.</li>
+
+                <li><b>Trend Confirmed Volume</b>: In this mode, a Zig Zag line trend is based on the prior Zig Zag line trend, the current Zig Zag line trend, the accumulated volume of the current Zig Zag line, and the accumulated volume of the previous Zig Zag line.
+                    <br><br>
+                    The Zig Zag Subgraph coloring starts with the primary color when the trend is up, and the secondary color when the trend is down. If the current Zig Zag line has less than or equal accumulated volume than the prior Zig Zag line, and the prior Zig Zag line has an opposite trend than the current Zig Zag line, then the coloring for the current Zig Zag line is changed to the opposite color. For example, an up sloping Zig Zag line has lower accumulated volume than the previous Zig Zag line and the previous Zig Zag line is down sloping, therefore the current Zig Zag line is colored the down (Secondary) color. If either the accumulated volume is not lower, or the previous Zig Zag line trend is not opposing, then the coloring will not be changed.</li>
+
+                <li><b>Confirmed Volume</b>: In this mode, a Zig Zag line trend is based on the current Zig Zag line trend, the accumulated volume of the current line and the accumulated volume of the previous line.
+                    <br><br>
+                    The Zig Zag Subgraph coloring starts with the primary color when the trend is up, and the secondary color when the trend is down. When the current Zig Zag line has less than or equal accumulated volume than the prior Zig Zag Line, then the coloring of the current Zig Zag line is changed to the opposite color. For example: a down sloping Zig Zag line has lower accumulated volume than the previous Zig Zag line, therefore it is colored the up (Primary) color. If the accumulated volume for a Zig Zag line is greater than the previous Zig Zag line, then the coloring is not changed.</li>
+            </ul>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_ExtendEndPointsUntilFutureIntersection">Extend End Points Until Future Intersection</h5>
+            <div class="member-link">[<a href="#Inputs_ExtendEndPointsUntilFutureIntersection">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b>,  for each Zig Zag  line end point  where the  Zig Zag line reverses, it will have an extension line drawn at that price level  which extends until it intersects with future prices.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_DisplayValueLabelForExtensionLines">Display Value Label for Extension Lines</h5>
+            <div class="member-link">[<a href="#Inputs_DisplayValueLabelForExtensionLines">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>When this Input is set to <b>Yes</b> the Value Label (price) is displayed for each of the Extension Lines. The Value Label is displayed in the Chart Scales for the Extension Lines that do not intersect a bar, and are displayed at the end of the line for those Extension Lines that do intersect a bar.</p>
+
+            <p>If the option <b>Extend End Points Until Future Intersection</b> is set to <b>No</b> then no Value Labels are displayed.</p>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_SingleLineHorizontalTextAlignment">Single Line Horizontal Text Alignment</h5>
+            <div class="member-link">[<a href="#Inputs_SingleLineHorizontalTextAlignment">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input controls the horizontal alignment of the displayed text when the Input for <b>Use Multi-Line Labels</b> is set to <b>No</b>. The available options are:</p>
+
+            <ul>
+                <li><b>Left</b>: This sets the left side of the text at the Zig Zag point with which it is associated.</li>
+
+                <li><b>Center</b>: This sets the center of the text at the Zig Zag point with which it is associated.</li>
+
+                <li><b>Right</b>: This sets the right side of the text at the Zig Zag point with which it is associated.</li>
+            </ul>
+        </section>
+
+        <section class="h5">
+            <h5 id="Inputs_MultiLineHorizontalTextAlignment">Multi-Line Horizontal Text Alignment</h5>
+            <div class="member-link">[<a href="#Inputs_MultiLineHorizontalTextAlignment">Link</a>] - [<a href="#top">Top</a>]</div>
+
+            <p>This Input controls the horizontal alignemtn of the displayed text when the Input for <b>Use Multi-Line Labels</b> is set to <b>Yes</b>. The available options are:</p>
+
+            <ul>
+                <li><b>Left</b>: This sets the left edge of the text at the Zig Zag point with which it is associated.</li>
+
+                <li><b>Center</b>: This sets the center of the text at the Zig Zag point with which it is associated.</li>
+
+                <li><b>Right</b>: This sets the right edge of the text at the Zig Zag point with which it is associated.</li>
+            </ul>
+        </section>
+    </section>
+</section>
+
+<hr><p>*Last modified Monday, 03rd October, 2022.</p><script type="text/javascript">
+
+      function HasStudyFileBeenModified(filemtime = '1664790886') {
+        $.ajax({
+            url: '/Ajax.php',
+            type: 'post',
+            data: {
+              'Service': 'Page',
+              'Do': 'HasStudyFileBeenModified',
+              'filemtime': filemtime,
+              'StudyID': '133',
+            },
+            success: function(data, status) {
+              if(data['result'] == "NewPageEdits" && data['Content']) {
+                    $('#NewPageEdits').remove();
+                    $('#container').append('<div id="NewPageEdits">'+data['Content']+'</div>')
+                    $('#NewPageEdits').dialog({
+                        width: 150,
+                        position: { at: 'right-96 top-5%'},
+                        modal: false,
+                        resizable: false,
+                        create: function (event, ui) { $(event.target).parent().css('position', 'fixed'); }
+                    });
+
+                    $(".ui-dialog-titlebar").hide();
+              }
+            },
+            error: function(xhr, desc, err) {
+              console.log(xhr);
+              console.log("Details: " + desc + " | Error:" + err);
+            }
+        });
+
+    }
+
+    window.setInterval(HasPageBeenModified , 900000);
+
+</script>
+
+<script type="text/javascript" async src="../images/mathjaxb198.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+                <div id="footer" style="font-size:66%" class="ClearBoth">
+                    <hr>
+                    <a href="index2a8e.html?page=doc/PurchaseInformation.php" target="_blank" rel="noopener noreferrer">Service Terms and Refund Policy</a>
+                    <br><br>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../images/minified.js"></script>
+    </body>
+
+<!-- Mirrored from www.sierrachart.com/index.php?page=doc/StudiesReference.php&ID=133 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Jun 2023 16:58:42 GMT -->
+</html>  
